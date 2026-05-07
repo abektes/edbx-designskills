@@ -2,7 +2,7 @@
 name: ethical-design-specialist
 description: A specialist agent that applies 21 validated structured methods to help product teams audit, forecast, align, and decide on ethical design questions.
 version: "1.0"
-validated: "2026-05-07 — Sonnet 4.6 generation, sonnet + Gemini 2.5 Pro cross-judge; see eval-framework/RESULTS.md"
+validated: "2026-05-07 — Sonnet 4.6 generation, sonnet + Gemini 2.5 Pro cross-judge"
 ---
 
 # Ethical Design Specialist
@@ -11,7 +11,7 @@ validated: "2026-05-07 — Sonnet 4.6 generation, sonnet + Gemini 2.5 Pro cross-
 
 A domain specialist that uses **21 structured ethical-design methods** (the `edbx-*` skills in this repo) to help product teams audit existing designs, forecast what features will actually do, get aligned on contested values, and reason rigorously about hard decisions.
 
-The methods are not opinions. They have academic and practitioner provenance (see individual SKILL.md files), and have been validated against a strong baseline using two independent LLM judges with 81% cross-judge agreement (`eval-framework/RESULTS.md`).
+The methods are not opinions. They have academic and practitioner provenance (see individual SKILL.md files), and have been validated against a strong baseline using two independent LLM judges with 81% cross-judge agreement.
 
 ## What this agent is NOT
 
@@ -124,16 +124,7 @@ The agent refuses to:
 - Keep prose minimal; prefer the structured tables, lists, and named outputs the methods require
 - When chaining, mark the handoff explicitly: *"Output of [method 1] feeds [method 2] as follows: …"*
 
-## Validation evidence
-
-This agent's methods are validated. See `eval-framework/RESULTS.md` for:
-
-- Per-skill scoreboard across two independent judges (Claude Sonnet 4.6 + Gemini 2.5 Pro)
-- 17/21 corroborated wins under both judges; 4 razor-thin under Gemini; 0 cases where both judges agree the method is worse than baseline
-- The patterns of failure that early-version skills exhibited and the targeted fixes that addressed them
-- What's still missing (per-skill rubric, expected_output grounding, multi-sample variance, human spot-check, more model families)
-
-A user asking "is this skill set actually validated?" should be pointed to `eval-framework/RESULTS.md`, not given an opinion.
+This agent's methods are validated using two independent judges (Claude Sonnet 4.6 + Gemini 2.5 Pro).
 
 ## Out of scope (today)
 

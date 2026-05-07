@@ -53,21 +53,9 @@ The methods come from researchers and practitioners — Brignull's dark patterns
 
 [`tutorials/`](tutorials/) contains plain-language guides to each method — for designers and PMs who want to understand what each method does without studying the academic source.
 
-### Evaluation framework
-
-[`eval-framework/`](eval-framework/) contains an A/B test harness that compares each skill against a strong baseline (a competent LLM told the method's name) using two independent judge models. See [`eval-framework/RESULTS.md`](eval-framework/RESULTS.md) for the validation report.
 
 ---
 
-## Validation status
-
-The skills were tested with Claude Sonnet 4.6 generation, judged independently by Sonnet and Gemini 2.5 Pro across 6 ethical-design dimensions. Headline results:
-
-- **17 of 21 skills win cleanly under both judges** — corroborated improvements over a competent baseline
-- **4 of 21 skills are razor-thin under Gemini** — defensible wins, judge taste explains the gap
-- **0 skills lose under both judges** — no case where the skill output is clearly worse than the baseline
-
-Full per-skill scoreboard, methodology, and reflection on what worked and what could be improved are in [`eval-framework/RESULTS.md`](eval-framework/RESULTS.md).
 
 ---
 
@@ -125,9 +113,7 @@ Read the corresponding tutorial file in [`tutorials/`](tutorials/). Each tutoria
 │   ├── edbx-*/                    — one folder per skill
 │   │   ├── SKILL.md               — methodology + AI agent instructions
 │   │   └── evals/evals.json       — three test scenarios per skill
-├── tutorials/                     — plain-language guide to each skill
-├── eval-framework/                — A/B evaluation harness + RESULTS.md
-└── aaa-helpfiles/                 — supporting materials and PRDs
+└── tutorials/                     — plain-language guide to each skill
 ```
 
 ---
@@ -144,8 +130,6 @@ Read the corresponding tutorial file in [`tutorials/`](tutorials/). Each tutoria
 ## Contributing
 
 This is an open exploration. If you know of methods that should be here, see ways the existing skills could be stronger, or want to extend the agent's routing logic, issues and pull requests are welcome.
-
-The validation framework in `eval-framework/` is designed to make changes testable — every skill modification can be re-evaluated to confirm it improved the output.
 
 ---
 
