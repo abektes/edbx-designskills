@@ -1,3 +1,5 @@
+![Ethical Design Package Banner](assets/banner.jpg)
+
 # Ethical Design Package
 
 **A skillset and agent that bring ethical design methods into the product workflow — at the moment a decision is being made.**
