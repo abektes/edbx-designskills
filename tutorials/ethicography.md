@@ -6,7 +6,7 @@
 
 ## Who made it
 
-Ethicography was developed by **Colin M. Gray, Chuvaala, and colleagues** in a series of papers published in 2019 and 2024. It is grounded in critical discourse analysis and HCI ethics research.
+Ethicography was developed by **Shruthi Sai Chivukula, Colin M. Gray, and Janna Brier** in a 2019 CHI paper (ACM CHI 2019, Best of CHI Honorable Mention). The method was extended in 2024 with **"Quant-Ethico: An Approach to Quantifying and Interpreting Ethical Decision Making"** (Chivukula & Gray, DRS 2024). It is grounded in critical discourse analysis and HCI ethics research.
 
 The name combines "ethics" and "ethnography" — it is, in essence, an ethnographic study of the ethics of a design team's own decision-making process.
 

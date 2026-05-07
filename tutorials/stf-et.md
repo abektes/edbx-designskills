@@ -1,4 +1,4 @@
-# STF-ET — Speculative Technology Futures: Ethical Toolkit
+# STF-ET — Ethics Toolkit: Put Values Into Action
 
 **The short version:** A five-tool chain from Stanford for thinking rigorously about the long-term ethical futures of a technology — not just "what happens next sprint" but "what does this look like in five years, and who has been helped or harmed by then?"
 
@@ -6,7 +6,7 @@
 
 ## Who made it
 
-STF-ET — **Speculative Technology Futures: Ethical Toolkit** — was developed by the **McCoy Family Center for Ethics in Society at Stanford University**, one of the leading centers for ethics in technology research in the United States. The toolkit is released under a **Creative Commons CC BY 4.0 license**, meaning it is freely usable and adaptable.
+The **Ethics Toolkit: Put Values Into Action** (referred to in this package as STF-ET) was developed by the **McCoy Family Center for Ethics in Society at Stanford University**, one of the leading centers for ethics in technology research in the United States. The toolkit is released under a **Creative Commons CC BY 4.0 license**, meaning it is freely usable and adaptable.
 
 The Stanford McCoy Center works at the intersection of philosophy, policy, and technology practice. The STF-ET toolkit reflects that intersection: it is philosophically rigorous enough to identify real ethical tensions, and practical enough to be used by product teams without a philosophy background.
 

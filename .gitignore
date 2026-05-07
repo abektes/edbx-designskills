@@ -46,3 +46,4 @@ pip-delete-this-directory.txt
 
 # Nested git folders (if any)
 **/.git/
+.gstack/

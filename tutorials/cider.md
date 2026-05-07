@@ -6,7 +6,7 @@
 
 ## Who made it
 
-CIDER was developed by **Cynthia Bennett, Cole Gleason, Hailey L. Johnson, Franchesca Lameiro, Meredith Ringel Morris, and colleagues** at Microsoft Research and Carnegie Mellon University, published in 2022. The lead researchers include Katta Spiel and others working at the intersection of HCI, disability studies, and inclusive design.
+CIDER was developed by **Alannah Oleson, Meron Solomon, Christopher Perdriau, and Amy J. Ko**, published in 2022 at the ACM ICER (International Computing Education Research) conference and subsequently in ACM Transactions on Computing Education (doi:10.1145/3540065). The method emerged from research on teaching inclusive design skills in computing education.
 
 The name is an acronym: **Critique → Imagine → Design → Expand → Repeat**
 

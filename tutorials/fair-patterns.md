@@ -6,7 +6,7 @@
 
 ## Who made it
 
-Fair Patterns is grounded in the systematic dark pattern research of **Colin M. Gray, Aarron Walter, and colleagues** (Gray et al., 2024) and **Harry Brignull's** influential dark patterns taxonomy (Brignull, 2023). Brignull coined the term "dark patterns" in 2010 and built the foundational taxonomy that most audit frameworks draw on.
+Fair Patterns is grounded in the systematic dark pattern research of **Colin M. Gray, Nataliia Bielova, Cristiana Santos, Thomas Mildner, and colleagues** — specifically "An Ontology of Dark Patterns: Foundations, Definitions, and a Structure for Transdisciplinary Action" (Gray et al., CHI 2024, doi:10.1145/3613904.3642436) — and **Harry Brignull's** influential dark patterns taxonomy (Brignull, 2023). Brignull coined the term "dark patterns" in 2010 and built the foundational taxonomy that most audit frameworks draw on.
 
 The method adapts this research into a tool that goes beyond identification — adding organizational root cause analysis and legal compliance mapping to make the findings actionable at the organizational level, not just the design level.
 

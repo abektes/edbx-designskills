@@ -6,7 +6,7 @@
 
 ## Who made it
 
-Anti-Heroes was developed by Shruthi Sai Chivukula, Wendy Ju, Colin M. Gray, and colleagues, published in a 2024 research paper (arXiv:2405.03674). It comes out of ongoing academic work on ethical design methods, particularly around who gets left out of design thinking.
+Anti-Heroes was developed by Shikha Mehta, Shruthi Sai Chivukula, Colin M. Gray, and Ritika Gairola. The work was published as a preprint in 2024 (arXiv:2405.03674) and formally as a full paper in the Proceedings of the 2025 ACM Designing Interactive Systems Conference (DIS 2025). It comes out of ongoing academic work on ethical design methods, particularly around who gets left out of design thinking.
 
 The name is intentional. "Anti-heroes" are the people in the story who aren't the heroes — not villains, not antagonists, just people the design didn't account for, and who bear consequences they didn't choose.
 
