@@ -1,0 +1,111 @@
+<!--
+  Black Mirror Brainstorming — pitch poster template.
+
+  This is a starting structure. When generating a real poster, replace
+  the {{PLACEHOLDERS}}, keep the file self-contained (no external CSS,
+  fonts, or images), and feel free to nudge the palette darker or shift
+  the typography to match the episode's mood. The look should feel like
+  a cautionary trailer card, not a launch banner.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>{{EPISODE_TITLE}} — a Black Mirror Brainstorming pitch</title>
+<style>
+  :root {
+    --bg: #0b0b0d;
+    --ink: #ededee;
+    --muted: #8a8a90;
+    --accent: #c9a227; /* slightly tarnished gold; swap to a different muted tone if it fits the episode */
+    --rule: #1f1f24;
+  }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+  body {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 6vh 6vw;
+    box-sizing: border-box;
+  }
+  .poster {
+    max-width: 760px;
+    width: 100%;
+    border: 1px solid var(--rule);
+    padding: 56px clamp(24px, 6vw, 64px);
+    background: linear-gradient(180deg, #0b0b0d 0%, #101013 100%);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  }
+  .eyebrow {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 18px;
+  }
+  h1.title {
+    font-family: ui-serif, Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(40px, 7vw, 72px);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    margin: 0 0 28px;
+    color: var(--ink);
+  }
+  .quote {
+    font-size: clamp(17px, 2.1vw, 21px);
+    line-height: 1.55;
+    color: var(--ink);
+    border-left: 2px solid var(--accent);
+    padding: 4px 0 4px 20px;
+    margin: 0 0 36px;
+    font-style: italic;
+  }
+  .meta {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    border-top: 1px solid var(--rule);
+    padding-top: 22px;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+  .meta .row { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+  .meta .label {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    min-width: 90px;
+  }
+  .meta .value { color: var(--ink); }
+  .footer {
+    margin-top: 32px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: right;
+  }
+</style>
+</head>
+<body>
+  <article class="poster">
+    <p class="eyebrow">A Black Mirror Brainstorming pitch · Episode {{EPISODE_NUMBER}}</p>
+    <h1 class="title">{{EPISODE_TITLE}}</h1>
+    <blockquote class="quote">{{PITCH_QUOTE}}</blockquote>
+    <div class="meta">
+      <div class="row"><span class="label">Starring</span><span class="value">{{PROTAGONIST}} · {{ANTAGONIST}} · {{SUPPORTING}}</span></div>
+      <div class="row"><span class="label">Setting</span><span class="value">{{SETTING}}</span></div>
+      <div class="row"><span class="label">Based on</span><span class="value">{{DESIGN_CONCEPT}}</span></div>
+      <div class="row"><span class="label">Lens</span><span class="value">{{LENS}}</span></div>
+    </div>
+    <p class="footer">For internal speculative review · Not a product roadmap</p>
+  </article>
+</body>
+</html>

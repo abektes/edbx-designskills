@@ -1,0 +1,26 @@
+{
+  "skill_name": "black-mirror-brainstorming",
+  "evals": [
+    {
+      "id": 0,
+      "name": "social-fitness-leaderboard",
+      "prompt": "We're building a social fitness app where friends can see each other's daily step counts, workout streaks, and weekly rankings. Run a Black Mirror Brainstorming session on this concept — I want the full thing: what-could-go-wrong brainstorm across economic, political, and social lenses, three episode variants, and a list of anti-goals I can use in our design review next week.",
+      "expected_output": "8–12 brainstorm items spread across all three lenses, three mechanistically distinct episodes (each with title, named characters, concrete setting, three-act arc, and pitch quote), and 6–10 anti-goals each with a trace back to an episode and a concrete test. At least one episode's pitch quote should be quotable. Load-bearing anti-goals called out explicitly.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "ai-hiring-screening",
+      "prompt": "Our product screens job applicants using AI — it reads CVs, scores video interview clips for 'communication quality', and ranks candidates before a human sees them. The CEO loves it. I'm the design lead and I'm uncomfortable but can't articulate why beyond 'this feels bad.' Use Black Mirror Brainstorming to help me name the failure modes and turn them into anti-goals I can bring to a design ethics review.",
+      "expected_output": "A brainstorm that surfaces political (bias, discrimination) and social (power asymmetry, false rejections) harms not just the obvious privacy concern, three episodes with distinct mechanisms of harm (not three flavours of 'the AI was biased'), and anti-goals specific enough to test — e.g. not 'don't discriminate' but a concrete, measurable constraint.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "medication-adherence-tracker",
+      "prompt": "We're designing a medication adherence tracker — like Strava but for taking your pills. It sends reminders, tracks streaks, lets caregivers and doctors see your history, and has a 'care circle' feature where family members can see if you've taken your meds today. Just give me the anti-goals — skip the full episode write-ups, I'm short on time — but make them specific enough to fail, not platitudes.",
+      "expected_output": "The skill should still run the internal brainstorm and episodes (to avoid generic anti-goals), but the output trims to the anti-goals section only. Anti-goals should be specific (e.g. 'the care circle feature must have a patient-controlled off-switch that caregivers cannot override') with traces and concrete tests. Load-bearing ones flagged.",
+      "files": []
+    }
+  ]
+}

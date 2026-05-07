@@ -1,0 +1,44 @@
+{
+  "expectations": [
+    {
+      "text": "Option A (deploy with bias correction module) is analyzed",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Option B (delay 12 months for external audit) is analyzed",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Option C (deploy in low-acuity contexts only) is analyzed",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "The known bias problem (under-triage of Black patients or chronic pain) is explicitly named",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Values of dignity, justice, and well-being are named",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "A Future Direction section is present with explicit value trade-offs",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Option C analysis mentions risk at the low-acuity/high-acuity boundary",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Algorithmic bias and accountability are mentioned",
+      "passed": true,
+      "evidence": "keyword match"
+    }
+  ]
+}

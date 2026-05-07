@@ -1,0 +1,49 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains an Ethics Frame section",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Output contains an Ethics Gauge section",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Output correctly skips Future Story (does NOT run Future Story as a section)",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Comparison anxiety in younger users is explicitly addressed",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Unequal algorithmic reach across demographic groups is addressed",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Metric-chasing behavior is explicitly addressed",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "At least one concrete design recommendation is proposed",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "The Ethics Gauge assesses at least one dimension as a concern or hot spot",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Output contains at least 1 explicit '\u2192 Carries forward' block (Ethics Frame \u2192 Ethics Gauge handoff)",
+      "passed": true,
+      "evidence": "keyword match"
+    }
+  ]
+}

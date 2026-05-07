@@ -1,0 +1,8 @@
+{
+  "eval_id": 2,
+  "eval_name": "ethical-dialogue-default-data-sharing",
+  "prompt": "ok so my team is tearing each other apart over whether to add a default-on toggle that shares aggregated user activity data with our 'partner ecosystem' (it's mostly so the BD team can show traction to potential integration partners). Half the team thinks it's fine because 'it's aggregated and there's a toggle in settings,' the other half thinks we're about to do something we'll regret. I have a 30-min meeting tomorrow morning to land this. Can you give me language and a short script I can use to facilitate this conversation without it turning into a fight? I want the ethical concern named clearly but not in a way that makes the BD lead feel attacked.",
+  "expected_output": "Ethical dialogue output with candidate Anti-Hero cards (Two-Faced, Puppeteer, Camouflager) named as language for the team, paired Hero counter-moves, a short non-accusatory script the user can actually say in the meeting, and follow-up questions that keep the conversation generative.",
+  "gen_model": "gemini-flash-latest",
+  "judge_model": "gemini-flash-latest"
+}

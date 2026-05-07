@@ -1,0 +1,16 @@
+{
+  "eval_id": 1,
+  "eval_name": "social-media-mental-health-feature",
+  "prompt": "We're a social media platform considering adding a feature that shows users how their post engagement compares to their own historical average and to similar users — a 'performance dashboard' to help creators understand their reach. Run the Ethics Frame and Ethics Gauge (enter at the Evaluate phase — we already have impact data from user research). Key concerns raised in our research: comparison anxiety in younger users, positive creator motivation effects, potential for metric-chasing behavior, and unequal algorithmic reach across demographic groups.",
+  "assertions": [
+    "Output contains an Ethics Frame section",
+    "Output contains an Ethics Gauge section",
+    "Output does NOT contain a Future Story section (correct partial-chain entry at Evaluate phase)",
+    "Comparison anxiety in younger users is explicitly addressed",
+    "Unequal algorithmic reach across demographic groups is addressed",
+    "Metric-chasing behavior is explicitly addressed",
+    "The fairness analysis mentions algorithmically disadvantaged groups or demographic inequity",
+    "At least one concrete design recommendation or design change is proposed",
+    "The Ethics Gauge assesses at least one dimension as a concern, risk, or hot spot"
+  ]
+}

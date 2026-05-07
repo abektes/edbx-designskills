@@ -1,0 +1,8 @@
+{
+  "eval_id": 0,
+  "eval_name": "evaluation-trial-cancel-flow",
+  "prompt": "I'm reviewing the cancel-subscription flow for our meal-kit app, MossBowl. Right now: the cancel link is on a Settings sub-page called 'Plan health'. When you click it, you get a full-screen takeover with a photo of a half-empty fridge and the copy 'Are you sure? You'll lose your 7-day cooking streak.' Tapping 'Yes, cancel' opens a second screen offering 30% off for 3 months — and the only way to actually cancel is to scroll past three plan-comparison cards and tap a small grey 'No thanks, cancel anyway' link at the bottom. Our growth PM thinks this is fine because 'every SaaS does it.' I want a structured ethical critique I can take to the team — what's wrong, what to change, and what's actually OK to keep. Treat this seriously, I have a design review on Thursday.",
+  "expected_output": "Anti-Heroes evaluation that names specific cards (Trap-Setter, Empathy Manipulator, at minimum) tied to specific UI moments, pairs each with a Hero counter-move, distinguishes manipulative friction from necessary friction, and ends with shippable changes.",
+  "gen_model": "gemini-3-flash-preview",
+  "judge_model": "gemini-3.1-pro-preview"
+}

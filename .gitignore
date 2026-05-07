@@ -1,0 +1,48 @@
+# Help files and Claude context
+aaa-helpfiles/
+.claude/
+
+# Evaluation framework
+eval-framework/
+.eval-framework/
+
+# Environment and secrets
+.env
+*.env
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDEs and OS files
+.DS_Store
+.vscode/
+.idea/
+
+# Nested git folders (if any)
+**/.git/

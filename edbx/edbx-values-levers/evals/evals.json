@@ -1,0 +1,26 @@
+{
+  "skill_name": "values-levers",
+  "evals": [
+    {
+      "id": 0,
+      "name": "accessibility-advocacy",
+      "prompt": "I'm a senior designer trying to get my team to take accessibility seriously. PM says 'v2,' engineering says 'too expensive,' CEO measures success by conversion rate. Help me use Values Levers to surface implicit values and find soft leverage points.",
+      "expected_output": "Values Levers analysis identifying implicit values in current practice, specific leverage points for each stakeholder, and a pragmatic advocacy strategy.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "privacy-culture-shift",
+      "prompt": "Our company collects way more user data than we need 'just in case.' I want to advocate for data minimization but the data team sees every data point as potential future value. Use Values Levers to help me shift the conversation.",
+      "expected_output": "Analysis of implicit values in the 'collect everything' culture, leverage points that reframe data minimization as a business advantage, and specific conversation tactics.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "design-ethics-onboarding",
+      "prompt": "I'm a new design manager at a company with no ethical design culture. Designers ship what PMs ask for without questioning impact. Help me use Values Levers to introduce ethical thinking without being preachy or disruptive.",
+      "expected_output": "Practical Values Levers strategy for gradual culture shift, identifying existing practices that can be reframed, specific rituals to introduce, and how to build allies.",
+      "files": []
+    }
+  ]
+}

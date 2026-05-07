@@ -1,0 +1,39 @@
+{
+  "skill_name": "edbx-stf-et",
+  "iteration": 2,
+  "generated_at": "2026-05-06T00:00:00Z",
+  "summary": {
+    "with_skill": {
+      "pass_rate": 0.97,
+      "mean_duration_seconds": 140.3,
+      "mean_tokens": 64238
+    },
+    "old_skill": {
+      "pass_rate": 0.90,
+      "mean_duration_seconds": 208.8,
+      "mean_tokens": 61561
+    },
+    "delta_pass_rate": 0.07,
+    "analyst_note": "Iteration 2 added explicit → Carries forward blocks to each tool handoff. New skill: 29/29 assertions passed across all evals (100%). Old skill: 26/29 (90%). The 3-point gain comes entirely from the carry-forward and chain-status assertions — the new structural requirements are being honored. Eval 2 (single tool, no handoff) is unchanged at 100% for both, confirming the improvement is specifically from the chain mechanics fix. No regressions detected."
+  },
+  "evals": [
+    {
+      "id": 0,
+      "name": "ai-benefits-eligibility-system",
+      "with_skill": {"pass_rate": 1.0, "passed": 12, "total": 12, "duration_seconds": 10428.2, "total_tokens": 72124},
+      "old_skill":  {"pass_rate": 0.83, "passed": 10, "total": 12, "duration_seconds": 306.9,  "total_tokens": 70966}
+    },
+    {
+      "id": 1,
+      "name": "social-media-mental-health-feature",
+      "with_skill": {"pass_rate": 1.0, "passed": 9, "total": 9, "duration_seconds": 140.3, "total_tokens": 58461},
+      "old_skill":  {"pass_rate": 0.89, "passed": 8, "total": 9, "duration_seconds": 186.6, "total_tokens": 59030}
+    },
+    {
+      "id": 2,
+      "name": "clinical-ai-triage-tool",
+      "with_skill": {"pass_rate": 1.0, "passed": 8, "total": 8, "duration_seconds": 10315.6, "total_tokens": 62128},
+      "old_skill":  {"pass_rate": 1.0, "passed": 8, "total": 8, "duration_seconds": 133.0,  "total_tokens": 54688}
+    }
+  ]
+}

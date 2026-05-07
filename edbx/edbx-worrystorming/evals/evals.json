@@ -1,0 +1,26 @@
+{
+  "skill_name": "worrystorming",
+  "evals": [
+    {
+      "id": 0,
+      "name": "neighborhood-safety-app",
+      "prompt": "We're launching a neighborhood safety app where users report 'suspicious activity' with location pins, photos, and descriptions visible to all users within 2 miles. Run a Worrystorming session — I need worry clusters around racial profiling, vigilantism, privacy, false reports, and community trust.",
+      "expected_output": "Worry clusters with specific concerns organized by theme, reframed as design values, with priority ranking and concrete design responses to top worries.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "ai-therapy-bot",
+      "prompt": "We're building an AI therapy chatbot that's free and available 24/7. Run a Worrystorming — what could go wrong with AI providing mental health support at scale? Cover clinical safety, data privacy, replacement of human connection, and liability.",
+      "expected_output": "Comprehensive worry clusters covering clinical harm, false sense of treatment, crisis handling failures, data exploitation, and societal effects, reframed as design values.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "school-facial-recognition",
+      "prompt": "A school district wants to install facial recognition for attendance tracking and campus security. Worrystorm this — cover privacy, bias, normalization of surveillance for children, and the chilling effect on student behavior.",
+      "expected_output": "Worry clusters covering surveillance normalization, racial bias in recognition accuracy, chilling effects on student expression, data breach risks, and consent from minors.",
+      "files": []
+    }
+  ]
+}

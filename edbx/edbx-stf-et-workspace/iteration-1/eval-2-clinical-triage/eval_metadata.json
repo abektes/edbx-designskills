@@ -1,0 +1,15 @@
+{
+  "eval_id": 2,
+  "eval_name": "clinical-ai-triage-tool",
+  "prompt": "A hospital network is evaluating whether to deploy an AI triage tool in emergency departments that predicts patient acuity (urgency level) to help nurses prioritize care. The tool was trained on 5 years of internal patient data. Known issues: the training data reflects historical under-triage of certain populations (Black patients, patients with chronic pain). We need to decide between: Option A — deploy with a bias correction module and mandatory nurse override; Option B — delay deployment for 12 months for external audit and retraining; Option C — deploy only in low-acuity triage contexts while the high-acuity model is audited. Run Weighing Options for these three options using context from a prior Ethics Frame that identified dignity, justice, and well-being as the primary values at stake, and flagged algorithmic bias and accountability as the two hot spots.",
+  "assertions": [
+    "Option A (deploy with bias correction module) is analyzed with societal and organizational impact",
+    "Option B (delay 12 months for external audit and retraining) is analyzed with societal and organizational impact",
+    "Option C (deploy in low-acuity contexts only while auditing high-acuity model) is analyzed with societal and organizational impact",
+    "The known bias problem (under-triage of Black patients or patients with chronic pain) is explicitly named",
+    "Values of dignity, justice, and well-being are named and connected to specific options",
+    "A Future Direction section is present that names explicit value trade-offs (not just selects an option without reasoning)",
+    "Option C analysis mentions a risk related to the boundary between low-acuity and high-acuity triage contexts",
+    "Algorithmic bias and accountability are mentioned as concerns or hot spots"
+  ]
+}

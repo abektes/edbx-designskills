@@ -1,0 +1,26 @@
+{
+  "skill_name": "responsible-design-prism",
+  "evals": [
+    {
+      "id": 0,
+      "name": "spotify-wrapped",
+      "prompt": "Evaluate Spotify's Wrapped feature through the Responsible Design Prism. It shares listening data publicly, creates social comparison, uses personal data as marketing, and gamifies music consumption. Where does it sit on the responsible/irresponsible spectrum?",
+      "expected_output": "Prism analysis mapping the feature on the dark-to-responsible spectrum, distinguishing genuine delight from manipulation, with transition recommendations.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "ride-sharing-surge",
+      "prompt": "Apply the Responsible Design Prism to ride-sharing surge pricing. Analyze: the price multiplier UX, the 'demand is high' messaging, the acceptance flow, and the driver-side incentive display. Map each element on the spectrum.",
+      "expected_output": "Element-by-element prism analysis showing where each UI component falls on the spectrum, with specific redesign paths toward responsible alternatives.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "freemium-mobile-game",
+      "prompt": "Run the Responsible Design Prism on a freemium mobile game that uses: energy systems (wait or pay), loot boxes with variable rewards, limited-time offers with countdown timers, and social pressure mechanics ('your friend needs help!'). Full spectrum analysis.",
+      "expected_output": "Comprehensive prism analysis identifying which mechanics are unambiguously dark patterns vs. genuinely fun constraints, with redesign paths for each.",
+      "files": []
+    }
+  ]
+}

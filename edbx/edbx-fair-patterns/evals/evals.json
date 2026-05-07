@@ -1,0 +1,26 @@
+{
+  "skill_name": "fair-patterns",
+  "evals": [
+    {
+      "id": 0,
+      "name": "fast-fashion-checkout",
+      "prompt": "Audit the checkout flow of a fast-fashion e-commerce app. It has: pre-checked 'add shipping insurance' ($4.99), a countdown timer ('only 2 left!'), newsletter opt-out buried in settings, and a 'recommended' upsell carousel that delays the checkout button by 3 seconds. Identify dark patterns and give fair alternatives.",
+      "expected_output": "Pattern-by-pattern identification of dark patterns with named categories, severity assessment, and specific fair pattern replacements with implementation guidance.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "subscription-management",
+      "prompt": "Our SaaS product makes it easy to upgrade (one click) but requires users to: find the cancel option (buried in Account > Billing > Plan Details > Advanced), confirm cancellation twice, sit through a 'we'll miss you' retention flow, wait 3 business days for 'processing,' and then confirm again via email. Apply Fair Patterns.",
+      "expected_output": "Audit naming each dark pattern, the asymmetry between upgrade/downgrade friction, and fair pattern alternatives that respect user autonomy.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "cookie-consent-redesign",
+      "prompt": "Our cookie consent banner has a big green 'Accept All' button and a small grey 'Manage preferences' link that opens a 4-step wizard. Run a Fair Patterns analysis and redesign it.",
+      "expected_output": "Analysis of the consent dark pattern with fair alternative designs that give equal visual weight to accept/reject, minimize clicks for privacy-protective choices.",
+      "files": []
+    }
+  ]
+}

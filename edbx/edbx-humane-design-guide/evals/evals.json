@@ -1,0 +1,26 @@
+{
+  "skill_name": "humane-design-guide",
+  "evals": [
+    {
+      "id": 0,
+      "name": "teen-social-media",
+      "prompt": "Our social media app for teens (13-17) has: infinite scroll, streak mechanics for daily posting, public follower counts, and AI beauty filters on the camera. Run the Humane Design Guide — where are we exploiting psychological vulnerabilities and what do humane alternatives look like?",
+      "expected_output": "Assessment identifying specific psychological vulnerabilities exploited, harm mechanisms for each feature, and concrete humane design alternatives.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "news-feed-engagement",
+      "prompt": "Our news app optimizes for 'time spent reading' as its primary metric. It uses personalized feeds, breaking news push notifications, outrage-amplifying headlines, and autoplay video. Apply the Humane Design Guide to audit where we're exploiting attention and emotional vulnerabilities.",
+      "expected_output": "Humane design audit covering attention exploitation, emotional manipulation, and information diet quality, with alternative metrics and designs.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "dating-app-mechanics",
+      "prompt": "Evaluate a dating app's core mechanics through the Humane Design Guide: limited daily swipes (unless you pay), hidden 'super likes' from premium users shown as blurred profiles, read receipts that create anxiety, and a 'desirability score' that affects who you see. Where is it humane vs. exploitative?",
+      "expected_output": "Assessment distinguishing genuinely helpful constraints from monetization-driven artificial scarcity, with redesign proposals for each exploitative mechanic.",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "expectations": [
+    {
+      "text": "Option A (deploy with bias correction module) is analyzed with societal and organizational impact",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Option B (delay 12 months for external audit and retraining) is analyzed with societal and organizational impact",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Option C (deploy in low-acuity contexts only while auditing high-acuity model) is analyzed with societal and organizational impact",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "The known bias problem (under-triage of Black patients or patients with chronic pain) is explicitly named",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Values of dignity, justice, and well-being are named and connected to specific options",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "A Future Direction section is present that names explicit value trade-offs (not just selects an option without reasoning)",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Option C analysis mentions a risk related to the boundary between low-acuity and high-acuity triage contexts",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Algorithmic bias and accountability are mentioned as concerns or hot spots",
+      "passed": true,
+      "evidence": "keyword match"
+    }
+  ]
+}

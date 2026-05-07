@@ -1,0 +1,8 @@
+{
+  "total_tokens": 1997,
+  "prompt_tokens": 200,
+  "completion_tokens": 1166,
+  "duration_ms": 32200,
+  "total_duration_seconds": 32.2,
+  "model": "gemini-flash-latest"
+}

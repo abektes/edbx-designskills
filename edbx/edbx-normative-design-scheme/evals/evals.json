@@ -1,0 +1,26 @@
+{
+  "skill_name": "normative-design-scheme",
+  "evals": [
+    {
+      "id": 0,
+      "name": "dating-app-algorithm",
+      "prompt": "Our dating app uses a compatibility algorithm that factors in neighborhood, education level, and income bracket. The data team says it improves match quality. Apply the Normative Design Scheme — Virtue Ethics (what kind of designers are we?), Consequentialism (effects on social stratification?), Deontology (duties to users and society?).",
+      "expected_output": "Three-lens analysis with specific judgments from each ethical framework, tensions between them, and design recommendations that satisfy multiple frameworks.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "predictive-policing",
+      "prompt": "A city wants us to build a 'predictive policing' dashboard using historical crime data to suggest patrol routes. Apply the Normative Design Scheme across all three lenses — what does each ethical framework say about whether we should build this?",
+      "expected_output": "Rigorous three-lens analysis where Virtue Ethics questions the designer's character, Consequentialism maps racially disparate impacts, and Deontology examines fundamental rights.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "attention-economy-redesign",
+      "prompt": "Our social media platform currently optimizes for engagement (time spent). We want to shift to 'time well spent.' Apply the Normative Design Scheme to evaluate both the current design and the proposed shift.",
+      "expected_output": "Comparative analysis of both design philosophies through three ethical lenses, showing how the shift changes the moral calculus in each framework.",
+      "files": []
+    }
+  ]
+}

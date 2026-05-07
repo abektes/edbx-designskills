@@ -1,0 +1,54 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains a Future Story section",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Output contains an Impacts Explorer section",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Output contains an Ethics Frame section",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Output contains an Ethics Gauge section",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Output contains a Weighing Options section",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Option A (AI as primary decision-maker) is analyzed in the Weighing Options section",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Option B (AI as decision-support with human final decisions) is analyzed in the Weighing Options section",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "At least three distinct stakeholder groups are named (e.g., applicants, case workers, agency, vulnerable populations)",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "Values of justice and dignity are explicitly named",
+      "passed": true,
+      "evidence": "keyword match"
+    },
+    {
+      "text": "A Future Direction or recommendation section appears that names which option to pursue and why",
+      "passed": true,
+      "evidence": "keyword match"
+    }
+  ]
+}

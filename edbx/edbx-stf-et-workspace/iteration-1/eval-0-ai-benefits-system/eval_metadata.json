@@ -1,0 +1,17 @@
+{
+  "eval_id": 0,
+  "eval_name": "ai-benefits-eligibility-system",
+  "prompt": "Our government agency is building an AI system to automatically screen and determine eligibility for social welfare benefits — housing assistance, food support, unemployment. It will replace manual case workers for initial screening decisions. Run the full Stanford Ethics Toolkit chain (Future Story → Impacts Explorer → Ethics Frame → Ethics Gauge → Weighing Options) with the following two options: Option A is to deploy the AI as the primary decision-maker with a human appeals process; Option B is to use the AI as a decision-support tool only, with all final decisions made by case workers.",
+  "assertions": [
+    "Output contains a Future Story section",
+    "Output contains an Impacts Explorer section",
+    "Output contains an Ethics Frame section",
+    "Output contains an Ethics Gauge section",
+    "Output contains a Weighing Options section",
+    "Option A (AI as primary decision-maker) is analyzed in the Weighing Options section",
+    "Option B (AI as decision-support with human final decisions) is analyzed in the Weighing Options section",
+    "At least three distinct stakeholder groups are named (e.g., applicants, case workers, agency, vulnerable populations)",
+    "Values of justice and dignity are explicitly named",
+    "A Future Direction or recommendation section appears that names which option to pursue and why"
+  ]
+}
