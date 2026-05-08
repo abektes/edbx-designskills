@@ -1,8 +1,0 @@
-{
-  "raw_judge_output": "{\n  \"A\": {\n    \"structure_format\": {\n      \"score\": 4,\n      \"reason\": \"The output is well-organized into 'Disaster Zones' and 'Flips,' making it easy to read and follow the logic of the exercise.\"\n    },\n    \"depth_specificity\": {\n      \"score\": 5,\n      \"reason\": \"Excellent specificity regarding Gen-Z tropes (latte shaming, outdated slang) and technical details (iOS Time Sensitive APIs",
-  "parse_error": true,
-  "blinding": {
-    "A": "without_skill",
-    "B": "with_skill"
-  }
-}

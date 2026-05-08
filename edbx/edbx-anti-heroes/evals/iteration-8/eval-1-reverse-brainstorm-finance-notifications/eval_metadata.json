@@ -1,8 +1,0 @@
-{
-  "eval_id": 1,
-  "eval_name": "reverse-brainstorm-finance-notifications",
-  "prompt": "We're scoping a new push-notification system for a personal finance app aimed at gen-z users (think: round-ups, savings nudges, 'you spent $14 on coffee this week'). Before we design the real version, my lead wants us to do a reverse brainstorm — design the worst possible notification system on purpose, the one that would make us hate ourselves, so we can make sure we're not slowly drifting into it. Then flip each anti-goal back into something we'd actually be proud of shipping. Help us run that exercise.",
-  "expected_output": "Reverse brainstorm output with explicitly named anti-goals tied to Anti-Hero cards (e.g., Empathy Manipulator, Nickeling-and-Diming, Puppeteer), worst-version notification examples, and Hero flips with concrete guardrails.",
-  "gen_model": "gemini-flash-latest",
-  "judge_model": "gemini-flash-latest"
-}
