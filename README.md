@@ -53,9 +53,13 @@ The methods come from researchers and practitioners — Brignull's dark patterns
 
 [`tutorials/`](tutorials/) contains plain-language guides to each method — for designers and PMs who want to understand what each method does without studying the academic source.
 
-
 ---
 
+## Validation
+
+The skills were evaluated against a strong baseline (a competent LLM told the method's name and asked to apply it thoroughly) using two independent judge models. Headline results: **17 / 21 skills win cleanly under both judges, 4 are razor-thin under Gemini, 0 lose under both.**
+
+Full per-skill scoreboard, methodology, reflection on what worked, and proposed improvements: **[RESULTS.md](RESULTS.md)**.
 
 ---
 
