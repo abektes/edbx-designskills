@@ -113,11 +113,14 @@ Read the corresponding tutorial file in [`tutorials/`](tutorials/). Each tutoria
 .
 ├── AGENT.md                       — Ethical Design Specialist agent definition
 ├── README.md                      — this file
+├── RESULTS.md                     — validation scoreboard and methodology
+├── LICENSE                        — MIT
 ├── edbx/                          — 21 structured ethical-design methods
-│   ├── edbx-*/                    — one folder per skill
-│   │   ├── SKILL.md               — methodology + AI agent instructions
-│   │   └── evals/evals.json       — three test scenarios per skill
-└── tutorials/                     — plain-language guide to each skill
+│   └── edbx-*/                    — one folder per skill
+│       ├── SKILL.md               — methodology + AI agent instructions
+│       └── evals/evals.json       — three test scenarios per skill
+├── tutorials/                     — plain-language guide to each skill
+└── assets/                        — images and banner
 ```
 
 ---
