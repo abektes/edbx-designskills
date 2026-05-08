@@ -135,4 +135,4 @@ This is an open exploration. If you know of methods that should be here, see way
 
 ## Acknowledgements
 
-Every method in this package is built on the work of researchers and practitioners who developed the underlying frameworks — including Harry Brignull, Colin M. Gray, BJ Fogg, Phil Francis Carspecken, the Center for Humane Technology, the Digital Ethics Compass authors, the Stanford STF-ET team, and many others. The contribution of this package is integration: bringing those methods together as AI-runnable skills that show up at the moment of decision. The thinking is theirs; the packaging is ours.
+Every method in this package is built on the work of researchers and practitioners who developed the underlying frameworks — including Harry Brignull, Colin M. Gray, BJ Fogg, Phil Francis Carspecken, the Center for Humane Technology, the Danish Design Center (Digital Ethics Compass), the McCoy Family Center for Ethics in Society at Stanford (Ethics Toolkit), and many others. The contribution of this package is integration: bringing those methods together as AI-runnable skills that show up at the moment of decision.
