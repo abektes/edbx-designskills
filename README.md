@@ -131,6 +131,8 @@ Read the corresponding tutorial file in [`tutorials/`](tutorials/). Each tutoria
 
 This is an open exploration. If you know of methods that should be here, see ways the existing skills could be stronger, or want to extend the agent's routing logic, issues and pull requests are welcome.
 
+If you spot a mistake or have an idea, you can also reach me on [LinkedIn](https://www.linkedin.com/in/ahmetbektes/), [X](https://x.com/Abektes), or open an issue here.
+
 ---
 
 ## Acknowledgements
