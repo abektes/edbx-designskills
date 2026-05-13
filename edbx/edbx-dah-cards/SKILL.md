@@ -1,8 +1,8 @@
 ---
 name: edbx-dah-cards
 description: Use when a designer wants to stress-test a product idea or existing feature for negative impacts, explore the dark side of something they're building, ask "is this ethical?", check for unintended harms, reflect on design responsibility, define their design values, or articulate what kind of designer they want to be. Run a DAH (Design Against Humanity) Cards session to audit products and features for ethical harms, map hidden consequences, build a personal ethical manifesto, and draft a future design vision. Also trigger for phrases like "ethical review", "dark patterns audit", "design against humanity", "responsible design", "value alignment", or any moment when a team is uncomfortable with where a product is going.
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, audit]
 ---
 
 # DAH Cards

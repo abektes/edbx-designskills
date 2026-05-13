@@ -1,8 +1,8 @@
 ---
 name: edbx-motivation-matrix
 description: Use when a designer or researcher wants to audit a product for manipulative patterns, map user motivations across different contexts, generate ethical design criteria, evaluate products against motivational incentives, or identify dark patterns in behavioral design. Apply the Motivation Matrix method to analyze how different user motivations — Achievement, Social Acceptance, Fear, Power, and Incentive — interact with product or service contexts. Trigger this skill for any mention of motivation mapping, ethical auditing of a product, dark patterns analysis, designing for diverse user contexts, behavioral design ethics, or when someone asks "are we manipulating users?" Also trigger for "motivation matrix", "user motivation", "behavioral design", "manipulative patterns", or "what motivates our users".
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, forecast]
 ---
 
 # Motivation Matrix

@@ -1,8 +1,8 @@
 ---
 name: edbx-bad-design-canvas
 description: Use when a designer wants to stress-test a product idea for unintended negative consequences before launch, question whether a solution addresses root causes or applies band-aids, identify who is being harmed or excluded by a design, evaluate a product across cultural, social, environmental, and safety implications, or run a structured pre-launch bad design audit across 12 consequence categories. Apply the Bad Design Canvas to systematically uncover the unintended negative consequences a product or service might generate — from cultural appropriation and inequity to environmental impact and exploitation. Trigger this skill for any mention of unintended consequences, pre-launch ethical review, who does this harm, stress-testing a design, bad design audit, break my design, or when someone says "let's think about what could go wrong with this product." Also trigger for "bad design canvas", "consequence mapping", "negative impact audit", "12 consequence categories", or "what harm does this cause."
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, audit]
 ---
 
 # Bad Design Canvas

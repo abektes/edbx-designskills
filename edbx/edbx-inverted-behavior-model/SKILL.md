@@ -1,8 +1,8 @@
 ---
 name: edbx-inverted-behavior-model
 description: Use when a designer wants to identify what behaviors a feature is likely to trigger beyond its intended use, forecast unintended consequences of behavior design, evaluate features through a persuasive technology lens, map motivational factors that drive behavior toward or away from intended outcomes, or audit a product for potentially harmful behavioral outcomes. Apply the Inverted Behavior Model to forecast the full range of behaviors — intended and unintended — that a product feature motivates, and map their consequences for users and society. Trigger this skill for any mention of behavior design, unintended user behavior, persuasive technology audit, forecasting feature consequences, BJ Fogg behavior model, or when someone asks "what will users actually do with this?" Also trigger for "Inverted Behavior Model", "behavior forecast", "persuasive technology review", "behavior audit", or "unintended consequences".
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, forecast]
 ---
 
 # Inverted Behavior Model

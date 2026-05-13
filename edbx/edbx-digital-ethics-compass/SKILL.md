@@ -1,8 +1,8 @@
 ---
 name: edbx-digital-ethics-compass
 description: Use when a designer, product manager, or AI practitioner wants to reflect on the ethical dimensions of data collection and use, evaluate automation and AI features for manipulation or unfairness, assess whether intentions and processes are transparent to users, apply a structured heuristic framework to data-intensive or AI-powered products, or run a broad ethical health check on a product. Apply the Digital Ethics Compass heuristics to evaluate a product or business across four ethical dimensions — Data, Avoid Manipulation, Make Intentions Transparent, and Automation — putting the human at the center of every decision. Trigger this skill for any mention of data ethics, AI ethics, automation ethics, behavioral manipulation, transparency obligations, responsible AI, or when someone asks "is our data practice ethical?" Also trigger for "Digital Ethics Compass", "data ethics audit", "AI ethics", "automation fairness", "responsible AI", or "ethical health check".
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, audit]
 ---
 
 # Digital Ethics Compass

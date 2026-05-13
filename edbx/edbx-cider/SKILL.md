@@ -1,8 +1,8 @@
 ---
 name: edbx-cider
 description: Use when a designer wants to identify hidden assumptions about user ability, capacity, or environment, audit a design for exclusionary patterns, generate inclusive design alternatives through structured assumption-busting, facilitate a team assumption-sharing session, or grow a shared knowledge base of design biases. Apply the CIDER elicitation framework to surface implicit assumptions embedded in a design, envision how those assumptions exclude users, and generate more inclusive alternatives. Trigger this skill for any mention of inclusive design, exclusionary design, assumption auditing, accessibility assumptions, stereotype checking in design, who is being excluded, or when someone says "I want to make sure this works for everyone." Also trigger for "CIDER", "assumption audit", "who can't use this", "inclusion check", or "accessibility assumptions".
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, audit]
 ---
 
 # CIDER

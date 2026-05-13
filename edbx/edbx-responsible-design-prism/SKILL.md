@@ -1,8 +1,8 @@
 ---
 name: edbx-responsible-design-prism
 description: Use when a designer, product manager, or researcher wants to identify dark patterns in an existing product, evaluate where their design sits on the responsible/irresponsible spectrum, facilitate team self-reflection on design ethics, map business incentives against user wellbeing, generate transition paths from dark to responsible design, or answer questions about fair practice guidelines. Apply the Responsible Design Prism framework to audit, evaluate, and reframe design artifacts across the spectrum from dark patterns to responsible design. Trigger this skill for any mention of dark patterns, responsible design, design ethics audit, manipulation in UX, fair UX, ethical product design, or when someone asks "is this design ethical?". Also trigger for "responsible design prism", "dark pattern audit", "design spectrum", "fair practice", "ethical UX", or "manipulative design".
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, audit]
 ---
 
 # Responsible Design Prism

@@ -1,8 +1,8 @@
 ---
 name: edbx-value-dams-and-flows
 description: Use when a designer or team needs to identify features that stakeholders are strongly opposed to, map the difference between what stakeholders block vs. support, balance competing disciplinary, human, and business values, navigate organizational policy conflicts, or facilitate a structured trade-off discussion. Apply the Value Dams and Flows method to map stakeholder value conflicts and consensuses in a design space, identifying which features or policies are blocked (dams) versus which can move forward (flows), and generating strategies to navigate the trade-offs. Trigger this skill for any mention of value trade-offs, stakeholder disagreement on features, blocked design decisions, competing values in a product, balancing business vs. user values, or when someone says "we can't agree on what to build because everyone has different values." Also trigger for "Value Dams and Flows", "value trade-offs", "stakeholder values", "blocked features", or "competing values".
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, alignment]
 ---
 
 # Value Dams and Flows

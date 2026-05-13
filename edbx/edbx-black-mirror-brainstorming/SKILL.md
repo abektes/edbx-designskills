@@ -1,8 +1,8 @@
 ---
 name: edbx-black-mirror-brainstorming
 description: Use when a user wants to pressure-test a product, feature, or concept for ethical risk; explore "what could go wrong"; do critical/speculative design; run a Black Mirror-style brainstorm or anti-goal workshop; build a Black Mirror "episode" pitch around a design; or surface dystopian misuse scenarios before shipping. Trigger even when the user asks vaguely about "unintended consequences," "dark patterns waiting to happen," "harm anticipation," or "ethical red-teaming" of a feature. Speculative, anti-goal ideation for digital products and services in the spirit of the Black Mirror Netflix series. Take on the role of a science fiction filmmaker to imagine how a product could be misused or cause unintended harm — across economic, political, and social dimensions — and turn those stories into concrete anti-goals the team can design against.
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, forecast]
 ---
 
 # Black Mirror Brainstorming

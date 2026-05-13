@@ -1,8 +1,8 @@
 ---
 name: edbx-pledge-works
 description: Use when a designer, team, or organization wants to articulate concrete ethical commitments for a project, translate vague values into actionable pledges, create role-based or context-specific ethical promises, hold a team accountable to ethical outcomes over time, connect everyday design decisions to larger responsible design goals, or formalize the outputs of other ethical design methods into commitments. Facilitate the writing of design pledges — Simple Pledges and Responsible Stories — that translate ethical intentions into specific, accountable commitments linked to design work. Trigger this skill for any mention of design commitments, ethical pledges, accountability in design, team ethics agreements, responsible design promises, or when someone says "we agreed this matters but we never actually committed to doing anything about it." Also trigger for "Pledge Works", "design pledge", "responsible story", "ethical commitment", or "team values agreement".
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, alignment]
 ---
 
 # Pledge Works

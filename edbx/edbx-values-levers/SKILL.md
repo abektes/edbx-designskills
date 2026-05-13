@@ -1,8 +1,8 @@
 ---
 name: edbx-values-levers
 description: Use when a designer, team lead, or design manager wants to open up values discussions in a team, identify what values are currently embedded in team practices, use constraints creatively to surface value conflicts, advocate for ethical considerations within an organization, facilitate cross-disciplinary values alignment, or understand what values their communication systems are reinforcing. Apply the Values Levers framework to surface, discuss, and build team consensus around values embedded in a design process or organizational culture. Trigger this skill for any mention of team values alignment, values in design practice, organizational culture and ethics, building consensus on ethics, soft resistance in design, advocating for ethical design internally, or when someone says "I'm trying to get my team to care about ethics." Also trigger for "Values Levers", "team values", "org ethics culture", "building consensus", "soft resistance", or "advocating for ethical design".
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, alignment]
 ---
 
 # Values Levers

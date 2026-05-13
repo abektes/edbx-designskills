@@ -1,8 +1,8 @@
 ---
 name: edbx-critical-interviewing
 description: Use when a researcher or designer wants to understand the "why" behind participant responses, uncover implicit values and ethical reasoning in design teams or users, prepare interview protocols with lead-off, back-up, emergency, and follow-up questions, identify covert categories around power, ethics, or belief, or probe ethical discomfort and moral reasoning in design practice. Design and facilitate Critical Interviewing protocols that surface the normative and evaluative judgments underlying participants' behaviors, beliefs, and design decisions. Trigger this skill for any mention of interviewing for values, ethical probing in research, understanding designer beliefs, normative research, critical ethnography in design, or when someone says "I need to understand why people make the decisions they do." Also trigger for "Critical Interviewing", "values interview", "ethical probing", "normative interview", or "designer values research".
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, decision]
 ---
 
 # Critical Interviewing

@@ -1,8 +1,8 @@
 ---
 name: edbx-ethical-contract
 description: Use when a team wants to formalize shared ethical commitments across disciplines, assign individual ethical responsibilities to specific roles, create a living ethics manifesto for a project, bring new team members into ethical alignment, hold all stakeholders accountable to design ethics, or escalate from informal pledges to a signed collective agreement. Facilitate the creation of an Ethical Contract — a signed, shared document that negotiates ethical objectives and responsibilities across all stakeholders in a product team. Trigger this skill for any mention of team ethics agreement, shared ethical responsibility, ethics sign-off, stakeholder ethical alignment, design manifesto, or when someone says "we need everyone on the same page about ethics, not just the design team." Also trigger for "Ethical Contract", "ethics sign-off", "ethical manifesto", "stakeholder ethics", or "team ethics agreement".
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, alignment]
 ---
 
 # Ethical Contract

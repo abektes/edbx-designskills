@@ -1,8 +1,8 @@
 ---
 name: edbx-normative-design-scheme
 description: Use when a designer wants to assess a design decision against established ethical theory, brainstorm design alternatives rooted in normative ethics, evaluate whether a product's intention, effects, and design obligations are aligned, apply philosophical ethics frameworks to concrete design problems, or explain design decisions using ethical theory language. Apply the Normative Design Scheme to evaluate design goals and generate design ideas through three normative ethical lenses — Virtue Ethics (intention), Consequentialism (effect), and Deontology (design/duty). Trigger this skill for any mention of applying ethics theories to design, design duty or obligation, consequences of design decisions, virtue in design, deontological design review, or when someone asks "what is the ethically right thing to do here?" Also trigger for "Normative Design Scheme", "ethics lenses", "virtue ethics design", "deontology design", or "consequentialism design".
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, decision]
 ---
 
 # Normative Design Scheme

@@ -1,8 +1,8 @@
 ---
 name: edbx-humane-design-guide
 description: Use when a designer, researcher, or product manager wants to audit how a product exploits human vulnerabilities, identify where design harms attention or emotional wellbeing, surface dark patterns around addiction or deception, generate opportunity areas for more humane product design, or evaluate against Center for Humane Technology principles. Apply the Humane Design Guide framework to evaluate a product or feature against six human sensitivities — Attention, Emotional, Sensemaking, Decision-making, Social Reasoning, and Group Dynamics — and generate humane design alternatives. Trigger this skill for any mention of humane technology, attention exploitation, addictive design, emotional harm in UX, filter bubbles, dark patterns in social products, or when someone asks "is this product respecting its users?" Also trigger for "humane design", "human sensitivities", "attention design", "digital wellbeing", "center for humane technology", or "humane design guide".
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, audit]
 ---
 
 # Humane Design Guide

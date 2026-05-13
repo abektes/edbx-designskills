@@ -1,8 +1,8 @@
 ---
 name: edbx-fair-patterns
 description: Use when a designer wants to audit a product for dark or deceptive UI patterns, find the ethical alternative to a known dark pattern, apply fair pattern countermeasures that restore user agency, evaluate defaults as harmful vs. protective, rewrite manipulative UI language into plain and empowering language, or map a product's deceptive patterns against a taxonomy of known dark pattern types. Identify dark patterns in a digital product or service and apply fair pattern countermeasures to correct them. Trigger this skill for any mention of dark patterns, deceptive design, manipulative UI, user agency, roach motel, confirmshaming, hidden costs, forced continuity, privacy zuckering, or when someone says "is this pattern manipulating our users?" Also trigger for "Fair Patterns", "dark patterns audit", "deceptive design", "manipulative UI", "user agency", or "ethical UI patterns".
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, audit]
 ---
 
 # Fair Patterns

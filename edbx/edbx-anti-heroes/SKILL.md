@@ -1,8 +1,8 @@
 ---
 name: edbx-anti-heroes
 description: Use when a designer needs to critique a design, flow, feature, or concept for dark patterns and anti-user values, run reverse brainstorming to expose worst-possible solutions, generate ethical concept alternatives, or facilitate ethical dialogue in a team using shared Anti-Hero / Hero language. Use the Anti-Heroes card method to surface manipulative design intentions and pair them with ethical Hero counterparts. Lean toward this skill whenever the user mentions dark patterns, manipulative design, deceptive UX, ethical review, anti-patterns, designer responsibility, or wants to "break my design" before shipping.
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, forecast]
 ---
 
 # Anti-Heroes

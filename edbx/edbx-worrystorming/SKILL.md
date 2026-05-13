@@ -1,8 +1,8 @@
 ---
 name: edbx-worrystorming
 description: Use when a designer, product team, or researcher wants to proactively identify risks in a design before shipping, generate worry clusters around a product idea, reframe concerns as design values, map unintended consequences, or run an ethical pre-mortem on a feature or product. Facilitate a Worrystorming session to surface ethical concerns, unintended consequences, and value failures in a design or product. Trigger this skill for any mention of ethical risks, design worries, what could go wrong, unintended consequences, pre-mortem, concern mapping, value conflicts in design, or when someone says "I'm worried this design might..." Also trigger for "worrystorming", "ethical pre-mortem", "what could go wrong", "concern mapping", "risk brainstorm", or "value conflicts".
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, forecast]
 ---
 
 # Worrystorming

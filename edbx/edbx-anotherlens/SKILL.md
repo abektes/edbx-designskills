@@ -1,8 +1,8 @@
 ---
 name: edbx-anotherlens
 description: Use when a designer wants to challenge their own assumptions about a product or feature, check for unconscious bias in design decisions, consider perspectives of users unlike themselves, reframe a design mistake as a learning opportunity, or practice perspective-taking and inclusive design thinking. Apply the Another Lens principle to surface personal biases, blind spots, and worldview assumptions embedded in a design or product. Trigger this skill for any mention of bias in design, inclusive design, perspective-taking, worldview assumptions, challenging design decisions, who am I designing for, representation in design, or when someone says "I'm not sure I've thought about this from enough angles." Also trigger for "another lens", "check my bias", "what am I missing", "whose perspective", or "design self-reflection".
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, decision]
 ---
 
 # Another Lens

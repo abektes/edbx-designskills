@@ -1,8 +1,8 @@
 ---
 name: edbx-ethicography
 description: Use when a researcher, senior designer, or team lead wants to conduct a deep post-hoc ethical analysis of a design process, identify moments where value-centered vs. manipulative thinking shaped decisions, map the ethical trajectory of a design project over time, code design decisions by ethical intent and impact, or build an evidence base for ethical design research. Apply Ethicography to analyze design decisions and team speech acts for their explicit or implicit ethical dimensions, mapping the value-centered vs. manipulative nature of each decision on a persuasion-to-coercion axis. Trigger this skill for any mention of ethical design analysis, design decision audit, value-centered design research, mapping ethics in design process, analyzing design team ethics, or when someone says "I want to understand the ethical quality of our design decisions, not just the outcomes." Also trigger for "Ethicography", "ethical moves", "design decision ethics", "speech act analysis", or "ethical trajectory".
-metadata:
-  version: "1.0"
+version: "1.0"
+tags: [ethical-design, audit]
 ---
 
 # Ethicography
