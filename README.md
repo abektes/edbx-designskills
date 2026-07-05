@@ -145,3 +145,11 @@ If you spot a mistake or have an idea, you can also reach me on [LinkedIn](https
 ## Acknowledgements
 
 Every method in this package is built on the work of researchers and practitioners who developed the underlying frameworks — including Harry Brignull, Colin M. Gray, BJ Fogg, Phil Francis Carspecken, the Center for Humane Technology, the Danish Design Center (Digital Ethics Compass), the McCoy Family Center for Ethics in Society at Stanford (Ethics Toolkit), and many others. The contribution of this package is integration: bringing those methods together as AI-runnable skills that show up at the moment of decision.
+
+---
+
+## Support
+
+If you find this package useful, you can support the work:
+
+<a href="https://www.buymeacoffee.com/abektes" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" ></a>
