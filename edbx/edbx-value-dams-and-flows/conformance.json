@@ -1,0 +1,120 @@
+{
+  "skill": "edbx-value-dams-and-flows",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. Structural checks are pure code; semantic checks go to Jev one item at a time, because Jev cannot count.",
+  "enumerators": {
+    "map_rows": {
+      "type": "table_rows",
+      "in_section": "Dam.?.?Flow Map",
+      "column": "Feature"
+    },
+    "map_dams": {
+      "type": "table_rows",
+      "in_section": "Dam.?.?Flow Map",
+      "column": "Feature",
+      "where": {
+        "column": "Dam or Flow",
+        "matches": "DAM"
+      }
+    },
+    "map_values": {
+      "type": "table_cells",
+      "in_section": "Dam.?.?Flow Map",
+      "column": "Underlying Value"
+    },
+    "map_intensity": {
+      "type": "table_cells",
+      "in_section": "Dam.?.?Flow Map",
+      "column": "Conflict Intensity",
+      "where": {
+        "column": "Dam or Flow",
+        "matches": "DAM"
+      }
+    },
+    "nav_items": {
+      "type": "headings",
+      "pattern": "(hard|soft|weak) dam\\s*:|contested flow\\s*:"
+    },
+    "hard_dams": {
+      "type": "headings",
+      "pattern": "hard dam\\s*:"
+    },
+    "contested_flows": {
+      "type": "headings",
+      "pattern": "contested flow\\s*:"
+    }
+  },
+  "structural": [
+    {
+      "id": "nav_items_in_map",
+      "kind": "subset",
+      "items": "nav_items",
+      "within": "map_rows",
+      "bar": "classifies all features/policies as Dams or Flows with strength ratings",
+      "desc": "every item given a Trade-Off Navigation entry also appears as a row in the Dam-Flow Map"
+    },
+    {
+      "id": "map_has_rows",
+      "kind": "min_count",
+      "items": "map_rows",
+      "n": 2,
+      "bar": "classifies all features/policies as Dams or Flows",
+      "desc": "the Dam-Flow Map contains at least 2 classified items"
+    },
+    {
+      "id": "values_balance_statement",
+      "kind": "section_present",
+      "pattern": "values balance statement",
+      "bar": "produces a Values Balance Statement every session",
+      "desc": "a Values Balance Statement section exists"
+    },
+    {
+      "id": "facilitation_agenda",
+      "kind": "section_present",
+      "pattern": "facilitation agenda|session outline",
+      "bar": "is usable as a stakeholder meeting agenda",
+      "desc": "a facilitation agenda section exists"
+    },
+    {
+      "id": "intensity_is_scored",
+      "kind": "cells_match",
+      "items": "map_intensity",
+      "pattern": "[1-5]",
+      "bar": "assigns a Conflict Intensity Score (1-5) to every Dam",
+      "desc": "every Dam row carries a numeric conflict intensity rating 1-5"
+    }
+  ],
+  "semantic": [
+    {
+      "id": "value_is_concrete",
+      "each": "map_values",
+      "bar": "names underlying values explicitly for every Dam and Flow",
+      "instructions": "Does `items[{i}]` name at least one specific human or organizational value that is at stake?",
+      "criteria": {
+        "true": "Names a concrete value such as 'bodily autonomy', 'financial privacy', 'child safety', 'freedom from surveillance', 'architectural simplicity' or 'liability protection'. Naming several values is still a yes.",
+        "false": "Only a vague placeholder that could apply to any product, such as 'stakeholder concerns', 'user needs', 'ethics', 'business value', 'various values', a dash, or an empty cell."
+      }
+    },
+    {
+      "id": "hard_dam_counterfactual",
+      "each": "hard_dams",
+      "scope_section": true,
+      "bar": "provides a 'What Would Have to Be True' statement for every Hard Dam",
+      "instructions": "Does the section in `items[{i}]` state what would have to change in the world for this blocking objection to dissolve?",
+      "criteria": {
+        "true": "States a specific external condition that would have to become true, such as a change in legal interpretation, a regulator's guidance, a new contract, or evidence that does not exist yet.",
+        "false": "Only lists actions the team should take, restates the objection, or offers a compromise without naming the condition under which the objection disappears."
+      }
+    },
+    {
+      "id": "contested_flow_safeguard",
+      "each": "contested_flows",
+      "scope_section": true,
+      "bar": "provides a minority concern and safeguard for every Contested Flow",
+      "instructions": "Does the section in `items[{i}]` give both the minority's specific concern AND a concrete safeguard that protects them?",
+      "criteria": {
+        "true": "Both are present: the objecting group's specific worry is named, and a concrete protective measure is described that could be built or enforced.",
+        "false": "Only one of the two is present, or the safeguard is a vague commitment such as 'monitor closely', 'be transparent' or 'consider their needs' with nothing implementable."
+      }
+    }
+  ]
+}
