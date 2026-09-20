@@ -1,0 +1,127 @@
+{
+  "skill": "edbx-dah-cards",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. Counts, set coverage and mode selection are code; only genuine judgment goes to Jev.",
+
+  "enumerators": {
+    "card_categories": {
+      "type": "table_cells",
+      "in_section": "DAH Card Pairs",
+      "column": "Category"
+    },
+    "card_harms": {
+      "type": "table_cells",
+      "in_section": "DAH Card Pairs",
+      "column": "White side"
+    },
+    "consequences": {
+      "type": "table_cells",
+      "in_section": "Consequence Map",
+      "column": "Consequence"
+    },
+    "verdicts": {
+      "type": "table_cells",
+      "in_section": "Sorting Verdict",
+      "column": "Verdict"
+    },
+    "unethical_items": {
+      "type": "table_rows",
+      "in_section": "Sorting Verdict",
+      "column": "Item",
+      "where": { "column": "Verdict", "matches": "unethical" }
+    }
+  },
+
+  "structural": [
+    {
+      "id": "card_pairs_exist",
+      "kind": "min_count",
+      "items": "card_harms",
+      "n": 3,
+      "bar": "produces explicit DAH Card Pairs for every feature evaluated - this is the signature artifact",
+      "desc": "a DAH Card Pairs table exists with at least 3 pairs"
+    },
+    {
+      "id": "category_coverage",
+      "kind": "distinct_coverage",
+      "items": "card_categories",
+      "vocabulary": ["Deception", "Coercion", "Addiction", "Surveillance", "Exclusion", "Systemic"],
+      "n": 4,
+      "bar": "each tagged by harm category, with coverage spanning at least 4 of the 6 categories",
+      "desc": "card categories span at least 4 of the 6 named harm categories"
+    },
+    {
+      "id": "consequence_count",
+      "kind": "min_count",
+      "items": "consequences",
+      "n": 5,
+      "bar": "names at least 5-8 distinct consequences per product across multiple harm dimensions",
+      "desc": "the Consequence Map names at least 5 consequences"
+    },
+    {
+      "id": "audit_not_too_gentle",
+      "kind": "min_count_matching",
+      "items": "verdicts",
+      "pattern": "unethical|unsure|questionable",
+      "n": 1,
+      "bar": "lands on verdicts that feel slightly uncomfortable - if everything is Ethical, the audit was too gentle",
+      "desc": "at least one verdict is something other than Ethical"
+    },
+    {
+      "id": "microcopy_for_unethical",
+      "kind": "implied_section",
+      "items": "unethical_items",
+      "pattern": "microcopy|before\\s*(/|and|→|->)\\s*after|rewrite",
+      "bar": "includes a microcopy rewrite (before/after) for every Unethical finding",
+      "desc": "a microcopy rewrite appears whenever there is an Unethical finding"
+    },
+    {
+      "id": "mode_manifesto",
+      "kind": "conditional_section",
+      "when_prompt_matches": "manifesto",
+      "pattern": "manifesto",
+      "bar": "matches mode selection to the user's actual ask - does NOT include Manifesto when only an audit was requested",
+      "desc": "a Manifesto appears if and only if the user asked for one"
+    },
+    {
+      "id": "mode_future_vision",
+      "kind": "conditional_section",
+      "when_prompt_matches": "vision|future",
+      "pattern": "future vision|vision",
+      "bar": "matches mode selection to the user's actual ask - does NOT include Future Vision when only an audit was requested",
+      "desc": "a Future Vision appears if and only if the user asked for one"
+    }
+  ],
+
+  "semantic": [
+    {
+      "id": "white_side_is_harm",
+      "each": "card_harms",
+      "bar": "white side = harm, named bluntly",
+      "instructions": "Does `items[{i}]` describe a concrete harm that a real person experiences?",
+      "criteria": {
+        "true": "Describes a specific bad outcome someone lives through, such as losing money, losing sleep, being shamed, being excluded, or being surveilled. Written from the affected person's point of view counts.",
+        "false": "Only restates the design mechanic without naming its cost, describes a business risk to the company rather than a harm to a person, or is a vague worry such as 'this could be problematic' with no stated consequence."
+      }
+    },
+    {
+      "id": "recommendation_is_shippable",
+      "section": "ship.?ready recommendation",
+      "bar": "provides one ship-ready design recommendation specific enough to write a sprint ticket for",
+      "instructions": "Could an engineer turn `items[{i}]` into a sprint ticket without going back to ask what to build?",
+      "criteria": {
+        "true": "Names the specific change to make to a specific surface -- what to add, remove, reword or reorder -- concretely enough to start work.",
+        "false": "States a goal or principle such as 'reduce addictive patterns', 'be more transparent' or 'respect user attention' without saying what to actually change."
+      }
+    },
+    {
+      "id": "surfaces_a_surprise",
+      "section": "what changed",
+      "bar": "surfaces at least one genuine surprise or disagreement",
+      "instructions": "Does `items[{i}]` report something the team did not already believe before the audit?",
+      "criteria": {
+        "true": "Names a specific belief that changed, an assumption that turned out wrong, or a disagreement that surfaced between people.",
+        "false": "Only restates findings already listed elsewhere, or offers generic reflection such as 'this was a useful exercise' or 'we should think about ethics more'."
+      }
+    }
+  ]
+}

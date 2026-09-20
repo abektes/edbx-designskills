@@ -26,7 +26,7 @@ import re
 import sys
 import urllib.error
 import urllib.request
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
@@ -55,6 +55,16 @@ class Table:
     heading: str
     header: list[str]
     rows: list[list[str]]
+    ancestry: list[str] = field(default_factory=list)
+
+    def under(self, pattern: str) -> bool:
+        """Is this table anywhere beneath a heading matching `pattern`?
+
+        Generated output often splits one logical section across subheadings --
+        a Consequence Map with a table per feature -- so matching only the
+        immediately preceding heading silently finds nothing.
+        """
+        return any(re.search(pattern, h, re.I) for h in [*self.ancestry, self.heading])
 
     def column(self, name_fragment: str) -> int | None:
         for i, h in enumerate(self.header):
@@ -66,7 +76,7 @@ class Table:
 def parse_tables(text: str) -> list[Table]:
     """Every markdown table in the document, tagged with the heading above it."""
     tables: list[Table] = []
-    heading = ""
+    stack: list[tuple[int, str]] = []
     pending: list[list[str]] = []
 
     def flush() -> None:
@@ -76,7 +86,9 @@ def parse_tables(text: str) -> list[Table]:
             header = pending[0]
             body = [r for r in pending[1:] if not is_separator(r)]
             if body:
-                tables.append(Table(heading, header, body))
+                heading = stack[-1][1] if stack else ""
+                ancestry = [h for _, h in stack[:-1]]
+                tables.append(Table(heading, header, body, ancestry))
         pending = []
 
     for line in text.splitlines():
@@ -86,8 +98,11 @@ def parse_tables(text: str) -> list[Table]:
             pending.append(cells)
             continue
         flush()
-        if stripped.startswith("#"):
-            heading = strip_md(stripped.lstrip("#").strip())
+        if m := re.match(r"^(#{1,6})\s+(.*)$", stripped):
+            level, title = len(m.group(1)), strip_md(m.group(2))
+            while stack and stack[-1][0] >= level:
+                stack.pop()
+            stack.append((level, title))
     flush()
     return tables
 
@@ -107,17 +122,44 @@ def parse_headings(text: str) -> list[tuple[int, str]]:
     return out
 
 
-def section_text(text: str, heading_pattern: str) -> str:
-    """Body under the first heading matching the pattern, to the next same-or-higher heading."""
+def _dividers(text: str) -> list[tuple[int, int, str]]:
+    """(line index, level, title) for headings and bold-line pseudo-headings.
+
+    Generated output frequently labels a section with a bold line rather than a
+    real heading -- `**Section 9 - BOTTOM LINE**`, `**Future Direction**`. Treating
+    only `#` as structure makes those sections invisible, which silently skips the
+    criteria that depend on them.
+    """
+    out: list[tuple[int, int, str]] = []
+    for i, line in enumerate(text.splitlines()):
+        stripped = line.strip()
+        if m := re.match(r"^(#{1,6})\s+(.*)$", stripped):
+            out.append((i, len(m.group(1)), strip_md(m.group(2))))
+        elif m := re.match(r"^\*\*(.+?)\*\*:?\s*$", stripped):
+            # Weaker than any real heading, so a following `#` still closes it.
+            out.append((i, 7, strip_md(m.group(1))))
+    return out
+
+
+def section_text(text: str, heading_pattern: str, pick: str = "first") -> str:
+    """Body under a heading matching the pattern, to the next same-or-higher one.
+
+    `pick="last"` selects the final match, for bars about how a document *closes*.
+    With an alternation pattern the first match is whichever alternative appears
+    earliest, which is not the same thing.
+    """
     lines = text.splitlines()
-    start = level = None
-    for i, line in enumerate(lines):
-        if m := re.match(r"^(#{1,6})\s+(.*)$", line):
-            if start is None and re.search(heading_pattern, strip_md(m.group(2)), re.I):
-                start, level = i, len(m.group(1))
-            elif start is not None and len(m.group(1)) <= level:
-                return "\n".join(lines[start:i])
-    return "\n".join(lines[start:]) if start is not None else ""
+    dividers = _dividers(text)
+    matches = [n for n, (_, _, title) in enumerate(dividers)
+               if re.search(heading_pattern, title, re.I)]
+    if not matches:
+        return ""
+    n = matches[-1] if pick == "last" else matches[0]
+    idx, level, _ = dividers[n]
+    for next_idx, next_level, _ in dividers[n + 1:]:
+        if next_level <= level:
+            return "\n".join(lines[idx:next_idx])
+    return "\n".join(lines[idx:])
 
 
 # ----------------------------------------------------------------- enumerators
@@ -133,11 +175,11 @@ def enumerate_items(text: str, spec: dict) -> list[str]:
         ]
 
     if kind == "table_rows":
+        rows = []
         for table in parse_tables(text):
-            if not re.search(spec["in_section"], table.heading, re.I):
+            if not table.under(spec["in_section"]):
                 continue
             col = table.column(spec.get("column", "")) or 0
-            rows = []
             for row in table.rows:
                 if col >= len(row):
                     continue
@@ -149,17 +191,16 @@ def enumerate_items(text: str, spec: dict) -> list[str]:
                         continue
                 if row[col]:
                     rows.append(row[col])
-            return rows
-        return []
+        return rows
 
     if kind == "table_cells":
+        cells = []
         for table in parse_tables(text):
-            if not re.search(spec["in_section"], table.heading, re.I):
+            if not table.under(spec["in_section"]):
                 continue
             col = table.column(spec["column"])
             if col is None:
-                return []
-            cells = []
+                continue
             for row in table.rows:
                 if col >= len(row) or not row[col]:
                     continue
@@ -174,8 +215,7 @@ def enumerate_items(text: str, spec: dict) -> list[str]:
                     if not re.search(flt["matches"], row[idx], re.I):
                         continue
                 cells.append(row[col])
-            return cells
-        return []
+        return cells
 
     raise ValueError(f"unknown enumerator type {kind!r}")
 
@@ -233,6 +273,21 @@ def load_env() -> dict[str, str]:
     return env
 
 
+def lookup_prompt(skill: str, scenario: str) -> str:
+    """The originating prompt, needed by bars that depend on what was asked for.
+
+    Generations do not store it, so recover it from the eval set by scenario name,
+    falling back to the id-derived name the harness uses when `name` is absent.
+    """
+    path = EVAL_DIR / skill / "evals.json"
+    if not path.is_file():
+        return ""
+    for entry in json.loads(path.read_text())["evals"]:
+        if (entry.get("name") or f"eval-{entry.get('id')}") == scenario:
+            return entry["prompt"]
+    return ""
+
+
 # ------------------------------------------------------------------- scoring
 
 # Jev returns a probability; code owns the thresholds. Anything between the two
@@ -241,7 +296,7 @@ def load_env() -> dict[str, str]:
 YES, NO = 0.70, 0.30
 
 
-def score_document(doc: str, spec: dict, api_key: str | None) -> dict:
+def score_document(doc: str, spec: dict, api_key: str | None, prompt: str = "") -> dict:
     items = {name: enumerate_items(doc, e) for name, e in spec["enumerators"].items()}
     result = {"enumerated": {k: len(v) for k, v in items.items()},
               "structural": [], "semantic": []}
@@ -264,6 +319,52 @@ def score_document(doc: str, spec: dict, api_key: str | None) -> dict:
         elif kind == "section_present":
             passed = bool(section_text(doc, check["pattern"]))
             detail = {}
+        elif kind == "distinct_coverage":
+            # "spans at least 4 of the 6 harm categories" -- set arithmetic, not a
+            # judgment, and Jev explicitly cannot count.
+            blob = " ".join(items[check["items"]]).lower()
+            found = sorted(v for v in check["vocabulary"] if v.lower() in blob)
+            passed = len(found) >= check["n"]
+            detail = {"found": len(found), "required": check["n"], "covered": found}
+        elif kind == "min_count_matching":
+            matching = [c for c in items[check["items"]] if re.search(check["pattern"], c, re.I)]
+            passed = len(matching) >= check["n"]
+            detail = {"found": len(matching), "required": check["n"]}
+        elif kind == "conditional_section":
+            # Some bars depend on what was actually asked for -- dah-cards must not
+            # emit a Manifesto unless the user requested one. Needs the prompt.
+            requested = bool(re.search(check["when_prompt_matches"], prompt, re.I))
+            present = bool(section_text(doc, check["pattern"]))
+            passed = (present == requested)
+            detail = {"requested": requested, "present": present}
+        elif kind == "any_of":
+            # "completes all five tools OR states which were run and why" -- the
+            # bar is genuinely disjunctive, so flattening it would fail correct work.
+            outcomes = []
+            for sub in check["checks"]:
+                if sub["kind"] == "min_count":
+                    outcomes.append(len(items[sub["items"]]) >= sub["n"])
+                elif sub["kind"] == "section_present":
+                    outcomes.append(bool(re.search(sub["pattern"], doc, re.I)))
+                else:
+                    raise ValueError(f"any_of cannot nest {sub['kind']!r}")
+            passed = any(outcomes)
+            detail = {"branches": outcomes}
+        elif kind == "section_implies_section":
+            # A tool that did not run cannot owe its output. Only require the
+            # consequent when the antecedent is actually present.
+            # Match a real section, not a passing mention: a run that consumed a
+            # *prior* Ethics Frame as input does not owe an Ethics Frame's output.
+            antecedent = bool(section_text(doc, check["if_present"]))
+            consequent = bool(re.search(check["then_present"], doc, re.I))
+            passed = consequent or not antecedent
+            detail = {"antecedent": antecedent, "consequent": consequent}
+        elif kind == "implied_section":
+            # If the trigger set is non-empty, the section becomes required.
+            triggered = bool(items[check["items"]])
+            present = bool(re.search(check["pattern"], doc, re.I))
+            passed = present or not triggered
+            detail = {"triggered_by": len(items[check["items"]]), "present": present}
         elif kind == "cells_match":
             # A criterion a regex can decide belongs here, not in the semantic
             # layer. Jev reads literally and is explicitly not a calculator, so
@@ -281,10 +382,17 @@ def score_document(doc: str, spec: dict, api_key: str | None) -> dict:
     # Build one Jev request per criterion: state is the array of enumerated items,
     # one question per item. Jev ingests state once and answers in parallel.
     for check in spec["semantic"]:
-        values = items[check["each"]]
-        if check.get("scope_section"):
-            # For heading-based items, send the section body rather than the title.
-            values = [section_text(doc, re.escape(v)) or v for v in values]
+        if "section" in check:
+            # A whole-document judgment rather than a per-item one. Scope the state
+            # to the relevant section: accuracy falls as state grows with detail
+            # unrelated to the question.
+            body = section_text(doc, check["section"], check.get("pick", "first"))
+            values = [body] if body.strip() else []
+        else:
+            values = items[check["each"]]
+            if check.get("scope_section"):
+                # For heading-based items, send the section body, not the title.
+                values = [section_text(doc, re.escape(v)) or v for v in values]
 
         entry = {"id": check["id"], "bar": check["bar"], "n": len(values)}
         if not values:
@@ -296,26 +404,46 @@ def score_document(doc: str, spec: dict, api_key: str | None) -> dict:
             result["semantic"].append(entry)
             continue
 
+        kind = check.get("type", "noul")
         questions = {
             f"item_{i}": {
-                "type": "noul",
+                "type": kind,
                 "instructions": check["instructions"].replace("{i}", str(i)),
                 "criteria": check["criteria"],
             }
             for i in range(len(values))
         }
         response = ask_jev({"items": values}, questions, api_key)
-        scores = [response["answers"][f"item_{i}"]["noul"] for i in range(len(values))]
-        entry |= {
-            "results": [
-                {"item": v[:90], "noul": round(s, 3),
-                 "verdict": "pass" if s >= YES else "fail" if s < NO else "review"}
-                for v, s in zip(values, scores)
-            ],
-            "passed": all(s >= YES for s in scores),
-            "needs_review": [round(s, 3) for s in scores if NO <= s < YES],
-            "input_tokens": response["usage"]["input_tokens"],
-        }
+        answers = [response["answers"][f"item_{i}"] for i in range(len(values))]
+
+        if kind == "score":
+            # Jev cannot reconstruct an exact number by interpolating between
+            # levels, but thresholding the expectation against a named level is
+            # supported. `min_level` is the index the answer must reach.
+            floor = check["min_level"]
+            scores = [a["score"] for a in answers]
+            verdicts = ["pass" if s >= floor else "fail" for s in scores]
+            entry |= {
+                "results": [
+                    {"item": v[:90], "noul": round(s, 2), "verdict": verdict,
+                     "legend": a.get("legend", {}).get(str(int(round(s))), "")}
+                    for v, s, verdict, a in zip(values, scores, verdicts, answers)
+                ],
+                "passed": all(v == "pass" for v in verdicts),
+                "min_level": floor,
+            }
+        else:
+            scores = [a["noul"] for a in answers]
+            entry |= {
+                "results": [
+                    {"item": v[:90], "noul": round(s, 3),
+                     "verdict": "pass" if s >= YES else "fail" if s < NO else "review"}
+                    for v, s in zip(values, scores)
+                ],
+                "passed": all(s >= YES for s in scores),
+                "needs_review": [round(s, 3) for s in scores if NO <= s < YES],
+            }
+        entry["input_tokens"] = response["usage"]["input_tokens"]
         result["semantic"].append(entry)
 
     return result
@@ -343,6 +471,7 @@ def main() -> int:
             continue
         spec_path = REPO / "edbx" / d["skill"] / "conformance.json"
         if spec_path.is_file():
+            d["prompt"] = lookup_prompt(d["skill"], d["scenario"])
             generations.append((d, json.loads(spec_path.read_text())))
 
     if not generations:
@@ -352,7 +481,7 @@ def main() -> int:
 
     for doc, spec in generations:
         print(f"\n{'='*78}\n{doc['skill'].removeprefix('edbx-')} / {doc['scenario']} [{doc['arm']}]\n{'='*78}")
-        scored = score_document(doc["output"], spec, api_key)
+        scored = score_document(doc["output"], spec, api_key, doc.get("prompt", ""))
         print("  enumerated: " + ", ".join(f"{k}={v}" for k, v in scored["enumerated"].items()))
 
         print("\n  STRUCTURAL (code)")
@@ -369,6 +498,17 @@ def main() -> int:
                 print(f"           cell fails pattern: {cell[:60]!r}")
             if "found" in c and not c["passed"]:
                 print(f"           found {c['found']}, need {c['required']}")
+            if "covered" in c:
+                print(f"           covered: {', '.join(c['covered']) or '(none)'}")
+            if "requested" in c and not c["passed"]:
+                want = "requested but absent" if c["requested"] else "present but never requested"
+                print(f"           {want}")
+            if "triggered_by" in c and not c["passed"]:
+                print(f"           required by {c['triggered_by']} finding(s), but absent")
+            if "antecedent" in c:
+                state = "required and present" if c["antecedent"] and c["consequent"] else \
+                        "required but absent" if c["antecedent"] else "not required"
+                print(f"           {state}")
 
         print("\n  SEMANTIC (Jev)")
         for c in scored["semantic"]:
