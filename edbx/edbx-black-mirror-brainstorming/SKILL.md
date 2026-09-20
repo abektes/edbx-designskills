@@ -7,7 +7,7 @@ tags: [ethical-design, forecast]
 
 # Black Mirror Brainstorming
 
-## What this skill does
+## Overview
 
 Black Mirror Brainstorming is a speculative-design method (Klassen & Fiesler, 2022; Mauldin, 2018; published in *Universal Methods of Ethical Design*) that asks the team to put on a science-fiction filmmaker's hat and imagine how a product could be twisted, abused, or quietly corroded by the world it lands in.
 
@@ -20,7 +20,7 @@ A complete run of this skill produces four linked outputs:
 3. A **pitch poster** (HTML, single file) for the strongest episode, styled like a Netflix title card with the quote.
 4. A list of **anti-goals as testable design constraints**, traceable back to the episodes that surfaced them.
 
-## When to use this skill
+## Use This Skill When
 
 Reach for this when:
 
@@ -176,7 +176,7 @@ Use or adapt these when generating each section:
 - **Don't skip the anti-goals.** Episodes are the bait; anti-goals are the catch. A run that ends at "look how dark this could be" without producing constraints is incomplete.
 - **Be careful with vulnerable groups.** When an episode involves minors, abuse survivors, undocumented people, or others at heightened risk, keep the focus on the *system's* failure rather than dwelling on graphic detail. The harm should be legible without being pornographic.
 
-## Quality bar
+## Deliverable Quality Bar
 
 A good run:
 

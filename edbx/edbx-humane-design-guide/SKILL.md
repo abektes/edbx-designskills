@@ -118,7 +118,7 @@ Generic "feels manipulative" is not a mechanism. "Variable reward schedule on th
 
 Examples: adolescents (developmental peer-comparison sensitivity); shift workers (cognitive depletion at off-hours); people with eating disorders (Emotional sensitivity on fitness/wellness/beauty apps); women and racial minorities re: beauty filters (colorism / narrow aesthetic norms baked into training data); gig workers (Decision-making under forced continuity, no negotiating power); elderly users with low digital literacy (Sensemaking under algorithmic curation); users with anxiety disorders (engagement-amplified anxiety content); low-income users (default-bias on opt-out paid features).
 
-Present the audit as a filled worksheet table:
+Present the audit as a filled worksheet table. A blank version is in `assets/worksheet-template.md`.
 
 | Sensitivity | Current State | What's at Risk | Level | Named Mechanism (specific) | Most Affected Populations (≥2 named, with mechanism of differential harm) | Enabled to... |
 |---|---|---|---|---|---|---|
@@ -206,6 +206,8 @@ The Humane Design Statement should capture the team's commitment in plain langua
 - **edbx-worrystorming** generates free-form concerns. The Humane Design Guide gives those concerns a structured sensitivity taxonomy.
 - **edbx-anotherlens** surfaces internal biases. The Humane Design Guide audits the product's external impact on human sensitivities.
 - **edbx-cider** audits who is excluded. The Humane Design Guide audits how those included are exploited.
+
+See `references/related-methods.md` for detailed connections and sequencing guidance.
 
 Run the Humane Design Guide after Worrystorming to give raw concerns a structured framework, or before the Prism to ground the spectrum evaluation in specific human vulnerabilities.
 

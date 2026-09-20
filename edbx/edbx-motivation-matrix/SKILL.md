@@ -179,6 +179,8 @@ The Motivation Matrix works best alongside other ethical design methods:
 - **edbx-anotherlens** — surfaces designer biases; this skill maps how those biases manifest as motivational assumptions baked into the product. Run edbx-anotherlens first to understand whose motivations the team is centering.
 - **edbx-cider** — maps user access and capability; this skill maps user motivation — why users engage. Together they answer: who can use this, and why do they?
 
+See `references/related-methods.md` for detailed connections and sequencing guidance.
+
 ## Further Reading
 
 - Zhu, A. (2020). *Design Driven by Motivation.* design4good.com/book

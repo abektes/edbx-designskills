@@ -138,7 +138,7 @@ Use or adapt prompts like these:
 - Hold space for genuine value tension. Some designs deprioritize user values for defensible reasons (cost, scale, regulation). Surface the trade-off honestly instead of pretending Hero moves are always free.
 - Stay grounded in the source. The full deck and intended use are documented in Mehta, Chivukula, Gray, et al. (2024), arXiv:2405.03674. When in doubt, defer to the cards in [references/cards.md](references/cards.md) rather than inventing new ones.
 
-## Quality Bar
+## Deliverable Quality Bar
 
 A good output:
 

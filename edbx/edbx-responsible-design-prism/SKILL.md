@@ -209,6 +209,8 @@ The Responsible Design Prism connects to other skills in the Ethical Design Box:
 - **edbx-worrystorming:** Generates broad concerns about a design. The Prism helps prevent those concerns from becoming dark patterns.
 - **edbx-cider:** Maps who is excluded by design. The Prism evaluates whether exclusion is deliberate (dark) or unintentional (transitional).
 
+See `references/related-methods.md` for detailed connections and sequencing guidance.
+
 Use the Prism as a follow-up to any of these skills to move from diagnosis to redesign.
 
 ---

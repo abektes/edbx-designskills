@@ -186,6 +186,8 @@ Compile the full session into a structured deliverable:
 - **edbx-pledge-works** formalizes commitments; Bad Design Canvas `🔴` findings are natural inputs for what to pledge against.
 - **edbx-anotherlens** surfaces designer biases; Bad Design Canvas reveals the external consequences those biases produce.
 
+See `references/related-methods.md` for detailed connections and sequencing guidance.
+
 Run Bad Design Canvas early in a project to shape concept direction, or late as a comprehensive pre-launch audit.
 
 ---

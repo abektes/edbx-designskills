@@ -129,7 +129,7 @@ This second cycle matters because the first assumption designers pick is usually
 
 ## Output Format
 
-Default structure unless the user asks otherwise:
+Default structure unless the user asks otherwise. A blank version is in `assets/cider-worksheet-template.md`.
 
 ### CIDER Session: [Design Name]
 
@@ -205,6 +205,8 @@ A strong CIDER session output:
 - **edbx-worrystorming** generates a broad landscape of ethical worries. CIDER focuses specifically on exclusion-causing assumptions and generates redesigns.
 - **edbx-responsible-design-prism** places a design on an ethical spectrum. CIDER generates concrete redesign ideas to move the design toward the responsible end.
 - **edbx-motivation-matrix** maps why users participate. CIDER maps who *cannot* participate — who is structurally excluded before motivation even matters.
+
+See `references/related-methods.md` for detailed connections and sequencing guidance.
 
 ## Hashtags
 

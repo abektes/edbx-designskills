@@ -42,6 +42,8 @@ If the user provides none of these, ask for at least the design decision and the
 
 ## The Three Lenses
 
+The complete question set for all three lenses, with solo and team facilitation notes, is in `references/three-lenses.md`.
+
 ### Lens 1: Balance Your Bias
 
 Color: Green. Shape: Half-circle.

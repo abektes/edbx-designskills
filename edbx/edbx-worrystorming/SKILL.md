@@ -171,6 +171,8 @@ The summary is the session's artifact. It should fit on a sticky note and be spe
 - **edbx-humane-design-guide** maps sensitivity exploitation. Worrystorming generates the concerns that feed into sensitivity analysis.
 - **edbx-cider** maps who is excluded. Worrystorming generates the worries about who is excluded.
 
+See `references/related-methods.md` for detailed connections and sequencing guidance.
+
 Run Worrystorming early in a project (ideation stage) to shape the design direction, or late (pre-launch) as an ethical pre-mortem.
 
 ---
