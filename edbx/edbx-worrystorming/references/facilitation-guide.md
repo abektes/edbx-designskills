@@ -104,4 +104,4 @@ Read it aloud. Ask: "Does this capture what happened? Did I miss anything?"
 
 **Pre-launch:** Focus on 🔒 Safety & Harm and 🗃️ Data & Privacy — these are regulatory and reputational risks that must be resolved before shipping.
 
-**Live product:** Focus on all categories equally — the product is already affecting people. Consider running edb-worrystorming quarterly as a living practice.
+**Live product:** Focus on all categories equally — the product is already affecting people. Consider running edbx-worrystorming quarterly as a living practice.

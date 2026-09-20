@@ -6,7 +6,7 @@ Another Lens is one principle in a larger ethical design practice. This referenc
 
 ## Direct Companions
 
-### edb-worrystorming
+### edbx-worrystorming
 
 **What it does:** Generates a structured list of things that could go wrong — risks, harms, failures, unintended consequences.
 
@@ -16,7 +16,7 @@ Another Lens is one principle in a larger ethical design practice. This referenc
 
 **Integration prompt:** "After Worrystorming, look at the risks you generated. Which ones feel distant or abstract? Which ones feel immediate? The distant ones may be distant because of your lenses — not because they're less likely."
 
-### edb-responsible-design-prism
+### edbx-responsible-design-prism
 
 **What it does:** Evaluates a design across multiple ethical dimensions — privacy, consent, equity, autonomy, sustainability, and more.
 
@@ -26,7 +26,7 @@ Another Lens is one principle in a larger ethical design practice. This referenc
 
 **Integration prompt:** "After running Prism, look at the dimensions that scored highest and lowest. Ask: did my lenses influence which dimensions I took seriously and which I rushed through?"
 
-### edb-motivation-matrix
+### edbx-motivation-matrix
 
 **What it does:** Maps what motivates different user groups in relation to a design, surfacing alignment and misalignment between user motivations and design intent.
 
@@ -36,7 +36,7 @@ Another Lens is one principle in a larger ethical design practice. This referenc
 
 **Integration prompt:** "You've mapped user motivations. Now ask: which of these motivations do I share? Which are foreign to me? How has my comfort with the shared motivations shaped how seriously I took the foreign ones?"
 
-### edb-humane-design-guide
+### edbx-humane-design-guide
 
 **What it does:** Audits designs for sensitivity exploitation — places where the product leverages emotional vulnerability, cognitive limitations, or situational distress for engagement or conversion.
 
@@ -46,7 +46,7 @@ Another Lens is one principle in a larger ethical design practice. This referenc
 
 **Integration prompt:** "The Humane Design Guide identified areas where the product might exploit sensitivity. Now ask: whose definition of sensitivity informed that analysis? Who would define the boundary differently?"
 
-### edb-cider
+### edbx-cider
 
 **What it does:** Provides a structured framework for ethical evaluation of design decisions, weighing consequences, intentions, duties, and equity.
 
@@ -75,24 +75,24 @@ Another Lens shares DNA with Data Feminism's core principle: examine power. When
 **For a comprehensive ethical review of a new feature:**
 
 1. **Another Lens (Lens 1 + 2)** — Surface designer biases and identify absent perspectives
-2. **edb-motivation-matrix** — Map user motivations with awareness of your own lenses
-3. **edb-worrystorming** — Generate risks, now aware of which risks your biases might hide
-4. **edb-humane-design-guide** — Audit for exploitation, with your definition of "sensitive" checked
-5. **edb-responsible-design-prism** — Evaluate the design across ethical dimensions
-6. **edb-cider** — Structured ethical evaluation with all perspectives surfaced
+2. **edbx-motivation-matrix** — Map user motivations with awareness of your own lenses
+3. **edbx-worrystorming** — Generate risks, now aware of which risks your biases might hide
+4. **edbx-humane-design-guide** — Audit for exploitation, with your definition of "sensitive" checked
+5. **edbx-responsible-design-prism** — Evaluate the design across ethical dimensions
+6. **edbx-cider** — Structured ethical evaluation with all perspectives surfaced
 7. **Another Lens (Lens 3)** — Reframe what you learned into a growth commitment
 
 **For a quick self-check before shipping:**
 
 1. **Another Lens (Lens 2 only)** — Quick check for absent perspectives and the nervous-person question
-2. **edb-worrystorming (quick pass)** — Generate the top 5 risks
+2. **edbx-worrystorming (quick pass)** — Generate the top 5 risks
 3. Act on whatever surfaced
 
 **For team friction or disagreement:**
 
 1. **Another Lens (full session)** — Each team member works through all three lenses individually, then shares
 2. Compare lens statements — the differences reveal where the team's lenses diverge
-3. Use the divergences as input for **edb-responsible-design-prism** or **edb-cider**
+3. Use the divergences as input for **edbx-responsible-design-prism** or **edbx-cider**
 
 ---
 

@@ -6,7 +6,7 @@ Methods that complement, extend, or connect to CIDER within the Ethical Design P
 
 ## Methods Within the EDB Toolkit
 
-### edb-anotherlens
+### edbx-anotherlens
 
 **What it does:** Surfaces the designer's own worldview — their biases, values, and blind spots — as a lens through which design decisions get made.
 
@@ -16,7 +16,7 @@ Methods that complement, extend, or connect to CIDER within the Ethical Design P
 
 ---
 
-### edb-humane-design-guide
+### edbx-humane-design-guide
 
 **What it does:** Audits whether a design exploits human sensitivities — fear, urgency, social pressure, scarcity — to drive behavior.
 
@@ -26,7 +26,7 @@ Methods that complement, extend, or connect to CIDER within the Ethical Design P
 
 ---
 
-### edb-worrystorming
+### edbx-worrystorming
 
 **What it does:** Generates a broad landscape of ethical worries about a design through structured, generative anxiety.
 
@@ -36,7 +36,7 @@ Methods that complement, extend, or connect to CIDER within the Ethical Design P
 
 ---
 
-### edb-responsible-design-prism
+### edbx-responsible-design-prism
 
 **What it does:** Places a design on a spectrum from irresponsible to responsible across multiple ethical dimensions.
 
@@ -46,7 +46,7 @@ Methods that complement, extend, or connect to CIDER within the Ethical Design P
 
 ---
 
-### edb-motivation-matrix
+### edbx-motivation-matrix
 
 **What it does:** Maps why users participate in a design — their motivations, incentives, and emotional drivers.
 
@@ -112,10 +112,10 @@ Methods that complement, extend, or connect to CIDER within the Ethical Design P
 
 ### Full Inclusive Design Audit
 
-1. **edb-anotherlens** — Understand your worldview
+1. **edbx-anotherlens** — Understand your worldview
 2. **CIDER** — Surface assumptions, imagine exclusion, design alternatives
-3. **edb-responsible-design-prism** — Score the redesign on the ethical spectrum
-4. **edb-humane-design-guide** — Check that the redesign does not exploit the people it now includes
+3. **edbx-responsible-design-prism** — Score the redesign on the ethical spectrum
+4. **edbx-humane-design-guide** — Check that the redesign does not exploit the people it now includes
 
 ### Quick Inclusion Check
 
@@ -124,15 +124,15 @@ Methods that complement, extend, or connect to CIDER within the Ethical Design P
 
 ### Team Inclusion Workshop
 
-1. **edb-anotherlens** (individual) — Each team member reflects on their worldview
+1. **edbx-anotherlens** (individual) — Each team member reflects on their worldview
 2. **CIDER (full 5 stages)** — Team session with shared Expand register
-3. **edb-motivation-matrix** — Map motivations for the now-more-inclusive design
+3. **edbx-motivation-matrix** — Map motivations for the now-more-inclusive design
 4. Commit to the Inclusive Design Commitment from CIDER Stage R
 
 ### Ethical Design Sprint
 
-1. **edb-worrystorming** — Generate broad ethical worries
+1. **edbx-worrystorming** — Generate broad ethical worries
 2. **CIDER** — Focus on exclusion-related worries
-3. **edb-responsible-design-prism** — Evaluate current state
-4. **edb-humane-design-guide** — Ensure redesign is not manipulative
+3. **edbx-responsible-design-prism** — Evaluate current state
+4. **edbx-humane-design-guide** — Ensure redesign is not manipulative
 5. Implement top redesign proposals
