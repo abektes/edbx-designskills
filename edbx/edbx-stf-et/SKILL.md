@@ -3,12 +3,12 @@ name: edbx-stf-et
 description: Use when an individual, team, or organization wants to put ethical values into action around a product, policy, research project, or technology decision. Apply the Stanford McCoy Family Center for Ethics in Society Ethics Toolkit — a five-tool, three-phase chainable framework that moves from exploration to evaluation to decision-making. Each tool produces structured outputs that feed directly into the next. Trigger this skill for any mention of ethical impact assessment, future consequences of work, societal benefits and harms, value trade-offs, ethical decision-making, or when someone says "is this ethical?", "what are the implications of this?", "how do we make this decision responsibly?", or "I need to evaluate our ethical position." Also trigger for "Stanford ethics toolkit", "Future Story", "Impacts Explorer", "Ethics Frame", "Ethics Gauge", "Weighing Options", "Value Cards", "ethical assessment", "societal impact", "ethics chain", or "stf-et".
 version: "1.0"
 tags: [ethical-design, forecast]
-  source: "Stanford McCoy Family Center for Ethics in Society — Ethics Toolkit V1.1, 2025"
-  license: "CC BY 4.0 — ethicstoolkit.stanford.edu"
 ---
 
 # Stanford Ethics Toolkit (stf-et)
 PUT VALUES INTO ACTION
+
+> **Source:** Stanford McCoy Family Center for Ethics in Society — Ethics Toolkit V1.1, 2025. Licensed CC BY 4.0 — ethicstoolkit.stanford.edu
 
 ## Overview
 
@@ -511,4 +511,7 @@ A strong full-chain STF-ET output:
 - Value Explainer Cards — `references/value-cards.md`
 - Chain facilitation guide — `references/chain-guide.md`
 - Three-phase overview — `references/three-phases.md`
-- Worksheet templates — `assets/`
+- Future Story worksheet — `assets/future-story-template.md`
+- Ethics Frame worksheet — `assets/ethics-frame-template.md`
+- Ethics Gauge worksheet — `assets/ethics-gauge-template.md`
+- Weighing Options worksheet — `assets/weighing-options-template.md`
