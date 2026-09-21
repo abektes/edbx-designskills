@@ -41,6 +41,15 @@
     "contested_flows": {
       "type": "headings",
       "pattern": "contested flow\\s*:"
+    },
+    "map_power": {
+      "type": "table_cells",
+      "in_section": "Dam.?.?Flow Map",
+      "column": "Power to Unblock",
+      "where": {
+        "column": "Dam or Flow",
+        "matches": "DAM"
+      }
     }
   },
   "structural": [
@@ -114,6 +123,16 @@
       "criteria": {
         "true": "Both are present: the objecting group's specific worry is named, and a concrete protective measure is described that could be built or enforced.",
         "false": "Only one of the two is present, or the safeguard is a vague commitment such as 'monitor closely', 'be transparent' or 'consider their needs' with nothing implementable."
+      }
+    },
+    {
+      "id": "power_named_with_cost",
+      "each": "map_power",
+      "bar": "identifies which stakeholder has the power to unblock each Dam and what it would cost them",
+      "instructions": "Does `items[{i}]` name a specific party who can unblock this AND say what doing so would cost them?",
+      "criteria": {
+        "true": "Names a specific role, team or body that holds the decision, and states a concrete cost of unblocking -- money, legal exposure, political capital, reputation or scope.",
+        "false": "Names no specific holder of the decision, refers vaguely to 'leadership' or 'the team' with no cost, or states a cost without saying who bears it."
       }
     }
   ]
