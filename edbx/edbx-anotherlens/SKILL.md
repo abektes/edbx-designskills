@@ -187,7 +187,7 @@ Each row must include all six columns. Vague entries are rejected.
 
 | Insight | Specific design change | Measurable spec (with numbers) | Owner (role) | Sprint / release | Pass/fail criterion |
 |---|---|---|---|---|---|
-| e.g., "Caregiver mode missing for users supporting an elderly parent on the same plan" | Add caregiver permission scope: read-only access to selected accounts with audit log | Touch-target ≥ 44×44 pt; contrast ratio ≥ 7:1 on permission-toggle copy; zero PII shared with caregiver outside named scopes | Mobile platform lead | Sprint 24.6 / v3.4 release | Caregiver can complete onboarding in ≤ 5 mins; primary user can revoke access in ≤ 2 taps; QA validates zero data leakage |
+| e.g., "Caregiver mode missing for users supporting an elderly parent on the same plan" | Add caregiver permission scope: read-only access to selected accounts with audit log | Touch-target ≥ 44×44 pt (WCAG 2.2 SC 2.5.5); contrast ratio ≥ 7:1 on permission-toggle copy (WCAG 2.2 SC 1.4.6); zero PII shared with caregiver outside named scopes | Mobile platform lead | Sprint 24.6 / v3.4 release | Caregiver can complete onboarding in ≤ 5 mins; primary user can revoke access in ≤ 2 taps; QA validates zero data leakage |
 | e.g., "Tax-cliff scenario unaddressed: users who hit a benefit threshold lose more than they gained" | Add interstitial warning when budget plan would push user over a named federal benefit threshold (SNAP, Medicaid expansion limit, etc.) | List of 5 named thresholds; warning triggers at 90% of threshold; localized to user state | Backend + content lead | Sprint 24.7 | Audit shows warning shown in 100% of relevant cases on test suite of 50 income profiles |
 | e.g., "Unbanked users excluded by ACH-only deposit" | Add cash deposit support via partner network; remove SSN as hard requirement (use ITIN as alternative) | ITIN accepted in onboarding; cash deposit fee ≤ $1.50; 1,000+ partner locations within 5mi of 80th-percentile user | Identity + payments leads | Q3 release | Successful onboarding rate for users without bank account ≥ 70%; no disparate impact ratio < 0.8 by census tract |
 
@@ -247,6 +247,13 @@ The learning intention and the reframe. Connected to what surfaced in Lenses 1 a
 ### Synthesis
 
 Key bias or blind spot, most important unheard perspective, and one concrete next action.
+
+### Design Decision Spec
+
+(From Step 5.5 — required, even for a single-lens session.) The top 3 insights, all six columns filled. An accessibility spec names the WCAG version and success criterion ("WCAG 2.2 SC 1.4.3"), not just a ratio or size.
+
+| Insight | Specific design change | Measurable spec (with numbers) | Owner (role) | Sprint / release | Pass/fail criterion |
+|---|---|---|---|---|---|
 
 ### Lens Statement
 

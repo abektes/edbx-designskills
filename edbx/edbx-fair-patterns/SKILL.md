@@ -138,6 +138,19 @@ Produce a dark pattern audit, fair countermeasure map, default assessment, and r
 |---|---|---|---|
 | 1 | [type] | [how it manifests] | [what user agency is lost] |
 
+### Root Cause Reframe
+
+(From Step 2.5 — one statement for every pattern in the audit table.)
+
+> *"[Pattern] exists because [upstream decision / KPI] created the incentive to [exploit users this way]."*
+
+### Legal Compliance Mapping
+
+(From Step 2.6 — a row for every pattern in the audit table.)
+
+| Dark Pattern | Statute / Article | Jurisdiction | Penalty exposure | Recent enforcement (if known) | Risk |
+|---|---|---|---|---|---|
+
 ### Fair Pattern Countermeasure Map
 
 | Dark Pattern | Fair Pattern Type | Specific Redesign |
@@ -161,7 +174,7 @@ Produce a dark pattern audit, fair countermeasure map, default assessment, and r
 
 ### Vulnerable Population Harm Matrix
 
-(From Step 2.7 — required output, not optional.)
+(From Step 2.7 — required output, not optional. A row for every pattern in the audit table, each naming at least 3 populations.)
 
 | Pattern | Disproportionately harmed populations | Mechanism of differential harm |
 |---|---|---|
