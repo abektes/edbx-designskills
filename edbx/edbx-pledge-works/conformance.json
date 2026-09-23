@@ -1,0 +1,170 @@
+{
+  "skill": "edbx-pledge-works",
+  "_note": "Structural layer first: pledge-works already produces its three registers in every sampled run, so semantic judges are built only where the code checks leave gaps.",
+  "enumerators": {
+    "register_rows": {
+      "type": "table_rows",
+      "in_section": "pledge register",
+      "column": "Pledge"
+    },
+    "register_types": {
+      "type": "table_cells",
+      "in_section": "pledge register",
+      "column": "Type"
+    },
+    "register_owners": {
+      "type": "table_cells",
+      "in_section": "pledge register",
+      "column": "Owner"
+    },
+    "register_default": {
+      "type": "table_cells",
+      "in_section": "pledge register",
+      "column": "Default"
+    },
+    "redline_rows": {
+      "type": "table_rows",
+      "in_section": "refuse to build",
+      "column": "Refusal"
+    },
+    "redline_owners": {
+      "type": "table_cells",
+      "in_section": "refuse to build",
+      "column": "Owner"
+    },
+    "redline_consequence": {
+      "type": "table_cells",
+      "in_section": "refuse to build",
+      "column": "Consequence"
+    },
+    "trace_rows": {
+      "type": "table_rows",
+      "in_section": "traceability",
+      "column": "Pledge"
+    },
+    "stories": {
+      "type": "phrase_matches",
+      "in_section": "responsible stor",
+      "pattern": "\\b(?:I|we) pledge[^\\n]{10,}"
+    },
+    "indicators": {
+      "type": "union",
+      "of": [
+        {
+          "type": "phrase_matches",
+          "in_section": "success indicator|operationali",
+          "pattern": "\\b(?:success|failure)(?: indicator| signal)?\\W{0,8}:\\**[^\\n]{10,}"
+        },
+        {
+          "type": "table_cells",
+          "in_section": "",
+          "column": "Success Indicator"
+        },
+        {
+          "type": "table_cells",
+          "in_section": "",
+          "column": "Failure Signal"
+        }
+      ]
+    }
+  },
+  "structural": [
+    {
+      "id": "pledge_count",
+      "kind": "min_count",
+      "items": "register_rows",
+      "n": 6,
+      "bar": "produces minimum 6 pledges (3 Simple + 2 Responsible Stories + 1 To Whom)",
+      "desc": "the Pledge Register holds at least 6 pledges"
+    },
+    {
+      "id": "pledge_types",
+      "kind": "distinct_coverage",
+      "items": "register_types",
+      "vocabulary": [
+        "Simple",
+        "Responsible",
+        "To Whom"
+      ],
+      "n": 3,
+      "bar": "produces minimum 6 pledges (3 Simple + 2 Responsible Stories + 1 To Whom)",
+      "desc": "all three pledge types appear"
+    },
+    {
+      "id": "stories_have_because",
+      "kind": "cells_match",
+      "items": "stories",
+      "pattern": "\\bbecause\\b",
+      "bar": "every Responsible Story includes a \"because\" clause naming a value",
+      "desc": "every Responsible Story has a because-clause"
+    },
+    {
+      "id": "register_owner_named",
+      "kind": "cells_match",
+      "items": "register_owners",
+      "pattern": "^(?!\\s*(the\\s+)?(whole\\s+|entire\\s+|design\\s+|product\\s+)?team\\s*\\.?$)\\s*\\S.{2,}",
+      "bar": "every pledge has all five operationalization fields: quantitative success indicator, quantitative failure signal, named owner",
+      "desc": "every pledge owner is a named role, not 'the team'"
+    },
+    {
+      "id": "default_challenging_marked",
+      "kind": "cells_match",
+      "items": "register_default",
+      "pattern": "\\S",
+      "bar": "identifies which pledges are default-challenging vs. merely affirming",
+      "desc": "every pledge is marked default-challenging or affirming"
+    },
+    {
+      "id": "redline_count",
+      "kind": "min_count",
+      "items": "redline_rows",
+      "n": 3,
+      "max": 5,
+      "bar": "produces a \"What We Refuse to Build\" red-line register with 3-5 concrete feature-level refusals",
+      "desc": "the red-line register has 3-5 refusals"
+    },
+    {
+      "id": "redline_owner_named",
+      "kind": "cells_match",
+      "items": "redline_owners",
+      "pattern": "^(?!\\s*(the\\s+)?(whole\\s+|entire\\s+|design\\s+|product\\s+)?team\\s*\\.?$)\\s*\\S.{2,}",
+      "bar": "produces a \"What We Refuse to Build\" red-line register with 3-5 concrete feature-level refusals, each with a named owner with veto authority",
+      "desc": "every red line has a named veto owner"
+    },
+    {
+      "id": "redline_consequence",
+      "kind": "cells_match",
+      "items": "redline_consequence",
+      "pattern": "\\w{4,}",
+      "bar": "produces a \"What We Refuse to Build\" red-line register ... and a consequence for breach",
+      "desc": "every red line states a consequence for breach"
+    },
+    {
+      "id": "traceability_complete",
+      "kind": "count_covers",
+      "items": "trace_rows",
+      "bar": "produces a Pledge-to-Product traceability table mapping each pledge to a specific product decision",
+      "desc": "every pledge in the register has a traceability row",
+      "covers": "register_rows"
+    },
+    {
+      "id": "register_exists",
+      "kind": "section_present",
+      "pattern": "pledge register",
+      "bar": "a Pledge Register is produced for ongoing maintenance",
+      "desc": "a Pledge Register is produced"
+    }
+  ],
+  "semantic": [
+    {
+      "id": "indicator_measurable",
+      "each": "indicators",
+      "bar": "every pledge has all five operationalization fields: quantitative success indicator (with number/threshold), quantitative failure signal (with breach threshold)",
+      "instructions": "Could someone check `items[{i}]` against real data and say unambiguously whether it was met or breached?",
+      "criteria": {
+        "true": "States a measurable threshold -- a number or percentage ('95% of offers', '> 5% in a rolling week'), an absolute ('zero identifiable records leave'), or a specific event whose single occurrence counts ('any feature released without the checklist').",
+        "false": "A direction or aspiration with no threshold, such as 'users feel more respected', 'improved accessibility over time', or 'fewer complaints'."
+      }
+    }
+  ]
+}
