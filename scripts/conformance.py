@@ -226,12 +226,30 @@ def enumerate_items(text: str, spec: dict) -> list[str]:
                 cells.append(row[col])
         return cells
 
+    if kind == "union":
+        # The same artifact appears as bullets in one run and as table columns in
+        # the next; enumerate every layout the skill produces and concatenate.
+        return [item for part in spec["of"] for item in enumerate_items(text, part)]
+
+    if kind == "phrase_matches":
+        # Items identified by a fixed phrase the skill's template mandates
+        # ("This design assumes ..."), whatever the surrounding format -- bullets,
+        # bold paragraphs or a table all count.
+        body = section_text(text, spec["in_section"]) if spec.get("in_section") else text
+        return [strip_md(m.group(0)) for m in re.finditer(spec["pattern"], body, re.I)]
+
     if kind == "list_items":
         # Top-level bullets or numbered items in a section. Indented sub-bullets
         # are details of their parent, so counting them would inflate "at least 5".
         body = section_text(text, spec["in_section"])
-        return [strip_md(m.group(1)) for m in
-                re.finditer(r"^(?:[-*]|\d+[.)])\s+(.+)$", body, re.M)]
+        found = [strip_md(m.group(1)) for m in
+                 re.finditer(r"^(?:[-*]|\d+[.)])\s+(.+)$", body, re.M)]
+        if not found:
+            # Fall back to bold-led paragraphs: "**Voice-first booking** -- ..." or a
+            # wholly bold title line, "**1. Human-touch fallback (Systemic)**".
+            found = [strip_md(m.group(1)) for m in
+                     re.finditer(r"^\*\*([^*\n]{3,}?)\*\*", body, re.M)]
+        return found
 
     raise ValueError(f"unknown enumerator type {kind!r}")
 
@@ -266,17 +284,36 @@ def overlaps(needle: str, haystack: list[str]) -> bool:
 
 # --------------------------------------------------------------- Jev transport
 
-def ask_jev(state, questions: dict, api_key: str) -> dict:
-    request = urllib.request.Request(
-        TYPESAFE_ENDPOINT,
-        data=json.dumps({"state": state, "model": MODEL, "questions": questions}).encode(),
-        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-    )
-    try:
-        with urllib.request.urlopen(request, timeout=300) as response:
-            return json.loads(response.read())
-    except urllib.error.HTTPError as exc:
-        raise RuntimeError(f"Jev {exc.code}: {exc.read().decode()[:300]}") from exc
+def ask_jev(state, questions: dict, api_key: str, attempts: int = 5) -> dict:
+    """POST one System One request, retrying transient failures.
+
+    TypeSafe's API docs ask clients to back off and retry on 429 and 529. Without
+    this, one overloaded response aborted a whole scoring run and wrote nothing.
+    """
+    import http.client
+    import random
+    import time
+
+    body = json.dumps({"state": state, "model": MODEL, "questions": questions}).encode()
+    last = ""
+    for attempt in range(attempts):
+        request = urllib.request.Request(
+            TYPESAFE_ENDPOINT, data=body,
+            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=300) as response:
+                return json.loads(response.read())
+        except urllib.error.HTTPError as exc:
+            last = f"Jev {exc.code}: {exc.read().decode()[:300]}"
+            if exc.code not in (408, 429, 500, 502, 503, 504, 529):
+                raise RuntimeError(last) from exc
+        except (urllib.error.URLError, TimeoutError, http.client.HTTPException,
+                ConnectionError, json.JSONDecodeError) as exc:
+            last = f"{type(exc).__name__}: {exc}"
+        if attempt < attempts - 1:
+            time.sleep(min(30, 2 ** attempt) + random.uniform(0, 1))
+    raise RuntimeError(f"Jev request failed after {attempts} attempts: {last}")
 
 
 def load_env() -> dict[str, str]:
@@ -331,7 +368,10 @@ def score_document(doc: str, spec: dict, api_key: str | None, prompt: str = "") 
                 passed, detail = not missing, {"missing": missing}
         elif kind == "min_count":
             got = len(items[check["items"]])
-            passed, detail = got >= check["n"], {"found": got, "required": check["n"]}
+            hi = check.get("max", 10**9)
+            passed = check["n"] <= got <= hi
+            need = check["n"] if hi == 10**9 else f"{check['n']}-{hi}"
+            detail = {"found": got, "required": need}
         elif kind == "section_present":
             passed = bool(section_text(doc, check["pattern"]))
             detail = {}
@@ -379,10 +419,16 @@ def score_document(doc: str, spec: dict, api_key: str | None, prompt: str = "") 
             # Each capture is searched inside its own section when one is given: the
             # label wording varies run to run ("Assumption in focus / selected /
             # picked"), and a doc-wide search lets one pattern hit the other cycle.
-            a = re.search(check["first"], section_text(doc, check["first_section"])
-                          if "first_section" in check else doc, re.I | re.M)
-            b = re.search(check["second"], section_text(doc, check["second_section"])
-                          if "second_section" in check else doc, re.I | re.M)
+            def capture(patterns, section):
+                # Try patterns in order: the label, the mandated phrase, a quoted
+                # assumption in prose, a heading parenthetical. Returns the first hit.
+                body = section_text(doc, section) if section else doc
+                for pat in patterns if isinstance(patterns, list) else [patterns]:
+                    if m := re.search(pat, body, re.I | re.M):
+                        return m
+                return None
+            a = capture(check["first"], check.get("first_section"))
+            b = capture(check["second"], check.get("second_section"))
             if not a or not b:
                 passed, detail = False, {"vacuous": True}
             else:
@@ -391,6 +437,12 @@ def score_document(doc: str, spec: dict, api_key: str | None, prompt: str = "") 
                 overlap = len(wa & wb) / max(1, min(len(wa), len(wb)))
                 passed = overlap < check.get("max_overlap", 0.6)
                 detail = {"overlap": round(overlap, 2)}
+        elif kind == "count_covers":
+            # "maps each pledge": the traced rows must cover every pledge listed,
+            # not merely reach a fixed floor.
+            got, need = len(items[check["items"]]), len(items[check["covers"]])
+            passed = need > 0 and got >= need
+            detail = {"found": got, "required": need}
         elif kind == "min_count_matching":
             matching = [c for c in items[check["items"]] if re.search(check["pattern"], c, re.I)]
             passed = len(matching) >= check["n"]

@@ -23,6 +23,7 @@ from __future__ import annotations
 import argparse
 import concurrent.futures
 import hashlib
+import http.client
 import json
 import random
 import re
@@ -43,6 +44,10 @@ RUNS_DIR = EVAL_DIR / "runs"
 ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 DEFAULT_MODEL = "deepseek/deepseek-v4-pro"
 DEFAULT_MAX_TOKENS = 64000
+# OpenRouter serves one model from many providers. Scanning 357 generations for
+# mangled common words ("Commitmennt", "Veriffication") found exactly two corrupted
+# outputs, both served by Baidu, out of 38 it served; 0 of 319 from the other twelve.
+IGNORE_PROVIDERS = ["Baidu"]
 
 BASELINE_SYSTEM = (
     "You are an expert ethical design assistant. Apply the {method} method thoroughly "
@@ -182,6 +187,7 @@ def call_model(task: Task, api_key: str, max_tokens: int, attempts: int = 5) -> 
                 {"role": "user", "content": task.prompt},
             ],
             "max_tokens": max_tokens,
+            "provider": {"ignore": IGNORE_PROVIDERS},
         }
     ).encode()
 
@@ -203,7 +209,10 @@ def call_model(task: Task, api_key: str, max_tokens: int, attempts: int = 5) -> 
             last_error = f"HTTP {exc.code}: {exc.read().decode()[:200]}"
             if exc.code not in (408, 429, 500, 502, 503, 504, 529):
                 raise RuntimeError(last_error) from exc
-        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError,
+                http.client.HTTPException, ConnectionError) as exc:
+            # IncompleteRead (a dropped connection mid-body) is an HTTPException,
+            # and was failing tasks outright instead of being retried.
             last_error = f"{type(exc).__name__}: {exc}"
         else:
             choice = body["choices"][0]
