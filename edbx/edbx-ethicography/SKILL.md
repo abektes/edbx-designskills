@@ -139,7 +139,7 @@ Produce a longitudinal analysis:
 
 | Move # | Actor | Decision/Speech Act | Quadrant | Value Impact |
 |---|---|---|---|---|
-| 1 | [name] | [decision] | [quadrant] | ⬆️/⬇️/↔️ [value] |
+| 1 | [name] | [decision] | [one of the four quadrants — a performative move still gets one] | ⬆️/⬇️/↔️ [value] |
 | 2 | [name] | [decision] | [quadrant] | ⬆️/⬇️/↔️ [value] |
 
 ### 2×2 Placement
@@ -163,6 +163,19 @@ Each move placed and justified:
 | Value | Moves Supporting | Moves Undermining |
 |---|---|---|
 | [Value 1] | [move numbers] | [move numbers] |
+
+### Affected Populations
+
+From Step 3B. Every move in the inventory appears here — not a selection — with at least 2 named populations each.
+
+| Move | Population (named) | How they were affected | Was their voice in the room? |
+|---|---|---|---|
+| 1 | [specific population] | [effect] | [yes / no / partly] |
+| 1 | [second population] | [effect] | [yes / no / partly] |
+
+### Concrete Harm Examples
+
+For each move that undermined a user value, the specific UX, accessibility or technical mechanism — e.g., "WCAG 2.5.5 target size violation", "asymmetric value extraction: user content monetized with no revenue-share".
 
 ### Performative Ethics Moves (if detected)
 

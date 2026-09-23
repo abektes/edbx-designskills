@@ -1,0 +1,110 @@
+{
+  "skill": "edbx-ethicography",
+  "_note": "Research-mode bars are not implemented: no eval prompt requests research mode. 'Handles positive practices' is not implemented: all three scenarios are post-mortems of harmful decisions, so requiring a positive move would teach to the test.",
+  "enumerators": {
+    "move_ids": {
+      "type": "table_cells",
+      "in_section": "moves inventory",
+      "column": "Move"
+    },
+    "quadrants": {
+      "type": "table_cells",
+      "in_section": "moves inventory",
+      "column": "Quadrant"
+    },
+    "values": {
+      "type": "table_rows",
+      "in_section": "values",
+      "column": "Value",
+      "nearest": true
+    },
+    "pop_moves": {
+      "type": "table_cells",
+      "in_section": "population",
+      "column": "Move",
+      "nearest": true
+    },
+    "pop_voice": {
+      "type": "table_cells",
+      "in_section": "population",
+      "column": "voice",
+      "nearest": true
+    }
+  },
+  "structural": [
+    {
+      "id": "quadrant_coded",
+      "kind": "cells_match",
+      "items": "quadrants",
+      "pattern": "(?i)explicit|implicit|external|not a team move",
+      "bar": "codes every design decision/speech act with a quadrant placement",
+      "desc": "every move carries a quadrant placement"
+    },
+    {
+      "id": "placement_justified",
+      "kind": "section_present",
+      "pattern": "placement|2.?x.?2|2\u00d72",
+      "bar": "justifies every placement with reasoning",
+      "desc": "a placement-justification section exists"
+    },
+    {
+      "id": "values_tracked",
+      "kind": "min_count",
+      "items": "values",
+      "n": 3,
+      "bar": "tracks at least 3 distinct values across the analysis",
+      "desc": "at least 3 values are tracked"
+    },
+    {
+      "id": "populations_per_move",
+      "kind": "per_key_min",
+      "keys": "move_ids",
+      "rows": "pop_moves",
+      "n": 2,
+      "bar": "names at least 2 specific affected populations per move (Step 3B), including non-users / workers / future-affected populations where relevant",
+      "desc": "every move has at least 2 affected populations"
+    },
+    {
+      "id": "voice_noted",
+      "kind": "cells_match",
+      "items": "pop_voice",
+      "pattern": "(?i)\\b(yes|no|partial|partly|not|absent|none|never|only|indirect)",
+      "bar": "and notes whether their voice was in the room when each decision was made",
+      "desc": "every population row says whether their voice was in the room"
+    },
+    {
+      "id": "concrete_harms",
+      "kind": "section_present",
+      "pattern": "concrete.?harm",
+      "bar": "gives concrete-harm examples for moves that undermined a user value: name the specific UX/accessibility/technical mechanism",
+      "desc": "a concrete-harm examples section exists"
+    },
+    {
+      "id": "performative_checked",
+      "kind": "section_present",
+      "pattern": "performative",
+      "bar": "detects and flags Performative Ethics Moves (decisions using ethical language to conceal manipulation)",
+      "desc": "performative moves are checked for"
+    },
+    {
+      "id": "trajectory_narrative",
+      "kind": "section_present",
+      "pattern": "trajectory narrative",
+      "bar": "produces an ethical trajectory narrative every session",
+      "desc": "an ethical trajectory narrative exists"
+    },
+    {
+      "id": "trajectory_forward_parts",
+      "kind": "all_phrases",
+      "section": "trajectory forward|12.?month",
+      "phrases": [
+        "drift",
+        "inflection|trigger",
+        "prevent|intervention|intervene"
+      ],
+      "bar": "produces a 12-month Trajectory Forward projection naming the drift direction, trigger event, and intervention",
+      "desc": "the 12-month projection names drift, trigger and intervention"
+    }
+  ],
+  "semantic": []
+}
