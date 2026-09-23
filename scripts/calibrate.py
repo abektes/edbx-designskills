@@ -23,6 +23,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from conformance import EVAL_DIR, REPO, ask_jev, load_env  # noqa: E402
 
 GATE = 0.81
+# Agreement is measured only on cases the judge decides. A judge that sends most
+# cases to review can post 100% agreement while being useless -- the first version
+# of this gate passed a closing_synthesis judge that decided 5 of 11 cases with a
+# +0.07 margin. So indecision is gated too.
+MAX_REVIEW_SHARE = 0.25
+MIN_MARGIN = 0.30
 
 
 def main() -> int:
@@ -51,16 +57,24 @@ def main() -> int:
             texts = [c["text"] for c in items]
             labels = [c["label"] for c in items]
 
-            questions = {
-                f"item_{i}": {
-                    "type": "noul",
-                    "instructions": criterion["instructions"].replace("{i}", str(i)),
-                    "criteria": criterion["criteria"],
+            # Calibrate in the same state layout the scorer uses. Section-, tail- and
+            # document-scoped criteria send one text per request in production;
+            # batching their calibration cases together contaminates each answer
+            # with its neighbours and measures a judge that is never deployed.
+            single = any(k in criterion for k in ("scope", "section"))
+            batches = [[t] for t in texts] if single else [texts]
+            scores = []
+            for batch in batches:
+                questions = {
+                    f"item_{i}": {
+                        "type": "noul",
+                        "instructions": criterion["instructions"].replace("{i}", str(i)),
+                        "criteria": criterion["criteria"],
+                    }
+                    for i in range(len(batch))
                 }
-                for i in range(len(texts))
-            }
-            answers = ask_jev({"items": texts}, questions, api_key)["answers"]
-            scores = [answers[f"item_{i}"]["noul"] for i in range(len(texts))]
+                answers = ask_jev({"items": batch}, questions, api_key)["answers"]
+                scores += [answers[f"item_{i}"]["noul"] for i in range(len(batch))]
 
             pos = [s for s, l in zip(scores, labels) if l]
             neg = [s for s, l in zip(scores, labels) if not l]
@@ -109,10 +123,25 @@ def main() -> int:
         for line in disagreements:
             print(f"  - {line}")
 
-    print("\nRESULT:", "PASS — Jev can act as judge" if rate >= GATE and not disagreements
-          else "PASS (with mismatches to review)" if rate >= GATE
-          else "FAIL — demote Jev to triage")
-    return 0
+    review_share = review / total if total else 1.0
+    thin = [cid for cid, (pos, neg) in spread.items()
+            if pos and neg and min(pos) - max(neg) < MIN_MARGIN]
+    print(f"review share: {review_share:.0%}  (limit {MAX_REVIEW_SHARE:.0%})")
+    if thin:
+        print(f"thin margin (< {MIN_MARGIN:+.2f}): {', '.join(thin)}")
+
+    if rate < GATE:
+        verdict = "FAIL — agreement below gate; demote Jev to triage"
+    elif review_share > MAX_REVIEW_SHARE:
+        verdict = "FAIL — judge too indecisive to act on; rewrite the criterion"
+    elif thin:
+        verdict = "FAIL — positives and negatives barely separate; rewrite the criterion"
+    elif disagreements:
+        verdict = "PASS (with mismatches to review)"
+    else:
+        verdict = "PASS — Jev can act as judge"
+    print("\nRESULT:", verdict)
+    return 0 if verdict.startswith("PASS") else 1
 
 
 if __name__ == "__main__":

@@ -100,9 +100,15 @@ def parse_tables(text: str) -> list[Table]:
         flush()
         if m := re.match(r"^(#{1,6})\s+(.*)$", stripped):
             level, title = len(m.group(1)), strip_md(m.group(2))
-            while stack and stack[-1][0] >= level:
-                stack.pop()
-            stack.append((level, title))
+        elif m := re.match(r"^\*\*(.+?)\*\*:?\s*$", stripped):
+            # Bold-label pseudo-heading. Without this, a table under **Anti-Hero
+            # hits** had no section at all and no in_section pattern could reach it.
+            level, title = 7, strip_md(m.group(1))
+        else:
+            continue
+        while stack and stack[-1][0] >= level:
+            stack.pop()
+        stack.append((level, title))
     flush()
     return tables
 
@@ -220,6 +226,13 @@ def enumerate_items(text: str, spec: dict) -> list[str]:
                 cells.append(row[col])
         return cells
 
+    if kind == "list_items":
+        # Top-level bullets or numbered items in a section. Indented sub-bullets
+        # are details of their parent, so counting them would inflate "at least 5".
+        body = section_text(text, spec["in_section"])
+        return [strip_md(m.group(1)) for m in
+                re.finditer(r"^(?:[-*]|\d+[.)])\s+(.+)$", body, re.M)]
+
     raise ValueError(f"unknown enumerator type {kind!r}")
 
 
@@ -329,6 +342,55 @@ def score_document(doc: str, spec: dict, api_key: str | None, prompt: str = "") 
             found = sorted(v for v in check["vocabulary"] if v.lower() in blob)
             passed = len(found) >= check["n"]
             detail = {"found": len(found), "required": check["n"], "covered": found}
+        elif kind == "vocabulary_range":
+            # "uses 2-5 cards": distinct deck terms mentioned anywhere in the doc.
+            text_n = re.sub(r"[\u2010-\u2015]", "-", doc).lower()
+            found = sorted(v for v in check["vocabulary"] if v.lower() in text_n)
+            lo, hi = check.get("min", 0), check.get("max", 10**9)
+            passed = lo <= len(found) <= hi
+            detail = {"found": len(found), "required": f"{lo}-{hi}", "covered": found}
+        elif kind == "cells_in_vocabulary":
+            # Every card a table names must be a real card from the deck -- an
+            # invented "Deceiver" breaks the shared vocabulary the method exists for.
+            vocab = [v.lower() for v in check["vocabulary"]]
+            cells = items[check["items"]]
+            norm_c = lambda c: re.sub(r"[\u2010-\u2015]", "-", c).lower()
+            bad = [c for c in cells if not any(v in norm_c(c) for v in vocab)]
+            passed = bool(cells) and not bad
+            detail = {"failing_cells": bad, "vacuous": not cells}
+        elif kind == "pairs_present":
+            # For every left-hand term used, one of its paired right-hand terms must
+            # also appear: an Anti-Hero named without its Hero counter-move is a
+            # critique with no way out.
+            text_n = re.sub(r"[\u2010-\u2015]", "-", doc).lower()
+            # A card merely considered and rejected in prose is not a card used.
+            # Prefer the cards the output actually tabulates, when it has tables.
+            source = " ".join(items.get(check.get("used_in", ""), [])).lower()
+            source = re.sub(r"[\u2010-\u2015]", "-", source) or text_n
+            used = [a for a in check["pairs"] if a.lower() in source]
+            missing = [a for a in used
+                       if not any(h.lower() in text_n for h in check["pairs"][a])]
+            passed = bool(used) and not missing
+            detail = {"missing": [f"{a} (no {' / '.join(check['pairs'][a])})" for a in missing],
+                      "vacuous": not used}
+        elif kind == "captures_differ":
+            # "runs a second cycle on a different assumption than the first":
+            # compare the two stated assumptions by significant-word overlap.
+            # Each capture is searched inside its own section when one is given: the
+            # label wording varies run to run ("Assumption in focus / selected /
+            # picked"), and a doc-wide search lets one pattern hit the other cycle.
+            a = re.search(check["first"], section_text(doc, check["first_section"])
+                          if "first_section" in check else doc, re.I | re.M)
+            b = re.search(check["second"], section_text(doc, check["second_section"])
+                          if "second_section" in check else doc, re.I | re.M)
+            if not a or not b:
+                passed, detail = False, {"vacuous": True}
+            else:
+                wa, wb = (set(norm(x.group(1)).split()) - {"the", "user", "this", "design",
+                          "assumes", "that", "can", "has", "and", "a", "to", "of"} for x in (a, b))
+                overlap = len(wa & wb) / max(1, min(len(wa), len(wb)))
+                passed = overlap < check.get("max_overlap", 0.6)
+                detail = {"overlap": round(overlap, 2)}
         elif kind == "min_count_matching":
             matching = [c for c in items[check["items"]] if re.search(check["pattern"], c, re.I)]
             passed = len(matching) >= check["n"]
@@ -379,8 +441,12 @@ def score_document(doc: str, spec: dict, api_key: str | None, prompt: str = "") 
             detail = {"failing_cells": bad, "vacuous": not cells}
         else:
             raise ValueError(f"unknown structural check {kind!r}")
-        result["structural"].append({"id": check["id"], "passed": passed,
-                                     "desc": check["desc"], **detail})
+        entry = {"id": check["id"], "passed": passed, "desc": check["desc"], **detail}
+        if check.get("allow_vacuous") and detail.get("vacuous"):
+            # Some modes legitimately produce none of the items a check inspects
+            # (ethical-dialogue mode has no card tables). Record as not applicable.
+            entry["not_applicable"] = True
+        result["structural"].append(entry)
 
     # Build one Jev request per criterion: state is the array of enumerated items,
     # one question per item. Jev ingests state once and answers in parallel.
@@ -498,7 +564,8 @@ def print_document(doc: dict, scored: dict) -> None:
     print("  enumerated: " + ", ".join(f"{k}={v}" for k, v in scored["enumerated"].items()))
     print("\n  STRUCTURAL (code)")
     for c in scored["structural"]:
-        print(f"    [{'PASS' if c['passed'] else 'FAIL'}] {c['desc']}")
+        mark = "n/a " if c.get("not_applicable") else "PASS" if c["passed"] else "FAIL"
+        print(f"    [{mark}] {c['desc']}")
         if c.get("vacuous"):
             print("           vacuous: no items were produced to check")
         for m in c.get("missing", []):
@@ -564,7 +631,7 @@ def main() -> int:
         outcome_row = {"skill": doc["skill"], "scenario": doc["scenario"],
                        "rep": doc.get("rep", 0), "arm": doc["arm"], "checks": {}}
         for c in scored["structural"]:
-            o = "pass" if c["passed"] else "fail"
+            o = "skip" if c.get("not_applicable") else "pass" if c["passed"] else "fail"
             skill_rates.setdefault(c["id"], {"pass": 0, "fail": 0, "skip": 0, "review": 0})[o] += 1
             outcome_row["checks"][c["id"]] = o
         for c in scored["semantic"]:

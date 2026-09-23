@@ -72,14 +72,34 @@
       "scope": "document"
     },
     {
-      "id": "closing_synthesis",
+      "id": "closing_values",
+      "scope": "tail",
       "bar": "closes with a synthesis statement naming which values were prioritized, which trade-offs were accepted, and what concrete actions will be taken",
-      "instructions": "Does the ending in `items[{i}]` state which values were prioritized, which trade-offs were accepted, AND what will actually be done?",
+      "instructions": "Does the ending in `items[{i}]` say which values were prioritized?",
       "criteria": {
-        "true": "All three are present: the values that won out are named, what was given up is acknowledged, and a concrete action or commitment is stated.",
-        "false": "One or more is missing -- for example it recommends an option without saying what is being traded away, or names values without committing to any action."
-      },
-      "scope": "tail"
+        "true": "Names specific values, such as justice, dignity, well-being or autonomy, as the ones that took priority or mattered most.",
+        "false": "Names no values, or refers only to 'important values' or 'ethics' without saying which."
+      }
+    },
+    {
+      "id": "closing_tradeoffs",
+      "scope": "tail",
+      "bar": "closes with a synthesis statement naming which values were prioritized, which trade-offs were accepted, and what concrete actions will be taken",
+      "instructions": "Does the ending in `items[{i}]` acknowledge what was given up or subordinated to reach this position?",
+      "criteria": {
+        "true": "States a cost, sacrifice or subordinated value -- for example 'accepting slower decisions and higher costs', 'efficiency is subordinated to justice', or 'prioritized over engagement'.",
+        "false": "Presents the position as costless: names priorities or actions without saying what is traded away."
+      }
+    },
+    {
+      "id": "closing_actions",
+      "scope": "tail",
+      "bar": "closes with a synthesis statement naming which values were prioritized, which trade-offs were accepted, and what concrete actions will be taken",
+      "instructions": "Does the ending in `items[{i}]` state a concrete course of action?",
+      "criteria": {
+        "true": "Names a specific decision or step -- a commitment such as 'we will keep a human reviewer on every denial', or a recommendation such as 'do not launch the peer comparison; deploy the safe elements first' or 'choose Option B'. Recommendations count: an evaluation-phase run recommends rather than commits.",
+        "false": "Offers only reflection or principles, such as 'the team should reflect on how to balance these values', with no specific decision or step."
+      }
     }
   ]
 }
