@@ -168,10 +168,13 @@ def enumerate_items(text: str, spec: dict) -> list[str]:
     kind = spec["type"]
 
     if kind == "headings":
+        # Includes bold-label pseudo-headings: the same skill labels a trade-off
+        # entry "### Hard Dam: X" in one run and "**X (Hard Dam):**" in the next,
+        # and reading only `#` headings made the second form enumerate nothing.
         pattern = spec["pattern"]
         return [
-            h for _, h in parse_headings(text)
-            if re.search(pattern, h, re.I)
+            title for _, _, title in _dividers(text)
+            if re.search(pattern, title, re.I)
         ]
 
     if kind == "table_rows":
@@ -382,7 +385,17 @@ def score_document(doc: str, spec: dict, api_key: str | None, prompt: str = "") 
     # Build one Jev request per criterion: state is the array of enumerated items,
     # one question per item. Jev ingests state once and answers in parallel.
     for check in spec["semantic"]:
-        if "section" in check:
+        if check.get("scope") == "tail":
+            # For bars about how a document *closes*: the final quarter, at least
+            # 15 lines. Independent of what the closing section happens to be
+            # called, so an edit that renames it cannot move the score by itself.
+            lines = doc.splitlines()
+            values = ["\n".join(lines[-max(15, len(lines) // 4):])]
+        elif check.get("scope") == "document":
+            # Bars about the whole chain ("at least 5 values across the chain")
+            # need the whole document, not whichever heading matched first.
+            values = [doc]
+        elif "section" in check:
             # A whole-document judgment rather than a per-item one. Scope the state
             # to the relevant section: accuracy falls as state grows with detail
             # unrelated to the question.
@@ -449,10 +462,79 @@ def score_document(doc: str, spec: dict, api_key: str | None, prompt: str = "") 
     return result
 
 
+def select_generations(
+    wanted: list[str] | None, arm: str, reps: int, skill_ref: str | None = None,
+) -> tuple[list, list[str]]:
+    """Generations matching the *current* SKILL.md, via the harness's own task keys.
+
+    The cache keeps every version a skill has ever had. Scoring by glob would mix
+    outputs from before and after an edit and report their average as either one.
+    Returns (matched, missing labels).
+    """
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from run_generation import DEFAULT_MODEL, build_tasks  # noqa: E402
+
+    arms = ("without_skill", "with_skill") if arm == "both" else (arm,)
+    tasks = build_tasks(wanted, None, DEFAULT_MODEL, reps, arms, skill_ref)
+    matched, missing = [], []
+    for task in tasks:
+        spec_path = REPO / "edbx" / task.skill / "conformance.json"
+        if not spec_path.is_file():
+            continue
+        gen_path = CACHE_DIR / f"{task.key}.json"
+        if not gen_path.is_file():
+            missing.append(task.label)
+            continue
+        d = json.loads(gen_path.read_text())
+        d["prompt"] = task.prompt
+        d["rep"] = task.rep
+        matched.append((d, json.loads(spec_path.read_text())))
+    return matched, missing
+
+
+def print_document(doc: dict, scored: dict) -> None:
+    rep = f" #{doc['rep']}" if doc.get("rep") else ""
+    print(f"\n{'='*78}\n{doc['skill'].removeprefix('edbx-')} / {doc['scenario']}{rep} [{doc['arm']}]\n{'='*78}")
+    print("  enumerated: " + ", ".join(f"{k}={v}" for k, v in scored["enumerated"].items()))
+    print("\n  STRUCTURAL (code)")
+    for c in scored["structural"]:
+        print(f"    [{'PASS' if c['passed'] else 'FAIL'}] {c['desc']}")
+        if c.get("vacuous"):
+            print("           vacuous: no items were produced to check")
+        for m in c.get("missing", []):
+            print(f"           not in map: {m[:70]}")
+        for cell in c.get("failing_cells", []):
+            print(f"           cell fails pattern: {cell[:60]!r}")
+        if "found" in c and not c["passed"]:
+            print(f"           found {c['found']}, need {c['required']}")
+        if "covered" in c:
+            print(f"           covered: {', '.join(c['covered']) or '(none)'}")
+        if "requested" in c and not c["passed"]:
+            print("           " + ("requested but absent" if c["requested"] else "present but never requested"))
+        if "triggered_by" in c and not c["passed"]:
+            print(f"           required by {c['triggered_by']} finding(s), but absent")
+        if "antecedent" in c:
+            state = "required and present" if c["antecedent"] and c["consequent"] else \
+                    "required but absent" if c["antecedent"] else "not required"
+            print(f"           {state}")
+    print("\n  SEMANTIC (Jev)")
+    for c in scored["semantic"]:
+        if "skipped" in c:
+            print(f"    [skip] {c['id']} ({c['skipped']}, {c['n']} items)")
+            continue
+        print(f"    [{'PASS' if c['passed'] else 'FAIL'}] {c['id']}  ({c['n']} items)")
+        for r in c["results"]:
+            print(f"           {r['noul']:.2f} {r['verdict']:6s} {r['item'][:62]}")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--skills", help="comma-separated skill names")
     parser.add_argument("--arm", default="with_skill", choices=["with_skill", "without_skill", "both"])
+    parser.add_argument("--reps", type=int, default=1, help="score reps 0..N-1 per scenario")
+    parser.add_argument("--skill-ref", help="score generations made from SKILL.md as of this git ref")
+    parser.add_argument("--json", metavar="PATH", help="write per-check pass rates here")
+    parser.add_argument("--quiet", action="store_true", help="summary only, no per-document detail")
     parser.add_argument("--dry-run", action="store_true", help="enumerate only, no Jev calls")
     args = parser.parse_args()
 
@@ -461,75 +543,65 @@ def main() -> int:
     if not args.dry_run and not api_key:
         sys.exit("TYPESAFE_API_KEY not found in eval-framework/.env")
 
-    generations = []
-    for path in sorted(CACHE_DIR.glob("*.json")):
-        d = json.loads(path.read_text())
-        short = d["skill"].removeprefix("edbx-")
-        if wanted and short not in wanted and d["skill"] not in wanted:
-            continue
-        if args.arm != "both" and d["arm"] != args.arm:
-            continue
-        spec_path = REPO / "edbx" / d["skill"] / "conformance.json"
-        if spec_path.is_file():
-            d["prompt"] = lookup_prompt(d["skill"], d["scenario"])
-            generations.append((d, json.loads(spec_path.read_text())))
-
+    generations, missing = select_generations(wanted, args.arm, args.reps, args.skill_ref)
+    if missing:
+        print(f"! {len(missing)} expected generation(s) not in cache -- run run_generation.py first:")
+        for label in missing[:10]:
+            print(f"    {label}")
     if not generations:
-        sys.exit("no generations matched (need a conformance.json for the skill)")
+        sys.exit("no generations matched (need a conformance.json and cached output)")
 
-    totals = {"struct_pass": 0, "struct_total": 0, "sem_pass": 0, "sem_total": 0, "review": 0}
+    # check id -> outcome counts, per skill. A per-item semantic check passes for a
+    # document only if every item passes; "skip" means nothing was enumerated.
+    rates: dict[str, dict[str, dict[str, int]]] = {}
+    documents: list[dict] = []
 
     for doc, spec in generations:
-        print(f"\n{'='*78}\n{doc['skill'].removeprefix('edbx-')} / {doc['scenario']} [{doc['arm']}]\n{'='*78}")
         scored = score_document(doc["output"], spec, api_key, doc.get("prompt", ""))
-        print("  enumerated: " + ", ".join(f"{k}={v}" for k, v in scored["enumerated"].items()))
-
-        print("\n  STRUCTURAL (code)")
+        if not args.quiet:
+            print_document(doc, scored)
+        skill_rates = rates.setdefault(doc["skill"], {})
+        outcome_row = {"skill": doc["skill"], "scenario": doc["scenario"],
+                       "rep": doc.get("rep", 0), "arm": doc["arm"], "checks": {}}
         for c in scored["structural"]:
-            totals["struct_total"] += 1
-            totals["struct_pass"] += c["passed"]
-            mark = "PASS" if c["passed"] else "FAIL"
-            print(f"    [{mark}] {c['desc']}")
-            if c.get("vacuous"):
-                print("           vacuous: no items were produced to check")
-            for m in c.get("missing", []):
-                print(f"           not in map: {m[:70]}")
-            for cell in c.get("failing_cells", []):
-                print(f"           cell fails pattern: {cell[:60]!r}")
-            if "found" in c and not c["passed"]:
-                print(f"           found {c['found']}, need {c['required']}")
-            if "covered" in c:
-                print(f"           covered: {', '.join(c['covered']) or '(none)'}")
-            if "requested" in c and not c["passed"]:
-                want = "requested but absent" if c["requested"] else "present but never requested"
-                print(f"           {want}")
-            if "triggered_by" in c and not c["passed"]:
-                print(f"           required by {c['triggered_by']} finding(s), but absent")
-            if "antecedent" in c:
-                state = "required and present" if c["antecedent"] and c["consequent"] else \
-                        "required but absent" if c["antecedent"] else "not required"
-                print(f"           {state}")
-
-        print("\n  SEMANTIC (Jev)")
+            o = "pass" if c["passed"] else "fail"
+            skill_rates.setdefault(c["id"], {"pass": 0, "fail": 0, "skip": 0, "review": 0})[o] += 1
+            outcome_row["checks"][c["id"]] = o
         for c in scored["semantic"]:
+            bucket = skill_rates.setdefault(c["id"], {"pass": 0, "fail": 0, "skip": 0, "review": 0})
             if "skipped" in c:
-                print(f"    [skip] {c['id']} ({c['skipped']}, {c['n']} items)")
-                continue
-            for r in c["results"]:
-                totals["sem_total"] += 1
-                totals["sem_pass"] += r["verdict"] == "pass"
-                totals["review"] += r["verdict"] == "review"
-            mark = "PASS" if c["passed"] else "FAIL"
-            print(f"    [{mark}] {c['id']}  ({c['n']} items)")
-            for r in c["results"]:
-                print(f"           {r['noul']:.2f} {r['verdict']:6s} {r['item'][:62]}")
+                o = "skip"
+            elif c["passed"]:
+                o = "pass"
+            elif any(r["verdict"] == "review" for r in c["results"]) and \
+                    not any(r["verdict"] == "fail" for r in c["results"]):
+                o = "review"
+            else:
+                o = "fail"
+            bucket[o] += 1
+            outcome_row["checks"][c["id"]] = o
+        documents.append(outcome_row)
 
-    print(f"\n{'='*78}")
-    if totals["struct_total"]:
-        print(f"structural: {totals['struct_pass']}/{totals['struct_total']} passed")
-    if totals["sem_total"]:
-        print(f"semantic  : {totals['sem_pass']}/{totals['sem_total']} passed, "
-              f"{totals['review']} need human review")
+    print(f"\n{'='*78}\nPER-CHECK PASS RATE  ({args.arm}, {args.reps} rep(s) per scenario)\n{'='*78}")
+    grand_pass = grand_total = 0
+    for skill, checks in rates.items():
+        print(f"\n{skill.removeprefix('edbx-')}")
+        for cid, o in checks.items():
+            scored_n = o["pass"] + o["fail"] + o["review"]
+            grand_pass += o["pass"]
+            grand_total += scored_n + o["skip"]
+            extra = "".join(f", {o[k]} {k}" for k in ("review", "skip") if o[k])
+            flag = "" if o["fail"] == 0 and o["skip"] == 0 else "  <--"
+            print(f"  {cid:36s} {o['pass']:>2}/{scored_n + o['skip']:<2} pass{extra}{flag}")
+    if grand_total:
+        print(f"\noverall: {grand_pass}/{grand_total} check-document pairs pass "
+              f"({100 * grand_pass / grand_total:.0f}%)")
+
+    if args.json:
+        Path(args.json).parent.mkdir(parents=True, exist_ok=True)
+        Path(args.json).write_text(json.dumps({"arm": args.arm, "reps": args.reps,
+                                               "rates": rates, "documents": documents}, indent=2))
+        print(f"wrote {args.json}")
     return 0
 
 

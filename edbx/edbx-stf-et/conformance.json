@@ -45,7 +45,6 @@
   "semantic": [
     {
       "id": "stakeholder_breadth",
-      "section": "STF-ET|Ethics Assessment|Tool",
       "type": "score",
       "min_level": 2,
       "bar": "names at least 3 distinct stakeholder groups across the chain and tracks how effects differ per group",
@@ -55,11 +54,11 @@
         "Names one or two specific groups, such as patients, or nurses and administrators.",
         "Names three or four specific groups and says something about how each is affected.",
         "Names five or more specific groups and distinguishes how the effects differ between them."
-      ]
+      ],
+      "scope": "document"
     },
     {
       "id": "values_linked_to_effects",
-      "section": "STF-ET|Ethics Assessment|Tool",
       "type": "score",
       "min_level": 2,
       "bar": "identifies at least 5 values across the chain and links each to specific effects or decisions",
@@ -69,18 +68,18 @@
         "Names a few values but leaves them abstract, without tying them to a specific effect or decision.",
         "Names several values and ties most of them to a specific effect, trade-off or decision.",
         "Names five or more values and ties each one to a specific effect, trade-off or decision in the analysis."
-      ]
+      ],
+      "scope": "document"
     },
     {
       "id": "closing_synthesis",
-      "section": "future direction|synthesis|bottom line|conclusion",
       "bar": "closes with a synthesis statement naming which values were prioritized, which trade-offs were accepted, and what concrete actions will be taken",
-      "instructions": "Does `items[{i}]` state which values were prioritized, which trade-offs were accepted, AND what will actually be done?",
+      "instructions": "Does the ending in `items[{i}]` state which values were prioritized, which trade-offs were accepted, AND what will actually be done?",
       "criteria": {
         "true": "All three are present: the values that won out are named, what was given up is acknowledged, and a concrete action or commitment is stated.",
         "false": "One or more is missing -- for example it recommends an option without saying what is being traded away, or names values without committing to any action."
       },
-      "pick": "last"
+      "scope": "tail"
     }
   ]
 }

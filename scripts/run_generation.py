@@ -26,6 +26,7 @@ import hashlib
 import json
 import random
 import re
+import subprocess
 import sys
 import time
 import urllib.error
@@ -75,6 +76,7 @@ class Task:
     prompt: str
     system: str
     model: str
+    rep: int = 0
     key: str = field(default="")
 
     def __post_init__(self) -> None:
@@ -84,22 +86,48 @@ class Task:
         for part in (self.model, self.arm, self.system, self.prompt):
             digest.update(part.encode())
             digest.update(b"\x00")
+        # Generation is stochastic, so one sample cannot tell a fix from luck.
+        # Rep 0 hashes exactly as before, keeping every existing cache entry valid.
+        if self.rep:
+            digest.update(f"rep={self.rep}".encode())
         self.key = digest.hexdigest()[:16]
 
     @property
     def label(self) -> str:
-        return f"{self.skill}/{self.scenario}/{self.arm}"
+        suffix = f"#{self.rep}" if self.rep else ""
+        return f"{self.skill}/{self.scenario}/{self.arm}{suffix}"
 
 
-def method_name(skill_dir: Path) -> str:
+def read_skill(skill_dir: Path, ref: str | None = None) -> str:
+    """SKILL.md as it is on disk, or as of a git ref for before/after comparisons.
+
+    Generating the "before" arm after a skill has been edited needs the old text.
+    Reading it from git keeps the working tree untouched and, because cache keys
+    hash the content, reuses any generation already made from that exact version.
+    """
+    if ref is None:
+        return (skill_dir / "SKILL.md").read_text(encoding="utf-8")
+    rel = (skill_dir / "SKILL.md").relative_to(REPO)
+    out = subprocess.run(["git", "-C", str(REPO), "show", f"{ref}:{rel}"],
+                         capture_output=True, text=True)
+    if out.returncode != 0:
+        sys.exit(f"cannot read {rel} at {ref}: {out.stderr.strip()}")
+    return out.stdout
+
+
+def method_name(skill_md: str, fallback: str) -> str:
     """Human-readable method name, taken from the SKILL.md H1."""
-    for line in (skill_dir / "SKILL.md").read_text(encoding="utf-8").splitlines():
+    for line in skill_md.splitlines():
         if line.startswith("# "):
             return re.sub(r"\s*\(.*?\)\s*$", "", line[2:]).strip()
-    return skill_dir.name
+    return fallback
 
 
-def build_tasks(skills: list[str] | None, scenarios: int | None, model: str) -> list[Task]:
+def build_tasks(
+    skills: list[str] | None, scenarios: int | None, model: str,
+    reps: int = 1, arms: tuple[str, ...] = ("without_skill", "with_skill"),
+    skill_ref: str | None = None,
+) -> list[Task]:
     tasks: list[Task] = []
     for skill_dir in sorted(d for d in SKILLS_DIR.iterdir() if d.is_dir()):
         name = skill_dir.name
@@ -114,8 +142,8 @@ def build_tasks(skills: list[str] | None, scenarios: int | None, model: str) -> 
             print(f"  ! {name}: no evals.json, skipping", file=sys.stderr)
             continue
 
-        skill_md = (skill_dir / "SKILL.md").read_text(encoding="utf-8")
-        method = method_name(skill_dir)
+        skill_md = read_skill(skill_dir, skill_ref)
+        method = method_name(skill_md, name)
         entries = json.loads(evals_path.read_text())["evals"]
         if scenarios is not None:
             entries = entries[:scenarios]
@@ -128,16 +156,20 @@ def build_tasks(skills: list[str] | None, scenarios: int | None, model: str) -> 
                 ("without_skill", BASELINE_SYSTEM.format(method=method)),
                 ("with_skill", SKILL_SYSTEM.format(skill_md=skill_md)),
             ):
-                tasks.append(
-                    Task(
-                        skill=name,
-                        scenario=scenario,
-                        arm=arm,
-                        prompt=entry["prompt"],
-                        system=system,
-                        model=model,
+                if arm not in arms:
+                    continue
+                for rep in range(reps):
+                    tasks.append(
+                        Task(
+                            skill=name,
+                            scenario=scenario,
+                            arm=arm,
+                            prompt=entry["prompt"],
+                            system=system,
+                            model=model,
+                            rep=rep,
+                        )
                     )
-                )
     return tasks
 
 
@@ -165,7 +197,7 @@ def call_model(task: Task, api_key: str, max_tokens: int, attempts: int = 5) -> 
         )
         started = time.time()
         try:
-            with urllib.request.urlopen(request, timeout=1800) as response:
+            with urllib.request.urlopen(request, timeout=900) as response:
                 body = json.loads(response.read())
         except urllib.error.HTTPError as exc:
             last_error = f"HTTP {exc.code}: {exc.read().decode()[:200]}"
@@ -176,9 +208,15 @@ def call_model(task: Task, api_key: str, max_tokens: int, attempts: int = 5) -> 
         else:
             choice = body["choices"][0]
             text = choice["message"].get("content") or ""
+            finish = choice.get("finish_reason")
             if not text.strip():
                 # A reasoning model can exhaust max_tokens before emitting an answer.
-                last_error = f"empty content (finish_reason={choice.get('finish_reason')})"
+                last_error = f"empty content (finish_reason={finish})"
+            elif finish != "stop":
+                # "error" means the upstream provider died mid-stream and "length"
+                # means truncation. Either way the document is a fragment, and
+                # scoring a fragment reports a skill failure that never happened.
+                last_error = f"incomplete generation (finish_reason={finish}, {len(text)} chars)"
             else:
                 usage = body.get("usage", {})
                 details = usage.get("completion_tokens_details") or {}
@@ -210,7 +248,8 @@ def run(task: Task, api_key: str, max_tokens: int) -> tuple[Task, dict, bool]:
         return task, json.loads(cached.read_text()), True
 
     result = call_model(task, api_key, max_tokens)
-    result |= {"skill": task.skill, "scenario": task.scenario, "arm": task.arm}
+    result |= {"skill": task.skill, "scenario": task.scenario, "arm": task.arm,
+               "rep": task.rep, "skill_md_sha": hashlib.sha256(task.system.encode()).hexdigest()[:12]}
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     cached.write_text(json.dumps(result, indent=2))
     return task, result, False
@@ -223,11 +262,15 @@ def main() -> int:
     parser.add_argument("--model", default=DEFAULT_MODEL)
     parser.add_argument("--max-tokens", type=int, default=DEFAULT_MAX_TOKENS)
     parser.add_argument("--workers", type=int, default=6)
+    parser.add_argument("--reps", type=int, default=1, help="samples per scenario and arm")
+    parser.add_argument("--arm", choices=["with_skill", "without_skill", "both"], default="both")
+    parser.add_argument("--skill-ref", help="read SKILL.md as of this git ref (default: working tree)")
     parser.add_argument("--dry-run", action="store_true", help="plan only, no API calls")
     args = parser.parse_args()
 
     skills = [s.strip() for s in args.skills.split(",")] if args.skills else None
-    tasks = build_tasks(skills, args.scenarios, args.model)
+    arms = ("without_skill", "with_skill") if args.arm == "both" else (args.arm,)
+    tasks = build_tasks(skills, args.scenarios, args.model, args.reps, arms, args.skill_ref)
     if not tasks:
         sys.exit("no tasks matched")
 
@@ -250,6 +293,7 @@ def main() -> int:
 
     started = time.time()
     results: list[dict] = []
+    fresh_cost = 0.0  # cached results carry their original cost; do not re-count it
     failures: list[str] = []
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
@@ -264,6 +308,8 @@ def main() -> int:
                 continue
 
             results.append(result)
+            if not was_cached:
+                fresh_cost += result.get("cost_usd") or 0
             if was_cached:
                 print(f"  [{done}/{len(tasks)}] cached  {task.label}")
             else:
@@ -277,7 +323,7 @@ def main() -> int:
     # Write a run manifest so a later analysis pass can find these exact generations.
     RUNS_DIR.mkdir(parents=True, exist_ok=True)
     run_id = time.strftime("%Y%m%dT%H%M%SZ", time.gmtime(started))
-    spent = sum(r.get("cost_usd") or 0 for r in results if r)
+    spent = fresh_cost
     manifest = {
         "run_id": run_id,
         "model_requested": args.model,
@@ -288,7 +334,8 @@ def main() -> int:
         "total_cost_usd": round(spent, 4),
         "wall_clock_seconds": round(time.time() - started, 1),
         "tasks": [
-            {"skill": t.skill, "scenario": t.scenario, "arm": t.arm, "key": t.key} for t in tasks
+            {"skill": t.skill, "scenario": t.scenario, "arm": t.arm, "rep": t.rep, "key": t.key}
+            for t in tasks
         ],
     }
     (RUNS_DIR / f"{run_id}.json").write_text(json.dumps(manifest, indent=2))

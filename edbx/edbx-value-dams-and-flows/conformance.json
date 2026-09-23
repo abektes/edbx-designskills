@@ -32,15 +32,15 @@
     },
     "nav_items": {
       "type": "headings",
-      "pattern": "(hard|soft|weak) dam\\s*:|contested flow\\s*:"
+      "pattern": "\\b(hard|soft|weak) dam\\b|\\bcontested flow\\b"
     },
     "hard_dams": {
       "type": "headings",
-      "pattern": "hard dam\\s*:"
+      "pattern": "\\bhard dam\\b"
     },
     "contested_flows": {
       "type": "headings",
-      "pattern": "contested flow\\s*:"
+      "pattern": "\\bcontested flow\\b"
     },
     "map_power": {
       "type": "table_cells",
@@ -129,10 +129,10 @@
       "id": "power_named_with_cost",
       "each": "map_power",
       "bar": "identifies which stakeholder has the power to unblock each Dam and what it would cost them",
-      "instructions": "Does `items[{i}]` name a specific party who can unblock this AND say what doing so would cost them?",
+      "instructions": "Does `items[{i}]` name at least one specific party who could unblock this, together with what unblocking it would cost that party?",
       "criteria": {
-        "true": "Names a specific role, team or body that holds the decision, and states a concrete cost of unblocking -- money, legal exposure, political capital, reputation or scope.",
-        "false": "Names no specific holder of the decision, refers vaguely to 'leadership' or 'the team' with no cost, or states a cost without saying who bears it."
+        "true": "Names a specific role, team, body or group AND a concrete cost to them -- money, legal exposure, fines, liability, political capital, reputation, lost users or lost investment. Terse notation counts: 'Legal (cost: fines, liability)' is a yes. Several parties each paired with a cost is a yes.",
+        "false": "No cost is stated at all -- only who holds the power, such as 'Legal can mandate or block' or 'Leadership'; or only a cost with no party, such as 'high political risk'; or a dash or empty cell."
       }
     }
   ]
