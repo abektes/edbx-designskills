@@ -143,6 +143,8 @@ Brief framing of what was evaluated and the designer's starting assumptions.
 
 ### Stage I — Exclusion Scenario
 
+**Assumption in focus:** [the Stage C assumption this scenario tests]
+
 A vivid narrative paragraph naming a specific person and describing their moment of exclusion.
 
 ### Stage D — Redesign Proposals
@@ -171,9 +173,9 @@ A vivid narrative paragraph naming a specific person and describing their moment
 
 ### Inclusive Design Commitment
 
-One sentence stating which assumption the designer or team commits to removing and how.
+One sentence stating which assumption the designer or team commits to removing, how, by when, and who owns it — specific enough that someone can check later whether it happened.
 
-> "We commit to [action] because we learned that [assumption] excludes [who]."
+> "We commit to [specific action] by [when], owned by [role or team], because we learned that [assumption] excludes [who]."
 
 ---
 

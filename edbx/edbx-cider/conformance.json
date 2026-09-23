@@ -3,8 +3,9 @@
   "_note": "Machine-checkable form of the Deliverable Quality Bar. The team-mode register bar is deliberately not implemented: none of the eval prompts request team mode, so it cannot be measured on this set.",
   "enumerators": {
     "assumptions": {
-      "type": "list_items",
-      "in_section": "stage c\\b|assumptions surfaced"
+      "type": "phrase_matches",
+      "in_section": "stage c\\b|assumptions surfaced",
+      "pattern": "this design assumes[^\\n]{10,}"
     },
     "proposals": {
       "type": "list_items",
@@ -45,8 +46,18 @@
     {
       "id": "second_cycle_different",
       "kind": "captures_differ",
-      "first": "assumption[^:\\n]{0,20}:\\**[ \\t|]*\\n?[ \\t|*]*(.+)$",
-      "second": "assumption[^:\\n]{0,20}:\\**[ \\t|]*\\n?[ \\t|*]*(.+)$",
+      "first": [
+        "assumption[^:\\n]{0,20}:\\**[ \\t|]*\\n?[ \\t|*]*(.+)$",
+        "(this design assumes[^\\n\u201d\\\"]+)",
+        "assumption\\s*\\(\\s*[\u201c\\\"]?([^)\u201d\\\"]{10,})",
+        "exclusion scenario\\s*\\(([^)]+)\\)|second cycle\\s*\\(([^)]+)\\)"
+      ],
+      "second": [
+        "assumption[^:\\n]{0,20}:\\**[ \\t|]*\\n?[ \\t|*]*(.+)$",
+        "(this design assumes[^\\n\u201d\\\"]+)",
+        "assumption\\s*\\(\\s*[\u201c\\\"]?([^)\u201d\\\"]{10,})",
+        "exclusion scenario\\s*\\(([^)]+)\\)|second cycle\\s*\\(([^)]+)\\)"
+      ],
       "bar": "runs a second I -> D cycle on a different assumption than the first",
       "desc": "the second cycle examines a different assumption from the first",
       "first_section": "stage i\\b|exclusion scenario",
