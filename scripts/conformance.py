@@ -57,13 +57,18 @@ class Table:
     rows: list[list[str]]
     ancestry: list[str] = field(default_factory=list)
 
-    def under(self, pattern: str) -> bool:
+    def under(self, pattern: str, nearest: bool = False) -> bool:
         """Is this table anywhere beneath a heading matching `pattern`?
 
         Generated output often splits one logical section across subheadings --
         a Consequence Map with a table per feature -- so matching only the
         immediately preceding heading silently finds nothing.
         """
+        # `nearest` for sibling tables under one parent: "Step 3 -- Values & Affected
+        # Populations" holds both a values table and a populations table, and
+        # matching the parent pulls each into the other's count.
+        if nearest:
+            return bool(re.search(pattern, self.heading, re.I))
         return any(re.search(pattern, h, re.I) for h in [*self.ancestry, self.heading])
 
     def column(self, name_fragment: str) -> int | None:
@@ -186,7 +191,7 @@ def enumerate_items(text: str, spec: dict) -> list[str]:
     if kind == "table_rows":
         rows = []
         for table in parse_tables(text):
-            if not table.under(spec["in_section"]):
+            if not table.under(spec["in_section"], spec.get("nearest", False)):
                 continue
             col = table.column(spec.get("column", "")) or 0
             for row in table.rows:
@@ -205,7 +210,7 @@ def enumerate_items(text: str, spec: dict) -> list[str]:
     if kind == "table_cells":
         cells = []
         for table in parse_tables(text):
-            if not table.under(spec["in_section"]):
+            if not table.under(spec["in_section"], spec.get("nearest", False)):
                 continue
             col = table.column(spec["column"])
             if col is None:
@@ -437,6 +442,27 @@ def score_document(doc: str, spec: dict, api_key: str | None, prompt: str = "") 
                 overlap = len(wa & wb) / max(1, min(len(wa), len(wb)))
                 passed = overlap < check.get("max_overlap", 0.6)
                 detail = {"overlap": round(overlap, 2)}
+        elif kind == "per_key_min":
+            # "at least 2 populations per move": join a detail table back to the
+            # inventory by the number in each key ("1", "M1", "Move 1" all -> 1).
+            def key(cell):
+                m = re.search(r"\d+", cell)
+                return m.group(0) if m else cell.strip().lower()
+            keys = [key(k) for k in items[check["keys"]]]
+            counts: dict[str, int] = {}
+            for cell in items[check["rows"]]:
+                # One detail row may cover several moves: "1, 3" or "M2/M4".
+                for k in (re.findall(r"\d+", cell) or [cell.strip().lower()]):
+                    counts[k] = counts.get(k, 0) + 1
+            short = [k for k in keys if counts.get(k, 0) < check["n"]]
+            passed = bool(keys) and not short
+            detail = {"found": len(keys) - len(short), "required": len(keys),
+                      "missing": [f"move {k}: {counts.get(k, 0)} of {check['n']}" for k in short]}
+        elif kind == "all_phrases":
+            body = section_text(doc, check["section"])
+            absent = [ph for ph in check["phrases"] if not re.search(ph, body, re.I)]
+            passed = bool(body) and not absent
+            detail = {"missing": absent, "vacuous": not body}
         elif kind == "count_covers":
             # "maps each pledge": the traced rows must cover every pledge listed,
             # not merely reach a fixed floor.
