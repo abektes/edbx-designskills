@@ -122,7 +122,7 @@ Pledges must map to specific product decisions. Produce a traceability table lin
 |---|---|---|---|
 | e.g., "We will protect gig worker pay transparency" | Driver dashboard | Show full surge-pricing breakdown including platform fee % | Hide effective hourly rate behind "earnings" label that mixes tips and base |
 
-If a pledge does not map to at least one concrete feature decision, it is too abstract to be testable. Either sharpen it or drop it.
+Every pledge in the Pledge Register gets a row here — the register and this table list the same pledges. If a pledge does not map to at least one concrete feature decision, it is too abstract to be testable: sharpen it until it does, or drop it from the register as well.
 
 ---
 
