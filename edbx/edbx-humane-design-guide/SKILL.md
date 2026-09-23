@@ -68,7 +68,7 @@ Collect from the user:
 
 Pay attention to the measures of success. Metrics like "average session time," "notification click-through rate," or "daily streaks maintained" often indicate that the product optimizes for extraction rather than wellbeing. Flag these explicitly when they appear.
 
-If the user has not provided a value proposition or measures of success, ask concisely before proceeding. You need at least the product description to run a meaningful audit.
+If the value proposition or measures of success are missing, infer the most likely ones from the description, state them as assumptions in the header, and proceed — the user can correct them. Ask before proceeding only when there is no product or feature description to audit.
 
 ---
 
@@ -141,7 +141,7 @@ For each sensitivity scored `🔴 High`:
    - **Alternative B (structural change):** modifies the underlying mechanic or incentive
    - **Alternative C (radical reframe):** challenges whether the feature should exist in this form at all
 
-   For each alternative, name **a memorable principle or heuristic** the team can hold onto when discussing future features (e.g., "If the metric goes up when the user feels worse, it's not a humane metric," "Defaults are decisions made for the user — make them visible," "If the streak punishes a missed day, the streak is the punishment").
+   For each alternative, name **a memorable principle or heuristic** the team can hold onto when discussing future features — a short conditional built from this product's own features (for a food-delivery app, say: "If the tip prompt appears before the food arrives, it's a toll, not a tip").
 
 2. **Name what metric or behavior would change.** What gets measured differently if the alternative is implemented? "Session time decreases but 7-day retention increases" is more useful than "engagement changes."
 
@@ -175,13 +175,9 @@ Then name **at least one redesign that breaks the stack**, not just one feature 
 
 **Memorable Heuristics (required output):**
 
-End the audit with **3–5 memorable heuristics** the team can apply to future features without re-running the full analysis. These are the audit's portable insights — designed to be remembered and quoted in design reviews. Examples:
-- "If the metric goes up when the user feels worse, it's not a humane metric."
-- "If we can't show this design to a 14-year-old's parent without flinching, we shouldn't ship it to 14-year-olds."
-- "Defaults are decisions made for the user — make them visible."
-- "If a streak punishes a missed day, the streak is the punishment."
+End the audit with **3–5 memorable heuristics** the team can apply to future features without re-running the full analysis. These are the audit's portable insights — designed to be remembered and quoted in design reviews. The examples in this skill show the *form* only: a short conditional that turns a finding into a rule.
 
-Specific to the product audited, not generic.
+Write every heuristic fresh from this audit's findings — do not reuse or reword the examples. Each one names a feature, metric, or population from this product (the read receipt, the desirability score, "time spent reading", night-shift users), so a reader could tell which product it came from.
 
 ---
 
@@ -189,11 +185,15 @@ Specific to the product audited, not generic.
 
 Compile the full audit into a stakeholder-ready deliverable:
 
-1. **Header:** Product name, value proposition, measures of success
+1. **Header:** Product name, value proposition, measures of success (mark any you inferred)
 2. **Filled Worksheet:** The six-row sensitivity table from Step 2
 3. **Sensitivity Risk Summary:** A brief overview of which sensitivities are most at risk and why
-4. **Design Alternatives:** Concrete proposals for every 🔴 sensitivity, with metric changes and business tensions
-5. **Humane Design Statement:** A single paragraph the team can use to anchor design decisions going forward
+4. **Design Alternatives:** Three alternatives (minimal / structural / radical) for every 🔴 sensitivity, each with its metric change, and a Business Tension Statement naming the KPI or OKR that must change
+5. **Algorithm Audit:** Required whenever the product scores, ranks, filters, personalizes, or recommends — a personalized feed counts
+6. **Engagement-Value Paradox:** Whether the core success metric structurally conflicts with wellbeing, stated explicitly
+7. **Exploitation Stacks:** The 2–3 stack table, plus at least one redesign that breaks a whole stack
+8. **Memorable Heuristics:** 3–5, written fresh for this product
+9. **Humane Design Statement:** A single paragraph the team can use to anchor design decisions going forward
 
 The Humane Design Statement should capture the team's commitment in plain language: what the product will stop exploiting and what it will enable instead.
 
