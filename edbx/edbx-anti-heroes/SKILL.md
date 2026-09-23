@@ -75,11 +75,11 @@ Use Hero / Anti-Hero pairs as generative prompts when shaping a new concept.
 
 Help a team talk about an ethically charged design without finger-pointing.
 
-1. Restate what is being discussed and what is at stake for the user.
+1. Restate the user's task and emotional state, what is being discussed, and what is at stake for them.
 2. Offer 2–3 Anti-Hero cards as candidate names for the move under discussion, with the wording the team can use ("this feels like a Trap-Setter — once a user is in, the off-ramp is hidden").
 3. Offer the matching Hero card as a constructive counter ("the Empowerer version of this would be …").
 4. Suggest a short script the team can use in the meeting itself ("I want to call a Trap-Setter on this — can we look at the cancel flow together?").
-5. Hand back: candidate cards, dialogue scripts, and one or two follow-up questions to keep the conversation moving forward.
+5. Hand back: candidate cards, dialogue scripts, one or two follow-up questions to keep the conversation moving forward, and one concrete design change the team could prototype before the meeting.
 
 ## Workflow
 
@@ -87,7 +87,18 @@ Regardless of mode, follow this overall arc:
 
 1. **Detect the mode.** If the user has not stated it, infer and confirm in one sentence.
 2. **Anchor in user evidence.** Restate the user's task, their emotional state, and the business pressure pushing on the design. Without this, card naming becomes labelling theatre.
-3. **Pick the cards.** Read [references/cards.md](references/cards.md) and select cards that match the actual moves in the design. Two to five cards is usually enough — naming every card dilutes the critique.
+3. **Pick the cards.** Select cards that match the actual moves in the design. Two to five cards is usually enough — naming every card dilutes the critique. Use only cards from the deck — never invent a card name, because the shared deck vocabulary is what lets a team use these words together. The deck, Anti-Hero ↔ Hero:
+   - Trap-Setter ↔ Empowerer
+   - Camouflager ↔ Unveiler
+   - Empathy Manipulator ↔ Life Coach
+   - Cynic ↔ Liberator (or Life Coach)
+   - Nickeling-and-Diming ↔ Transparent Pricer
+   - Black Hat ↔ White Hat (or Unveiler)
+   - Two-Faced ↔ Consistent Communicator
+   - Puppeteer ↔ Liberator (or Empowerer)
+   - Adversary ↔ Ally
+
+   Full card descriptions are in [references/cards.md](references/cards.md).
 4. **Cite the move.** For each card, point to the specific element, copy line, default, or step that triggers the tag. The cite is what makes the critique survive disagreement.
 5. **Pair with Hero counterparts.** Every Anti-Hero tag should have at least one concrete Hero move that addresses it.
 6. **Mark unavoidable friction.** Some Anti-Hero-shaped patterns are required (legal warnings, fraud checks, age gates). Call these out so the team does not strip them by accident.
@@ -95,7 +106,7 @@ Regardless of mode, follow this overall arc:
 
 ## Output Format
 
-Default to this layout. Trim sections that do not apply to the chosen mode.
+Default to this layout. Trim mode-specific sections that do not apply to the chosen mode; sections 1 (Frame) and 5 (Necessary friction kept) appear in every mode.
 
 ### 1. Frame
 - Design under review (or concept under development)
@@ -116,7 +127,7 @@ A table with columns: paired card · concrete change · why it restores user val
 - Ethical dialogue: candidate cards, dialogue scripts, follow-up questions.
 
 ### 5. Necessary friction kept
-List anything Anti-Hero-shaped that should stay (regulatory, safety, fraud, accessibility).
+List anything Anti-Hero-shaped that should stay (regulatory, safety, fraud, accessibility). Required in every mode, including reverse brainstorming — if nothing qualifies, say so in one line and why.
 
 ## Prompt Patterns
 

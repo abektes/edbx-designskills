@@ -1,0 +1,152 @@
+{
+  "skill": "edbx-anti-heroes",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar. The three evaluated modes produce different shapes (paired tables, an anti-goals table, prose), so structure is checked against the card deck rather than a fixed layout. Deck and pairs from references/cards.md.",
+  "enumerators": {
+    "card_cells": {
+      "type": "table_cells",
+      "in_section": "",
+      "column": "Card"
+    },
+    "where_cells": {
+      "type": "table_cells",
+      "in_section": "",
+      "column": "Where"
+    }
+  },
+  "structural": [
+    {
+      "id": "deck_fidelity",
+      "kind": "cells_in_vocabulary",
+      "items": "card_cells",
+      "vocabulary": [
+        "Trap-Setter",
+        "Camouflager",
+        "Empathy Manipulator",
+        "Cynic",
+        "Nickeling-and-Diming",
+        "Black Hat",
+        "Two-Faced",
+        "Puppeteer",
+        "Adversary",
+        "Ally",
+        "Consistent Communicator",
+        "Empowerer",
+        "Liberator",
+        "Life Coach",
+        "Transparent Pricer",
+        "Unveiler",
+        "White Hat"
+      ],
+      "bar": "uses 2-5 cards, each with a specific cite from the design",
+      "desc": "every card named in a table is a real card from the deck",
+      "allow_vacuous": true
+    },
+    {
+      "id": "card_count",
+      "kind": "vocabulary_range",
+      "vocabulary": [
+        "Trap-Setter",
+        "Camouflager",
+        "Empathy Manipulator",
+        "Cynic",
+        "Nickeling-and-Diming",
+        "Black Hat",
+        "Two-Faced",
+        "Puppeteer",
+        "Adversary"
+      ],
+      "min": 2,
+      "max": 5,
+      "bar": "uses 2-5 cards, each with a specific cite from the design",
+      "desc": "2 to 5 distinct Anti-Hero cards from the deck are used"
+    },
+    {
+      "id": "hero_pairing",
+      "kind": "pairs_present",
+      "pairs": {
+        "Trap-Setter": [
+          "Empowerer"
+        ],
+        "Camouflager": [
+          "Unveiler"
+        ],
+        "Empathy Manipulator": [
+          "Life Coach"
+        ],
+        "Cynic": [
+          "Liberator",
+          "Life Coach"
+        ],
+        "Nickeling-and-Diming": [
+          "Transparent Pricer"
+        ],
+        "Black Hat": [
+          "White Hat",
+          "Unveiler"
+        ],
+        "Two-Faced": [
+          "Consistent Communicator"
+        ],
+        "Puppeteer": [
+          "Liberator",
+          "Empowerer"
+        ],
+        "Adversary": [
+          "Ally"
+        ]
+      },
+      "bar": "pairs every Anti-Hero with a concrete Hero counter-move",
+      "desc": "every Anti-Hero card used is answered by its paired Hero card",
+      "used_in": "card_cells"
+    },
+    {
+      "id": "necessary_friction",
+      "kind": "section_present",
+      "pattern": "necessary friction|friction.{0,30}(keep|kept)",
+      "bar": "distinguishes manipulative friction from necessary friction",
+      "desc": "a section separates friction worth keeping from manipulative friction"
+    }
+  ],
+  "semantic": [
+    {
+      "id": "frame_names_task",
+      "section": "frame",
+      "bar": "names the user task and emotional state before tagging anything",
+      "instructions": "Does `items[{i}]` state what the user is trying to get done -- their goal or task in this moment?",
+      "criteria": {
+        "true": "States a user goal or task, such as 'cancel before the next charge', 'stay on top of their money', or 'decide whether to share activity data'. A 'User task' line with a concrete goal counts.",
+        "false": "States no user goal. Describing what the design does, what is at stake for users, what they might feel, or what the business wants is not a task."
+      }
+    },
+    {
+      "id": "frame_names_emotion",
+      "section": "frame",
+      "bar": "names the user task and emotional state before tagging anything",
+      "instructions": "Does `items[{i}]` describe the emotional state the user is in while doing it?",
+      "criteria": {
+        "true": "Names how the user feels in the moment, such as anxious, rushed, already decided, embarrassed about money, or overwhelmed.",
+        "false": "Describes no feelings, or only the business's perspective or goals."
+      }
+    },
+    {
+      "id": "where_is_specific",
+      "each": "where_cells",
+      "bar": "uses 2-5 cards, each with a specific cite from the design",
+      "instructions": "Does `items[{i}]` point to a specific place in the design?",
+      "criteria": {
+        "true": "Names a particular screen, menu item, step, component or piece of copy, such as 'Settings > Plan health' or 'second screen, below the plan cards'.",
+        "false": "Vague about location, such as 'throughout the app', 'the UX' or 'various places', or empty."
+      }
+    },
+    {
+      "id": "sprint_actionable",
+      "scope": "tail",
+      "bar": "ends with something the team can actually do in the next sprint, not just labels",
+      "instructions": "Does the ending in `items[{i}]` give the team specific changes they could start building in the next sprint?",
+      "criteria": {
+        "true": "Names concrete changes to specific parts of the design -- what to rename, remove, add or reorder -- that could become tickets.",
+        "false": "Ends with labels, principles, questions or reflections only, such as 'be more ethical' or 'discuss as a team', with no buildable change."
+      }
+    }
+  ]
+}
