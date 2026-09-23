@@ -1,0 +1,244 @@
+{
+  "skill": "edbx-inverted-behavior-model",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. 🔴 findings are the Convergence Check rows tagged 🔴 (the skill: every 🔴 row anchors a 🔴 finding); per-prompt bars are coverage against the Prompt Inventory.",
+  "enumerators": {
+    "stakeholders": {
+      "type": "table_rows",
+      "in_section": "Stakeholder Map",
+      "column": "Stakeholder"
+    },
+    "prompts": {
+      "type": "table_rows",
+      "in_section": "Prompt Inventory",
+      "column": "Prompt"
+    },
+    "convergence_rows": {
+      "type": "table_rows",
+      "in_section": "Convergence",
+      "column": "Prompt"
+    },
+    "convergence_tags": {
+      "type": "table_cells",
+      "in_section": "Convergence",
+      "column": "Convergence"
+    },
+    "forecast_rows": {
+      "type": "table_rows",
+      "in_section": "Behavior Forecast",
+      "column": "Prompt",
+      "nearest": true
+    },
+    "forecast_intended": {
+      "type": "table_cells",
+      "in_section": "Behavior Forecast",
+      "column": "Intended",
+      "nearest": true
+    },
+    "forecast_neutral": {
+      "type": "table_cells",
+      "in_section": "Behavior Forecast",
+      "column": "Neutral",
+      "nearest": true
+    },
+    "forecast_harmful": {
+      "type": "table_cells",
+      "in_section": "Behavior Forecast",
+      "column": "Harmful",
+      "nearest": true
+    },
+    "forecast_social": {
+      "type": "table_cells",
+      "in_section": "Behavior Forecast",
+      "column": "Social",
+      "nearest": true
+    },
+    "red_findings": {
+      "type": "table_rows",
+      "in_section": "Rationali",
+      "column": "Finding"
+    },
+    "rebuttals": {
+      "type": "table_cells",
+      "in_section": "Rationali",
+      "column": "fails"
+    },
+    "cascade_stages": {
+      "type": "union",
+      "of": [
+        {
+          "type": "phrase_matches",
+          "in_section": "Cascade",
+          "pattern": "\\bstage\\s*\\d"
+        },
+        {
+          "type": "phrase_matches",
+          "in_section": "Cascade",
+          "pattern": "(?:^|\\n)\\s*(?:[-*]\\s*|\\d+\\.\\s*)?\\*\\*(?!stage)[^*\\n]*(?:week|month|year|day|initial|adaptation|social|relational|identity|generation|cultural)[^*\\n]*\\*\\*"
+        }
+      ]
+    },
+    "second_directions": {
+      "type": "phrase_matches",
+      "in_section": "Redesign",
+      "pattern": "Direction B\\b"
+    },
+    "consequence_rows": {
+      "type": "table_rows",
+      "in_section": "Consequence Map",
+      "column": "Behavio"
+    },
+    "red_prompts": {
+      "type": "table_rows",
+      "in_section": "Convergence",
+      "column": "Prompt",
+      "where": {
+        "column": "Convergence",
+        "matches": "🔴|\\bred\\b|\\bhigh\\b"
+      }
+    }
+  },
+  "structural": [
+    {
+      "id": "five_stakeholders",
+      "kind": "min_count",
+      "items": "stakeholders",
+      "n": 5,
+      "bar": "completes the Stakeholder Map (Step 0) with at least 5 named populations",
+      "desc": "the Stakeholder Map names at least 5 stakeholders"
+    },
+    {
+      "id": "stakeholder_reach",
+      "kind": "all_phrases",
+      "section": "Stakeholder Map",
+      "phrases": [
+        "bystander|non.?consent",
+        "worker|supply.?chain|driver|courier|picker|warehouse|moderator|labou?r",
+        "regulat"
+      ],
+      "bar": "including non-consenting bystanders, workers in the supply chain, and absent regulators -- not just \"users\"",
+      "desc": "the Stakeholder Map includes bystanders, workers and regulators"
+    },
+    {
+      "id": "worst_design",
+      "kind": "section_present",
+      "pattern": "Worst Possible Design|Inversion Artifact",
+      "bar": "produces a \"Worst Possible Design\" inversion artifact before forecasting behaviors",
+      "desc": "a Worst Possible Design section exists"
+    },
+    {
+      "id": "convergence_every_prompt",
+      "kind": "subset",
+      "items": "prompts",
+      "within": "convergence_rows",
+      "or_count": true,
+      "bar": "produces a Convergence Check table comparing every actual prompt to the worst-version equivalent",
+      "desc": "the Convergence Check covers every prompt in the inventory"
+    },
+    {
+      "id": "convergence_tagged",
+      "kind": "cells_match",
+      "items": "convergence_tags",
+      "pattern": "(?i)🟢|🟡|🔴|\\b(green|yellow|amber|red|low|medium|high)\\b",
+      "bar": "produces a Convergence Check table comparing every actual prompt to the worst-version equivalent",
+      "desc": "every convergence row carries a 🟢/🟡/🔴 tag"
+    },
+    {
+      "id": "two_motivations",
+      "kind": "group_parts_min",
+      "in_section": "Behavior Forecast",
+      "nearest": true,
+      "key": "Prompt",
+      "value": "Motivation",
+      "n": 2,
+      "bar": "maps motivating factors for every prompt (minimum 2 per prompt)",
+      "desc": "every forecast prompt lists at least 2 motivating factors"
+    },
+    {
+      "id": "tag_intended",
+      "kind": "count_covers",
+      "items": "forecast_intended",
+      "covers": "forecast_rows",
+      "bar": "correctly tags behaviors across all four categories (✅ ⚠️ 🔴 🟣)",
+      "desc": "every forecast row fills ✅ Intended"
+    },
+    {
+      "id": "tag_neutral",
+      "kind": "count_covers",
+      "items": "forecast_neutral",
+      "covers": "forecast_rows",
+      "bar": "correctly tags behaviors across all four categories (✅ ⚠️ 🔴 🟣)",
+      "desc": "every forecast row fills ⚠️ Unintended Neutral"
+    },
+    {
+      "id": "tag_harmful",
+      "kind": "count_covers",
+      "items": "forecast_harmful",
+      "covers": "forecast_rows",
+      "bar": "correctly tags behaviors across all four categories (✅ ⚠️ 🔴 🟣)",
+      "desc": "every forecast row fills 🔴 Unintended Harmful"
+    },
+    {
+      "id": "tag_social",
+      "kind": "count_covers",
+      "items": "forecast_social",
+      "covers": "forecast_rows",
+      "bar": "correctly tags behaviors across all four categories (✅ ⚠️ 🔴 🟣)",
+      "desc": "every forecast row fills 🟣 Social Amplified"
+    },
+    {
+      "id": "cascade_three_stages",
+      "kind": "min_count",
+      "items": "cascade_stages",
+      "n": 3,
+      "bar": "produces a Behavioral Cascade Model with at least 3 named stages per 🔴 finding",
+      "desc": "the Cascade Model names at least 3 stages"
+    },
+    {
+      "id": "consequence_map",
+      "kind": "min_count",
+      "items": "consequence_rows",
+      "n": 1,
+      "bar": "produces a per-stakeholder consequence map for every 🔴 finding",
+      "desc": "a per-stakeholder Consequence Map exists"
+    },
+    {
+      "id": "rationalizations",
+      "kind": "count_covers",
+      "items": "red_findings",
+      "covers": "red_prompts",
+      "bar": "completes the Rationalizations Check -- for every 🔴 finding, names the story the team uses to defend it and rebuts that story",
+      "desc": "the Rationalizations Check has a row for every 🔴 prompt",
+      "allow_vacuous": true
+    },
+    {
+      "id": "two_directions_per_red",
+      "kind": "count_covers",
+      "items": "second_directions",
+      "covers": "red_prompts",
+      "bar": "provides at least 2 redesign directions for every 🔴 prompt with metric implications and resistance notes",
+      "desc": "every 🔴 prompt gets a second (Direction B) redesign",
+      "allow_vacuous": true
+    },
+    {
+      "id": "forecast_statement",
+      "kind": "any_of",
+      "checks": [
+        {
+          "kind": "section_present",
+          "pattern": "is likely to produce|Behavior Forecast Statement"
+        }
+      ],
+      "bar": "produces a behavior forecast statement per session",
+      "desc": "closes with a Behavior Forecast Statement"
+    },
+    {
+      "id": "rebuttals_filled",
+      "kind": "count_covers",
+      "items": "rebuttals",
+      "covers": "red_findings",
+      "bar": "names the story the team uses to defend it and rebuts that story in plain language",
+      "desc": "every Rationalizations row rebuts its story"
+    }
+  ],
+  "semantic": []
+}

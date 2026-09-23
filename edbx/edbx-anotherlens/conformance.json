@@ -1,0 +1,134 @@
+{
+  "skill": "edbx-anotherlens",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. The Design Decision Spec is counted cell by cell (empty cells are not enumerated, so each column is compared against the insight rows).",
+  "enumerators": {
+    "spec_insights": {
+      "type": "table_rows",
+      "in_section": "Design Decision Spec",
+      "column": "Insight"
+    },
+    "spec_changes": {
+      "type": "table_cells",
+      "in_section": "Design Decision Spec",
+      "column": "design change"
+    },
+    "spec_measures": {
+      "type": "table_cells",
+      "in_section": "Design Decision Spec",
+      "column": "Measurable"
+    },
+    "spec_owners": {
+      "type": "table_cells",
+      "in_section": "Design Decision Spec",
+      "column": "Owner"
+    },
+    "spec_sprints": {
+      "type": "table_cells",
+      "in_section": "Design Decision Spec",
+      "column": "Sprint"
+    },
+    "spec_criteria": {
+      "type": "table_cells",
+      "in_section": "Design Decision Spec",
+      "column": "Pass"
+    },
+    "accessibility_measures": {
+      "type": "table_cells",
+      "in_section": "Design Decision Spec",
+      "column": "Measurable",
+      "where": {
+        "column": "Insight",
+        "matches": "accessib|screen.?reader|contrast|low vision|visual impair|motor|dexterity|font size|text size|tap target|touch target|hearing|captions?|cognitive load|dyslexi"
+      }
+    }
+  },
+  "structural": [
+    {
+      "id": "spec_three_insights",
+      "kind": "min_count",
+      "items": "spec_insights",
+      "n": 3,
+      "bar": "produces a Design Decision Spec table for the top 3 insights",
+      "desc": "the Design Decision Spec has at least 3 insight rows"
+    },
+    {
+      "id": "spec_change_filled",
+      "kind": "count_covers",
+      "items": "spec_changes",
+      "covers": "spec_insights",
+      "bar": "with all six columns filled (Insight / Specific design change / Measurable spec with numbers / Owner / Sprint / Pass-fail criterion)",
+      "desc": "every spec row names a specific design change"
+    },
+    {
+      "id": "spec_measure_numeric",
+      "kind": "cells_match",
+      "items": "spec_measures",
+      "pattern": "\\d",
+      "bar": "with all six columns filled (Insight / Specific design change / Measurable spec with numbers / Owner / Sprint / Pass-fail criterion)",
+      "desc": "every measurable spec carries a number"
+    },
+    {
+      "id": "spec_measure_filled",
+      "kind": "count_covers",
+      "items": "spec_measures",
+      "covers": "spec_insights",
+      "bar": "with all six columns filled (Insight / Specific design change / Measurable spec with numbers / Owner / Sprint / Pass-fail criterion)",
+      "desc": "every spec row has a measurable spec"
+    },
+    {
+      "id": "spec_owner_filled",
+      "kind": "count_covers",
+      "items": "spec_owners",
+      "covers": "spec_insights",
+      "bar": "with all six columns filled (Insight / Specific design change / Measurable spec with numbers / Owner / Sprint / Pass-fail criterion)",
+      "desc": "every spec row names an owner"
+    },
+    {
+      "id": "spec_sprint_filled",
+      "kind": "count_covers",
+      "items": "spec_sprints",
+      "covers": "spec_insights",
+      "bar": "with all six columns filled (Insight / Specific design change / Measurable spec with numbers / Owner / Sprint / Pass-fail criterion)",
+      "desc": "every spec row names a sprint"
+    },
+    {
+      "id": "spec_criterion_filled",
+      "kind": "count_covers",
+      "items": "spec_criteria",
+      "covers": "spec_insights",
+      "bar": "with all six columns filled (Insight / Specific design change / Measurable spec with numbers / Owner / Sprint / Pass-fail criterion)",
+      "desc": "every spec row has a pass/fail criterion"
+    },
+    {
+      "id": "accessibility_cites_wcag",
+      "kind": "cells_match",
+      "items": "accessibility_measures",
+      "pattern": "(?i)WCAG\\s*2\\.\\d.*\\d\\.\\d+\\.\\d+|\\d\\.\\d+\\.\\d+.*WCAG\\s*2\\.\\d",
+      "allow_vacuous": true,
+      "bar": "For accessibility insights, the spec names WCAG criterion + version.",
+      "desc": "accessibility specs cite a WCAG success criterion and version"
+    },
+    {
+      "id": "nervous_person",
+      "kind": "any_of",
+      "checks": [{"kind": "section_present", "pattern": "nervous"}],
+      "bar": "produces the nervous-person answer",
+      "desc": "names the person the designer is nervous to talk to"
+    },
+    {
+      "id": "learning_intention",
+      "kind": "any_of",
+      "checks": [{"kind": "section_present", "pattern": "learning intention|learn one thing"}],
+      "bar": "generates a learning intention specific enough to act on within a sprint",
+      "desc": "states a learning intention"
+    },
+    {
+      "id": "lens_statement",
+      "kind": "any_of",
+      "checks": [{"kind": "section_present", "pattern": "After applying Another Lens"}],
+      "bar": "produces a lens statement that a stranger could read and understand what shifted",
+      "desc": "closes with the Lens Statement"
+    }
+  ],
+  "semantic": []
+}

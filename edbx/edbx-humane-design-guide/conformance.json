@@ -1,0 +1,216 @@
+{
+  "skill": "edbx-humane-design-guide",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. Worksheet coverage, per-row fields and per-red counts are code; heuristics are checked against the skill's own examples, since a copied example is by construction not product-specific.",
+  "enumerators": {
+    "sensitivities": {
+      "type": "table_cells",
+      "in_section": "Sensitivity|Worksheet|Audit",
+      "column": "Sensitivity",
+      "where": {
+        "column": "Level",
+        "matches": "."
+      }
+    },
+    "flagged_rows": {
+      "type": "table_rows",
+      "in_section": "Sensitivity|Worksheet|Audit",
+      "column": "Sensitivity",
+      "where": {
+        "column": "Level",
+        "matches": "🔴|🟡|\\bhigh\\b|\\bmedium\\b"
+      }
+    },
+    "flagged_mechanisms": {
+      "type": "table_cells",
+      "in_section": "Sensitivity|Worksheet|Audit",
+      "column": "Mechanism",
+      "where": {
+        "column": "Level",
+        "matches": "🔴|🟡|\\bhigh\\b|\\bmedium\\b"
+      }
+    },
+    "red_rows": {
+      "type": "table_rows",
+      "in_section": "Sensitivity|Worksheet|Audit",
+      "column": "Sensitivity",
+      "where": {
+        "column": "Level",
+        "matches": "🔴|\\bhigh\\b"
+      }
+    },
+    "enabled_cells": {
+      "type": "table_cells",
+      "in_section": "Sensitivity|Worksheet|Audit",
+      "column": "Enabled",
+      "where": {
+        "column": "Level",
+        "matches": "."
+      }
+    },
+    "radical_alternatives": {
+      "type": "phrase_matches",
+      "in_section": "Design Alternatives",
+      "pattern": "Alternative C\\b|radical reframe"
+    },
+    "kpi_tensions": {
+      "type": "phrase_matches",
+      "pattern": "(?:business tension|\\bKPI\\b|\\bOKR\\b)[^\\n]*"
+    },
+    "stacks": {
+      "type": "union",
+      "of": [
+        {
+          "type": "table_rows",
+          "in_section": "Compound|Exploitation Stack",
+          "column": "Features"
+        },
+        {
+          "type": "phrase_matches",
+          "in_section": "Compound|Exploitation Stack",
+          "pattern": "(?:^|\\n)(?:\\s*\\d+\\.\\s*|\\s*[-*]\\s*)?\\*\\*(?!\\s*(?:how to )?break|\\s*stack\\s*\\d)[^*\\n]*\\+[^*\\n]*\\*\\*"
+        },
+        {
+          "type": "headings",
+          "pattern": "^Stack\\s*\\d"
+        }
+      ]
+    },
+    "heuristics": {
+      "type": "list_items",
+      "in_section": "Heuristic"
+    }
+  },
+  "structural": [
+    {
+      "id": "six_sensitivities",
+      "kind": "distinct_coverage",
+      "items": "sensitivities",
+      "vocabulary": [
+        "Attention",
+        "Emotional",
+        "Sensemaking",
+        "Decision",
+        "Social Reasoning",
+        "Group Dynamics"
+      ],
+      "n": 6,
+      "bar": "correctly evaluates all six sensitivities for every product",
+      "desc": "the worksheet covers all six sensitivities"
+    },
+    {
+      "id": "enabled_framing",
+      "kind": "count_covers",
+      "items": "enabled_cells",
+      "covers": "sensitivities",
+      "bar": "uses \"Enabled to...\" framing for every opportunity area",
+      "desc": "every worksheet row has an Enabled-to opportunity"
+    },
+    {
+      "id": "mechanism_per_flag",
+      "kind": "count_covers",
+      "items": "flagged_mechanisms",
+      "covers": "flagged_rows",
+      "bar": "names a specific psychological mechanism for every 🔴 and 🟡 row",
+      "desc": "every 🔴/🟡 row names a mechanism"
+    },
+    {
+      "id": "two_populations",
+      "kind": "group_parts_min",
+      "in_section": "Sensitivity|Worksheet|Audit",
+      "key": "Sensitivity",
+      "value": "Populations",
+      "n": 2,
+      "bar": "names at least 2 specifically vulnerable populations for every sensitivity row",
+      "desc": "every sensitivity row names at least 2 populations"
+    },
+    {
+      "id": "three_alternatives_per_red",
+      "kind": "count_covers",
+      "items": "radical_alternatives",
+      "covers": "red_rows",
+      "bar": "proposes at least 3 alternatives per 🔴 sensitivity (minimal / structural / radical reframe)",
+      "desc": "every 🔴 sensitivity reaches a third (radical) alternative"
+    },
+    {
+      "id": "kpi_per_red",
+      "kind": "count_covers",
+      "items": "kpi_tensions",
+      "covers": "red_rows",
+      "bar": "names the specific KPI or OKR that must change to fix each 🔴 finding",
+      "desc": "a business tension is stated for every 🔴 sensitivity"
+    },
+    {
+      "id": "stack_count",
+      "kind": "min_count",
+      "items": "stacks",
+      "n": 2,
+      "max": 3,
+      "bar": "produces a Compound Harm / Exploitation Stack Analysis identifying 2-3 multi-feature stacks",
+      "desc": "the Exploitation Stack table names 2-3 stacks"
+    },
+    {
+      "id": "stack_broken",
+      "kind": "any_of",
+      "checks": [
+        {
+          "kind": "section_present",
+          "pattern": "stack.?break|break(s|ing)?\\b(?:\\s+\\S+){0,3}?\\s+stacks?\\b"
+        }
+      ],
+      "bar": "with at least one redesign that breaks the stack rather than fixing one feature",
+      "desc": "names a redesign that breaks a stack"
+    },
+    {
+      "id": "heuristic_count",
+      "kind": "min_count",
+      "items": "heuristics",
+      "n": 3,
+      "max": 5,
+      "bar": "ends with 3-5 memorable heuristics specific to this product",
+      "desc": "3-5 memorable heuristics"
+    },
+    {
+      "id": "heuristics_not_copied",
+      "kind": "not_copied",
+      "items": "heuristics",
+      "examples": [
+        "If the metric goes up when the user feels worse, it's not a humane metric.",
+        "If we can't show this design to a 14-year-old's parent without flinching, we shouldn't ship it to 14-year-olds.",
+        "Defaults are decisions made for the user — make them visible.",
+        "If a streak punishes a missed day, the streak is the punishment.",
+        "If the tip prompt appears before the food arrives, it's a toll, not a tip."
+      ],
+      "bar": "ends with 3-5 memorable heuristics specific to this product, designed to be quoted in future design reviews",
+      "desc": "no heuristic is lifted from the skill's own examples"
+    },
+    {
+      "id": "algorithm_audit",
+      "kind": "conditional_section",
+      "when_prompt_matches": "algorithm|rank|recommend|feed|match|scor|filter",
+      "required_only": true,
+      "pattern": "Algorithm",
+      "bar": "runs the Algorithm Audit when any scoring, ranking, or recommendation system is present",
+      "desc": "an Algorithm Audit section exists when the product ranks or recommends"
+    },
+    {
+      "id": "engagement_paradox",
+      "kind": "any_of",
+      "checks": [
+        {
+          "kind": "section_present",
+          "pattern": "paradox"
+        }
+      ],
+      "bar": "explicitly surfaces the Engagement-Value Paradox when the success metric conflicts with user wellbeing",
+      "desc": "surfaces the Engagement-Value Paradox"
+    },
+    {
+      "id": "humane_statement",
+      "kind": "section_present",
+      "pattern": "Humane Design Statement",
+      "bar": "includes a humane design statement that the team could adopt as a design principle",
+      "desc": "a Humane Design Statement section exists"
+    }
+  ],
+  "semantic": []
+}

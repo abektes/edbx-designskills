@@ -1,0 +1,191 @@
+{
+  "skill": "edbx-fair-patterns",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. Every per-pattern bar is a coverage count against the Dark Pattern Audit, so it is code; Jev judges only whether a root cause is upstream.",
+  "enumerators": {
+    "patterns": {
+      "type": "table_rows",
+      "in_section": "Dark Pattern (Audit|Identification)",
+      "column": "Pattern Type",
+      "nearest": true
+    },
+    "countermeasures": {
+      "type": "table_rows",
+      "in_section": "Countermeasure",
+      "column": "Dark Pattern",
+      "nearest": true
+    },
+    "root_causes": {
+      "type": "phrase_matches",
+      "in_section": "Root Cause",
+      "pattern": "[^\\n]*\\bbecause\\b[^\\n]*"
+    },
+    "legal_rows": {
+      "type": "table_rows",
+      "in_section": "Legal",
+      "column": "Dark Pattern",
+      "nearest": true
+    },
+    "statutes": {
+      "type": "table_cells",
+      "in_section": "Legal",
+      "column": "Statute",
+      "nearest": true
+    },
+    "jurisdictions": {
+      "type": "table_cells",
+      "in_section": "Legal",
+      "column": "Jurisdiction",
+      "nearest": true
+    },
+    "penalties": {
+      "type": "table_cells",
+      "in_section": "Legal",
+      "column": "Penalty",
+      "nearest": true
+    },
+    "vuln_rows": {
+      "type": "table_rows",
+      "in_section": "Vulnerable Population",
+      "column": "Pattern",
+      "nearest": true
+    },
+    "vuln_mechanisms": {
+      "type": "table_cells",
+      "in_section": "Vulnerable Population",
+      "column": "Mechanism",
+      "nearest": true
+    },
+    "metrics": {
+      "type": "table_cells",
+      "in_section": "Implementation Sequence",
+      "column": "Metric",
+      "nearest": true
+    },
+    "owners": {
+      "type": "table_cells",
+      "in_section": "Implementation Sequence",
+      "column": "Owner",
+      "nearest": true
+    },
+    "sprints": {
+      "type": "table_cells",
+      "in_section": "Implementation Sequence",
+      "column": "Sprint",
+      "nearest": true
+    }
+  },
+  "structural": [
+    {
+      "id": "patterns_found",
+      "kind": "min_count",
+      "items": "patterns",
+      "n": 1,
+      "bar": "identifies every dark pattern with a named type from the taxonomy",
+      "desc": "a Dark Pattern Audit table names at least one pattern"
+    },
+    {
+      "id": "countermeasure_per_pattern",
+      "kind": "subset",
+      "bar": "provides at least one fair pattern countermeasure for every dark pattern found",
+      "desc": "the Countermeasure Map names every audited pattern",
+      "within": "countermeasures",
+      "items": "patterns",
+      "or_count": true
+    },
+    {
+      "id": "root_cause_per_pattern",
+      "kind": "subset",
+      "bar": "names the root cause (upstream business decision or incentive) behind every dark pattern found",
+      "desc": "the Root Cause section names a cause for every audited pattern",
+      "within": "root_causes",
+      "items": "patterns",
+      "or_count": true
+    },
+    {
+      "id": "legal_per_pattern",
+      "kind": "subset",
+      "bar": "names the specific statute (article number) for every dark pattern flagged",
+      "desc": "the Legal Compliance Mapping names every audited pattern",
+      "within": "legal_rows",
+      "items": "patterns",
+      "or_count": true
+    },
+    {
+      "id": "statute_specific",
+      "kind": "cells_match",
+      "items": "statutes",
+      "pattern": "\\d",
+      "bar": "names the specific statute (article number) for every dark pattern flagged -- not just \"GDPR\" but \"GDPR Art. 7(3)\"",
+      "desc": "every statute cell carries an article or section number"
+    },
+    {
+      "id": "jurisdiction_named",
+      "kind": "cells_match",
+      "items": "jurisdictions",
+      "pattern": "[A-Za-z]{2}",
+      "bar": "names the jurisdiction for each legal mapping (EU / UK / US-federal / US-CA / Brazil / etc.)",
+      "desc": "every legal row names a jurisdiction"
+    },
+    {
+      "id": "penalty_named",
+      "kind": "cells_match",
+      "items": "penalties",
+      "pattern": "[A-Za-z]{3}",
+      "bar": "includes penalty exposure (percentage of turnover, fine ranges, or named enforcement actions)",
+      "desc": "every legal row states a penalty exposure"
+    },
+    {
+      "id": "vulnerability_per_pattern",
+      "kind": "subset",
+      "bar": "produces the Vulnerable Population Harm Matrix with at least 3 named populations per pattern",
+      "desc": "the Harm Matrix names every audited pattern",
+      "within": "vuln_rows",
+      "items": "patterns",
+      "or_count": true
+    },
+    {
+      "id": "three_populations",
+      "kind": "group_parts_min",
+      "in_section": "Vulnerable Population",
+      "nearest": true,
+      "key": "Pattern",
+      "value": "Populations",
+      "n": 3,
+      "bar": "produces the Vulnerable Population Harm Matrix with at least 3 named populations per pattern",
+      "desc": "every pattern in the Harm Matrix lists at least 3 populations",
+      "group_by": "patterns"
+    },
+    {
+      "id": "metric_has_threshold",
+      "kind": "cells_match",
+      "items": "metrics",
+      "pattern": "(?i)\\d|\\bzero\\b|\\bnone\\b|\\bno\\b",
+      "bar": "produces an Implementation Sequence with a measurable success metric and threshold + named owner + target sprint on every row",
+      "desc": "every Implementation Sequence metric carries a threshold"
+    },
+    {
+      "id": "owner_named",
+      "kind": "cells_match",
+      "items": "owners",
+      "pattern": "[A-Za-z]{2}",
+      "bar": "produces an Implementation Sequence with a measurable success metric and threshold + named owner + target sprint on every row",
+      "desc": "every Implementation Sequence row names an owner"
+    },
+    {
+      "id": "sprint_named",
+      "kind": "cells_match",
+      "items": "sprints",
+      "pattern": "\\w",
+      "bar": "produces an Implementation Sequence with a measurable success metric and threshold + named owner + target sprint on every row",
+      "desc": "every Implementation Sequence row names a target sprint"
+    },
+    {
+      "id": "fair_design_statement",
+      "kind": "section_present",
+      "pattern": "Fair Design Statement",
+      "bar": "produces a Fair Design Statement every session",
+      "desc": "a Fair Design Statement section exists"
+    }
+  ],
+  "semantic": []
+}

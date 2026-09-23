@@ -266,6 +266,25 @@ def norm(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip()
 
 
+def count_parts(cell: str) -> int:
+    """How many things does a cell list? "a; b; c", "1. a 2. b", "a, b (x, y)" -> 3, 2, 2.
+
+    Parenthesised asides are dropped first so "(tiny checkboxes, low contrast)"
+    does not count as two more entries, and so are qualifiers that open with
+    "especially" or "e.g." -- they narrow the previous entry rather than add one.
+    """
+    text = re.sub(r"\([^()]*\)", "", strip_md(re.sub(r"<br\s*/?>", "; ", cell)))
+    # Split on the strongest delimiter present: entries in a numbered or
+    # semicolon list carry commas of their own inside the description.
+    for delim in (r"(?:^|\s)\d+[.)]\s", r";|•", r","):
+        if re.search(delim, text):
+            break
+    parts = re.split(delim, text)
+    parts = [p.strip(" .") for p in parts]
+    return sum(1 for p in parts
+               if len(p) > 2 and not re.match(r"(especially|including|e\.g|such as|i\.e)\b", p, re.I))
+
+
 def overlaps(needle: str, haystack: list[str]) -> bool:
     """Does `needle` correspond to any entry in `haystack`?
 
@@ -371,6 +390,11 @@ def score_document(doc: str, spec: dict, api_key: str | None, prompt: str = "") 
                 passed, detail = False, {"vacuous": True}
             else:
                 passed, detail = not missing, {"missing": missing}
+                if missing and check.get("or_count"):
+                    # Later sections often rename items by instance ("Buried
+                    # opt-out") instead of type ("Roach Motel"); one row per item
+                    # is also coverage, even when no name carries across.
+                    passed = len(items[check["within"]]) >= len(source)
         elif kind == "min_count":
             got = len(items[check["items"]])
             hi = check.get("max", 10**9)
@@ -458,6 +482,47 @@ def score_document(doc: str, spec: dict, api_key: str | None, prompt: str = "") 
             passed = bool(keys) and not short
             detail = {"found": len(keys) - len(short), "required": len(keys),
                       "missing": [f"move {k}: {counts.get(k, 0)} of {check['n']}" for k in short]}
+        elif kind == "group_parts_min":
+            # "at least 3 named populations per pattern": outputs list them three
+            # ways -- "a; b; c" in one cell, "1. a 2. b 3. c", or one row each with
+            # the pattern cell repeated or left blank. Group rows by the key column
+            # (blank = continuation of the row above) and count listed parts.
+            groups: dict[str, int] = {}
+            named = items[check["group_by"]] if check.get("group_by") else []
+            for table in parse_tables(doc):
+                if not table.under(check["in_section"], check.get("nearest", False)):
+                    continue
+                kc, vc = table.column(check["key"]), table.column(check["value"])
+                if kc is None or vc is None:
+                    continue
+                current = ""
+                for row in table.rows:
+                    if max(kc, vc) >= len(row):
+                        continue
+                    current = norm(strip_md(row[kc])) or current
+                    # A row keyed "Roach Motel / Misdirection" counts toward both
+                    # audited patterns; one keyed by an instance name stands alone.
+                    targets = [k for k in named if overlaps(k, [current])] or [current]
+                    for t in targets:
+                        groups[t] = groups.get(t, 0) + count_parts(row[vc])
+            short = [f"{k[:40]}: {v}" for k, v in groups.items() if v < check["n"]]
+            passed = bool(groups) and not short
+            detail = {"missing": short, "vacuous": not groups}
+        elif kind == "not_copied":
+            # "specific to the product audited, not generic": an item lifted from
+            # the skill's own examples is by construction not product-specific.
+            def words(s):
+                return {w for w in norm(s).split() if len(w) > 2}
+            copied = []
+            for item in items[check["items"]]:
+                iw = words(item)
+                for ex in check["examples"]:
+                    ew = words(ex)
+                    if iw and len(iw & ew) / len(ew) >= check.get("threshold", 0.7):
+                        copied.append(item[:80])
+                        break
+            passed = bool(items[check["items"]]) and not copied
+            detail = {"copied": copied, "vacuous": not items[check["items"]]}
         elif kind == "all_phrases":
             body = section_text(doc, check["section"])
             absent = [ph for ph in check["phrases"] if not re.search(ph, body, re.I)]
@@ -468,7 +533,7 @@ def score_document(doc: str, spec: dict, api_key: str | None, prompt: str = "") 
             # not merely reach a fixed floor.
             got, need = len(items[check["items"]]), len(items[check["covers"]])
             passed = need > 0 and got >= need
-            detail = {"found": got, "required": need}
+            detail = {"found": got, "required": need, "vacuous": need == 0}
         elif kind == "min_count_matching":
             matching = [c for c in items[check["items"]] if re.search(check["pattern"], c, re.I)]
             passed = len(matching) >= check["n"]
@@ -478,7 +543,8 @@ def score_document(doc: str, spec: dict, api_key: str | None, prompt: str = "") 
             # emit a Manifesto unless the user requested one. Needs the prompt.
             requested = bool(re.search(check["when_prompt_matches"], prompt, re.I))
             present = bool(section_text(doc, check["pattern"]))
-            passed = (present == requested)
+            # `required_only`: the section is owed when triggered, harmless otherwise.
+            passed = (present or not requested) if check.get("required_only") else (present == requested)
             detail = {"requested": requested, "present": present}
         elif kind == "any_of":
             # "completes all five tools OR states which were run and why" -- the
