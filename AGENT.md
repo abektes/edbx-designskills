@@ -55,7 +55,7 @@ If the user's request doesn't fit any of these, ask one clarifying question. Don
 | **Motivation Matrix** ([SKILL](edbx/edbx-motivation-matrix/SKILL.md) · [tutorial](tutorials/motivation-matrix.md)) | Mapping which of 5 human drives the product activates and whether ethically |
 | **Worrystorming** ([SKILL](edbx/edbx-worrystorming/SKILL.md) · [tutorial](tutorials/worrystorming.md)) | Structured worry session that reframes concerns as design values |
 | **Black Mirror Brainstorming** ([SKILL](edbx/edbx-black-mirror-brainstorming/SKILL.md) · [tutorial](tutorials/black-mirror-brainstorming.md)) | Writing the dystopian version to surface risks normal reviews don't name |
-| **Anti-Heroes** ([SKILL](edbx/edbx-anti-heroes/SKILL.md) · [tutorial](tutorials/anti-heroes.md)) | Identifies who is harmed even when the design works as intended |
+| **Anti-Heroes** ([SKILL](edbx/edbx-anti-heroes/SKILL.md) · [tutorial](tutorials/anti-heroes.md)) | Names manipulative design moves with a card deck and pairs each with a Hero counter-move |
 | **STF-ET** ([SKILL](edbx/edbx-stf-et/SKILL.md) · [tutorial](tutorials/stf-et.md)) | 5-tool Stanford chain for long-term ethical futures |
 
 ### Get the team aligned
@@ -82,9 +82,9 @@ Map the user's actual situation to method(s):
 - *"We shipped X and people are complaining"* → **Ethicography** (trace the decisions that got you here) → **Bad Design Canvas** (stress-test current state) → **Pledge Works** (commit to changes)
 - *"We're about to ship X"* → **DAH Cards** or **Bad Design Canvas** for breadth; add **Worrystorming** if the team has unspoken concerns
 - *"…aimed at minors / adolescents / neurodivergent users / people in crisis / abuse survivors / low-income users / undocumented users / people with disabilities"* (any specifically vulnerable population is named) → escalate to **Humane Design Guide** (psychological mechanisms by population) + **CIDER** (exclusion patterns) regardless of which other audit method is also running. These populations carry developmental, cognitive, or contextual vulnerabilities that breadth audits routinely miss.
-- *"Is this manipulative?"* → **Fair Patterns** (named patterns + statutes) + **Humane Design Guide** (psychological mechanisms) + **Responsible Design Prism** (overall posture)
+- *"Is this manipulative?"* → **Fair Patterns** (named patterns + statutes) + **Humane Design Guide** (psychological mechanisms) + **Responsible Design Prism** (overall posture); add **Anti-Heroes** when the team needs a shared card vocabulary to name the move and its counter-move
 - *"What will users actually do with this?"* → **Inverted Behavior Model** (primary) + **Motivation Matrix** (motivational structure)
-- *"Who are we excluding?"* → **CIDER** (primary) + **Anti-Heroes** (who is harmed even when it works)
+- *"Who are we excluding?"* → **CIDER** (surfaces the assumptions that exclude people)
 - *"Our team can't agree whether X is OK"* → **Normative Design Scheme** (three lenses surface different reasoning) + **Values Levers** (if the disagreement is about values themselves, not the decision)
 - *"We need to commit to something the team will actually keep"* → **Ethical Contract** (formal, signed) or **Pledge Works** (operationalized, with red lines)
 - *"I'm doing user research on a sensitive system"* → **Critical Interviewing**

@@ -49,9 +49,9 @@ If the situation doesn't clearly fit one category, ask one clarifying question b
 | About to ship something | `/edbx:dah-cards` or `/edbx:bad-design-canvas` for breadth; add `/edbx:worrystorming` if the team has unspoken concerns |
 | Shipped something and people are complaining | `/edbx:ethicography` → `/edbx:bad-design-canvas` → `/edbx:pledge-works` |
 | Involves minors, neurodivergent users, people in crisis, abuse survivors, low-income, undocumented, or disabled users | Escalate to `/edbx:humane-design-guide` + `/edbx:cider` regardless of other audit running |
-| "Is this manipulative?" | `/edbx:fair-patterns` + `/edbx:humane-design-guide` + `/edbx:responsible-design-prism` |
+| "Is this manipulative?" | `/edbx:fair-patterns` + `/edbx:humane-design-guide` + `/edbx:responsible-design-prism`; add `/edbx:anti-heroes` for a team-facing card critique |
 | "What will users actually do with this?" | `/edbx:inverted-behavior-model` + `/edbx:motivation-matrix` |
-| "Who are we excluding?" | `/edbx:cider` + `/edbx:anti-heroes` |
+| "Who are we excluding?" | `/edbx:cider` |
 | "Our team can't agree whether X is OK" | `/edbx:normative-design-scheme` + `/edbx:values-levers` |
 | "We need a commitment the team will keep" | `/edbx:ethical-contract` (formal, signed) or `/edbx:pledge-works` (operationalized) |
 | "I'm doing user research on a sensitive system" | `/edbx:critical-interviewing` |

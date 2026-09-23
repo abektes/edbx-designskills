@@ -84,7 +84,7 @@ Read the corresponding tutorial file in [`tutorials/`](tutorials/). Each tutoria
 | Skill | What it does |
 |---|---|
 | [`edbx-anotherlens`](edbx/edbx-anotherlens/) | Surfaces designer bias and converts insight to a Design Decision Spec |
-| [`edbx-anti-heroes`](edbx/edbx-anti-heroes/) | Identifies who gets harmed by a design even when it works as intended |
+| [`edbx-anti-heroes`](edbx/edbx-anti-heroes/) | Names manipulative design moves with a card deck (Trap-Setter, Camouflager, …) and pairs each with a Hero counter-move |
 | [`edbx-bad-design-canvas`](edbx/edbx-bad-design-canvas/) | 12-category adversarial audit of a product's potential harms |
 | [`edbx-black-mirror-brainstorming`](edbx/edbx-black-mirror-brainstorming/) | Forecasts dystopian misuse scenarios to surface non-obvious risks |
 | [`edbx-cider`](edbx/edbx-cider/) | Audits exclusionary assumptions embedded in a design |
