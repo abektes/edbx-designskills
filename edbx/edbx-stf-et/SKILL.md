@@ -462,10 +462,13 @@ Default structure when running the full chain. The `→ Carries forward:` block 
 
 ---
 
-**Values Prioritized Across the Chain:** [Which of the nine core values were most significant, and how they were upheld or traded off]
+**Closing Synthesis:**
+- **Values prioritized:** [Which of the nine core values were most significant]
+- **Trade-offs accepted:** [What was given up or subordinated to uphold them]
+- **Actions:** [The concrete decision or next steps this points to — a recommendation is enough if the run stopped before Weighing Options]
 ```
 
-When running a single tool in isolation, output only that tool's section. Still include the `→ Carries forward:` block — it tells anyone reading the output exactly what they would use if they continued the chain.
+When running only some of the tools, keep the frame and drop the rest: the header first — `Chain Status` marking which tools ran, and `Entry Phase` stating why the others were skipped (for example, "prior Ethics Frame supplied by the user") — then the sections for the tools you ran, then the Closing Synthesis. Still include each `→ Carries forward:` block — it tells anyone reading the output exactly what they would use if they continued the chain.
 
 ---
 
