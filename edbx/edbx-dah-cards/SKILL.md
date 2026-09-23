@@ -122,6 +122,13 @@ Once consequences are mapped, sort the product(s) into one of three categories:
 
 **Unethical** — The product's harms are serious, disproportionate, poorly mitigated, or designed in deliberately. The team would struggle to defend the design publicly to those it hurts.
 
+**Microcopy Rewrite (required for each Unethical finding, in every mode — including audit-only):**
+For every item sorted Unethical, rewrite the specific UI copy, mechanic name, or on-screen framing that obscures the harm:
+- **Before:** [current copy or mechanic as it appears to users]
+- **After (honest version):** [what it would say if it named what it actually does]
+
+If there is no specific copy to rewrite, identify the mechanic name and propose an honest design label (e.g., "Infinite scroll" → "Automatic content injection with no stopping point").
+
 After sorting, ask the **"What changed?"** reflection:
 
 - Which card surprised you? Why?
@@ -155,13 +162,6 @@ Structure:
 (A restatement of value that includes wellbeing, not just engagement or revenue)
 
 Keep it honest and specific. Vague manifestos feel good and change nothing. Specific ones create friction — that friction is the point.
-
-**Microcopy Rewrite (required for each Unethical finding):**
-For every item sorted Unethical, rewrite the specific UI copy, mechanic name, or on-screen framing that obscures the harm:
-- **Before:** [current copy or mechanic as it appears to users]
-- **After (honest version):** [what it would say if it named what it actually does]
-
-If there is no specific copy to rewrite, identify the mechanic name and propose an honest design label (e.g., "Infinite scroll" → "Automatic content injection with no stopping point").
 
 ---
 
@@ -206,6 +206,10 @@ One section per product or feature evaluated. Use the harm dimensions from Mode 
 ### Sorting Verdict
 
 A table showing each item sorted into Ethical / Unsure / Unethical with a one-line rationale.
+
+### Microcopy Rewrites
+
+Required whenever any item is sorted Unethical — one Before / After (honest version) pair per Unethical item, in the format from Mode 2. Omit this section only if nothing was sorted Unethical.
 
 ### What Changed?
 

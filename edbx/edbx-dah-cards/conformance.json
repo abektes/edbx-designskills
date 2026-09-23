@@ -1,7 +1,6 @@
 {
   "skill": "edbx-dah-cards",
   "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. Counts, set coverage and mode selection are code; only genuine judgment goes to Jev.",
-
   "enumerators": {
     "card_categories": {
       "type": "table_cells",
@@ -27,10 +26,12 @@
       "type": "table_rows",
       "in_section": "Sorting Verdict",
       "column": "Item",
-      "where": { "column": "Verdict", "matches": "unethical" }
+      "where": {
+        "column": "Verdict",
+        "matches": "unethical"
+      }
     }
   },
-
   "structural": [
     {
       "id": "card_pairs_exist",
@@ -44,7 +45,14 @@
       "id": "category_coverage",
       "kind": "distinct_coverage",
       "items": "card_categories",
-      "vocabulary": ["Deception", "Coercion", "Addiction", "Surveillance", "Exclusion", "Systemic"],
+      "vocabulary": [
+        "Deception",
+        "Coercion",
+        "Addiction",
+        "Surveillance",
+        "Exclusion",
+        "Systemic"
+      ],
       "n": 4,
       "bar": "each tagged by harm category, with coverage spanning at least 4 of the 6 categories",
       "desc": "card categories span at least 4 of the 6 named harm categories"
@@ -70,7 +78,7 @@
       "id": "microcopy_for_unethical",
       "kind": "implied_section",
       "items": "unethical_items",
-      "pattern": "microcopy|before\\s*(/|and|→|->)\\s*after|rewrite",
+      "pattern": "microcopy|before\\s*(/|and|\u2192|->)\\s*after|rewrite",
       "bar": "includes a microcopy rewrite (before/after) for every Unethical finding",
       "desc": "a microcopy rewrite appears whenever there is an Unethical finding"
     },
@@ -91,16 +99,15 @@
       "desc": "a Future Vision appears if and only if the user asked for one"
     }
   ],
-
   "semantic": [
     {
       "id": "white_side_is_harm",
       "each": "card_harms",
       "bar": "white side = harm, named bluntly",
-      "instructions": "Does `items[{i}]` describe a concrete harm that a real person experiences?",
+      "instructions": "Does `items[{i}]` name a concrete harm the design causes -- to a person, or to society?",
       "criteria": {
-        "true": "Describes a specific bad outcome someone lives through, such as losing money, losing sleep, being shamed, being excluded, or being surveilled. Written from the affected person's point of view counts.",
-        "false": "Only restates the design mechanic without naming its cost, describes a business risk to the company rather than a harm to a person, or is a vague worry such as 'this could be problematic' with no stated consequence."
+        "true": "Names a specific bad outcome someone lives through -- losing money, sleep or time, being shamed, excluded, surveilled or manipulated -- often in the harmed person's own voice. A named society-level harm also counts, such as normalizing manipulation, eroding public discourse, or teaching people that learning is a paywall.",
+        "false": "Only restates the design mechanic without its cost; describes a risk to the company rather than a harm to people; or is a vague hedge such as 'may reduce user wellbeing', 'could be problematic' or 'raises ethical concerns'."
       }
     },
     {
