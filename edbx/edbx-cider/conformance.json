@@ -1,0 +1,98 @@
+{
+  "skill": "edbx-cider",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar. The team-mode register bar is deliberately not implemented: none of the eval prompts request team mode, so it cannot be measured on this set.",
+  "enumerators": {
+    "assumptions": {
+      "type": "list_items",
+      "in_section": "stage c\\b|assumptions surfaced"
+    },
+    "proposals": {
+      "type": "list_items",
+      "in_section": "stage d\\b|redesign proposals"
+    }
+  },
+  "structural": [
+    {
+      "id": "assumption_count",
+      "kind": "min_count",
+      "items": "assumptions",
+      "n": 5,
+      "bar": "surfaces at least 5 distinct assumptions spanning at least 3 of the 4 categories",
+      "desc": "at least 5 assumptions are surfaced"
+    },
+    {
+      "id": "category_coverage",
+      "kind": "distinct_coverage",
+      "items": "assumptions",
+      "vocabulary": [
+        "Ability",
+        "Capacity",
+        "Environment",
+        "Resources"
+      ],
+      "n": 3,
+      "bar": "surfaces at least 5 distinct assumptions spanning at least 3 of the 4 categories",
+      "desc": "assumptions span at least 3 of Ability / Capacity / Environment / Resources"
+    },
+    {
+      "id": "proposal_count",
+      "kind": "min_count",
+      "items": "proposals",
+      "n": 3,
+      "bar": "generates at least 3 redesign proposals spanning different approach types (low-tech, high-tech, systemic, interaction-level)",
+      "desc": "at least 3 redesign proposals"
+    },
+    {
+      "id": "second_cycle_different",
+      "kind": "captures_differ",
+      "first": "assumption[^:\\n]{0,20}:\\**[ \\t|]*\\n?[ \\t|*]*(.+)$",
+      "second": "assumption[^:\\n]{0,20}:\\**[ \\t|]*\\n?[ \\t|*]*(.+)$",
+      "bar": "runs a second I -> D cycle on a different assumption than the first",
+      "desc": "the second cycle examines a different assumption from the first",
+      "first_section": "stage i\\b|exclusion scenario",
+      "second_section": "stage r\\b|second cycle"
+    }
+  ],
+  "semantic": [
+    {
+      "id": "specific_person",
+      "section": "stage i\\b|exclusion scenario",
+      "bar": "names a specific person (not a demographic label) in the exclusion scenario",
+      "instructions": "Is the scenario in `items[{i}]` centred on one specific, named person?",
+      "criteria": {
+        "true": "Follows one individual with a name and particular circumstances, such as 'Maria, 55, a Spanish-speaking seamstress'.",
+        "false": "Describes a group or demographic label, such as 'elderly users' or 'people with low literacy', without a particular person."
+      }
+    },
+    {
+      "id": "concrete_failure",
+      "section": "stage i\\b|exclusion scenario",
+      "bar": "describes a concrete moment of failure, not a generalized class of problem",
+      "instructions": "Does `items[{i}]` show a specific moment where this person's attempt breaks down?",
+      "criteria": {
+        "true": "Shows a particular point where they get stuck, give up or are turned away -- a screen they cannot read, a step they cannot complete, a timeout.",
+        "false": "States only that such users would struggle or be excluded in general, without a specific moment of failure."
+      }
+    },
+    {
+      "id": "proposals_vary",
+      "section": "stage d\\b|redesign proposals",
+      "bar": "generates at least 3 redesign proposals spanning different approach types (low-tech, high-tech, systemic, interaction-level)",
+      "instructions": "Do the proposals in `items[{i}]` use different kinds of approach, rather than variations of one idea?",
+      "criteria": {
+        "true": "Mixes kinds of solution -- for example a human or offline channel, a technical feature, a policy or process change, and an interface change.",
+        "false": "All proposals are the same kind of fix, such as several variations of one UI tweak."
+      }
+    },
+    {
+      "id": "commitment_accountable",
+      "section": "commitment",
+      "bar": "closes with a commitment specific enough to create accountability",
+      "instructions": "Does `items[{i}]` commit to a specific action that someone could later be held to?",
+      "criteria": {
+        "true": "Names what will be built or changed, with enough specifics -- a timeframe, owner, scope or measurable target -- to check later whether it happened.",
+        "false": "A general intention such as 'we will be more inclusive' or 'we will keep accessibility in mind', with nothing checkable."
+      }
+    }
+  ]
+}
