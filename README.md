@@ -18,7 +18,7 @@ Every skill produces a concrete artifact: a stakeholder map, a dark-pattern audi
 
 Ethical design as a discipline is rich, well-researched, and has produced excellent methods over the past two decades. What's harder is **access** — the same way many people who would benefit from medical or educational expertise can't always reach it on demand.
 
-That's where AI helps. LLMs don't replace specialists. They lower the activation cost of getting structured, expert-informed thinking into a moment when it's needed. A patient who can't reach a doctor at 2 a.m. is better served by a careful AI conversation than by no conversation. A student without a tutor learns more with a thoughtful AI than without one. And a product team that can't add a full-time ethical-design specialist can still bring 21 validated methods into a sprint review with a single prompt.
+That's where AI helps. LLMs don't replace specialists. They lower the activation cost of getting structured, expert-informed thinking into a moment when it's needed. A patient who can't reach a doctor at 2 a.m. is better served by a careful AI conversation than by no conversation. A student without a tutor learns more with a thoughtful AI than without one. And a product team that can't add a full-time ethical-design specialist can still bring 21 research-based methods into a sprint review with a single prompt.
 
 This package is built on that premise. The skills don't replace ethical design expertise — they integrate it, so that ethical thinking happens *as part of* shipping rather than after.
 
@@ -60,6 +60,34 @@ The methods come from researchers and practitioners — Brignull's dark patterns
 The skills were evaluated against a strong baseline (a competent LLM told the method's name and asked to apply it thoroughly) using two independent judge models. Headline results: **17 / 21 skills win cleanly under both judges, 4 are razor-thin under Gemini, 0 lose under both.**
 
 Full per-skill scoreboard, methodology, reflection on what worked, and proposed improvements: **[RESULTS.md](RESULTS.md)**.
+
+### Conformance testing
+
+Beating a baseline doesn't show that a skill does what its own quality bar promises. So each skill's **Deliverable Quality Bar** is being turned into a machine-checkable rubric (`conformance.json` beside the `SKILL.md`), and each skill is run many times against it. Counts, coverage and required sections are checked in code; judgments that need reading are scored by [TypeSafe Jev](https://docs.typesafe.ai/introduction), calibrated against hand-labelled examples before any score is trusted.
+
+Eleven skills are covered so far. The checks found real defects in the skills themselves, and every fix was measured before and after (18–36 runs each side, Fisher exact test):
+
+| Skill | Defect found | Before → after |
+|---|---|---|
+| Anti-Heroes | Card deck lived only in a reference file, so the model invented cards | real deck cards: 2/18 → 17/18 runs |
+| DAH Cards | Microcopy rewrite sat in a mode that audits skip | rewrite present: 13/24 → 24/24 |
+| CIDER | Commitment template had no deadline or owner | accountable commitment: 28/36 → 36/36 |
+| Humane Design Guide | Example heuristics got pasted into audits of other products | product-specific heuristics: 5/18 → 18/18 |
+| Ethicography | Output format had no slot for affected populations | decisions with named populations: 23% → 84% |
+
+Each of these is significant at p ≤ 0.05. Smaller clarifications (Pledge Works, STF-ET, Fair Patterns, Another Lens) showed no regressions but no significant gain, and Inverted Behavior Model needed no change. One more finding: without the skill, a capable model invented what the CIDER acronym stands for in two of three runs.
+
+Outputs are generated with DeepSeek V4 Pro. These results measure whether a skill follows its own method, not whether the method produces insight a practitioner would trust — that still needs human evaluators. If you use these methods, [open an issue](https://github.com/abektes/edbx-designskills/issues) and report back; negative results are as useful as positive ones.
+
+To check the skills yourself:
+
+```bash
+python3 scripts/validate_skills.py                                  # frontmatter, links, house style
+python3 scripts/run_generation.py --skills cider --reps 6 --arm with_skill   # needs OPENROUTER_API_KEY
+python3 scripts/conformance.py --skills cider --reps 6 --dry-run    # structural checks only; drop --dry-run to add Jev (TYPESAFE_API_KEY)
+```
+
+Keys are read from `eval-framework/.env` (gitignored), which is also where generated outputs and scores are cached.
 
 ---
 
@@ -118,7 +146,9 @@ Read the corresponding tutorial file in [`tutorials/`](tutorials/). Each tutoria
 ├── edbx/                          — 21 structured ethical-design methods
 │   └── edbx-*/                    — one folder per skill
 │       ├── SKILL.md               — methodology + AI agent instructions
+│       ├── conformance.json       — quality bar as machine-checkable rubric
 │       └── evals/evals.json       — three test scenarios per skill
+├── scripts/                       — validator, generation harness, conformance scoring
 ├── tutorials/                     — plain-language guide to each skill
 └── assets/                        — images and banner
 ```
