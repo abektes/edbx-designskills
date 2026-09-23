@@ -15,8 +15,8 @@
 | [Another Lens](anotherlens.md) | Turns the mirror on *you* the designer to surface your own blind spots |
 | [Bad Design Canvas](bad-design-canvas.md) | A 12-category checklist for finding everything that could go wrong with a product |
 | [Fair Patterns](fair-patterns.md) | Hunts for dark patterns — manipulative design tactics — and shows you how to replace them |
-| [Humane Design Guide](humane-design-guide.md) | Audits your product against six ways technology harms human wellbeing |
-| [Digital Ethics Compass](digital-ethics-compass.md) | A four-direction health check across data, manipulation, transparency, and automation |
+| [Humane Design Guide](humane-design-guide.md) | Audits six human sensitivities — attention, emotion, sensemaking, decisions, relationships, groups — for exploitation |
+| [Digital Ethics Compass](digital-ethics-compass.md) | A four-part health check across data, manipulation, transparency, and automation |
 | [Responsible Design Prism](responsible-design-prism.md) | Gives your product an ethical posture rating across five dimensions |
 | [CIDER](cider.md) | Surfaces the assumptions in your design that exclude people without you realizing it |
 | [Ethicography](ethicography.md) | Analyzes your team's *design decisions* (not just the product) for ethical intent vs. manipulation |
@@ -29,7 +29,7 @@
 | [Motivation Matrix](motivation-matrix.md) | Maps the five human drives your product is pulling on, and whether it's doing that ethically |
 | [Worrystorming](worrystorming.md) | A structured worry session to surface ethical risks before they become real harms |
 | [Black Mirror Brainstorming](black-mirror-brainstorming.md) | Writes the dystopian version of your product to find risks you'd never name in a normal meeting |
-| [Anti-Heroes](anti-heroes.md) | Identifies who gets hurt by your design even when it works exactly as intended |
+| [Anti-Heroes](anti-heroes.md) | Names manipulative design moves with a card deck and pairs each with a Hero counter-move |
 | [STF-ET](stf-et.md) | A 5-tool chain from Stanford for thinking through long-term ethical futures |
 
 ### When you want to get your team aligned on ethics

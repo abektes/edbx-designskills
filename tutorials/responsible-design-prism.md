@@ -93,6 +93,6 @@ Describe your product — what it does, how it makes money, what the key feature
 
 ## See also
 
-- [Digital Ethics Compass](digital-ethics-compass.md) — four-direction audit that covers overlapping territory with different framing
+- [Digital Ethics Compass](digital-ethics-compass.md) — four-category audit that covers overlapping territory with different framing
 - [Ethicography](ethicography.md) — explains the decision history that produced the prism rating; Responsible Design Prism is the diagnosis, Ethicography is the autopsy
 - [Normative Design Scheme](normative-design-scheme.md) — applies philosophical lenses to specific decisions; the prism applies a spectrum rating to the overall product

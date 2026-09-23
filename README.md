@@ -118,7 +118,7 @@ Read the corresponding tutorial file in [`tutorials/`](tutorials/). Each tutoria
 | [`edbx-cider`](edbx/edbx-cider/) | Audits exclusionary assumptions embedded in a design |
 | [`edbx-critical-interviewing`](edbx/edbx-critical-interviewing/) | Research protocol with non-obvious harms inventory and interview guardrails |
 | [`edbx-dah-cards`](edbx/edbx-dah-cards/) | DAH (Design Against Humanity) Cards session — six harm categories with manifesto option |
-| [`edbx-digital-ethics-compass`](edbx/edbx-digital-ethics-compass/) | Four-direction audit with stakeholder map and objective-function risk table |
+| [`edbx-digital-ethics-compass`](edbx/edbx-digital-ethics-compass/) | Four-category audit (data, manipulation, transparency, automation) with stakeholder map and objective-function risk table |
 | [`edbx-ethical-contract`](edbx/edbx-ethical-contract/) | Cross-disciplinary signed commitment with bias audit and red lines |
 | [`edbx-ethicography`](edbx/edbx-ethicography/) | Analyzes team decisions over time for ethical trajectory and 12-month forecast |
 | [`edbx-fair-patterns`](edbx/edbx-fair-patterns/) | Dark pattern audit with jurisdiction-specific statutes and vulnerable-population matrix |

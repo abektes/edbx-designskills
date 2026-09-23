@@ -94,6 +94,6 @@ Selected findings:
 ## See also
 
 - [Worrystorming](worrystorming.md) — generates free-form worries that the Bad Design Canvas then systematizes
-- [Anti-Heroes](anti-heroes.md) — surfaces who gets harmed; Bad Design Canvas maps the systemic categories those harms fall into
+- [Anti-Heroes](anti-heroes.md) — names the specific manipulative move behind a harm (Trap-Setter, Camouflager …) and its Hero fix; Bad Design Canvas maps the wider categories of consequence
 - [Inverted Behavior Model](inverted-behavior-model.md) — forecasts behavioral consequences; Bad Design Canvas maps broader social, environmental, and cultural consequences
 - [Fair Patterns](fair-patterns.md) — remediates manipulative UI patterns; Bad Design Canvas remediates systemic consequences beyond the interface

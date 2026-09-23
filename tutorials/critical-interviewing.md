@@ -53,6 +53,11 @@ Plus three layers that make the protocol safe to run in the field:
 
 An **interview sequencing rationale** is also included: who to interview first (affected users before system designers; people closest to the harm before people who made the decisions), and why that order matters.
 
+The protocol is the first of three ways to use the method:
+
+- **Live interview support** — paste in what a participant just said, and the AI flags value-laden words ("unfair", "manipulative", "necessary"), suggests a follow-up probe that mirrors their exact language, and notes which covert category may be emerging.
+- **Post-interview analysis** — after the interview, the AI identifies the values the participant expressed, maps them against the covert categories (confirmed, absent, surprising), and writes 3–5 normative insights — what the participant believes *should* happen — kept separate from what they described doing.
+
 ---
 
 ## The key insight
@@ -90,5 +95,5 @@ Tell the AI what you're researching, who you're interviewing, and what ethical c
 ## See also
 
 - [Ethicography](ethicography.md) — Critical Interviewing produces research input; Ethicography analyzes that research for ethical trajectory
-- [Anti-Heroes](anti-heroes.md) — Critical Interviewing surfaces the experience of people harmed; Anti-Heroes maps the systemic structure of that harm
+- [Anti-Heroes](anti-heroes.md) — Critical Interviewing surfaces how people experience a design; Anti-Heroes gives the team card names for the manipulative moves they describe
 - [CIDER](cider.md) — both methods work with underrepresented populations, from different angles

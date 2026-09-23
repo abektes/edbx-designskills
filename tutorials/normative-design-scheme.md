@@ -85,6 +85,6 @@ Describe the design decision you want to evaluate and any ethical concerns you a
 
 ## See also
 
-- [Digital Ethics Compass](digital-ethics-compass.md) — four-direction audit that is broader but less philosophically rigorous
+- [Digital Ethics Compass](digital-ethics-compass.md) — four-category audit that is broader but less philosophically rigorous
 - [Ethicography](ethicography.md) — applies ethical analysis to team decisions over time; Normative Design Scheme applies it to a single decision in depth
 - [Responsible Design Prism](responsible-design-prism.md) — gives a spectrum diagnosis of where a product sits ethically; Normative Design Scheme explains the decision logic behind that position

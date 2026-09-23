@@ -16,7 +16,7 @@ The Center's research identified six specific "human sensitivities" — aspects 
 
 Technology companies often claim to be making products "for users." The Center for Humane Technology's research documented the gap between that claim and what products are actually optimized for — which is typically engagement, retention, and revenue, using design mechanisms that exploit human psychological vulnerabilities.
 
-The six sensitivities are not abstract ethical principles. They are specific, documented mechanisms through which technology causes harm: attention exploitation, social validation manipulation, habit formation and addiction, outrage amplification, anxiety and FOMO, and persuasive technology that erodes user agency.
+The six sensitivities are not abstract ethical principles. They are human capacities — how we focus, feel, make sense of things, decide, relate to each other, and live in groups — that a product can either support or exploit. Infinite scroll, like counts, streaks and outrage-ranked feeds are the documented mechanisms by which products exploit them.
 
 The Humane Design Guide makes these mechanisms auditable. For each sensitivity, it asks: is your product exploiting this mechanism? How? For whom? What would need to change to stop?
 
@@ -36,21 +36,19 @@ The Humane Design Guide makes these mechanisms auditable. For each sensitivity, 
 
 The audit covers six sensitivities:
 
-1. **Attention** — Does the product compete for user attention in ways that undermine their ability to direct it toward what they actually value?
-
-2. **Social validation** — Does the product use likes, follower counts, or social comparison to manipulate how users feel about themselves?
-
-3. **Persuasion and manipulation** — Does the product use dark patterns, personalized targeting, or psychological techniques to influence behavior without users' awareness?
-
-4. **Addiction and habit formation** — Does the product create compulsive behaviors? Are users using it more than they want to?
-
-5. **Outrage and anxiety amplification** — Does the product's recommendation or content system amplify emotionally activating content because it drives more engagement?
-
-6. **Reduction of agency and autonomy** — Does the product make decisions on behalf of users that reduce their sense of control?
+| Sensitivity | What it is | Exploited through… | The goal: users are *enabled to…* |
+|---|---|---|---|
+| **Attention** | How and where we focus | Infinite scroll, autoplay, notification flooding | Find focus and peace |
+| **Emotional** | What we feel in our body and health | Like counts as currency, fear framing, shame mechanics | Process and adapt |
+| **Sensemaking** | How we connect what we see with what we know | Filter bubbles, misleading labels, algorithmic amplification | Find truth and clarity |
+| **Decision-making** | How we align actions with intentions | Dark patterns, hidden defaults, forced choices | Act with agency and control |
+| **Social Reasoning** | How we navigate relationships | Status games, social comparison, FOMO | Connect meaningfully |
+| **Group Dynamics** | How we navigate groups and shared understanding | Polarizing algorithms, exclusion, us-vs-them framing | Build strong communities |
 
 For each sensitivity, the audit produces:
-- A severity rating (🔴 Exploiting / 🟡 Risk present / 🟢 Managed or absent)
-- A specific description of how the sensitivity is being activated
+- A rating: 🔴 High (the product actively exploits it) / 🟡 Medium (touches it with some risk) / 🟢 Low (respects it well)
+- A specific description of how the sensitivity is being engaged, and what human harm is at risk
+- An improvement opportunity framed as what users should be **enabled to** do
 - The **named psychological mechanism** for every 🔴 and 🟡 row — using precise terms (variable reward schedule, streak-loss aversion, near-miss design, friction asymmetry, FOMO, identity entanglement, beauty-filter colorism, engagement-amplification of anxiety). Generic "manipulation" is rejected; the mechanism must be named specifically.
 - **At least 2 specifically vulnerable populations** per sensitivity row, each with the mechanism of differential vulnerability — not "users" or "vulnerable groups" generically. Examples: shift workers (cognitive depletion at off-hours), adolescents (developmental peer-comparison sensitivity), people with eating disorders (Emotional sensitivity on fitness/wellness apps), women and racial minorities re: beauty filters (colorism / narrow aesthetic norms in training data), gig workers (Decision-making under forced continuity).
 - **At least 3 alternatives per 🔴 sensitivity** — minimal change (smallest intervention), structural change (modifies underlying mechanic), radical reframe (challenges whether the feature should exist in this form). Each alternative is paired with a memorable principle the team can carry forward.
@@ -60,7 +58,8 @@ The method also includes:
 
 - **Engagement-Value Paradox Check** — does the product's core success metric structurally conflict with user welfare? If so, name the paradox explicitly rather than treating it as resolvable through incremental design improvements.
 - **Compound Harm / Exploitation Stack Analysis** — single-feature audits miss the most damaging pattern: features that exploit on their own become catastrophic when stacked. A streak system + push notifications + public follower count + late-night autoplay don't add up — they multiply, because each one removes a different exit ramp. The analysis identifies 2–3 multi-feature stacks where the combination is worse than the sum, and proposes at least one redesign that breaks the stack rather than fixing one feature within it.
-- **Memorable Heuristics (3–5)** — specific to this product, designed to be quoted in future design reviews without re-running the analysis. Examples: *"If the metric goes up when the user feels worse, it's not a humane metric." "If a streak punishes a missed day, the streak is the punishment."*
+- **Algorithm Audit** — whenever the product scores, ranks, personalizes or recommends: which proxy variables it likely uses, who they systematically disadvantage, and where amplification meets existing inequality.
+- **Memorable Heuristics (3–5)** — short rules written fresh for *this* product, built from its own features and metrics, so they can be quoted in future design reviews without re-running the analysis. For a news app optimizing time spent: *"When time-spent-reading is the KPI, the reader is the inventory."* Generic slogans that could apply to any product don't count.
 
 ---
 
@@ -82,22 +81,26 @@ Describe your product — what it does, how it makes money, what the key engagem
 
 **Product:** A social photo-sharing app with algorithmic feed, public follower counts, and engagement notifications.
 
-**Sensitivity 2 — Social Validation 🔴:**
+**Social Reasoning — 🔴 High** (*enabled to connect meaningfully*):
 The product shows public follower counts, public like counts, and prominent engagement metrics on every post. The algorithmic feed prioritizes posts that get more engagement, which means social validation metrics directly influence content visibility.
 
-**Most affected population:** Adolescent users, particularly girls aged 13–17, for whom social comparison and validation-seeking behavior is developmentally amplified. Also users with depression and anxiety, for whom social rejection signals have outsized psychological impact.
+**Named mechanism:** social comparison plus a variable reward schedule — each post is a lottery for likes, and every result is ranked against everyone else's.
+
+**Most affected populations:** Adolescents, particularly girls aged 13–17, for whom social comparison is developmentally amplified; and users with depression or anxiety, for whom social rejection signals have outsized psychological impact.
 
 **Business Tension Statement:** Daily active user (DAU) metrics depend on social validation loops to drive return visits. Removing public like counts (as Instagram has tested) reduces engagement in the short term. Fixing this requires leadership-level commitment to a different success metric — possibly a user-reported wellbeing score — which has not yet appeared on the product roadmap.
 
-**Redesign directions:**
-- Remove public like counts; show only to content creator (proven intervention from Instagram's 2019 test)
-- Make follower count private by default; show only to account owner
-- Redesign feed ranking to include content from smaller accounts, not just high-engagement posts
+**Three alternatives:**
+- *Minimal:* hide like counts from everyone but the creator (Instagram tested this in 2019)
+- *Structural:* make follower counts private by default and rank the feed chronologically among people you follow
+- *Radical reframe:* drop public metrics entirely and let people react privately — the post is for the people you share it with, not a scoreboard
+
+**Heuristic for this product:** *"If a photo's worth is shown as a number, every post becomes an exam."*
 
 ---
 
 ## See also
 
-- [Digital Ethics Compass](digital-ethics-compass.md) — four-direction audit that includes manipulation; Humane Design Guide goes deeper on psychological harm specifically
+- [Digital Ethics Compass](digital-ethics-compass.md) — four-category audit that includes manipulation; Humane Design Guide goes deeper on psychological harm specifically
 - [Motivation Matrix](motivation-matrix.md) — maps motivational mechanisms; Humane Design Guide maps the human sensitivities those mechanisms exploit
 - [Inverted Behavior Model](inverted-behavior-model.md) — forecasts behavioral consequences; Humane Design Guide identifies which sensitivities are being activated to produce those behaviors

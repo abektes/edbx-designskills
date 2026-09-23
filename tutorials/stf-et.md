@@ -37,29 +37,31 @@ A team that only asks "is this ethical now?" will miss those futures. STF-ET giv
 
 STF-ET chains five tools together in sequence:
 
-**Tool 1 — Future Story:** Write a narrative scenario set 5-10 years in the future where this technology has been widely adopted. The scenario includes specific characters, contexts, and events — not an abstract projection but a concrete story. The goal is to make the future legible enough to evaluate.
+**Tool 1 — Future Story:** Narrate the work from the future, using a six-part story spine (adapted from Kenn Adams): the problem, the solution, its benefits, its harms, the cascading consequences, and what was done to mitigate them. Writing it as a story, honestly including what went wrong, opens reflection before anyone has to be analytically precise.
 
-**Tool 2 — Impacts Explorer:** Systematically map the impacts of the Future Story scenario across stakeholder groups — who benefits, who is harmed, how, and how much. This is structured stakeholder impact analysis grounded in the specific future you've described.
+**Tool 2 — Impacts Explorer:** Map the ripple effects — direct effects, the secondary effects each one sets off, and the values each effect reinforces or undermines — with a separate pathway for each major stakeholder group, so you can see whether benefits and harms are distributed fairly.
 
-**Tool 3 — Ethics Frame:** Apply ethical frameworks to the impacts identified. Which values are advanced? Which are violated? Which trade-offs are being made? The Ethics Frame forces explicit articulation of the normative dimensions of the scenario.
+**Tool 3 — Ethics Frame:** A single worksheet: the values driving the work, the benefits and harms from the Impacts Explorer connected to those values, and the actions that would expand the benefits and reduce the harms. It ends in a **Bottom Line** specific enough to hold someone to.
 
-**Tool 4 — Ethics Gauge:** Rate the overall ethical quality of the future scenario. Where on the spectrum does this land — from deeply harmful to genuinely beneficial? This is a summary verdict that synthesizes the first three tools.
+**Tool 4 — Ethics Gauge:** An at-a-glance assessment across four dimensions — *How beneficial? How harmful? How fair? How empowering?* — each with three spectra marked from − to +, plus what you'd expect to observe and what you still need to find out. It deliberately does **not** reduce ethics to a single score; the picture comes from the four dimensions together.
 
-**Tool 5 — Weighing Options:** Given the ethical analysis, what should be done? The method generates alternative futures — paths not taken — and evaluates whether different design, policy, or governance choices would produce better outcomes. This is the action-oriented conclusion of the chain.
+**Tool 5 — Weighing Options:** Compare at least two concrete courses of action on their societal impact, organizational impact, obstacles, and fit with the values from Tool 3, and end with a **Future Direction** — the choice, with its rationale spelled out.
+
+Every run closes with a **Closing Synthesis**: the values prioritized, the trade-offs accepted, and the actions to take.
 
 ---
 
 ## The relationship between tools
 
-Each tool builds on the previous one. The Future Story gives you something concrete to analyze. The Impacts Explorer gives you who is affected. The Ethics Frame gives you the normative lens. The Ethics Gauge gives you a verdict. Weighing Options gives you paths forward.
+Each tool feeds the next, and each hands over an explicit "carries forward" block. The Future Story gives you something concrete to analyze. The Impacts Explorer maps who is affected and which values are at stake. The Ethics Frame turns that into values, benefits, harms and actions. The Ethics Gauge checks the whole picture across four dimensions. Weighing Options turns it into a decision.
 
-Running only Tool 1 gives you a scenario. Running all five gives you an ethical analysis and a set of actionable alternatives.
+You don't have to run all five. You can enter at any tool — say, starting from an Ethics Frame your team already has — and the output states which tools ran and why the others were skipped, then still closes with the synthesis.
 
 ---
 
 ## How to use it with AI
 
-Describe the technology or product you're analyzing and the time horizon you want to think about (5 years? 10 years? The long run?). Tell the AI any existing concerns you have. The AI will run all five tools in sequence — from future narrative through impact mapping, ethical framing, verdict, and alternative paths — producing a complete STF-ET analysis.
+Describe the technology or product you're analyzing, the time horizon you want to think about, and any concerns you already have. Ask for the full chain or for specific tools. The AI will run the tools in order, pass each one's output forward, and finish with the Closing Synthesis.
 
 ---
 
@@ -67,20 +69,21 @@ Describe the technology or product you're analyzing and the time horizon you wan
 
 **Technology:** A large language model-powered customer service platform that replaces human agents with AI.
 
-**Tool 1 — Future Story (2030):** Sarah works at a retail company in 2030. In 2025, her company replaced its 400-person customer service team with an AI platform. She was one of 50 retained staff who "manage" the AI — but her role is increasingly monitoring dashboards rather than helping customers. The AI handles 99.7% of contacts. When customers reach the human team, it's because the AI has failed in a way that is statistically rare but emotionally significant. Sarah spends her days handling the cases the AI made worse.
+**Tool 1 — Future Story (told from 2030):** *Once upon a time* customers waited 40 minutes to reach anyone. *Until one day* the company replaced its 400-person support team with an AI platform, keeping 50 staff to supervise it. *And because of that* simple questions were answered instantly, day or night. *But also* customers whose problems were complex or distressing hit a wall. *In turn* the remaining staff spent their days on cases the AI had made worse, and trust eroded among the customers who mattered most. *One thing we could have done differently is* guarantee a route to a human on first request.
 
 **Tool 2 — Impacts Explorer:**
-- Customers with simple issues: benefit (faster, 24/7 service)
-- Customers with complex, emotional, or unusual issues: harmed (AI cannot provide the judgment, empathy, or flexibility the situation requires)
-- Former customer service workers (mostly lower-income, disproportionately women and people of color): harmed through job loss
-- Remaining human staff: new form of work that is more stressful and less skilled
-- The company: cost savings, with hidden costs in customer trust erosion for complex cases
+- Customers with simple issues → faster service → *convenience* reinforced
+- Customers with complex or distressing issues → no human recourse → *dignity* and *fairness* undermined
+- Former support workers (mostly lower-income) → job loss → *security* undermined
+- Remaining staff → monitoring dashboards instead of helping people → *meaningful work* undermined
 
-**Tool 3 — Ethics Frame:** Consequentialist lens finds mixed overall benefit with concentrated harm on specific populations. Deontological lens finds violation of workers' right to meaningful labor and customers' right to human recourse when things go wrong. Justice lens finds that cost savings disproportionately extracted from lower-income workers.
+**Tool 3 — Ethics Frame, Bottom Line:** The benefit is real but lands on the people who needed help least; the harm lands on the customers with the hardest problems and the workers least able to absorb it. Keep the platform, add a guaranteed human route, and retrain rather than cut.
 
-**Tool 4 — Ethics Gauge:** Problematic. Net benefit is real but concentrated toward shareholders; net harm is concentrated toward workers who had least capacity to absorb it.
+**Tool 4 — Ethics Gauge:** Beneficial: + for individuals with simple issues, spread widely. Harmful: − concentrated harm on complex cases, largely preventable. Fair: − those harmed are less advantaged than those who benefit. Empowering: − customers lose the choice to reach a person.
 
-**Tool 5 — Weighing Options:** What if the company had: (a) used AI to augment agents rather than replace them, reducing workload without job loss? (b) implemented a transparent human escalation path available on first request? (c) shared productivity gains with the workforce through reduced hours rather than reduced headcount? Each path has different cost structures and different ethical profiles.
+**Tool 5 — Weighing Options:** Option A, full replacement: largest savings, highest trust and fairness cost. Option B, AI augments agents: smaller savings, keeps human recourse and jobs. **Future Direction:** Option B — the cost difference is smaller than the trust lost on the cases that matter most to customers.
+
+**Closing Synthesis:** Values prioritized — dignity, fairness. Trade-off accepted — slower cost reduction. Actions — human escalation on first request within one quarter, owned by the Head of Support; redeploy and retrain rather than lay off.
 
 ---
 
@@ -88,4 +91,4 @@ Describe the technology or product you're analyzing and the time horizon you wan
 
 - [Black Mirror Brainstorming](black-mirror-brainstorming.md) — also futures-based, but uses speculative narrative more creatively; STF-ET is more structured and analytical
 - [Worrystorming](worrystorming.md) — generates near-term worries; STF-ET maps long-horizon futures
-- [Anti-Heroes](anti-heroes.md) — finds who is harmed now; STF-ET maps who will be harmed in the future
+- [Anti-Heroes](anti-heroes.md) — names manipulative moves in the design as it is now; STF-ET maps where the technology leads over years

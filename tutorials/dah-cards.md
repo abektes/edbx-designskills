@@ -1,6 +1,6 @@
 # DAH Cards — Design Against Humanity
 
-**The short version:** A card-based team session that maps the harms your design could cause — and ends with a signed ethics manifesto the team commits to.
+**The short version:** A card-based team session that maps the harms your design could cause, sorts each feature as ethical, unsure or unethical, and rewrites what's unethical — with an ethics manifesto the team can sign, when you ask for one.
 
 ---
 
@@ -18,7 +18,7 @@ Most ethical design conversations happen in the abstract. "We should consider pr
 
 DAH Cards forces the conversation to get specific. The cards are designed to be uncomfortable. They name actual harms — manipulation, exploitation, exclusion, surveillance — in direct language. When a team sits with a card that says "Your product makes users feel stupid," the conversation changes from abstract values alignment to concrete design reckoning.
 
-The method also produces an artifact: a written, signed manifesto that captures what the team agreed to and what they committed against. That artifact can be revisited when business pressure pushes toward the harms the team named.
+When the team asks for one, the method also produces an artifact: a written, signed manifesto that captures what the team agreed to and what they committed against. That artifact can be revisited when business pressure pushes toward the harms the team named.
 
 ---
 
@@ -63,7 +63,7 @@ The manifesto works because it's a commitment device. Writing something down and
 
 ## How to use it with AI
 
-Describe your product or feature. The AI will proceed directly to the consequence mapping and manifesto — you don't need to have already run a card session. If you haven't done the harm mapping yet, the AI will make its best-estimate analysis with stated assumptions, then produce the manifesto from that foundation. You can review and revise the assumptions rather than waiting for a workshop to happen first.
+Describe your product or feature. The AI will proceed directly to the card pairs, consequence mapping and sorting — you don't need to have already run a card session. If you haven't done the harm mapping yet, the AI will make its best-estimate analysis with stated assumptions. Ask for a manifesto or a future vision if you want one; an audit on its own ends with microcopy rewrites and a ship-ready recommendation. You can review and revise the assumptions rather than waiting for a workshop to happen first.
 
 ---
 

@@ -108,7 +108,7 @@ If you already know where you want to focus (e.g., "I'm particularly worried abo
 
 ## See also
 
-- [Anti-Heroes](anti-heroes.md) — finds who is currently harmed; Worrystorming asks who will be harmed if this continues at scale
+- [Anti-Heroes](anti-heroes.md) — turns a worry that something is manipulative into a named move with a Hero fix; Worrystorming surfaces the worries in the first place
 - [Responsible Design Prism](responsible-design-prism.md) — diagnoses where a product currently sits; Worrystorming helps you avoid ending up on the dark side
 - [Values Levers](values-levers.md) — once Worrystorming surfaces concerns, Values Levers identifies organizational mechanisms to act on them
 - [Pledge Works](pledge-works.md) — takes the ethical commitments surfaced in Worrystorming and stress-tests them against business pressure

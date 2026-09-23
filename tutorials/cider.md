@@ -41,13 +41,15 @@ CIDER works through five stages in a loop:
 
 2. **Imagine** — for each assumption, imagine a user for whom it is false. Not a hypothetical edge case, but a real person with a real context. Someone who is blind. Someone who is managing a crisis. Someone whose first language is not the language the interface is in. Someone who cannot afford a data plan.
 
-3. **Design** — generate a design variation that works for that imagined user. This is generative, not just critical — the goal is to find what the design would need to change, not just to identify that it needs to change.
+3. **Design** — generate a design variation that works for that imagined user. This is generative, not just critical — the goal is to find what the design would need to change, not just to identify that it needs to change. Inclusive changes often help far more people than the ones they were designed for: a larger tap target helps people with motor impairments and people in a hurry.
 
-4. **Expand** — look at the new design variation and ask: does this help anyone else? Inclusive design often produces better design for everyone. A larger tap target helps people with motor impairments and also helps people in a hurry.
+4. **Expand** — in a team session, pool everyone's assumptions into one shared register: merge duplicates, cluster related ones, tag each by category (Ability / Capacity / Environment / Resources), and flag the ones people found surprising. Different people notice different assumptions, so the shared list is almost always longer than anyone's own. Solo designers can skip this stage.
 
-5. **Repeat** — go back to step one with the new design and find the next assumption. The loop continues because assumptions are layered.
+5. **Repeat** — run a second cycle on a *different* assumption. The loop continues because assumptions are layered — fixing one often reveals the next.
 
-The output is a **map of embedded assumptions**, a set of **design variations** that address them, and an analysis of **how those variations expand benefit** beyond the originally excluded group.
+The session ends with an **Inclusive Design Commitment**: one sentence naming which assumption the team will remove, how, by when, and who owns it — specific enough that someone can check later whether it happened.
+
+The output is a **map of embedded assumptions**, a set of **design variations** that address them, a **shared assumption register** for teams, and a **commitment** someone is accountable for.
 
 ---
 
@@ -77,12 +79,14 @@ Describe your product or a specific design artifact — a screen, a flow, a feat
 
 **Expand:** These changes help travelers with temporary SIM cards, people switching phones, anyone who prefers not to share a phone number with services, and users in contexts where phones are shared within households.
 
-**Repeat:** The email 2FA alternative now assumes the user has a personal email address. Loop back...
+**Repeat:** The email 2FA alternative now assumes the user has a personal email address that only they can read. Loop back...
+
+**Commitment:** *"We commit to shipping authenticator-app and backup-code sign-in, with phone number optional, by the end of Q3, owned by the Identity team lead, because we learned that requiring a phone number excludes people whose safety depends on not sharing one."*
 
 ---
 
 ## See also
 
 - [Another Lens](anotherlens.md) — CIDER examines the artifact for assumptions; Another Lens examines the designer who made them
-- [Anti-Heroes](anti-heroes.md) — CIDER surfaces who is excluded; Anti-Heroes maps what harm that exclusion causes
+- [Anti-Heroes](anti-heroes.md) — CIDER finds who a design leaves out; Anti-Heroes names the manipulative moves it makes on the people it does include
 - [Humane Design Guide](humane-design-guide.md) — covers overlapping territory from a different angle; Humane Design Guide focuses on psychological harm, CIDER focuses on structural exclusion

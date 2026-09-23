@@ -34,21 +34,15 @@ Black Mirror Brainstorming turns that creative distance into an ethical tool.
 
 ## What it produces
 
-The method produces **three Black Mirror episode treatments** — short narrative scenarios, structured like pitch documents for TV episodes that have your product at the center. Each episode follows a different failure mode:
+The method runs in four steps:
 
-- **Episode 1:** The product works exactly as intended, but the unintended social consequences are catastrophic
-- **Episode 2:** A specific user group misuses the product in a way the designers never anticipated
-- **Episode 3:** The product becomes dominant at scale and the systemic effects are dystopian
+1. **What-if brainstorm** — 8–12 one-sentence prompts of the form *"How could [actor] use [feature] to [harm]?"*, grouped under three lenses so the team doesn't stop at the most obvious harm: **Economic** (scams, predatory pricing, value flowing the wrong way), **Political** (surveillance, manipulation, regulatory capture), and **Social** (divides, isolation, pressure on minors and vulnerable groups).
 
-Each episode includes:
-- A setting and protagonist (specific, not generic)
-- The product or feature that triggers the story
-- What goes wrong and why
-- The harm that results
+2. **Three Black Mirror episodes** — the strongest what-ifs, ideally one from each lens, each developed into a short episode: a title, a protagonist and antagonist (the antagonist can be the system itself), a concrete setting, a three-act arc — the design works as intended, then starts to bend, then the harm lands on someone — and a Netflix-style pitch blurb. Three, because one episode reads as an opinion and three read as a pattern.
 
-After the three episodes, the method runs a **"Anti-Goals" extraction** — working backward from the fictional harms to identify the design decisions that need to change in the real product.
+3. **A pitch poster** — the episode that lands hardest, rendered as a single self-contained HTML file styled like a streaming-service title card, ready to drop into a review deck.
 
-The final output is an **HTML episode poster** — a shareable, visually formatted artifact the team can use in reviews, stakeholder presentations, or sprint planning.
+4. **Anti-goals** — 6–10 things the team commits never to allow, each traced back to the episode that surfaced it and paired with a concrete test that would show whether it's being upheld. The 2–3 **load-bearing** anti-goals — the ones that would invalidate the whole concept if violated — are flagged for leadership before shipping.
 
 ---
 
@@ -62,7 +56,7 @@ The more concrete the scenario, the more useful it is as an ethical risk signal.
 
 ## How to use it with AI
 
-Describe your product or feature — what it does, who uses it, what it's intended to accomplish. Ask for a Black Mirror Brainstorming session. The AI will write three episode treatments, extract the non-obvious risks embedded in each scenario, and generate anti-goals — the things the product must be designed *against* as well as toward.
+Describe your product or feature — what it does, who uses it, what it's intended to accomplish. Ask for a Black Mirror Brainstorming session. The AI will brainstorm what-ifs across the three lenses, write three episodes, render the strongest as an HTML poster, and derive anti-goals — the things the product must be designed *against* as well as toward — each with a test.
 
 ---
 
@@ -70,16 +64,16 @@ Describe your product or feature — what it does, who uses it, what it's intend
 
 **Product:** A mental health check-in app that tracks mood daily and gives personalized insights.
 
-**Episode 1 — "Works as intended, catastrophic consequences":** Users' mood data is acquired in a company merger and used by health insurers to adjust premiums. The app that helped people track their mental health now makes them uninsurable for having bad mental health.
+**Episode 1 — "Premium Feelings" (Economic):** Users' mood data is acquired in a company merger and used by health insurers to adjust premiums. The app that helped people track their mental health now makes them uninsurable for having bad mental health.
 
-**Episode 2 — "Misuse by a specific group":** Employers start asking applicants to share their app's mood data as a condition of hiring — framed as "we care about your wellbeing." Users who refuse are passed over. The app designed to destigmatize mental health creates new discrimination vectors.
+**Episode 2 — "Culture Fit" (Political):** Employers start asking applicants to share their app's mood data as a condition of hiring — framed as "we care about your wellbeing." Users who refuse are passed over. The app designed to destigmatize mental health creates new discrimination vectors.
 
-**Episode 3 — "Dominant at scale":** The app becomes the standard of care recommended by GPs. Users who don't use it are seen as non-compliant. The reduction in talking therapy funding accelerates because the app "covers" mental health needs. A generation of people receives algorithmic wellness advice instead of human clinical support.
+**Episode 3 — "Standard of Care" (Social):** The app becomes the standard of care recommended by GPs. Users who don't use it are seen as non-compliant. The reduction in talking therapy funding accelerates because the app "covers" mental health needs. A generation of people receives algorithmic wellness advice instead of human clinical support.
 
-**Anti-goals extracted:**
-- Never allow data to be sold or transferred under any circumstances
-- Build explicit protections against employer access from day one, not as an afterthought
-- Measure success by improvement in users' real mental health outcomes, not engagement or retention
+**Anti-goals extracted (each with a test):**
+- Mood data never leaves the company, including in a merger or sale. *Test:* the data licence and the acquisition terms both forbid transfer; deletion on change of ownership is automated. **Load-bearing.**
+- No employer can see, request or verify a user's data. *Test:* there is no export format an employer could ask for, and the terms prohibit employment use.
+- Success is measured by users' mental-health outcomes, not engagement. *Test:* no retention or streak metric appears in the product team's OKRs.
 
 ---
 
@@ -87,4 +81,4 @@ Describe your product or feature — what it does, who uses it, what it's intend
 
 - [Worrystorming](worrystorming.md) — generates worries in a more structured, categorized format; Black Mirror Brainstorming generates them through narrative
 - [STF-ET](stf-et.md) — also a futures-based method, but more analytical and structured; Black Mirror is more creative and narrative-driven
-- [Anti-Heroes](anti-heroes.md) — finds who is harmed; Black Mirror shows the world in which that harm has already happened
+- [Anti-Heroes](anti-heroes.md) — names the manipulative moves in today's design; Black Mirror shows the world in which those moves have scaled

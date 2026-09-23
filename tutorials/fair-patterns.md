@@ -48,7 +48,7 @@ Fair Patterns works in seven steps:
 
 6. **Implementation sequence + success metrics** — rank fixes by (Legal Risk × User Impact) ÷ Implementation Effort. Every row includes a **measurable success metric with threshold** (e.g., "cancellation flow ≤ 3 clicks; cancellation completion rate ≥ 90%"; "support tickets re: surprise charges ↓ 50% within 90 days"), a **named owner** (role/team), and a **target sprint**. Without measurable thresholds and named owners, the fix isn't testable.
 
-7. **Pattern prevention** — for each root cause, name the organizational change (metric, incentive, review process) that would prevent the pattern from being rebuilt.
+7. **Default audit, copy rewrites and Fair Design Statement** — every UI default classified as 🔴 harmful, 🟡 neutral or 🟢 protective, with a protective replacement for each harmful one; before/after rewrites of any confirmshaming or trick-question copy; and a one-paragraph statement of which dark patterns the product uses and which fair patterns restore user autonomy.
 
 ---
 
@@ -100,6 +100,6 @@ Describe your product and the flows you want to audit. If you know specific area
 
 ## See also
 
-- [Digital Ethics Compass](digital-ethics-compass.md) — broader four-direction audit that includes manipulation; Fair Patterns goes deeper on dark patterns specifically
+- [Digital Ethics Compass](digital-ethics-compass.md) — broader four-category audit that includes manipulation; Fair Patterns goes deeper on dark patterns specifically
 - [Humane Design Guide](humane-design-guide.md) — audits psychological harm broadly; Fair Patterns audits manipulative interaction patterns specifically
 - [Inverted Behavior Model](inverted-behavior-model.md) — forecasts what behaviors the patterns incentivize; Fair Patterns identifies the patterns themselves
