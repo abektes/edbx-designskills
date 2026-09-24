@@ -47,3 +47,7 @@ pip-delete-this-directory.txt
 # Nested git folders (if any)
 **/.git/
 .gstack/
+
+# Archify: keep the JSON spec and exported SVG; the HTML viewer and check screenshots are regenerated locally
+docs/diagrams/*.html
+docs/diagrams/*.visual-check.*

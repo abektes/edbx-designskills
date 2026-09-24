@@ -137,6 +137,10 @@ Read the corresponding tutorial file in [`tutorials/`](tutorials/). Each tutoria
 
 ## Repository layout
 
+![edbx architecture: how a team reaches a method, and how the evaluation harness checks each skill](docs/diagrams/edbx-architecture.svg)
+
+The top row is how a product team uses a method; the bottom row is the evaluation harness that checks each skill. The diagram is generated from [`docs/diagrams/edbx.architecture.json`](docs/diagrams/edbx.architecture.json) with [Archify](https://github.com/tt-a1i/archify).
+
 ```
 .
 ├── AGENT.md                       — Ethical Design Specialist agent definition
@@ -150,6 +154,7 @@ Read the corresponding tutorial file in [`tutorials/`](tutorials/). Each tutoria
 │       └── evals/evals.json       — three test scenarios per skill
 ├── scripts/                       — validator, generation harness, conformance scoring
 ├── tutorials/                     — plain-language guide to each skill
+├── docs/diagrams/                 — architecture diagram and its source spec
 └── assets/                        — images and banner
 ```
 

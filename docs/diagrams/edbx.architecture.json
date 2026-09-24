@@ -1,0 +1,341 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Ethical Design Package (edbx) — Architecture",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1200,
+      660
+    ],
+    "views": [
+      {
+        "id": "use",
+        "label": "Using a method",
+        "focus": [
+          "team",
+          "assistant",
+          "agent",
+          "library"
+        ],
+        "note": "A team describes its situation; AGENT.md routes it to one or more SKILL.md methods."
+      },
+      {
+        "id": "eval",
+        "label": "Conformance harness",
+        "focus": [
+          "library",
+          "gen",
+          "cache",
+          "conf",
+          "compare",
+          "openrouter",
+          "jev"
+        ],
+        "note": "Generate outputs, score them against each skill's rubric, compare before/after."
+      },
+      {
+        "id": "ci",
+        "label": "Static checks",
+        "focus": [
+          "library",
+          "ci"
+        ],
+        "note": "Every push to main validates frontmatter, links and house style."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "team",
+      "type": "external",
+      "label": "Designer / PM",
+      "sublabel": "product team",
+      "pos": [
+        40,
+        130
+      ],
+      "size": [
+        150,
+        64
+      ]
+    },
+    {
+      "id": "assistant",
+      "type": "frontend",
+      "label": "AI assistant",
+      "sublabel": "Claude Code · Cursor",
+      "pos": [
+        270,
+        130
+      ],
+      "size": [
+        170,
+        64
+      ],
+      "tag": "edbx plugin"
+    },
+    {
+      "id": "agent",
+      "type": "backend",
+      "label": "Specialist agent",
+      "sublabel": "AGENT.md · /edbx:help",
+      "pos": [
+        520,
+        130
+      ],
+      "size": [
+        170,
+        64
+      ]
+    },
+    {
+      "id": "library",
+      "type": "database",
+      "label": "Skill library",
+      "sublabel": "21 × SKILL.md + refs",
+      "pos": [
+        770,
+        130
+      ],
+      "size": [
+        170,
+        64
+      ],
+      "tag": "edbx/edbx-*"
+    },
+    {
+      "id": "ci",
+      "type": "security",
+      "label": "GitHub Actions",
+      "sublabel": "validate_skills.py",
+      "pos": [
+        990,
+        130
+      ],
+      "size": [
+        150,
+        64
+      ]
+    },
+    {
+      "id": "gen",
+      "type": "backend",
+      "label": "run_generation.py",
+      "sublabel": "with_skill vs baseline",
+      "pos": [
+        270,
+        370
+      ],
+      "size": [
+        170,
+        64
+      ]
+    },
+    {
+      "id": "cache",
+      "type": "database",
+      "label": "eval-framework/",
+      "sublabel": "outputs + scores cache",
+      "pos": [
+        520,
+        370
+      ],
+      "size": [
+        170,
+        64
+      ],
+      "tag": "gitignored"
+    },
+    {
+      "id": "conf",
+      "type": "backend",
+      "label": "conformance.py",
+      "sublabel": "code checks + judge",
+      "pos": [
+        770,
+        370
+      ],
+      "size": [
+        170,
+        64
+      ]
+    },
+    {
+      "id": "compare",
+      "type": "backend",
+      "label": "compare_scores.py",
+      "sublabel": "Fisher exact test",
+      "pos": [
+        990,
+        370
+      ],
+      "size": [
+        150,
+        64
+      ]
+    },
+    {
+      "id": "openrouter",
+      "type": "external",
+      "label": "OpenRouter",
+      "sublabel": "DeepSeek V4 Pro",
+      "pos": [
+        270,
+        550
+      ],
+      "size": [
+        170,
+        64
+      ]
+    },
+    {
+      "id": "jev",
+      "type": "external",
+      "label": "TypeSafe Jev",
+      "sublabel": "calibrated ≥ 81%",
+      "pos": [
+        770,
+        550
+      ],
+      "size": [
+        170,
+        64
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "In the product workflow",
+      "wraps": [
+        "assistant",
+        "agent"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "Evaluation harness · scripts/",
+      "wraps": [
+        "gen",
+        "cache",
+        "conf",
+        "compare"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "ask",
+      "from": "team",
+      "to": "assistant",
+      "label": "situation",
+      "variant": "emphasis"
+    },
+    {
+      "id": "route",
+      "from": "assistant",
+      "to": "agent",
+      "label": "route",
+      "variant": "emphasis"
+    },
+    {
+      "id": "load",
+      "from": "agent",
+      "to": "library",
+      "label": "load method",
+      "variant": "emphasis"
+    },
+    {
+      "id": "validate",
+      "from": "library",
+      "to": "ci",
+      "label": "on push",
+      "variant": "security"
+    },
+    {
+      "id": "prompt",
+      "from": "library",
+      "to": "gen",
+      "label": "system prompt",
+      "fromSide": "bottom",
+      "toSide": "right"
+    },
+    {
+      "id": "rubric",
+      "from": "library",
+      "to": "conf",
+      "label": "conformance.json",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 70
+    },
+    {
+      "id": "llm",
+      "from": "gen",
+      "to": "openrouter",
+      "label": "generate",
+      "variant": "dashed",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 70
+    },
+    {
+      "id": "store",
+      "from": "gen",
+      "to": "cache",
+      "label": "outputs",
+      "labelDx": 18
+    },
+    {
+      "id": "score",
+      "from": "cache",
+      "to": "conf",
+      "label": "read"
+    },
+    {
+      "id": "judge",
+      "from": "conf",
+      "to": "jev",
+      "label": "judge",
+      "variant": "dashed",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 70
+    },
+    {
+      "id": "diff",
+      "from": "conf",
+      "to": "compare",
+      "label": "scores"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Use",
+      "items": [
+        "Plugin loads skills as /edbx:<name>",
+        "AGENT.md routes and chains 5 patterns",
+        "Each method yields a concrete artifact"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Evaluate",
+      "items": [
+        "Quality bar → conformance.json rubric",
+        "Counts in code; judgment via Jev",
+        "Edits credited only at p ≤ 0.05"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Guard",
+      "items": [
+        "CI validates every SKILL.md",
+        "Keys live in eval-framework/.env"
+      ]
+    }
+  ]
+}
