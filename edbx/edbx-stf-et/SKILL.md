@@ -1,6 +1,6 @@
 ---
 name: edbx-stf-et
-description: Use when an individual, team, or organization wants to put ethical values into action around a product, policy, research project, or technology decision. Apply the Stanford McCoy Family Center for Ethics in Society Ethics Toolkit — a five-tool, three-phase chainable framework that moves from exploration to evaluation to decision-making. Each tool produces structured outputs that feed directly into the next. Trigger this skill for any mention of ethical impact assessment, future consequences of work, societal benefits and harms, value trade-offs, ethical decision-making, or when someone says "is this ethical?", "what are the implications of this?", "how do we make this decision responsibly?", or "I need to evaluate our ethical position." Also trigger for "Stanford ethics toolkit", "Future Story", "Impacts Explorer", "Ethics Frame", "Ethics Gauge", "Weighing Options", "Value Cards", "ethical assessment", "societal impact", "ethics chain", or "stf-et".
+description: Use when an individual, team, or organization wants to put ethical values into action around a product, policy, research project, or technology decision. Apply the Stanford McCoy Family Center's Ethics Toolkit — a five-tool, three-phase chain that moves from exploration to evaluation to decision-making. Each tool produces structured outputs that feed directly into the next. Trigger this skill for any mention of ethical impact assessment, future consequences of work, societal benefits and harms, value trade-offs, ethical decision-making, or when someone says "is this ethical?", "what are the implications of this?", "how do we make this decision responsibly?", or "I need to evaluate our ethical position." Also trigger for "Stanford ethics toolkit", "Future Story", "Impacts Explorer", "Ethics Frame", "Ethics Gauge", "Weighing Options", "Value Cards", "ethical assessment", "societal impact", "ethics chain", or "stf-et".
 version: "1.0"
 tags: [ethical-design, forecast]
 ---
@@ -53,13 +53,9 @@ Provide as many of these as are available. The more context given, the more grou
 
 If the user provides only the action/creation and no further context, proceed — the tools are designed to work from minimal input and generate substance through structured reflection.
 
----
-
 ## Chainable Workflow
 
 The five tools form a chain. Each is documented below with its full workflow and a **→ Feed Forward** section that names exactly what to carry into the next tool. Run all five for maximum depth. Enter at any stage if earlier stages have already been addressed. Exit after any stage if that level of analysis is sufficient.
-
----
 
 ### TOOL 1 — Future Story
 *Phase: Explore | Think forward by looking back*
@@ -116,8 +112,6 @@ After completing the Future Story, **always close this tool's output with the fo
 
 This block is not optional. Without it, the next tool in the chain lacks its inputs and the chain breaks. If running this tool in isolation, still output the block — it tells anyone reading the output what they would carry forward if they continued.
 
----
-
 ### TOOL 2 — Impacts Explorer
 *Phase: Explore | Map the ripple effects of your actions — how people are affected and how values are impacted*
 
@@ -169,8 +163,6 @@ After completing the Impacts Explorer, **always close this tool's output with th
 ```
 
 This block is not optional. It is the explicit handoff to the Ethics Frame.
-
----
 
 ### TOOL 3 — Ethics Frame
 *Phase: Evaluate | A single worksheet to outline ethical considerations and actions in response*
@@ -263,8 +255,6 @@ After completing the Ethics Frame, **always close this tool's output with the fo
 
 This block is not optional. It is the explicit handoff to the Ethics Gauge.
 
----
-
 ### TOOL 4 — Ethics Gauge
 *Phase: Evaluate | A practical template for ethical assessment at a glance*
 
@@ -334,8 +324,6 @@ After completing the Ethics Gauge, **always close this tool's output with the fo
 
 This block is not optional. It is the explicit handoff to Weighing Options. If a prior Ethics Frame has already been run externally and its outputs are provided as context, use those in place of a new Ethics Frame analysis — the handoff block should then reference which values and hot spots were identified in that prior frame.
 
----
-
 ### TOOL 5 — Weighing Options
 *Phase: Decide | Compare different options, considering the effects on society and your organization*
 
@@ -378,8 +366,6 @@ Or: What else do you need to learn or do before deciding? Document the open tens
 - Future Direction provides an explicit rationale, not just a selection
 - The values prioritized for each option are named and compared against each other
 
----
-
 ## Value Cards Reference
 
 Nine core values inform all five tools. Reference them at any point in the chain, especially when naming values in the Impacts Explorer, Ethics Frame, and Weighing Options. Full definitions and observable spectra are in `references/value-cards.md`.
@@ -395,8 +381,6 @@ Nine core values inform all five tools. Reference them at any point in the chain
 | **Autonomy** | The ability to govern oneself by one's own judgment |
 | **Responsibility** | Awareness, care, and accountability regarding the effects of one's choices and actions |
 | **Relationships** | A social association, connection, or affiliation between persons that provides goods that cannot be enjoyed outside of relationships |
-
----
 
 ## Output Format
 
@@ -470,8 +454,6 @@ Default structure when running the full chain. The `→ Carries forward:` block 
 
 When running only some of the tools, keep the frame and drop the rest: the header first — `Chain Status` marking which tools ran, and `Entry Phase` stating why the others were skipped (for example, "prior Ethics Frame supplied by the user") — then the sections for the tools you ran, then the Closing Synthesis. Still include each `→ Carries forward:` block — it tells anyone reading the output exactly what they would use if they continued the chain.
 
----
-
 ## Guardrails
 
 - **Do not conflate completing the tools with having done the ethics.** The tools create structure for reflection. The responsibility for acting on that reflection remains with the person or team using them.
@@ -504,17 +486,7 @@ A strong full-chain STF-ET output:
 - **edbx-motivation-matrix** maps why users participate. Pair it with the Impacts Explorer to see not just what effects occur, but what motivational dynamics those effects operate through.
 - **edbx-values-levers** maps how design choices connect to values. Run it alongside the Value Cards to deepen the values analysis in any stf-et tool.
 
-## Hashtags
-
-#identifyvalues #evaluateoutcomes #designresponsibility #societalimpact #ethicsinaction
-
 ## See Also
 
-- Stanford McCoy Family Center for Ethics in Society — ethicstoolkit.stanford.edu
-- Value Explainer Cards — `references/value-cards.md`
-- Chain facilitation guide — `references/chain-guide.md`
-- Three-phase overview — `references/three-phases.md`
-- Future Story worksheet — `assets/future-story-template.md`
-- Ethics Frame worksheet — `assets/ethics-frame-template.md`
-- Ethics Gauge worksheet — `assets/ethics-gauge-template.md`
-- Weighing Options worksheet — `assets/weighing-options-template.md`
+- Guides: `references/chain-guide.md`, `references/three-phases.md`, `references/value-cards.md`
+- Worksheets: `assets/future-story-template.md`, `assets/ethics-frame-template.md`, `assets/ethics-gauge-template.md`, `assets/weighing-options-template.md`
