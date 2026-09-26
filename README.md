@@ -1,4 +1,7 @@
-![Ethical Design Package Banner](assets/banner.jpg)
+
+
+https://github.com/user-attachments/assets/d87446e2-ed58-4a30-86b2-9f6581eccabf
+
 
 # Ethical Design Package
 
