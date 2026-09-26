@@ -152,7 +152,7 @@ The top row is how a product team uses a method; the bottom row is the evaluatio
 │       ├── SKILL.md               — methodology + AI agent instructions
 │       ├── conformance.json       — quality bar as machine-checkable rubric
 │       └── evals/evals.json       — three test scenarios per skill
-├── scripts/                       — validator, generation harness, conformance scoring
+├── scripts/                       — validator, generation harness, conformance scoring, blind review pack
 ├── tutorials/                     — plain-language guide to each skill
 ├── docs/diagrams/                 — architecture diagram and its source spec
 └── assets/                        — images and banner
