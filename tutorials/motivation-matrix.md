@@ -1,6 +1,6 @@
 # Motivation Matrix
 
-**The short version:** A grid that maps the five core human drives your product is activating — across different types of users and contexts — and surfaces where it's doing that ethically versus where it's crossing into manipulation.
+**The short version:** A grid that maps which of five core motivations — achievement, social acceptance, fear, power, incentive — your product is activating — across different types of users and contexts — and surfaces where it's doing that ethically versus where it's crossing into manipulation.
 
 ---
 

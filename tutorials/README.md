@@ -12,7 +12,6 @@
 
 | Tutorial | What it does in one sentence |
 |---|---|
-| [Another Lens](anotherlens.md) | Turns the mirror on *you* the designer to surface your own blind spots |
 | [Bad Design Canvas](bad-design-canvas.md) | A 12-category checklist for finding everything that could go wrong with a product |
 | [Fair Patterns](fair-patterns.md) | Hunts for dark patterns — manipulative design tactics — and shows you how to replace them |
 | [Humane Design Guide](humane-design-guide.md) | Audits six human sensitivities — attention, emotion, sensemaking, decisions, relationships, groups — for exploitation |
@@ -26,11 +25,11 @@
 | Tutorial | What it does in one sentence |
 |---|---|
 | [Inverted Behavior Model](inverted-behavior-model.md) | Predicts what users will actually *do* with a feature — including things you didn't intend |
-| [Motivation Matrix](motivation-matrix.md) | Maps the five human drives your product is pulling on, and whether it's doing that ethically |
+| [Motivation Matrix](motivation-matrix.md) | Maps which of five motivations — achievement, social acceptance, fear, power, incentive — your product pulls on, for which users, and whether ethically |
 | [Worrystorming](worrystorming.md) | A structured worry session to surface ethical risks before they become real harms |
 | [Black Mirror Brainstorming](black-mirror-brainstorming.md) | Writes the dystopian version of your product to find risks you'd never name in a normal meeting |
 | [Anti-Heroes](anti-heroes.md) | Names manipulative design moves with a card deck and pairs each with a Hero counter-move |
-| [STF-ET](stf-et.md) | A 5-tool chain from Stanford for thinking through long-term ethical futures |
+| [STF-ET](stf-et.md) | A five-tool Stanford chain that runs from a story told from the future to a weighed choice between options |
 
 ### When you want to get your team aligned on ethics
 
@@ -48,12 +47,13 @@
 |---|---|
 | [Critical Interviewing](critical-interviewing.md) | A research protocol for surfacing the values and ethical reasoning hidden in how people talk |
 | [Normative Design Scheme](normative-design-scheme.md) | Applies three philosophical lenses — intention, outcome, duty — to a design decision |
+| [Another Lens](anotherlens.md) | Turns the mirror on *you* the designer to surface your own blind spots, then turns them into a Design Decision Spec |
 
 ---
 
 ## How to use these skills with AI
 
-Each skill in this package is a structured AI prompt. To run one, open your AI agent (Claude, etc.) and describe your product or feature. The skill will guide the AI to apply that specific methodology to your situation.
+Each skill in this package is a structured AI prompt. To run one, open your AI agent (Claude, etc.) and describe your product or feature. The skill will guide the AI to apply that specific methodology to your situation. With the plugin installed in Claude Code, each method runs as `/edbx:<name>` (for example `/edbx:cider`), and `/edbx:help` picks the right one for your situation.
 
 You don't need to understand the academic origin of the method to use it. The AI handles the framework. Your job is to bring the honest description of what you're building.
 

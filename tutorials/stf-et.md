@@ -1,6 +1,6 @@
 # STF-ET — Ethics Toolkit: Put Values Into Action
 
-**The short version:** A five-tool chain from Stanford for thinking rigorously about the long-term ethical futures of a technology — not just "what happens next sprint" but "what does this look like in five years, and who has been helped or harmed by then?"
+**The short version:** A five-tool chain from Stanford that takes a team from exploring a piece of work, through weighing its benefits, harms and fairness, to choosing between concrete options. It starts with a story told from the future — "who has been helped or harmed by then?" — and ends in a decision.
 
 ---
 
@@ -14,11 +14,11 @@ The Stanford McCoy Center works at the intersection of philosophy, policy, and t
 
 ## The problem it solves
 
-Most ethical design methods are synchronic — they examine what's happening now. STF-ET is diachronic — it examines what will happen over time.
+Most ethical design methods examine what's happening now, and stop once the problems are named. STF-ET does two things they don't: it starts from the future — a story of what the work did once it was out in the world — and it carries the analysis through to a choice between concrete options.
 
 This matters because some of the most significant harms of technology are not visible at launch. They emerge from adoption patterns, from behavioral change over time, from how different populations use the technology differently, from regulatory responses, from market consolidation, from the second-order effects of first-order decisions.
 
-A team that only asks "is this ethical now?" will miss those futures. STF-ET gives teams a structured method for imagining futures they haven't lived yet — and evaluating them before they arrive.
+A team that only asks "is this ethical now?" will miss those futures, and a team that stops at a list of harms still has to decide what to do. STF-ET gives a structured path from one to the other: imagine the future, evaluate it, then decide.
 
 ---
 
@@ -27,9 +27,10 @@ A team that only asks "is this ethical now?" will miss those futures. STF-ET giv
 - **For any technology with long-term adoption effects** — which is most technology
 - **Before making an architectural decision** — platform choices, data storage choices, business model choices that are hard to reverse
 - **When thinking about AI or algorithmic systems** — where behavior changes as models learn, data compounds, and adoption grows
-- **When regulators or policymakers might be involved** — STF-ET helps anticipate regulatory responses
+- **When you have to choose between two or more courses of action** — Weighing Options compares them and ends in a Future Direction with its rationale
+- **When regulation is part of the picture** — Weighing Options makes you name regulatory changes among the obstacles, with a contingency plan for each
 - **When you want to evaluate not just "should we build this?" but "what will the world look like if we do?"** — the method is designed for that question
-- **For research teams and senior leadership** — the five-tool chain requires more time than a single-session audit, and produces richer output
+- **At any project stage** — the full chain takes more time than a single-session audit, but you can run one tool or one phase on its own
 
 ---
 
@@ -61,7 +62,7 @@ You don't have to run all five. You can enter at any tool — say, starting from
 
 ## How to use it with AI
 
-Describe the technology or product you're analyzing, the time horizon you want to think about, and any concerns you already have. Ask for the full chain or for specific tools. The AI will run the tools in order, pass each one's output forward, and finish with the Closing Synthesis.
+Describe the technology or product you're analyzing, what stage it's at, any concerns you already have, and — if you're deciding — the options on the table. Ask for the full chain or for specific tools. The AI will run the tools in order, pass each one's output forward, and finish with the Closing Synthesis.
 
 ---
 
@@ -90,5 +91,5 @@ Describe the technology or product you're analyzing, the time horizon you want t
 ## See also
 
 - [Black Mirror Brainstorming](black-mirror-brainstorming.md) — also futures-based, but uses speculative narrative more creatively; STF-ET is more structured and analytical
-- [Worrystorming](worrystorming.md) — generates near-term worries; STF-ET maps long-horizon futures
-- [Anti-Heroes](anti-heroes.md) — names manipulative moves in the design as it is now; STF-ET maps where the technology leads over years
+- [Worrystorming](worrystorming.md) — generates worries at volume; run it first, then STF-ET structures them into an impact map and carries them through to a decision
+- [Anti-Heroes](anti-heroes.md) — names manipulative moves in the design as it is now; STF-ET weighs where the work leads and what to do about it
