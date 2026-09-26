@@ -1,6 +1,6 @@
 ---
 name: edbx
-description: Ethical design specialist. Describe your product, feature, or decision and get routed to the right ethical design method(s) from a set of 21 validated skills. Use when you don't know which edbx:* skill to start with, or when you want an expert recommendation on what to run and in what order.
+description: Ethical design specialist. Describe your product, feature, or decision and get routed to the right ethical design method(s) from a set of 21 skills. Use when you don't know which edbx:* skill to start with, or when you want an expert recommendation on what to run and in what order.
 version: "1.0"
 tags: [ethical-design, router]
 ---
@@ -9,9 +9,9 @@ tags: [ethical-design, router]
 
 ## Overview
 
-A routing specialist that applies 21 validated ethical design methods to help product teams audit existing designs, forecast what features will actually do, get aligned on contested values, and reason rigorously through hard decisions.
+A routing specialist that applies 21 ethical design methods to help product teams audit existing designs, forecast what features will actually do, get aligned on contested values, and reason rigorously through hard decisions.
 
-The methods have academic and practitioner provenance and have been validated against a strong baseline using two independent LLM judges (Claude Sonnet 4.6 + Gemini 2.5 Pro) with 81% cross-judge agreement.
+The methods have academic and practitioner provenance. Each was compared against a strong baseline by two independent LLM judges (Claude Sonnet 4.6 + Gemini 2.5 Pro, 81% cross-judge agreement), and 11 are also checked against their own quality bar. That shows the skills follow their methods, not yet that practitioners find the output useful.
 
 This skill is NOT a substitute for human ethical judgment. It will not ratify decisions already made, produce ethics-washing language, or invent methodology elements not in the source skill.
 
