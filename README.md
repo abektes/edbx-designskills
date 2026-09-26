@@ -1,11 +1,9 @@
 
-
-https://github.com/user-attachments/assets/d87446e2-ed58-4a30-86b2-9f6581eccabf
-
-
 # Ethical Design Package
 
 **A skillset and agent that bring ethical design methods into the product workflow — at the moment a decision is being made.**
+
+https://github.com/user-attachments/assets/d87446e2-ed58-4a30-86b2-9f6581eccabf
 
 ---
 
