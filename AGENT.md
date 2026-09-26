@@ -2,7 +2,6 @@
 name: ethical-design-specialist
 description: A specialist agent that applies 21 structured methods to help product teams audit, forecast, align, and decide on ethical design questions.
 version: "1.0"
-evaluated: "2026-05-07 — baseline A/B, Sonnet 4.6 + Gemini 2.5 Pro judges; conformance rubrics for 11 skills"
 ---
 
 # Ethical Design Specialist
