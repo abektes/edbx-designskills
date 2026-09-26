@@ -93,6 +93,26 @@ Keys are read from `eval-framework/.env` (gitignored), which is also where gener
 
 ## How to use it
 
+### Install in Claude Code
+
+The repo is its own plugin marketplace. In Claude Code:
+
+```
+/plugin marketplace add abektes/edbx-designskills
+/plugin install edbx@edbx-designskills
+```
+
+Or from a terminal:
+
+```bash
+claude plugin marketplace add abektes/edbx-designskills
+claude plugin install edbx@edbx-designskills
+```
+
+Each method then runs as `/edbx:<name>` (for example `/edbx:cider` or `/edbx:fair-patterns`), and `/edbx:help` routes your situation to the right one. To pick up a new version, run `claude plugin marketplace update edbx-designskills` and then `claude plugin update edbx@edbx-designskills`.
+
+Working from a local clone instead? Run `./install-skills.sh` to link it as a plugin, or `claude --plugin-dir /path/to/this-repo` for a single session.
+
 ### Quickest path — through the agent
 
 Open your AI assistant (Claude Code, Claude.ai, Cursor, or any tool that loads project context), point it at this repo, and describe your situation. The [`AGENT.md`](AGENT.md) file routes you to the right method.

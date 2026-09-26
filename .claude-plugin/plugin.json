@@ -1,8 +1,13 @@
 {
   "name": "edbx",
   "description": "21 ethical design methods for product teams — audit, forecast, align, and decide.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
-    "name": "Ahmet Bektes"
-  }
+    "name": "Ahmet Bektes",
+    "url": "https://github.com/abektes"
+  },
+  "homepage": "https://github.com/abektes/edbx-designskills",
+  "repository": "https://github.com/abektes/edbx-designskills",
+  "license": "MIT",
+  "keywords": ["ethical-design", "design-ethics", "dark-patterns", "product-design", "ux"]
 }
