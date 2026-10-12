@@ -135,6 +135,10 @@ Collect from the user:
 
 If the user wants a quick pass, offer Lens 2 alone — it contains the method's sharpest question. If they want depth, run all three in sequence.
 
+If the user names specific concerns or dimensions to examine ("digital literacy, trust, sensory limits, isolation"), every one of them must get its own treatment by name somewhere in the lenses; the synthesis says where each was covered.
+
+Describe the product only as the brief does. Do not invent its screens, flows, features or current figures; where the lenses need a detail the brief lacks, say what you would need to know.
+
 ### Step 2 — Balance Your Bias
 
 Guide the user through the four Lens 1 reflection questions one at a time. Do not present all four at once — the space between questions is where reflection happens.
@@ -185,11 +189,13 @@ Lens insight that does not translate to a specific shippable change is just a fe
 
 Each row must include all six columns. Vague entries are rejected.
 
-| Insight | Specific design change | Measurable spec (with numbers) | Owner (role) | Sprint / release | Pass/fail criterion |
+| Insight | Specific design change | Measurable spec (with numbers) | Owner (role) | When | Pass/fail criterion |
 |---|---|---|---|---|---|
-| e.g., "Caregiver mode missing for users supporting an elderly parent on the same plan" | Add caregiver permission scope: read-only access to selected accounts with audit log | Touch-target ≥ 44×44 pt (WCAG 2.2 SC 2.5.5); contrast ratio ≥ 7:1 on permission-toggle copy (WCAG 2.2 SC 1.4.6); zero PII shared with caregiver outside named scopes | Mobile platform lead | Sprint 24.6 / v3.4 release | Caregiver can complete onboarding in ≤ 5 mins; primary user can revoke access in ≤ 2 taps; QA validates zero data leakage |
-| e.g., "Tax-cliff scenario unaddressed: users who hit a benefit threshold lose more than they gained" | Add interstitial warning when budget plan would push user over a named federal benefit threshold (SNAP, Medicaid expansion limit, etc.) | List of 5 named thresholds; warning triggers at 90% of threshold; localized to user state | Backend + content lead | Sprint 24.7 | Audit shows warning shown in 100% of relevant cases on test suite of 50 income profiles |
-| e.g., "Unbanked users excluded by ACH-only deposit" | Add cash deposit support via partner network; remove SSN as hard requirement (use ITIN as alternative) | ITIN accepted in onboarding; cash deposit fee ≤ $1.50; 1,000+ partner locations within 5mi of 80th-percentile user | Identity + payments leads | Q3 release | Successful onboarding rate for users without bank account ≥ 70%; no disparate impact ratio < 0.8 by census tract |
+| e.g., "Caregiver mode missing for users supporting an elderly parent on the same plan" | Add caregiver permission scope: read-only access to selected accounts with audit log | Touch-target ≥ 44×44 pt (WCAG 2.2 SC 2.5.5); contrast ratio ≥ 7:1 on permission-toggle copy (WCAG 2.2 SC 1.4.6); zero PII shared with caregiver outside named scopes | Mobile platform lead | Next sprint | Caregiver can complete onboarding in ≤ 5 mins; primary user can revoke access in ≤ 2 taps; QA validates zero data leakage |
+| e.g., "Tax-cliff scenario unaddressed: users who hit a benefit threshold lose more than they gained" | Add interstitial warning when budget plan would push user over a named federal benefit threshold (SNAP, Medicaid expansion limit, etc.) | List of 5 named thresholds; warning triggers at 90% of threshold; localized to user state | Backend + content lead | This quarter | Audit shows warning shown in 100% of relevant cases on test suite of 50 income profiles |
+| e.g., "Unbanked users excluded by ACH-only deposit" | Add cash deposit support via partner network; remove SSN as hard requirement (use ITIN as alternative) | ITIN accepted in onboarding; cash deposit fee ≤ $1.50; 1,000+ partner locations within 5mi of 80th-percentile user | Identity + payments leads | Next release | Successful onboarding rate for users without bank account ≥ 70%; no disparate impact ratio < 0.8 by census tract |
+
+**When** is relative (next sprint, this quarter, before launch); never invent a sprint number, release name or date the brief does not give. Numbers in the spec are targets you propose or thresholds from a standard (WCAG), labelled as targets; never state a current figure about the product the brief does not give.
 
 If a number cannot be specified yet (e.g., research is still needed), name the **research deliverable that would produce the number**, name the owner, and set a deadline. "TBD" without an owner and deadline is rejected.
 
@@ -258,7 +264,7 @@ Key bias or blind spot, most important unheard perspective, and one concrete nex
 
 (From Step 5.5 — required, even for a single-lens session.) The top 3 insights, all six columns filled. An accessibility spec names the WCAG version and success criterion ("WCAG 2.2 SC 1.4.3"), not just a ratio or size.
 
-| Insight | Specific design change | Measurable spec (with numbers) | Owner (role) | Sprint / release | Pass/fail criterion |
+| Insight | Specific design change | Measurable spec (with numbers) | Owner (role) | When | Pass/fail criterion |
 |---|---|---|---|---|---|
 
 ### Lens Statement
@@ -295,10 +301,11 @@ A strong Another Lens session output:
 - identifies at least one person or group whose perspective is absent from the design process
 - produces the nervous-person answer — even if it's uncomfortable, even if it's tentative
 - generates a learning intention specific enough to act on within a sprint
-- **produces a Design Decision Spec table** for the top 3 insights, with all six columns filled (Insight / Specific design change / Measurable spec with numbers / Owner / Sprint / Pass-fail criterion). For accessibility insights, the spec names WCAG criterion + version. Lens insight that does not translate to a shippable change is rejected.
+- **produces a Design Decision Spec table** for the top 3 insights, with all six columns filled (Insight / Specific design change / Measurable spec with numbers / Owner / When / Pass-fail criterion). For accessibility insights, the spec names WCAG criterion + version. Lens insight that does not translate to a shippable change is rejected.
 - produces a lens statement that a stranger could read and understand what shifted
 - opens with a direct answer to the decision or question the user asked, which the rest of the output supports
 - lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none
+- covers by name every concern or dimension the user asked about, and invents no product details, sprint names or current figures
 
 ## Example Output (partial)
 

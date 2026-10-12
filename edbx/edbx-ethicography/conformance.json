@@ -12,6 +12,12 @@
       "in_section": "moves inventory",
       "column": "Move"
     },
+    "move_sources": {
+      "type": "table_cells",
+      "in_section": "moves inventory",
+      "column": "Source",
+      "strict": true
+    },
     "quadrants": {
       "type": "table_cells",
       "in_section": "moves inventory",
@@ -37,6 +43,14 @@
     }
   },
   "structural": [
+    {
+      "id": "move_sources_marked",
+      "kind": "cells_in_vocabulary",
+      "items": "move_sources",
+      "vocabulary": ["brief", "reconstructed"],
+      "bar": "marks every move `brief` or `reconstructed`, and invents no quotes, names, meetings, dates or incidents",
+      "desc": "every move in the inventory is marked brief or reconstructed"
+    },
     {
       "id": "answer_first",
       "kind": "any_of",

@@ -49,6 +49,9 @@ For the design decisions or speech acts provided, identify each as an "Ethical M
 - Assign it a **Design Move number** (chronological)
 - Identify the **participant** who made or advocated for it
 - Note the **stated reason** (explicit framing) and any **implicit motivation** (what it actually achieves)
+- Mark its **source**: `brief` when the brief records the move, `reconstructed` when you infer it
+
+Work from the moves the brief records. A postmortem brief often gives the outcome but not the decisions behind it; then you may reconstruct the likely moves, but mark each one `reconstructed`, name the record that would confirm it (ticket, crit notes, roadmap, launch review), and give the actor as a role ("growth team", "product lead"), never an invented name. Never write quotes, meetings, dates or incidents the brief did not give: a reconstructed history is a set of hypotheses to check against the record, not a finding.
 
 ---
 
@@ -143,10 +146,10 @@ Open with a short **Answer**: two to four sentences that answer the question the
 
 ### Ethical Moves Inventory
 
-| Move # | Actor | Decision/Speech Act | Quadrant | Value Impact |
-|---|---|---|---|---|
-| 1 | [name] | [decision] | [one of the four quadrants — a performative move still gets one] | ⬆️/⬇️/↔️ [value] |
-| 2 | [name] | [decision] | [quadrant] | ⬆️/⬇️/↔️ [value] |
+| Move # | Actor | Decision/Speech Act | Source | Quadrant | Value Impact |
+|---|---|---|---|---|---|
+| 1 | [role, or the name the brief gives] | [decision] | [brief / reconstructed] | [one of the four quadrants — a performative move still gets one] | ⬆️/⬇️/↔️ [value] |
+| 2 | [role] | [decision] | [brief / reconstructed] | [quadrant] | ⬆️/⬇️/↔️ [value] |
 
 ### 2×2 Placement
 
@@ -217,6 +220,7 @@ Every figure, rate, incident, past failure or fact about the user's product, use
 - Do not code moves without justification. Every placement needs reasoning.
 - Do not forget the longitudinal view. Individual moves matter less than the trajectory they create.
 - Do not conflate stated reasons with actual impact. The gap between them is where ethical insight lives.
+- Do not present a reconstructed history as observed. Quotes, names, meetings and dates come from the brief or not at all; reconstructed moves are marked and paired with the record that would confirm them.
 - Do not name other skills or boxes in the deliverable as if the reader has them. Describe a related method in plain terms (a structured worry session, a stakeholder harm map).
 - Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
 
@@ -239,6 +243,7 @@ A strong Ethicography output:
 - in research mode, includes methodological notes suitable for academic documentation
 - opens with a direct answer to the decision or question the user asked, which the rest of the output supports
 - lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none
+- marks every move `brief` or `reconstructed`, and invents no quotes, names, meetings, dates or incidents
 
 ## Integration with Other EDBX Skills
 
