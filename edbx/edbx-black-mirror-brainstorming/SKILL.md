@@ -188,6 +188,7 @@ Use or adapt these when generating each section:
 - **Avoid identifying real, named individuals** in episodes — use composite or invented characters. The method is about systemic dynamics, not callouts.
 - **Don't skip the anti-goals.** Episodes are the bait; anti-goals are the catch. A run that ends at "look how dark this could be" without producing constraints is incomplete.
 - **Be careful with vulnerable groups.** When an episode involves minors, abuse survivors, undocumented people, or others at heightened risk, keep the focus on the *system's* failure rather than dwelling on graphic detail. The harm should be legible without being pornographic.
+- Do not name other skills or boxes in the deliverable as if the reader has them. Describe a related method in plain terms (a structured worry session, a stakeholder harm map).
 - Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
 
 > **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.

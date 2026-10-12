@@ -161,6 +161,7 @@ Use or adapt prompts like these:
 - Pair every Anti-Hero with a concrete Hero move. A critique with no flip is rant fuel, not design feedback.
 - Hold space for genuine value tension. Some designs deprioritize user values for defensible reasons (cost, scale, regulation). Surface the trade-off honestly instead of pretending Hero moves are always free.
 - Stay grounded in the source. The full deck and intended use are documented in Mehta, Chivukula, Gray, et al. (2024), arXiv:2405.03674. When in doubt, defer to the cards in [references/cards.md](references/cards.md) rather than inventing new ones.
+- Do not name other skills or boxes in the deliverable as if the reader has them. Describe a related method in plain terms (a structured worry session, a stakeholder harm map).
 - Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
 
 > **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.

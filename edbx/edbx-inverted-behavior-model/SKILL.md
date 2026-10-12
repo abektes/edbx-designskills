@@ -278,6 +278,7 @@ Every figure, rate, incident, past failure or fact about the user's product, use
 - Do not over-flag low-risk features. Not every feature has harmful unintended consequences.
 - Do not treat all motivating factors as equally exploitative. Intrinsic motivation is different from addiction loops.
 - Do not forget the redesign phase. Identifying harmful behaviors without proposing fixes is incomplete.
+- Do not name other skills or boxes in the deliverable as if the reader has them. Describe a related method in plain terms (a structured worry session, a stakeholder harm map).
 - Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
 
 > **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.

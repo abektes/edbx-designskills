@@ -282,6 +282,7 @@ Every figure, rate, incident, past failure or fact about the user's product, use
 - **Do not rush the growth mindset.** After surfacing difficult biases, the temptation is to move on quickly. The growth mindset lens exists to ensure the session ends with forward movement. Give it real attention.
 - **Do not produce a generic lens statement.** The statement must reflect what actually happened in this specific session, not a templated platitude.
 - **Incompleteness is natural.** The three half-circles form a whole, but no single session will be comprehensive. What matters is that something surfaced that was previously invisible.
+- Do not name other skills or boxes in the deliverable as if the reader has them. Describe a related method in plain terms (a structured worry session, a stakeholder harm map).
 - Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
 
 > **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.

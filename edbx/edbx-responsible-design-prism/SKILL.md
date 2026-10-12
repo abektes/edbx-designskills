@@ -226,6 +226,7 @@ Use the Prism as a follow-up to any of these skills to move from diagnosis to re
 - Always pair a dark pattern flag with a responsible alternative. Criticism without a path forward is not constructive.
 - Acknowledge system dynamics. Individual designers rarely control the incentive structures that produce dark patterns. The prism names those structures without letting individuals off the hook.
 - Use precise language. Name the specific dark pattern (e.g., "roach motel"), not just the vibe (e.g., "feels sketchy").
+- Do not name other skills or boxes in the deliverable as if the reader has them. Describe a related method in plain terms (a structured worry session, a stakeholder harm map).
 - Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
 
 > **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.

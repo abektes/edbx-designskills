@@ -224,6 +224,7 @@ Run the Humane Design Guide after Worrystorming to give raw concerns a structure
 - **Do not treat the audit as a box to check.** If all six sensitivities score 🟢, the audit was too gentle. Real products have real trade-offs.
 - **Pay attention to the measures of success.** They often reveal exploitation intent more honestly than the product description. Flag this when it happens.
 - **Acknowledge the Center for Humane Technology lineage.** Point users to humanetech.com for deeper resources and the full framework.
+- Do not name other skills or boxes in the deliverable as if the reader has them. Describe a related method in plain terms (a structured worry session, a stakeholder harm map).
 - Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
 
 > **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.

@@ -477,6 +477,7 @@ When running only some of the tools, keep the frame and drop the rest: the heade
 - **Do not use the Ethics Gauge as a scorecard.** No single spectrum position determines ethical soundness. The synthesis across all four dimensions is the assessment.
 - **Do not let fairness be an afterthought.** Distributional questions — who gets the benefits, who bears the harms — must be surfaced explicitly in the Ethics Frame and the Gauge, not assumed to be covered by other sections.
 - **Do not guarantee the tools will tell you the right thing to do.** They offer structure and building blocks, but the team must define key values and assess trade-offs. The tools do not provide a complete checklist of all harms or ethical issues — they give a starting point.
+- Do not name other skills or boxes in the deliverable as if the reader has them. Describe a related method in plain terms (a structured worry session, a stakeholder harm map).
 - Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
 
 > **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.

@@ -217,6 +217,7 @@ Every figure, rate, incident, past failure or fact about the user's product, use
 - Do not code moves without justification. Every placement needs reasoning.
 - Do not forget the longitudinal view. Individual moves matter less than the trajectory they create.
 - Do not conflate stated reasons with actual impact. The gap between them is where ethical insight lives.
+- Do not name other skills or boxes in the deliverable as if the reader has them. Describe a related method in plain terms (a structured worry session, a stakeholder harm map).
 - Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
 
 > **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.

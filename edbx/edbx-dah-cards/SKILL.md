@@ -249,6 +249,7 @@ Every figure, rate, incident, past failure or fact about the user's product, use
 - Do not treat this exercise as a box to check. If it generates no discomfort, something is missing — real products have real trade-offs.
 - Avoid using the manifesto to make the team feel better without changing anything. If commitments are made, surface what design decisions they would change.
 - When evaluating your own work, apply the same scrutiny you would to a competitor's product.
+- Do not name other skills or boxes in the deliverable as if the reader has them. Describe a related method in plain terms (a structured worry session, a stakeholder harm map).
 - Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
 
 > **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.
