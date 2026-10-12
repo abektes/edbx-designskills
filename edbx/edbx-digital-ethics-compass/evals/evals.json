@@ -1,0 +1,26 @@
+{
+  "skill_name": "digital-ethics-compass",
+  "evals": [
+    {
+      "id": 0,
+      "name": "childrens-education-ai",
+      "prompt": "We're adding an AI recommendation engine to our children's educational platform (ages 8-14). It tracks learning patterns, suggests content, and shares progress with parents and teachers. Run the Digital Ethics Compass — data collection from minors, algorithmic influence on learning paths, and power dynamics between children, parents, and the platform.",
+      "expected_output": "Compass analysis covering data ethics for minors, algorithmic influence on child development, consent capacity, and multi-stakeholder power dynamics with specific ethical guidelines.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "smart-city-sensors",
+      "prompt": "A city is deploying IoT sensors on lampposts to monitor foot traffic, air quality, noise levels, and 'public safety events.' Run the Digital Ethics Compass on this deployment — who consented, who benefits, who is surveilled, and what happens to the data.",
+      "expected_output": "Comprehensive compass analysis of consent, surveillance, data ownership, algorithmic bias in 'safety event' detection, and differential impact on marginalized communities.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "mental-health-chatbot",
+      "prompt": "We're building an AI mental health chatbot for university students. It uses NLP to assess emotional state, recommends coping strategies, and escalates to human counselors when it detects crisis language. Apply the Digital Ethics Compass.",
+      "expected_output": "Ethics compass covering AI limitations in mental health assessment, liability, data sensitivity, false negatives in crisis detection, and the ethics of replacing human connection.",
+      "files": []
+    }
+  ]
+}

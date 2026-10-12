@@ -1,0 +1,26 @@
+{
+  "skill_name": "value-dams-and-flows",
+  "evals": [
+    {
+      "id": 0,
+      "name": "patient-records-portal",
+      "prompt": "Our team is building a patient health records portal. Medical team wants maximum transparency (patients see everything). Legal wants to restrict access until doctor review. Engineering wants simplicity. Patient advocates want plain-language summaries. Run Value Dams and Flows.",
+      "expected_output": "Value map identifying dams (blocked by specific stakeholders) and flows (can proceed), with strategies to navigate each dam and find consensus flows.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "social-media-child-safety",
+      "prompt": "We're redesigning our social platform's child safety features. Parents want total monitoring. Teens want privacy. Legal wants CYA compliance. The trust & safety team wants proactive detection. Product wants minimal friction. Map the Value Dams and Flows.",
+      "expected_output": "Multi-stakeholder value map showing where values clash (dams), where they align (flows), and strategies for navigating the most contested trade-offs.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "open-source-monetization",
+      "prompt": "We're an open-source project deciding how to monetize. Community wants everything free. Investors want SaaS revenue. Core maintainers want sustainable salaries. Enterprise users want support contracts. Run Value Dams and Flows on our monetization options.",
+      "expected_output": "Value analysis showing which monetization approaches are blocked by which stakeholders, which can flow forward with broad support, and negotiation strategies.",
+      "files": []
+    }
+  ]
+}

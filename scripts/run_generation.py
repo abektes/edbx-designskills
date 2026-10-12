@@ -41,6 +41,14 @@ EVAL_DIR = REPO / "eval-framework"
 CACHE_DIR = EVAL_DIR / "generations"
 RUNS_DIR = EVAL_DIR / "runs"
 
+
+def evals_path(skill_name: str) -> Path:
+    """Eval scenarios are committed beside the skill, as in the other boxes. They
+    used to live only in the gitignored eval-framework/ tree, where an earlier
+    eval's data was lost; that copy stays as a fallback."""
+    tracked = SKILLS_DIR / skill_name / "evals" / "evals.json"
+    return tracked if tracked.is_file() else EVAL_DIR / skill_name / "evals.json"
+
 ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 DEFAULT_MODEL = "deepseek/deepseek-v4-pro"
 DEFAULT_MAX_TOKENS = 64000
@@ -142,14 +150,14 @@ def build_tasks(
         if skills and short not in skills and name not in skills:
             continue
 
-        evals_path = EVAL_DIR / name / "evals.json"
-        if not evals_path.is_file():
+        eval_file = evals_path(name)
+        if not eval_file.is_file():
             print(f"  ! {name}: no evals.json, skipping", file=sys.stderr)
             continue
 
         skill_md = read_skill(skill_dir, skill_ref)
         method = method_name(skill_md, name)
-        entries = json.loads(evals_path.read_text())["evals"]
+        entries = json.loads(eval_file.read_text())["evals"]
         if scenarios is not None:
             entries = entries[:scenarios]
 

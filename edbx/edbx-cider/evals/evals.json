@@ -1,0 +1,26 @@
+{
+  "skill_name": "cider",
+  "evals": [
+    {
+      "id": 0,
+      "name": "telehealth-booking",
+      "prompt": "We're designing a telehealth appointment booking system. Run a CIDER audit — I want to understand where we might be excluding users with cognitive disabilities, low digital literacy, unreliable internet, or who speak a language other than English.",
+      "expected_output": "CIDER audit identifying exclusion points across cognitive, digital literacy, connectivity, and language dimensions, with inclusive alternatives for each.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "voting-registration",
+      "prompt": "Audit an online voter registration system using CIDER. Consider users with visual impairments, users without stable housing addresses, users with limited English proficiency, and users accessing from shared public computers.",
+      "expected_output": "Comprehensive CIDER analysis covering accessibility, housing instability, language, and device/privacy constraints with specific inclusive design countermeasures.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "banking-onboarding",
+      "prompt": "Run CIDER on a mobile banking app's onboarding flow that requires: photo ID upload, selfie verification, SMS code, and linking an existing bank account. Who are we excluding?",
+      "expected_output": "Audit identifying exclusion of undocumented individuals, people without smartphones, those with disfigurements affecting selfie match, people without existing bank accounts, etc.",
+      "files": []
+    }
+  ]
+}

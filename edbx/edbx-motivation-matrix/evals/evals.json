@@ -1,0 +1,26 @@
+{
+  "skill_name": "motivation-matrix",
+  "evals": [
+    {
+      "id": 0,
+      "name": "corporate-wellness-app",
+      "prompt": "Analyze a corporate wellness app that rewards employees with gift cards for hitting fitness goals, shares team leaderboards with managers, and integrates with health insurance for premium discounts. Run the Motivation Matrix — map how Achievement, Social Acceptance, Fear, Power, and Incentive motivations interact with this product.",
+      "expected_output": "Matrix mapping each motivation type to specific product features, identifying where motivation is healthy vs. manipulative, with ethical threshold assessments.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "language-learning-streaks",
+      "prompt": "Apply the Motivation Matrix to Duolingo's core mechanics: streaks, XP points, leaderboards, heart system (limited mistakes), and friend challenges. For each motivation type, identify what the app activates and whether it's ethical motivation or manipulation.",
+      "expected_output": "Motivation matrix covering all five motivations with specific mechanics mapped to each, distinguishing intrinsic learning motivation from extrinsic pressure.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "employee-review-platform",
+      "prompt": "Our 360-degree employee review platform makes peer feedback visible to managers, ranks employees by 'helpfulness score,' and ties the score to promotion eligibility. Run the Motivation Matrix.",
+      "expected_output": "Matrix showing how each motivation type drives different behaviors (genuine helpfulness, performative feedback, fear-based compliance), with ethical audit of power dynamics.",
+      "files": []
+    }
+  ]
+}

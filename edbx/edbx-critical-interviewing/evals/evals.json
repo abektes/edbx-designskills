@@ -1,0 +1,26 @@
+{
+  "skill_name": "critical-interviewing",
+  "evals": [
+    {
+      "id": 0,
+      "name": "ai-content-stakeholders",
+      "prompt": "I'm preparing for stakeholder interviews about our decision to add AI-generated content summaries to our news app. The CTO loves it, the editorial team is worried, and users haven't been asked. Design a critical interview protocol that surfaces implicit values and power dynamics behind each group's position.",
+      "expected_output": "Interview protocol with role-specific question sets that surface implicit values, power dynamics, and assumptions, with probing follow-ups designed to elicit honest responses.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "workplace-surveillance",
+      "prompt": "Design a critical interview guide for talking to three groups about a new employee productivity tracking tool: managers who requested it, employees who will be tracked, and HR who must implement it. I need questions that surface what each group really thinks vs. what they'll say publicly.",
+      "expected_output": "Three separate interview guides with warm-up, core, and probing questions that distinguish public positions from private concerns, with attention to power asymmetry.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "algorithmic-hiring-bias",
+      "prompt": "Our AI hiring tool was found to score candidates from certain zip codes lower. I need to interview the data science team, the recruiting team, and affected candidates. Help me design critical interview protocols that don't put anyone on the defensive but still surface accountability.",
+      "expected_output": "Sensitively designed protocols that surface systemic issues without blame, with specific techniques for interviewing across power differentials.",
+      "files": []
+    }
+  ]
+}

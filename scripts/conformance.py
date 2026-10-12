@@ -72,9 +72,11 @@ class Table:
         return any(re.search(pattern, h, re.I) for h in [*self.ancestry, self.heading])
 
     def column(self, name_fragment: str) -> int | None:
-        for i, h in enumerate(self.header):
-            if name_fragment.lower() in h.lower():
-                return i
+        # "Factor|Group|Subgroup": outputs name the same column differently run to run.
+        for fragment in name_fragment.split("|"):
+            for i, h in enumerate(self.header):
+                if fragment.lower() in h.lower():
+                    return i
         return None
 
 
@@ -183,17 +185,27 @@ def enumerate_items(text: str, spec: dict) -> list[str]:
         # entry "### Hard Dam: X" in one run and "**X (Hard Dam):**" in the next,
         # and reading only `#` headings made the second form enumerate nothing.
         pattern = spec["pattern"]
-        return [
-            title for _, _, title in _dividers(text)
-            if re.search(pattern, title, re.I)
-        ]
+        if spec.get("in_section"):
+            # Scenarios written as subsections ("### Scenario A") of one section:
+            # read only that section, and skip its own heading.
+            titles = [t for _, _, t in _dividers(section_text(text, spec["in_section"]))][1:]
+        else:
+            titles = [t for _, _, t in _dividers(text)]
+        return [title for title in titles if re.search(pattern, title, re.I)]
 
     if kind == "table_rows":
         rows = []
         for table in parse_tables(text):
             if not table.under(spec["in_section"], spec.get("nearest", False)):
                 continue
-            col = table.column(spec.get("column", "")) or 0
+            col = table.column(spec.get("column", ""))
+            if col is None:
+                if spec.get("strict"):
+                    # Without this, a missing column fell back to column 0, and any
+                    # table under the heading counted: cdbx's disaggregation check
+                    # passed on datasheet "Section | Answer" tables.
+                    continue
+                col = 0
             for row in table.rows:
                 if col >= len(row):
                     continue
@@ -203,7 +215,15 @@ def enumerate_items(text: str, spec: dict) -> list[str]:
                         continue
                     if not re.search(flt["matches"], row[idx], re.I):
                         continue
-                if row[col]:
+                if not row[col]:
+                    continue
+                if spec.get("full"):
+                    # Semantic checks that read several columns (a level's
+                    # reliability, error cost and rationale) need the whole row.
+                    # cdbx's first rubrics sent only the key cell ("Receipt
+                    # extraction"), which no judge could ever pass.
+                    rows.append(" | ".join(f"{h}: {c}" for h, c in zip(table.header, row) if c))
+                else:
                     rows.append(row[col])
         return rows
 
@@ -356,7 +376,8 @@ def lookup_prompt(skill: str, scenario: str) -> str:
     Generations do not store it, so recover it from the eval set by scenario name,
     falling back to the id-derived name the harness uses when `name` is absent.
     """
-    path = EVAL_DIR / skill / "evals.json"
+    from run_generation import evals_path
+    path = evals_path(skill)
     if not path.is_file():
         return ""
     for entry in json.loads(path.read_text())["evals"]:
@@ -374,6 +395,9 @@ YES, NO = 0.70, 0.30
 
 
 def score_document(doc: str, spec: dict, api_key: str | None, prompt: str = "") -> dict:
+    # Generators write non-breaking hyphens ("Counter\u2011Measures"); rubric
+    # patterns use ASCII. Without this a heading match fails on all outputs.
+    doc = re.sub(r"[\u2010\u2011]", "-", doc).replace("\u00a0", " ")
     items = {name: enumerate_items(doc, e) for name, e in spec["enumerators"].items()}
     result = {"enumerated": {k: len(v) for k, v in items.items()},
               "structural": [], "semantic": []}
@@ -674,6 +698,7 @@ def score_document(doc: str, spec: dict, api_key: str | None, prompt: str = "") 
 
 def select_generations(
     wanted: list[str] | None, arm: str, reps: int, skill_ref: str | None = None,
+    model: str | None = None,
 ) -> tuple[list, list[str]]:
     """Generations matching the *current* SKILL.md, via the harness's own task keys.
 
@@ -685,7 +710,7 @@ def select_generations(
     from run_generation import DEFAULT_MODEL, build_tasks  # noqa: E402
 
     arms = ("without_skill", "with_skill") if arm == "both" else (arm,)
-    tasks = build_tasks(wanted, None, DEFAULT_MODEL, reps, arms, skill_ref)
+    tasks = build_tasks(wanted, None, model or DEFAULT_MODEL, reps, arms, skill_ref)
     matched, missing = [], []
     for task in tasks:
         spec_path = REPO / "edbx" / task.skill / "conformance.json"
@@ -704,7 +729,7 @@ def select_generations(
 
 def print_document(doc: dict, scored: dict) -> None:
     rep = f" #{doc['rep']}" if doc.get("rep") else ""
-    print(f"\n{'='*78}\n{doc['skill'].removeprefix('edbx-')} / {doc['scenario']}{rep} [{doc['arm']}]\n{'='*78}")
+    print(f"\n{'='*78}\n{doc['skill'].removeprefix("edbx-")} / {doc['scenario']}{rep} [{doc['arm']}]\n{'='*78}")
     print("  enumerated: " + ", ".join(f"{k}={v}" for k, v in scored["enumerated"].items()))
     print("\n  STRUCTURAL (code)")
     for c in scored["structural"]:
@@ -743,6 +768,7 @@ def main() -> int:
     parser.add_argument("--skills", help="comma-separated skill names")
     parser.add_argument("--arm", default="with_skill", choices=["with_skill", "without_skill", "both"])
     parser.add_argument("--reps", type=int, default=1, help="score reps 0..N-1 per scenario")
+    parser.add_argument("--model", help="score generations made by this model (default: the generator default)")
     parser.add_argument("--skill-ref", help="score generations made from SKILL.md as of this git ref")
     parser.add_argument("--json", metavar="PATH", help="write per-check pass rates here")
     parser.add_argument("--quiet", action="store_true", help="summary only, no per-document detail")
@@ -754,7 +780,7 @@ def main() -> int:
     if not args.dry_run and not api_key:
         sys.exit("TYPESAFE_API_KEY not found in eval-framework/.env")
 
-    generations, missing = select_generations(wanted, args.arm, args.reps, args.skill_ref)
+    generations, missing = select_generations(wanted, args.arm, args.reps, args.skill_ref, args.model)
     if missing:
         print(f"! {len(missing)} expected generation(s) not in cache -- run run_generation.py first:")
         for label in missing[:10]:
@@ -796,7 +822,7 @@ def main() -> int:
     print(f"\n{'='*78}\nPER-CHECK PASS RATE  ({args.arm}, {args.reps} rep(s) per scenario)\n{'='*78}")
     grand_pass = grand_total = 0
     for skill, checks in rates.items():
-        print(f"\n{skill.removeprefix('edbx-')}")
+        print(f"\n{skill.removeprefix("edbx-")}")
         for cid, o in checks.items():
             scored_n = o["pass"] + o["fail"] + o["review"]
             grand_pass += o["pass"]
