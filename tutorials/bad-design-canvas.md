@@ -8,6 +8,8 @@
 
 The Bad Design Canvas was created by **Matthew Manos**, a designer and educator, and is licensed under a Creative Commons CC BY-ND license. It appears as Method #09 in *Universal Methods of Ethical Design*.
 
+The canvas content is not covered by this repository's MIT License. See [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md).
+
 The canvas was designed to be used by teams as a structured adversarial exercise — a way of deliberately looking for problems with your own work before they find you.
 
 ---

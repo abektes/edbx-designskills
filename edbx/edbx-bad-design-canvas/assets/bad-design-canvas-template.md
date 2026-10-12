@@ -4,6 +4,8 @@ Use this template to document your Bad Design Canvas session. Fill in each cell 
 
 Canvas credit: Matthew Manos, licensed under Creative Commons CC BY-ND license. Source: gum.co/baddesign
 
+**Licence:** the canvas, its twelve categories and their guiding questions are Matthew Manos's work under CC BY-ND. They are not covered by this repository's MIT License, and modified versions may not be redistributed. See [THIRD_PARTY_NOTICES.md](../../../THIRD_PARTY_NOTICES.md).
+
 ---
 
 ## Session Info

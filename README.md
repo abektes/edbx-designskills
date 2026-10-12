@@ -167,6 +167,7 @@ The top row is how a product team uses a method; the bottom row is the evaluatio
 ├── README.md                      — this file
 ├── RESULTS.md                     — validation scoreboard and methodology
 ├── LICENSE                        — MIT
+├── THIRD_PARTY_NOTICES.md         — method sources and third-party licences
 ├── edbx/                          — 21 structured ethical-design methods
 │   └── edbx-*/                    — one folder per skill
 │       ├── SKILL.md               — methodology + AI agent instructions
@@ -200,6 +201,8 @@ If you spot a mistake or have an idea, you can also reach me on [LinkedIn](https
 ## Acknowledgements
 
 Every method in this package is built on the work of researchers and practitioners who developed the underlying frameworks — including Harry Brignull, Colin M. Gray, BJ Fogg, Phil Francis Carspecken, the Center for Humane Technology, the Danish Design Center (Digital Ethics Compass), the McCoy Family Center for Ethics in Society at Stanford (Ethics Toolkit), and many others. The contribution of this package is integration: bringing those methods together as AI-runnable skills that show up at the moment of decision.
+
+The full list of sources, and the licences that apply to third-party material, is in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ---
 

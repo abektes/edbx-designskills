@@ -2,6 +2,10 @@
 
 Full definitions, probing questions, and example responses for all twelve categories of the Bad Design Canvas. Use this reference when generating responses in Step 2.
 
+Canvas credit: Matthew Manos, licensed under Creative Commons CC BY-ND license. Source: gum.co/baddesign
+
+**Licence:** the canvas, its twelve categories and their guiding questions are Matthew Manos's work under CC BY-ND. They are not covered by this repository's MIT License, and modified versions may not be redistributed. See [THIRD_PARTY_NOTICES.md](../../../THIRD_PARTY_NOTICES.md).
+
 ---
 
 ## Cell 1: Cultural Appropriation 🌍
