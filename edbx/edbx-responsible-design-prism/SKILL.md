@@ -171,7 +171,7 @@ Present pathways as a table:
 
 ### Step 5 — Output
 
-Compile the full prism audit into a stakeholder-ready deliverable:
+Compile the full prism audit into a stakeholder-ready deliverable. Open it with a short **Answer**: two to four sentences that answer the question the user actually asked (the decision, verdict or recommendation) and the main reason for it. The method's sections follow and back it up; they never replace it. Write it once, as the first section under the title. Then:
 
 1. **Stakeholder & Vulnerable Population Map** (from Step 1.5) — populations, harms, power asymmetries
 2. **Prism Audit Table** (from Step 2) — the scored five-axis evaluation
@@ -180,6 +180,9 @@ Compile the full prism audit into a stakeholder-ready deliverable:
 5. **Reflection Highlights** — key insights from the four prompts (not raw transcripts — synthesized takeaways)
 6. **Redesign Pathway Recommendations** (from Step 4) — actionable alternatives with business justification, each naming which mechanism it interrupts and which population benefits
 7. **Leadership Framing** — one paragraph suitable for presenting to non-design stakeholders, written in business language
+8. **Evidence Ledger** — every figure or fact about the user's situation the output relies on, typed as below
+
+Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis names a paper from this skill's Sources, or a URL from the user or from a search run in this session), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims and need no row, but keep them visibly marked as invented. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
 
 A blank template is in `assets/prism-audit-template.md`.
 
@@ -223,6 +226,9 @@ Use the Prism as a follow-up to any of these skills to move from diagnosis to re
 - Always pair a dark pattern flag with a responsible alternative. Criticism without a path forward is not constructive.
 - Acknowledge system dynamics. Individual designers rarely control the incentive structures that produce dark patterns. The prism names those structures without letting individuals off the hook.
 - Use precise language. Name the specific dark pattern (e.g., "roach motel"), not just the vibe (e.g., "feels sketchy").
+- Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
+
+> **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.
 
 ## Deliverable Quality Bar
 
@@ -237,6 +243,8 @@ A strong Responsible Design Prism audit:
 - includes business framing that a product manager or executive could act on
 - names specific dark patterns from the taxonomy, not vague ethical concern
 - writes the leadership framing in language that does not require design literacy to understand
+- opens with a direct answer to the decision or question the user asked, which the rest of the output supports
+- lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none
 
 ## Further Reading
 

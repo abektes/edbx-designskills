@@ -130,7 +130,13 @@ Produce a dark pattern audit, fair countermeasure map, default assessment, and r
 
 ## Output Format
 
+Open with a short **Answer**: two to four sentences that answer the question the user actually asked (the decision, verdict or recommendation) and the main reason for it. The method's sections follow and back it up; they never replace it. Write it once, as the first section under the title.
+
 ### Fair Patterns Audit: [Product/Feature Name]
+
+### Answer
+
+[Two to four sentences: the answer to the question asked (decision, verdict or recommendation) and the main reason.]
 
 ### Dark Pattern Audit
 
@@ -189,6 +195,13 @@ Rank all fair pattern fixes by priority: (Legal Risk × User Impact) ÷ Implemen
 
 The highest priority fixes are those combining high legal risk with low implementation effort. Every row must include a measurable success metric with a threshold — without it, the fix has no way to verify it landed.
 
+### Evidence Ledger
+| Claim used as input | Type | Basis |
+|---|---|---|
+| [figure, rate or fact the output relies on] | [user-supplied / sourced / assumption / unknown] | [the brief / paper or URL / why assumed] |
+
+Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis names a paper from this skill's Sources, or a URL from the user or from a search run in this session), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims and need no row, but keep them visibly marked as invented. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
+
 ## Guardrails
 
 - Do not assume dark patterns are always intentional. Many emerge from defaults or thoughtless iteration.
@@ -197,6 +210,9 @@ The highest priority fixes are those combining high legal risk with low implemen
 - Do not write fair alternatives that are just less-bad versions of the same pattern. The goal is genuine user agency.
 - Do not forget to assess defaults. The default setting is often where the manipulation lives.
 - Do not ignore copy. Language is the primary tool of confirmshaming and trick questions.
+- Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
+
+> **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.
 
 ## Deliverable Quality Bar
 
@@ -214,6 +230,8 @@ A strong Fair Patterns audit:
 - produces a Fair Design Statement every session
 - produces an Implementation Sequence with a **measurable success metric and threshold** + named owner + target sprint on every row (no metric = the fix isn't testable)
 - handles low-dark-pattern products without false positives
+- opens with a direct answer to the decision or question the user asked, which the rest of the output supports
+- lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none
 
 ## Integration with Other EDBX Skills
 

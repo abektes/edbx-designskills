@@ -99,7 +99,13 @@ For **Contested Flows**, generate:
 
 ## Output Format
 
+Open with a short **Answer**: two to four sentences that answer the question the user actually asked (the decision, verdict or recommendation) and the main reason for it. The method's sections follow and back it up; they never replace it. Write it once, as the first section under the title.
+
 ### Value Dams and Flows: [Product/Feature Space]
+
+### Answer
+
+[Two to four sentences: the answer to the question asked (decision, verdict or recommendation) and the main reason.]
 
 ### Dam-Flow Map
 
@@ -135,6 +141,13 @@ Session outline for stakeholder values alignment meeting:
 4. Address Contested Flows — minority safeguards
 5. Align on Values Balance Statement
 
+### Evidence Ledger
+| Claim used as input | Type | Basis |
+|---|---|---|
+| [figure, rate or fact the output relies on] | [user-supplied / sourced / assumption / unknown] | [the brief / paper or URL / why assumed] |
+
+Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis names a paper from this skill's Sources, or a URL from the user or from a search run in this session), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims and need no row, but keep them visibly marked as invented. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
+
 ## Guardrails
 
 - Do not treat majority consensus as automatically ethical. Minority values matter — that's what Contested Flows are for.
@@ -143,6 +156,9 @@ Session outline for stakeholder values alignment meeting:
 - Do not forget Soft Dams. They are negotiable but still represent real values.
 - Do not treat "minimum viable ethics" as the goal — it is the floor, not the ceiling.
 - Do not make the facilitation agenda optional if there are Hard Dams. Real conflicts require real conversation.
+- Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
+
+> **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.
 
 ## Deliverable Quality Bar
 
@@ -156,6 +172,8 @@ A strong Value Dams and Flows output:
 - provides a minority concern and safeguard for every Contested Flow
 - produces a Values Balance Statement every session
 - is usable as a stakeholder meeting agenda
+- opens with a direct answer to the decision or question the user asked, which the rest of the output supports
+- lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none
 
 ## Integration with Other EDBX Skills
 

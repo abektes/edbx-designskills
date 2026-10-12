@@ -2,6 +2,11 @@
   "skill": "edbx-humane-design-guide",
   "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. Worksheet coverage, per-row fields and per-red counts are code; heuristics are checked against the skill's own examples, since a copied example is by construction not product-specific.",
   "enumerators": {
+    "ledger_type_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Type"
+    },
     "sensitivities": {
       "type": "table_cells",
       "in_section": "Sensitivity|Worksheet|Audit",
@@ -81,6 +86,31 @@
     }
   },
   "structural": [
+    {
+      "id": "answer_first",
+      "kind": "any_of",
+      "checks": [
+        {"kind": "section_present", "pattern": "(?m)^\\s*(?:#{1,6}\\s*Answer\\b|\\*\\*Answer\\b)"}
+      ],
+      "bar": "opens with a direct answer to the decision or question the user asked, which the rest of the output supports",
+      "desc": "the output opens with an Answer section"
+    },
+    {
+      "id": "evidence_ledger_present",
+      "kind": "section_present",
+      "pattern": "Evidence Ledger",
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "the output has an Evidence Ledger"
+    },
+    {
+      "id": "ledger_types_valid",
+      "kind": "cells_in_vocabulary",
+      "items": "ledger_type_cells",
+      "vocabulary": ["user-supplied", "sourced", "assumption", "unknown"],
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every Evidence Ledger Type is one of the four allowed words"
+    },
     {
       "id": "six_sensitivities",
       "kind": "distinct_coverage",

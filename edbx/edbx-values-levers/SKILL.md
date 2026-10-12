@@ -146,7 +146,13 @@ This step is the primary differentiator from raw analysis: the lever-specific st
 
 ## Output Format
 
+Open with a short **Answer**: two to four sentences that answer the question the user actually asked (the decision, verdict or recommendation) and the main reason for it. The method's sections follow and back it up; they never replace it. Write it once, as the first section under the title.
+
 ### Values Levers: [Team Context]
+
+### Answer
+
+[Two to four sentences: the answer to the question asked (decision, verdict or recommendation) and the main reason.]
 
 ### Lever Activation Plan
 
@@ -196,6 +202,13 @@ This step is the primary differentiator from raw analysis: the lever-specific st
 
 *"In this project, we are choosing to prioritize [value X] over [value Y] because [reason], and this will manifest in [specific design decision]."*
 
+### Evidence Ledger
+| Claim used as input | Type | Basis |
+|---|---|---|
+| [figure, rate or fact the output relies on] | [user-supplied / sourced / assumption / unknown] | [the brief / paper or URL / why assumed] |
+
+Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis names a paper from this skill's Sources, or a URL from the user or from a search run in this session), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims and need no row, but keep them visibly marked as invented. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
+
 ## Guardrails
 
 - Do not recommend levers that require more authority than the user has. Match levers to role.
@@ -204,6 +217,9 @@ This step is the primary differentiator from raw analysis: the lever-specific st
 - Do not skip the communication audit. How a team communicates shapes what values are possible.
 - Do not forget soft resistance. When direct advocacy isn't safe, indirect strategies are valid.
 - Do not treat the Values-Based Design Decision statement as optional. It is the concrete output that makes the conversation matter.
+- Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
+
+> **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.
 
 ## Deliverable Quality Bar
 
@@ -219,6 +235,8 @@ A strong Values Levers output:
 - produces a 30-day action plan with week-by-week named actions, stakeholders, and deliverables for the top 2 levers
 - generates a Values-Based Design Decision statement for every session
 - handles power asymmetry and organizational resistance realistically
+- opens with a direct answer to the decision or question the user asked, which the rest of the output supports
+- lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none
 
 ## Integration with Other EDBX Skills
 

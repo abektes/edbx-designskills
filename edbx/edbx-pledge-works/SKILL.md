@@ -128,9 +128,15 @@ Every pledge in the Pledge Register gets a row here — the register and this ta
 
 ## Output Format
 
+Open with a short **Answer**: two to four sentences that answer the question the user actually asked (the decision, verdict or recommendation) and the main reason for it. The method's sections follow and back it up; they never replace it. Write it once, as the first section under the title.
+
 ### Pledge Works: [Project Name]
 
 Brief framing of the project context and what values/concerns anchor the pledges.
+
+### Answer
+
+[Two to four sentences: the answer to the question asked (decision, verdict or recommendation) and the main reason.]
 
 ### Stage 1 — Outcome Review
 - Intended outcomes: [list]
@@ -165,6 +171,13 @@ Brief framing of the project context and what values/concerns anchor the pledges
 
 Per pledge: what tells you it's being kept vs. broken.
 
+### Evidence Ledger
+| Claim used as input | Type | Basis |
+|---|---|---|
+| [figure, rate or fact the output relies on] | [user-supplied / sourced / assumption / unknown] | [the brief / paper or URL / why assumed] |
+
+Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis names a paper from this skill's Sources, or a URL from the user or from a search run in this session), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims and need no row, but keep them visibly marked as invented. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
+
 ## Guardrails
 
 - Do not skip the "because" clause in Responsible Stories. It names the value and makes the pledge accountable.
@@ -173,6 +186,9 @@ Per pledge: what tells you it's being kept vs. broken.
 - Do not only write affirming pledges. Default-challenging pledges push against business-as-usual — they are where ethical commitment lives.
 - Do not limit pledges to the immediate team. The To Whom format reaches beyond primary users to non-obvious stakeholders.
 - Do not forget the review cadence. Pledges without review moments are aspirations, not commitments.
+- Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
+
+> **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.
 
 ## Deliverable Quality Bar
 
@@ -189,6 +205,8 @@ A strong Pledge Works output:
 - accepts outputs from any other skill in the set as pledge anchors
 - works at individual, team, and org-wide scope
 - identifies which pledges are default-challenging vs. merely affirming
+- opens with a direct answer to the decision or question the user asked, which the rest of the output supports
+- lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none
 
 ## Integration with Other EDBX Skills
 

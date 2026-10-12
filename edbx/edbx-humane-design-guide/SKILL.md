@@ -183,7 +183,7 @@ Write every heuristic fresh from this audit's findings — do not reuse or rewor
 
 ### Step 4 — Output
 
-Compile the full audit into a stakeholder-ready deliverable:
+Compile the full audit into a stakeholder-ready deliverable. Open it with a short **Answer**: two to four sentences that answer the question the user actually asked (the decision, verdict or recommendation) and the main reason for it. The method's sections follow and back it up; they never replace it. Write it once, as the first section under the title. Then:
 
 1. **Header:** Product name, value proposition, measures of success (mark any you inferred)
 2. **Filled Worksheet:** The six-row sensitivity table from Step 2
@@ -194,6 +194,9 @@ Compile the full audit into a stakeholder-ready deliverable:
 7. **Exploitation Stacks:** The 2–3 stack table, plus at least one redesign that breaks a whole stack
 8. **Memorable Heuristics:** 3–5, written fresh for this product
 9. **Humane Design Statement:** A single paragraph the team can use to anchor design decisions going forward
+10. **Evidence Ledger** — every figure or fact about the user's situation the output relies on, typed as below
+
+Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis names a paper from this skill's Sources, or a URL from the user or from a search run in this session), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims and need no row, but keep them visibly marked as invented. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
 
 The Humane Design Statement should capture the team's commitment in plain language: what the product will stop exploiting and what it will enable instead.
 
@@ -221,6 +224,9 @@ Run the Humane Design Guide after Worrystorming to give raw concerns a structure
 - **Do not treat the audit as a box to check.** If all six sensitivities score 🟢, the audit was too gentle. Real products have real trade-offs.
 - **Pay attention to the measures of success.** They often reveal exploitation intent more honestly than the product description. Flag this when it happens.
 - **Acknowledge the Center for Humane Technology lineage.** Point users to humanetech.com for deeper resources and the full framework.
+- Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
+
+> **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.
 
 ## Deliverable Quality Bar
 
@@ -242,6 +248,8 @@ A strong Humane Design Guide audit:
 - names the specific KPI or OKR that must change to fix each 🔴 finding
 - includes a humane design statement that the team could adopt as a design principle
 - flags when measures of success themselves indicate exploitation
+- opens with a direct answer to the decision or question the user asked, which the rest of the output supports
+- lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none
 
 ## Example Output (partial)
 

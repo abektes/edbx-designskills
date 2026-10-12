@@ -2,6 +2,11 @@
   "skill": "edbx-pledge-works",
   "_note": "Structural layer first: pledge-works already produces its three registers in every sampled run, so semantic judges are built only where the code checks leave gaps.",
   "enumerators": {
+    "ledger_type_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Type"
+    },
     "register_rows": {
       "type": "table_rows",
       "in_section": "pledge register",
@@ -69,6 +74,31 @@
     }
   },
   "structural": [
+    {
+      "id": "answer_first",
+      "kind": "any_of",
+      "checks": [
+        {"kind": "section_present", "pattern": "(?m)^\\s*(?:#{1,6}\\s*Answer\\b|\\*\\*Answer\\b)"}
+      ],
+      "bar": "opens with a direct answer to the decision or question the user asked, which the rest of the output supports",
+      "desc": "the output opens with an Answer section"
+    },
+    {
+      "id": "evidence_ledger_present",
+      "kind": "section_present",
+      "pattern": "Evidence Ledger",
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "the output has an Evidence Ledger"
+    },
+    {
+      "id": "ledger_types_valid",
+      "kind": "cells_in_vocabulary",
+      "items": "ledger_type_cells",
+      "vocabulary": ["user-supplied", "sourced", "assumption", "unknown"],
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every Evidence Ledger Type is one of the four allowed words"
+    },
     {
       "id": "pledge_count",
       "kind": "min_count",

@@ -106,6 +106,8 @@ Regardless of mode, follow this overall arc:
 
 ## Output Format
 
+Open with a short **Answer**: two to four sentences that answer the question the user actually asked (the decision, verdict or recommendation) and the main reason for it. The method's sections follow and back it up; they never replace it. Write it once, as the first section under the title.
+
 Default to this layout. Trim mode-specific sections that do not apply to the chosen mode; sections 1 (Frame) and 5 (Necessary friction kept) appear in every mode.
 
 ### 1. Frame
@@ -113,6 +115,10 @@ Default to this layout. Trim mode-specific sections that do not apply to the cho
 - User task and emotional state
 - Business goal / stakeholder pressure
 - Mode in use
+
+### Answer
+
+[Two to four sentences: the answer to the question asked (decision, verdict or recommendation) and the main reason.]
 
 ### 2. Anti-Hero hits
 A table with columns: card · what is happening · where in the design · why it is anti-user.
@@ -128,6 +134,13 @@ A table with columns: paired card · concrete change · why it restores user val
 
 ### 5. Necessary friction kept
 List anything Anti-Hero-shaped that should stay (regulatory, safety, fraud, accessibility). Required in every mode, including reverse brainstorming — if nothing qualifies, say so in one line and why.
+
+### Evidence Ledger
+| Claim used as input | Type | Basis |
+|---|---|---|
+| [figure, rate or fact the output relies on] | [user-supplied / sourced / assumption / unknown] | [the brief / paper or URL / why assumed] |
+
+Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis names a paper from this skill's Sources, or a URL from the user or from a search run in this session), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims and need no row, but keep them visibly marked as invented. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
 
 ## Prompt Patterns
 
@@ -148,6 +161,9 @@ Use or adapt prompts like these:
 - Pair every Anti-Hero with a concrete Hero move. A critique with no flip is rant fuel, not design feedback.
 - Hold space for genuine value tension. Some designs deprioritize user values for defensible reasons (cost, scale, regulation). Surface the trade-off honestly instead of pretending Hero moves are always free.
 - Stay grounded in the source. The full deck and intended use are documented in Mehta, Chivukula, Gray, et al. (2024), arXiv:2405.03674. When in doubt, defer to the cards in [references/cards.md](references/cards.md) rather than inventing new ones.
+- Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
+
+> **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.
 
 ## Deliverable Quality Bar
 
@@ -158,6 +174,8 @@ A good output:
 - pairs every Anti-Hero with a concrete Hero counter-move
 - distinguishes manipulative friction from necessary friction
 - ends with something the team can actually do in the next sprint, not just labels
+- opens with a direct answer to the decision or question the user asked, which the rest of the output supports
+- lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none
 
 Scale guidance: for a single screen or flow, expect 2–5 Anti-Hero hits, 2–5 Hero counter-moves, and 1–3 friction-to-keep items. If the design is sprawling, scope the review to one journey at a time.
 

@@ -4,6 +4,10 @@ Use this template to document a Responsible Design Prism audit. Fill in each sec
 
 ---
 
+## Answer
+
+[Two to four sentences: the answer to the question asked (decision, verdict or recommendation) and the main reason.]
+
 ## Evaluation Context
 
 | Field | Your Response |
@@ -77,3 +81,8 @@ One paragraph: Where does this design sit on the overall responsible design spec
 One paragraph suitable for presenting to non-design stakeholders, written in business language.
 
 *Your answer:*
+
+## Evidence Ledger
+| Claim used as input | Type | Basis |
+|---|---|---|
+| [figure, rate or fact the output relies on] | [user-supplied / sourced / assumption / unknown] | [the brief / paper or URL / why assumed] |

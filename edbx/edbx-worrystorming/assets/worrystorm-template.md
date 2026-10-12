@@ -4,6 +4,10 @@ Use this template to document your Worrystorming session. Fill in each section a
 
 ---
 
+## Answer
+
+[Two to four sentences: the answer to the question asked (decision, verdict or recommendation) and the main reason.]
+
 ## Session Info
 
 | Field | Your Response |
@@ -168,3 +172,8 @@ For each critical cluster, propose concrete mitigations.
 One paragraph framing the key ethical challenges and the values the design should uphold.
 
 > [Your summary here]
+
+### Evidence Ledger
+| Claim used as input | Type | Basis |
+|---|---|---|
+| [figure, rate or fact the output relies on] | [user-supplied / sourced / assumption / unknown] | [the brief / paper or URL / why assumed] |

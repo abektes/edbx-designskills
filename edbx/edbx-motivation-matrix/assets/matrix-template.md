@@ -4,6 +4,10 @@ Copy this template for each Motivation Matrix session. Fill every cell using the
 
 ---
 
+## Answer
+
+[Two to four sentences: the answer to the question asked (decision, verdict or recommendation) and the main reason.]
+
 ## Product: [Name]
 
 **Description:** [Brief product/service description]
@@ -45,3 +49,8 @@ Copy this template for each Motivation Matrix session. Fill every cell using the
 [List user groups or situations not included in the matrix that should be considered.]
 
 ---
+
+## Evidence Ledger
+| Claim used as input | Type | Basis |
+|---|---|---|
+| [figure, rate or fact the output relies on] | [user-supplied / sourced / assumption / unknown] | [the brief / paper or URL / why assumed] |

@@ -226,11 +226,17 @@ See `references/related-methods.md` for detailed connections and sequencing guid
 
 ## Output Format
 
+Open with a short **Answer**: two to four sentences that answer the question the user actually asked (the decision, verdict or recommendation) and the main reason for it. The method's sections follow and back it up; they never replace it. Write it once, as the first section under the title.
+
 Default structure unless the user asks otherwise:
 
 ### Another Lens Session
 
 Brief framing of what was examined and which lenses were applied.
+
+### Answer
+
+[Two to four sentences: the answer to the question asked (decision, verdict or recommendation) and the main reason.]
 
 ### Lens 1: Balance Your Bias
 
@@ -259,6 +265,13 @@ Key bias or blind spot, most important unheard perspective, and one concrete nex
 
 > "After applying Another Lens, I'm now questioning [X] and plan to [Y]."
 
+### Evidence Ledger
+| Claim used as input | Type | Basis |
+|---|---|---|
+| [figure, rate or fact the output relies on] | [user-supplied / sourced / assumption / unknown] | [the brief / paper or URL / why assumed] |
+
+Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis names a paper from this skill's Sources, or a URL from the user or from a search run in this session), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims and need no row, but keep them visibly marked as invented. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
+
 ---
 
 ## Guardrails
@@ -269,6 +282,9 @@ Key bias or blind spot, most important unheard perspective, and one concrete nex
 - **Do not rush the growth mindset.** After surfacing difficult biases, the temptation is to move on quickly. The growth mindset lens exists to ensure the session ends with forward movement. Give it real attention.
 - **Do not produce a generic lens statement.** The statement must reflect what actually happened in this specific session, not a templated platitude.
 - **Incompleteness is natural.** The three half-circles form a whole, but no single session will be comprehensive. What matters is that something surfaced that was previously invisible.
+- Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
+
+> **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.
 
 ## Deliverable Quality Bar
 
@@ -280,6 +296,8 @@ A strong Another Lens session output:
 - generates a learning intention specific enough to act on within a sprint
 - **produces a Design Decision Spec table** for the top 3 insights, with all six columns filled (Insight / Specific design change / Measurable spec with numbers / Owner / Sprint / Pass-fail criterion). For accessibility insights, the spec names WCAG criterion + version. Lens insight that does not translate to a shippable change is rejected.
 - produces a lens statement that a stranger could read and understand what shifted
+- opens with a direct answer to the decision or question the user asked, which the rest of the output supports
+- lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none
 
 ## Example Output (partial)
 

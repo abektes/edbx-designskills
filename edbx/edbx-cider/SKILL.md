@@ -129,11 +129,17 @@ This second cycle matters because the first assumption designers pick is usually
 
 ## Output Format
 
+Open with a short **Answer**: two to four sentences that answer the question the user actually asked (the decision, verdict or recommendation) and the main reason for it. The method's sections follow and back it up; they never replace it. Write it once, as the first section under the title.
+
 Default structure unless the user asks otherwise. A blank version is in `assets/cider-worksheet-template.md`.
 
 ### CIDER Session: [Design Name]
 
 Brief framing of what was evaluated and the designer's starting assumptions.
+
+### Answer
+
+[Two to four sentences: the answer to the question asked (decision, verdict or recommendation) and the main reason.]
 
 ### Stage C — Assumptions Surfaced
 
@@ -177,6 +183,13 @@ One sentence stating which assumption the designer or team commits to removing, 
 
 > "We commit to [specific action] by [when], owned by [role or team], because we learned that [assumption] excludes [who]."
 
+### Evidence Ledger
+| Claim used as input | Type | Basis |
+|---|---|---|
+| [figure, rate or fact the output relies on] | [user-supplied / sourced / assumption / unknown] | [the brief / paper or URL / why assumed] |
+
+Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis names a paper from this skill's Sources, or a URL from the user or from a search run in this session), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims and need no row, but keep them visibly marked as invented. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
+
 ---
 
 ## Guardrails
@@ -187,6 +200,9 @@ One sentence stating which assumption the designer or team commits to removing, 
 - Do not treat all assumptions as equally impactful. The Expand stage helps teams identify which assumptions are most surprising and most exclusionary — prioritize those.
 - Do not skip Stage R. The second cycle catches assumptions the first pass missed.
 - Do not frame assumptions as failures. Every design has them. Finding them is the skill.
+- Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
+
+> **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.
 
 ## Deliverable Quality Bar
 
@@ -199,6 +215,8 @@ A strong CIDER session output:
 - in team mode, produces a shared register with more assumptions than any individual surfaced alone
 - runs a second I → D cycle on a different assumption than the first
 - closes with a commitment specific enough to create accountability
+- opens with a direct answer to the decision or question the user asked, which the rest of the output supports
+- lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none
 
 ## Integration with Other EDBX Skills
 

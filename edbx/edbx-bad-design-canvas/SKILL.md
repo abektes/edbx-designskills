@@ -143,7 +143,7 @@ For consequences classified as **Systemic**, the redesign recommendation should 
 
 ### Step 5 — Output
 
-Compile the full session into a structured deliverable:
+Compile the full session into a structured deliverable. Open it with a short **Answer**: two to four sentences that answer the question the user actually asked (the decision, verdict or recommendation) and the main reason for it. The method's sections follow and back it up; they never replace it. Write it once, as the first section under the title. Then:
 
 1. **Complete 12-Cell Bad Design Canvas** — all cells answered with severity tags
 2. **Top 3 Consequence Summary** — ranked list of the most serious findings
@@ -156,6 +156,9 @@ Compile the full session into a structured deliverable:
    - **Ship with changes** — 🔴 findings are addressable and redesign is feasible
    - **Rethink fundamentally** — 🔴 findings are systemic and the core concept needs revision
    - **Do not build** — the product causes harm that cannot be designed around
+6. **Evidence Ledger** — every figure or fact about the user's situation the output relies on, typed as below
+
+Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis names a paper from this skill's Sources, or a URL from the user or from a search run in this session), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims and need no row, but keep them visibly marked as invented. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
 
 ---
 
@@ -203,6 +206,9 @@ Run Bad Design Canvas early in a project to shape concept direction, or late as 
 - **Treat "Boring" differently.** It is a creative quality check, not a moral judgment. Keep the tone lighter for this cell.
 - **Address every `🔴` finding.** A significant consequence without a redesign recommendation is an incomplete canvas.
 - **Use the Bad Design Statement as a decision artifact.** It should be specific enough to guide the next design decision or stop the project.
+- Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
+
+> **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.
 
 ## Deliverable Quality Bar
 
@@ -215,6 +221,8 @@ A strong Bad Design Canvas session output:
 - proposes a concrete redesign action for every `🔴` finding
 - produces a Bad Design Statement that names the harm, the stakeholder, and the action
 - includes a "should we build this?" verdict grounded in the evidence
+- opens with a direct answer to the decision or question the user asked, which the rest of the output supports
+- lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none
 
 ## Example Output (partial)
 

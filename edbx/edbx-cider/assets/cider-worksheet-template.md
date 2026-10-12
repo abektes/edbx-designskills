@@ -4,6 +4,10 @@ Use this template to run a CIDER session. Fill in each section as you move throu
 
 ---
 
+## Answer
+
+[Two to four sentences: the answer to the question asked (decision, verdict or recommendation) and the main reason.]
+
 ## Design Under Evaluation
 
 **Name:**  
@@ -160,3 +164,8 @@ Write one sentence stating what assumption you commit to removing and how.
 **What we will do differently starting tomorrow:**
 
 **Who else should run CIDER on this design:**
+
+## Evidence Ledger
+| Claim used as input | Type | Basis |
+|---|---|---|
+| [figure, rate or fact the output relies on] | [user-supplied / sourced / assumption / unknown] | [the brief / paper or URL / why assumed] |

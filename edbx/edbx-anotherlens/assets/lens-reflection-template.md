@@ -4,6 +4,10 @@ Use this template for solo or team reflection sessions. Write your answers direc
 
 ---
 
+## Answer
+
+[Two to four sentences: the answer to the question asked (decision, verdict or recommendation) and the main reason.]
+
 ## Session Information
 
 **Date:**
@@ -121,3 +125,8 @@ Use this template for solo or team reflection sessions. Write your answers direc
 ## Lens Statement
 
 > After applying Another Lens, I'm now questioning **[X]** and plan to **[Y]**.
+
+### Evidence Ledger
+| Claim used as input | Type | Basis |
+|---|---|---|
+| [figure, rate or fact the output relies on] | [user-supplied / sourced / assumption / unknown] | [the brief / paper or URL / why assumed] |

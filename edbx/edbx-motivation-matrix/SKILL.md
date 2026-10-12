@@ -128,9 +128,15 @@ For each significant risk, propose a concrete design change. Redesign directions
 
 ## Output Format
 
+Open with a short **Answer**: two to four sentences that answer the question the user actually asked (the decision, verdict or recommendation) and the main reason for it. The method's sections follow and back it up; they never replace it. Write it once, as the first section under the title.
+
 ### Motivation Matrix Session
 
 Framing statement: product name, contexts chosen, focus question.
+
+### Answer
+
+[Two to four sentences: the answer to the question asked (decision, verdict or recommendation) and the main reason.]
 
 ### Filled Matrix
 
@@ -148,6 +154,13 @@ Markdown table with 5 rows (motivation types) × N columns (user @ context). Eac
 
 List any user groups or situations that were not included but should be considered. Explain why they matter.
 
+### Evidence Ledger
+| Claim used as input | Type | Basis |
+|---|---|---|
+| [figure, rate or fact the output relies on] | [user-supplied / sourced / assumption / unknown] | [the brief / paper or URL / why assumed] |
+
+Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis names a paper from this skill's Sources, or a URL from the user or from a search run in this session), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims and need no row, but keep them visibly marked as invented. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
+
 ## Guardrails
 
 - Do not skip cells. A blank cell is an unexamined risk.
@@ -156,6 +169,9 @@ List any user groups or situations that were not included but should be consider
 - Use accessible language. Explain ethical design terms inline. Avoid jargon without definition.
 - Maintain a non-judgmental tone. The matrix is a conversation starter, not an accusation.
 - Include secondary and underrepresented users. The matrix that only examines ideal users in ideal contexts misses the most important risks.
+- Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
+
+> **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.
 
 ## Deliverable Quality Bar
 
@@ -168,6 +184,8 @@ A strong Motivation Matrix output:
 - uses the [Motivation] + [Action] format consistently
 - names specific UI elements, features, or mechanisms — not abstract patterns
 - generates at least one insight the team did not expect
+- opens with a direct answer to the decision or question the user asked, which the rest of the output supports
+- lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none
 
 ## Integration with Other EDBX Skills
 

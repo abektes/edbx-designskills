@@ -102,10 +102,16 @@ End the deliverable by flagging which 2–3 anti-goals the team should treat as 
 
 ## Output format
 
+Open with a short **Answer**: two to four sentences that answer the question the user actually asked (the decision, verdict or recommendation) and the main reason for it. The method's sections follow and back it up; they never replace it. Write it once, as the first section under the title.
+
 Default to a single Markdown worksheet plus a sibling HTML poster file. Use this exact structure so downstream consumers (decks, briefs, ADRs) can lift sections cleanly.
 
 ```markdown
 # Black Mirror Brainstorming — [Concept Name]
+
+## Answer
+
+[Two to four sentences: the answer to the question asked (decision, verdict or recommendation) and the main reason.]
 
 ## Concept under examination
 One- or two-sentence restatement of the concept and its launch context.
@@ -151,7 +157,14 @@ The strongest episode is [TITLE]. See `assets/poster_template.html` for the base
 ## Load-bearing anti-goals
 The 2–3 anti-goals from the list above that, if violated, would invalidate the concept:
 - ...
+
+## Evidence Ledger
+| Claim used as input | Type | Basis |
+|---|---|---|
+| [figure, rate or fact the output relies on] | [user-supplied / sourced / assumption / unknown] | [the brief / paper or URL / why assumed] |
 ```
+
+Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis names a paper from this skill's Sources, or a URL from the user or from a search run in this session), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims and need no row, but keep them visibly marked as invented. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
 
 The HTML poster is rendered using `assets/poster_template.html` as a base and saved as `[concept-slug]-poster.html` in the same directory as the Markdown worksheet.
 
@@ -175,6 +188,9 @@ Use or adapt these when generating each section:
 - **Avoid identifying real, named individuals** in episodes — use composite or invented characters. The method is about systemic dynamics, not callouts.
 - **Don't skip the anti-goals.** Episodes are the bait; anti-goals are the catch. A run that ends at "look how dark this could be" without producing constraints is incomplete.
 - **Be careful with vulnerable groups.** When an episode involves minors, abuse survivors, undocumented people, or others at heightened risk, keep the focus on the *system's* failure rather than dwelling on graphic detail. The harm should be legible without being pornographic.
+- Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
+
+> **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.
 
 ## Deliverable Quality Bar
 
@@ -186,6 +202,8 @@ A good run:
 - Ships a poster that opens cleanly in a browser with no broken layout or external requests.
 - Ends with anti-goals that are specific enough to fail — each with a concrete test.
 - Identifies which anti-goals are load-bearing.
+- opens with a direct answer to the decision or question the user asked, which the rest of the output supports
+- lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none
 
 ## See also
 

@@ -384,6 +384,8 @@ Nine core values inform all five tools. Reference them at any point in the chain
 
 ## Output Format
 
+Open with a short **Answer**: two to four sentences that answer the question the user actually asked (the decision, verdict or recommendation) and the main reason for it. The method's sections follow and back it up; they never replace it. Write it once, as the first section under the title.
+
 Default structure when running the full chain. The `→ Carries forward:` block at the end of each tool is **mandatory** — it is the explicit handoff that makes the chain usable by a team working asynchronously or by anyone continuing the chain in a later session. See each tool's `→ Feed Forward` section above for the exact required format of that block.
 
 ```
@@ -393,6 +395,10 @@ Default structure when running the full chain. The `→ Carries forward:` block 
 **Entry Phase:** [Explore / Evaluate / Decide — note which tools were skipped and why]
 
 ---
+
+#### Answer
+
+[Two to four sentences: the answer to the question asked (decision, verdict or recommendation) and the main reason.]
 
 #### Tool 1 — Future Story
 [Six-element story spine, each element clearly labeled and completed]
@@ -450,7 +456,14 @@ Default structure when running the full chain. The `→ Carries forward:` block 
 - **Values prioritized:** [Which of the nine core values were most significant]
 - **Trade-offs accepted:** [What was given up or subordinated to uphold them]
 - **Actions:** [The concrete decision or next steps this points to — a recommendation is enough if the run stopped before Weighing Options]
+
+#### Evidence Ledger
+| Claim used as input | Type | Basis |
+|---|---|---|
+| [figure, rate or fact the output relies on] | [user-supplied / sourced / assumption / unknown] | [the brief / paper or URL / why assumed] |
 ```
+
+Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis names a paper from this skill's Sources, or a URL from the user or from a search run in this session), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims and need no row, but keep them visibly marked as invented. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
 
 When running only some of the tools, keep the frame and drop the rest: the header first — `Chain Status` marking which tools ran, and `Entry Phase` stating why the others were skipped (for example, "prior Ethics Frame supplied by the user") — then the sections for the tools you ran, then the Closing Synthesis. Still include each `→ Carries forward:` block — it tells anyone reading the output exactly what they would use if they continued the chain.
 
@@ -464,6 +477,9 @@ When running only some of the tools, keep the frame and drop the rest: the heade
 - **Do not use the Ethics Gauge as a scorecard.** No single spectrum position determines ethical soundness. The synthesis across all four dimensions is the assessment.
 - **Do not let fairness be an afterthought.** Distributional questions — who gets the benefits, who bears the harms — must be surfaced explicitly in the Ethics Frame and the Gauge, not assumed to be covered by other sections.
 - **Do not guarantee the tools will tell you the right thing to do.** They offer structure and building blocks, but the team must define key values and assess trade-offs. The tools do not provide a complete checklist of all harms or ethical issues — they give a starting point.
+- Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
+
+> **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.
 
 ## Deliverable Quality Bar
 
@@ -475,6 +491,8 @@ A strong full-chain STF-ET output:
 - identifies at least 5 values across the chain and links each to specific effects or decisions
 - produces a Bottom Line (Ethics Frame) and a Future Direction (Weighing Options) each specific enough to create accountability
 - closes with a synthesis statement naming which values were prioritized, which trade-offs were accepted, and what concrete actions will be taken
+- opens with a direct answer to the decision or question the user asked, which the rest of the output supports
+- lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none
 
 ## Integration with Other EDBX Skills
 

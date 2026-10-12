@@ -133,7 +133,13 @@ Produce a longitudinal analysis:
 
 ## Output Format
 
+Open with a short **Answer**: two to four sentences that answer the question the user actually asked (the decision, verdict or recommendation) and the main reason for it. The method's sections follow and back it up; they never replace it. Write it once, as the first section under the title.
+
 ### Ethicograph: [Project Name]
+
+### Answer
+
+[Two to four sentences: the answer to the question asked (decision, verdict or recommendation) and the main reason.]
 
 ### Ethical Moves Inventory
 
@@ -196,6 +202,13 @@ For each move that undermined a user value, the specific UX, accessibility or te
 [For team reflection mode]: What process changes would improve ethical quality?
 [For research mode]: Methodological notes on coding decisions and interpretive framework.
 
+### Evidence Ledger
+| Claim used as input | Type | Basis |
+|---|---|---|
+| [figure, rate or fact the output relies on] | [user-supplied / sourced / assumption / unknown] | [the brief / paper or URL / why assumed] |
+
+Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis names a paper from this skill's Sources, or a URL from the user or from a search run in this session), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims and need no row, but keep them visibly marked as invented. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
+
 ## Guardrails
 
 - Do not treat the 2×2 matrix as a grading system. The goal is analysis, not judgment of individuals.
@@ -204,6 +217,9 @@ For each move that undermined a user value, the specific UX, accessibility or te
 - Do not code moves without justification. Every placement needs reasoning.
 - Do not forget the longitudinal view. Individual moves matter less than the trajectory they create.
 - Do not conflate stated reasons with actual impact. The gap between them is where ethical insight lives.
+- Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
+
+> **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.
 
 ## Deliverable Quality Bar
 
@@ -220,6 +236,8 @@ A strong Ethicography output:
 - works in both team reflection mode and academic research mode
 - handles positive ethical practices (not only critique)
 - in research mode, includes methodological notes suitable for academic documentation
+- opens with a direct answer to the decision or question the user asked, which the rest of the output supports
+- lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none
 
 ## Integration with Other EDBX Skills
 

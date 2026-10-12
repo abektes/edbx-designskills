@@ -2,6 +2,11 @@
   "skill": "edbx-cider",
   "_note": "Machine-checkable form of the Deliverable Quality Bar. The team-mode register bar is deliberately not implemented: none of the eval prompts request team mode, so it cannot be measured on this set.",
   "enumerators": {
+    "ledger_type_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Type"
+    },
     "assumptions": {
       "type": "phrase_matches",
       "in_section": "stage c\\b|assumptions surfaced",
@@ -13,6 +18,31 @@
     }
   },
   "structural": [
+    {
+      "id": "answer_first",
+      "kind": "any_of",
+      "checks": [
+        {"kind": "section_present", "pattern": "(?m)^\\s*(?:#{1,6}\\s*Answer\\b|\\*\\*Answer\\b)"}
+      ],
+      "bar": "opens with a direct answer to the decision or question the user asked, which the rest of the output supports",
+      "desc": "the output opens with an Answer section"
+    },
+    {
+      "id": "evidence_ledger_present",
+      "kind": "section_present",
+      "pattern": "Evidence Ledger",
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "the output has an Evidence Ledger"
+    },
+    {
+      "id": "ledger_types_valid",
+      "kind": "cells_in_vocabulary",
+      "items": "ledger_type_cells",
+      "vocabulary": ["user-supplied", "sourced", "assumption", "unknown"],
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every Evidence Ledger Type is one of the four allowed words"
+    },
     {
       "id": "assumption_count",
       "kind": "min_count",

@@ -4,6 +4,10 @@ Use this template to document your sensitivity audit. Fill in each cell for all 
 
 ---
 
+## Answer
+
+[Two to four sentences: the answer to the question asked (decision, verdict or recommendation) and the main reason.]
+
 ## Product Information
 
 | Field | Your Response |
@@ -91,3 +95,8 @@ For each sensitivity scored 🔴 High:
 Write a single paragraph that captures the team's commitment to humane design for this product. What will you stop exploiting and what will you enable instead?
 
 > "We commit to..."
+
+### Evidence Ledger
+| Claim used as input | Type | Basis |
+|---|---|---|
+| [figure, rate or fact the output relies on] | [user-supplied / sourced / assumption / unknown] | [the brief / paper or URL / why assumed] |

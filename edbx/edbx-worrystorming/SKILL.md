@@ -138,13 +138,16 @@ This step connects the abstract worry to concrete design action.
 
 ### Step 6 — Output
 
-Compile the full session into a structured deliverable:
+Compile the full session into a structured deliverable. Open it with a short **Answer**: two to four sentences that answer the question the user actually asked (the decision, verdict or recommendation) and the main reason for it. The method's sections follow and back it up; they never replace it. Write it once, as the first section under the title. Then:
 
 1. **Full Worry List** — the raw 10–20 concerns (Step 2)
 2. **Clustered Worry Themes** — with severity tags (Step 3)
 3. **Ethical Objectives + Design Constraints + Test Questions** — the reframed values (Step 4)
 4. **Refined Ideas or Mitigations** — for all 🔴 Critical clusters (Step 5)
 5. **Worrystorm Summary** — a single paragraph framing the key ethical challenges and the values the design should uphold
+6. **Evidence Ledger** — every figure or fact about the user's situation the output relies on, typed as below
+
+Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis names a paper from this skill's Sources, or a URL from the user or from a search run in this session), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims and need no row, but keep them visibly marked as invented. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
 
 The summary is the session's artifact. It should fit on a sticky note and be specific enough to guide the next design decision.
 
@@ -185,6 +188,9 @@ Run Worrystorming early in a project (ideation stage) to shape the design direct
 - **Do not judge the designer.** Worries about a product are not accusations against its creators. The method is generative, not punitive.
 - **Cover all eight categories.** Most teams naturally skip Economic, Power & Fairness, and Future Consequences. These blind spots are where the biggest ethical failures originate.
 - **Treat the summary as a living document.** It should be revisited as the design evolves, not filed away.
+- Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
+
+> **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.
 
 ## Deliverable Quality Bar
 
@@ -196,6 +202,8 @@ A strong Worrystorming session output:
 - proposes test questions that could be answered through research or audit
 - generates concrete mitigations for every critical cluster
 - produces a summary paragraph that names the key ethical challenges without vague platitudes
+- opens with a direct answer to the decision or question the user asked, which the rest of the output supports
+- lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none
 
 ## Example Output (partial)
 
