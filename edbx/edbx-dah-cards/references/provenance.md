@@ -1,10 +1,12 @@
 # Provenance — edbx-dah-cards
 
-Stage A draft (2026-10-13). Sources found and licences read from web pages only;
-nothing was downloaded. One row per element the skill attributes to a source.
-Locator and anchor are filled only where a page I read confirms them;
-otherwise Locator is `to verify` and the anchor is a guess marked `(guess)`.
-Stage B must check each anchor on the page.
+Stage A draft (2026-10-13), checked in stage B (2026-10-13) against
+`papers/manifest.json` and `papers/pages/`. One row per element the skill
+attributes to a source. None of the DAH-specific sources (`rafit2020design`,
+`chivukula2025universal`, `lopez2018dah`) is in the manifest, so every row is
+`metadata only`: the DAH game itself could not be read as text. The one
+manifest source named below, `chivukula2021surveying`, was searched in full
+(all 32 page files) and does not mention DAH.
 
 ## Sources
 
@@ -27,19 +29,19 @@ sort Ethical Unsure Unethical.
 
 | # | Skill element | Source | Locator | Anchor phrase | Note |
 |---|---------------|--------|---------|---------------|------|
-| 1 | DAH = "Design Against Humanity", named as a provocation after Cards Against Humanity | `rafit2020design` | project page, first paragraph | design provocation card game inspired by 'Cards Against Humanity' | toolkit page (project page). The page calls it an "educational card game for horrible designers" |
-| 2 | Purpose: open conversation about the purpose, context and role of design | `rafit2020design` | project page, first paragraph | conversation around ethics in design | toolkit page |
-| 3 | Aim: expose designers to real-world harms of products and services so they reflect on their own responsibility | `chivukula2025universal` | Method 16 | to verify | metadata only: book. Wording comes from a search-result summary of the book, not from the page. Not on the `rafit2020design` page |
-| 4 | Flip the question from "what does this do for people?" to "what does this do to people?" | none found | to verify | (guess) what does this do to people | not found. Searched: DAH Cards reflection question; Design Against Humanity ethics |
-| 5 | Physical cards: black side names a product or feature, white side its consequences (one card, two sides) | `rafit2020design` | to verify | (guess) black side white side | toolkit page. The page shows photos of standing black cards and a manual only as JPGs; no readable text. Cards Against Humanity uses separate black and white cards, so the "two sides" form is unconfirmed |
-| 6 | Sorting cards into Ethical / Unsure / Unethical | none found | to verify | (guess) ethical unsure unethical | not found. Possibly in the manual JPGs on `rafit2020design` or in `chivukula2025universal` Method 16; neither read as text |
-| 7 | "What changed?" reflection after sorting, and its five prompts | none found | to verify | (guess) what changed | not found. Same places as row 6 |
-| 8 | Six harm categories: Deception, Coercion, Addiction, Surveillance, Exclusion, Systemic | none found | to verify | (guess) harm categories | not found. Presumably this skill's own scheme; no source page lists them |
-| 9 | Consequence mapping (individual / social / environmental dimensions; likelihood, severity, who bears it, design awareness) | none found | to verify | (guess) likelihood severity who bears it | not found. Presumably this skill's own |
-| 10 | Microcopy rewrite (Before / After honest version) | none found | to verify | (guess) honest version | not found. Presumably this skill's own |
-| 11 | Modes 3 and 4 (Ethical Manifesto; Future Design Vision) and the mode-selection rule | none found | to verify | (guess) manifesto future vision | not found. Presumably this skill's own |
-| 12 | "Universal Methods of Ethical Design" as the compilation that lists DAH Cards | `chivukula2025universal` | Method 16 | DAH Cards | metadata only: book. Listing confirmed only through a search result and the chapter URL title "16 DAH Cards" |
-| 13 | Evidence Ledger | fdbx family convention | n/a | n/a | not from the source; SKILL.md already says so |
+| 1 | DAH = "Design Against Humanity", named as a provocation after Cards Against Humanity | `rafit2020design` | n/a | Design Against Humanity educational card game | metadata only: no source text (not in manifest; project page shows manual and cards only as JPG images). Stage A read the first paragraph on the web page and recorded it as a design provocation card game inspired by Cards Against Humanity, called an educational card game for horrible designers. Anchor is the title, not checked against text |
+| 2 | Purpose: open conversation about the purpose, context and role of design | `rafit2020design` | n/a | Design Against Humanity educational card game | metadata only: no source text (not in manifest). Stage A recorded the page as describing a conversation around ethics in design; not re-verified |
+| 3 | Aim: expose designers to real-world harms of products and services so they reflect on their own responsibility | `chivukula2025universal` | n/a | Universal Methods of Ethical Design | metadata only: book. Wording came from a search-result summary of Method 16, not from the page |
+| 4 | Flip the question from "what does this do for people?" to "what does this do to people?" | `chivukula2025universal` | n/a | Universal Methods of Ethical Design | metadata only: no source found. Searched in stage A (web) and, in stage B, in every manifest text (no match in `chivukula2021surveying` or any other page set). Probably this skill's framing |
+| 5 | Physical cards: black side names a product or feature, white side its consequences (one card, two sides) | `rafit2020design` | n/a | Design Against Humanity educational card game | metadata only: no source text (not in manifest). Card photos and manual are JPG images only. The two-sided form is unconfirmed; Cards Against Humanity uses separate black and white cards |
+| 6 | Sorting cards into Ethical / Unsure / Unethical | `chivukula2025universal` | n/a | Method 16 DAH Cards | metadata only: no source found. May be in the manual JPGs or in Method 16 (book, 403), neither readable. Not in any manifest text |
+| 7 | "What changed?" reflection after sorting, and its five prompts | `chivukula2025universal` | n/a | Method 16 DAH Cards | metadata only: no source found. Same places as row 6 |
+| 8 | Six harm categories: Deception, Coercion, Addiction, Surveillance, Exclusion, Systemic | edbx additions | n/a | six harm categories in this skill | metadata only: edbx addition. No source lists them |
+| 9 | Consequence mapping (individual / social / environmental dimensions; likelihood, severity, who bears it, design awareness) | edbx additions | n/a | consequence mapping in this skill | metadata only: edbx addition. No source found |
+| 10 | Microcopy rewrite (Before / After honest version) | edbx additions | n/a | microcopy rewrite in this skill | metadata only: edbx addition. No source found |
+| 11 | Modes 3 and 4 (Ethical Manifesto; Future Design Vision) and the mode-selection rule | edbx additions | n/a | Ethical Manifesto and Future Design Vision | metadata only: edbx addition. No source found |
+| 12 | "Universal Methods of Ethical Design" as the compilation that lists DAH Cards | `chivukula2025universal` | n/a | Universal Methods of Ethical Design | metadata only: book. Listing confirmed in stage A only through a search result and the chapter URL title "16 DAH Cards"; chapter page returned 403 |
+| 13 | Evidence Ledger | fdbx family convention | n/a | Evidence Ledger family convention from fdbx | metadata only: edbx addition. Not from the source; SKILL.md already says so |
 
 ## Licence
 
@@ -67,25 +69,37 @@ sort Ethical Unsure Unethical.
 
 ## Discrepancies
 
-1. SKILL.md says the "original method" sorts cards into Ethical, Unsure and
-   Unethical and asks "What changed?". No page I could read says so. The only
-   primary page describes a provocation card game and shows a manual as images.
-   Mark these as unverified or as this skill's design until the manual or Method
-   16 is read in stage B.
-2. SKILL.md says the black side names a product or feature and the white side
-   its harm, on one card. The source is described as inspired by Cards Against
-   Humanity, whose black and white cards are separate. The two-sided form is
-   unconfirmed.
-3. The six harm categories, the consequence-map dimensions and fields, the
-   microcopy rewrite, and the Manifesto and Future Vision modes appear in no
-   source found. They read as this skill's additions (the "edbx adaptation"
-   note covers only the Evidence Ledger). Consider labelling them as such.
-4. SKILL.md names no creator, year or source. The primary page credits ziqq
+### Contradicted by the source text
+
+None. No readable text of the DAH game exists in the manifest, so no skill
+claim could be contradicted by a page.
+
+### Not verifiable
+
+1. Sorting into Ethical, Unsure and Unethical, and the "What changed?"
+   reflection (rows 6, 7): SKILL.md presents these as "the original method".
+   No source text found. The only primary page shows a manual as images.
+2. The black-side / white-side, one-card-two-sides structure (row 5). Cards
+   Against Humanity uses separate black and white cards; unconfirmed.
+3. The aim and the "do for / do to people" question (rows 3, 4): no readable
+   source.
+4. The six harm categories, consequence-map fields, microcopy rewrite, and
+   Manifesto and Future Vision modes (rows 8-11) appear in no source. They are
+   edbx additions, but SKILL.md's "edbx adaptation" note covers only the
+   Evidence Ledger. Consider labelling them as such.
+5. SKILL.md names no creator, year or source. The primary page credits ziqq
    rafit, 2020. A creator credit is missing.
-5. SKILL.md calls DAH "a reflective method"; the creator's page calls it an
+6. SKILL.md calls DAH "a reflective method"; the creator's page calls it an
    "educational card game for horrible designers". Tone and framing differ.
-6. Author name order varies: the book's listings use "Sai Shruthi Chivukula",
-   the arXiv paper uses "Shruthi Sai Chivukula". Check the spelling in stage B.
-7. The `chivukula2021surveying` text (read via ar5iv, first 100,000 of about
-   160,000 characters) does not mention DAH. The last 60,000 characters (likely
-   references and appendix) were not read.
+7. Author name order varies: book listings use "Sai Shruthi Chivukula", the
+   arXiv paper uses "Shruthi Sai Chivukula".
+
+### Checked in stage B
+
+- `chivukula2021surveying` (all 32 page files searched, including the
+  reference list and appendix that stage A could not read) does not mention
+  DAH or Design Against Humanity. It discusses other card methods (Security
+  Cards, Envisioning Cards, Tarot Cards of Tech). This closes the stage-A
+  gap about the unread final 60,000 characters.
+- No licence statement for DAH appears in any manifest PDF; the licence
+  section above is unchanged.
