@@ -93,12 +93,34 @@
       ]
     },
     "consequence_lines": {
-      "type": "phrase_matches",
-      "pattern": "consequence(?: for breach)?\\**:\\**[^\\n]{10,}"
+      "type": "union",
+      "of": [
+        {
+          "type": "phrase_matches",
+          "pattern": "consequence(?: for breach)?\\**:\\**[^\\n]{10,}"
+        },
+        {
+          "type": "table_cells",
+          "in_section": ".",
+          "column": "Consequence",
+          "strict": true
+        }
+      ]
     },
     "cadence_lines": {
-      "type": "phrase_matches",
-      "pattern": "review cadence\\**:\\**[^\\n]{5,}"
+      "type": "union",
+      "of": [
+        {
+          "type": "phrase_matches",
+          "pattern": "review cadence\\**:\\**[^\\n]{5,}"
+        },
+        {
+          "type": "table_cells",
+          "in_section": ".",
+          "column": "Cadence",
+          "strict": true
+        }
+      ]
     },
     "stories": {
       "type": "phrase_matches",

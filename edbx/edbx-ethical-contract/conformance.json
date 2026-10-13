@@ -73,6 +73,11 @@
         {
           "type": "list_items",
           "in_section": "red line commitments|red lines?.{1,5}what each"
+        },
+        {
+          "type": "phrase_matches",
+          "in_section": "stakeholder responsibilities",
+          "pattern": "red line\\**\\s*:\\**\\s*[^|\\n]{10,}"
         }
       ]
     },
