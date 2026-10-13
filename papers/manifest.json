@@ -1,0 +1,305 @@
+{
+  "mehta2024antiheroes": {
+    "file": "local/mehta2024antiheroes.pdf",
+    "kind": "pdf",
+    "vendored": false,
+    "url": "https://arxiv.org/pdf/2405.03674",
+    "page_offset": 0,
+    "citation": "Mehta, Chivukula, Gray & Gairola (2024). Anti-Heroes: An Ethics-focused Method for Responsible Designer Intentions. arXiv:2405.03674.",
+    "licence": "CC BY-NC-SA 4.0. Local only."
+  },
+  "chivukula2021surveying": {
+    "file": "local/chivukula2021surveying.pdf",
+    "kind": "pdf",
+    "vendored": false,
+    "url": "https://arxiv.org/pdf/2102.08909",
+    "page_offset": 0,
+    "citation": "Chivukula, Li, Pivonka, Chen & Gray (2021). Surveying the Landscape of Ethics-Focused Design Methods. arXiv:2102.08909.",
+    "licence": "CC BY-NC-SA 4.0. Local only."
+  },
+  "mildner2024hell": {
+    "file": "local/mildner2024hell.pdf",
+    "kind": "pdf",
+    "vendored": false,
+    "url": "https://arxiv.org/pdf/2405.07378",
+    "page_offset": 0,
+    "citation": "Mildner, Inkoom, Malaka & Niess (2024). Hell is Paved with Good Intentions. arXiv:2405.07378.",
+    "licence": "arXiv licence. Local only."
+  },
+  "chivukula2019ethicography": {
+    "file": "local/chivukula2019ethicography.pdf",
+    "kind": "pdf",
+    "vendored": false,
+    "url": "https://par.nsf.gov/servlets/purl/10092725",
+    "page_offset": 0,
+    "citation": "Chivukula, Gray & Brier (2019). Analyzing Value Discovery in Design Decisions Through Ethicography. CHI '19. doi:10.1145/3290605.3300307",
+    "licence": "NSF PAR accepted manuscript; ACM copyright. Local only."
+  },
+  "gray2019ethical": {
+    "file": "local/gray2019ethical.pdf",
+    "kind": "pdf",
+    "vendored": false,
+    "url": "https://par.nsf.gov/servlets/purl/10092726",
+    "page_offset": 0,
+    "citation": "Gray & Chivukula (2019). Ethical mediation in UX practice. CHI '19. doi:10.1145/3290605.3300408",
+    "licence": "NSF PAR accepted manuscript; ACM copyright. Local only."
+  },
+  "chivukula2020dimensions": {
+    "file": "local/chivukula2020dimensions.pdf",
+    "kind": "pdf",
+    "vendored": false,
+    "url": "https://par.nsf.gov/servlets/purl/10168355",
+    "page_offset": 0,
+    "citation": "Chivukula, Watkins, Manocha, Chen & Gray (2020). Dimensions of UX practice that shape ethical awareness. CHI '20. doi:10.1145/3313831.3376459",
+    "licence": "NSF PAR accepted manuscript; ACM copyright. Local only."
+  },
+  "klassen2022run": {
+    "file": "local/klassen2022run.pdf",
+    "kind": "pdf",
+    "vendored": false,
+    "url": "https://par.nsf.gov/servlets/purl/10334675",
+    "page_offset": 0,
+    "citation": "Klassen & Fiesler (2022). Run wild a little with your imagination: ethical speculation in computing education with Black Mirror. SIGCSE '22.",
+    "licence": "NSF PAR accepted manuscript; ACM copyright. Local only."
+  },
+  "oleson2023teaching": {
+    "file": "local/oleson2023teaching.pdf",
+    "kind": "pdf",
+    "vendored": false,
+    "url": "https://par.nsf.gov/servlets/purl/10349236",
+    "page_offset": 0,
+    "citation": "Oleson, Solomon, Perdriau & Ko (2023). Teaching inclusive design skills with the CIDER assumption elicitation technique. ACM TOCHI 30(1).",
+    "licence": "CC BY 4.0. Local only."
+  },
+  "gray2020asshole": {
+    "file": "local/gray2020asshole.pdf",
+    "kind": "pdf",
+    "vendored": false,
+    "url": "https://par.nsf.gov/servlets/purl/10168532",
+    "page_offset": 0,
+    "citation": "Gray, Chivukula & Lee (2020). What kind of work do asshole designers create? DIS '20. doi:10.1145/3357236.3395486",
+    "licence": "NSF PAR accepted manuscript; ACM copyright. Local only."
+  },
+  "gray2021dark": {
+    "file": "local/gray2021dark.pdf",
+    "kind": "pdf",
+    "vendored": false,
+    "url": "https://par.nsf.gov/servlets/purl/10288114",
+    "page_offset": 0,
+    "citation": "Gray, Chivukula, Melkey & Manocha (2021). Understanding dark design roles in computing education. ICER 2021. doi:10.1145/3446871.3469754",
+    "licence": "NSF PAR accepted manuscript; ACM copyright. Local only."
+  },
+  "oleson2023teaching_ko": {
+    "file": "local/oleson2023teaching_ko.pdf",
+    "kind": "pdf",
+    "vendored": false,
+    "url": "https://faculty.washington.edu/ajko/papers/Oleson2022CIDER.pdf",
+    "page_offset": 0,
+    "citation": "Same paper as oleson2023teaching (author copy).",
+    "licence": "CC BY 4.0. Local only."
+  },
+  "klassen2022run_author": {
+    "file": "local/klassen2022run_author.pdf",
+    "kind": "pdf",
+    "vendored": false,
+    "url": "https://cmci.colorado.edu/~cafi5706/SIGCSE2022_BlackMirror.pdf",
+    "page_offset": 0,
+    "citation": "Same paper as klassen2022run (author copy).",
+    "licence": "ACM copyright. Local only."
+  },
+  "chivukula2020dimensions_author": {
+    "file": "local/chivukula2020dimensions_author.pdf",
+    "kind": "pdf",
+    "vendored": false,
+    "url": "https://colingray.me/wp-content/uploads/2020/01/2020_Chivukulaetal_CHI_DimensionsThatShapeEthicalAwareness.pdf",
+    "page_offset": 0,
+    "citation": "Same paper as chivukula2020dimensions (author copy).",
+    "licence": "ACM copyright. Local only."
+  },
+  "shilton2013values": {
+    "file": "local/shilton2013values.pdf",
+    "kind": "pdf",
+    "vendored": false,
+    "url": "https://mith.umd.edu/wp-content/uploads/2014/11/ShiltonSTHVpreprint.pdf",
+    "page_offset": 0,
+    "citation": "Shilton (2013). Values Levers: Building Ethics into Design. Science, Technology, & Human Values 38(3). doi:10.1177/0162243912436985 (author preprint).",
+    "licence": "Preprint; licence unknown. Local only."
+  },
+  "shilton2013making": {
+    "file": "local/shilton2013making.pdf",
+    "kind": "pdf",
+    "vendored": false,
+    "url": "https://www.iisi.de/wp-content/uploads/2018/07/ct2013_proceedings_s3-4_shilton_koepfler.pdf",
+    "page_offset": 0,
+    "citation": "Shilton & Koepfler (2013). Making space for values: communication & values levers in a virtual team. C&T '13. doi:10.1145/2482991.2482993",
+    "licence": "Proceedings copy; licence unknown. Local only."
+  },
+  "cht2020designguide": {
+    "file": "local/cht2020designguide.pdf",
+    "kind": "pdf",
+    "vendored": false,
+    "url": "https://web.archive.org/web/20241223181500id_/https://cdn.prod.website-files.com/5f0e1294f002b15080e1f2ff/5f0e1294f002b13c4de1f513_humane_design_worksheet.pdf",
+    "page_offset": 0,
+    "citation": "Center for Humane Technology. Humane Design Guide (worksheet).",
+    "licence": "All rights reserved (site); Internet Archive copy. Local only."
+  },
+  "cppa2024advisory": {
+    "file": "local/cppa2024advisory.pdf",
+    "kind": "pdf",
+    "vendored": false,
+    "url": "https://www.cppa.ca.gov/pdf/enfadvisory202402.pdf",
+    "page_offset": 0,
+    "citation": "California Privacy Protection Agency (2024). Enforcement Advisory 2024-02: Avoiding Dark Patterns.",
+    "licence": "Public government document. Local only."
+  },
+  "responsibletech2022pledge": {
+    "kind": "html",
+    "vendored": false,
+    "urls": [
+      "https://responsibletech.work/tools/development/pledge-works/"
+    ],
+    "citation": "ResponsibleTech.Work. Pledge Works (tool page).",
+    "licence": "CC BY-SA 4.0."
+  },
+  "zhou2026invertedbehavior": {
+    "kind": "html",
+    "vendored": false,
+    "urls": [
+      "https://www.designethically.com/bj-fogg"
+    ],
+    "citation": "Zhou, K. Design Ethically toolkit: Inverted Behavior Model (web page).",
+    "licence": "Unknown; copyright line only."
+  },
+  "zhou2026motivationmatrix": {
+    "kind": "html",
+    "vendored": false,
+    "urls": [
+      "https://www.designethically.com/motivation-matrix"
+    ],
+    "citation": "Zhou, K. Design Ethically toolkit: Motivation Matrix (web page).",
+    "licence": "Unknown; copyright line only."
+  },
+  "travaglianti2025ethics": {
+    "kind": "html",
+    "vendored": false,
+    "urls": [
+      "https://ethicsinsociety.stanford.edu/tech-ethics/ethics-toolkit"
+    ],
+    "citation": "Travaglianti & Both (2025). Stanford Ethics Toolkit (landing page).",
+    "licence": "(c) Stanford University; no open licence stated on the page."
+  },
+  "gray2024ontology": {
+    "kind": "html",
+    "vendored": false,
+    "urls": [
+      "https://deceptive.design/articles/an-ontology-of-dark-patterns-knowledge-foundations-definitions-and-a-pathway-for-shared-knowledge-building"
+    ],
+    "citation": "Gray et al. (2024). An ontology of dark patterns (deceptive.design article).",
+    "licence": "Unknown."
+  },
+  "adactio2017anotherlens": {
+    "kind": "html",
+    "vendored": false,
+    "urls": [
+      "https://adactio.com/links/13162"
+    ],
+    "citation": "Keith, J. (2017). Link post quoting Another Lens (adactio.com).",
+    "licence": "Unknown."
+  },
+  "ddc2021principles": {
+    "kind": "html",
+    "vendored": false,
+    "urls": [
+      "https://ddc.dk/tools/the-digital-ethics-compass-principles/",
+      "https://ddc.dk/tools/the-digital-ethics-compass-automation/",
+      "https://ddc.dk/tools/the-digital-ethics-compass-behavioral-design/",
+      "https://ddc.dk/tools/the-digital-ethics-compass-data"
+    ],
+    "citation": "Danish Design Center (2021). The Digital Ethics Compass: principles and question pages.",
+    "licence": "CC Attribution (site; version unstated)."
+  },
+  "ddc2021compass": {
+    "kind": "html",
+    "vendored": false,
+    "urls": [
+      "https://ddc.dk/tools/toolkit-the-digital-ethics-compass/",
+      "https://ddc.dk/tools/the-digital-ethics-compass-human-at-the-center/"
+    ],
+    "citation": "Danish Design Center (2021). Toolkit: The Digital Ethics Compass.",
+    "licence": "CC Attribution (site; version unstated)."
+  },
+  "gispen2017contract": {
+    "kind": "html",
+    "vendored": false,
+    "urls": [
+      "https://www.ethicsfordesigners.com/ethical-contract"
+    ],
+    "citation": "Gispen, J. (2017). Ethics for Designers: Ethical Contract.",
+    "licence": "(c) Jet Gispen 2017; no terms stated."
+  },
+  "gispen2017normative": {
+    "kind": "html",
+    "vendored": false,
+    "urls": [
+      "https://www.ethicsfordesigners.com/normative-design-scheme"
+    ],
+    "citation": "Gispen, J. (2017). Ethics for Designers: Normative Design Scheme.",
+    "licence": "(c) Jet Gispen 2017; no terms stated."
+  },
+  "gispen2017disclaimer": {
+    "kind": "html",
+    "vendored": false,
+    "urls": [
+      "https://www.ethicsfordesigners.com/ethical-disclaimer"
+    ],
+    "citation": "Gispen, J. (2017). Ethics for Designers: Ethical Disclaimer.",
+    "licence": "(c) Jet Gispen 2017; no terms stated."
+  },
+  "eu2022dsa": {
+    "kind": "html",
+    "vendored": false,
+    "urls": [
+      "https://www.springlex.eu/en/packages/dsa/dsa-regulation/article-25/",
+      "https://www.springlex.eu/en/packages/dsa/dsa-regulation/article-52/"
+    ],
+    "citation": "Regulation (EU) 2022/2065 (Digital Services Act), Art. 25 and Art. 52.",
+    "licence": "EU legislation."
+  },
+  "eu2016gdpr": {
+    "kind": "html",
+    "vendored": false,
+    "urls": [
+      "https://gdpr-info.eu/art-7-gdpr/"
+    ],
+    "citation": "Regulation (EU) 2016/679 (GDPR), Art. 7.",
+    "licence": "EU legislation."
+  },
+  "ecfr2024adverse": {
+    "kind": "html",
+    "vendored": false,
+    "urls": [
+      "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1607/section-1607.4"
+    ],
+    "citation": "29 CFR 1607.4 (Uniform Guidelines on Employee Selection Procedures).",
+    "licence": "US federal regulation."
+  },
+  "w3c2023wcag22": {
+    "kind": "html",
+    "vendored": false,
+    "urls": [
+      "https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html",
+      "https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html"
+    ],
+    "citation": "W3C (2023). WCAG 2.2 Understanding pages: target size (enhanced), contrast (enhanced).",
+    "licence": "W3C document licence."
+  },
+  "silverman2021slides": {
+    "kind": "html",
+    "vendored": false,
+    "urls": [
+      "https://noti.st/mynameisjoshsilverman/rF9XUy/slides"
+    ],
+    "citation": "Silverman, J. (2021). Slides presenting the Humane Design Guide (third-party copy).",
+    "licence": "Unknown."
+  }
+}

@@ -51,3 +51,5 @@ pip-delete-this-directory.txt
 # Archify: keep the JSON spec and exported SVG; the HTML viewer and check screenshots are regenerated locally
 docs/diagrams/*.html
 docs/diagrams/*.visual-check.*
+papers/local/
+papers/pages/
