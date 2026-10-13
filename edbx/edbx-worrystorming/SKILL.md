@@ -112,7 +112,7 @@ Present as grouped sections with severity tags.
 
 ### Step 4 — Reframe as Design Values
 
-For each cluster, derive three artifacts:
+For every cluster, not only the Critical ones, derive three artifacts (Step 5 is the step limited to Critical clusters):
 
 1. **Ethical Objective:** A commitment statement: "We commit to [X] in order to avoid [Y]."
 2. **Design Constraint:** A concrete requirement or rule the design must satisfy. "The product must allow users to delete all data within 30 seconds."
@@ -142,12 +142,12 @@ Compile the full session into a structured deliverable. Open it with a short **A
 
 1. **Full Worry List** — the raw 10–20 concerns (Step 2)
 2. **Clustered Worry Themes** — with severity tags (Step 3)
-3. **Ethical Objectives + Design Constraints + Test Questions** — the reframed values (Step 4)
+3. **Ethical Objectives + Design Constraints + Test Questions** — the reframed values (Step 4), for every cluster
 4. **Refined Ideas or Mitigations** — for all 🔴 Critical clusters (Step 5)
 5. **Worrystorm Summary** — a single paragraph framing the key ethical challenges and the values the design should uphold
 6. **Evidence Ledger** — every figure or fact about the user's situation the output relies on, typed as below
 
-Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis names a paper from this skill's Sources, or a URL from the user or from a search run in this session), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims and need no row, but keep them visibly marked as invented. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
+Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis holds a URL from the user or from a search run in this session; these skills carry no source list, so a book, paper, report or regulation named without such a URL is `assumption`), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims: give them no ledger row (the Type column holds only the four words above), and keep them visibly marked as invented in the body. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
 
 The summary is the session's artifact. It should fit on a sticky note and be specific enough to guide the next design decision.
 

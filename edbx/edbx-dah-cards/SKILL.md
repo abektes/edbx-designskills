@@ -143,7 +143,7 @@ This reflection is the heart of the method. Sorting is just the setup.
 
 ### Mode 3: Ethical Manifesto
 
-> **Artifact delivery rule:** If the team has not yet completed a consequence mapping or sorting exercise, do not wait for it. State your best-estimate consequences and sorting verdict explicitly as working assumptions, then proceed directly to manifesto writing. Name the assumptions. Do not block artifact delivery on missing pre-work.
+> **Artifact delivery rule:** If the team has not yet completed a consequence mapping or sorting exercise, do not wait for it. State your best-estimate consequences and sorting verdict explicitly as working assumptions, then proceed directly to manifesto writing. Name the assumptions. Do not block artifact delivery on missing pre-work. This does not drop the DAH Card Pairs: they are still required in this mode, written first (as working assumptions when the team never ran them), then the manifesto.
 
 Use the sorting exercise (or your stated assumptions) as raw material for a personal or team ethical design manifesto. A manifesto is not a policy document — it's a commitment written in the first person that captures what you believe design should and should not do.
 
@@ -238,7 +238,7 @@ One concrete design change the team can implement in the next sprint — specifi
 |---|---|---|
 | [figure, rate or fact the output relies on] | [user-supplied / sourced / assumption / unknown] | [the brief / paper or URL / why assumed] |
 
-Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis names a paper from this skill's Sources, or a URL from the user or from a search run in this session), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims and need no row, but keep them visibly marked as invented. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
+Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis holds a URL from the user or from a search run in this session; these skills carry no source list, so a book, paper, report or regulation named without such a URL is `assumption`), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims: give them no ledger row (the Type column holds only the four words above), and keep them visibly marked as invented in the body. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
 
 ---
 
