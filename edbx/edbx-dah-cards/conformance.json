@@ -1,36 +1,59 @@
 {
   "skill": "edbx-dah-cards",
-  "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. Counts, set coverage and mode selection are code; only genuine judgment goes to Jev.",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. Counts, set coverage and mode selection are code; only genuine judgment goes to Jev. Manifesto and Future Vision quality are judged only on the section, so they are skipped when the mode was not requested (eval-0 and eval-1 are audit-only).",
   "enumerators": {
     "ledger_type_cells": {
       "type": "table_cells",
       "in_section": "Evidence Ledger",
-      "column": "Type"
+      "column": "Type",
+      "strict": true
     },
     "card_categories": {
       "type": "table_cells",
       "in_section": "DAH Card Pairs",
-      "column": "Category"
+      "column": "Category",
+      "strict": true
     },
     "card_harms": {
       "type": "table_cells",
       "in_section": "DAH Card Pairs",
-      "column": "White side"
+      "column": "White side",
+      "strict": true
     },
     "consequences": {
       "type": "table_cells",
       "in_section": "Consequence Map",
-      "column": "Consequence"
+      "column": "Consequence",
+      "strict": true
     },
     "verdicts": {
       "type": "table_cells",
       "in_section": "Sorting Verdict",
-      "column": "Verdict"
+      "column": "Verdict",
+      "strict": true
+    },
+    "likelihoods": {
+      "type": "table_cells",
+      "in_section": "Consequence Map",
+      "column": "Likelihood",
+      "strict": true
+    },
+    "unlikely_consequences": {
+      "type": "table_rows",
+      "in_section": "Consequence Map",
+      "column": "Consequence",
+      "strict": true,
+      "full": true,
+      "where": {
+        "column": "Likelihood",
+        "matches": "possible|edge"
+      }
     },
     "unethical_items": {
       "type": "table_rows",
       "in_section": "Sorting Verdict",
       "column": "Item",
+      "strict": true,
       "where": {
         "column": "Verdict",
         "matches": "unethical"
@@ -96,6 +119,32 @@
       "desc": "the Consequence Map names at least 5 consequences"
     },
     {
+      "id": "likelihood_graded",
+      "kind": "cells_in_vocabulary",
+      "items": "likelihoods",
+      "vocabulary": ["common", "possible", "edge case"],
+      "bar": "distinguishes between likely and edge-case harms without dismissing either",
+      "desc": "every consequence carries a Likelihood of common / possible / edge case"
+    },
+    {
+      "id": "likely_harm_named",
+      "kind": "min_count_matching",
+      "items": "likelihoods",
+      "pattern": "common|likely",
+      "n": 1,
+      "bar": "distinguishes between likely and edge-case harms without dismissing either",
+      "desc": "at least one consequence is rated a common (likely) harm"
+    },
+    {
+      "id": "edge_harm_named",
+      "kind": "min_count_matching",
+      "items": "likelihoods",
+      "pattern": "possible|edge",
+      "n": 1,
+      "bar": "distinguishes between likely and edge-case harms without dismissing either",
+      "desc": "at least one consequence is rated a possible or edge-case harm, and kept in the map"
+    },
+    {
       "id": "audit_not_too_gentle",
       "kind": "min_count_matching",
       "items": "verdicts",
@@ -148,6 +197,36 @@
       "criteria": {
         "true": "Names the specific change to make to a specific surface -- what to add, remove, reword or reorder -- concretely enough to start work.",
         "false": "States a goal or principle such as 'reduce addictive patterns', 'be more transparent' or 'respect user attention' without saying what to actually change."
+      }
+    },
+    {
+      "id": "edge_case_harm_not_dismissed",
+      "each": "unlikely_consequences",
+      "bar": "distinguishes between likely and edge-case harms without dismissing either",
+      "instructions": "Does `items[{i}]` keep a less likely harm in the map as a real harm, rather than waving it off?",
+      "criteria": {
+        "true": "States a severity and who bears the harm, and treats it as something the design should answer to even though it is not the common case -- a rare but serious or irreversible harm is named as such.",
+        "false": "Mentions the harm only to dismiss it ('unlikely', 'rare', 'minor, ignore') or leaves severity and who bears it empty, so the lower likelihood is used as a reason to stop caring."
+      }
+    },
+    {
+      "id": "manifesto_creates_friction",
+      "section": "manifesto",
+      "bar": "when Manifesto IS requested: produces commitments specific enough to create friction in future decisions",
+      "instructions": "Would `items[{i}]` make a future design or shipping decision harder or different for this team?",
+      "criteria": {
+        "true": "Its commitments and refusals name concrete practices, mechanics or decision rules (for example 'no shame copy for a missed day', 'default to opt-in for features that reward frequency') that a team could be held to, or that would block a specific idea.",
+        "false": "Its commitments are values anyone would sign ('we believe in user wellbeing', 'we will be transparent') and no feature, mechanic or decision would be handled differently because of them."
+      }
+    },
+    {
+      "id": "vision_grounded_in_audit",
+      "section": "future (design )?vision",
+      "bar": "when Future Vision IS requested: grounds the vision in the audit's findings, not abstract idealism",
+      "instructions": "Is `items[{i}]` built from specific harms found in the audit rather than from abstract aspiration?",
+      "criteria": {
+        "true": "The problem statement and each proposed product or feature trace back to named mechanics or harms from the audit (a streak, a notification default, a data flow) and say what would have to change to make them viable.",
+        "false": "Describes an idealised future ('technology that empowers people', 'humane products') that could be pasted under any audit, with no named finding behind it."
       }
     },
     {

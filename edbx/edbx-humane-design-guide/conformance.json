@@ -1,16 +1,18 @@
 {
   "skill": "edbx-humane-design-guide",
-  "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. Worksheet coverage, per-row fields and per-red counts are code; heuristics are checked against the skill's own examples, since a copied example is by construction not product-specific.",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. Worksheet coverage, per-row fields and per-red counts are code; heuristics are checked against the skill's own examples, since a copied example is by construction not product-specific. All 18 bars are checked. Notes: red_rows_x3 repeats the red-row list three times so one metric-change line per alternative (A, B, C) can be counted against every 🔴 row; patterns_named is only a floor (a baseline also names infinite scroll or read receipts), the per-row semantic current_state_specific carries the real judgment; the per-red Business Tension and radical-alternative counts read the labelled lines the skill's Step 3 template produces.",
   "enumerators": {
     "ledger_type_cells": {
       "type": "table_cells",
       "in_section": "Evidence Ledger",
-      "column": "Type"
+      "column": "Type",
+      "strict": true
     },
     "sensitivities": {
       "type": "table_cells",
       "in_section": "Sensitivity|Worksheet|Audit",
       "column": "Sensitivity",
+      "strict": true,
       "where": {
         "column": "Level",
         "matches": "."
@@ -20,6 +22,7 @@
       "type": "table_rows",
       "in_section": "Sensitivity|Worksheet|Audit",
       "column": "Sensitivity",
+      "strict": true,
       "where": {
         "column": "Level",
         "matches": "🔴|🟡|\\bhigh\\b|\\bmedium\\b"
@@ -29,6 +32,7 @@
       "type": "table_cells",
       "in_section": "Sensitivity|Worksheet|Audit",
       "column": "Mechanism",
+      "strict": true,
       "where": {
         "column": "Level",
         "matches": "🔴|🟡|\\bhigh\\b|\\bmedium\\b"
@@ -38,6 +42,7 @@
       "type": "table_rows",
       "in_section": "Sensitivity|Worksheet|Audit",
       "column": "Sensitivity",
+      "strict": true,
       "where": {
         "column": "Level",
         "matches": "🔴|\\bhigh\\b"
@@ -47,15 +52,59 @@
       "type": "table_cells",
       "in_section": "Sensitivity|Worksheet|Audit",
       "column": "Enabled",
+      "strict": true,
       "where": {
         "column": "Level",
         "matches": "."
       }
     },
+    "current_state_cells": {
+      "type": "table_cells",
+      "in_section": "Sensitivity|Worksheet|Audit",
+      "column": "Current State",
+      "strict": true,
+      "where": {
+        "column": "Level",
+        "matches": "."
+      }
+    },
+    "risk_cells": {
+      "type": "table_cells",
+      "in_section": "Sensitivity|Worksheet|Audit",
+      "column": "At Risk",
+      "strict": true,
+      "where": {
+        "column": "Level",
+        "matches": "."
+      }
+    },
+    "flagged_current_state": {
+      "type": "table_cells",
+      "in_section": "Sensitivity|Worksheet|Audit",
+      "column": "Current State",
+      "strict": true,
+      "where": {
+        "column": "Level",
+        "matches": "🔴|🟡|\\bhigh\\b|\\bmedium\\b"
+      }
+    },
+    "red_rows_x3": {
+      "type": "union",
+      "of": [
+        {"type": "table_rows", "in_section": "Sensitivity|Worksheet|Audit", "column": "Sensitivity", "strict": true, "where": {"column": "Level", "matches": "🔴|\\bhigh\\b"}},
+        {"type": "table_rows", "in_section": "Sensitivity|Worksheet|Audit", "column": "Sensitivity", "strict": true, "where": {"column": "Level", "matches": "🔴|\\bhigh\\b"}},
+        {"type": "table_rows", "in_section": "Sensitivity|Worksheet|Audit", "column": "Sensitivity", "strict": true, "where": {"column": "Level", "matches": "🔴|\\bhigh\\b"}}
+      ]
+    },
+    "metric_changes": {
+      "type": "phrase_matches",
+      "in_section": "Design Alternatives",
+      "pattern": "metric (?:change|impact|trade-?off)s?\\W"
+    },
     "radical_alternatives": {
       "type": "phrase_matches",
       "in_section": "Design Alternatives",
-      "pattern": "Alternative C\\b|radical reframe"
+      "pattern": "Alternative C\\b|\\bC\\s*\\((?:radical|reframe)"
     },
     "kpi_tensions": {
       "type": "phrase_matches",
@@ -67,7 +116,8 @@
         {
           "type": "table_rows",
           "in_section": "Compound|Exploitation Stack",
-          "column": "Features"
+          "column": "Features",
+          "strict": true
         },
         {
           "type": "phrase_matches",
@@ -82,7 +132,7 @@
     },
     "heuristics": {
       "type": "list_items",
-      "in_section": "Heuristic"
+      "in_section": "Heuristics\\b"
     }
   },
   "structural": [
@@ -235,6 +285,70 @@
       "desc": "surfaces the Engagement-Value Paradox"
     },
     {
+      "id": "worksheet_filled",
+      "kind": "count_covers",
+      "items": "current_state_cells",
+      "covers": "sensitivities",
+      "bar": "produces a filled worksheet equivalent without needing physical paper",
+      "desc": "the worksheet table has a filled Current State for every sensitivity row"
+    },
+    {
+      "id": "worksheet_risk_filled",
+      "kind": "count_covers",
+      "items": "risk_cells",
+      "covers": "sensitivities",
+      "bar": "produces a filled worksheet equivalent without needing physical paper",
+      "desc": "the worksheet table has a filled What's at Risk for every sensitivity row"
+    },
+    {
+      "id": "patterns_named",
+      "kind": "vocabulary_range",
+      "vocabulary": [
+        "infinite scroll", "autoplay", "notification", "variable reward", "variable-reward",
+        "streak", "filter bubble", "echo chamber", "dark pattern", "confirmshaming",
+        "roach motel", "false urgency", "social comparison", "status quantification",
+        "algorithmic amplification", "currency of likes", "like count", "follower count",
+        "beauty filter", "fomo", "forced continuity", "friction asymmetry", "read receipt",
+        "outrage", "polariz"
+      ],
+      "min": 2,
+      "bar": "names specific exploitation patterns (infinite scroll, filter bubbles) rather than vague concerns",
+      "desc": "the audit names at least 2 specific exploitation patterns from the skill's library"
+    },
+    {
+      "id": "alternatives_metric_tradeoff",
+      "kind": "count_covers",
+      "items": "metric_changes",
+      "covers": "red_rows_x3",
+      "bar": "generates concrete alternatives with metric trade-offs and business tensions",
+      "desc": "each of the three alternatives for every 🔴 sensitivity states its metric change"
+    },
+    {
+      "id": "algorithm_bias_mechanisms",
+      "kind": "all_phrases",
+      "section": "Algorithm",
+      "phrases": ["proxy|proxies", "disadvantag|inequalit|marginali[sz]ed|minorit|bias"],
+      "bar": "explicitly addresses algorithmic-bias mechanisms when scoring/ranking/filtering is present",
+      "desc": "the Algorithm Audit names the proxy inputs and who they disadvantage"
+    },
+    {
+      "id": "paradox_names_metric",
+      "kind": "all_phrases",
+      "section": "Paradox",
+      "phrases": ["metric|measure|KPI|DAU|retention|time spent|session"],
+      "bar": "flags when measures of success themselves indicate exploitation",
+      "desc": "the Engagement-Value Paradox section points at the success metrics themselves"
+    },
+    {
+      "id": "measures_of_success_stated",
+      "kind": "any_of",
+      "checks": [
+        {"kind": "section_present", "pattern": "measures? of success|success (?:measures|metrics)"}
+      ],
+      "bar": "flags when measures of success themselves indicate exploitation",
+      "desc": "the header states the measures of success (given or inferred) so they can be flagged"
+    },
+    {
       "id": "humane_statement",
       "kind": "section_present",
       "pattern": "Humane Design Statement",
@@ -242,5 +356,46 @@
       "desc": "a Humane Design Statement section exists"
     }
   ],
-  "semantic": []
+  "semantic": [
+    {
+      "id": "current_state_specific",
+      "each": "flagged_current_state",
+      "bar": "names specific exploitation patterns (infinite scroll, filter bubbles) rather than vague concerns",
+      "instructions": "Does `items[{i}]` name at least one specific design mechanism of this product that exploits users, rather than only a vague concern?",
+      "criteria": {
+        "true": "Names a concrete mechanism or feature, such as infinite scroll, autoplay, streaks, read receipts, a hidden desirability score, personalized feed, blurred teaser profiles or push alerts, and says what it does.",
+        "false": "Only a general worry such as 'users may feel bad', 'engagement is high' or 'the design is manipulative' with no named mechanism."
+      }
+    },
+    {
+      "id": "algorithm_bias_mechanism",
+      "section": "Algorithm",
+      "bar": "explicitly addresses algorithmic-bias mechanisms when scoring/ranking/filtering is present",
+      "instructions": "Does `items[0]` name at least one specific algorithmic-bias mechanism and say which group it disadvantages?",
+      "criteria": {
+        "true": "Names a mechanism such as engagement amplification of anxiety-provoking content, Elo-style scoring carrying historical participation bias, beauty-filter colorism, or a demographic proxy standing in for merit, AND names who it disadvantages.",
+        "false": "Only says the algorithm 'might be biased' or 'should be audited' with no mechanism, or names a mechanism with no affected group."
+      }
+    },
+    {
+      "id": "alternatives_concrete",
+      "section": "Design Alternatives",
+      "bar": "generates concrete alternatives with metric trade-offs and business tensions",
+      "instructions": "Do the alternatives in `items[0]` each describe a specific change to a named feature, with an expected change in a named metric?",
+      "criteria": {
+        "true": "Alternatives name a concrete change to a named product feature (for example a 'load more' button after 10 items) and say which metric moves and in which direction.",
+        "false": "Alternatives are general aspirations such as 'be less addictive' or 'improve wellbeing', or give no metric consequence."
+      }
+    },
+    {
+      "id": "metric_is_the_problem",
+      "section": "Paradox",
+      "bar": "flags when measures of success themselves indicate exploitation",
+      "instructions": "Does `items[0]` name the product's own success metric and say that the metric itself rewards extraction or conflicts with user wellbeing?",
+      "criteria": {
+        "true": "Names a specific metric (for example time spent, DAU, streak retention, paid conversion) and states that optimizing it works against users, so the metric is part of the problem.",
+        "false": "Discusses harms of features only, or mentions metrics without saying the metric itself conflicts with wellbeing."
+      }
+    }
+  ]
 }

@@ -1,51 +1,89 @@
 {
   "skill": "edbx-pledge-works",
-  "_note": "Structural layer first: pledge-works already produces its three registers in every sampled run, so semantic judges are built only where the code checks leave gaps.",
+  "_note": "Structural layer first: pledge-works already produces its three registers in every sampled run, so semantic judges are built only where the code checks leave gaps. Two bars are deliberately not machine-checked: 'accepts outputs from any other skill in the set as pledge anchors' (no scenario in evals.json supplies another skill's output; food-delivery-pledges only describes audit findings in prose, so a check would test one scenario's wording, not the claim) and 'works at individual, team, and org-wide scope' (no scenario asks for a stated scope, and the three scenarios do not map to the three scopes). Add a scenario per scope or per upstream skill, then add the checks. Early-warning, consequence and cadence counts read the labelled lines the skill's Stage 3 template produces. The stress-test bar is checked by presence in code and, for the per-pledge claim, by a document-level semantic check because outputs legitimately stress-test pledges in groups ('P1/P4 at risk').",
   "enumerators": {
     "ledger_type_cells": {
       "type": "table_cells",
       "in_section": "Evidence Ledger",
-      "column": "Type"
+      "column": "Type",
+      "strict": true
     },
     "register_rows": {
       "type": "table_rows",
       "in_section": "pledge register",
-      "column": "Pledge"
+      "column": "Pledge",
+      "strict": true
     },
     "register_types": {
       "type": "table_cells",
       "in_section": "pledge register",
-      "column": "Type"
+      "column": "Type",
+      "strict": true
     },
     "register_owners": {
       "type": "table_cells",
       "in_section": "pledge register",
-      "column": "Owner"
+      "column": "Owner",
+      "strict": true
     },
     "register_default": {
       "type": "table_cells",
       "in_section": "pledge register",
-      "column": "Default"
+      "column": "Default",
+      "strict": true
     },
     "redline_rows": {
       "type": "table_rows",
       "in_section": "refuse to build",
-      "column": "Refusal"
+      "column": "Refusal",
+      "strict": true
     },
     "redline_owners": {
       "type": "table_cells",
       "in_section": "refuse to build",
-      "column": "Owner"
+      "column": "Owner",
+      "strict": true
     },
     "redline_consequence": {
       "type": "table_cells",
       "in_section": "refuse to build",
-      "column": "Consequence"
+      "column": "Consequence",
+      "strict": true
     },
     "trace_rows": {
       "type": "table_rows",
       "in_section": "traceability",
-      "column": "Pledge"
+      "column": "Pledge",
+      "strict": true
+    },
+    "register_default_rows": {
+      "type": "table_rows",
+      "in_section": "pledge register",
+      "column": "Pledge",
+      "strict": true,
+      "where": {
+        "column": "Default",
+        "matches": "^\\W*(?:yes|default|challeng)"
+      }
+    },
+    "register_rows_x2": {
+      "type": "union",
+      "of": [
+        {"type": "table_rows", "in_section": "pledge register", "column": "Pledge", "strict": true},
+        {"type": "table_rows", "in_section": "pledge register", "column": "Pledge", "strict": true}
+      ]
+    },
+    "early_warnings": {
+      "type": "phrase_matches",
+      "pattern": "early[- ]warning(?: indicator)?\\**:\\**[^\\n]{15,}|early[- ]warning\\s*[\u2014\u2013-]\\s*[^\\n]{15,}"
+    },
+    "consequence_lines": {
+      "type": "phrase_matches",
+      "pattern": "consequence(?: for breach)?\\**:\\**[^\\n]{10,}"
+    },
+    "cadence_lines": {
+      "type": "phrase_matches",
+      "pattern": "review cadence\\**:\\**[^\\n]{5,}"
     },
     "stories": {
       "type": "phrase_matches",
@@ -63,12 +101,14 @@
         {
           "type": "table_cells",
           "in_section": "",
-          "column": "Success Indicator"
+          "column": "Success Indicator",
+          "strict": true
         },
         {
           "type": "table_cells",
           "in_section": "",
-          "column": "Failure Signal"
+          "column": "Failure Signal",
+          "strict": true
         }
       ]
     }
@@ -114,7 +154,7 @@
       "vocabulary": [
         "Simple",
         "Responsible",
-        "To Whom"
+        "Whom"
       ],
       "n": 3,
       "bar": "produces minimum 6 pledges (3 Simple + 2 Responsible Stories + 1 To Whom)",
@@ -178,6 +218,56 @@
       "covers": "register_rows"
     },
     {
+      "id": "indicators_per_pledge",
+      "kind": "count_covers",
+      "items": "indicators",
+      "covers": "register_rows_x2",
+      "bar": "every pledge has all five operationalization fields: quantitative success indicator (with number/threshold), quantitative failure signal (with breach threshold)",
+      "desc": "every pledge in the register has both a success indicator and a failure signal"
+    },
+    {
+      "id": "consequence_per_pledge",
+      "kind": "count_covers",
+      "items": "consequence_lines",
+      "covers": "register_rows",
+      "bar": "every pledge has all five operationalization fields: quantitative success indicator, quantitative failure signal, named owner, consequence for breach, and review cadence",
+      "desc": "every pledge in the register has a consequence for breach"
+    },
+    {
+      "id": "cadence_per_pledge",
+      "kind": "count_covers",
+      "items": "cadence_lines",
+      "covers": "register_rows",
+      "bar": "every pledge has all five operationalization fields: quantitative success indicator, quantitative failure signal, named owner, consequence for breach, and review cadence",
+      "desc": "every pledge in the register has a review cadence"
+    },
+    {
+      "id": "early_warning_per_default",
+      "kind": "count_covers",
+      "items": "early_warnings",
+      "covers": "register_default_rows",
+      "bar": "every default-challenging pledge has an early warning indicator distinct from the failure signal",
+      "desc": "every default-challenging pledge has its own early warning indicator"
+    },
+    {
+      "id": "stress_test_present",
+      "kind": "any_of",
+      "checks": [
+        {"kind": "section_present", "pattern": "stress test"}
+      ],
+      "bar": "every default-challenging pledge has a stress test result and a named protective mechanism",
+      "desc": "the output runs a pledge stress test"
+    },
+    {
+      "id": "protective_mechanism_named",
+      "kind": "any_of",
+      "checks": [
+        {"kind": "section_present", "pattern": "protective mechanism|approval gate|escalation path"}
+      ],
+      "bar": "every default-challenging pledge has a stress test result and a named protective mechanism",
+      "desc": "the stress test names a protective mechanism, gate or escalation path"
+    },
+    {
       "id": "register_exists",
       "kind": "section_present",
       "pattern": "pledge register",
@@ -186,6 +276,26 @@
     }
   ],
   "semantic": [
+    {
+      "id": "early_warning_is_leading",
+      "each": "early_warnings",
+      "bar": "every default-challenging pledge has an early warning indicator distinct from the failure signal",
+      "instructions": "Is `items[{i}]` a leading indicator, an observable event or behavior that happens BEFORE the pledge is broken, rather than the breach or failure threshold itself?",
+      "criteria": {
+        "true": "Describes a precursor that can be observed while the pledge is still intact, such as a waiver request, a skipped review, a proposal to merge or remove a disclosure, or a metric drifting toward its threshold.",
+        "false": "Restates the failure itself (the pledge has already been broken, or a number is already past its failure threshold), or is a vague worry with nothing observable."
+      }
+    },
+    {
+      "id": "stress_test_covers_defaults",
+      "scope": "document",
+      "bar": "every default-challenging pledge has a stress test result and a named protective mechanism",
+      "instructions": "In the pledge document `items[{i}]`, is every pledge marked default-challenging in the Pledge Register covered by a stress-test scenario that gives a result and names a protective mechanism (a process, approval gate or escalation path) for it? A mechanism written for a stated group of pledges covers each pledge in the group.",
+      "criteria": {
+        "true": "Every default-challenging pledge appears in a stress-test scenario, alone or as part of a named group, and each scenario names a concrete protective mechanism.",
+        "false": "One or more default-challenging pledges have no stress test, or a scenario names only an intention ('leadership should hold firm') and no mechanism."
+      }
+    },
     {
       "id": "indicator_measurable",
       "each": "indicators",

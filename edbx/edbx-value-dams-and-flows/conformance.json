@@ -5,12 +5,14 @@
     "ledger_type_cells": {
       "type": "table_cells",
       "in_section": "Evidence Ledger",
-      "column": "Type"
+      "column": "Type",
+      "strict": true
     },
     "map_rows": {
       "type": "table_rows",
       "in_section": "Dam.?.?Flow Map",
-      "column": "Feature"
+      "column": "Feature",
+      "strict": true
     },
     "map_dams": {
       "type": "table_rows",
@@ -19,12 +21,14 @@
       "where": {
         "column": "Dam or Flow",
         "matches": "DAM"
-      }
+      },
+      "strict": true
     },
     "map_values": {
       "type": "table_cells",
       "in_section": "Dam.?.?Flow Map",
-      "column": "Underlying Value"
+      "column": "Underlying Value",
+      "strict": true
     },
     "map_intensity": {
       "type": "table_cells",
@@ -33,7 +37,8 @@
       "where": {
         "column": "Dam or Flow",
         "matches": "DAM"
-      }
+      },
+      "strict": true
     },
     "nav_items": {
       "type": "headings",
@@ -54,7 +59,8 @@
       "where": {
         "column": "Dam or Flow",
         "matches": "DAM"
-      }
+      },
+      "strict": true
     }
   },
   "structural": [

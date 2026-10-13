@@ -1,6 +1,6 @@
 {
   "skill": "edbx-cider",
-  "_note": "Machine-checkable form of the Deliverable Quality Bar. The team-mode register bar is deliberately not implemented: none of the eval prompts request team mode, so it cannot be measured on this set.",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar. The one bar not covered is 'in team mode, produces a shared register with more assumptions than any individual surfaced alone': none of the eval prompts request team mode (each is a solo audit of a design), the register is optional for solo use, and 'more than any individual' needs the individual lists, which a single generated document does not contain. A check on it would pass vacuously, so it is left out rather than faked.",
   "enumerators": {
     "ledger_type_cells": {
       "type": "table_cells",
@@ -93,6 +93,19 @@
       "desc": "the second cycle examines a different assumption from the first",
       "first_section": "stage i\\b|exclusion scenario",
       "second_section": "stage r\\b|second cycle"
+    },
+    {
+      "id": "commitment_parts",
+      "kind": "all_phrases",
+      "section": "commitment",
+      "phrases": [
+        "we commit to",
+        "\\b(?:by|within|before|in the next|next)\\b",
+        "owned by|owner|\\bteam\\b|\\blead\\b",
+        "because we learned|excludes?"
+      ],
+      "bar": "closes with a commitment specific enough to create accountability",
+      "desc": "the closing commitment states an action, a time frame, an owner and the exclusion it removes"
     }
   ],
   "semantic": [

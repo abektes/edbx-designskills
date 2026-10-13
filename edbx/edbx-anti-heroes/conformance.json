@@ -5,17 +5,20 @@
     "ledger_type_cells": {
       "type": "table_cells",
       "in_section": "Evidence Ledger",
-      "column": "Type"
+      "column": "Type",
+      "strict": true
     },
     "card_cells": {
       "type": "table_cells",
       "in_section": "",
-      "column": "Card"
+      "column": "Card",
+      "strict": true
     },
     "where_cells": {
       "type": "table_cells",
       "in_section": "",
-      "column": "Where"
+      "column": "Where",
+      "strict": true
     }
   },
   "structural": [

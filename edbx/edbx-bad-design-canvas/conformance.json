@@ -5,7 +5,8 @@
     "ledger_type_cells": {
       "type": "table_cells",
       "in_section": "Evidence Ledger",
-      "column": "Type"
+      "column": "Type",
+      "strict": true
     },
     "sourced_basis_cells": {
       "type": "table_cells",
@@ -14,7 +15,8 @@
       "where": {
         "column": "Type",
         "matches": "^\\s*sourced"
-      }
+      },
+      "strict": true
     },
     "canvas_cells": {
       "type": "union",

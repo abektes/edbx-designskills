@@ -1,22 +1,25 @@
 {
   "skill": "edbx-fair-patterns",
-  "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. Every per-pattern bar is a coverage count against the Dark Pattern Audit, so it is code; Jev judges only whether a root cause is upstream.",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. Every per-pattern bar is a coverage count against the Dark Pattern Audit, so it is code; Jev judges only whether a root cause is upstream. Not machine-checked: \"handles low-dark-pattern products without false positives\" -- all three scenarios in evals/evals.json are riddled with dark patterns, so any check would pass vacuously; it needs a clean-product scenario. Conditional bars (copy rewrite, protective default) are scoped to the rows that trigger them.",
   "enumerators": {
     "ledger_type_cells": {
       "type": "table_cells",
       "in_section": "Evidence Ledger",
-      "column": "Type"
+      "column": "Type",
+      "strict": true
     },
     "patterns": {
       "type": "table_rows",
       "in_section": "Dark Pattern (Audit|Identification)",
       "column": "Pattern Type",
+      "strict": true,
       "nearest": true
     },
     "countermeasures": {
       "type": "table_rows",
       "in_section": "Countermeasure",
       "column": "Dark Pattern",
+      "strict": true,
       "nearest": true
     },
     "root_causes": {
@@ -28,54 +31,90 @@
       "type": "table_rows",
       "in_section": "Legal",
       "column": "Dark Pattern",
+      "strict": true,
       "nearest": true
     },
     "statutes": {
       "type": "table_cells",
       "in_section": "Legal",
       "column": "Statute",
+      "strict": true,
       "nearest": true
     },
     "jurisdictions": {
       "type": "table_cells",
       "in_section": "Legal",
       "column": "Jurisdiction",
+      "strict": true,
       "nearest": true
     },
     "penalties": {
       "type": "table_cells",
       "in_section": "Legal",
       "column": "Penalty",
+      "strict": true,
       "nearest": true
     },
     "vuln_rows": {
       "type": "table_rows",
       "in_section": "Vulnerable Population",
       "column": "Pattern",
+      "strict": true,
       "nearest": true
     },
     "vuln_mechanisms": {
       "type": "table_cells",
       "in_section": "Vulnerable Population",
       "column": "Mechanism",
+      "strict": true,
       "nearest": true
+    },
+    "audit_default_rows": {
+      "type": "table_rows",
+      "in_section": "Default Audit",
+      "column": "UI Element",
+      "strict": true
+    },
+    "harmful_default_recs": {
+      "type": "table_cells",
+      "in_section": "Default Audit",
+      "column": "Recommended Default",
+      "strict": true,
+      "where": {
+        "column": "Current Default",
+        "matches": "🔴|harmful"
+      }
+    },
+    "shaming_patterns": {
+      "type": "table_rows",
+      "in_section": "Dark Pattern (Audit|Identification)",
+      "column": "Pattern Type",
+      "nearest": true,
+      "strict": true,
+      "where": {
+        "column": "Pattern Type",
+        "matches": "confirmshaming|trick question"
+      }
     },
     "metrics": {
       "type": "table_cells",
       "in_section": "Implementation Sequence",
       "column": "Metric",
+      "strict": true,
       "nearest": true
     },
     "owners": {
       "type": "table_cells",
       "in_section": "Implementation Sequence",
       "column": "Owner",
+      "strict": true,
       "nearest": true
     },
     "sprints": {
       "type": "table_cells",
       "in_section": "Implementation Sequence",
       "column": "Sprint",
+      "strict": true,
       "nearest": true
     }
   },
@@ -189,7 +228,7 @@
       "id": "metric_has_threshold",
       "kind": "cells_match",
       "items": "metrics",
-      "pattern": "(?i)\\d|\\bzero\\b|\\bnone\\b|\\bno\\b",
+      "pattern": "(?i)\\d|\\bzero\\b|\\bnone\\b|\\bno\\b|[=<>≤≥]|\\bequal",
       "bar": "produces an Implementation Sequence with a measurable success metric and threshold + named owner + target sprint on every row",
       "desc": "every Implementation Sequence metric carries a threshold"
     },
@@ -208,6 +247,31 @@
       "pattern": "\\w",
       "bar": "produces an Implementation Sequence with a measurable success metric and threshold + named owner + target sprint on every row",
       "desc": "every Implementation Sequence row names a target sprint"
+    },
+    {
+      "id": "defaults_audited",
+      "kind": "min_count",
+      "items": "audit_default_rows",
+      "n": 1,
+      "bar": "recommends a protective default for every 🔴 Harmful Default",
+      "desc": "a Default Audit table classifies at least one UI element"
+    },
+    {
+      "id": "protective_default_per_harmful",
+      "kind": "cells_match",
+      "items": "harmful_default_recs",
+      "pattern": "(?i)🟢|protective",
+      "allow_vacuous": true,
+      "bar": "recommends a protective default for every 🔴 Harmful Default",
+      "desc": "every Harmful Default row recommends a protective default"
+    },
+    {
+      "id": "copy_rewrite_for_shaming",
+      "kind": "implied_section",
+      "items": "shaming_patterns",
+      "pattern": "(?is)copy rewrite[^\\n]*\\n.{0,600}?before.{0,1500}?after",
+      "bar": "includes rewritten copy for any confirmshaming or trick question language",
+      "desc": "a Copy Rewrite with Before and After appears whenever a confirmshaming or trick-question pattern is audited"
     },
     {
       "id": "fair_design_statement",

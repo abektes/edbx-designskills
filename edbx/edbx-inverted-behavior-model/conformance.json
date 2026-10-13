@@ -1,71 +1,112 @@
 {
   "skill": "edbx-inverted-behavior-model",
-  "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. 🔴 findings are the Convergence Check rows tagged 🔴 (the skill: every 🔴 row anchors a 🔴 finding); per-prompt bars are coverage against the Prompt Inventory.",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. 🔴 findings are the Convergence Check rows tagged 🔴 (the skill: every 🔴 row anchors a 🔴 finding); per-prompt bars are coverage against the Prompt Inventory. Not machine-checked: \"handles low-risk features without false positives\" -- every scenario in evals/evals.json is a risky feature (tracking, gamified leaderboards, shared savings visible to friends), so a check would pass vacuously; it needs a low-risk scenario. statement_flags_drift is conditional on a 🟡 Convergence row and passes vacuously otherwise.",
   "enumerators": {
     "ledger_type_cells": {
       "type": "table_cells",
       "in_section": "Evidence Ledger",
-      "column": "Type"
+      "column": "Type",
+      "strict": true
     },
     "stakeholders": {
       "type": "table_rows",
       "in_section": "Stakeholder Map",
-      "column": "Stakeholder"
+      "column": "Stakeholder",
+      "strict": true
     },
     "prompts": {
       "type": "table_rows",
       "in_section": "Prompt Inventory",
-      "column": "Prompt"
+      "column": "Prompt",
+      "strict": true
+    },
+    "prompt_triggers": {
+      "type": "table_cells",
+      "in_section": "Prompt Inventory",
+      "column": "Trigger",
+      "strict": true
+    },
+    "prompt_intended": {
+      "type": "table_cells",
+      "in_section": "Prompt Inventory",
+      "column": "Intended",
+      "strict": true
+    },
+    "prompts_full": {
+      "type": "table_rows",
+      "in_section": "Prompt Inventory",
+      "column": "Prompt",
+      "strict": true,
+      "full": true
+    },
+    "drift_prompts": {
+      "type": "table_rows",
+      "in_section": "Convergence",
+      "column": "Prompt",
+      "strict": true,
+      "where": {
+        "column": "Convergence",
+        "matches": "🟡|adjacent|yellow|amber"
+      }
     },
     "convergence_rows": {
       "type": "table_rows",
       "in_section": "Convergence",
-      "column": "Prompt"
+      "column": "Prompt",
+      "strict": true
     },
     "convergence_tags": {
       "type": "table_cells",
       "in_section": "Convergence",
-      "column": "Convergence"
+      "column": "Convergence",
+      "strict": true
     },
     "forecast_rows": {
       "type": "table_rows",
       "in_section": "Behavior Forecast",
       "column": "Prompt",
+      "strict": true,
       "nearest": true
     },
     "forecast_intended": {
       "type": "table_cells",
       "in_section": "Behavior Forecast",
       "column": "Intended",
+      "strict": true,
       "nearest": true
     },
     "forecast_neutral": {
       "type": "table_cells",
       "in_section": "Behavior Forecast",
       "column": "Neutral",
+      "strict": true,
       "nearest": true
     },
     "forecast_harmful": {
       "type": "table_cells",
       "in_section": "Behavior Forecast",
       "column": "Harmful",
+      "strict": true,
       "nearest": true
     },
     "forecast_social": {
       "type": "table_cells",
       "in_section": "Behavior Forecast",
       "column": "Social",
+      "strict": true,
       "nearest": true
     },
     "red_findings": {
       "type": "table_rows",
       "in_section": "Rationali",
-      "column": "Finding"
+      "column": "Finding",
+      "strict": true
     },
     "rebuttals": {
       "type": "table_cells",
       "in_section": "Rationali",
-      "column": "fails"
+      "column": "fails",
+      "strict": true
     },
     "cascade_stages": {
       "type": "union",
@@ -78,7 +119,7 @@
         {
           "type": "phrase_matches",
           "in_section": "Cascade",
-          "pattern": "(?:^|\\n)\\s*(?:[-*]\\s*|\\d+\\.\\s*)?\\*\\*(?!stage)[^*\\n]*(?:week|month|year|day|initial|adaptation|social|relational|identity|generation|cultural)[^*\\n]*\\*\\*"
+          "pattern": "(?:^|\\n)\\s*(?:[-*]\\s*|\\d+\\.\\s*)?\\*{1,2}(?!stage)[^*\\n]*(?:week|month|year|day|initial|adaptation|social|relational|identity|generation|cultural)[^*\\n]*\\*{1,2}"
         }
       ]
     },
@@ -90,12 +131,14 @@
     "consequence_rows": {
       "type": "table_rows",
       "in_section": "Consequence Map",
-      "column": "Behavio"
+      "column": "Behavio",
+      "strict": true
     },
     "red_prompts": {
       "type": "table_rows",
       "in_section": "Convergence",
       "column": "Prompt",
+      "strict": true,
       "where": {
         "column": "Convergence",
         "matches": "🔴|\\bred\\b|\\bhigh\\b"
@@ -154,6 +197,22 @@
       "pattern": "Worst Possible Design|Inversion Artifact",
       "bar": "produces a \"Worst Possible Design\" inversion artifact before forecasting behaviors",
       "desc": "a Worst Possible Design section exists"
+    },
+    {
+      "id": "prompt_has_trigger",
+      "kind": "count_covers",
+      "items": "prompt_triggers",
+      "covers": "prompts",
+      "bar": "fully deconstructs any feature into behavioral prompts",
+      "desc": "every prompt in the inventory states its trigger mechanism"
+    },
+    {
+      "id": "prompt_has_intended",
+      "kind": "count_covers",
+      "items": "prompt_intended",
+      "covers": "prompts",
+      "bar": "fully deconstructs any feature into behavioral prompts",
+      "desc": "every prompt in the inventory states its intended behavior"
     },
     {
       "id": "convergence_every_prompt",
@@ -262,6 +321,14 @@
       "desc": "closes with a Behavior Forecast Statement"
     },
     {
+      "id": "statement_flags_drift",
+      "kind": "implied_section",
+      "items": "drift_prompts",
+      "pattern": "(?i)likely to produce[^\\n]*\\bdrift",
+      "bar": "produces a behavior forecast statement per session that flags 🟡 drift risks identified in the Convergence Check",
+      "desc": "the Behavior Forecast Statement flags drift risks whenever the Convergence Check has a 🟡 row"
+    },
+    {
       "id": "rebuttals_filled",
       "kind": "count_covers",
       "items": "rebuttals",
@@ -270,5 +337,16 @@
       "desc": "every Rationalizations row rebuts its story"
     }
   ],
-  "semantic": []
+  "semantic": [
+    {
+      "id": "prompt_is_concrete_element",
+      "each": "prompts_full",
+      "bar": "fully deconstructs any feature into behavioral prompts",
+      "instructions": "Is `items[{i}]` one concrete element of the feature that triggers a user action, with its own trigger mechanism and intended behavior?",
+      "criteria": {
+        "true": "Names a single element a user meets (a notification, a button, a score, a streak, a feed, a default) and says how it triggers and what action it is meant to produce.",
+        "false": "Names a whole category or the feature itself ('gamification', 'engagement', 'the social layer'), bundles several elements into one row, or gives a trigger and intended behavior that restate the name."
+      }
+    }
+  ]
 }

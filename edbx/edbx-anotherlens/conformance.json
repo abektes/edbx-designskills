@@ -1,6 +1,6 @@
 {
   "skill": "edbx-anotherlens",
-  "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. The Design Decision Spec is counted cell by cell (empty cells are not enumerated, so each column is compared against the insight rows).",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. The Design Decision Spec is counted cell by cell (empty cells are not enumerated, so each column is compared against the insight rows). Concern coverage by name cannot be keyed to the prompt (conditional_section reads headings only, and the judge is not sent the brief), so the check asks for what the skill mandates: a synthesis that says where each requested concern was covered. 'Invents no product details or current figures' is a semantic check only: code cannot tell which details the brief supplied; sprint names and release labels are checked in code on the When column.",
   "enumerators": {
     "ledger_type_cells": {
       "type": "table_cells",
@@ -51,7 +51,7 @@
       "strict": true,
       "where": {
         "column": "Insight",
-        "matches": "accessib|screen.?reader|contrast|low vision|visual impair|motor|dexterity|font size|text size|tap target|touch target|hearing|captions?|cognitive load|dyslexi"
+        "matches": "accessib|screen.?reader|contrast|low vision|visual impair|sensory|vision|blind|tremor|motor|dexterity|font size|text size|tap target|touch target|hearing|captions?|cognitive load|dyslexi"
       }
     }
   },
@@ -166,7 +166,111 @@
       "checks": [{"kind": "section_present", "pattern": "After applying Another Lens"}],
       "bar": "produces a lens statement that a stranger could read and understand what shifted",
       "desc": "closes with the Lens Statement"
+    },
+    {
+      "id": "lens1_named_bias",
+      "kind": "all_phrases",
+      "section": "Lens 1|Balance Your Bias",
+      "phrases": [
+        "named (?:bias|assumption)|bias (?:surfaced|from)|bias[^\\n]{0,20}:|assum(?:ed|ption)",
+        "came from|comes from|originat|stems? from|because|grew up|traceable|from (?:my|our|the team'?s?) (?:own|background|experience|context)|our own|my own"
+      ],
+      "bar": "names at least one specific, personal bias",
+      "desc": "Lens 1 names a bias or assumption and says where it came from"
+    },
+    {
+      "id": "lens2_affected_group",
+      "kind": "all_phrases",
+      "section": "Lens 2|Consider the Opposite",
+      "phrases": ["affected group|group[s]? (?:impacted|affected)|impacted"],
+      "bar": "identifies at least one person or group whose perspective is absent from the design process",
+      "desc": "Lens 2 names an affected group"
+    },
+    {
+      "id": "unheard_perspective_named",
+      "kind": "all_phrases",
+      "section": "Synthesis",
+      "phrases": ["unheard|absent|missing|not in the room|left out"],
+      "bar": "identifies at least one person or group whose perspective is absent from the design process",
+      "desc": "the Synthesis names the most important unheard perspective"
+    },
+    {
+      "id": "concerns_mapped_in_synthesis",
+      "kind": "all_phrases",
+      "section": "Synthesis",
+      "phrases": ["cover(?:ed|age)|each (?:concern|dimension)|concerns? (?:\\w+ ){0,8}(?:addressed|examined)"],
+      "bar": "covers by name every concern or dimension the user asked about",
+      "desc": "the Synthesis says where each requested concern was covered (every scenario names concerns to examine)"
+    },
+    {
+      "id": "when_not_invented",
+      "kind": "cells_match",
+      "items": "spec_sprints",
+      "pattern": "(?is)^(?!.*(?:\\bsprint\\s*#?\\d|\\bQ[1-4]\\b|\\b20\\d\\d\\b|\\bv\\d+(?:\\.\\d+)*\\b|\\brelease\\s+\\d)).*$",
+      "bar": "invents no product details, sprint names or current figures",
+      "desc": "the When column is relative and names no invented sprint number, release or date"
     }
   ],
-  "semantic": []
+  "semantic": [
+    {
+      "id": "bias_specific_and_traceable",
+      "section": "Lens 1|Balance Your Bias",
+      "bar": "names at least one specific, personal bias \u2014 not \"I might be biased\" but a named assumption with a traceable origin",
+      "instructions": "Does `items[{i}]` name a specific assumption or bias held by the people doing the design, and say where it came from?",
+      "criteria": {
+        "true": "States a particular assumption (for example 'we assumed users have reliable internet because we do') and links it to the team's or designer's own background, habits or circumstances.",
+        "false": "Only acknowledges bias in general ('we may be biased', 'we have blind spots'), or names an assumption with no origin in the designers' own situation."
+      }
+    },
+    {
+      "id": "absent_perspective_specific",
+      "section": "Synthesis",
+      "bar": "identifies at least one person or group whose perspective is absent from the design process",
+      "instructions": "Does `items[{i}]` name a specific person or group whose voice is missing from the design process?",
+      "criteria": {
+        "true": "Names a particular group or kind of person (for example 'students in abusive homes', 'unbanked gig workers') and says their voice is missing from the design conversation.",
+        "false": "Mentions 'other users' or 'diverse perspectives' in general, or lists no one as absent."
+      }
+    },
+    {
+      "id": "learning_intention_sprint_sized",
+      "section": "Lens 3|Embrace a Growth Mindset",
+      "bar": "generates a learning intention specific enough to act on within a sprint",
+      "instructions": "Does the learning intention in `items[{i}]` describe something a designer could start on within one sprint?",
+      "criteria": {
+        "true": "States one concrete thing to learn or do (observe, interview, test with a named kind of person) that a single team could begin within a sprint.",
+        "false": "A broad aspiration such as 'learn more about accessibility', or a programme too large to start within a sprint."
+      }
+    },
+    {
+      "id": "lens_statement_shows_shift",
+      "section": "Lens Statement",
+      "bar": "produces a lens statement that a stranger could read and understand what shifted",
+      "instructions": "Could a stranger reading `items[{i}]` understand what the designers now question and what they will do?",
+      "criteria": {
+        "true": "Says specifically what is now being questioned and names a concrete action, without needing the rest of the session to be understood.",
+        "false": "A templated platitude such as 'I am now questioning my assumptions and plan to be more inclusive'."
+      }
+    },
+    {
+      "id": "concerns_mapped_to_places",
+      "section": "Synthesis",
+      "bar": "covers by name every concern or dimension the user asked about",
+      "instructions": "Does `items[{i}]` say, concern by concern, where each concern the user asked about was examined?",
+      "criteria": {
+        "true": "Lists the requested concerns or dimensions by name and points to the lens, group or change that covered each one.",
+        "false": "Has no concern-by-concern mapping, or covers only some of the concerns it names."
+      }
+    },
+    {
+      "id": "no_invented_product_details",
+      "section": "Lens 1|Balance Your Bias",
+      "bar": "invents no product details, sprint names or current figures",
+      "instructions": "Assume the user gave only a one-line description of the product. Does `items[{i}]` avoid stating specific screens, flows, features, settings or current figures of the product as fact?",
+      "criteria": {
+        "true": "Speaks about the product only in terms of the brief's own description, or phrases product details as questions, assumptions to check, or things it would need to know.",
+        "false": "States specific features, screens, field rules, font sizes, current metrics or past incidents of the product as established fact, such as 'the onboarding requires a six-digit SMS code' or 'text is fixed at 14 px'."
+      }
+    }
+  ]
 }
