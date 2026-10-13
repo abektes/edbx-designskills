@@ -2,6 +2,11 @@
   "skill": "edbx-ethicography",
   "_note": "Research-mode bars are not implemented ('works in both team reflection mode and academic research mode'; 'in research mode, includes methodological notes'): no eval prompt requests research mode, so neither can be measured on this set. 'Handles positive ethical practices' is checked disjunctively, because all three scenarios are post-mortems of harmful decisions: the output passes by either naming a positive practice or stating that the record shows none, so it is not forced to invent a good move.",
   "enumerators": {
+    "outcome_only_flag": {
+      "type": "phrase_matches",
+      "in_section": "record status",
+      "pattern": "outcome[ -]only"
+    },
     "ledger_type_cells": {
       "type": "table_cells",
       "in_section": "Evidence Ledger",
@@ -49,6 +54,21 @@
     }
   },
   "structural": [
+    {
+      "id": "record_status_stated",
+      "kind": "section_present",
+      "pattern": "record status",
+      "bar": "states whether the brief holds a record of decisions; with outcome only, codes only the moves the brief states and lists the rest as hypotheses with the record that would settle each",
+      "desc": "the output states whether the brief holds a record of decisions"
+    },
+    {
+      "id": "outcome_only_has_hypotheses",
+      "kind": "implied_section",
+      "items": "outcome_only_flag",
+      "pattern": "hypotheses to check",
+      "bar": "states whether the brief holds a record of decisions; with outcome only, codes only the moves the brief states and lists the rest as hypotheses with the record that would settle each",
+      "desc": "an outcome-only brief gets a Hypotheses to Check list instead of an invented history"
+    },
     {
       "id": "move_sources_marked",
       "kind": "cells_in_vocabulary",

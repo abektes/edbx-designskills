@@ -38,7 +38,20 @@ Provide as many of these as are available:
 
 ## Workflow
 
-Ethicography operates in four steps.
+Ethicography operates in four steps, after one check.
+
+---
+
+### Step 0 — Check the Record
+
+Ethicography traces decisions, so it needs a record of them. Classify the brief before anything else:
+
+- **Record**: the brief describes decisions — who decided or argued what, and why — for at least the main moves (meeting notes, a decision log, a design history, the user's own account of how choices were made).
+- **Outcome only**: the brief gives what shipped and what happened, but not the decisions behind it (most postmortem summaries).
+
+With a **record**, run Steps 1–4 on the recorded moves.
+
+With **outcome only**, do not build a move-by-move history. Code only the moves the brief itself states (choosing the metrics, shipping the feature, making the score visible to managers are moves the brief records). List every other decision that must have happened to produce the outcome under **Hypotheses to Check**, each with the record that would settle it (ticket, crit notes, roadmap, launch review, metrics review). Hypotheses get no move number, no actor and no quadrant; they are questions for the team, not findings. Say in the Answer that the trace is limited to what the brief records and name the records that would complete it.
 
 ---
 
@@ -51,7 +64,7 @@ For the design decisions or speech acts provided, identify each as an "Ethical M
 - Note the **stated reason** (explicit framing) and any **implicit motivation** (what it actually achieves)
 - Mark its **source**: `brief` when the brief records the move, `reconstructed` when you infer it
 
-Work from the moves the brief records. A postmortem brief often gives the outcome but not the decisions behind it; then you may reconstruct the likely moves, but mark each one `reconstructed`, name the record that would confirm it (ticket, crit notes, roadmap, launch review), and give the actor as a role ("growth team", "product lead"), never an invented name. Never write quotes, meetings, dates or incidents the brief did not give: a reconstructed history is a set of hypotheses to check against the record, not a finding.
+Work from the moves the record holds (Step 0). `reconstructed` is for a single gap inside a record — one missing step between two recorded moves — named with the record that would confirm it and an actor given as a role ("growth team", "product lead"), never an invented name. With outcome only, unrecorded decisions go under Hypotheses to Check instead. Never write quotes, meetings, dates, documents or incidents the brief did not give.
 
 ---
 
@@ -144,6 +157,10 @@ Open with a short **Answer**: two to four sentences that answer the question the
 
 [Two to four sentences: the answer to the question asked (decision, verdict or recommendation) and the main reason.]
 
+### Record Status
+
+[Record / Outcome only] — one sentence on what the brief records, and the records that would complete the trace.
+
 ### Ethical Moves Inventory
 
 | Move # | Actor | Decision/Speech Act | Source | Quadrant | Value Impact |
@@ -185,6 +202,12 @@ From Step 3B. Every move in the inventory appears here — not a selection — w
 ### Concrete Harm Examples
 
 For each move that undermined a user value, the specific UX, accessibility or technical mechanism — e.g., "WCAG 2.5.5 target size violation", "asymmetric value extraction: user content monetized with no revenue-share".
+
+### Hypotheses to Check (outcome only)
+
+| Hypothesis | Record that would settle it |
+|---|---|
+| [a decision that must have happened, stated as a question] | [ticket / crit notes / roadmap / launch review / metrics review] |
 
 ### Positive Practices
 
@@ -248,6 +271,7 @@ A strong Ethicography output:
 - opens with a direct answer to the decision or question the user asked, which the rest of the output supports
 - lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none
 - marks every move `brief` or `reconstructed`, and invents no quotes, names, meetings, dates or incidents
+- states whether the brief holds a record of decisions; with outcome only, codes only the moves the brief states and lists the rest as hypotheses with the record that would settle each
 
 ## Integration with Other EDBX Skills
 
