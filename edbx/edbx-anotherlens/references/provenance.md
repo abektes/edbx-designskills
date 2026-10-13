@@ -1,14 +1,13 @@
 # Provenance — edbx-anotherlens
 
-Stage A draft (sources and licences, no downloads). One row per element the
-skill attributes to a source. Locator and anchor are what could be confirmed
-from pages read in this pass; otherwise Locator is `to verify` and the anchor
-is marked `(guess)`. Stage B checks each anchor on the page.
+Stage B (anchors checked against `papers/pages/`). One row per element the
+skill attributes to a source. Rows with a manifest key carry a locator and a
+verbatim anchor; rows without readable text are marked `metadata only`.
 
 Key finding: the method is **Airbnb Design's "Another Lens"** (made with News
 Deeply, grown out of the "Shadow to Light" installation, 2017). SKILL.md
 credits only *Universal Methods of Ethical Design* (a secondary
-compilation) and never names Airbnb. The Airbnb page now returns 404 (it
+compilation) and never names Airbnb. The Airbnb page returned 404 in stage A (it
 redirects from airbnb.design/anotherlens to airbnb.com/anotherlens), so the
 primary page could not be read directly; its content was confirmed through a
 search-result summary of the page, a 2017 link post that quotes the question
@@ -28,24 +27,25 @@ list, and a Core77 listing.
 
 | # | Skill element | Source | Locator | Anchor phrase | Note |
 |---|---|---|---|---|---|
-| 1 | The method itself, "Another Lens", a bias-checking tool for designers | `airbnb2017anotherlens` | landing page | Another Lens | toolkit page: page now 404; confirmed via `core77another` and `adactio2017anotherlens`. SKILL.md does not credit Airbnb (see Discrepancies) |
-| 2 | Three lens names: Balance Your Bias, Consider the Opposite, Embrace a Growth Mindset | `airbnb2017anotherlens` | landing page, card headings | balance your bias, consider the opposite, and embrace a growth mindset | toolkit page: confirmed from a search summary of the page; page itself unreadable now |
-| 3 | Lens 1 questions: "What are my lenses?" and "Am I just confirming my assumptions, or am I challenging them?" | `adactio2017anotherlens` | list item 1 and 2 | What are my lenses? | free copy: https://adactio.com/links/13162 (SKILL.md merges them into one question) |
-| 4 | Lens 1 question about unfair / unjustified / unused details | `adactio2017anotherlens` | list item 3 | What details here are unfair? Unverified? Unused? | free copy: https://adactio.com/links/13162. Source word is "Unverified"; SKILL.md says "Unjustified" (Discrepancy 2) |
-| 5 | Lens 1: "Am I holding on to something that I need to let go of?" | `adactio2017anotherlens` | list item 4 | holding onto something that I need to let go of | free copy: https://adactio.com/links/13162 |
-| 6 | Lens 1: "What's here that I designed for me? ... for other people?" | `adactio2017anotherlens` | list item 5 | What's here that I designed for me? | free copy: https://adactio.com/links/13162 |
-| 7 | Lens 2 questions: who might be impacted; world if assumptions wrong; who is someone I am nervous to talk to; what do I believe, who might disagree | `adactio2017anotherlens` | list items 6-10 | Who's someone I'm nervous to talk to about this? | free copy: https://adactio.com/links/13162 |
-| 8 | Lens 3 questions: challenging as I create / audience open to change; learn one thing; approach vs one year ago; reframe a mistake; do I need to slow down | `adactio2017anotherlens` | list items 11-16 | How can I reframe a mistake in a way that helps me learn? | free copy: https://adactio.com/links/13162 |
-| 9 | Assignment of questions to lenses (4 / 4 / 5 questions) | `airbnb2017anotherlens` | to verify | (guess) cards grouped under each principle heading | metadata only: the blog quotes a flat list of 16 questions with no lens grouping; the Airbnb page was not readable. SKILL.md has 13 numbered questions by merging some |
-| 10 | Colours (green, purple, orange) and "three half-circles that together form a whole" | `airbnb2017anotherlens` | to verify | (guess) half-circle / whole | not found: no page read mentions colours or half-circles. Search terms tried: "Another Lens" half circles colors, Airbnb Design Another Lens three half circles |
-| 11 | Origin: grew from a bias installation; built with a journalism partner | `core77another` | listing text | Shadow to Light installation | toolkit page: not stated in SKILL.md at all |
-| 12 | "Pick two or three questions at a time" use guidance | `airbnb2017anotherlens` | landing page | pick two or three at a time | toolkit page: from search summary. SKILL.md instead walks every question of a lens one by one |
-| 13 | "Principle #07 — Another Lens"; hashtags #breakmydesign #newperspectives #designresponsibility; see also Data Feminism, Hippocratic Oath | `chivukula2025universal` | to verify | (guess) Another Lens | metadata only: book. Publisher listings give no contents; not confirmed that Another Lens is in the book |
-| 14 | Method is "deeply Socratic"; asks questions, no correct output | `chivukula2025universal` | to verify | (guess) questions to challenge assumptions | metadata only: book. The blog post describes the tool as questions that challenge assumptions, not as Socratic |
-| 15 | Reference file claims: designer bias list (sunk cost etc.), populations absent from research and how to reach them | none cited | `references/bias-taxonomy.md`, `references/opposite-perspectives.md` | n/a | not found: no source named in the files. Searched the repo for "source/credit/doi/http" in references; nothing |
-| 16 | "Quick pass = Lens 2 alone", time budgets, lens statement, Design Decision Spec table, Evidence Ledger | edbx additions | n/a | n/a | not found as source claims; the SKILL.md itself labels the Ledger "a family convention", the others are unlabelled additions |
-| 17 | WCAG 2.2 SC 2.5.5 touch target 44x44 | `w3c2023wcag22` | SC 2.5.5 Target Size (Enhanced) | at least 44 by 44 CSS pixels | free copy: https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html. Level AAA; the unit is CSS pixels, SKILL.md says "pt" |
-| 18 | WCAG 2.2 SC 1.4.6 contrast 7:1; SC 1.4.3 contrast 4.5:1 | `w3c2023wcag22` | SC 1.4.6 Contrast (Enhanced); SC 1.4.3 Contrast (Minimum) | 4.5:1 ratio is used in Success Criterion 1.4.3 | free copy: https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html. 1.4.6 is AAA with 7:1 for normal text; the AA level of 1.4.3 is implied on that page, to verify on its own page |
+| 1 | The method itself, "Another Lens", a question tool for designers, credited to News Deeply and Airbnb.Design | `adactio2017anotherlens` | web | Another Lens - News Deeply x Airbnb.Design | Found: the link post title names both partners and calls the questions little interventions. The Airbnb page itself is unreadable. SKILL.md does not credit Airbnb (see Discrepancies) |
+| 2 | Three lens names: Balance Your Bias, Consider the Opposite, Embrace a Growth Mindset | `airbnb2017anotherlens` | landing page, card headings | balance your bias, consider the opposite, and embrace a growth mindset | metadata only: no source found (Airbnb page 404; the blog post lists no lens names). Stage A saw this wording only in a search summary |
+| 3 | Lens 1 questions: "What are my lenses?" and "Am I just confirming my assumptions, or am I challenging them?" | `adactio2017anotherlens` | web | What are my lenses? | Found: the first two items of a flat list. SKILL.md merges them into one question |
+| 4 | Lens 1 question about unfair / unjustified / unused details | `adactio2017anotherlens` | web | What details here are unfair? Unverified? Unused? | Found, but the source word is "Unverified"; SKILL.md says "Unjustified" (Discrepancy 2) |
+| 5 | Lens 1: "Am I holding on to something that I need to let go of?" | `adactio2017anotherlens` | web | holding onto something that I need to let go of | Found; the source spells it "holding onto" |
+| 6 | Lens 1: "What's here that I designed for me? ... for other people?" | `adactio2017anotherlens` | web | What's here that I designed for me? | Found |
+| 7 | Lens 2 questions: who might be impacted; world if assumptions wrong; who is someone I am nervous to talk to; what do I believe, who might disagree | `adactio2017anotherlens` | web | Who's someone I'm nervous to talk to about this? | Found, together with the other Lens 2 questions in the same list. The list has no lens headings |
+| 8 | Lens 3 questions: challenging as I create / audience open to change; learn one thing; approach vs one year ago; reframe a mistake; do I need to slow down | `adactio2017anotherlens` | web | reframe a mistake in a way that helps me learn | Found, together with the other Lens 3 questions. Order and grouping differ from SKILL.md (the page is one flat list of 16) |
+| 9 | Assignment of questions to lenses (4 / 4 / 5 questions) | `adactio2017anotherlens` | not in source | A series of questions to ask on any design project | Not in source: the post gives one flat list of 16 questions with no lens grouping; the Airbnb page is unreadable, so the 4 / 4 / 5 grouping is unverified. SKILL.md has 13 numbered questions by merging some |
+| 10 | Colours (green, purple, orange) and "three half-circles that together form a whole" | `airbnb2017anotherlens` | not in source | Another Lens News Deeply x Airbnb.Design | metadata only: no source found. Neither the blog post nor any page read mentions colours or half-circles |
+| 11 | Origin: grew from a bias installation; built with a journalism partner | `core77another` | listing text | Shadow to Light installation | metadata only: no source found in the manifest (Core77 listing was seen in stage A only). SKILL.md does not state the origin at all |
+| 12 | "Pick two or three questions at a time" use guidance | `airbnb2017anotherlens` | landing page | pick two or three at a time | metadata only: no source found. Stage A saw it in a search summary; the blog post does not say it. SKILL.md instead walks every question of a lens one by one |
+| 13 | "Principle #07 - Another Lens"; hashtags #breakmydesign #newperspectives #designresponsibility; see also Data Feminism, Hippocratic Oath | `chivukula2025universal` | n/a | Universal Methods of Ethical Design | metadata only: book. Publisher listings give no contents; not confirmed that Another Lens is in the book |
+| 14 | Method is "deeply Socratic"; asks questions, no correct output | `adactio2017anotherlens` | not in source | questions designed to challenge assumptions | Not in source: the post calls the tool little interventions in the form of questions, likened to Brian Eno's oblique strategies. It never says Socratic. The book claim itself is unverifiable (metadata only for `chivukula2025universal`) |
+| 15 | Reference file claims: designer bias list (sunk cost etc.), populations absent from research and how to reach them | none cited | `references/bias-taxonomy.md`, `references/opposite-perspectives.md` | bias taxonomy and opposite perspectives | metadata only: no source found. No source is named in the reference files |
+| 16 | "Quick pass = Lens 2 alone", time budgets, lens statement, Design Decision Spec table, Evidence Ledger | edbx additions | n/a | Design Decision Spec table | metadata only: edbx addition. SKILL.md itself labels the Ledger "a family convention"; the others are unlabelled additions |
+| 17 | WCAG 2.2 SC 2.5.5 touch target 44x44 | `w3c2023wcag22` | web | at least 44 by 44 CSS pixels | Found. Level AAA; the unit is CSS pixels, SKILL.md says "pt" (Discrepancy 7) |
+| 18 | WCAG 2.2 SC 1.4.6 contrast 7:1 | `w3c2023wcag22` | web | contrast ratio of at least 7:1 | Found on the Contrast (Enhanced) page, Level AAA |
+| 19 | WCAG 2.2 SC 1.4.3 contrast 4.5:1 | `w3c2023wcag22` | web | 4.5:1 ratio is used in Success Criterion 1.4.3 | Found on the same page; it also states 4.5:1 was chosen for level AA. Only the Enhanced and target-size pages are in the manifest, not 1.4.3 itself |
 
 ## Licence
 
@@ -57,12 +57,20 @@ list, and a Core77 listing.
 
 ## Discrepancies
 
-1. **Misattributed or missing creator.** SKILL.md credits only *Universal Methods of Ethical Design* ("Principle #07"). The method is by Airbnb Design with News Deeply (2017). The book's authors, Chivukula and Gray, are also not named. Add Airbnb Design as the primary source.
-2. **Altered question wording.** The source asks "What details here are unfair? Unverified? Unused?". SKILL.md (Lens 1 Q2 and the reference text) says "Unjustified". Restore "Unverified" or mark the change as edbx's own.
-3. **Question count and grouping.** The source list I could read has 16 questions; SKILL.md has 13 by merging (lenses, assumptions; believe, disagree; audience open, challenging). Grouping into 4 / 4 / 5 could not be confirmed.
-4. **Colours and half-circle shapes** (green, purple, orange; three half-circles forming a whole): no source found. Treat as edbx presentation or remove the attribution until verified in the book.
-5. **Use guidance differs from the source.** The source suggests picking two or three questions at a time. SKILL.md prescribes a full sequential walk of every question (one at a time with probes) and 45-60 minute sessions. That is an adaptation, not the method.
-6. **Claims presented as the method that are edbx's own**: "Q3 is the most powerful question in the entire method", "required output of every Lens 2 session", the Socratic label, the Design Decision Spec, the lens statement ("After applying Another Lens, I'm now questioning ..."), the time budgets, and the "Output of Lens N" deliverables. None is in the source material I read.
-7. **WCAG unit.** Example row says "44x44 pt (WCAG 2.2 SC 2.5.5)". The criterion says CSS pixels, and is Level AAA. SC 1.4.6 is also AAA. The example presents them as requirements without the level.
-8. **Book content unverified.** Publisher pages do not show contents, so "Principle #07", the hashtags and the "See also: Data Feminism · Hippocratic Oath" line cannot be confirmed without the book.
-9. **Reference files cite no sources** for the bias taxonomy and the absent-populations guidance (row 15).
+### Contradicted by the source text (read on the page)
+
+1. **Altered question wording.** The post asks "What details here are unfair? Unverified? Unused?". SKILL.md (Lens 1 Q2 and the reference text) says "Unjustified". Restore "Unverified" or mark the change as edbx's own.
+2. **Question count and grouping.** The post lists 16 questions as one flat list with no lens headings. SKILL.md has 13 numbered questions by merging some (lenses with assumptions; believe with disagree; audience open with challenging), and a 4 / 4 / 5 grouping the post does not show.
+3. **Socratic label.** The post describes little interventions in question form, compared to Eno's oblique strategies. It does not call the method Socratic; that is SKILL.md's own framing.
+4. **Missing creator.** The post title names News Deeply and Airbnb.Design. SKILL.md credits only *Universal Methods of Ethical Design*, never Airbnb. Add Airbnb Design as the primary source.
+5. **WCAG unit and level.** SKILL.md's example says "44x44 pt (WCAG 2.2 SC 2.5.5)". The criterion says CSS pixels and is Level AAA. SC 1.4.6 (7:1) is also AAA; 4.5:1 is the AA level of 1.4.3. The example presents them as requirements without the level.
+
+### Not verifiable (no readable source)
+
+6. **Lens names and the card layout**: the Airbnb page is offline, so names, order and grouping are unconfirmed.
+7. **Colours and half-circle shapes** (green, purple, orange; three half-circles forming a whole): no source found. Treat as edbx presentation or remove the attribution.
+8. **Use guidance.** The "pick two or three at a time" advice could not be confirmed. SKILL.md prescribes a full sequential walk and 45-60 minute sessions, which is an adaptation either way.
+9. **Claims presented as the method that are edbx's own**: "Q3 is the most powerful question in the entire method", "required output of every Lens 2 session", the Design Decision Spec, the lens statement ("After applying Another Lens, I'm now questioning ..."), the time budgets and the "Output of Lens N" deliverables. None is in the post.
+10. **Book content**: "Principle #07", the hashtags and the "See also: Data Feminism / Hippocratic Oath" line cannot be confirmed without the book.
+11. **Reference files cite no sources** for the bias taxonomy and the absent-populations guidance (row 15).
+12. **Origin story** (Shadow to Light) is only from the Core77 listing, which is not in the manifest.
