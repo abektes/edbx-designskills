@@ -1,0 +1,235 @@
+{
+  "skill": "edbx-motivation-matrix",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar. The matrix is a markdown table whose context columns change per run, so the 5 x N cells are enumerated from the cell text itself (each cell opens with the 'Motivation +' phrase the skill mandates) and rows from the 'Motivation' column. Limits: (1) a cell left completely blank is dropped by the table parser; it is caught only indirectly, because every non-label segment of a row must carry a flag and the matrix needs at least 10 cells (5 types x the 2 contexts Step 1 requires), so a short matrix fails but one blank cell in a wide matrix could pass. (2) The 'invents none' half of the Evidence Ledger bar is checked only through the typing rules (valid Type words); whether a user-supplied row is really in the brief needs the prompt and is not machine-checked, and no sourced-needs-URL check is made because Further Reading lists two papers a sourced row may legitimately cite. (3) 'generates at least one insight the team did not expect' is a document-scope semantic check and the least reliable check here; nothing structural can decide it. (4) Ethical Risk Summary, the three-lens analysis and the Guardrails are not Quality Bar items and are not checked. (5) The Redesign Directions 1-3 range is Step 4 wording, not a bar; the bar is 'at least one', so only a minimum of 1 is checked.",
+  "enumerators": {
+    "ledger_type_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Type",
+      "strict": true
+    },
+    "matrix_type_cells": {
+      "type": "table_cells",
+      "in_section": "^(Filled )?Matrix",
+      "column": "Motivation",
+      "strict": true
+    },
+    "matrix_rows": {
+      "type": "table_rows",
+      "in_section": "^(Filled )?Matrix",
+      "column": "Motivation",
+      "strict": true,
+      "full": true
+    },
+    "matrix_cells": {
+      "type": "phrase_matches",
+      "in_section": "^(Filled )?Matrix",
+      "pattern": "(?:Achievement|Social Acceptance|Fear|Power|Incentive)\\s*\\+[^|\\n]+"
+    },
+    "matrix_flags": {
+      "type": "phrase_matches",
+      "in_section": "^(Filled )?Matrix",
+      "pattern": "[🟢🟡🔴]"
+    },
+    "redesign_items": {
+      "type": "phrase_matches",
+      "in_section": "Redesign Directions",
+      "pattern": "(?ms)^(?:\\d+[.)]|[-*])[ \\t]+.+?(?=^(?:\\d+[.)]|[-*])[ \\t]+|^#|\\Z)"
+    },
+    "missing_items": {
+      "type": "phrase_matches",
+      "in_section": "Missing Contexts",
+      "pattern": "(?ms)^(?:\\d+[.)]|[-*])[ \\t]+.+?(?=^(?:\\d+[.)]|[-*])[ \\t]+|^#|\\Z)"
+    }
+  },
+  "structural": [
+    {
+      "id": "answer_first",
+      "kind": "any_of",
+      "checks": [
+        {
+          "kind": "section_present",
+          "pattern": "(?m)^\\s*(?:#{1,6}\\s*Answer\\b|\\*\\*Answer\\b)"
+        }
+      ],
+      "bar": "opens with a direct answer to the decision or question the user asked, which the rest of the output supports",
+      "desc": "the output opens with an Answer section"
+    },
+    {
+      "id": "evidence_ledger_present",
+      "kind": "section_present",
+      "pattern": "Evidence Ledger",
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "the output has an Evidence Ledger"
+    },
+    {
+      "id": "ledger_types_valid",
+      "kind": "cells_in_vocabulary",
+      "items": "ledger_type_cells",
+      "vocabulary": [
+        "user-supplied",
+        "sourced",
+        "assumption",
+        "unknown"
+      ],
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every Evidence Ledger Type is one of the four allowed words"
+    },
+    {
+      "id": "matrix_present",
+      "kind": "section_present",
+      "pattern": "^(Filled )?Matrix",
+      "bar": "fills all 5 × N cells with specific, design-element-level statements",
+      "desc": "the output has a Filled Matrix section"
+    },
+    {
+      "id": "matrix_has_five_motivation_rows",
+      "kind": "distinct_coverage",
+      "items": "matrix_type_cells",
+      "vocabulary": [
+        "Achievement",
+        "Social Acceptance",
+        "Fear",
+        "Power",
+        "Incentive"
+      ],
+      "n": 5,
+      "bar": "fills all 5 × N cells with specific, design-element-level statements",
+      "desc": "the matrix has one row for each of the five motivation types"
+    },
+    {
+      "id": "matrix_at_least_ten_cells",
+      "kind": "min_count",
+      "items": "matrix_cells",
+      "n": 10,
+      "bar": "fills all 5 × N cells with specific, design-element-level statements",
+      "desc": "the matrix has at least 10 filled cells (5 motivation types x at least 2 user contexts)"
+    },
+    {
+      "id": "matrix_every_cell_flagged",
+      "kind": "cells_match",
+      "items": "matrix_rows",
+      "pattern": "^[^|]*(?: \\| [^|]*[🟢🟡🔴][^|]*){2,}$",
+      "bar": "fills all 5 × N cells with specific, design-element-level statements",
+      "desc": "every matrix row has at least two context cells and every context cell carries a green, yellow or red flag"
+    },
+    {
+      "id": "matrix_cells_use_format",
+      "kind": "cells_match",
+      "items": "matrix_rows",
+      "pattern": "^[^|]*(?: \\| [^|]*(?:Achievement|Social Acceptance|Fear|Power|Incentive)\\s*\\+[^|]*){2,}$",
+      "bar": "uses the [Motivation] + [Action] format consistently",
+      "desc": "every context cell in every row is written as '[Motivation] + [Action]'"
+    },
+    {
+      "id": "matrix_flags_at_least_ten",
+      "kind": "min_count",
+      "items": "matrix_flags",
+      "n": 10,
+      "bar": "fills all 5 × N cells with specific, design-element-level statements",
+      "desc": "the matrix carries at least 10 flags, one per cell"
+    },
+    {
+      "id": "not_all_green",
+      "kind": "min_count_matching",
+      "items": "matrix_rows",
+      "pattern": "[🟡🔴]",
+      "n": 1,
+      "bar": "flags at least one cell as 🔴 or 🟡",
+      "desc": "at least one matrix row contains a yellow or red flag"
+    },
+    {
+      "id": "redesign_directions_present",
+      "kind": "section_present",
+      "pattern": "Redesign Directions",
+      "bar": "proposes at least one concrete redesign direction",
+      "desc": "the output has a Redesign Directions section"
+    },
+    {
+      "id": "redesign_at_least_one",
+      "kind": "min_count",
+      "items": "redesign_items",
+      "n": 1,
+      "bar": "proposes at least one concrete redesign direction",
+      "desc": "Redesign Directions lists at least one direction"
+    },
+    {
+      "id": "missing_contexts_present",
+      "kind": "section_present",
+      "pattern": "Missing Contexts",
+      "bar": "mentions at least one secondary or underrepresented user group",
+      "desc": "the output has a Missing Contexts section"
+    },
+    {
+      "id": "missing_contexts_at_least_one",
+      "kind": "min_count",
+      "items": "missing_items",
+      "n": 1,
+      "bar": "mentions at least one secondary or underrepresented user group",
+      "desc": "Missing Contexts lists at least one user group or situation"
+    }
+  ],
+  "semantic": [
+    {
+      "id": "answer_direct",
+      "section": "^Answer",
+      "bar": "opens with a direct answer to the decision or question the user asked, which the rest of the output supports",
+      "instructions": "Does the answer in `items[{i}]` give a direct verdict on the question asked, with its main reason?",
+      "criteria": {
+        "true": "States a verdict or recommendation about whether this product's motivational design is ethical or manipulative (for example 'mostly yes, because the manager-visible leaderboard turns fitness into surveillance') and gives the main reason, tied to this product.",
+        "false": "Restates the task, describes the method, or hedges without committing ('it depends', 'this analysis explores...'), or gives a verdict with no reason."
+      }
+    },
+    {
+      "id": "cell_design_element",
+      "each": "matrix_cells",
+      "bar": "fills all 5 × N cells with specific, design-element-level statements",
+      "instructions": "Does the matrix cell in `items[{i}]` describe what the design does, at the level of a particular design element?",
+      "criteria": {
+        "true": "Describes a concrete design element and what it does to the user's motivation in that situation (for example 'a streak counter that resets to zero if the user skips a day').",
+        "false": "A generic statement such as 'uses social pressure' or 'creates fear', with no design element or mechanism."
+      }
+    },
+    {
+      "id": "cell_names_ui_element",
+      "each": "matrix_cells",
+      "bar": "names specific UI elements, features, or mechanisms — not abstract patterns",
+      "instructions": "Does the matrix cell in `items[{i}]` name a specific UI element, feature or mechanism of the product?",
+      "criteria": {
+        "true": "Names a particular element a person could point to on screen or in the product's rules, such as a leaderboard, a progress ring, a refill offer, a manager dashboard or a premium discount threshold.",
+        "false": "Refers only to an abstract pattern or force such as 'gamification', 'peer pressure' or 'extrinsic motivation' without naming where it shows up in the product."
+      }
+    },
+    {
+      "id": "redesign_concrete",
+      "each": "redesign_items",
+      "bar": "proposes at least one concrete redesign direction",
+      "instructions": "Does the redesign direction in `items[{i}]` name a specific change a team could make to the product?",
+      "criteria": {
+        "true": "Names a particular change, such as replacing a countdown with a dismissible reminder, hiding individual names from managers, or making a leaderboard opt-in, and says what it replaces.",
+        "false": "A general aim such as 'be less manipulative', 'respect users' or 'consider wellbeing', with no particular change to the product."
+      }
+    },
+    {
+      "id": "secondary_group_named",
+      "each": "missing_items",
+      "bar": "mentions at least one secondary or underrepresented user group",
+      "instructions": "Does the entry in `items[{i}]` name a specific secondary or underrepresented group, or a non-user affected by the product?",
+      "criteria": {
+        "true": "Names a particular group or situation not centred in the matrix (for example employees with a chronic condition, teenagers, dependents of a user, people with low digital literacy) and gives a reason it matters.",
+        "false": "A generic label such as 'other users' or 'vulnerable people' with no specific group, or no reason it matters."
+      }
+    },
+    {
+      "id": "unexpected_insight",
+      "scope": "document",
+      "bar": "generates at least one insight the team did not expect",
+      "instructions": "Does the document in `items[{i}]` contain at least one insight a team would not have reached from the product description alone?",
+      "criteria": {
+        "true": "Names at least one finding beyond restating the brief's features as risky, such as a benefit that turns into a penalty for a specific group, a harm to a non-user, or two mechanisms that compound each other.",
+        "false": "Every finding is the obvious reading of the brief (rewards are extrinsic, leaderboards create comparison) with no non-obvious consequence."
+      }
+    }
+  ]
+}

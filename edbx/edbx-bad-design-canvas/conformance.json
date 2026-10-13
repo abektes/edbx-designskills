@@ -1,0 +1,300 @@
+{
+  "skill": "edbx-bad-design-canvas",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar. The canvas appears as a 12-row table in some runs and as 12 subsections in others, so the 12 cells are enumerated from both layouts and unioned. Structure only: the canvas's own wording is third-party CC BY-ND content and is not reproduced here. The 'invents none' half of the Evidence Ledger bar is checked only through the typing rules (valid Type words; a row typed sourced must carry a URL, since the skill has no Sources list); whether a user-supplied row really appears in the brief needs the prompt and is not machine-checked. The Cell 10 lighter-tone guardrail is not a Quality Bar item and is not checked.",
+  "enumerators": {
+    "ledger_type_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Type"
+    },
+    "sourced_basis_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Basis",
+      "where": {
+        "column": "Type",
+        "matches": "^\\s*sourced"
+      }
+    },
+    "canvas_cells": {
+      "type": "union",
+      "of": [
+        {
+          "type": "table_cells",
+          "in_section": "12.?cell",
+          "column": "Category"
+        },
+        {
+          "type": "headings",
+          "in_section": "12.?cell",
+          "pattern": "cultural|band.?aid|unfair control|exploitation|inefficiency|environmental|abandonment|decreased safety|inappropriate|boring|displacement|inequity"
+        }
+      ]
+    },
+    "canvas_cell_bodies": {
+      "type": "union",
+      "of": [
+        {
+          "type": "table_rows",
+          "in_section": "12.?cell",
+          "column": "Category",
+          "strict": true,
+          "full": true
+        },
+        {
+          "type": "headings",
+          "in_section": "12.?cell",
+          "pattern": "cultural|band.?aid|unfair control|exploitation|inefficiency|environmental|abandonment|decreased safety|inappropriate|boring|displacement|inequity"
+        }
+      ]
+    },
+    "severity_tags": {
+      "type": "phrase_matches",
+      "in_section": "12.?cell",
+      "pattern": "(?:🔴|🟡|🟢)\\s*(?:Significant|Possible|Low)"
+    },
+    "red_cells": {
+      "type": "union",
+      "of": [
+        {
+          "type": "table_rows",
+          "in_section": "12.?cell",
+          "column": "Category",
+          "strict": true,
+          "where": {
+            "column": "Severity",
+            "matches": "🔴"
+          }
+        },
+        {
+          "type": "phrase_matches",
+          "in_section": "12.?cell",
+          "pattern": "severity\\W{0,6}🔴"
+        }
+      ]
+    },
+    "top3_items": {
+      "type": "list_items",
+      "in_section": "top.?3|three most serious"
+    },
+    "redesign_entries": {
+      "type": "headings",
+      "in_section": "redesign",
+      "pattern": "^(?!concrete|hard question|stakeholder to|stakeholder:|redesign:)(?=.*(cultural|band.?aid|unfair|exploitation|inefficiency|environmental|abandonment|safety|inappropriate|boring|displacement|inequity))"
+    },
+    "classification_markers": {
+      "type": "union",
+      "of": [
+        {
+          "type": "phrase_matches",
+          "in_section": "consequence summary|top.?3",
+          "pattern": "\\b(?:systemic|addressable)\\b"
+        },
+        {
+          "type": "phrase_matches",
+          "in_section": "redesign",
+          "pattern": "\\b(?:systemic|addressable)\\b"
+        }
+      ]
+    },
+    "verdict_words": {
+      "type": "phrase_matches",
+      "in_section": "should we build|verdict",
+      "pattern": "ship with changes|rethink fundamentally|do not build"
+    }
+  },
+  "structural": [
+    {
+      "id": "answer_first",
+      "kind": "any_of",
+      "checks": [
+        {
+          "kind": "section_present",
+          "pattern": "(?m)^\\s*(?:#{1,6}\\s*Answer\\b|\\*\\*Answer\\b)"
+        }
+      ],
+      "bar": "opens with a direct answer to the decision or question the user asked, which the rest of the output supports",
+      "desc": "the output opens with an Answer section"
+    },
+    {
+      "id": "evidence_ledger_present",
+      "kind": "section_present",
+      "pattern": "Evidence Ledger",
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "the output has an Evidence Ledger"
+    },
+    {
+      "id": "ledger_types_valid",
+      "kind": "cells_in_vocabulary",
+      "items": "ledger_type_cells",
+      "vocabulary": [
+        "user-supplied",
+        "sourced",
+        "assumption",
+        "unknown"
+      ],
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every Evidence Ledger Type is one of the four allowed words"
+    },
+    {
+      "id": "sourced_rows_have_url",
+      "kind": "cells_match",
+      "items": "sourced_basis_cells",
+      "pattern": "https?://",
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every row typed sourced names a URL in its Basis (the skill has no Sources list, so a bare paper or article name is model knowledge and must be typed assumption)"
+    },
+    {
+      "id": "all_twelve_cells",
+      "kind": "distinct_coverage",
+      "items": "canvas_cells",
+      "vocabulary": [
+        "Cultural Appropriation",
+        "Band-Aid",
+        "Unfair Control",
+        "Exploitation",
+        "Inefficiency",
+        "Environmental",
+        "Stakeholder Abandonment",
+        "Safety",
+        "Inappropriate",
+        "Boring",
+        "Displacement",
+        "Inequity"
+      ],
+      "n": 12,
+      "bar": "answers all 12 cells with product-specific responses (not generic observations)",
+      "desc": "all 12 consequence categories have a canvas cell"
+    },
+    {
+      "id": "severity_on_every_cell",
+      "kind": "min_count",
+      "items": "severity_tags",
+      "n": 12,
+      "bar": "rates every cell with a justified severity tag",
+      "desc": "at least 12 severity tags (red / yellow / green) appear in the canvas"
+    },
+    {
+      "id": "top3_present",
+      "kind": "section_present",
+      "pattern": "top.?3|three most serious",
+      "bar": "identifies and ranks the top 3 most serious consequences",
+      "desc": "a Top 3 consequence summary exists"
+    },
+    {
+      "id": "top3_ranked_items",
+      "kind": "min_count",
+      "items": "top3_items",
+      "n": 3,
+      "bar": "identifies and ranks the top 3 most serious consequences",
+      "desc": "the Top 3 summary lists at least 3 ranked items"
+    },
+    {
+      "id": "red_findings_classified",
+      "kind": "count_covers",
+      "items": "classification_markers",
+      "covers": "redesign_entries",
+      "bar": "classifies every `🔴` finding as systemic or addressable",
+      "desc": "at least one systemic/addressable classification per red finding, counted in the summary and redesign sections"
+    },
+    {
+      "id": "red_findings_have_redesign",
+      "kind": "count_covers",
+      "items": "redesign_entries",
+      "covers": "red_cells",
+      "bar": "proposes a concrete redesign action for every `🔴` finding",
+      "desc": "there is a redesign entry for every red-rated cell in the canvas"
+    },
+    {
+      "id": "statement_present",
+      "kind": "section_present",
+      "pattern": "bad design statement",
+      "bar": "produces a Bad Design Statement that names the harm, the stakeholder, and the action",
+      "desc": "a Bad Design Statement section exists"
+    },
+    {
+      "id": "statement_template_parts",
+      "kind": "all_phrases",
+      "section": "bad design statement",
+      "phrases": [
+        "unintended consequence",
+        "harm",
+        "requires"
+      ],
+      "bar": "produces a Bad Design Statement that names the harm, the stakeholder, and the action",
+      "desc": "the statement follows the consequence / harms-stakeholder / requires-action form"
+    },
+    {
+      "id": "verdict_present",
+      "kind": "section_present",
+      "pattern": "should we build|verdict",
+      "bar": "includes a \"should we build this?\" verdict grounded in the evidence",
+      "desc": "a 'should we build this?' verdict section exists"
+    },
+    {
+      "id": "verdict_uses_a_defined_value",
+      "kind": "min_count",
+      "items": "verdict_words",
+      "n": 1,
+      "bar": "includes a \"should we build this?\" verdict grounded in the evidence",
+      "desc": "the verdict is one of ship with changes / rethink fundamentally / do not build"
+    }
+  ],
+  "semantic": [
+    {
+      "id": "cell_product_specific",
+      "each": "canvas_cell_bodies",
+      "scope_section": true,
+      "bar": "answers all 12 cells with product-specific responses (not generic observations)",
+      "instructions": "Does the canvas cell in `items[{i}]` give a response about this particular product, rather than a remark that could be pasted under any product?",
+      "criteria": {
+        "true": "Refers to the product's own features, users or mechanics (for example its alerts, streaks, scores or data), or gives a stated reason why this category does not apply to this particular product.",
+        "false": "A generic statement that would fit any product or technology, with no reference to what this product actually does."
+      }
+    },
+    {
+      "id": "severity_justified",
+      "each": "canvas_cell_bodies",
+      "scope_section": true,
+      "bar": "rates every cell with a justified severity tag",
+      "instructions": "Does the canvas cell in `items[{i}]` give a severity tag together with a reason for that rating?",
+      "criteria": {
+        "true": "Has a severity tag (significant, possible or low) and a reason for it, such as how likely or severe the harm is, or whether it is already mitigated.",
+        "false": "A bare severity tag with no reason, or no severity tag at all."
+      }
+    },
+    {
+      "id": "redesign_concrete",
+      "each": "redesign_entries",
+      "scope_section": true,
+      "bar": "proposes a concrete redesign action for every `🔴` finding",
+      "instructions": "Does the redesign entry in `items[{i}]` name a specific design change a team could act on next?",
+      "criteria": {
+        "true": "Names a particular change to the product, such as removing a mechanic, changing a default, adding an appeal route or a consent step, or dropping a feature.",
+        "false": "A general aim such as 'be more inclusive', 'consider the impact' or 'involve users', with no particular change to the product."
+      }
+    },
+    {
+      "id": "statement_names_harm_stakeholder_action",
+      "section": "bad design statement",
+      "bar": "produces a Bad Design Statement that names the harm, the stakeholder, and the action",
+      "instructions": "Does `items[{i}]` name a specific harm, a specific group that is harmed, and a specific action needed?",
+      "criteria": {
+        "true": "Says what the consequence is, who it harms (a named group, not 'users' in general), the mechanism, and what has to change.",
+        "false": "Leaves out one of these, or stays vague, such as 'some users may be negatively affected' with no stated change."
+      }
+    },
+    {
+      "id": "verdict_grounded",
+      "section": "should we build|verdict",
+      "bar": "includes a \"should we build this?\" verdict grounded in the evidence",
+      "instructions": "Does the verdict in `items[{i}]` give its reasons from this canvas's findings, such as which harms are systemic or addressable?",
+      "criteria": {
+        "true": "Gives a verdict and ties it to specific findings from this product's canvas (for example the systemic harms that cannot be designed around, or the addressable ones that can).",
+        "false": "A verdict with no reasons, or reasons that are generic and not tied to this product's findings."
+      }
+    }
+  ]
+}

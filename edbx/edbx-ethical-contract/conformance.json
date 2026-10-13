@@ -1,0 +1,701 @@
+{
+  "skill": "edbx-ethical-contract",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar. (1) 'works for teams from 2 to 20+ stakeholders' is left unchecked: the three scenarios have a 10-person team, a 12-person startup and an unstated moderation team, so no scenario exercises either end of the range, and a check on the stakeholder count would only teach padding or trimming. (2) The Red Line per stakeholder appears as an extra column of the responsibilities table, as a second table, or as a numbered list under the responsibilities heading; all three layouts are unioned. (3) 'No placeholders left unfilled' is checked as the absence of the template's own bracket slots and fill-in markers; the Name and Date cells of the signature table, and the contract's own Date line, are meant to be filled on signing and are not counted: a brief gives no date, and requiring one would force an invented date (rubric conventions, rule 6). (4) The signature line itself (underscores) is stripped by the harness's markdown cleaner, so it cannot be counted; the signature table is checked for one row per stakeholder role only. (5) The skill has no Sources list, so a row typed sourced must carry a URL in its Basis; a bare paper, regulation or industry-practice name is model knowledge and belongs under assumption. (6) The 'invents none' half of the ledger bar needs the prompt to tell which figures the brief gave, so it is checked only through the typing rules. (7) Harm table: at least 3 named populations, below the four categories the skill lists 'at minimum', because a brief may have no supply-chain workers or no non-users.",
+  "enumerators": {
+    "ledger_type_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Type",
+      "strict": true
+    },
+    "ledger_basis_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Basis",
+      "strict": true
+    },
+    "sourced_basis_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Basis",
+      "strict": true,
+      "where": {
+        "column": "Type",
+        "matches": "^\\s*sourced"
+      }
+    },
+    "tension_items": {
+      "type": "union",
+      "of": [
+        {
+          "type": "list_items",
+          "in_section": "tension map"
+        },
+        {
+          "type": "table_rows",
+          "in_section": "tension map",
+          "column": "Tension|Stakeholder|Description",
+          "strict": true,
+          "full": true
+        }
+      ]
+    },
+    "stakeholders": {
+      "type": "table_cells",
+      "in_section": "stakeholder responsibilities",
+      "column": "Stakeholder",
+      "strict": true,
+      "where": {
+        "column": "Responsibilit",
+        "matches": "\\S"
+      }
+    },
+    "responsibility_rows": {
+      "type": "table_rows",
+      "in_section": "stakeholder responsibilities",
+      "column": "Stakeholder",
+      "strict": true,
+      "full": true,
+      "where": {
+        "column": "Responsibilit",
+        "matches": "\\S"
+      }
+    },
+    "stakeholder_red_lines": {
+      "type": "union",
+      "of": [
+        {
+          "type": "table_cells",
+          "in_section": "stakeholder responsibilities",
+          "column": "Red Line",
+          "strict": true
+        },
+        {
+          "type": "list_items",
+          "in_section": "red line commitments|red lines?.{1,5}what each"
+        }
+      ]
+    },
+    "objective_rows": {
+      "type": "table_rows",
+      "in_section": "ethical objectives",
+      "column": "Commitment",
+      "strict": true,
+      "full": true
+    },
+    "objective_commitments": {
+      "type": "table_cells",
+      "in_section": "ethical objectives",
+      "column": "Commitment",
+      "strict": true
+    },
+    "objective_thresholds": {
+      "type": "table_cells",
+      "in_section": "ethical objectives",
+      "column": "threshold",
+      "strict": true
+    },
+    "objective_owners": {
+      "type": "table_cells",
+      "in_section": "ethical objectives",
+      "column": "owner",
+      "strict": true
+    },
+    "objective_cadences": {
+      "type": "table_cells",
+      "in_section": "ethical objectives",
+      "column": "cadence",
+      "strict": true
+    },
+    "harm_rows": {
+      "type": "table_rows",
+      "in_section": "harm enumeration",
+      "column": "Population",
+      "strict": true,
+      "full": true
+    },
+    "harm_populations": {
+      "type": "table_cells",
+      "in_section": "harm enumeration",
+      "column": "Population",
+      "strict": true
+    },
+    "harm_severities": {
+      "type": "table_cells",
+      "in_section": "harm enumeration",
+      "column": "Severity",
+      "strict": true
+    },
+    "harm_reversibilities": {
+      "type": "table_cells",
+      "in_section": "harm enumeration",
+      "column": "Reversib",
+      "strict": true
+    },
+    "di_threshold_lines": {
+      "type": "phrase_matches",
+      "in_section": "bias audit thresholds",
+      "pattern": "disparate.?impact[^\\n]{0,400}?\\d"
+    },
+    "sample_size_lines": {
+      "type": "phrase_matches",
+      "in_section": "bias audit thresholds",
+      "pattern": "(?:sample size|\\bn\\b)[^\\n]{0,300}?\\d"
+    },
+    "confidence_floor_lines": {
+      "type": "phrase_matches",
+      "in_section": "bias audit thresholds",
+      "pattern": "confidence[^\\n]{0,400}?\\d"
+    },
+    "gray_zone_rows": {
+      "type": "table_rows",
+      "in_section": "gray.?zone",
+      "column": "Contested|use case",
+      "strict": true,
+      "full": true
+    },
+    "refusal_items": {
+      "type": "list_items",
+      "in_section": "refuse"
+    },
+    "veto_owners": {
+      "type": "phrase_matches",
+      "in_section": "refuse",
+      "pattern": "veto[^\\n]{3,}"
+    },
+    "design_goal_statements": {
+      "type": "phrase_matches",
+      "in_section": "design goal",
+      "pattern": "ultimate design goal for[^\\n]{5,}?\\bis to\\b[^\\n]{5,}?\\bwhile\\b[^\\n]{5,}"
+    },
+    "risk_rows": {
+      "type": "table_rows",
+      "in_section": "risk register",
+      "column": "Objective",
+      "strict": true,
+      "full": true
+    },
+    "risk_objectives": {
+      "type": "table_cells",
+      "in_section": "risk register",
+      "column": "Objective",
+      "strict": true
+    },
+    "risk_failure_moments": {
+      "type": "table_cells",
+      "in_section": "risk register",
+      "column": "failure",
+      "strict": true
+    },
+    "risk_signals": {
+      "type": "table_cells",
+      "in_section": "risk register",
+      "column": "warning|signal",
+      "strict": true
+    },
+    "risk_protections": {
+      "type": "table_cells",
+      "in_section": "risk register",
+      "column": "protection|mechanism",
+      "strict": true
+    },
+    "renewal_triggers": {
+      "type": "list_items",
+      "in_section": "renewal triggers"
+    },
+    "signature_roles": {
+      "type": "table_cells",
+      "in_section": "signatures",
+      "column": "Role",
+      "strict": true
+    },
+    "placeholder_tokens": {
+      "type": "phrase_matches",
+      "pattern": "(?<!Date:\\*\\* )(?<!Date: )\\[(?:fill in|insert[^\\]]*|Objective \\d[^\\]]*|Refusal \\d|Trigger \\d[^\\]]*|Stakeholder|Role|Specific[^\\]]*|role/name|when[^\\]]*|Product|outcome|users|action|protected outcome|ethical commitment|observable[^\\]]*|gate/review[^\\]]*)\\]|\\bTBD\\b"
+    }
+  },
+  "structural": [
+    {
+      "id": "answer_first",
+      "kind": "any_of",
+      "checks": [
+        {
+          "kind": "section_present",
+          "pattern": "(?m)^\\s*(?:#{1,6}\\s*Answer\\b|\\*\\*Answer\\b)"
+        }
+      ],
+      "bar": "opens with a direct answer to the decision or question the user asked, which the rest of the output supports",
+      "desc": "the output opens with an Answer section"
+    },
+    {
+      "id": "evidence_ledger_present",
+      "kind": "section_present",
+      "pattern": "Evidence Ledger",
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "the output has an Evidence Ledger"
+    },
+    {
+      "id": "ledger_types_valid",
+      "kind": "cells_in_vocabulary",
+      "items": "ledger_type_cells",
+      "vocabulary": [
+        "user-supplied",
+        "sourced",
+        "assumption",
+        "unknown"
+      ],
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every Evidence Ledger Type is one of the four allowed words"
+    },
+    {
+      "id": "ledger_rows_have_basis",
+      "kind": "count_covers",
+      "items": "ledger_basis_cells",
+      "covers": "ledger_type_cells",
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every Evidence Ledger row states its Basis"
+    },
+    {
+      "id": "sourced_rows_have_url",
+      "kind": "cells_match",
+      "items": "sourced_basis_cells",
+      "pattern": "https?://",
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every row typed sourced names a URL in its Basis (the skill has no Sources list, so a bare paper or regulation name is model knowledge and must be typed assumption)"
+    },
+    {
+      "id": "challenge_present",
+      "kind": "section_present",
+      "pattern": "ethical challenge",
+      "bar": "completes all contract steps including the Stakeholder Tension Map",
+      "desc": "an Ethical Challenge section exists (Step 1)"
+    },
+    {
+      "id": "tension_map_present",
+      "kind": "section_present",
+      "pattern": "tension map",
+      "bar": "completes all contract steps including the Stakeholder Tension Map",
+      "desc": "a Stakeholder Tension Map section exists (Step 1.5)"
+    },
+    {
+      "id": "responsibilities_present",
+      "kind": "section_present",
+      "pattern": "stakeholder responsibilities",
+      "bar": "completes all contract steps including the Stakeholder Tension Map",
+      "desc": "a Stakeholder Responsibilities section exists (Step 2)"
+    },
+    {
+      "id": "objectives_present",
+      "kind": "section_present",
+      "pattern": "ethical objectives",
+      "bar": "completes all contract steps including the Stakeholder Tension Map",
+      "desc": "a shared Ethical Objectives section exists (Step 3)"
+    },
+    {
+      "id": "audit_present",
+      "kind": "section_present",
+      "pattern": "bias.{0,5}harm audit",
+      "bar": "completes all contract steps including the Stakeholder Tension Map",
+      "desc": "a Bias & Harm Audit section exists (Step 3.5)"
+    },
+    {
+      "id": "design_goal_present",
+      "kind": "section_present",
+      "pattern": "design goal",
+      "bar": "completes all contract steps including the Stakeholder Tension Map",
+      "desc": "a Design Goal section exists (Step 4)"
+    },
+    {
+      "id": "signatures_present",
+      "kind": "section_present",
+      "pattern": "signatures",
+      "bar": "completes all contract steps including the Stakeholder Tension Map",
+      "desc": "a Signatures section exists (Step 5)"
+    },
+    {
+      "id": "tensions_named",
+      "kind": "min_count",
+      "items": "tension_items",
+      "n": 2,
+      "bar": "names at least 2 structural stakeholder tensions before assigning responsibilities",
+      "desc": "the Tension Map names at least 2 tensions"
+    },
+    {
+      "id": "every_stakeholder_has_red_line",
+      "kind": "count_covers",
+      "items": "stakeholder_red_lines",
+      "covers": "stakeholders",
+      "bar": "assigns a specific responsibility AND a Red Line to every named stakeholder",
+      "desc": "there is a Red Line for every stakeholder in the responsibilities table"
+    },
+    {
+      "id": "objectives_exactly_three",
+      "kind": "min_count",
+      "items": "objective_commitments",
+      "n": 3,
+      "max": 3,
+      "bar": "produces exactly 3 shared ethical objectives",
+      "desc": "the objectives table has exactly 3 commitments"
+    },
+    {
+      "id": "objective_action_form",
+      "kind": "cells_match",
+      "items": "objective_commitments",
+      "pattern": "(?i)we commit to .{5,}in order to .{3,}",
+      "bar": "each with all four parts: action, quantitative threshold (breach trigger), named owner, review cadence",
+      "desc": "every objective is phrased as 'We commit to [action] in order to [protected outcome]'"
+    },
+    {
+      "id": "objective_threshold_is_quantified",
+      "kind": "cells_match",
+      "items": "objective_thresholds",
+      "pattern": "(?i)\\d|\\bzero\\b|four.?fifths|\\bWCAG|\\bHIPAA|\\bGDPR|\\bNIST|\\bISO\\b",
+      "bar": "quantitative threshold (breach trigger)",
+      "desc": "every threshold cell contains a number or a named standard"
+    },
+    {
+      "id": "objective_owner_is_named",
+      "kind": "cells_match",
+      "items": "objective_owners",
+      "pattern": "(?i)^(?!\\s*(?:the team|team|everyone|all|tbd|n/?a)\\s*$)(?!.*\\[).{3,}",
+      "bar": "named owner",
+      "desc": "every objective names an owner other than 'the team'"
+    },
+    {
+      "id": "objective_cadence_is_stated",
+      "kind": "cells_match",
+      "items": "objective_cadences",
+      "pattern": "(?i)\\b(?:daily|weekly|monthly|quarterly|annual\\w*|yearly|sprint|release|launch|before|every|each|per|days?|weeks?|months?|years?|shift)\\b|\\d",
+      "bar": "review cadence",
+      "desc": "every objective states when it is checked"
+    },
+    {
+      "id": "objective_threshold_for_each",
+      "kind": "count_covers",
+      "items": "objective_thresholds",
+      "covers": "objective_commitments",
+      "bar": "each with all four parts: action, quantitative threshold (breach trigger), named owner, review cadence",
+      "desc": "every objective has a threshold cell"
+    },
+    {
+      "id": "objective_owner_for_each",
+      "kind": "count_covers",
+      "items": "objective_owners",
+      "covers": "objective_commitments",
+      "bar": "each with all four parts: action, quantitative threshold (breach trigger), named owner, review cadence",
+      "desc": "every objective has an owner cell"
+    },
+    {
+      "id": "objective_cadence_for_each",
+      "kind": "count_covers",
+      "items": "objective_cadences",
+      "covers": "objective_commitments",
+      "bar": "each with all four parts: action, quantitative threshold (breach trigger), named owner, review cadence",
+      "desc": "every objective has a review cadence cell"
+    },
+    {
+      "id": "harm_table_populations",
+      "kind": "min_count",
+      "items": "harm_populations",
+      "n": 3,
+      "bar": "a harm enumeration table with named populations and severity",
+      "desc": "the harm enumeration table names at least 3 populations"
+    },
+    {
+      "id": "harm_severity_valid",
+      "kind": "cells_in_vocabulary",
+      "items": "harm_severities",
+      "vocabulary": [
+        "low",
+        "med",
+        "high",
+        "catastrophic"
+      ],
+      "bar": "a harm enumeration table with named populations and severity",
+      "desc": "every harm severity is low / medium / high / catastrophic"
+    },
+    {
+      "id": "harm_severity_for_each",
+      "kind": "count_covers",
+      "items": "harm_severities",
+      "covers": "harm_populations",
+      "bar": "a harm enumeration table with named populations and severity",
+      "desc": "every harm row carries a severity"
+    },
+    {
+      "id": "harm_reversibility_for_each",
+      "kind": "count_covers",
+      "items": "harm_reversibilities",
+      "covers": "harm_populations",
+      "bar": "a harm enumeration table with named populations and severity",
+      "desc": "every harm row carries a reversibility"
+    },
+    {
+      "id": "thresholds_named",
+      "kind": "all_phrases",
+      "section": "bias audit thresholds",
+      "phrases": [
+        "disparate.?impact",
+        "sample size|\\bn\\b\\s*[≥>=]",
+        "proxy",
+        "confidence"
+      ],
+      "bar": "named bias-audit thresholds (disparate impact ratio, subgroup minimum n, proxy variables)",
+      "desc": "the bias audit thresholds name disparate impact, subgroup sample size, proxy variables and a model confidence floor"
+    },
+    {
+      "id": "disparate_impact_has_number",
+      "kind": "min_count",
+      "items": "di_threshold_lines",
+      "n": 1,
+      "bar": "named bias-audit thresholds (disparate impact ratio, subgroup minimum n, proxy variables)",
+      "desc": "the disparate impact threshold carries a number"
+    },
+    {
+      "id": "sample_size_has_number",
+      "kind": "min_count",
+      "items": "sample_size_lines",
+      "n": 1,
+      "bar": "named bias-audit thresholds (disparate impact ratio, subgroup minimum n, proxy variables)",
+      "desc": "the subgroup minimum sample size carries a number"
+    },
+    {
+      "id": "confidence_floor_has_number",
+      "kind": "min_count",
+      "items": "confidence_floor_lines",
+      "n": 1,
+      "bar": "named bias-audit thresholds (disparate impact ratio, subgroup minimum n, proxy variables)",
+      "desc": "the model confidence floor carries a number"
+    },
+    {
+      "id": "gray_zone_register",
+      "kind": "min_count",
+      "items": "gray_zone_rows",
+      "n": 2,
+      "max": 4,
+      "bar": "a gray-zone register",
+      "desc": "the gray-zone register lists 2 to 4 contested use cases"
+    },
+    {
+      "id": "red_lines_three_to_five",
+      "kind": "min_count",
+      "items": "refusal_items",
+      "n": 3,
+      "max": 5,
+      "bar": "3–5 red lines with named veto owners",
+      "desc": "3 to 5 refusals are listed under what we refuse to build"
+    },
+    {
+      "id": "every_red_line_has_veto_owner",
+      "kind": "count_covers",
+      "items": "veto_owners",
+      "covers": "refusal_items",
+      "bar": "3–5 red lines with named veto owners",
+      "desc": "every refusal names the owner with veto"
+    },
+    {
+      "id": "single_design_goal",
+      "kind": "min_count",
+      "items": "design_goal_statements",
+      "n": 1,
+      "max": 1,
+      "bar": "generates a single design goal statement",
+      "desc": "exactly one 'Our ultimate design goal for X is to Y for Z, while W' statement"
+    },
+    {
+      "id": "risk_register_present",
+      "kind": "section_present",
+      "pattern": "risk register",
+      "bar": "includes a Commitment Risk Register with failure moments, early warning signals, and protection mechanisms for every objective",
+      "desc": "a Commitment Risk Register exists"
+    },
+    {
+      "id": "risk_register_row_per_objective",
+      "kind": "count_covers",
+      "items": "risk_objectives",
+      "covers": "objective_commitments",
+      "bar": "includes a Commitment Risk Register with failure moments, early warning signals, and protection mechanisms for every objective",
+      "desc": "the risk register has a row for every objective"
+    },
+    {
+      "id": "risk_failure_moment_for_each",
+      "kind": "count_covers",
+      "items": "risk_failure_moments",
+      "covers": "objective_commitments",
+      "bar": "includes a Commitment Risk Register with failure moments, early warning signals, and protection mechanisms for every objective",
+      "desc": "every objective has a failure moment"
+    },
+    {
+      "id": "risk_signal_for_each",
+      "kind": "count_covers",
+      "items": "risk_signals",
+      "covers": "objective_commitments",
+      "bar": "includes a Commitment Risk Register with failure moments, early warning signals, and protection mechanisms for every objective",
+      "desc": "every objective has an early warning signal"
+    },
+    {
+      "id": "risk_protection_for_each",
+      "kind": "count_covers",
+      "items": "risk_protections",
+      "covers": "objective_commitments",
+      "bar": "includes a Commitment Risk Register with failure moments, early warning signals, and protection mechanisms for every objective",
+      "desc": "every objective has a protection mechanism"
+    },
+    {
+      "id": "no_unfilled_placeholders",
+      "kind": "min_count",
+      "items": "placeholder_tokens",
+      "n": 0,
+      "max": 0,
+      "bar": "produces a print/sign-ready document with no placeholders left unfilled",
+      "desc": "no template bracket slots or fill-in markers are left in the document"
+    },
+    {
+      "id": "signature_row_per_stakeholder",
+      "kind": "count_covers",
+      "items": "signature_roles",
+      "covers": "stakeholders",
+      "bar": "produces a print/sign-ready document with no placeholders left unfilled",
+      "desc": "the signature table has a row for every stakeholder role"
+    },
+    {
+      "id": "renewal_triggers_present",
+      "kind": "section_present",
+      "pattern": "renewal triggers",
+      "bar": "includes contract renewal triggers",
+      "desc": "a Contract Renewal Triggers section exists"
+    },
+    {
+      "id": "renewal_triggers_listed",
+      "kind": "min_count",
+      "items": "renewal_triggers",
+      "n": 3,
+      "bar": "includes contract renewal triggers",
+      "desc": "at least 3 renewal triggers are listed"
+    }
+  ],
+  "semantic": [
+    {
+      "id": "tension_is_structural",
+      "each": "tension_items",
+      "bar": "names at least 2 structural stakeholder tensions before assigning responsibilities",
+      "instructions": "Does the tension in `items[{i}]` name two stakeholders or interests that are opposed by how the product or organisation is set up?",
+      "criteria": {
+        "true": "Says what one side needs, what the other side needs, and why the two are structurally opposed (an incentive, a metric, a deadline or a role definition), so it cannot be resolved by good intentions alone.",
+        "false": "A vague worry or a value statement ('ethics versus speed') with no two parties, no incentive and no reason the goals collide."
+      }
+    },
+    {
+      "id": "responsibility_specific",
+      "each": "responsibility_rows",
+      "bar": "assigns a specific responsibility AND a Red Line to every named stakeholder",
+      "instructions": "Is the ethical responsibility in `items[{i}]` specific to that stakeholder's role and this product, rather than a duty that could be pasted onto any role?",
+      "criteria": {
+        "true": "Names something this role does or protects in this product (for example 'produce the fairness scorecard after every retraining' or 'enforce auto-lockout after four hours in a high-harm queue').",
+        "false": "A generic duty such as 'act ethically', 'consider user impact' or 'support the contract' that would read the same for every role."
+      }
+    },
+    {
+      "id": "red_line_is_a_refusal",
+      "each": "stakeholder_red_lines",
+      "bar": "assigns a specific responsibility AND a Red Line to every named stakeholder",
+      "instructions": "Is `items[{i}]` a Red Line, meaning a concrete thing the stakeholder will not do regardless of business pressure?",
+      "criteria": {
+        "true": "States an action the person will refuse (for example 'will not ship a model whose disparate-impact ratio is below 0.8') that could be seen to be broken, and that goes further than a responsibility to try or to prioritise.",
+        "false": "A restated responsibility or a hope ('we will try to avoid bias') that could be deprioritised under pressure, or too vague to tell whether it was crossed."
+      }
+    },
+    {
+      "id": "objective_is_a_real_commitment",
+      "each": "objective_rows",
+      "bar": "Aspirational verbs without thresholds and owners are rejected.",
+      "instructions": "Is the objective in `items[{i}]` a real commitment, meaning one where a breach could be detected and a person is accountable?",
+      "criteria": {
+        "true": "The row combines a specific action, a breach trigger a monitor could evaluate, an accountable role or person, and a stated check interval, so someone could say on a given date whether it was broken.",
+        "false": "The row rests on an aspiration ('be fair', 'respect privacy'), or its threshold is not measurable, or its owner is a group such as 'the team', or no check interval is given."
+      }
+    },
+    {
+      "id": "threshold_is_a_breach_trigger",
+      "each": "objective_thresholds",
+      "bar": "quantitative threshold (breach trigger)",
+      "instructions": "Does the threshold in `items[{i}]` define the point at which the commitment counts as breached, in terms that can be measured?",
+      "criteria": {
+        "true": "Gives a number, rate, count, time limit or named standard and says what crosses the line (for example 'ratio below 0.8 on any subgroup with n of at least 30').",
+        "false": "Gives only a direction or a goal ('improve over time', 'high accuracy'), or a number with no statement of what counts as a breach."
+      }
+    },
+    {
+      "id": "harm_is_named_and_specific",
+      "each": "harm_rows",
+      "bar": "a harm enumeration table with named populations and severity",
+      "instructions": "Does the harm row in `items[{i}]` name a specific population and a concrete harm to it?",
+      "criteria": {
+        "true": "The population is a particular group (for example 'candidates aged 40 and over' or 'moderators with prior trauma') and the harm says what happens to them and by what mechanism.",
+        "false": "The population is 'users', 'society' or 'everyone', or the harm is a category word such as 'bias' or 'privacy loss' with no account of what happens to whom."
+      }
+    },
+    {
+      "id": "proxy_variables_are_named",
+      "section": "bias audit thresholds",
+      "bar": "named bias-audit thresholds (disparate impact ratio, subgroup minimum n, proxy variables)",
+      "instructions": "Does `items[{i}]` name specific proxy variables for this product, meaning fields that could carry protected-class information without naming it?",
+      "criteria": {
+        "true": "Lists particular fields or signals from this product's data (for example zip code, school name, device type, shift pattern, clinic location) as proxy variables to monitor.",
+        "false": "Says only 'proxy variables' or 'sensitive attributes' without naming any field, or names only the protected classes themselves."
+      }
+    },
+    {
+      "id": "gray_zone_has_conditions",
+      "each": "gray_zone_rows",
+      "bar": "a gray-zone register",
+      "instructions": "Does the gray-zone row in `items[{i}]` name a contested use case and the specific conditions that would have to be met before it becomes acceptable?",
+      "criteria": {
+        "true": "Names a particular use that is not prohibited but not agreed, and lists concrete preconditions such as a legal review, user re-consent, an audit result or an ethics board approval.",
+        "false": "The use case is a platitude, or the change required is 'more discussion' or 'approval' with no stated condition."
+      }
+    },
+    {
+      "id": "red_line_at_feature_level",
+      "each": "refusal_items",
+      "bar": "3–5 red lines with named veto owners",
+      "instructions": "Is the refusal in `items[{i}]` stated at feature level, naming what will not be built, rather than as a value?",
+      "criteria": {
+        "true": "Names a particular feature, data use or deployment that will not be built (for example 'no biometric data from users under 16'), so a build that included it could be pointed at.",
+        "false": "A value statement ('we will not harm users', 'we respect dignity') that no particular feature could be said to violate."
+      }
+    },
+    {
+      "id": "design_goal_is_concrete",
+      "section": "design goal",
+      "bar": "generates a single design goal statement",
+      "instructions": "Does the design goal in `items[{i}]` say what the product achieves for which users, and what ethical commitment bounds it?",
+      "criteria": {
+        "true": "Names the product's outcome for a particular user group and a particular ethical constraint that limits how that outcome is pursued, so it could guide a design decision.",
+        "false": "A slogan that would suit any product ('make users happy while being ethical') with no particular outcome, users or constraint."
+      }
+    },
+    {
+      "id": "risk_register_row_is_actionable",
+      "each": "risk_rows",
+      "bar": "includes a Commitment Risk Register with failure moments, early warning signals, and protection mechanisms for every objective",
+      "instructions": "Does the risk register row in `items[{i}]` name a specific moment the commitment is likely to break, a signal that could be observed beforehand, and a mechanism that would stop it?",
+      "criteria": {
+        "true": "The failure moment is a particular point in this project's life (a retraining, a budget review, a launch crunch), the signal is something that could be seen or measured, and the protection is a gate, review or escalation path with an owner or trigger.",
+        "false": "The row restates the objective, gives a generic risk ('lack of commitment', 'time pressure') with no moment, offers a signal nobody could observe, or offers 'monitor' or 'remind the team' as protection."
+      }
+    },
+    {
+      "id": "renewal_trigger_is_an_event",
+      "each": "renewal_triggers",
+      "bar": "includes contract renewal triggers",
+      "instructions": "Is the renewal trigger in `items[{i}]` an event or condition that would clearly tell the team to revisit the contract?",
+      "criteria": {
+        "true": "Names an observable event or condition (a model or tooling change, a new stakeholder, an incident, a regulatory change, or a fixed review date) that anyone could recognise as having happened.",
+        "false": "A vague prompt such as 'when appropriate' or 'if needed' with no event that would show it had been reached."
+      }
+    }
+  ]
+}

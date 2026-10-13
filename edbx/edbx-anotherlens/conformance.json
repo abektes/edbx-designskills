@@ -5,27 +5,32 @@
     "ledger_type_cells": {
       "type": "table_cells",
       "in_section": "Evidence Ledger",
-      "column": "Type"
+      "column": "Type",
+      "strict": true
     },
     "spec_insights": {
       "type": "table_rows",
       "in_section": "Design Decision Spec",
-      "column": "Insight"
+      "column": "Insight",
+      "strict": true
     },
     "spec_changes": {
       "type": "table_cells",
       "in_section": "Design Decision Spec",
-      "column": "design change"
+      "column": "design change",
+      "strict": true
     },
     "spec_measures": {
       "type": "table_cells",
       "in_section": "Design Decision Spec",
-      "column": "Measurable"
+      "column": "Measurable",
+      "strict": true
     },
     "spec_owners": {
       "type": "table_cells",
       "in_section": "Design Decision Spec",
-      "column": "Owner"
+      "column": "Owner",
+      "strict": true
     },
     "spec_sprints": {
       "type": "table_cells",
@@ -36,12 +41,14 @@
     "spec_criteria": {
       "type": "table_cells",
       "in_section": "Design Decision Spec",
-      "column": "Pass"
+      "column": "Pass",
+      "strict": true
     },
     "accessibility_measures": {
       "type": "table_cells",
       "in_section": "Design Decision Spec",
       "column": "Measurable",
+      "strict": true,
       "where": {
         "column": "Insight",
         "matches": "accessib|screen.?reader|contrast|low vision|visual impair|motor|dexterity|font size|text size|tap target|touch target|hearing|captions?|cognitive load|dyslexi"

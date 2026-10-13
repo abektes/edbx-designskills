@@ -1,0 +1,656 @@
+{
+  "skill": "edbx-normative-design-scheme",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar. Not checked: (1) 'works in both Assess and Generate modes': all three scenarios ask for an assessment, so no scenario exercises a pure Generate-mode run; the three lenses' design ideas are checked in every output. (2) The 'invents none' half of the Evidence Ledger bar is checked only through the typing rules (valid Type words; a row typed sourced must carry a URL, because the skill has no Sources list); whether a user-supplied row is really in the brief needs the prompt and is not machine-checked. (3) 'Design ideas per lens' is checked as three idea blocks (any heading containing 'ideas') each listing at least two items; which lens a block belongs to is read from order, not verified. (4) The design-team and future-affected stakeholder checks are lexical on the stakeholder name column and are backed by semantic checks on the whole map. (5) 'Explains each philosophical term' is a document-scope semantic check and the least reliable one here. (6) The 'Triad Conflict Matrix decision' column is matched by its first 'Decision' column; the Universal Law Test is expected to cover at least as many decisions as the matrix names. (7) Mindset check, Guardrails, Priority Recommendation and the Integration section are not Quality Bar items and are not checked.",
+  "enumerators": {
+    "ledger_type_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Type",
+      "strict": true
+    },
+    "sourced_basis_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Basis",
+      "strict": true,
+      "where": {
+        "column": "Type",
+        "matches": "^\\s*sourced"
+      }
+    },
+    "answer_body": {
+      "type": "phrase_matches",
+      "in_section": "^Answer",
+      "pattern": "[^\\n]{20,}"
+    },
+    "stakeholder_names": {
+      "type": "table_cells",
+      "in_section": "Stakeholder.*Power Map",
+      "column": "Stakeholder",
+      "strict": true
+    },
+    "stakeholder_rows": {
+      "type": "table_rows",
+      "in_section": "Stakeholder.*Power Map",
+      "column": "Stakeholder",
+      "strict": true,
+      "full": true
+    },
+    "power_asymmetry": {
+      "type": "phrase_matches",
+      "pattern": "power asymmetry summary\\W+[^\\n]{20,}"
+    },
+    "harm_rows": {
+      "type": "table_rows",
+      "in_section": "Non.?Obvious Harms",
+      "column": "Non-obvious harm",
+      "strict": true,
+      "full": true
+    },
+    "harm_names": {
+      "type": "table_cells",
+      "in_section": "Non.?Obvious Harms",
+      "column": "Non-obvious harm",
+      "strict": true
+    },
+    "harm_populations": {
+      "type": "table_cells",
+      "in_section": "Non.?Obvious Harms",
+      "column": "Population",
+      "strict": true
+    },
+    "harm_mechanisms": {
+      "type": "table_cells",
+      "in_section": "Non.?Obvious Harms",
+      "column": "Mechanism",
+      "strict": true
+    },
+    "idea_blocks": {
+      "type": "phrase_matches",
+      "pattern": "(?ims)^(?:#{2,4}\\s*|\\*\\*)[^\\n]*ideas[^\\n]*\\n.*?(?=^#|^\\*\\*[^\\n]*:\\*\\*\\s*$|^\\*\\*[^\\n]*\\*\\*:\\s*$|\\Z)"
+    },
+    "ult_decisions": {
+      "type": "table_cells",
+      "in_section": "Universal Law Test",
+      "column": "Design decision",
+      "strict": true
+    },
+    "ult_worlds": {
+      "type": "table_cells",
+      "in_section": "Universal Law Test",
+      "column": "World",
+      "strict": true
+    },
+    "ult_livable": {
+      "type": "table_cells",
+      "in_section": "Universal Law Test",
+      "column": "Livable",
+      "strict": true
+    },
+    "ult_verdicts": {
+      "type": "table_cells",
+      "in_section": "Universal Law Test",
+      "column": "Verdict",
+      "strict": true
+    },
+    "ult_rows": {
+      "type": "table_rows",
+      "in_section": "Universal Law Test",
+      "column": "Design decision",
+      "strict": true,
+      "full": true
+    },
+    "triad_decisions": {
+      "type": "table_cells",
+      "in_section": "Triad Conflict Matrix",
+      "column": "Decision",
+      "strict": true
+    },
+    "triad_virtue": {
+      "type": "table_cells",
+      "in_section": "Triad Conflict Matrix",
+      "column": "Virtue",
+      "strict": true
+    },
+    "triad_consequence": {
+      "type": "table_cells",
+      "in_section": "Triad Conflict Matrix",
+      "column": "Consequence",
+      "strict": true
+    },
+    "triad_deontology": {
+      "type": "table_cells",
+      "in_section": "Triad Conflict Matrix",
+      "column": "Deontology",
+      "strict": true
+    },
+    "triad_alignment": {
+      "type": "table_cells",
+      "in_section": "Triad Conflict Matrix",
+      "column": "Alignment",
+      "strict": true
+    },
+    "triad_non_green": {
+      "type": "table_cells",
+      "in_section": "Triad Conflict Matrix",
+      "column": "Alignment",
+      "strict": true,
+      "where": {
+        "column": "Alignment",
+        "matches": "🟡|🔴"
+      }
+    },
+    "statement_commitments": {
+      "type": "phrase_matches",
+      "in_section": "Normative Design Statement",
+      "pattern": "\\bcommit\\w*\\s+to\\b|\\band\\s+(?:we\\s+)?(?:also\\s+)?(?:commit\\w*\\s+)?to\\b"
+    }
+  },
+  "structural": [
+    {
+      "id": "answer_first",
+      "kind": "any_of",
+      "checks": [
+        {
+          "kind": "section_present",
+          "pattern": "(?m)^\\s*(?:#{1,6}\\s*Answer\\b|\\*\\*Answer\\b)"
+        }
+      ],
+      "bar": "opens with a direct answer to the decision or question the user asked, which the rest of the output supports",
+      "desc": "the output opens with an Answer section"
+    },
+    {
+      "id": "evidence_ledger_present",
+      "kind": "section_present",
+      "pattern": "Evidence Ledger",
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "the output has an Evidence Ledger"
+    },
+    {
+      "id": "ledger_types_valid",
+      "kind": "cells_in_vocabulary",
+      "items": "ledger_type_cells",
+      "vocabulary": [
+        "user-supplied",
+        "sourced",
+        "assumption",
+        "unknown"
+      ],
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every Evidence Ledger Type is one of the four allowed words"
+    },
+    {
+      "id": "sourced_rows_have_url",
+      "kind": "cells_match",
+      "items": "sourced_basis_cells",
+      "pattern": "https?://",
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every row typed sourced names a URL in its Basis (the skill has no Sources list, so a bare paper or report name is model knowledge and must be typed assumption)"
+    },
+    {
+      "id": "stakeholder_map_present",
+      "kind": "section_present",
+      "pattern": "Stakeholder.*Power Map",
+      "bar": "**completes the Stakeholder & Power Map** (Step 0) with at least 5 distinct named stakeholders, including specifically-named vulnerable subgroups, the design team itself as a stakeholder, and future-affected populations",
+      "desc": "a Stakeholder & Power Map section exists"
+    },
+    {
+      "id": "stakeholders_at_least_five",
+      "kind": "min_count",
+      "items": "stakeholder_names",
+      "n": 5,
+      "bar": "at least 5 distinct named stakeholders",
+      "desc": "the Stakeholder & Power Map has at least 5 stakeholder rows"
+    },
+    {
+      "id": "design_team_is_stakeholder",
+      "kind": "min_count_matching",
+      "items": "stakeholder_names",
+      "n": 1,
+      "pattern": "designer|creator|engineer|developer|builder|product team|our team|the team|data team|data scien|\\bPMs?\\b|moderator|workers?\\b|staff|employee|\\bwe\\b|\\bour\\b",
+      "bar": "the design team itself as a stakeholder",
+      "desc": "a stakeholder row names the designers, engineers or team that build the product"
+    },
+    {
+      "id": "future_affected_listed",
+      "kind": "min_count_matching",
+      "items": "stakeholder_names",
+      "n": 1,
+      "pattern": "future|next generation|generations|years|precedent|long.?term|later|children of|descendants|upcoming",
+      "bar": "future-affected populations",
+      "desc": "a stakeholder row names a future-affected population"
+    },
+    {
+      "id": "power_asymmetry_summary",
+      "kind": "min_count",
+      "items": "power_asymmetry",
+      "n": 1,
+      "bar": "**completes the Stakeholder & Power Map** (Step 0) with at least 5 distinct named stakeholders, including specifically-named vulnerable subgroups, the design team itself as a stakeholder, and future-affected populations",
+      "desc": "a Power asymmetry summary paragraph follows the map"
+    },
+    {
+      "id": "harms_present",
+      "kind": "section_present",
+      "pattern": "Non.?Obvious Harms",
+      "bar": "**produces a Non-Obvious Harms Inventory** with at least 5 named harms beyond what the heuristic categories catch",
+      "desc": "a Non-Obvious Harms Inventory section exists"
+    },
+    {
+      "id": "harms_at_least_five",
+      "kind": "min_count",
+      "items": "harm_names",
+      "n": 5,
+      "bar": "**produces a Non-Obvious Harms Inventory** with at least 5 named harms beyond what the heuristic categories catch",
+      "desc": "the Non-Obvious Harms Inventory names at least 5 harms"
+    },
+    {
+      "id": "harms_have_population",
+      "kind": "count_covers",
+      "items": "harm_populations",
+      "covers": "harm_names",
+      "bar": "**produces a Non-Obvious Harms Inventory** with at least 5 named harms beyond what the heuristic categories catch",
+      "desc": "every harm row has a Population cell"
+    },
+    {
+      "id": "harms_have_mechanism",
+      "kind": "count_covers",
+      "items": "harm_mechanisms",
+      "covers": "harm_names",
+      "bar": "**produces a Non-Obvious Harms Inventory** with at least 5 named harms beyond what the heuristic categories catch",
+      "desc": "every harm row has a Mechanism cell"
+    },
+    {
+      "id": "lens_1_present",
+      "kind": "section_present",
+      "pattern": "Virtue Ethics|Intention",
+      "bar": "applies all three lenses to the design with substantive findings per lens, **referencing the named stakeholders** rather than abstract \"users\"",
+      "desc": "a section applying Lens 1, Intention (Virtue Ethics), exists"
+    },
+    {
+      "id": "lens_2_present",
+      "kind": "section_present",
+      "pattern": "Consequential|Effect",
+      "bar": "applies all three lenses to the design with substantive findings per lens, **referencing the named stakeholders** rather than abstract \"users\"",
+      "desc": "a section applying Lens 2, Effect (Consequentialism), exists"
+    },
+    {
+      "id": "lens_3_present",
+      "kind": "section_present",
+      "pattern": "Deontolog|Duty",
+      "bar": "applies all three lenses to the design with substantive findings per lens, **referencing the named stakeholders** rather than abstract \"users\"",
+      "desc": "a section applying Lens 3, Design (Deontology), exists"
+    },
+    {
+      "id": "creator_impact_present",
+      "kind": "section_present",
+      "pattern": "Creator Impact",
+      "bar": "**completes the Creator Impact analysis in Lens 1** — what kind of designers does this design make us into; what habits of moral attention it requires us to cultivate or suppress; what we'd be embarrassed to explain.",
+      "desc": "a Creator Impact section or sub-block exists"
+    },
+    {
+      "id": "creator_impact_questions",
+      "kind": "all_phrases",
+      "section": "Creator Impact",
+      "phrases": [
+        "kind of|into|become|becom|make us|makes us",
+        "moral attention",
+        "believe",
+        "embarrass"
+      ],
+      "bar": "**completes the Creator Impact analysis in Lens 1** — what kind of designers does this design make us into; what habits of moral attention it requires us to cultivate or suppress; what we'd be embarrassed to explain.",
+      "desc": "Creator Impact covers the kind of designer it makes us, habits of moral attention, what we would have to believe about users, and what we would be embarrassed to explain"
+    },
+    {
+      "id": "design_ideas_per_lens",
+      "kind": "min_count",
+      "items": "idea_blocks",
+      "n": 3,
+      "bar": "produces 2 design ideas per lens (6 total minimum)",
+      "desc": "each of the three lenses has a design-ideas block"
+    },
+    {
+      "id": "two_ideas_per_block",
+      "kind": "min_count_matching",
+      "items": "idea_blocks",
+      "n": 3,
+      "pattern": "\\b1[.):]\\s.*\\b2[.):]\\s|(?:\\s-\\s.*){2}",
+      "bar": "produces 2 design ideas per lens (6 total minimum)",
+      "desc": "at least three design-ideas blocks each list two or more ideas (6 total minimum)"
+    },
+    {
+      "id": "ult_present",
+      "kind": "section_present",
+      "pattern": "Universal Law Test",
+      "bar": "**produces a Universal Law Test table** for every named design decision, naming the world that results from universalization and whether it is livable",
+      "desc": "a Universal Law Test section exists"
+    },
+    {
+      "id": "ult_has_rows",
+      "kind": "min_count",
+      "items": "ult_decisions",
+      "n": 1,
+      "bar": "**produces a Universal Law Test table** for every named design decision, naming the world that results from universalization and whether it is livable",
+      "desc": "the Universal Law Test table has at least one row"
+    },
+    {
+      "id": "ult_covers_named_decisions",
+      "kind": "count_covers",
+      "items": "ult_decisions",
+      "covers": "triad_decisions",
+      "bar": "**produces a Universal Law Test table** for every named design decision, naming the world that results from universalization and whether it is livable",
+      "desc": "the Universal Law Test has a row for at least as many decisions as the Triad Conflict Matrix names"
+    },
+    {
+      "id": "ult_names_world",
+      "kind": "count_covers",
+      "items": "ult_worlds",
+      "covers": "ult_decisions",
+      "bar": "**produces a Universal Law Test table** for every named design decision, naming the world that results from universalization and whether it is livable",
+      "desc": "every Universal Law Test row names the world that results from universalization"
+    },
+    {
+      "id": "ult_states_livable",
+      "kind": "count_covers",
+      "items": "ult_livable",
+      "covers": "ult_decisions",
+      "bar": "**produces a Universal Law Test table** for every named design decision, naming the world that results from universalization and whether it is livable",
+      "desc": "every Universal Law Test row states whether that world is livable"
+    },
+    {
+      "id": "triad_present",
+      "kind": "section_present",
+      "pattern": "Triad Conflict Matrix",
+      "bar": "**produces the Triad Conflict Matrix** — the methodology's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
+      "desc": "a Triad Conflict Matrix section exists"
+    },
+    {
+      "id": "triad_has_rows",
+      "kind": "min_count",
+      "items": "triad_decisions",
+      "n": 1,
+      "bar": "**produces the Triad Conflict Matrix** — the methodology's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
+      "desc": "the Triad Conflict Matrix has at least one decision row"
+    },
+    {
+      "id": "triad_all_lenses_filled",
+      "kind": "count_covers",
+      "items": "triad_deontology",
+      "covers": "triad_decisions",
+      "bar": "**produces the Triad Conflict Matrix** — the methodology's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
+      "desc": "every matrix row has a verdict from each of the three lenses"
+    },
+    {
+      "id": "triad_virtue_filled",
+      "kind": "count_covers",
+      "items": "triad_virtue",
+      "covers": "triad_decisions",
+      "bar": "**produces the Triad Conflict Matrix** — the methodology's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
+      "desc": "every matrix row has a Virtue verdict"
+    },
+    {
+      "id": "triad_consequence_filled",
+      "kind": "count_covers",
+      "items": "triad_consequence",
+      "covers": "triad_decisions",
+      "bar": "**produces the Triad Conflict Matrix** — the methodology's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
+      "desc": "every matrix row has a Consequence verdict"
+    },
+    {
+      "id": "triad_alignment_symbols",
+      "kind": "cells_match",
+      "items": "triad_alignment",
+      "pattern": "🟢|🟡|🔴",
+      "bar": "**produces the Triad Conflict Matrix** — the methodology's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
+      "desc": "every Alignment cell carries a green / yellow / red marker"
+    },
+    {
+      "id": "triad_dilemma_named",
+      "kind": "implied_section",
+      "items": "triad_non_green",
+      "pattern": "dilemma|unresolved|tension|trade-?off",
+      "bar": "**produces the Triad Conflict Matrix** — the methodology's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
+      "desc": "if any row is rated yellow or red, the dilemma is named in the text"
+    },
+    {
+      "id": "synthesis_present",
+      "kind": "section_present",
+      "pattern": "Cross-Lens Synthesis",
+      "bar": "produces a Normative Design Statement in the prescribed form, including the closing two-part commitment (\"we commit to X… and to Y…\")",
+      "desc": "a Cross-Lens Synthesis & Commitment section exists"
+    },
+    {
+      "id": "statement_present",
+      "kind": "section_present",
+      "pattern": "Normative Design Statement",
+      "bar": "produces a Normative Design Statement in the prescribed form, including the closing two-part commitment (\"we commit to X… and to Y…\")",
+      "desc": "a Normative Design Statement is written"
+    },
+    {
+      "id": "statement_form",
+      "kind": "all_phrases",
+      "section": "Normative Design Statement",
+      "phrases": [
+        "grounded in",
+        "produc",
+        "impos",
+        "duty",
+        "reconcil|unresolved|tension|dilemma",
+        "commit"
+      ],
+      "bar": "produces a Normative Design Statement in the prescribed form, including the closing two-part commitment (\"we commit to X… and to Y…\")",
+      "desc": "the statement follows the prescribed form: grounded in, produces, imposing, a duty, an unresolved tension, we commit to"
+    },
+    {
+      "id": "statement_two_commitments",
+      "kind": "min_count",
+      "items": "statement_commitments",
+      "n": 2,
+      "bar": "produces a Normative Design Statement in the prescribed form, including the closing two-part commitment (\"we commit to X… and to Y…\")",
+      "desc": "the statement closes with two commitments (\"we commit to X ... and to Y\")"
+    }
+  ],
+  "semantic": [
+    {
+      "id": "answer_direct",
+      "section": "^Answer",
+      "bar": "opens with a direct answer to the decision or question the user asked, which the rest of the output supports",
+      "instructions": "Does `items[{i}]` answer the question the user asked (a verdict, decision or recommendation) and give the main reason?",
+      "criteria": {
+        "true": "States a clear verdict, decision or recommendation for this product and the main reason for it.",
+        "false": "Restates the topic, lists what the method will do, or hedges without taking a position."
+      }
+    },
+    {
+      "id": "stakeholder_specific",
+      "each": "stakeholder_rows",
+      "bar": "at least 5 distinct named stakeholders (not generic users)",
+      "instructions": "Does the stakeholder row in `items[{i}]` name a specific population rather than a generic label?",
+      "criteria": {
+        "true": "Names a specific group (for example 'low-income users outside the matched bracket', 'residents of over-policed neighbourhoods', 'content moderators') and says something particular about the power they have and lack.",
+        "false": "A generic label such as 'users', 'customers', 'the public' or 'society' on its own, with power cells that would fit any product."
+      }
+    },
+    {
+      "id": "vulnerable_subgroups_named",
+      "section": "Stakeholder.*Power Map",
+      "bar": "including specifically-named vulnerable subgroups",
+      "instructions": "Does the stakeholder map in `items[{i}]` name at least two specific vulnerable subgroups that are relevant to this product?",
+      "criteria": {
+        "true": "Names at least two particular vulnerable groups (for example minors, abuse survivors, people in crisis, low-income residents, people with disabilities, older adults) tied to this product.",
+        "false": "Names no vulnerable subgroup, names only one, or refers only to 'vulnerable users' or 'marginalised groups' without saying who."
+      }
+    },
+    {
+      "id": "design_team_row_specific",
+      "section": "Stakeholder.*Power Map",
+      "bar": "the design team itself as a stakeholder",
+      "instructions": "Does the stakeholder map in `items[{i}]` treat the people who design and operate the product as stakeholders, saying what the design does to them?",
+      "criteria": {
+        "true": "Has a row for the designers, engineers or team that build and run the product and says something particular about their power or what they stand to lose or become.",
+        "false": "The team appears nowhere in the map, or only as the operator who holds all the power with nothing said about the effect on them."
+      }
+    },
+    {
+      "id": "future_affected_named",
+      "section": "Stakeholder.*Power Map",
+      "bar": "future-affected populations",
+      "instructions": "Does the stakeholder map in `items[{i}]` include at least one population affected in the future rather than today?",
+      "criteria": {
+        "true": "Names a future-affected group, such as people whose accumulated data is used years later, users of the precedent this sets, or the next generation of users.",
+        "false": "Every stakeholder listed is affected in the present."
+      }
+    },
+    {
+      "id": "power_asymmetry_specific",
+      "each": "power_asymmetry",
+      "bar": "**completes the Stakeholder & Power Map** (Step 0) with at least 5 distinct named stakeholders, including specifically-named vulnerable subgroups, the design team itself as a stakeholder, and future-affected populations",
+      "instructions": "Does the paragraph in `items[{i}]` name specific power asymmetries between the operator and a stakeholder, and say whether the affected party can exit, undo or contest?",
+      "criteria": {
+        "true": "Names about three particular asymmetries and says for each whether the affected party can exit, undo or contest.",
+        "false": "Generic statements that the operator has more power, with nothing on reversibility."
+      }
+    },
+    {
+      "id": "harm_specific_mechanism",
+      "each": "harm_rows",
+      "bar": "**produces a Non-Obvious Harms Inventory** with at least 5 named harms beyond what the heuristic categories catch beyond what the heuristic categories catch",
+      "instructions": "Does the harm row in `items[{i}]` describe a harm specific to this product, with a population and a mechanism that explains how it happens?",
+      "criteria": {
+        "true": "Names a particular non-obvious harm for this product (for example an inference harm, proxy-variable harm, aggregation harm, competence foreclosure, chilling effect, bystander or worker harm), says who it falls on, and explains how the design or data produces it.",
+        "false": "A generic harm that restates an obvious category ('privacy loss', 'bias', 'addiction'), or a population or mechanism that is vague or missing."
+      }
+    },
+    {
+      "id": "lens_1_substantive",
+      "section": "Virtue Ethics|Intention",
+      "bar": "applies all three lenses to the design with substantive findings per lens, **referencing the named stakeholders** rather than abstract \"users\"",
+      "instructions": "Does the Lens 1 section in `items[{i}]` give substantive Virtue Ethics findings about this product?",
+      "criteria": {
+        "true": "Gives concrete findings specific to this product, judged by the lens's own question, with reasons.",
+        "false": "Generic statements about the ethical theory that would fit any product, or only restates the brief."
+      }
+    },
+    {
+      "id": "lens_1_names_stakeholders",
+      "section": "Virtue Ethics|Intention",
+      "bar": "applies all three lenses to the design with substantive findings per lens, **referencing the named stakeholders** rather than abstract \"users\"",
+      "instructions": "Does the Lens 1 section in `items[{i}]` refer to specific named stakeholder groups rather than only 'users'?",
+      "criteria": {
+        "true": "Refers to at least two specific stakeholder groups (for example a vulnerable subgroup, non-users, workers, the team) in its findings.",
+        "false": "Speaks only of 'users', 'people' or 'society' in the abstract."
+      }
+    },
+    {
+      "id": "lens_2_substantive",
+      "section": "Consequential|Effect",
+      "bar": "applies all three lenses to the design with substantive findings per lens, **referencing the named stakeholders** rather than abstract \"users\"",
+      "instructions": "Does the Lens 2 section in `items[{i}]` give substantive Consequentialism findings about this product?",
+      "criteria": {
+        "true": "Gives concrete findings specific to this product, judged by the lens's own question, with reasons.",
+        "false": "Generic statements about the ethical theory that would fit any product, or only restates the brief."
+      }
+    },
+    {
+      "id": "lens_2_names_stakeholders",
+      "section": "Consequential|Effect",
+      "bar": "applies all three lenses to the design with substantive findings per lens, **referencing the named stakeholders** rather than abstract \"users\"",
+      "instructions": "Does the Lens 2 section in `items[{i}]` refer to specific named stakeholder groups rather than only 'users'?",
+      "criteria": {
+        "true": "Refers to at least two specific stakeholder groups (for example a vulnerable subgroup, non-users, workers, the team) in its findings.",
+        "false": "Speaks only of 'users', 'people' or 'society' in the abstract."
+      }
+    },
+    {
+      "id": "lens_3_substantive",
+      "section": "Deontolog|Duty",
+      "bar": "applies all three lenses to the design with substantive findings per lens, **referencing the named stakeholders** rather than abstract \"users\"",
+      "instructions": "Does the Lens 3 section in `items[{i}]` give substantive Deontology findings about this product?",
+      "criteria": {
+        "true": "Gives concrete findings specific to this product, judged by the lens's own question, with reasons.",
+        "false": "Generic statements about the ethical theory that would fit any product, or only restates the brief."
+      }
+    },
+    {
+      "id": "lens_3_names_stakeholders",
+      "section": "Deontolog|Duty",
+      "bar": "applies all three lenses to the design with substantive findings per lens, **referencing the named stakeholders** rather than abstract \"users\"",
+      "instructions": "Does the Lens 3 section in `items[{i}]` refer to specific named stakeholder groups rather than only 'users'?",
+      "criteria": {
+        "true": "Refers to at least two specific stakeholder groups (for example a vulnerable subgroup, non-users, workers, the team) in its findings.",
+        "false": "Speaks only of 'users', 'people' or 'society' in the abstract."
+      }
+    },
+    {
+      "id": "creator_impact_substantive",
+      "section": "Creator Impact",
+      "bar": "**completes the Creator Impact analysis in Lens 1** — what kind of designers does this design make us into; what habits of moral attention it requires us to cultivate or suppress; what we'd be embarrassed to explain.",
+      "instructions": "Does the Creator Impact analysis in `items[{i}]` say, specifically for this product, what kind of professionals building it makes the team, which habits of moral attention it asks the team to cultivate or suppress, and what the team would be embarrassed to explain?",
+      "criteria": {
+        "true": "Answers the questions with claims particular to this product (for example 'engineers learn to treat class as a feature', 'reward for hitting match-rate and staying quiet'), not general remarks about ethics at work.",
+        "false": "Generic or missing answers that would fit any product, or answers that only discuss the effects on users."
+      }
+    },
+    {
+      "id": "ideas_grounded_in_lens",
+      "each": "idea_blocks",
+      "bar": "produces 2 design ideas per lens (6 total minimum)",
+      "instructions": "Are the design ideas in `items[{i}]` concrete changes to this product that follow from the lens they sit under?",
+      "criteria": {
+        "true": "Each idea is a particular change or feature for this product (what to build, remove or require) that follows from virtue, consequence or duty respectively.",
+        "false": "Vague aims ('be more ethical', 'consider fairness') or ideas that would fit any product."
+      }
+    },
+    {
+      "id": "terms_explained",
+      "scope": "document",
+      "bar": "explains each philosophical term in accessible language",
+      "instructions": "Read the document in `items[{i}]`. Does it explain the philosophical terms it relies on (for example virtue ethics, consequentialism, deontology, universal law, means versus ends) in plain language the first time they matter?",
+      "criteria": {
+        "true": "Each theory and key term used is glossed in plain words, in a clause, a lens-introducing sentence or a definition.",
+        "false": "Uses theory names or terms such as 'categorical imperative', 'deontic' or 'utilitarian calculus' with no plain explanation."
+      }
+    },
+    {
+      "id": "ult_world_specific",
+      "each": "ult_rows",
+      "bar": "**produces a Universal Law Test table** for every named design decision, naming the world that results from universalization and whether it is livable",
+      "instructions": "Does the Universal Law Test row in `items[{i}]` describe the concrete world if every product did this, and judge whether that world is livable with a reason?",
+      "criteria": {
+        "true": "Describes what would happen across the whole industry or society if the decision were universal, and says why that world is or is not livable.",
+        "false": "Restates the decision, or says 'bad' or 'fine' without describing a universalized world."
+      }
+    },
+    {
+      "id": "triad_dilemmas_honest",
+      "section": "Triad Conflict Matrix",
+      "bar": "**produces the Triad Conflict Matrix** — the methodology's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
+      "instructions": "Read the Triad Conflict Matrix section in `items[{i}]`. For every row rated yellow or red, does the text name the dilemma honestly (which lens disagrees and why) without resolving it artificially? If no row is yellow or red, answer true.",
+      "criteria": {
+        "true": "Each yellow row says which lens is in the minority and states the real good on both sides; each red row is named as an unresolved decision for the team.",
+        "false": "A yellow or red row has no explanation, or the text dissolves the conflict into a synthesis that says all lenses really agree."
+      }
+    },
+    {
+      "id": "synthesis_names_findings",
+      "section": "Cross-Lens Synthesis",
+      "bar": "produces a Normative Design Statement in the prescribed form, including the closing two-part commitment (\"we commit to X… and to Y…\")",
+      "instructions": "Does the synthesis section in `items[{i}]` name the strongest green alignment finding and the most serious red conflict finding (or say plainly that no row was red)?",
+      "criteria": {
+        "true": "Names a specific design move all three lenses endorse and a specific unresolved conflict, or states honestly that none was red and names the most serious yellow tension.",
+        "false": "Gives a general summary without naming a particular alignment or conflict."
+      }
+    },
+    {
+      "id": "statement_specific_commitments",
+      "section": "Normative Design Statement",
+      "bar": "produces a Normative Design Statement in the prescribed form, including the closing two-part commitment (\"we commit to X… and to Y…\")",
+      "instructions": "Does the Normative Design Statement in `items[{i}]` name specific virtues, stakeholders, harm and duty, and close with two specific courses of action, one honouring what the lenses agreed on and one acknowledging what they did not?",
+      "criteria": {
+        "true": "Fills every slot with content from this analysis and ends with two particular actions (for example a named audit, default or governance step).",
+        "false": "Leaves bracketed slots, uses generic wording ('act responsibly'), or has no concrete second commitment."
+      }
+    }
+  ]
+}

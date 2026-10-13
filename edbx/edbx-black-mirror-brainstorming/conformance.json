@@ -1,0 +1,229 @@
+{
+  "skill": "edbx-black-mirror-brainstorming",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar. (1) The episode and poster bars are owed only on a full run: the medication-adherence scenario asks for the anti-goals alone and the skill says to keep the upstream steps internal, so those checks are conditional on the prompt not asking to skip the episodes. The brainstorm, anti-goal, load-bearing, Answer and Ledger bars apply to every scenario. (2) The poster bar is only partly checkable: the HTML poster is a separate file the harness does not see, so the rubric checks only that the worksheet has a Featured poster section naming the strongest episode and the poster file, and that nothing in that section describes an external request. Whether the poster file opens cleanly with no broken layout cannot be measured here and is left unchecked. (3) 'at least 6 anti-goals' style counts use the skill's own range of 6-10 and 8-12.",
+  "enumerators": {
+    "ledger_type_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Type",
+      "strict": true
+    },
+    "brainstorm_items": {
+      "type": "list_items",
+      "in_section": "what.?could.?go.?wrong"
+    },
+    "economic_items": {
+      "type": "list_items",
+      "in_section": "^economic"
+    },
+    "political_items": {
+      "type": "list_items",
+      "in_section": "^political"
+    },
+    "social_items": {
+      "type": "list_items",
+      "in_section": "^social"
+    },
+    "episodes_span": {
+      "type": "phrase_matches",
+      "pattern": "(?ms)^#{1,6}[ \\t]*Episode[ \\t]*1\\b.*?(?=^#{1,6}[ \\t]*(?:Featured poster|Anti.?goals)|\\Z)"
+    },
+    "anti_goals": {
+      "type": "list_items",
+      "in_section": "^(?!load).*anti.?goals"
+    },
+    "anti_goal_tests": {
+      "type": "phrase_matches",
+      "in_section": "^(?!load).*anti.?goals",
+      "pattern": "\\btest:\\**\\s*[^\\n]{15,}"
+    },
+    "load_bearing_items": {
+      "type": "list_items",
+      "in_section": "load.?bearing"
+    }
+  },
+  "structural": [
+    {
+      "id": "answer_first",
+      "kind": "any_of",
+      "checks": [
+        {"kind": "section_present", "pattern": "(?m)^\\s*(?:#{1,6}\\s*Answer\\b|\\*\\*Answer\\b)"}
+      ],
+      "bar": "opens with a direct answer to the decision or question the user asked, which the rest of the output supports",
+      "desc": "the output opens with an Answer section"
+    },
+    {
+      "id": "evidence_ledger_present",
+      "kind": "section_present",
+      "pattern": "Evidence Ledger",
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "the output has an Evidence Ledger"
+    },
+    {
+      "id": "ledger_types_valid",
+      "kind": "cells_in_vocabulary",
+      "items": "ledger_type_cells",
+      "vocabulary": ["user-supplied", "sourced", "assumption", "unknown"],
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every Evidence Ledger Type is one of the four allowed words"
+    },
+    {
+      "id": "brainstorm_count",
+      "kind": "min_count",
+      "items": "brainstorm_items",
+      "n": 8,
+      "max": 12,
+      "bar": "Produces 8–12 brainstorm items spread across all three lenses (not bunched in one).",
+      "desc": "the What could go wrong section has 8 to 12 items"
+    },
+    {
+      "id": "economic_lens",
+      "kind": "min_count",
+      "items": "economic_items",
+      "n": 2,
+      "bar": "spread across all three lenses (not bunched in one)",
+      "desc": "at least 2 brainstorm items under the Economic lens"
+    },
+    {
+      "id": "political_lens",
+      "kind": "min_count",
+      "items": "political_items",
+      "n": 2,
+      "bar": "spread across all three lenses (not bunched in one)",
+      "desc": "at least 2 brainstorm items under the Political lens"
+    },
+    {
+      "id": "social_lens",
+      "kind": "min_count",
+      "items": "social_items",
+      "n": 2,
+      "bar": "spread across all three lenses (not bunched in one)",
+      "desc": "at least 2 brainstorm items under the Social lens"
+    },
+    {
+      "id": "episode_1_present",
+      "kind": "conditional_section",
+      "pattern": "^episode\\s*1\\b",
+      "when_prompt_matches": "(?is)\\A(?!.*skip the (?:full )?episode)",
+      "required_only": true,
+      "bar": "Yields three episodes that are mechanistically distinct",
+      "desc": "Episode 1 is written up (unless the user asked to skip the episodes)"
+    },
+    {
+      "id": "episode_2_present",
+      "kind": "conditional_section",
+      "pattern": "^episode\\s*2\\b",
+      "when_prompt_matches": "(?is)\\A(?!.*skip the (?:full )?episode)",
+      "required_only": true,
+      "bar": "Yields three episodes that are mechanistically distinct",
+      "desc": "Episode 2 is written up (unless the user asked to skip the episodes)"
+    },
+    {
+      "id": "episode_3_present",
+      "kind": "conditional_section",
+      "pattern": "^episode\\s*3\\b",
+      "when_prompt_matches": "(?is)\\A(?!.*skip the (?:full )?episode)",
+      "required_only": true,
+      "bar": "Yields three episodes that are mechanistically distinct",
+      "desc": "Episode 3 is written up (unless the user asked to skip the episodes)"
+    },
+    {
+      "id": "poster_section_present",
+      "kind": "conditional_section",
+      "pattern": "featured poster",
+      "when_prompt_matches": "(?is)\\A(?!.*skip the (?:full )?episode)",
+      "required_only": true,
+      "bar": "Ships a poster that opens cleanly in a browser with no broken layout or external requests.",
+      "desc": "a Featured poster section points to the poster (unless the user asked to skip the episodes)"
+    },
+    {
+      "id": "anti_goal_count",
+      "kind": "min_count",
+      "items": "anti_goals",
+      "n": 6,
+      "max": 10,
+      "bar": "Ends with anti-goals that are specific enough to fail — each with a concrete test.",
+      "desc": "6 to 10 anti-goals are listed"
+    },
+    {
+      "id": "every_anti_goal_has_test",
+      "kind": "count_covers",
+      "items": "anti_goal_tests",
+      "covers": "anti_goals",
+      "bar": "each with a concrete test",
+      "desc": "every anti-goal carries a Test line"
+    },
+    {
+      "id": "load_bearing_named",
+      "kind": "min_count",
+      "items": "load_bearing_items",
+      "n": 2,
+      "max": 3,
+      "bar": "Identifies which anti-goals are load-bearing.",
+      "desc": "a Load-bearing section names 2 or 3 anti-goals"
+    }
+  ],
+  "semantic": [
+    {
+      "id": "episodes_distinct_mechanisms",
+      "each": "episodes_span",
+      "bar": "Yields three episodes that are mechanistically distinct (not three flavours of \"data leaks happen\").",
+      "instructions": "The text in `items[{i}]` holds three Black Mirror episodes about one product. Do the three episodes turn on three different mechanisms of harm?",
+      "criteria": {
+        "true": "Each episode hinges on a different way the design causes harm -- for example a third party buying access to data, an institution making the product compulsory, and peer pressure inside a group -- with different protagonists and different points where the harm lands.",
+        "false": "The episodes are variations of one mechanism, such as three stories where data leaks or the algorithm is biased, differing only in setting or character."
+      }
+    },
+    {
+      "id": "quotable_pitch_quote",
+      "each": "episodes_span",
+      "bar": "Has at least one episode whose pitch quote a designer would actually quote back later.",
+      "instructions": "The text in `items[{i}]` holds three Black Mirror episodes, each with a pitch quote in a block quote. Is at least one of the pitch quotes memorable and specific enough that a designer would quote it back in a review?",
+      "criteria": {
+        "true": "At least one pitch quote names a person in a concrete trap and ends on the trap closing, with a plausible mechanism a designer would recognise from real products; it reads like a tile blurb a teammate would repeat.",
+        "false": "Every pitch quote is generic or abstract -- about 'users' or 'society' -- with no concrete person or mechanism, or reads as a summary rather than a blurb."
+      }
+    },
+    {
+      "id": "poster_names_episode",
+      "section": "featured poster",
+      "bar": "Ships a poster that opens cleanly in a browser with no broken layout or external requests.",
+      "instructions": "Does `items[{i}]` say which single episode the poster features and where the poster file is?",
+      "criteria": {
+        "true": "Names one episode as the strongest and refers to a single self-contained HTML poster file for it.",
+        "false": "Does not choose one episode, or does not point to a poster file or inline HTML poster."
+      }
+    },
+    {
+      "id": "poster_no_external_requests",
+      "section": "featured poster",
+      "bar": "no broken layout or external requests",
+      "instructions": "Does `items[{i}]` describe or show a poster that loads nothing from outside the file?",
+      "criteria": {
+        "true": "Any poster HTML shown uses only inline CSS and no external stylesheets, scripts, web fonts or images (no http or https links to assets), or the section describes the poster as self-contained.",
+        "false": "The poster HTML links to an external stylesheet, script, font, image or CDN."
+      }
+    },
+    {
+      "id": "anti_goal_specific_enough_to_fail",
+      "each": "anti_goals",
+      "bar": "Ends with anti-goals that are specific enough to fail",
+      "instructions": "Is the anti-goal in `items[{i}]` specific enough that a real design could be seen to violate it?",
+      "criteria": {
+        "true": "States a particular thing the product must not do or must always allow, with a concrete condition -- for example 'a patient can revoke a caregiver's access without notifying them' -- so one could point at a build that breaks it.",
+        "false": "A platitude or value statement such as 'do not be evil', 'respect user privacy' or 'avoid bias' that no particular design could be said to fail."
+      }
+    },
+    {
+      "id": "anti_goal_test_concrete",
+      "each": "anti_goal_tests",
+      "bar": "each with a concrete test",
+      "instructions": "Is the test in `items[{i}]` something a team could actually run, build or measure?",
+      "criteria": {
+        "true": "Names a concrete check -- an audit, a walk-through, a threshold, a screen that must exist, a metric with a target -- that would show whether the anti-goal holds.",
+        "false": "Restates the anti-goal, or says only to 'monitor', 'consider' or 'ensure' it without saying how anyone would check."
+      }
+    }
+  ]
+}

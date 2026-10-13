@@ -1,0 +1,438 @@
+{
+  "skill": "edbx-responsible-design-prism",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar; all 11 bars have at least one check. Limits: (1) Table enumerators use nearest:true for the Stakeholder Map, Prism Audit Table and Mechanism Audit, because a generated H1 title such as 'Responsible Design Prism Audit: X' would otherwise be an ancestor of every table and pull them all into each count. (2) The Answer is enumerated by phrase because outputs write it inline ('**Answer:** ...'), which the heading parser does not see as a section. (3) The Redesign Pathway layout varies (one table per axis, or one small table per pathway with Mechanism and Business case as rows), so redesign is checked at section scope, not by column; 'each naming which mechanism it interrupts' is checked structurally only for the words mechanism or interrupt appearing in the section, and the per-pathway reading is carried by the section-scope semantic check. (4) 'lands on at least one Red or Yellow' is checked exactly as written (a single Red or Yellow axis passes) and no threshold is added. (5) 'invents none' is checked only through the typing rules: valid Type words, and a row typed sourced must cite one of this skill's Further Reading works or a URL (model knowledge is typed assumption). Whether a user-supplied row is really in the brief needs the prompt and is not machine-checked. (6) 'genuine insight, not performative answers' and 'business framing an executive could act on' are judgment checks (Jev) and the least reliable checks here; nothing structural can decide them. (7) Spectrum Placement Summary, Step 4's 'every Red/Yellow axis gets a pathway' and the Guardrails are not Quality Bar items and are not checked.",
+  "enumerators": {
+    "ledger_type_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Type",
+      "strict": true
+    },
+    "sourced_basis_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Basis",
+      "strict": true,
+      "where": {
+        "column": "Type",
+        "matches": "^\\s*sourced"
+      }
+    },
+    "answer_block": {
+      "type": "phrase_matches",
+      "pattern": "(?ms)^[ \\t]*(?:#{1,6}[ \\t]*)?\\*{0,2}Answer\\b.+?(?=^[ \\t]*(?:#|---)|\\Z)"
+    },
+    "population_names": {
+      "type": "table_cells",
+      "in_section": "Stakeholder|Population",
+      "column": "Population",
+      "strict": true,
+      "nearest": true
+    },
+    "audit_axes": {
+      "type": "table_cells",
+      "in_section": "Prism Audit|Audit Table|Five.Axis",
+      "column": "Axis",
+      "strict": true,
+      "nearest": true
+    },
+    "audit_scores": {
+      "type": "table_cells",
+      "in_section": "Prism Audit|Audit Table|Five.Axis",
+      "column": "Score",
+      "strict": true,
+      "nearest": true
+    },
+    "audit_rows": {
+      "type": "table_rows",
+      "in_section": "Prism Audit|Audit Table|Five.Axis",
+      "column": "Axis",
+      "strict": true,
+      "full": true,
+      "nearest": true
+    },
+    "red_yellow_axes": {
+      "type": "table_cells",
+      "in_section": "Prism Audit|Audit Table|Five.Axis",
+      "column": "Axis",
+      "strict": true,
+      "nearest": true,
+      "where": {
+        "column": "Score",
+        "matches": "Red|Yellow|🔴|🟡"
+      }
+    },
+    "red_yellow_rows": {
+      "type": "table_rows",
+      "in_section": "Prism Audit|Audit Table|Five.Axis",
+      "column": "Axis",
+      "strict": true,
+      "full": true,
+      "nearest": true,
+      "where": {
+        "column": "Score",
+        "matches": "Red|Yellow|🔴|🟡"
+      }
+    },
+    "mechanism_cells": {
+      "type": "table_cells",
+      "in_section": "Psychological Mechanism|Mechanism Audit",
+      "column": "Mechanism named",
+      "strict": true,
+      "nearest": true
+    },
+    "mechanism_rows": {
+      "type": "table_rows",
+      "in_section": "Psychological Mechanism|Mechanism Audit",
+      "column": "Axis",
+      "strict": true,
+      "full": true,
+      "nearest": true,
+      "where": {
+        "column": "Mechanism named",
+        "matches": "\\S"
+      }
+    },
+    "redesign_rows": {
+      "type": "table_rows",
+      "in_section": "Redesign Pathway",
+      "column": "Redesign Suggestion",
+      "strict": true,
+      "full": true
+    }
+  },
+  "structural": [
+    {
+      "id": "answer_first",
+      "kind": "any_of",
+      "checks": [
+        {
+          "kind": "section_present",
+          "pattern": "(?m)^\\s*(?:#{1,6}\\s*Answer\\b|\\*\\*Answer\\b)"
+        }
+      ],
+      "bar": "opens with a direct answer to the decision or question the user asked, which the rest of the output supports",
+      "desc": "the output opens with an Answer section"
+    },
+    {
+      "id": "evidence_ledger_present",
+      "kind": "section_present",
+      "pattern": "Evidence Ledger",
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "the output has an Evidence Ledger"
+    },
+    {
+      "id": "ledger_types_valid",
+      "kind": "cells_in_vocabulary",
+      "items": "ledger_type_cells",
+      "vocabulary": [
+        "user-supplied",
+        "sourced",
+        "assumption",
+        "unknown"
+      ],
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every Evidence Ledger Type is one of the four allowed words"
+    },
+    {
+      "id": "sourced_rows_cite_a_source",
+      "kind": "cells_match",
+      "items": "sourced_basis_cells",
+      "pattern": "(?i)https?://|Nielsen|Gray|Brignull|Web Foundation|Ethical Design Framework|deceptive\\.design|darkpatterns\\.org",
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every row typed sourced cites a paper from the skill's Further Reading or a URL in its Basis (model knowledge is typed assumption)"
+    },
+    {
+      "id": "stakeholder_map_present",
+      "kind": "section_present",
+      "pattern": "Stakeholder.*Population|Vulnerable Population",
+      "bar": "enumerates at least 3 distinct populations in the Stakeholder Map, naming vulnerable populations specifically (not \"users\" generically)",
+      "desc": "a Stakeholder & Vulnerable Population Map section exists"
+    },
+    {
+      "id": "populations_at_least_three",
+      "kind": "min_count",
+      "items": "population_names",
+      "n": 3,
+      "bar": "enumerates at least 3 distinct populations in the Stakeholder Map, naming vulnerable populations specifically (not \"users\" generically)",
+      "desc": "the Stakeholder Map lists at least 3 distinct populations"
+    },
+    {
+      "id": "audit_table_present",
+      "kind": "section_present",
+      "pattern": "Prism Audit Table|Audit Table|Five.Axis",
+      "bar": "scores all five axes with specific, evidence-based observations referencing which populations are affected",
+      "desc": "a Prism Audit Table section exists"
+    },
+    {
+      "id": "all_five_axes_scored",
+      "kind": "distinct_coverage",
+      "items": "audit_axes",
+      "vocabulary": [
+        "User relationship",
+        "Information",
+        "Error handling",
+        "Business alignment",
+        "Usability"
+      ],
+      "n": 5,
+      "bar": "scores all five axes with specific, evidence-based observations referencing which populations are affected",
+      "desc": "the Prism Audit Table has a row for each of the five axes"
+    },
+    {
+      "id": "scores_are_red_yellow_green",
+      "kind": "cells_in_vocabulary",
+      "items": "audit_scores",
+      "vocabulary": [
+        "Red",
+        "Yellow",
+        "Green",
+        "🔴",
+        "🟡",
+        "🟢"
+      ],
+      "bar": "scores all five axes with specific, evidence-based observations referencing which populations are affected",
+      "desc": "every axis Score is Red, Yellow or Green"
+    },
+    {
+      "id": "at_least_one_red_or_yellow",
+      "kind": "min_count_matching",
+      "items": "audit_scores",
+      "pattern": "Red|Yellow|🔴|🟡",
+      "n": 1,
+      "bar": "lands on at least one Red or Yellow",
+      "desc": "at least one axis is scored Red or Yellow"
+    },
+    {
+      "id": "mechanism_audit_present",
+      "kind": "section_present",
+      "pattern": "Psychological Mechanism|Mechanism Audit",
+      "bar": "names a specific psychological mechanism for every Red or Yellow axis (e.g., \"variable reward schedule,\" not \"manipulation\")",
+      "desc": "a Psychological Mechanism Audit section exists"
+    },
+    {
+      "id": "mechanism_for_every_red_yellow_axis",
+      "kind": "count_covers",
+      "items": "mechanism_cells",
+      "covers": "red_yellow_axes",
+      "bar": "names a specific psychological mechanism for every Red or Yellow axis (e.g., \"variable reward schedule,\" not \"manipulation\")",
+      "desc": "the Mechanism Audit names a mechanism in a row for every axis scored Red or Yellow"
+    },
+    {
+      "id": "reflection_present",
+      "kind": "section_present",
+      "pattern": "Reflection",
+      "bar": "generates genuine insight from the reflection prompts, not performative answers",
+      "desc": "a Reflection section exists"
+    },
+    {
+      "id": "all_four_prompts_addressed",
+      "kind": "all_phrases",
+      "section": "Reflection",
+      "phrases": [
+        "self.?reflection|where .{0,25}stand",
+        "ecology|org\\w* pressure",
+        "transition",
+        "recovery"
+      ],
+      "bar": "generates genuine insight from the reflection prompts, not performative answers",
+      "desc": "the Reflection section addresses all four prompts (self-reflection, organization ecology, transition, recovery)"
+    },
+    {
+      "id": "redesign_present",
+      "kind": "section_present",
+      "pattern": "Redesign Pathway",
+      "bar": "produces redesign suggestions concrete enough to implement, each naming which mechanism it interrupts",
+      "desc": "a Redesign Pathway section exists"
+    },
+    {
+      "id": "redesign_has_suggestion",
+      "kind": "min_count",
+      "items": "redesign_rows",
+      "n": 1,
+      "bar": "produces redesign suggestions concrete enough to implement, each naming which mechanism it interrupts",
+      "desc": "the Redesign Pathway section has at least one row with a Redesign Suggestion column"
+    },
+    {
+      "id": "redesign_names_mechanism",
+      "kind": "all_phrases",
+      "section": "Redesign Pathway",
+      "phrases": [
+        "mechanism|interrupt"
+      ],
+      "bar": "produces redesign suggestions concrete enough to implement, each naming which mechanism it interrupts",
+      "desc": "the Redesign Pathway section says which mechanism the redesign interrupts"
+    },
+    {
+      "id": "redesign_has_business_case",
+      "kind": "all_phrases",
+      "section": "Redesign Pathway",
+      "phrases": [
+        "business case"
+      ],
+      "bar": "includes business framing that a product manager or executive could act on",
+      "desc": "the Redesign Pathway section gives a business case"
+    },
+    {
+      "id": "leadership_framing_present",
+      "kind": "section_present",
+      "pattern": "Leadership Framing",
+      "bar": "includes business framing that a product manager or executive could act on",
+      "desc": "a Leadership Framing section exists"
+    },
+    {
+      "id": "names_taxonomy_dark_patterns",
+      "kind": "vocabulary_range",
+      "vocabulary": [
+        "bait and switch",
+        "bait-and-switch",
+        "disguised ad",
+        "hidden cost",
+        "hidden subscription",
+        "misleading pricing",
+        "forced continuity",
+        "roach motel",
+        "confirmshaming",
+        "trick question",
+        "preselection",
+        "default manipulation",
+        "sneak into basket",
+        "urgency fakery",
+        "false urgency",
+        "social proof fakery",
+        "scarcity fakery",
+        "false scarcity",
+        "artificial scarcity",
+        "exploiting error",
+        "visual interference",
+        "attention capture",
+        "emotional manipulation",
+        "gamification exploitation",
+        "hard-to-cancel",
+        "hard to cancel",
+        "hard-to-delete",
+        "hard to delete",
+        "intermediate currency",
+        "immense overload",
+        "friction asymmetry"
+      ],
+      "min": 1,
+      "bar": "names specific dark patterns from the taxonomy, not vague ethical concern",
+      "desc": "the output names at least one specific dark pattern from the skill's taxonomy"
+    }
+  ],
+  "semantic": [
+    {
+      "id": "answer_direct",
+      "each": "answer_block",
+      "bar": "opens with a direct answer to the decision or question the user asked, which the rest of the output supports",
+      "instructions": "Does the answer in `items[{i}]` give a direct verdict on where the design sits and the main reason, rather than restating the task?",
+      "criteria": {
+        "true": "States where this product or feature sits on the dark-to-responsible spectrum (or a decision or recommendation) and gives the main reason, tied to this product (for example 'Yellow overall, pulled toward Red by sharing personal data as marketing').",
+        "false": "Restates the task, describes the method or what the audit will do, hedges without committing, or gives a verdict with no reason."
+      }
+    },
+    {
+      "id": "vulnerable_populations_named",
+      "section": "Stakeholder",
+      "bar": "enumerates at least 3 distinct populations in the Stakeholder Map, naming vulnerable populations specifically (not \"users\" generically)",
+      "instructions": "Does the stakeholder map in `items[{i}]` name at least one specific vulnerable population relevant to this product, beyond generic 'users'?",
+      "criteria": {
+        "true": "Names at least one particular vulnerable group tied to this product (for example minors, people with gambling tendencies, low-income drivers, users with stigmatized listening histories) and says what harm falls on them.",
+        "false": "Lists only generic labels such as 'users', 'customers', 'general public' or 'vulnerable users' without saying who."
+      }
+    },
+    {
+      "id": "axis_evidence_specific",
+      "each": "audit_rows",
+      "bar": "scores all five axes with specific, evidence-based observations referencing which populations are affected",
+      "instructions": "Does the audit row in `items[{i}]` give specific, evidence-based observations about this product rather than a generic remark?",
+      "criteria": {
+        "true": "Names a particular element or behaviour of this product (for example a one-tap accept button, an undisclosed drop rate, a share card that exposes top artists) that supports the score.",
+        "false": "A generic remark such as 'could be better', 'may manipulate users' or an observation that would fit any product."
+      }
+    },
+    {
+      "id": "axis_references_population",
+      "each": "audit_rows",
+      "bar": "scores all five axes with specific, evidence-based observations referencing which populations are affected",
+      "instructions": "Does the audit row in `items[{i}]` say which people or population the observation affects?",
+      "criteria": {
+        "true": "Names at least one group of people affected by what is observed (for example drivers, adolescents, passengers in an emergency, players who are minors), in the evidence or in a population column.",
+        "false": "Describes the design only in the abstract, or refers to 'users' in general with no group named."
+      }
+    },
+    {
+      "id": "mechanism_specific",
+      "each": "mechanism_rows",
+      "bar": "names a specific psychological mechanism for every Red or Yellow axis (e.g., \"variable reward schedule,\" not \"manipulation\")",
+      "instructions": "Does the mechanism audit row in `items[{i}]` name a specific psychological mechanism rather than a vague claim of manipulation?",
+      "criteria": {
+        "true": "Names a recognised, specific mechanism such as variable reward schedule, loss aversion, default bias, sunk cost, social comparison, FOMO, scarcity heuristic or friction asymmetry, and the mechanism fits what the row describes.",
+        "false": "Only a vague label such as 'manipulation', 'dark pattern', 'exploitation' or 'bad UX', or a mechanism that does not fit the observation."
+      }
+    },
+    {
+      "id": "reflection_genuine",
+      "section": "Reflection",
+      "bar": "generates genuine insight from the reflection prompts, not performative answers",
+      "instructions": "Do the reflection takeaways in `items[{i}]` give insight specific to this product rather than performative answers?",
+      "criteria": {
+        "true": "Each prompt yields a takeaway tied to this product, such as a particular organizational pressure, a metric that rewards the pattern, a named smallest shift, or a specific recovery step, that a team could not have written without the case.",
+        "false": "Generic statements ('teams should consider user wellbeing', 'organizations face pressure to grow') that would fit any product, or answers that only restate the prompt."
+      }
+    },
+    {
+      "id": "redesign_concrete_and_mechanism",
+      "section": "Redesign Pathway",
+      "bar": "produces redesign suggestions concrete enough to implement, each naming which mechanism it interrupts",
+      "instructions": "Does `items[{i}]` give redesign suggestions concrete enough to implement, and does each one name which mechanism it interrupts?",
+      "criteria": {
+        "true": "Each suggestion names a particular change a team could build (for example show the driver payout beside the fare, replace the countdown with a fixed-date offer) and says which mechanism from the audit it interrupts.",
+        "false": "General aims such as 'be more transparent' or 'respect users', or suggestions that do not say which mechanism they interrupt."
+      }
+    },
+    {
+      "id": "business_framing_actionable",
+      "section": "Redesign Pathway",
+      "bar": "includes business framing that a product manager or executive could act on",
+      "instructions": "Does the business case in `items[{i}]` give reasons a product manager or executive could act on?",
+      "criteria": {
+        "true": "Ties the responsible alternative to a specific business concern (retention, churn, support cost, regulatory exposure, app-store risk, brand trust) for this product.",
+        "false": "Only generic claims such as 'builds trust' or 'is the right thing to do' with no business consequence named."
+      }
+    },
+    {
+      "id": "leadership_framing_actionable",
+      "section": "Leadership Framing",
+      "bar": "includes business framing that a product manager or executive could act on",
+      "instructions": "Does the leadership framing in `items[{i}]` give an executive something to act on?",
+      "criteria": {
+        "true": "States the business risk or opportunity and a recommended course or decision in business terms.",
+        "false": "Describes the problem only, restates the audit, or gives no recommended action or business consequence."
+      }
+    },
+    {
+      "id": "dark_patterns_specific",
+      "each": "red_yellow_rows",
+      "bar": "names specific dark patterns from the taxonomy, not vague ethical concern",
+      "instructions": "Does the audit row in `items[{i}]` name a specific dark pattern or design mechanism by name rather than vague ethical concern?",
+      "criteria": {
+        "true": "Names a particular pattern (for example friction asymmetry, urgency fakery, hidden costs, preselection, confirmshaming, visual interference) or the exact mechanism in the product that does the harm.",
+        "false": "Vague concern such as 'feels manipulative', 'is not transparent enough' or 'could mislead users' with no named pattern."
+      }
+    },
+    {
+      "id": "leadership_framing_plain_language",
+      "section": "Leadership Framing",
+      "bar": "writes the leadership framing in language that does not require design literacy to understand",
+      "instructions": "Is the leadership framing in `items[{i}]` written so that someone without design literacy can follow it?",
+      "criteria": {
+        "true": "Uses business language (revenue, churn, regulatory risk, brand trust, cost) and explains any design term it uses; a non-designer executive could follow it.",
+        "false": "Relies on unexplained design or ethics jargon (for example 'friction asymmetry', 'weaponized usability', 'deceptive patterns') or on framework vocabulary that needs design literacy."
+      }
+    }
+  ]
+}

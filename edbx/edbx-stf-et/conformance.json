@@ -5,11 +5,16 @@
     "ledger_type_cells": {
       "type": "table_cells",
       "in_section": "Evidence Ledger",
-      "column": "Type"
+      "column": "Type",
+      "strict": true
     },
     "tool_sections": {
       "type": "headings",
       "pattern": "^tool\\s*\\d"
+    },
+    "benefit_harm_tools": {
+      "type": "headings",
+      "pattern": "^tool\\s*[1-4]\\b"
     }
   },
   "structural": [
@@ -56,6 +61,60 @@
       "desc": "all five tools are run, or the scope of a partial run is declared"
     },
     {
+      "id": "tool1_benefits_harms",
+      "kind": "all_phrases",
+      "section": "^tool\\s*1\\b|future story",
+      "phrases": ["benefit", "harm"],
+      "allow_vacuous": true,
+      "bar": "surfaces both benefits and harms in every tool where both are required",
+      "desc": "if the Future Story ran, it names both benefits and harms"
+    },
+    {
+      "id": "tool2_benefits_harms",
+      "kind": "all_phrases",
+      "section": "^tool\\s*2\\b|impacts explorer",
+      "phrases": ["benefit", "harm"],
+      "allow_vacuous": true,
+      "bar": "surfaces both benefits and harms in every tool where both are required",
+      "desc": "if the Impacts Explorer ran, it covers both benefits and harms"
+    },
+    {
+      "id": "tool3_benefits_harms",
+      "kind": "all_phrases",
+      "section": "^tool\\s*3\\b|ethics frame",
+      "phrases": ["benefit", "harm"],
+      "allow_vacuous": true,
+      "bar": "surfaces both benefits and harms in every tool where both are required",
+      "desc": "if the Ethics Frame ran, it covers both benefits and harms"
+    },
+    {
+      "id": "tool4_benefits_harms",
+      "kind": "all_phrases",
+      "section": "^tool\\s*4\\b|ethics gauge",
+      "phrases": ["benefit", "harm"],
+      "allow_vacuous": true,
+      "bar": "surfaces both benefits and harms in every tool where both are required",
+      "desc": "if the Ethics Gauge ran, it covers both benefits and harms"
+    },
+    {
+      "id": "tool5_option_a_benefits_harms",
+      "kind": "all_phrases",
+      "section": "^option\\s*a\\b",
+      "phrases": ["benefit", "harm"],
+      "allow_vacuous": true,
+      "bar": "surfaces both benefits and harms in every tool where both are required",
+      "desc": "if Weighing Options ran, Option A addresses both benefits and harms"
+    },
+    {
+      "id": "tool5_option_b_benefits_harms",
+      "kind": "all_phrases",
+      "section": "^option\\s*b\\b",
+      "phrases": ["benefit", "harm"],
+      "allow_vacuous": true,
+      "bar": "surfaces both benefits and harms in every tool where both are required",
+      "desc": "if Weighing Options ran, Option B addresses both benefits and harms"
+    },
+    {
       "id": "ethics_frame_bottom_line",
       "kind": "section_implies_section",
       "if_present": "^tool\\s*3\\b|^ethics frame$",
@@ -73,6 +132,17 @@
     }
   ],
   "semantic": [
+    {
+      "id": "both_sides_substantive",
+      "each": "benefit_harm_tools",
+      "scope_section": true,
+      "bar": "surfaces both benefits and harms in every tool where both are required",
+      "instructions": "Does `items[{i}]` name specific benefits AND specific harms, rather than dwelling on one side?",
+      "criteria": {
+        "true": "Names at least one concrete benefit and at least one concrete harm, with who is affected or how, such as 'faster decisions for applicants' alongside 'eligible people wrongly denied with no explanation'.",
+        "false": "Covers only benefits or only harms, or mentions the other side in a passing phrase without any concrete item."
+      }
+    },
     {
       "id": "stakeholder_breadth",
       "type": "score",

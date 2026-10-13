@@ -5,12 +5,14 @@
     "ledger_type_cells": {
       "type": "table_cells",
       "in_section": "Evidence Ledger",
-      "column": "Type"
+      "column": "Type",
+      "strict": true
     },
     "move_ids": {
       "type": "table_cells",
       "in_section": "moves inventory",
-      "column": "Move"
+      "column": "Move",
+      "strict": true
     },
     "move_sources": {
       "type": "table_cells",
@@ -21,24 +23,28 @@
     "quadrants": {
       "type": "table_cells",
       "in_section": "moves inventory",
-      "column": "Quadrant"
+      "column": "Quadrant",
+      "strict": true
     },
     "values": {
       "type": "table_rows",
       "in_section": "values",
       "column": "Value",
+      "strict": true,
       "nearest": true
     },
     "pop_moves": {
       "type": "table_cells",
       "in_section": "population",
       "column": "Move",
+      "strict": true,
       "nearest": true
     },
     "pop_voice": {
       "type": "table_cells",
       "in_section": "population",
       "column": "voice",
+      "strict": true,
       "nearest": true
     }
   },

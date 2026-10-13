@@ -1,0 +1,640 @@
+{
+  "skill": "edbx-digital-ethics-compass",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar. Not checked: (1) 'works for both data-intensive and simpler products': all three scenarios are data-intensive or AI-powered, so no scenario exercises the simpler-product path (the Objective Function Risk Table's 'state that and proceed' branch); the table check below is therefore unconditional and its semantic check accepts a stated 'no explicit optimization'. (2) The 'invents none' half of the Evidence Ledger bar is checked only through the typing rules (valid Type words; a row typed sourced must carry a URL, because the skill has no Sources list so a bare paper or report name is model knowledge and must be typed assumption); whether a user-supplied row is really in the brief needs the prompt and is not machine-checked. (3) 'a business pressure behind every red finding' and 'a remediation for every red finding' are checked by code only for presence, classification and per-row specificity, because the skill's Business Pressure table lets a row cover several heuristics, so a row-per-red-heuristic count would demand more than the template asks; the 'every' reading is carried by two document-scope semantic checks, which are the least reliable checks in this rubric. (4) Heuristic counts use the skill's own question lists (7 Data, 6 each for the other three).",
+  "enumerators": {
+    "ledger_type_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Type",
+      "strict": true
+    },
+    "sourced_basis_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Basis",
+      "strict": true,
+      "where": {
+        "column": "Type",
+        "matches": "^\\s*sourced"
+      }
+    },
+    "stakeholder_names": {
+      "type": "table_cells",
+      "in_section": "Stakeholder.*Power Map",
+      "column": "Stakeholder",
+      "strict": true
+    },
+    "stakeholder_rows": {
+      "type": "table_rows",
+      "in_section": "Stakeholder.*Power Map",
+      "column": "Stakeholder",
+      "strict": true,
+      "full": true
+    },
+    "power_asymmetry": {
+      "type": "phrase_matches",
+      "pattern": "power asymmetry summary\\W+[^\\n]{20,}"
+    },
+    "historical_prior": {
+      "type": "phrase_matches",
+      "pattern": "(?s)historical.?justice.{80,1500}?(?=\\n\\s*\\n|\\Z)"
+    },
+    "ofrt_rows": {
+      "type": "table_rows",
+      "in_section": "Objective Function Risk",
+      "column": "Stated objective",
+      "strict": true,
+      "full": true
+    },
+    "harm_rows": {
+      "type": "table_rows",
+      "in_section": "Non.?Obvious Harms",
+      "column": "Non-obvious harm",
+      "strict": true,
+      "full": true
+    },
+    "harm_names": {
+      "type": "table_cells",
+      "in_section": "Non.?Obvious Harms",
+      "column": "Non-obvious harm",
+      "strict": true
+    },
+    "harm_populations": {
+      "type": "table_cells",
+      "in_section": "Non.?Obvious Harms",
+      "column": "Population",
+      "strict": true
+    },
+    "harm_mechanisms": {
+      "type": "table_cells",
+      "in_section": "Non.?Obvious Harms",
+      "column": "Mechanism",
+      "strict": true
+    },
+    "harm_previously": {
+      "type": "table_cells",
+      "in_section": "Non.?Obvious Harms",
+      "column": "Previously",
+      "strict": true
+    },
+    "data_rows": {
+      "type": "table_rows",
+      "in_section": "^Category 1",
+      "column": "Heuristic",
+      "strict": true,
+      "full": true
+    },
+    "manipulation_rows": {
+      "type": "table_rows",
+      "in_section": "^Category 2",
+      "column": "Heuristic",
+      "strict": true,
+      "full": true
+    },
+    "transparency_rows": {
+      "type": "table_rows",
+      "in_section": "^Category 3",
+      "column": "Heuristic",
+      "strict": true,
+      "full": true
+    },
+    "automation_rows": {
+      "type": "table_rows",
+      "in_section": "^Category 4",
+      "column": "Heuristic",
+      "strict": true,
+      "full": true
+    },
+    "all_heuristic_rows": {
+      "type": "union",
+      "of": [
+        {
+          "type": "table_rows",
+          "in_section": "^Category 1",
+          "column": "Heuristic",
+          "strict": true,
+          "full": true
+        },
+        {
+          "type": "table_rows",
+          "in_section": "^Category 2",
+          "column": "Heuristic",
+          "strict": true,
+          "full": true
+        },
+        {
+          "type": "table_rows",
+          "in_section": "^Category 3",
+          "column": "Heuristic",
+          "strict": true,
+          "full": true
+        },
+        {
+          "type": "table_rows",
+          "in_section": "^Category 4",
+          "column": "Heuristic",
+          "strict": true,
+          "full": true
+        }
+      ]
+    },
+    "status_cells": {
+      "type": "union",
+      "of": [
+        {
+          "type": "table_cells",
+          "in_section": "^Category 1",
+          "column": "Status",
+          "strict": true
+        },
+        {
+          "type": "table_cells",
+          "in_section": "^Category 2",
+          "column": "Status",
+          "strict": true
+        },
+        {
+          "type": "table_cells",
+          "in_section": "^Category 3",
+          "column": "Status",
+          "strict": true
+        },
+        {
+          "type": "table_cells",
+          "in_section": "^Category 4",
+          "column": "Status",
+          "strict": true
+        }
+      ]
+    },
+    "red_heuristic_rows": {
+      "type": "union",
+      "of": [
+        {
+          "type": "table_rows",
+          "in_section": "^Category 1",
+          "column": "Heuristic",
+          "strict": true,
+          "full": true,
+          "where": {
+            "column": "Status",
+            "matches": "🔴"
+          }
+        },
+        {
+          "type": "table_rows",
+          "in_section": "^Category 2",
+          "column": "Heuristic",
+          "strict": true,
+          "full": true,
+          "where": {
+            "column": "Status",
+            "matches": "🔴"
+          }
+        },
+        {
+          "type": "table_rows",
+          "in_section": "^Category 3",
+          "column": "Heuristic",
+          "strict": true,
+          "full": true,
+          "where": {
+            "column": "Status",
+            "matches": "🔴"
+          }
+        },
+        {
+          "type": "table_rows",
+          "in_section": "^Category 4",
+          "column": "Heuristic",
+          "strict": true,
+          "full": true,
+          "where": {
+            "column": "Status",
+            "matches": "🔴"
+          }
+        }
+      ]
+    },
+    "category_spans": {
+      "type": "phrase_matches",
+      "pattern": "(?ms)^#{1,6}[ \\t]*Category[ \\t]*[1-4]\\b.*?(?=^#{1,6}[ \\t]*(?:Category[ \\t]*[1-4]\\b|Business Pressure|Priority Improvements|Compass Reading|Evidence Ledger)|\\Z)"
+    },
+    "pressure_rows": {
+      "type": "table_rows",
+      "in_section": "Business Pressure",
+      "column": "Finding",
+      "strict": true,
+      "full": true
+    },
+    "pressure_types": {
+      "type": "table_cells",
+      "in_section": "Business Pressure",
+      "column": "Implementation",
+      "strict": true
+    },
+    "priority_items": {
+      "type": "list_items",
+      "in_section": "Priority Improvements"
+    },
+    "priority_classified": {
+      "type": "phrase_matches",
+      "in_section": "Priority Improvements",
+      "pattern": "(?m)^(?:[-*]|\\d+[.)])\\s+[^\\n]*(?:quick win|strategic fix|requires leadership)[^\\n]*"
+    }
+  },
+  "structural": [
+    {
+      "id": "answer_first",
+      "kind": "any_of",
+      "checks": [
+        {
+          "kind": "section_present",
+          "pattern": "(?m)^\\s*(?:#{1,6}\\s*Answer\\b|\\*\\*Answer\\b)"
+        }
+      ],
+      "bar": "opens with a direct answer to the decision or question the user asked, which the rest of the output supports",
+      "desc": "the output opens with an Answer section"
+    },
+    {
+      "id": "evidence_ledger_present",
+      "kind": "section_present",
+      "pattern": "Evidence Ledger",
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "the output has an Evidence Ledger"
+    },
+    {
+      "id": "ledger_types_valid",
+      "kind": "cells_in_vocabulary",
+      "items": "ledger_type_cells",
+      "vocabulary": [
+        "user-supplied",
+        "sourced",
+        "assumption",
+        "unknown"
+      ],
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every Evidence Ledger Type is one of the four allowed words"
+    },
+    {
+      "id": "sourced_rows_have_url",
+      "kind": "cells_match",
+      "items": "sourced_basis_cells",
+      "pattern": "https?://",
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every row typed sourced names a URL in its Basis (the skill has no Sources list, so a bare paper or report name is model knowledge and must be typed assumption)"
+    },
+    {
+      "id": "stakeholder_map_present",
+      "kind": "section_present",
+      "pattern": "Stakeholder.*Power Map",
+      "bar": "completes the Stakeholder & Power Map (Step 0)",
+      "desc": "a Stakeholder & Power Map section exists"
+    },
+    {
+      "id": "stakeholders_at_least_five",
+      "kind": "min_count",
+      "items": "stakeholder_names",
+      "n": 5,
+      "bar": "at least 5 distinct named stakeholders",
+      "desc": "the Stakeholder & Power Map has at least 5 stakeholder rows"
+    },
+    {
+      "id": "power_asymmetry_summary",
+      "kind": "min_count",
+      "items": "power_asymmetry",
+      "n": 1,
+      "bar": "completes the Stakeholder & Power Map (Step 0)",
+      "desc": "a Power asymmetry summary paragraph follows the map"
+    },
+    {
+      "id": "historical_prior_present",
+      "kind": "min_count",
+      "items": "historical_prior",
+      "n": 1,
+      "bar": "and a historical-justice prior",
+      "desc": "a historical-justice prior paragraph is written"
+    },
+    {
+      "id": "ofrt_present",
+      "kind": "section_present",
+      "pattern": "Objective Function Risk",
+      "bar": "produces an Objective Function Risk Table (Step 0.5)",
+      "desc": "an Objective Function Risk Table section exists"
+    },
+    {
+      "id": "ofrt_has_row",
+      "kind": "min_count",
+      "items": "ofrt_rows",
+      "n": 1,
+      "bar": "naming the gap between stated and optimized objectives, the conflicting stakeholder values, and the drift mechanism",
+      "desc": "the Objective Function Risk Table has at least one row with a stated objective"
+    },
+    {
+      "id": "harms_present",
+      "kind": "section_present",
+      "pattern": "Non.?Obvious Harms",
+      "bar": "produces a Non-Obvious Harms Inventory (Step 0.6)",
+      "desc": "a Non-Obvious Harms Inventory section exists"
+    },
+    {
+      "id": "harms_at_least_five",
+      "kind": "min_count",
+      "items": "harm_names",
+      "n": 5,
+      "bar": "with at least 5 named harms beyond the heuristic categories",
+      "desc": "the Non-Obvious Harms Inventory names at least 5 harms"
+    },
+    {
+      "id": "harms_have_population",
+      "kind": "count_covers",
+      "items": "harm_populations",
+      "covers": "harm_names",
+      "bar": "each with named population, mechanism, and \"previously considered\" honesty",
+      "desc": "every harm row has a Population cell"
+    },
+    {
+      "id": "harms_have_mechanism",
+      "kind": "count_covers",
+      "items": "harm_mechanisms",
+      "covers": "harm_names",
+      "bar": "each with named population, mechanism, and \"previously considered\" honesty",
+      "desc": "every harm row has a Mechanism cell"
+    },
+    {
+      "id": "harms_previously_considered_answered",
+      "kind": "cells_match",
+      "items": "harm_previously",
+      "pattern": "(?i)\\b(?:yes|no|not|partial(?:ly)?|unknown)\\b",
+      "bar": "each with named population, mechanism, and \"previously considered\" honesty",
+      "desc": "every 'Previously considered?' cell answers yes, no (or not considered), partially, or unknown"
+    },
+    {
+      "id": "category_1_data",
+      "kind": "min_count",
+      "items": "data_rows",
+      "n": 7,
+      "bar": "evaluates all four compass categories every session",
+      "desc": "Category 1 (Data) has a row for each of the skill's 7 heuristic questions"
+    },
+    {
+      "id": "category_2_manipulation",
+      "kind": "min_count",
+      "items": "manipulation_rows",
+      "n": 6,
+      "bar": "evaluates all four compass categories every session",
+      "desc": "Category 2 (Avoid Manipulation) has a row for each of the skill's 6 heuristic questions"
+    },
+    {
+      "id": "category_3_transparency",
+      "kind": "min_count",
+      "items": "transparency_rows",
+      "n": 6,
+      "bar": "evaluates all four compass categories every session",
+      "desc": "Category 3 (Make Intentions Transparent) has a row for each of the skill's 6 heuristic questions"
+    },
+    {
+      "id": "category_4_automation",
+      "kind": "min_count",
+      "items": "automation_rows",
+      "n": 6,
+      "bar": "evaluates all four compass categories every session",
+      "desc": "Category 4 (Automation) has a row for each of the skill's 6 heuristic questions"
+    },
+    {
+      "id": "every_heuristic_has_status",
+      "kind": "cells_match",
+      "items": "status_cells",
+      "pattern": "🔴|🟡|🟢",
+      "bar": "answers every heuristic question with a substantive assessment",
+      "desc": "every heuristic row carries a red / yellow / green status"
+    },
+    {
+      "id": "business_pressure_present",
+      "kind": "implied_section",
+      "items": "red_heuristic_rows",
+      "pattern": "Business Pressure",
+      "bar": "names the specific business pressure (metric, KPI, incentive) behind every 🔴 finding",
+      "desc": "if any heuristic is rated red, a Business Pressure Attribution table exists"
+    },
+    {
+      "id": "pressure_rows_nonempty",
+      "kind": "min_count",
+      "items": "pressure_rows",
+      "n": 1,
+      "bar": "names the specific business pressure (metric, KPI, incentive) behind every 🔴 finding",
+      "desc": "the Business Pressure Attribution table has at least one finding row"
+    },
+    {
+      "id": "pressure_types_valid",
+      "kind": "cells_in_vocabulary",
+      "items": "pressure_types",
+      "vocabulary": [
+        "Quick Win",
+        "Strategic Fix",
+        "Requires Leadership"
+      ],
+      "bar": "classifies every improvement as Quick Win / Strategic Fix / Requires Leadership",
+      "desc": "every Implementation Type in the attribution table is one of the three defined values"
+    },
+    {
+      "id": "priority_improvements_listed",
+      "kind": "min_count",
+      "items": "priority_items",
+      "n": 3,
+      "bar": "provides a remediation suggestion for every 🔴 finding",
+      "desc": "Priority Improvements lists at least 3 ranked items"
+    },
+    {
+      "id": "every_improvement_classified",
+      "kind": "count_covers",
+      "items": "priority_classified",
+      "covers": "priority_items",
+      "bar": "classifies every improvement as Quick Win / Strategic Fix / Requires Leadership",
+      "desc": "every Priority Improvement carries a Quick Win / Strategic Fix / Requires Leadership tag"
+    },
+    {
+      "id": "compass_reading_present",
+      "kind": "section_present",
+      "pattern": "Compass Reading",
+      "bar": "produces a Compass Reading every session that includes the business pressure driver",
+      "desc": "a Compass Reading section exists"
+    },
+    {
+      "id": "compass_reading_names_driver",
+      "kind": "all_phrases",
+      "section": "Compass Reading",
+      "phrases": [
+        "driven by|driver|pressure|incentive|metric"
+      ],
+      "bar": "produces a Compass Reading every session that includes the business pressure driver",
+      "desc": "the Compass Reading mentions a business pressure driver"
+    },
+    {
+      "id": "center_principle_stated",
+      "kind": "any_of",
+      "checks": [
+        {
+          "kind": "section_present",
+          "pattern": "Put the Human in the Cosmos"
+        }
+      ],
+      "bar": "maintains \"Put the Human in the Cosmos\" framing throughout",
+      "desc": "the output states the 'Put the Human in the Cosmos' center principle"
+    }
+  ],
+  "semantic": [
+    {
+      "id": "stakeholder_specific",
+      "each": "stakeholder_rows",
+      "bar": "at least 5 distinct named stakeholders, including specifically-named vulnerable subgroups (not generic \"users\")",
+      "instructions": "Does the stakeholder row in `items[{i}]` name a specific population rather than a generic label?",
+      "criteria": {
+        "true": "Names a specific group (for example 'children aged 8-14 using the platform', 'people experiencing homelessness', 'content annotators') and says something particular about the power they have and lack.",
+        "false": "A generic label such as 'users', 'customers', 'the public' or 'society' on its own, with power cells that would fit any product."
+      }
+    },
+    {
+      "id": "vulnerable_subgroups_named",
+      "section": "Stakeholder.*Power Map",
+      "bar": "including specifically-named vulnerable subgroups (not generic \"users\")",
+      "instructions": "Does the stakeholder map in `items[{i}]` name at least two specific vulnerable subgroups that are relevant to this product?",
+      "criteria": {
+        "true": "Names at least two particular vulnerable groups (for example minors, abuse survivors, people in crisis, low-income residents, people with disabilities, older adults) tied to this product.",
+        "false": "Names no vulnerable subgroup, names only one, or refers only to 'vulnerable users' or 'marginalised groups' without saying who."
+      }
+    },
+    {
+      "id": "future_affected_named",
+      "section": "Stakeholder.*Power Map",
+      "bar": "at least one future-affected population",
+      "instructions": "Does the stakeholder map in `items[{i}]` include at least one population affected in the future rather than today?",
+      "criteria": {
+        "true": "Names a future-affected group, such as people whose accumulated data is used years later, later subpoenas or other jurisdictions, the user's future self, or the next generation of users.",
+        "false": "Every stakeholder listed is affected in the present; no row or paragraph deals with future harm."
+      }
+    },
+    {
+      "id": "historical_prior_specific",
+      "each": "historical_prior",
+      "bar": "and a historical-justice prior",
+      "instructions": "Does the paragraph in `items[{i}]` name a specific historical pattern of harm and say what that means for the burden of proof?",
+      "criteria": {
+        "true": "Names a concrete historical or documented pattern (for example redlining through address proxies, over-policing of particular neighbourhoods, surveillance of marginalised communities) and says it shifts the burden of proof toward showing the harm will not recur.",
+        "false": "Says only that 'history shows technology can cause harm' or that some groups 'have been affected before' without a named pattern."
+      }
+    },
+    {
+      "id": "ofrt_gap_named",
+      "each": "ofrt_rows",
+      "bar": "naming the gap between stated and optimized objectives, the conflicting stakeholder values, and the drift mechanism",
+      "instructions": "Does the row in `items[{i}]` separate what the product says it is for from what it actually optimizes, and name the conflicting value and how the conflict worsens over time? A row that states the product has no explicit optimization also counts.",
+      "criteria": {
+        "true": "The optimized objective differs from the stated one (for example time-on-platform versus 'help children learn'), a specific stakeholder value in conflict is named, and a mechanism by which the conflict grows is given; or the row says plainly that no explicit optimization exists.",
+        "false": "The optimized objective just restates the stated one, or the conflicting value or the drift mechanism is missing or generic."
+      }
+    },
+    {
+      "id": "harm_specific_mechanism",
+      "each": "harm_rows",
+      "bar": "produces a Non-Obvious Harms Inventory (Step 0.6) with at least 5 named harms beyond the heuristic categories, each with named population, mechanism, and \"previously considered\" honesty",
+      "instructions": "Does the harm row in `items[{i}]` describe a harm specific to this product, with a population and a mechanism that explains how it happens?",
+      "criteria": {
+        "true": "Names a particular harm for this product (for example inference of a protected attribute, competence foreclosure, a chilling effect, a bystander or worker harm), says which people it falls on, and explains how the product's design or data produces it.",
+        "false": "A generic harm that restates a heuristic category ('privacy loss', 'bias'), or a population or mechanism that is vague or missing."
+      }
+    },
+    {
+      "id": "heuristic_substantive",
+      "each": "all_heuristic_rows",
+      "bar": "answers every heuristic question with a substantive assessment",
+      "instructions": "Does the heuristic row in `items[{i}]` give a substantive assessment of this product against the question, rather than a one-word or boilerplate answer?",
+      "criteria": {
+        "true": "Gives a status and a reason tied to this product's data, features or users, or explains specifically why the question does not apply to this product.",
+        "false": "Only a status with 'yes', 'no', 'n/a' or a restatement of the question, or an assessment that would fit any product."
+      }
+    },
+    {
+      "id": "red_finding_names_stakeholders",
+      "each": "red_heuristic_rows",
+      "bar": "with each finding referencing which named stakeholders are most affected",
+      "instructions": "Does the red finding in `items[{i}]` say which named stakeholder group is most affected?",
+      "criteria": {
+        "true": "Names at least one affected group (for example 'children', 'residents of colour', 'students in crisis', 'parents') in the notes.",
+        "false": "Describes the problem only in the abstract, or refers to 'users' or 'people' in general with no named group."
+      }
+    },
+    {
+      "id": "categories_do_not_restate_step_0",
+      "each": "category_spans",
+      "bar": "without restating Step 0 analysis in every category",
+      "instructions": "Does the category section in `items[{i}]` add its own findings rather than re-explaining who the stakeholders are or the power asymmetries between them?",
+      "criteria": {
+        "true": "The notes assess the heuristics; stakeholders are only named or referred to in passing, and no block re-describes the stakeholder map, power asymmetries or historical background.",
+        "false": "The section repeats a stakeholder or power-asymmetry analysis (who holds power, who lacks it, historical background) in a paragraph or in several rows, as if it were new."
+      }
+    },
+    {
+      "id": "pressure_specific",
+      "each": "pressure_rows",
+      "bar": "names the specific business pressure (metric, KPI, incentive) behind every 🔴 finding",
+      "instructions": "Does the row in `items[{i}]` name the specific metric, KPI or incentive that sustains the red finding?",
+      "criteria": {
+        "true": "Names a particular metric, target, incentive or organisational pressure (for example 'DAU measured by opens', 'police demand for real-time alerts', 'engagement targets in the growth OKR') that explains why the failure persists.",
+        "false": "A generic motive such as 'profit', 'business goals' or 'cost savings' with no metric, KPI or incentive structure named."
+      }
+    },
+    {
+      "id": "pressure_covers_red_findings",
+      "scope": "document",
+      "bar": "names the specific business pressure (metric, KPI, incentive) behind every 🔴 finding",
+      "instructions": "Read the document in `items[{i}]`. Does the Business Pressure Attribution table account for each distinct area in which a heuristic is rated red, even where one row covers several heuristics?",
+      "criteria": {
+        "true": "Every category or theme that contains a red heuristic is represented by at least one attribution row naming a pressure behind it.",
+        "false": "One or more red findings or whole categories with red ratings have no attribution row, or there is no attribution table."
+      }
+    },
+    {
+      "id": "red_findings_have_remediation",
+      "scope": "document",
+      "bar": "provides a remediation suggestion for every 🔴 finding",
+      "instructions": "Read the document in `items[{i}]`. Does it give a remediation suggestion, in Priority Improvements or alongside the finding, for each area in which a heuristic is rated red?",
+      "criteria": {
+        "true": "Every category or theme with red heuristics is addressed by at least one specific remediation action.",
+        "false": "One or more red findings or categories have no remediation, or the remediation is only a general aim."
+      }
+    },
+    {
+      "id": "priority_concrete",
+      "each": "priority_items",
+      "bar": "provides a remediation suggestion for every 🔴 finding",
+      "instructions": "Does the improvement in `items[{i}]` say what to change, who or what decides, and how it is classified?",
+      "criteria": {
+        "true": "Names a particular change (for example 'suspend automated event classification until an independent bias audit is done'), who must act or decide, and an effort or type.",
+        "false": "A general aim such as 'improve transparency' or 'consider consent' with no particular change or owner."
+      }
+    },
+    {
+      "id": "compass_reading_complete",
+      "section": "Compass Reading",
+      "bar": "produces a Compass Reading every session that includes the business pressure driver",
+      "instructions": "Does `items[{i}]` state a human need at risk, the main category, the business pressure driving it, and the most urgent reorientation with what it requires?",
+      "criteria": {
+        "true": "Names the human need or harm at risk, the compass category it comes through, a specific business pressure, and a specific reorientation with the type of change it needs.",
+        "false": "Leaves out the business pressure, or the reorientation, or states only a generic conclusion."
+      }
+    },
+    {
+      "id": "compass_reading_grounded_in_named_humans",
+      "section": "Compass Reading",
+      "bar": "grounded in the named humans of Step 0, not abstract humanity",
+      "instructions": "Does the reading in `items[{i}]` refer to specific groups of people (for example children, students in crisis, residents of a neighbourhood) rather than abstract humanity or rights in general?",
+      "criteria": {
+        "true": "Names at least one specific group of people whose needs are at risk.",
+        "false": "Speaks only of 'humans', 'users', 'society' or abstract rights and values, with no named group."
+      }
+    }
+  ]
+}

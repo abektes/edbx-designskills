@@ -1,0 +1,362 @@
+{
+  "skill": "edbx-worrystorming",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar; all 8 bars have at least one check. Limits: (1) Worries are enumerated from the numbered list or table under 'Worry List/Generation'; the bar says 'at least 10', so only a minimum is set (the skill's 10-20 range is Step 2 wording and the brief's focus areas can push a run past 20). (2) 'across multiple categories' is a section-scope judgment: outputs differ on whether they tag each worry with a category, so a vocabulary count would score the tagging style, not the breadth. (3) Clusters are enumerated by heading under 'Clustered Worry Themes/Worry Clusters'; severity tags are counted by the emoji plus its word, and 'every critical cluster' is checked as: one mitigation block (a heading under the mitigation step) per cluster tagged critical. The check is vacuous, so not applicable, when no cluster is critical. 'Coherent' is judged on the Step 3 section only, where constituent worries are cited by number or paraphrase. (4) Objectives, constraints and test questions are checked once per cluster because Step 4 says 'for each cluster'; outputs tend to reframe only the Critical clusters, which fails these three checks. Objectives, constraints, test questions and mitigations are enumerated by their mandated labels ('We commit to', 'Design Constraint:', 'Test Question:', 'Mitigation:') or by table column, so an output that drops the labels scores as missing them. (5) 'invents none' is checked only through the typing rules: valid Type words, and a row typed sourced must carry a URL in its Basis (this skill lists no papers, so model knowledge is typed assumption). Whether a user-supplied row is really in the brief needs the prompt and is not machine-checked. (6) 'names the key ethical challenges without vague platitudes' and 'affirmatively-named' are judgment checks (Jev) and the least reliable checks here. (7) The three-to-five worries per cluster, the 'at-risk ideas' and 'consult' lines, and the Guardrails are not Quality Bar items and are not checked.",
+  "enumerators": {
+    "ledger_type_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Type",
+      "strict": true
+    },
+    "sourced_basis_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Basis",
+      "strict": true,
+      "where": {
+        "column": "Type",
+        "matches": "^\\s*sourced"
+      }
+    },
+    "answer_block": {
+      "type": "phrase_matches",
+      "pattern": "(?ms)^[ \\t]*(?:#{1,6}[ \\t]*)?\\*{0,2}Answer\\b.+?(?=^[ \\t]*(?:#|---)|\\Z)"
+    },
+    "worry_items": {
+      "type": "union",
+      "of": [
+        {
+          "type": "list_items",
+          "in_section": "Worry List|Worry Generation"
+        },
+        {
+          "type": "table_rows",
+          "in_section": "Worry List|Worry Generation",
+          "column": "Worry",
+          "strict": true
+        }
+      ]
+    },
+    "cluster_names": {
+      "type": "headings",
+      "in_section": "Clustered Worry Themes|Worry Clusters|Worry Themes|Step 3",
+      "pattern": "^(?!\\s*(?:Severity|Constituent|Worries|Worry|Ethical|Design|Test|Mitigation|At-risk|Flag|Consult|Original|Who)\\b)"
+    },
+    "severity_tags": {
+      "type": "phrase_matches",
+      "in_section": "Clustered Worry Themes|Worry Clusters|Worry Themes|Step 3",
+      "pattern": "[🔴🟡🟢]\\s*(?:Critical|Monitor|Low Risk)"
+    },
+    "critical_tags": {
+      "type": "phrase_matches",
+      "in_section": "Clustered Worry Themes|Worry Clusters|Worry Themes|Step 3",
+      "pattern": "🔴\\s*Critical(?!\\s*[—–:\\-]\\s*likely)"
+    },
+    "objectives": {
+      "type": "phrase_matches",
+      "in_section": "Ethical Objectives|Reframe|Design Values|Step 4",
+      "pattern": "We commit to[^\\n|]+"
+    },
+    "constraints": {
+      "type": "union",
+      "of": [
+        {
+          "type": "phrase_matches",
+          "in_section": "Ethical Objectives|Reframe|Design Values|Step 4",
+          "pattern": "Design Constraint\\**\\s*:\\**\\s*[^\\n|]+"
+        },
+        {
+          "type": "table_cells",
+          "in_section": "Ethical Objectives|Reframe|Design Values|Step 4",
+          "column": "Design Constraint",
+          "strict": true
+        }
+      ]
+    },
+    "test_questions": {
+      "type": "union",
+      "of": [
+        {
+          "type": "phrase_matches",
+          "in_section": "Ethical Objectives|Reframe|Design Values|Step 4",
+          "pattern": "Test Question\\**\\s*:\\**\\s*[^\\n|]+"
+        },
+        {
+          "type": "table_cells",
+          "in_section": "Ethical Objectives|Reframe|Design Values|Step 4",
+          "column": "Test Question",
+          "strict": true
+        }
+      ]
+    },
+    "mitigation_blocks": {
+      "type": "headings",
+      "in_section": "Refined Ideas|Mitigation|Step 5",
+      "pattern": "^(?!\\s*(?:Severity|Constituent|Worries|Worry|Ethical|Design|Test|Mitigation|At-risk|Flag|Consult|Original|Who)\\b)"
+    },
+    "mitigation_items": {
+      "type": "phrase_matches",
+      "in_section": "Refined Ideas|Mitigation|Step 5",
+      "pattern": "(?:Design )?(?:Mitigations?|Alternatives?|Refined Ideas?)\\**\\s*:\\**\\s*[^\\n|]+"
+    }
+  },
+  "structural": [
+    {
+      "id": "answer_first",
+      "kind": "any_of",
+      "checks": [
+        {
+          "kind": "section_present",
+          "pattern": "(?m)^\\s*(?:#{1,6}\\s*Answer\\b|\\*\\*Answer\\b)"
+        }
+      ],
+      "bar": "opens with a direct answer to the decision or question the user asked, which the rest of the output supports",
+      "desc": "the output opens with an Answer section"
+    },
+    {
+      "id": "evidence_ledger_present",
+      "kind": "section_present",
+      "pattern": "Evidence Ledger",
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "the output has an Evidence Ledger"
+    },
+    {
+      "id": "ledger_types_valid",
+      "kind": "cells_in_vocabulary",
+      "items": "ledger_type_cells",
+      "vocabulary": [
+        "user-supplied",
+        "sourced",
+        "assumption",
+        "unknown"
+      ],
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every Evidence Ledger Type is one of the four allowed words"
+    },
+    {
+      "id": "sourced_rows_cite_a_url",
+      "kind": "cells_match",
+      "items": "sourced_basis_cells",
+      "pattern": "(?i)https?://",
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every row typed sourced carries a URL in its Basis (this skill lists no papers; model knowledge is typed assumption)"
+    },
+    {
+      "id": "worry_list_present",
+      "kind": "section_present",
+      "pattern": "Worry List|Worry Generation",
+      "bar": "generates at least 10 specific worries across multiple categories",
+      "desc": "the output has a Worry List section"
+    },
+    {
+      "id": "worries_at_least_ten",
+      "kind": "min_count",
+      "items": "worry_items",
+      "n": 10,
+      "bar": "generates at least 10 specific worries across multiple categories",
+      "desc": "the worry list has at least 10 worries"
+    },
+    {
+      "id": "clusters_present",
+      "kind": "section_present",
+      "pattern": "Clustered Worry Themes|Worry Clusters|Worry Themes|Step 3",
+      "bar": "clusters into 3–6 coherent, affirmatively-named themes",
+      "desc": "the output has a clustered worry themes section"
+    },
+    {
+      "id": "clusters_three_to_six",
+      "kind": "min_count",
+      "items": "cluster_names",
+      "n": 3,
+      "max": 6,
+      "bar": "clusters into 3–6 coherent, affirmatively-named themes",
+      "desc": "the worries are grouped into 3 to 6 named clusters"
+    },
+    {
+      "id": "every_cluster_has_severity",
+      "kind": "count_covers",
+      "items": "severity_tags",
+      "covers": "cluster_names",
+      "allow_vacuous": true,
+      "bar": "clusters into 3–6 coherent, affirmatively-named themes",
+      "desc": "every cluster carries a severity tag (Critical, Monitor or Low Risk)"
+    },
+    {
+      "id": "objectives_present",
+      "kind": "section_present",
+      "pattern": "Ethical Objectives|Reframe|Design Values|Step 4",
+      "bar": "produces ethical objectives that are specific enough to create design constraints",
+      "desc": "the output has a reframing section (ethical objectives, constraints, test questions)"
+    },
+    {
+      "id": "objective_per_cluster",
+      "kind": "count_covers",
+      "items": "objectives",
+      "covers": "cluster_names",
+      "allow_vacuous": true,
+      "bar": "produces ethical objectives that are specific enough to create design constraints",
+      "desc": "every cluster has an ethical objective in the 'We commit to ...' form"
+    },
+    {
+      "id": "constraint_per_cluster",
+      "kind": "count_covers",
+      "items": "constraints",
+      "covers": "cluster_names",
+      "allow_vacuous": true,
+      "bar": "produces ethical objectives that are specific enough to create design constraints",
+      "desc": "every cluster has a design constraint"
+    },
+    {
+      "id": "test_question_per_cluster",
+      "kind": "count_covers",
+      "items": "test_questions",
+      "covers": "cluster_names",
+      "allow_vacuous": true,
+      "bar": "proposes test questions that could be answered through research or audit",
+      "desc": "every cluster has a test question"
+    },
+    {
+      "id": "test_questions_are_questions",
+      "kind": "cells_match",
+      "items": "test_questions",
+      "pattern": "\\?",
+      "bar": "proposes test questions that could be answered through research or audit",
+      "desc": "every test question is phrased as a question"
+    },
+    {
+      "id": "mitigations_present",
+      "kind": "section_present",
+      "pattern": "Refined Ideas|Mitigation|Step 5",
+      "bar": "generates concrete mitigations for every critical cluster",
+      "desc": "the output has a refined ideas / mitigations section"
+    },
+    {
+      "id": "mitigation_per_critical_cluster",
+      "kind": "count_covers",
+      "items": "mitigation_blocks",
+      "covers": "critical_tags",
+      "allow_vacuous": true,
+      "bar": "generates concrete mitigations for every critical cluster",
+      "desc": "every cluster tagged Critical has its own mitigation block (not applicable when no cluster is Critical)"
+    },
+    {
+      "id": "mitigations_labelled",
+      "kind": "min_count",
+      "items": "mitigation_items",
+      "n": 1,
+      "bar": "generates concrete mitigations for every critical cluster",
+      "desc": "the mitigation section states at least one labelled mitigation"
+    },
+    {
+      "id": "summary_present",
+      "kind": "section_present",
+      "pattern": "Worrystorm Summary",
+      "bar": "produces a summary paragraph that names the key ethical challenges without vague platitudes",
+      "desc": "the output has a Worrystorm Summary"
+    }
+  ],
+  "semantic": [
+    {
+      "id": "answer_direct",
+      "each": "answer_block",
+      "bar": "opens with a direct answer to the decision or question the user asked, which the rest of the output supports",
+      "instructions": "Does the answer in `items[{i}]` give a direct verdict on the question asked, with its main reason?",
+      "criteria": {
+        "true": "States a verdict or recommendation about the design (for example 'do not launch the public feed as specified; redesign around closed report categories, because it will concentrate profiling harm on people who cannot contest it') and gives the main reason, tied to this product.",
+        "false": "Restates the task, describes the method or what the session will do, hedges without committing ('it depends', 'there are many concerns'), or gives a verdict with no reason."
+      }
+    },
+    {
+      "id": "worries_specific",
+      "each": "worry_items",
+      "bar": "generates at least 10 specific worries across multiple categories",
+      "instructions": "Is the worry in `items[{i}]` a specific concern about this product, naming who is affected and how?",
+      "criteria": {
+        "true": "A single concrete concern about this product that someone could investigate or test and that names who is affected and how (for example 'a photographed delivery driver cannot find or remove the post about them').",
+        "false": "A generic concern such as 'data privacy issues' or 'bias risk' that would fit any product, or a concern that names no one affected."
+      }
+    },
+    {
+      "id": "worries_span_categories",
+      "section": "Worry List|Worry Generation",
+      "bar": "generates at least 10 specific worries across multiple categories",
+      "instructions": "Does the worry list in `items[{i}]` cover several different kinds of concern rather than one or two themes?",
+      "criteria": {
+        "true": "The worries reach at least four distinct kinds of concern among: data and privacy, environmental cost, community and social effects, economic effects, safety and harm, psychological effects, power and fairness, and future or at-scale consequences.",
+        "false": "Nearly all worries fall under one or two kinds of concern (for example privacy and safety only)."
+      }
+    },
+    {
+      "id": "clusters_affirmative",
+      "each": "cluster_names",
+      "bar": "clusters into 3–6 coherent, affirmatively-named themes",
+      "instructions": "Is the cluster name in `items[{i}]` framed as a value or desired state to protect, rather than as a fear or harm?",
+      "criteria": {
+        "true": "Names the value, capability or commitment to protect (for example 'User Data Sovereignty', 'Due Process for People Reported', 'Safety Without Vigilantism').",
+        "false": "Names the fear, harm or threat itself (for example 'Data privacy fears', 'Bias risks', 'Surveillance concerns', 'Security theater')."
+      }
+    },
+    {
+      "id": "clusters_coherent",
+      "section": "Clustered Worry Themes|Worry Clusters|Worry Themes|Step 3",
+      "bar": "clusters into 3–6 coherent, affirmatively-named themes",
+      "instructions": "In the clustered themes in `items[{i}]`, do the worries grouped under each cluster belong together under that cluster's name?",
+      "criteria": {
+        "true": "Each cluster's worries share the theme its name states, with no cluster that is a catch-all for unrelated worries.",
+        "false": "At least one cluster joins worries that have little to do with each other or with the cluster's name (a catch-all)."
+      }
+    },
+    {
+      "id": "objective_specific",
+      "each": "objectives",
+      "bar": "produces ethical objectives that are specific enough to create design constraints",
+      "instructions": "Is the ethical objective in `items[{i}]` specific enough that a concrete design constraint could be written from it?",
+      "criteria": {
+        "true": "Commits to something particular about this product (who is protected, what the design will do or avoid) and names the specific harm avoided, so a testable requirement follows directly.",
+        "false": "A platitude such as 'we commit to fairness to avoid harm' or 'respecting users', from which no particular requirement follows."
+      }
+    },
+    {
+      "id": "constraint_concrete",
+      "each": "constraints",
+      "bar": "produces ethical objectives that are specific enough to create design constraints",
+      "instructions": "Is the design constraint in `items[{i}]` a concrete requirement the design must satisfy?",
+      "criteria": {
+        "true": "A specific, checkable rule about the product (for example 'every rejection must include a reason and a route to human review', 'posts expire after 48 hours').",
+        "false": "A vague aim ('be transparent', 'protect privacy') or a rule that cannot be checked."
+      }
+    },
+    {
+      "id": "test_question_answerable",
+      "each": "test_questions",
+      "bar": "proposes test questions that could be answered through research or audit",
+      "instructions": "Could the test question in `items[{i}]` be answered by user testing, research, measurement or an audit?",
+      "criteria": {
+        "true": "Asks something observable that a named kind of evidence could answer (for example 'can a photographed person remove their image within 30 seconds', 'does the report rate for delivery workers differ from baseline').",
+        "false": "A rhetorical or open-ended question ('is this ethical?', 'are we doing the right thing?') that no test, study or audit could settle."
+      }
+    },
+    {
+      "id": "mitigation_concrete",
+      "each": "mitigation_items",
+      "bar": "generates concrete mitigations for every critical cluster",
+      "instructions": "Is the mitigation in `items[{i}]` a concrete design change concrete enough to implement or test?",
+      "criteria": {
+        "true": "Names a particular change to this product (for example 'replace the open-ended suspicious activity category with closed behaviour-based categories', 'blur faces by default') that a team could build or test.",
+        "false": "A general aim such as 'improve oversight', 'increase transparency' or 'consult stakeholders' with no particular change."
+      }
+    },
+    {
+      "id": "summary_specific",
+      "section": "Worrystorm Summary",
+      "bar": "produces a summary paragraph that names the key ethical challenges without vague platitudes",
+      "instructions": "Ignoring any Evidence Ledger table, does the summary in `items[{i}]` name the key ethical challenges of this product specifically?",
+      "criteria": {
+        "true": "Names the core ethical challenges of this product (for example opacity plus no appeal in an automated screening tool) and the values the design should uphold, in terms that could guide the next design decision.",
+        "false": "Platitudes that fit any product ('technology must be used responsibly', 'balance innovation and ethics', 'many ethical considerations exist')."
+      }
+    }
+  ]
+}

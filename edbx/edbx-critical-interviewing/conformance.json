@@ -1,0 +1,375 @@
+{
+  "skill": "edbx-critical-interviewing",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar. Left unchecked: (1) live-interview mode ('in live mode, correctly identifies value-laden language and generates targeted probes'), (2) post-interview mode ('clearly distinguishes descriptive from normative findings') and (3) the values portrait bar. All three need a participant quote or transcript as input, and none of the three eval prompts supplies one: they all ask for a Protocol Design run. A check on them would pass vacuously. (4) 'Domain-Specific Questions when domain is specified' has no structural presence check because no eval prompt names one of the five Investigation domains, so a section_present would either always pass (conditional never triggered) or demand a section the brief did not ask for; the named-technical-questions bar is checked semantically on whatever domain section the output chooses to write. (5) Counts use the skill's own wording: at least 8 follow-ups, at least 2 construct-building probes, 4-6 covert categories. Outputs differ in layout (one protocol, or one per stakeholder group), so counts read the first matching section, which is enough to meet 'at least N' for one protocol; the per-stakeholder repeats are not required.",
+  "enumerators": {
+    "ledger_type_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Type",
+      "strict": true
+    },
+    "follow_up_items": {
+      "type": "list_items",
+      "in_section": "follow.?up"
+    },
+    "probe_type_labels": {
+      "type": "phrase_matches",
+      "pattern": "\\b(?:descriptive|normative|evaluative|construct.?building)\\s+probes?\\b"
+    },
+    "construct_probes": {
+      "type": "phrase_matches",
+      "pattern": "(?:when|if|whenever)\\s+(?:you|they|he|she|the participant|a participant|participants?|the \\w+)\\s+(?:say|says|said|use|uses|used|mention|mentions|call|calls|describe|describes|name|names|bring up|brings up)\\b[^\\n]{15,}"
+    },
+    "covert_items": {
+      "type": "list_items",
+      "in_section": "covert"
+    },
+    "covert_intentions": {
+      "type": "phrase_matches",
+      "in_section": "covert",
+      "pattern": "i want to understand[^\\n]{10,}"
+    },
+    "harms_rows": {
+      "type": "table_rows",
+      "in_section": "non.?obvious harms",
+      "column": "Population",
+      "strict": true,
+      "full": true
+    },
+    "statutes_named": {
+      "type": "phrase_matches",
+      "in_section": "non.?obvious harms",
+      "pattern": "4/5|80\\s?%|four.fifths|GDPR|EU AI Act|AI Act|Title VII|\\bEEOC\\b|Art(?:icle|\\.)?\\s?\\d+|Local Law|\\bCCPA\\b|\\bADA\\b|disparate.impact"
+    },
+    "halt_items": {
+      "type": "list_items",
+      "in_section": "red.?flag|halt checklist"
+    }
+  },
+  "structural": [
+    {
+      "id": "answer_first",
+      "kind": "any_of",
+      "checks": [
+        {
+          "kind": "section_present",
+          "pattern": "(?m)^\\s*(?:#{1,6}\\s*Answer\\b|\\*\\*Answer\\b)"
+        }
+      ],
+      "bar": "opens with a direct answer to the decision or question the user asked, which the rest of the output supports",
+      "desc": "the output opens with an Answer section"
+    },
+    {
+      "id": "evidence_ledger_present",
+      "kind": "section_present",
+      "pattern": "Evidence Ledger",
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "the output has an Evidence Ledger"
+    },
+    {
+      "id": "ledger_types_valid",
+      "kind": "cells_in_vocabulary",
+      "items": "ledger_type_cells",
+      "vocabulary": [
+        "user-supplied",
+        "sourced",
+        "assumption",
+        "unknown"
+      ],
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every Evidence Ledger Type is one of the four allowed words"
+    },
+    {
+      "id": "lead_off_present",
+      "kind": "any_of",
+      "bar": "produces a complete protocol with all components (Lead-off, Back-up, Emergency, Follow-ups, Covert Categories, Domain-Specific Questions when domain is specified, Interview Sequencing, Non-Obvious Harms Inventory, Pre-Interview Design Guardrails, Red-Flag/Halt Checklist)",
+      "desc": "the protocol has a Lead-off question",
+      "checks": [
+        {
+          "kind": "section_present",
+          "pattern": "(?im)^[#*>\\s\\-|]*(?:\\d+[.)]\\s*|[A-F][.)]\\s*)?\\**\\s*lead.?off\\b"
+        }
+      ]
+    },
+    {
+      "id": "back_up_present",
+      "kind": "any_of",
+      "bar": "produces a complete protocol with all components (Lead-off, Back-up, Emergency, Follow-ups, Covert Categories, Domain-Specific Questions when domain is specified, Interview Sequencing, Non-Obvious Harms Inventory, Pre-Interview Design Guardrails, Red-Flag/Halt Checklist)",
+      "desc": "the protocol has a Back-up question",
+      "checks": [
+        {
+          "kind": "section_present",
+          "pattern": "(?im)^[#*>\\s\\-|]*(?:\\d+[.)]\\s*|[A-F][.)]\\s*)?\\**\\s*back.?up\\b"
+        }
+      ]
+    },
+    {
+      "id": "emergency_present",
+      "kind": "any_of",
+      "bar": "produces a complete protocol with all components (Lead-off, Back-up, Emergency, Follow-ups, Covert Categories, Domain-Specific Questions when domain is specified, Interview Sequencing, Non-Obvious Harms Inventory, Pre-Interview Design Guardrails, Red-Flag/Halt Checklist)",
+      "desc": "the protocol has an Emergency question",
+      "checks": [
+        {
+          "kind": "section_present",
+          "pattern": "(?im)^[#*>\\s\\-|]*(?:\\d+[.)]\\s*|[A-F][.)]\\s*)?\\**\\s*emergency\\b"
+        }
+      ]
+    },
+    {
+      "id": "follow_up_section_present",
+      "kind": "section_present",
+      "pattern": "follow.?up",
+      "bar": "produces a complete protocol with all components (Lead-off, Back-up, Emergency, Follow-ups, Covert Categories, Domain-Specific Questions when domain is specified, Interview Sequencing, Non-Obvious Harms Inventory, Pre-Interview Design Guardrails, Red-Flag/Halt Checklist)",
+      "desc": "the protocol has a Follow-up question section"
+    },
+    {
+      "id": "covert_section_present",
+      "kind": "section_present",
+      "pattern": "covert",
+      "bar": "produces a complete protocol with all components (Lead-off, Back-up, Emergency, Follow-ups, Covert Categories, Domain-Specific Questions when domain is specified, Interview Sequencing, Non-Obvious Harms Inventory, Pre-Interview Design Guardrails, Red-Flag/Halt Checklist)",
+      "desc": "the protocol has a Covert Categories section"
+    },
+    {
+      "id": "sequencing_present",
+      "kind": "section_present",
+      "pattern": "sequencing",
+      "bar": "produces a complete protocol with all components (Lead-off, Back-up, Emergency, Follow-ups, Covert Categories, Domain-Specific Questions when domain is specified, Interview Sequencing, Non-Obvious Harms Inventory, Pre-Interview Design Guardrails, Red-Flag/Halt Checklist)",
+      "desc": "the protocol has an Interview Sequencing section"
+    },
+    {
+      "id": "harms_inventory_present",
+      "kind": "section_present",
+      "pattern": "non.?obvious harms",
+      "bar": "produces a complete protocol with all components (Lead-off, Back-up, Emergency, Follow-ups, Covert Categories, Domain-Specific Questions when domain is specified, Interview Sequencing, Non-Obvious Harms Inventory, Pre-Interview Design Guardrails, Red-Flag/Halt Checklist)",
+      "desc": "the protocol has a Non-Obvious Harms Inventory"
+    },
+    {
+      "id": "guardrails_present",
+      "kind": "section_present",
+      "pattern": "design guardrails|pre.?interview guardrails",
+      "bar": "produces a complete protocol with all components (Lead-off, Back-up, Emergency, Follow-ups, Covert Categories, Domain-Specific Questions when domain is specified, Interview Sequencing, Non-Obvious Harms Inventory, Pre-Interview Design Guardrails, Red-Flag/Halt Checklist)",
+      "desc": "the protocol has a Pre-Interview Design Guardrails section"
+    },
+    {
+      "id": "halt_checklist_present",
+      "kind": "section_present",
+      "pattern": "red.?flag|halt checklist",
+      "bar": "produces a complete protocol with all components (Lead-off, Back-up, Emergency, Follow-ups, Covert Categories, Domain-Specific Questions when domain is specified, Interview Sequencing, Non-Obvious Harms Inventory, Pre-Interview Design Guardrails, Red-Flag/Halt Checklist)",
+      "desc": "the protocol has a Red-Flag / Halt Checklist"
+    },
+    {
+      "id": "follow_up_count",
+      "kind": "min_count",
+      "items": "follow_up_items",
+      "n": 8,
+      "bar": "includes at least 8 follow-up questions spanning all four probe types",
+      "desc": "at least 8 follow-up questions are listed"
+    },
+    {
+      "id": "four_probe_types",
+      "kind": "distinct_coverage",
+      "items": "probe_type_labels",
+      "vocabulary": [
+        "descriptive",
+        "normative",
+        "evaluative",
+        "construct"
+      ],
+      "n": 4,
+      "bar": "includes at least 8 follow-up questions spanning all four probe types",
+      "desc": "follow-ups span descriptive, normative, evaluative and construct-building probes"
+    },
+    {
+      "id": "construct_probe_count",
+      "kind": "min_count",
+      "items": "construct_probes",
+      "n": 2,
+      "bar": "contains at least 2 construct-building probes with explicit instructions about which value words to watch for",
+      "desc": "at least 2 construct-building probes say what to do when a participant uses a value word"
+    },
+    {
+      "id": "covert_count",
+      "kind": "min_count",
+      "items": "covert_items",
+      "n": 4,
+      "max": 6,
+      "bar": "lists 4–6 covert categories phrased as research intentions, not direct questions",
+      "desc": "4 to 6 covert categories are listed"
+    },
+    {
+      "id": "covert_phrased_as_intentions",
+      "kind": "min_count",
+      "items": "covert_intentions",
+      "n": 4,
+      "bar": "lists 4–6 covert categories phrased as research intentions, not direct questions",
+      "desc": "at least 4 covert categories use the 'I want to understand ...' form"
+    },
+    {
+      "id": "harms_four_types_named",
+      "kind": "all_phrases",
+      "section": "non.?obvious harms",
+      "phrases": [
+        "proxy|proxies|zip.?code|stand.?in|correlat|infer",
+        "discoverab|subpoena|litigation",
+        "aggregat|re.?identif",
+        "retaliat"
+      ],
+      "bar": "produces a Non-Obvious Harms Inventory identifying proxy-variable harms, discoverability risk, aggregation harms, and retaliation risk for the populations being researched, with named statutes (e.g., 4/5 rule, GDPR Art. 22, EU AI Act Art. 5/6) when applicable",
+      "desc": "the inventory names proxy-variable, discoverability, aggregation and retaliation harms"
+    },
+    {
+      "id": "harms_has_population_rows",
+      "kind": "min_count",
+      "items": "harms_rows",
+      "n": 3,
+      "bar": "identifying proxy-variable harms, discoverability risk, aggregation harms, and retaliation risk for the populations being researched",
+      "desc": "the inventory table has at least 3 population rows"
+    },
+    {
+      "id": "harms_statutes_named",
+      "kind": "min_count",
+      "items": "statutes_named",
+      "n": 1,
+      "bar": "with named statutes (e.g., 4/5 rule, GDPR Art. 22, EU AI Act Art. 5/6) when applicable",
+      "desc": "the inventory names at least one rule or statute (4/5 rule, GDPR, EU AI Act, Title VII)"
+    },
+    {
+      "id": "guardrails_five_named",
+      "kind": "all_phrases",
+      "section": "design guardrails|pre.?interview guardrails",
+      "phrases": [
+        "interviewer",
+        "confidential",
+        "consent",
+        "trauma",
+        "halt|pause|stop"
+      ],
+      "bar": "specifies Pre-Interview Design Guardrails: interviewer selection (with power-asymmetry analysis), confidentiality architecture (storage / access / retention / redaction), informed consent specifics, trauma-aware framing, and halt protocol — all named, not implied",
+      "desc": "the guardrails name interviewer selection, confidentiality, consent, trauma-aware framing and a halt protocol"
+    },
+    {
+      "id": "confidentiality_four_parts",
+      "kind": "all_phrases",
+      "section": "design guardrails|pre.?interview guardrails",
+      "phrases": [
+        "stor|record|where",
+        "access",
+        "retention|retain|delet",
+        "redact"
+      ],
+      "bar": "confidentiality architecture (storage / access / retention / redaction)",
+      "desc": "the confidentiality architecture covers storage, access, retention and redaction"
+    },
+    {
+      "id": "power_asymmetry_named",
+      "kind": "all_phrases",
+      "section": "design guardrails|pre.?interview guardrails",
+      "phrases": [
+        "asymmetr|power|retaliat|management chain|manager|hierarch|supervis|evaluator|report(?:s|ing)? to"
+      ],
+      "bar": "interviewer selection (with power-asymmetry analysis)",
+      "desc": "the guardrails discuss the power asymmetry of who interviews whom"
+    },
+    {
+      "id": "halt_checklist_items",
+      "kind": "min_count",
+      "items": "halt_items",
+      "n": 3,
+      "bar": "includes the Red-Flag/Halt Checklist for live interviews",
+      "desc": "the Red-Flag / Halt Checklist lists at least 3 items"
+    },
+    {
+      "id": "sequencing_dependency",
+      "kind": "all_phrases",
+      "section": "sequencing",
+      "phrases": [
+        "dependenc|before|first|then|after|→|->"
+      ],
+      "bar": "provides interview sequencing rationale with dependency tree",
+      "desc": "the sequencing section states an order and what depends on what"
+    }
+  ],
+  "semantic": [
+    {
+      "id": "construct_probes_name_value_words",
+      "each": "construct_probes",
+      "bar": "contains at least 2 construct-building probes with explicit instructions about which value words to watch for",
+      "instructions": "Does `items[{i}]` tell the interviewer which value-laden words to watch for and how to probe them?",
+      "criteria": {
+        "true": "Names example value words (such as 'unfair', 'wrong', 'manipulative', 'surveillance', 'trust') and tells the interviewer to mirror the participant's exact word and ask what they mean by it.",
+        "false": "A generic instruction to 'probe deeper' or 'ask why' with no value words named, or it paraphrases the participant's word instead of mirroring it."
+      }
+    },
+    {
+      "id": "covert_not_direct_question",
+      "each": "covert_items",
+      "bar": "lists 4–6 covert categories phrased as research intentions, not direct questions",
+      "instructions": "Is the covert category in `items[{i}]` a research intention rather than a question to put to the participant?",
+      "criteria": {
+        "true": "States what the researcher wants to understand (often 'I want to understand X without asking Y'), as an aim of the research.",
+        "false": "Is itself a question addressed to the participant, or a gotcha about what the participant is hiding."
+      }
+    },
+    {
+      "id": "harms_population_specific",
+      "each": "harms_rows",
+      "bar": "identifying proxy-variable harms, discoverability risk, aggregation harms, and retaliation risk for the populations being researched",
+      "instructions": "Does the row in `items[{i}]` name a specific population and a harm particular to it, with the protocol question that surfaces or blocks it?",
+      "criteria": {
+        "true": "Names a specific group (for example 'applicants from low-income zip codes' or 'junior editors who report to the CTO') and a concrete non-obvious harm for that group, and links it to protocol questions.",
+        "false": "Names only 'users' or 'everyone', or gives a generic harm such as 'privacy risk' with no link to the protocol."
+      }
+    },
+    {
+      "id": "guardrails_specific_not_implied",
+      "section": "design guardrails|pre.?interview guardrails",
+      "bar": "halt protocol — all named, not implied",
+      "instructions": "Are the guardrails in `items[{i}]` stated as specific decisions for this research rather than as good intentions?",
+      "criteria": {
+        "true": "Each guardrail commits to a particular choice: who interviews whom and the power gap it creates, where recordings are kept and who can see them, how long they are kept and how a participant can redact, what consent covers, named steps for trauma-aware framing, and named conditions that stop the interview.",
+        "false": "Guardrails are generic reassurances such as 'we will protect confidentiality' or 'we will be sensitive', or some of the five are missing or only implied."
+      }
+    },
+    {
+      "id": "domain_questions_named_technical",
+      "section": "domain.?specific",
+      "bar": "when a domain is specified, includes named technical questions specific to that domain (proxy variables, named fairness metrics, appeal mechanisms, etc.)",
+      "instructions": "Are the domain-specific questions in `items[{i}]` technical and specific to the domain, beyond what a general values interview would ask?",
+      "criteria": {
+        "true": "Asks about named technical specifics for the domain, for example proxy variables used as inputs, training data provenance, named fairness metrics, monitoring cadence, who can challenge a decision, appeal mechanisms, rollback criteria or veto power.",
+        "false": "Repeats general values or experience questions with no technical or domain-specific content."
+      }
+    },
+    {
+      "id": "sequencing_names_dependency",
+      "section": "sequencing",
+      "bar": "provides interview sequencing rationale with dependency tree",
+      "instructions": "Does `items[{i}]` give an order for interviewing the groups in this research and say why the order matters for what each later interview can ask?",
+      "criteria": {
+        "true": "Names the specific participant groups in this research, puts them in an order, and explains what each earlier interview gives the later ones (a dependency), for example hearing impacted users before the people who built the system.",
+        "false": "Lists the groups with no reason for the order, or gives only generic advice that does not use this research's participants."
+      }
+    },
+    {
+      "id": "answer_decision_supported",
+      "section": "answer",
+      "bar": "opens with a direct answer to the decision or question the user asked, which the rest of the output supports",
+      "instructions": "Does `items[{i}]` answer the question the user asked, with its main reason?",
+      "criteria": {
+        "true": "Two to four sentences that give a recommendation or verdict about how to run these interviews and the main reason for it.",
+        "false": "Restates the task, announces what follows, or gives no recommendation or reason."
+      }
+    },
+    {
+      "id": "ledger_names_basis_not_skill",
+      "section": "evidence ledger",
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "instructions": "Does the Basis column of `items[{i}]` avoid citing a skill, its rules or its box?",
+      "criteria": {
+        "true": "Every Basis names the brief, a paper, a URL or model knowledge, and invents no figure about the user's situation.",
+        "false": "Some Basis cites a skill, its workflow or its rules (for example 'the skill workflow section G'), or a row states an invented figure as fact."
+      }
+    }
+  ]
+}

@@ -1,0 +1,404 @@
+{
+  "skill": "edbx-values-levers",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar. All 12 bars have at least one check. Limits: (1) 'Individual Mode' is only proxied: no scenario states that the user is an individual contributor with no authority (scenario 0 'senior designer' is ambiguous), and a check that is conditional on the role cannot see the prompt, so individual_action_alone asks every output for at least one action the user can take without anyone's approval, which is the substance of the fast path. (2) 'Runnable in under 60 minutes' is checked as stated per-step timings plus a judge reading the guide for a session length of an hour or less; adding the minutes up is arithmetic Jev cannot do and no structural kind sums numbers. (3) 'Named' stakeholders in the 30-day plan accepts a role or group, because the brief cannot supply personal names (rule 6); no check asks for a person's name. (4) 'invents none' in the Evidence Ledger bar is covered by valid Type words, a URL for any 'sourced' row (this skill lists no Sources, so a paper name alone is not a sourced basis), and a judge that the Basis fits the Type; whether a user-supplied row is really in the brief needs the prompt and is not checked. (5) 2-3 applicable levers counts rows whose Applicable cell starts with Yes, Primary or Secondary; 'Conditional', 'Limited' and 'No' rows do not count as recommended. (6) The Lever Resistance Map must cover every recommended lever; the skill lists a resistance for all five, so more rows than levers is fine. (7) The four-part facilitation, Step 3 'advocacy framing' and the Guardrails other than those named in the bar are not Quality Bar items and are not checked.",
+  "enumerators": {
+    "ledger_type_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Type",
+      "strict": true
+    },
+    "ledger_rows": {
+      "type": "table_rows",
+      "in_section": "Evidence Ledger",
+      "column": "Claim",
+      "strict": true,
+      "full": true
+    },
+    "sourced_basis_cells": {
+      "type": "table_cells",
+      "in_section": "Evidence Ledger",
+      "column": "Basis",
+      "strict": true,
+      "where": {
+        "column": "Type",
+        "matches": "^\\s*sourced"
+      }
+    },
+    "lever_rows": {
+      "type": "table_rows",
+      "in_section": "Lever Activation",
+      "column": "Lever",
+      "strict": true,
+      "full": true
+    },
+    "applicable_levers": {
+      "type": "table_rows",
+      "in_section": "Lever Activation",
+      "column": "Lever",
+      "strict": true,
+      "where": {
+        "column": "Applicable",
+        "matches": "^\\s*(yes|primary|secondary)\\b"
+      }
+    },
+    "resistance_rows": {
+      "type": "table_rows",
+      "in_section": "Resistance",
+      "column": "Lever",
+      "strict": true,
+      "full": true
+    },
+    "unstated_rows": {
+      "type": "table_rows",
+      "in_section": "Whose Values|Stated",
+      "column": "Unstated",
+      "strict": true,
+      "full": true
+    },
+    "absent_rows": {
+      "type": "table_rows",
+      "in_section": "Absent",
+      "column": "Absent",
+      "strict": true,
+      "full": true
+    },
+    "harm_items": {
+      "type": "list_items",
+      "in_section": "Systemic|second-order"
+    },
+    "comm_rows": {
+      "type": "table_rows",
+      "in_section": "Communication Audit",
+      "column": "Channel",
+      "strict": true,
+      "full": true
+    },
+    "facilitation_steps": {
+      "type": "list_items",
+      "in_section": "Facilitation"
+    }
+  },
+  "structural": [
+    {
+      "id": "answer_first",
+      "kind": "any_of",
+      "checks": [
+        {
+          "kind": "section_present",
+          "pattern": "(?m)^\\s*(?:#{1,6}\\s*Answer\\b|\\*\\*Answer\\b)"
+        }
+      ],
+      "bar": "opens with a direct answer to the decision or question the user asked, which the rest of the output supports",
+      "desc": "the output opens with an Answer section"
+    },
+    {
+      "id": "evidence_ledger_present",
+      "kind": "section_present",
+      "pattern": "Evidence Ledger",
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "the output has an Evidence Ledger"
+    },
+    {
+      "id": "ledger_types_valid",
+      "kind": "cells_in_vocabulary",
+      "items": "ledger_type_cells",
+      "vocabulary": [
+        "user-supplied",
+        "sourced",
+        "assumption",
+        "unknown"
+      ],
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every Evidence Ledger Type is one of the four allowed words"
+    },
+    {
+      "id": "sourced_has_url",
+      "kind": "cells_match",
+      "items": "sourced_basis_cells",
+      "pattern": "https?://",
+      "allow_vacuous": true,
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "desc": "every row typed sourced names a URL in its Basis (the skill lists no Sources, so a paper name from model memory is an assumption, not a sourced claim)"
+    },
+    {
+      "id": "two_to_three_levers_recommended",
+      "kind": "min_count",
+      "items": "applicable_levers",
+      "n": 2,
+      "max": 3,
+      "bar": "identifies 2–3 applicable levers for any team context",
+      "desc": "the Lever Activation Plan marks 2 or 3 levers as applicable (Yes, Primary or Secondary)"
+    },
+    {
+      "id": "resistance_map_covers_recommended",
+      "kind": "count_covers",
+      "items": "resistance_rows",
+      "covers": "applicable_levers",
+      "bar": "includes a Lever Resistance Map with a named counter-move for each recommended lever",
+      "desc": "the Lever Resistance Map has a row for at least as many levers as were recommended"
+    },
+    {
+      "id": "resistance_map_present",
+      "kind": "section_present",
+      "pattern": "Resistance Map",
+      "bar": "includes a Lever Resistance Map with a named counter-move for each recommended lever",
+      "desc": "a Lever Resistance Map section exists"
+    },
+    {
+      "id": "stated_unstated_rows",
+      "kind": "min_count",
+      "items": "unstated_rows",
+      "n": 2,
+      "bar": "stated/unstated values for present stakeholders",
+      "desc": "the Stated vs unstated table has at least 2 stakeholder rows with an Unstated column"
+    },
+    {
+      "id": "absent_stakeholders_min3",
+      "kind": "min_count",
+      "items": "absent_rows",
+      "n": 3,
+      "bar": "at least 3 named absent stakeholders",
+      "desc": "the absent-stakeholder table names at least 3 absent stakeholders"
+    },
+    {
+      "id": "harm_map_four_parts",
+      "kind": "all_phrases",
+      "section": "Systemic|second-order",
+      "phrases": [
+        "aggregat",
+        "power",
+        "discriminat",
+        "non-user|externalit"
+      ],
+      "bar": "a systemic-harm map covering aggregation effects, power dynamics, future discriminatory use, and non-user externalities",
+      "desc": "the systemic harm map covers aggregation effects, power dynamics, future discriminatory use and non-user externalities"
+    },
+    {
+      "id": "comm_audit_has_channel",
+      "kind": "min_count",
+      "items": "comm_rows",
+      "n": 1,
+      "bar": "includes a communication audit with at least one existing channel and one new ritual suggestion",
+      "desc": "the Communication Audit lists at least one existing channel"
+    },
+    {
+      "id": "comm_audit_new_ritual",
+      "kind": "all_phrases",
+      "section": "Communication Audit",
+      "phrases": [
+        "ritual"
+      ],
+      "bar": "includes a communication audit with at least one existing channel and one new ritual suggestion",
+      "desc": "the Communication Audit proposes a new ritual"
+    },
+    {
+      "id": "facilitation_four_parts",
+      "kind": "all_phrases",
+      "section": "Facilitation",
+      "phrases": [
+        "opening",
+        "constraint",
+        "discussion",
+        "decision"
+      ],
+      "bar": "produces a facilitation guide that is session-ready and runnable in under 60 minutes",
+      "desc": "the facilitation guide has an opening question, constraint exercise, discussion and decision"
+    },
+    {
+      "id": "facilitation_timed",
+      "kind": "min_count_matching",
+      "items": "facilitation_steps",
+      "pattern": "\\d+\\s*(?:-|to)?\\s*(?:\\d+\\s*)?min",
+      "n": 3,
+      "bar": "produces a facilitation guide that is session-ready and runnable in under 60 minutes",
+      "desc": "at least 3 facilitation steps carry a time in minutes, so the session can be run to a clock"
+    },
+    {
+      "id": "plan_four_weeks",
+      "kind": "all_phrases",
+      "section": "30-Day",
+      "phrases": [
+        "Week\\s*1",
+        "Week\\s*2",
+        "Week\\s*3",
+        "Week\\s*4"
+      ],
+      "bar": "produces a 30-day action plan with week-by-week named actions, stakeholders, and deliverables for the top 2 levers",
+      "desc": "the 30-day plan has a Week 1, 2, 3 and 4"
+    },
+    {
+      "id": "plan_week4_checkpoint",
+      "kind": "all_phrases",
+      "section": "30-Day",
+      "phrases": [
+        "Week\\s*4[\\s\\S]{0,400}(?:checkpoint|review|decision)"
+      ],
+      "bar": "produces a 30-day action plan with week-by-week named actions, stakeholders, and deliverables for the top 2 levers",
+      "desc": "Week 4 is a review and decision checkpoint"
+    },
+    {
+      "id": "decision_statement_present",
+      "kind": "section_present",
+      "pattern": "Design Decision",
+      "bar": "generates a Values-Based Design Decision statement for every session",
+      "desc": "a Values-Based Design Decision statement section exists"
+    },
+    {
+      "id": "decision_statement_shape",
+      "kind": "all_phrases",
+      "section": "Design Decision",
+      "phrases": [
+        "prioriti[sz]e",
+        "\\bover\\b",
+        "because",
+        "manifest"
+      ],
+      "bar": "generates a Values-Based Design Decision statement for every session",
+      "desc": "the statement follows the mandated shape: prioritize X over Y because ... manifest in ..."
+    }
+  ],
+  "semantic": [
+    {
+      "id": "answer_direct",
+      "section": "^Answer",
+      "bar": "opens with a direct answer to the decision or question the user asked, which the rest of the output supports",
+      "instructions": "Does the answer in `items[{i}]` give a direct recommendation for the situation described, with its main reason?",
+      "criteria": {
+        "true": "States a recommendation about which lever or approach to use first (for example 'use self-testing and a business-risk reframe, because the CEO only responds to conversion') and gives the main reason, tied to this team's situation.",
+        "false": "Restates the task, describes the Values Levers method, or lists levers without choosing, or gives a recommendation with no reason."
+      }
+    },
+    {
+      "id": "role_authority_calibrated",
+      "scope": "document",
+      "bar": "matches lever recommendations to the user's actual role and authority",
+      "instructions": "Does the document in `items[{i}]` calibrate its lever recommendations to the role and authority of the person it is written for?",
+      "criteria": {
+        "true": "Says or clearly shows what the reader's role can and cannot do, and fits at least one lever to it, for example giving a lever to a sponsor because the reader cannot approve budget, or using informal invitations instead of mandates.",
+        "false": "Recommends levers without reference to who the reader is or what authority they hold, or assigns actions that need authority the reader was never said to have, with no sponsor or workaround."
+      }
+    },
+    {
+      "id": "individual_action_alone",
+      "scope": "document",
+      "bar": "activates Individual Mode when the user is an individual contributor without organizational authority",
+      "instructions": "Does the document in `items[{i}]` include at least one concrete action the reader can take on their own, without anyone else's approval or buy-in?",
+      "criteria": {
+        "true": "Names at least one action that needs no one's permission, such as running a personal audit, trying the product as a vulnerable user, writing a one-page brief, or raising one question in an existing meeting.",
+        "false": "Every action depends on a manager, sponsor, committee or team agreeing first."
+      }
+    },
+    {
+      "id": "counter_move_specific",
+      "each": "resistance_rows",
+      "bar": "includes a Lever Resistance Map with a named counter-move for each recommended lever",
+      "instructions": "Does the row in `items[{i}]` name a specific organizational resistance and a specific counter-move to it?",
+      "criteria": {
+        "true": "Quotes or describes a realistic objection and gives a counter-move a person could carry out or say, such as a reframe sentence, a time-boxed spike or a cost comparison.",
+        "false": "The objection is vague ('people resist'), or the counter-move is a general aim such as 'build buy-in' or 'communicate better' with nothing to do or say."
+      }
+    },
+    {
+      "id": "unstated_values_distinct",
+      "each": "unstated_rows",
+      "bar": "stated/unstated values for present stakeholders",
+      "instructions": "Does the row in `items[{i}]` name unstated values for this stakeholder that differ from the stated ones?",
+      "criteria": {
+        "true": "The unstated values are real motives that are not simply the stated values restated, such as career safety, risk avoidance, optionality, plausible deniability or protecting a metric, and are tied to this stakeholder.",
+        "false": "The unstated cell repeats the stated values in other words, is blank, or is a generic phrase such as 'other priorities' that fits any stakeholder."
+      }
+    },
+    {
+      "id": "absent_stakeholder_specific",
+      "each": "absent_rows",
+      "bar": "at least 3 named absent stakeholders",
+      "instructions": "Does the row in `items[{i}]` name a specific absent group, say what it would want, and say how its absence shapes the design?",
+      "criteria": {
+        "true": "Names a particular group (for example screen-reader users, people whose data could be subpoenaed, future users inheriting retained data, bystanders in a user's household) and gives both what they would want and an effect on the design.",
+        "false": "Uses a catch-all such as 'users', 'society' or 'vulnerable people', or leaves out what they want or how their absence shapes the design."
+      }
+    },
+    {
+      "id": "harm_item_concrete",
+      "each": "harm_items",
+      "bar": "a systemic-harm map covering aggregation effects, power dynamics, future discriminatory use, and non-user externalities",
+      "instructions": "Does the entry in `items[{i}]` describe a specific consequence for this team's situation rather than restating its label?",
+      "criteria": {
+        "true": "Says what becomes possible, who holds power, what inference is enabled or who is affected, in terms of this team's product or practice.",
+        "false": "Only restates the label (for example 'aggregation can cause harm') or states a generic risk that would read the same for any product."
+      }
+    },
+    {
+      "id": "ritual_concrete",
+      "section": "Communication Audit",
+      "bar": "includes a communication audit with at least one existing channel and one new ritual suggestion",
+      "instructions": "Does the audit in `items[{i}]` propose a new ritual specific enough to start next week?",
+      "criteria": {
+        "true": "Proposes a named ritual or recurring prompt with when it happens, who is in it and what they do, such as a 5-minute 'who is excluded' question at the end of design crit.",
+        "false": "No new ritual is proposed, or only a general idea such as 'discuss ethics more' or 'build awareness' appears."
+      }
+    },
+    {
+      "id": "facilitation_session_ready",
+      "section": "Facilitation",
+      "bar": "produces a facilitation guide that is session-ready and runnable in under 60 minutes",
+      "instructions": "Could a facilitator run the guide in `items[{i}]` as written, in an hour or less?",
+      "criteria": {
+        "true": "Gives an actual opening question, a concrete constraint exercise, discussion prompts and a decision step, with a stated duration or per-step timings that fit within one hour.",
+        "false": "Describes the stages only in general terms, leaves the questions or exercise unwritten, or states timings that exceed one hour or no timing at all."
+      }
+    },
+    {
+      "id": "plan_weekly_complete",
+      "section": "30-Day",
+      "bar": "produces a 30-day action plan with week-by-week named actions, stakeholders, and deliverables for the top 2 levers",
+      "instructions": "Does every week of the plan in `items[{i}]` give an action, the stakeholder involved and a deliverable or decision?",
+      "criteria": {
+        "true": "Each of the four weeks names a specific action, who is engaged (a named person, or a role or group when the brief gives no names) and what is produced or decided; week 4 states what success or failure looks like.",
+        "false": "One or more weeks lack an action, a stakeholder or a deliverable, or the entries are generic ('continue the conversation') with nothing produced."
+      }
+    },
+    {
+      "id": "plan_top_two_levers",
+      "section": "30-Day",
+      "bar": "produces a 30-day action plan with week-by-week named actions, stakeholders, and deliverables for the top 2 levers",
+      "instructions": "Is the plan in `items[{i}]` built around two specific levers, with actions that belong to those levers?",
+      "criteria": {
+        "true": "Identifies two levers as the plan's focus and the weekly actions follow from them (for example a constraint spike in week 1 and a self-test in week 3).",
+        "false": "Does not say which levers it covers, covers only one, or the actions are generic and not tied to any lever."
+      }
+    },
+    {
+      "id": "decision_statement_concrete",
+      "section": "Design Decision",
+      "bar": "generates a Values-Based Design Decision statement for every session",
+      "instructions": "Does the statement in `items[{i}]` fill in a specific value choice and a specific design decision for this team?",
+      "criteria": {
+        "true": "Names two real values or orientations in tension, a reason, and a particular practice or design change in which the choice shows up.",
+        "false": "Only repeats the template with its placeholders, or names values and a design decision so broad they could apply to any team ('quality over speed', 'in our work')."
+      }
+    },
+    {
+      "id": "power_resistance_realistic",
+      "scope": "document",
+      "bar": "handles power asymmetry and organizational resistance realistically",
+      "instructions": "Does the document in `items[{i}]` deal with who holds more power than the reader and how resistance would show up?",
+      "criteria": {
+        "true": "Names a person or role with more power than the reader (or a blocker), says how they are likely to respond, and gives a way to proceed that does not rely on authority the reader lacks, such as a reframe, a small spike or a fallback if advocacy is unsafe.",
+        "false": "Treats the reader as able to change everything, or gives resistance only as a generic risk with no named party and no way around it."
+      }
+    },
+    {
+      "id": "ledger_basis_fits_type",
+      "each": "ledger_rows",
+      "bar": "lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none",
+      "instructions": "Does the Basis in the row in `items[{i}]` fit its Type?",
+      "criteria": {
+        "true": "user-supplied points to the brief; assumption says it is model knowledge or an illustrative figure; unknown says what is missing; sourced gives a URL. No source or study is invented.",
+        "false": "The Basis names a study, statistic or source with no way to check it while the Type claims it is sourced or user-supplied, or the row relies on a figure about the user's product that the brief could not have supplied but types it user-supplied."
+      }
+    }
+  ]
+}
