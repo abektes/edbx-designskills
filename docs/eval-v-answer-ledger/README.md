@@ -36,3 +36,19 @@ write observations or quotes.
 One sample per scenario: read the box-level rate, not per-skill counts.
 
 Data: `judging/` (Sonnet verdicts and tally).
+
+## Re-test after the anti-invention fix (a789fb2, 2026-10-13)
+
+Only anotherlens and ethicography regenerated (6 outputs, $0.03), judged
+blind against the same cached baselines (`judging-fix-invention/`).
+
+- Skill preferred **6/6** (was 4/6 for these two skills), 0 label swaps.
+- Coverage of the concerns the user named rose (anotherlens
+  elderly-telemedicine: coverage 5 vs 4; was 3 vs 5).
+- **Invention is reduced, not gone.** evidence_honesty is still 2 (baseline
+  4) in the same two scenarios: elderly-telemedicine still invents some
+  product details, accessibility-debt still invents incidents that the ledger
+  only partly offsets. social-media-growth-hacks shows the intended behaviour
+  (evidence 4 vs 1, "honest about reconstruction").
+- Next: one sample per scenario cannot separate wording from luck; when
+  edbx is re-run after the defect pass, read these two scenarios first.

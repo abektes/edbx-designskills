@@ -1,0 +1,272 @@
+[
+  {
+    "skill": "edbx-anotherlens",
+    "scenario": "budgeting-app-blind-spots",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 30,
+    "raw_total": 21,
+    "delta": 1.286,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 1
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 2
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "Method-faithful, honest about missing data, and actionable."
+  },
+  {
+    "skill": "edbx-anotherlens",
+    "scenario": "elderly-telemedicine",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 30,
+    "raw_total": 25,
+    "delta": 0.714,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 2,
+        "raw": 4
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "Most faithful to the method with an actionable spec; some invented product details."
+  },
+  {
+    "skill": "edbx-anotherlens",
+    "scenario": "school-monitoring-software",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 31,
+    "raw_total": 22,
+    "delta": 1.286,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 3
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 2
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 5
+      },
+      "evidence_honesty": {
+        "skill": 3,
+        "raw": 2
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "Method-faithful and actionable; some invented narration and unsupported source claim."
+  },
+  {
+    "skill": "edbx-ethicography",
+    "scenario": "accessibility-debt",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 30,
+    "raw_total": 25,
+    "delta": 0.714,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 2,
+        "raw": 4
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "Method-faithful and richly analysed; invented incidents are only partly offset by the ledger."
+  },
+  {
+    "skill": "edbx-ethicography",
+    "scenario": "social-media-growth-hacks",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 32,
+    "raw_total": 19,
+    "delta": 1.857,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 1
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "Method-faithful, honest about reconstruction, strong on affected people."
+  },
+  {
+    "skill": "edbx-ethicography",
+    "scenario": "wellness-score-postmortem",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 31,
+    "raw_total": 27,
+    "delta": 0.571,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 5
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 5
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 3,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "Method-faithful and ethically thorough; some provenance claims overreach."
+  }
+]
