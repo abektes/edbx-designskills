@@ -1,0 +1,188 @@
+{
+  "run_id": "20261013T081320Z",
+  "judges": [
+    "sonnet"
+  ],
+  "pairs_per_judge": 63,
+  "label_swaps": [],
+  "skills": {
+    "anotherlens": {
+      "sonnet": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.38
+      }
+    },
+    "anti-heroes": {
+      "sonnet": {
+        "skill_wins": 2,
+        "raw_wins": 1,
+        "ties": 0,
+        "mean_delta": 0.43
+      }
+    },
+    "bad-design-canvas": {
+      "sonnet": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.67
+      }
+    },
+    "black-mirror-brainstorming": {
+      "sonnet": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.19
+      }
+    },
+    "cider": {
+      "sonnet": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 0.48
+      }
+    },
+    "critical-interviewing": {
+      "sonnet": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.62
+      }
+    },
+    "dah-cards": {
+      "sonnet": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.38
+      }
+    },
+    "digital-ethics-compass": {
+      "sonnet": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.43
+      }
+    },
+    "ethical-contract": {
+      "sonnet": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.14
+      }
+    },
+    "ethicography": {
+      "sonnet": {
+        "skill_wins": 2,
+        "raw_wins": 1,
+        "ties": 0,
+        "mean_delta": 0.81
+      }
+    },
+    "fair-patterns": {
+      "sonnet": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.14
+      }
+    },
+    "humane-design-guide": {
+      "sonnet": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.43
+      }
+    },
+    "inverted-behavior-model": {
+      "sonnet": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.33
+      }
+    },
+    "motivation-matrix": {
+      "sonnet": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.33
+      }
+    },
+    "normative-design-scheme": {
+      "sonnet": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.43
+      }
+    },
+    "pledge-works": {
+      "sonnet": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.57
+      }
+    },
+    "responsible-design-prism": {
+      "sonnet": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.14
+      }
+    },
+    "stf-et": {
+      "sonnet": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.48
+      }
+    },
+    "value-dams-and-flows": {
+      "sonnet": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.29
+      }
+    },
+    "values-levers": {
+      "sonnet": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.76
+      }
+    },
+    "worrystorming": {
+      "sonnet": {
+        "skill_wins": 2,
+        "raw_wins": 1,
+        "ties": 0,
+        "mean_delta": 0.76
+      }
+    }
+  },
+  "pair_agreement": "63/63",
+  "mean_dimension_delta": {
+    "structure_format": 0.43,
+    "depth_specificity": 1.16,
+    "actionability": 1.13,
+    "methodology_fidelity": 2.67,
+    "coverage_completeness": 1.19,
+    "ethical_nuance": 0.9,
+    "evidence_honesty": 1.25
+  }
+}

@@ -1,0 +1,2837 @@
+[
+  {
+    "skill": "edbx-anotherlens",
+    "scenario": "budgeting-app-blind-spots",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 23,
+    "delta": 1.429,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 2
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B follows the Another Lens method as published, delivers an owned, testable spec, and marks assumptions honestly, whereas A invents its own lenses and states unsourced statistics as fact."
+  },
+  {
+    "skill": "edbx-anotherlens",
+    "scenario": "elderly-telemedicine",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 22,
+    "delta": 1.571,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 3
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 2
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 4
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A applies Another Lens as published and converts findings into a measurable, owned spec with honest handling of unknowns; B is a long, idea-rich but unstructured exploration."
+  },
+  {
+    "skill": "edbx-anotherlens",
+    "scenario": "school-monitoring-software",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 32,
+    "raw_total": 24,
+    "delta": 1.143,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 5
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 2
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the method as published, delivers testable, owned design changes, and marks its numbers and assumptions honestly; A is richer in narrative but long, unsourced in places and not actionable."
+  },
+  {
+    "skill": "edbx-anti-heroes",
+    "scenario": "ethical-dialogue-default-data-sharing",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "raw",
+    "skill_total": 26,
+    "raw_total": 27,
+    "delta": -0.143,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 3,
+        "raw": 5
+      },
+      "methodology_fidelity": {
+        "skill": 4,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 3,
+        "raw": 5
+      },
+      "ethical_nuance": {
+        "skill": 3,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "raw",
+    "label_swap": false,
+    "winner_reason": "B delivers the timed facilitation script the user needs and handles the BD lead gracefully; A is more faithful and honest but thin on the meeting itself."
+  },
+  {
+    "skill": "edbx-anti-heroes",
+    "scenario": "evaluation-trial-cancel-flow",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 30,
+    "raw_total": 25,
+    "delta": 0.714,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 4,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 5
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 2
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A applies a card-pairing structure faithfully and marks assumptions; B's method looks fabricated and its legal assertions are overconfident."
+  },
+  {
+    "skill": "edbx-anti-heroes",
+    "scenario": "reverse-brainstorm-finance-notifications",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 31,
+    "raw_total": 26,
+    "delta": 0.714,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 5
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A applies the Anti-Hero cards faithfully, stays concise, and labels invented content; B is more elaborate but drifts from the method and repeats itself."
+  },
+  {
+    "skill": "edbx-bad-design-canvas",
+    "scenario": "ai-content-moderation",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 32,
+    "raw_total": 20,
+    "delta": 1.714,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 3
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 1
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 2
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A applies all 12 canvas cells with severity, systemic classification, and honest assumptions; B ignores the canvas and invents details about the product."
+  },
+  {
+    "skill": "edbx-bad-design-canvas",
+    "scenario": "habit-tracker-app",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 31,
+    "raw_total": 22,
+    "delta": 1.286,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 3
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 1
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A applies the actual 12-cell Bad Design Canvas with severity ratings, a statement and a build verdict; B offers good detail but substitutes its own framework."
+  },
+  {
+    "skill": "edbx-bad-design-canvas",
+    "scenario": "smart-energy-monitor",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 19,
+    "delta": 2.0,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 3
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 1
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 2
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B completes the twelve-cell canvas, prioritises findings and gives a conditional verdict with assumptions logged; A is an unstructured harm list."
+  },
+  {
+    "skill": "edbx-black-mirror-brainstorming",
+    "scenario": "ai-hiring-screening",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 32,
+    "raw_total": 22,
+    "delta": 1.429,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 3,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B gives a broader failure-mode inventory and eight traceable anti-goals with audit tests the design lead can bring to the review, plus a ledger, whereas A offers only three untested anti-goals."
+  },
+  {
+    "skill": "edbx-black-mirror-brainstorming",
+    "scenario": "medication-adherence-tracker",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 31,
+    "raw_total": 23,
+    "delta": 1.143,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 3
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 2
+      },
+      "methodology_fidelity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 4
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B gives falsifiable anti-goals with tests and brief traces, matching the request to skip full episodes; A supplies narrative scenarios that a team cannot directly test against."
+  },
+  {
+    "skill": "edbx-black-mirror-brainstorming",
+    "scenario": "social-fitness-leaderboard",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 31,
+    "raw_total": 24,
+    "delta": 1.0,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 3,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A ties episodes to testable, traceable anti-goals and stays closer to the app's real mechanics; B is broader but generic and less usable in a design review."
+  },
+  {
+    "skill": "edbx-cider",
+    "scenario": "banking-onboarding",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 30,
+    "raw_total": 25,
+    "delta": 0.714,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 3,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A runs the CIDER cycle with concrete scenarios and redesigns; B is a broader but method-agnostic exclusion list."
+  },
+  {
+    "skill": "edbx-cider",
+    "scenario": "telehealth-booking",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 30,
+    "raw_total": 25,
+    "delta": 0.714,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 5
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 5
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 1
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the staged method with clearly labelled illustrative scenarios and unknowns, while A substitutes a generic audit outline and asserts invented details of the current system as fact."
+  },
+  {
+    "skill": "edbx-cider",
+    "scenario": "voting-registration",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 27,
+    "raw_total": 27,
+    "delta": 0.0,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 3,
+        "raw": 5
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 3,
+        "raw": 4
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "Task asks for CIDER specifically; B applies the staged method faithfully and gives actionable commitment and ledger, while A substitutes a generic audit frame. Scores are close because A covers all four groups better."
+  },
+  {
+    "skill": "edbx-critical-interviewing",
+    "scenario": "ai-content-stakeholders",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 24,
+    "delta": 1.286,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A applies the method's actual structure and is more specific and honest about assumptions; B is generic and includes an invented prior-conversation reference."
+  },
+  {
+    "skill": "edbx-critical-interviewing",
+    "scenario": "algorithmic-hiring-bias",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 34,
+    "raw_total": 21,
+    "delta": 1.857,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 2
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the actual method with sequenced protocols, non-leading questions and halt rules, and marks unknowns; A is a generic script that assumes its findings."
+  },
+  {
+    "skill": "edbx-critical-interviewing",
+    "scenario": "workplace-surveillance",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 21,
+    "delta": 1.714,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the Critical Interviewing structure (indirect openers, back-up and emergency questions, probe types, covert categories) and adds safeguards; A relies on direct probing questions and a generic interview arc."
+  },
+  {
+    "skill": "edbx-dah-cards",
+    "scenario": "eval-0",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 31,
+    "raw_total": 22,
+    "delta": 1.286,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 2,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the method as published and ends with a concrete, ship-ready change; A is a looser generic critique. B's invented session reactions cost it on honesty but not enough to flip the result."
+  },
+  {
+    "skill": "edbx-dah-cards",
+    "scenario": "eval-1",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 32,
+    "raw_total": 23,
+    "delta": 1.286,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A runs the DAH Cards artifacts faithfully (black/white pairs, consequence map, sorting verdict, honest microcopy) and gives a direct ship decision with honest assumptions; B substitutes generic principles."
+  },
+  {
+    "skill": "edbx-dah-cards",
+    "scenario": "eval-2",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 32,
+    "raw_total": 21,
+    "delta": 1.571,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 1
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the DAH Cards artifacts and openly labels its assumptions, while A invents the product, participants, quotes and data practices as fact."
+  },
+  {
+    "skill": "edbx-digital-ethics-compass",
+    "scenario": "childrens-education-ai",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 23,
+    "delta": 1.429,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 2
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A applies the Compass's actual heuristics and marks unknowns; B invents session events and a different process."
+  },
+  {
+    "skill": "edbx-digital-ethics-compass",
+    "scenario": "mental-health-chatbot",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 21,
+    "delta": 1.714,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 3
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A applies the Digital Ethics Compass categories faithfully, names unknowns, assigns owners and priorities, and attends closely to affected people; B is a generic responsible-AI analysis."
+  },
+  {
+    "skill": "edbx-digital-ethics-compass",
+    "scenario": "smart-city-sensors",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 30,
+    "raw_total": 22,
+    "delta": 1.143,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 3,
+        "raw": 2
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B follows the named method fully, gives prioritised actions tied to business pressure, and records assumptions in a ledger; A is a strong but off-method critique with invented retention figures."
+  },
+  {
+    "skill": "edbx-ethical-contract",
+    "scenario": "ai-hiring-team-contract",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 22,
+    "delta": 1.571,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A gives measurable commitments with named owners, breach triggers, harm audit and an evidence ledger; B stays at generic best-practice level."
+  },
+  {
+    "skill": "edbx-ethical-contract",
+    "scenario": "content-moderation-team",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 26,
+    "delta": 1.0,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B builds accountability into the contract through owners, breach triggers, red lines and a ledger of assumed thresholds, which fits the organisation-duty brief better than A's general policy list."
+  },
+  {
+    "skill": "edbx-ethical-contract",
+    "scenario": "health-data-startup",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 31,
+    "raw_total": 25,
+    "delta": 0.857,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 5
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A gives owned, checkable commitments and separates assumptions from facts; B covers the topics well but is more generic and presents numbers without caveats."
+  },
+  {
+    "skill": "edbx-ethicography",
+    "scenario": "accessibility-debt",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 30,
+    "raw_total": 25,
+    "delta": 0.714,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 2,
+        "raw": 4
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B performs the ethicography structure (moves, quadrants, performative ethics, affected populations) with reconstruction labels and verification records; A is honest but only a generic lifecycle post-mortem. B's invented specifics narrow the margin."
+  },
+  {
+    "skill": "edbx-ethicography",
+    "scenario": "social-media-growth-hacks",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 30,
+    "raw_total": 18,
+    "delta": 1.714,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 2
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 1
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A reconstructs and labels what it cannot know and applies the method; B presents invented incidents and commitments as the company's real history."
+  },
+  {
+    "skill": "edbx-ethicography",
+    "scenario": "wellness-score-postmortem",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "raw",
+    "skill_total": 28,
+    "raw_total": 28,
+    "delta": 0.0,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 5
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 5
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 1,
+        "raw": 4
+      }
+    },
+    "quote_found_in": "raw",
+    "label_swap": false,
+    "winner_reason": "Both are strong, but A builds its trace on invented actors, decisions and confirming documents presented as sources, which would mislead the team; B reasons from the given facts and labels its illustrations."
+  },
+  {
+    "skill": "edbx-fair-patterns",
+    "scenario": "cookie-consent-redesign",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 30,
+    "raw_total": 24,
+    "delta": 0.857,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 3,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A is more faithful to the method, more specific and actionable, and marks assumptions in a ledger; B's reject button is better design but its analysis is thinner."
+  },
+  {
+    "skill": "edbx-fair-patterns",
+    "scenario": "fast-fashion-checkout",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 29,
+    "raw_total": 22,
+    "delta": 1.0,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 4,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 2,
+        "raw": 4
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A applies the method with concrete redesigns, harm analysis and an owned, measurable plan, outweighing its invented root causes; B is accurate in tone but generic and thin."
+  },
+  {
+    "skill": "edbx-fair-patterns",
+    "scenario": "subscription-management",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 31,
+    "raw_total": 20,
+    "delta": 1.571,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 3
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 4,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 3,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A covers all dark patterns, maps them to countermeasures, gives prioritized owned fixes with metrics, and analyses vulnerable users; B is a single-pattern narrative without measurement or legal context."
+  },
+  {
+    "skill": "edbx-humane-design-guide",
+    "scenario": "dating-app-mechanics",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 32,
+    "raw_total": 20,
+    "delta": 1.714,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 3
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 3,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the method fully, identifies compounding stacks and offers tiered alternatives with business tension; A is a generic per-mechanic critique."
+  },
+  {
+    "skill": "edbx-humane-design-guide",
+    "scenario": "news-feed-engagement",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 22,
+    "delta": 1.571,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A applies the guide's actual sensitivities and worksheet structure with specific mechanisms and honest evidence marking; B invents lenses."
+  },
+  {
+    "skill": "edbx-humane-design-guide",
+    "scenario": "teen-social-media",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 29,
+    "raw_total": 22,
+    "delta": 1.0,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 3,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A applies the Humane Design Guide's required components with specific mechanisms, tiered alternatives, compound harms and a ledger; B is a competent but generic teen-safety review."
+  },
+  {
+    "skill": "edbx-inverted-behavior-model",
+    "scenario": "productivity-gamification",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 32,
+    "raw_total": 23,
+    "delta": 1.286,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 4
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the Inverted Behavior Model's actual steps with concrete mechanisms, vulnerable-group analysis and flagged assumptions; A replaces the method with a generic critique."
+  },
+  {
+    "skill": "edbx-inverted-behavior-model",
+    "scenario": "smart-fridge-reorder",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 20,
+    "delta": 1.857,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 3
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A applies the full Inverted Behavior Model with stakeholders, inversion, convergence, cascades, rationalisation checks, actionable redesigns and an explicit evidence ledger; B is a generic risk essay with weak method fidelity."
+  },
+  {
+    "skill": "edbx-inverted-behavior-model",
+    "scenario": "social-savings-feature",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 27,
+    "delta": 0.857,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 4
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the Inverted Behavior Model's actual sequence and rationalizations check and labels its assumptions in a ledger, while A is useful but a looser generic inversion."
+  },
+  {
+    "skill": "edbx-motivation-matrix",
+    "scenario": "corporate-wellness-app",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 31,
+    "raw_total": 24,
+    "delta": 1.0,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 3,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the Motivation Matrix as designed with contexts, rated cells and cell-traced redesigns plus a ledger; A produces a generic feature-by-motivation essay."
+  },
+  {
+    "skill": "edbx-motivation-matrix",
+    "scenario": "employee-review-platform",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 31,
+    "raw_total": 21,
+    "delta": 1.429,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 2
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B builds the actual motivation-by-context grid with vulnerable groups and a ledger of assumptions; A is a generic audit with unflagged guesses."
+  },
+  {
+    "skill": "edbx-motivation-matrix",
+    "scenario": "language-learning-streaks",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 30,
+    "raw_total": 19,
+    "delta": 1.571,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 2
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 2
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A fills the Motivation Matrix as the method requires, labels its assumed contexts and facts, and links findings to redesigns; B restructures around mechanics and asserts unsourced facts."
+  },
+  {
+    "skill": "edbx-normative-design-scheme",
+    "scenario": "attention-economy-redesign",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 21,
+    "delta": 1.714,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 1
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies a fuller named-lens method, marks assumptions and unknowns, and handles unresolved conflicts; A states unknown facts about the platform as findings."
+  },
+  {
+    "skill": "edbx-normative-design-scheme",
+    "scenario": "dating-app-algorithm",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 24,
+    "delta": 1.286,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the full method including creator impact, per-factor tests and a conflict matrix, and ends with a testable plan and sourced ledger; A is a competent but generic three-lens essay."
+  },
+  {
+    "skill": "edbx-normative-design-scheme",
+    "scenario": "predictive-policing",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 31,
+    "raw_total": 22,
+    "delta": 1.286,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 3,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the Normative Design Scheme's actual components and gives concrete alternatives with a ledger; A is a sound but generic three-framework essay."
+  },
+  {
+    "skill": "edbx-pledge-works",
+    "scenario": "accessibility-pledge",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 31,
+    "raw_total": 22,
+    "delta": 1.286,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 3,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A applies Pledge Works with owners, breach consequences and traceability that make the commitment enforceable; B is a generic accessibility process document."
+  },
+  {
+    "skill": "edbx-pledge-works",
+    "scenario": "edtech-data-pledges",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 22,
+    "delta": 1.571,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 2
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the full pledge method with owners, signals and consequences and a ledger of assumptions; A is a clean but unaccountable template with invented context."
+  },
+  {
+    "skill": "edbx-pledge-works",
+    "scenario": "food-delivery-pledges",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 20,
+    "delta": 1.857,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 1
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the Pledge Works components with owners and consequences and flags thresholds as proposed, whereas A fabricates audit findings and follows a generic template."
+  },
+  {
+    "skill": "edbx-responsible-design-prism",
+    "scenario": "freemium-mobile-game",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 21,
+    "delta": 1.714,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 3
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 2
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A applies the actual Prism structure and flags what the brief leaves unknown, whereas B invents a lens framework and states unverified details as facts."
+  },
+  {
+    "skill": "edbx-responsible-design-prism",
+    "scenario": "ride-sharing-surge",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 28,
+    "raw_total": 25,
+    "delta": 0.429,
+    "dims": {
+      "structure_format": {
+        "skill": 3,
+        "raw": 5
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 3,
+        "raw": 4
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the Prism's axes, mechanism audit and redesign pathways with deeper ethical attention, outweighing A's cleaner per-element layout built on an invented framework."
+  },
+  {
+    "skill": "edbx-responsible-design-prism",
+    "scenario": "spotify-wrapped",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 31,
+    "raw_total": 22,
+    "delta": 1.286,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 2
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A applies the Prism axes and gives a placement backed by evidence and a ledger; B invents its own framework, asserts unsourced facts and its 6.5/10 score contradicts its lens scores."
+  },
+  {
+    "skill": "edbx-stf-et",
+    "scenario": "ai-benefits-eligibility-system",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 32,
+    "raw_total": 21,
+    "delta": 1.571,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 3,
+        "raw": 2
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A runs each toolkit stage as published, covers both options in depth, and discloses assumptions in a ledger; B is shorter but substitutes its own scoring scheme and presents invented statistics unmarked."
+  },
+  {
+    "skill": "edbx-stf-et",
+    "scenario": "clinical-ai-triage-tool",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 31,
+    "raw_total": 23,
+    "delta": 1.143,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 5
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 2
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 2,
+        "raw": 4
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A applies the Weighing Options structure fully, with specific, actionable content; its fabricated context is a real honesty flaw but B's gaps in method fidelity, coverage and actionability outweigh B's honesty advantage."
+  },
+  {
+    "skill": "edbx-stf-et",
+    "scenario": "social-media-mental-health-feature",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 21,
+    "delta": 1.714,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 1
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the Frame and Gauge faithfully with honest evidence handling; A fabricates survey statistics and misapplies the Gauge."
+  },
+  {
+    "skill": "edbx-value-dams-and-flows",
+    "scenario": "open-source-monetization",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 32,
+    "raw_total": 20,
+    "delta": 1.714,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 3
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the method's actual steps with clear classifications, safeguards and honest assumptions; A is a generic option comparison that departs from the method."
+  },
+  {
+    "skill": "edbx-value-dams-and-flows",
+    "scenario": "patient-records-portal",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 29,
+    "raw_total": 23,
+    "delta": 0.857,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 4,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B follows the Value Dams and Flows method more faithfully (strength, intensity, power to unblock, negotiation, balance statement), gives an actionable agenda, and labels assumptions in a ledger; A is a generic value-conflict analysis."
+  },
+  {
+    "skill": "edbx-value-dams-and-flows",
+    "scenario": "social-media-child-safety",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 30,
+    "raw_total": 21,
+    "delta": 1.286,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A applies the method's dam/flow typology, strength and unblocking power at feature level and flags assumptions; B stays at stakeholder-pair generalities."
+  },
+  {
+    "skill": "edbx-values-levers",
+    "scenario": "accessibility-advocacy",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 32,
+    "raw_total": 20,
+    "delta": 1.714,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 1
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the real Values Levers method within the designer's actual authority and keeps to what is known; A invents statistics and omits the method."
+  },
+  {
+    "skill": "edbx-values-levers",
+    "scenario": "design-ethics-onboarding",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 28,
+    "raw_total": 19,
+    "delta": 1.286,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 4,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 3,
+        "raw": 1
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A uses the method's actual levers with a resistance map and a staged 30-day plan fitted to a new manager without authority; B swaps in its own lever categories and fabricates adoption by named companies and a results figure."
+  },
+  {
+    "skill": "edbx-values-levers",
+    "scenario": "privacy-culture-shift",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 34,
+    "raw_total": 18,
+    "delta": 2.286,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 2
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 1
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the actual lever set with owners, a facilitation plan and a ledger; A substitutes levers and fabricates user quotes."
+  },
+  {
+    "skill": "edbx-worrystorming",
+    "scenario": "ai-therapy-bot",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 22,
+    "delta": 1.571,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 5,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 2
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 4
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B carries worries through clustering to objectives, constraints and test questions and has an evidence ledger, while A stops at a generic risk list."
+  },
+  {
+    "skill": "edbx-worrystorming",
+    "scenario": "neighborhood-safety-app",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 31,
+    "raw_total": 22,
+    "delta": 1.286,
+    "dims": {
+      "structure_format": {
+        "skill": 4,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 5,
+        "raw": 2
+      },
+      "methodology_fidelity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 2
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A is more complete, actionable and honest, with an evidence ledger and mitigations; B invents session details and stops at worries."
+  },
+  {
+    "skill": "edbx-worrystorming",
+    "scenario": "school-facial-recognition",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "raw",
+    "skill_total": 25,
+    "raw_total": 29,
+    "delta": -0.571,
+    "dims": {
+      "structure_format": {
+        "skill": 2,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 5
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "coverage_completeness": {
+        "skill": 3,
+        "raw": 5
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 5
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "raw",
+    "label_swap": false,
+    "winner_reason": "B is cleaner and more complete and specific; A's leaked scratch work and broken cross-references outweigh its closer method steps."
+  }
+]
