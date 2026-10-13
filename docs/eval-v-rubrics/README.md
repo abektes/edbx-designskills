@@ -44,3 +44,15 @@ subagents with the seven-dimension rubric and the label-swap quote check.
   broken cross-references (generation slip).
 
 Data: `judging/` (Sonnet verdicts and tally).
+
+## Re-test: ethicography with a record check (f2e6dc0)
+
+Step 0 now classifies the brief as Record or Outcome only; with outcome only
+the skill codes just the stated moves and lists the rest as Hypotheses to
+Check. Three outputs regenerated ($0.05), judged blind
+(`judging-ethicography-record/`).
+
+- Skill preferred **3/3**, 0 label swaps. evidence_honesty 4, 5, 5 (baseline
+  3, 1, 2); the two scenarios stuck at 2 for two rounds are fixed. Coverage
+  dipped once (accessibility-debt 3 vs 4), the expected cost of not
+  inventing a history. Structural 48/48.

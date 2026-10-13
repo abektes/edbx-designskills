@@ -1,0 +1,137 @@
+[
+  {
+    "skill": "edbx-ethicography",
+    "scenario": "accessibility-debt",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 28,
+    "raw_total": 25,
+    "delta": 0.429,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 3,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 3,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 4
+      },
+      "evidence_honesty": {
+        "skill": 4,
+        "raw": 3
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A applies the ethicograph method as published and keeps supplied facts separate from assumptions, while B is a longer generic narrative that skips the method's core components and fills the record with unmarked inferences."
+  },
+  {
+    "skill": "edbx-ethicography",
+    "scenario": "social-media-growth-hacks",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "A",
+    "winner_arm": "skill",
+    "skill_total": 33,
+    "raw_total": 19,
+    "delta": 2.0,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 4
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 3
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 3
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 5,
+        "raw": 3
+      },
+      "ethical_nuance": {
+        "skill": 5,
+        "raw": 3
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 1
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "A applies the method faithfully and stays honest about an incomplete record; B invents many specifics about the company and skips the method's structure."
+  },
+  {
+    "skill": "edbx-ethicography",
+    "scenario": "wellness-score-postmortem",
+    "rep": 0,
+    "judge": "sonnet",
+    "served_model": "claude-sonnet (subagent)",
+    "skill_is": "B",
+    "winner_arm": "skill",
+    "skill_total": 31,
+    "raw_total": 24,
+    "delta": 1.0,
+    "dims": {
+      "structure_format": {
+        "skill": 5,
+        "raw": 3
+      },
+      "depth_specificity": {
+        "skill": 4,
+        "raw": 4
+      },
+      "actionability": {
+        "skill": 4,
+        "raw": 4
+      },
+      "methodology_fidelity": {
+        "skill": 5,
+        "raw": 2
+      },
+      "coverage_completeness": {
+        "skill": 4,
+        "raw": 4
+      },
+      "ethical_nuance": {
+        "skill": 4,
+        "raw": 5
+      },
+      "evidence_honesty": {
+        "skill": 5,
+        "raw": 2
+      }
+    },
+    "quote_found_in": "skill",
+    "label_swap": false,
+    "winner_reason": "B applies the ethicograph method as published and stays honest about what the brief records, while A is longer, repetitive and states unsupported facts about the company's process as given."
+  }
+]
