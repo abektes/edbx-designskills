@@ -1,6 +1,6 @@
 {
   "skill": "edbx-pledge-works",
-  "_note": "Structural layer first: pledge-works already produces its three registers in every sampled run, so semantic judges are built only where the code checks leave gaps. Two bars are deliberately not machine-checked: 'accepts outputs from any other skill in the set as pledge anchors' (no scenario in evals.json supplies another skill's output; food-delivery-pledges only describes audit findings in prose, so a check would test one scenario's wording, not the claim) and 'works at individual, team, and org-wide scope' (no scenario asks for a stated scope, and the three scenarios do not map to the three scopes). Add a scenario per scope or per upstream skill, then add the checks. Early-warning, consequence and cadence counts read the labelled lines the skill's Stage 3 template produces. The stress-test bar is checked by presence in code and, for the per-pledge claim, by a document-level semantic check because outputs legitimately stress-test pledges in groups ('P1/P4 at risk').",
+  "_note": "Structural layer first: pledge-works already produces its three registers in every sampled run, so semantic judges are built only where the code checks leave gaps. Two bars are deliberately not machine-checked: 'accepts outputs from any other skill in the set as pledge anchors' (no scenario in evals.json supplies another skill's output; food-delivery-pledges only describes audit findings in prose, so a check would test one scenario's wording, not the claim) and 'works at individual, team, and org-wide scope' (no scenario asks for a stated scope, and the three scenarios do not map to the three scopes). Add a scenario per scope or per upstream skill, then add the checks. Early-warning, consequence and cadence counts read the labelled lines the skill's Stage 3 template produces. The stress-test bar is checked by presence in code and, for the per-pledge claim, by a document-level semantic check because outputs legitimately stress-test pledges in groups ('P1/P4 at risk'). Early warnings are counted one per pledge in the Early Warning section, as a table row, a list item or an inline 'Early warning:' line, whatever the indicator column is called.",
   "enumerators": {
     "ledger_type_cells": {
       "type": "table_cells",
@@ -74,8 +74,23 @@
       ]
     },
     "early_warnings": {
-      "type": "phrase_matches",
-      "pattern": "early[- ]warning(?: indicator)?\\**:\\**[^\\n]{15,}|early[- ]warning\\s*[\u2014\u2013-]\\s*[^\\n]{15,}"
+      "type": "union",
+      "of": [
+        {
+          "type": "phrase_matches",
+          "pattern": "early[- ]warning(?: indicator)?\\**:\\**[^\\n]{15,}|early[- ]warning\\s*[—–-]\\s*[^\\n]{15,}"
+        },
+        {
+          "type": "table_cells",
+          "in_section": "Early Warning",
+          "column": "Pledge",
+          "strict": true
+        },
+        {
+          "type": "list_items",
+          "in_section": "Early Warning"
+        }
+      ]
     },
     "consequence_lines": {
       "type": "phrase_matches",

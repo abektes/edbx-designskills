@@ -95,9 +95,18 @@
       "pattern": "^(?!\\s*(?:Severity|Constituent|Worries|Worry|Ethical|Design|Test|Mitigation|At-risk|Flag|Consult|Original|Who)\\b)"
     },
     "mitigation_items": {
-      "type": "phrase_matches",
-      "in_section": "Refined Ideas|Mitigation|Step 5",
-      "pattern": "(?:Design )?(?:Mitigations?|Alternatives?|Refined Ideas?)\\**\\s*:\\**\\s*[^\\n|]+"
+      "type": "union",
+      "of": [
+        {
+          "type": "phrase_matches",
+          "in_section": "Refined Ideas|Mitigation|Step 5",
+          "pattern": "(?:Design )?(?:Mitigations?|Alternatives?|Refined Ideas?)\\**\\s*:\\**\\s*[^\\n|]+"
+        },
+        {
+          "type": "list_items",
+          "in_section": "Mitigation"
+        }
+      ]
     }
   },
   "structural": [
