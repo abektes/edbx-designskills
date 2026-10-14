@@ -72,6 +72,7 @@ The design exploits a motivation to drive behavior that primarily benefits the s
 | Fear | Real deadlines with excessive visual urgency | Manufactured urgency (countdowns that reset) |
 | Power | Public rankings with no opt-out | Pay-to-win mechanics that exploit status anxiety |
 | Incentive | Complex loyalty programs with unclear value | Hidden auto-subscription buried in "free" offers |
+| Growth | One-size-fits-all "potential" targets | Self-improvement framing that makes the user feel deficient, then sells the fix |
 
 ---
 

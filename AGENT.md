@@ -53,7 +53,7 @@ If the user's request doesn't fit any of these, ask one clarifying question. Don
 | Method | Use when |
 |---|---|
 | **Inverted Behavior Model** ([SKILL](edbx/edbx-inverted-behavior-model/SKILL.md) · [tutorial](tutorials/inverted-behavior-model.md)) | Forecasting unintended behaviors via worst-possible-design + convergence check + 5-stage cascade |
-| **Motivation Matrix** ([SKILL](edbx/edbx-motivation-matrix/SKILL.md) · [tutorial](tutorials/motivation-matrix.md)) | Mapping how the product works on five motivations (Achievement, Social Acceptance, Fear, Power, Incentive) for specific users in specific contexts |
+| **Motivation Matrix** ([SKILL](edbx/edbx-motivation-matrix/SKILL.md) · [tutorial](tutorials/motivation-matrix.md)) | Mapping how the product works on six motivations (Incentive, Achievement, Social Acceptance, Fear, Power, Growth) for specific users in specific contexts |
 | **Worrystorming** ([SKILL](edbx/edbx-worrystorming/SKILL.md) · [tutorial](tutorials/worrystorming.md)) | Structured worry session that reframes concerns as design values |
 | **Black Mirror Brainstorming** ([SKILL](edbx/edbx-black-mirror-brainstorming/SKILL.md) · [tutorial](tutorials/black-mirror-brainstorming.md)) | Writing the dystopian version to surface risks normal reviews don't name |
 | **Anti-Heroes** ([SKILL](edbx/edbx-anti-heroes/SKILL.md) · [tutorial](tutorials/anti-heroes.md)) | Names manipulative design moves with a card deck and pairs each with a Hero counter-move |

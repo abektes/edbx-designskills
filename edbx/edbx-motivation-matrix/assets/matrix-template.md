@@ -1,6 +1,6 @@
 # Motivation Matrix — Blank Template
 
-Copy this template for each Motivation Matrix session. Fill every cell using the [Motivation] + [Action] format. Append the ethical flag (🟢 🟡 🔴) at the end of each cell.
+Copy this template for each Motivation Matrix session. Fill every cell using the [Motivation] + [Action] format (the design's action on the motivation, then the user action it invites). Append the ethical flag (🟢 🟡 🔴) at the end of each cell.
 
 ---
 
@@ -20,11 +20,12 @@ Copy this template for each Motivation Matrix session. Fill every cell using the
 
 | Motivation | [User A] @ [Context A] | [User B] @ [Context B] | [User C] @ [Context C] |
 |---|---|---|---|
+| **Incentive** | [Incentive] + [Action] 🟢🟡🔴 | [Incentive] + [Action] 🟢🟡🔴 | [Incentive] + [Action] 🟢🟡🔴 |
 | **Achievement** | [Achievement] + [Action] 🟢🟡🔴 | [Achievement] + [Action] 🟢🟡🔴 | [Achievement] + [Action] 🟢🟡🔴 |
 | **Social Acceptance** | [Social Acceptance] + [Action] 🟢🟡🔴 | [Social Acceptance] + [Action] 🟢🟡🔴 | [Social Acceptance] + [Action] 🟢🟡🔴 |
 | **Fear** | [Fear] + [Action] 🟢🟡🔴 | [Fear] + [Action] 🟢🟡🔴 | [Fear] + [Action] 🟢🟡🔴 |
 | **Power** | [Power] + [Action] 🟢🟡🔴 | [Power] + [Action] 🟢🟡🔴 | [Power] + [Action] 🟢🟡🔴 |
-| **Incentive** | [Incentive] + [Action] 🟢🟡🔴 | [Incentive] + [Action] 🟢🟡🔴 | [Incentive] + [Action] 🟢🟡🔴 |
+| **Growth** | [Growth] + [Action] 🟢🟡🔴 | [Growth] + [Action] 🟢🟡🔴 | [Growth] + [Action] 🟢🟡🔴 |
 
 ---
 

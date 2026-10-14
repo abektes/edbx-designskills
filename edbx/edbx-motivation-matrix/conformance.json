@@ -1,6 +1,6 @@
 {
   "skill": "edbx-motivation-matrix",
-  "_note": "Machine-checkable form of the Deliverable Quality Bar. The matrix is a markdown table whose context columns change per run, so the 5 x N cells are enumerated from the cell text itself (each cell opens with the 'Motivation +' phrase the skill mandates) and rows from the 'Motivation' column. Limits: (1) a cell left completely blank is dropped by the table parser; it is caught only indirectly, because every non-label segment of a row must carry a flag and the matrix needs at least 10 cells (5 types x the 2 contexts Step 1 requires), so a short matrix fails but one blank cell in a wide matrix could pass. (2) The 'invents none' half of the Evidence Ledger bar is checked only through the typing rules (valid Type words); whether a user-supplied row is really in the brief needs the prompt and is not machine-checked, and no sourced-needs-URL check is made because Further Reading lists two papers a sourced row may legitimately cite. (3) 'generates at least one insight the team did not expect' is a document-scope semantic check and the least reliable check here; nothing structural can decide it. (4) Ethical Risk Summary, the three-lens analysis and the Guardrails are not Quality Bar items and are not checked. (5) The Redesign Directions 1-3 range is Step 4 wording, not a bar; the bar is 'at least one', so only a minimum of 1 is checked.",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar. The matrix is a markdown table whose context columns change per run, so the 6 x N cells are enumerated from the cell text itself (each cell opens with the 'Motivation +' phrase the skill mandates) and rows from the 'Motivation' column. Limits: (1) a cell left completely blank is dropped by the table parser; it is caught only indirectly, because every non-label segment of a row must carry a flag and the matrix needs at least 12 cells (6 types x the 2 contexts Step 1 requires), so a short matrix fails but one blank cell in a wide matrix could pass. (2) The 'invents none' half of the Evidence Ledger bar is checked only through the typing rules (valid Type words); whether a user-supplied row is really in the brief needs the prompt and is not machine-checked, and no sourced-needs-URL check is made because Further Reading lists two papers a sourced row may legitimately cite. (3) 'generates at least one insight the team did not expect' is a document-scope semantic check and the least reliable check here; nothing structural can decide it. (4) Ethical Risk Summary, the three-lens analysis and the Guardrails are not Quality Bar items and are not checked. (5) The Redesign Directions 1-3 range is Step 4 wording, not a bar; the bar is 'at least one', so only a minimum of 1 is checked.",
   "enumerators": {
     "ledger_type_cells": {
       "type": "table_cells",
@@ -24,7 +24,7 @@
     "matrix_cells": {
       "type": "phrase_matches",
       "in_section": "^(Filled )?Matrix",
-      "pattern": "(?:Achievement|Social Acceptance|Fear|Power|Incentive)\\s*\\+[^|\\n]+"
+      "pattern": "(?:Achievement|Social Acceptance|Fear|Power|Incentive|Growth)\\s*\\+[^|\\n]+"
     },
     "matrix_flags": {
       "type": "phrase_matches",
@@ -80,11 +80,11 @@
       "id": "matrix_present",
       "kind": "section_present",
       "pattern": "^(Filled )?Matrix",
-      "bar": "fills all 5 × N cells with specific, design-element-level statements",
+      "bar": "fills all 6 × N cells with specific, design-element-level statements",
       "desc": "the output has a Filled Matrix section"
     },
     {
-      "id": "matrix_has_five_motivation_rows",
+      "id": "matrix_has_six_motivation_rows",
       "kind": "distinct_coverage",
       "items": "matrix_type_cells",
       "vocabulary": [
@@ -92,43 +92,44 @@
         "Social Acceptance",
         "Fear",
         "Power",
-        "Incentive"
+        "Incentive",
+        "Growth"
       ],
-      "n": 5,
-      "bar": "fills all 5 × N cells with specific, design-element-level statements",
-      "desc": "the matrix has one row for each of the five motivation types"
+      "n": 6,
+      "bar": "fills all 6 × N cells with specific, design-element-level statements",
+      "desc": "the matrix has one row for each of the six motivation types"
     },
     {
-      "id": "matrix_at_least_ten_cells",
+      "id": "matrix_at_least_twelve_cells",
       "kind": "min_count",
       "items": "matrix_cells",
-      "n": 10,
-      "bar": "fills all 5 × N cells with specific, design-element-level statements",
-      "desc": "the matrix has at least 10 filled cells (5 motivation types x at least 2 user contexts)"
+      "n": 12,
+      "bar": "fills all 6 × N cells with specific, design-element-level statements",
+      "desc": "the matrix has at least 12 filled cells (6 motivation types x at least 2 user contexts)"
     },
     {
       "id": "matrix_every_cell_flagged",
       "kind": "cells_match",
       "items": "matrix_rows",
       "pattern": "^[^|]*(?: \\| [^|]*[🟢🟡🔴][^|]*){2,}$",
-      "bar": "fills all 5 × N cells with specific, design-element-level statements",
+      "bar": "fills all 6 × N cells with specific, design-element-level statements",
       "desc": "every matrix row has at least two context cells and every context cell carries a green, yellow or red flag"
     },
     {
       "id": "matrix_cells_use_format",
       "kind": "cells_match",
       "items": "matrix_rows",
-      "pattern": "^[^|]*(?: \\| [^|]*(?:Achievement|Social Acceptance|Fear|Power|Incentive)\\s*\\+[^|]*){2,}$",
+      "pattern": "^[^|]*(?: \\| [^|]*(?:Achievement|Social Acceptance|Fear|Power|Incentive|Growth)\\s*\\+[^|]*){2,}$",
       "bar": "uses the [Motivation] + [Action] format consistently",
       "desc": "every context cell in every row is written as '[Motivation] + [Action]'"
     },
     {
-      "id": "matrix_flags_at_least_ten",
+      "id": "matrix_flags_at_least_twelve",
       "kind": "min_count",
       "items": "matrix_flags",
-      "n": 10,
-      "bar": "fills all 5 × N cells with specific, design-element-level statements",
-      "desc": "the matrix carries at least 10 flags, one per cell"
+      "n": 12,
+      "bar": "fills all 6 × N cells with specific, design-element-level statements",
+      "desc": "the matrix carries at least 12 flags, one per cell"
     },
     {
       "id": "not_all_green",
@@ -184,7 +185,7 @@
     {
       "id": "cell_design_element",
       "each": "matrix_cells",
-      "bar": "fills all 5 × N cells with specific, design-element-level statements",
+      "bar": "fills all 6 × N cells with specific, design-element-level statements",
       "instructions": "Does the matrix cell in `items[{i}]` describe what the design does, at the level of a particular design element?",
       "criteria": {
         "true": "Describes a concrete design element and what it does to the user's motivation in that situation (for example 'a streak counter that resets to zero if the user skips a day').",

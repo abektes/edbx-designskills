@@ -1,6 +1,6 @@
 {
   "skill": "edbx-anti-heroes",
-  "_note": "Machine-checkable form of the Deliverable Quality Bar. The three evaluated modes produce different shapes (paired tables, an anti-goals table, prose), so structure is checked against the card deck rather than a fixed layout. Deck and pairs from references/cards.md.",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar. The three evaluated modes produce different shapes (paired tables, an anti-goals table, prose), so structure is checked against the card list rather than a fixed layout. Card vocabulary and pairs come from references/cards.md and the card list in SKILL.md; that list is a working list of ten pairs, not the published twelve-card deck, so the vocabulary and pair map must be changed together with it whenever the owner supplies the full card list.",
   "enumerators": {
     "ledger_type_cells": {
       "type": "table_cells",
@@ -60,6 +60,7 @@
         "Black Hat",
         "Two-Faced",
         "Puppeteer",
+        "FOMO-Dealer",
         "Adversary",
         "Ally",
         "Consistent Communicator",
@@ -71,7 +72,7 @@
         "White Hat"
       ],
       "bar": "uses 2-5 cards, each with a specific cite from the design",
-      "desc": "every card named in a table is a real card from the deck",
+      "desc": "every card named in a table is on the skill's card list",
       "allow_vacuous": true
     },
     {
@@ -86,12 +87,13 @@
         "Black Hat",
         "Two-Faced",
         "Puppeteer",
+        "FOMO-Dealer",
         "Adversary"
       ],
       "min": 2,
       "max": 5,
       "bar": "uses 2-5 cards, each with a specific cite from the design",
-      "desc": "2 to 5 distinct Anti-Hero cards from the deck are used"
+      "desc": "2 to 5 distinct Anti-Hero cards from the card list are used"
     },
     {
       "id": "hero_pairing",
@@ -123,6 +125,9 @@
         "Puppeteer": [
           "Liberator",
           "Empowerer"
+        ],
+        "FOMO-Dealer": [
+          "Life Coach"
         ],
         "Adversary": [
           "Ally"

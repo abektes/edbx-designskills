@@ -1,6 +1,6 @@
 # Anti-Heroes
 
-**The short version:** A card deck that names the manipulative moves a design can make — the Trap-Setter, the Camouflager, the Empathy Manipulator — and pairs each one with the Hero move that undoes it.
+**The short version:** A card deck that names the manipulative moves a design can make — the Trap-Setter, the Empathy Manipulator, the FOMO-Dealer — and pairs each one with the Hero move that undoes it.
 
 ---
 
@@ -8,7 +8,7 @@
 
 Anti-Heroes was developed by Shikha Mehta, Shruthi Sai Chivukula, Colin M. Gray, and Ritika Gairola. The work was published as a preprint in 2024 (arXiv:2405.03674) and formally as a full paper in the Proceedings of the 2025 ACM Designing Interactive Systems Conference (DIS 2025). It comes out of ongoing academic work on ethical design methods and designer intentions.
 
-The name is about roles, not people. An Anti-Hero card describes the role a *design* plays when it works against its user — it does not call the designer a bad person. Every Anti-Hero has a Hero: the ethical role that counters it.
+The name is about roles, not people. An Anti-Hero card describes the role a *design* plays when it works against its user — it does not call the designer a bad person. Every Anti-Hero has a Hero: the ethical role that counters it, printed on the other side of the same card.
 
 ---
 
@@ -32,7 +32,9 @@ Anti-Heroes gives the team that vocabulary. "This is a Trap-Setter — once you'
 
 ## What it produces
 
-**The deck — nine Anti-Hero ↔ Hero pairs:**
+**The deck:** the published deck has twelve double-sided role cards (Anti-Hero on one face, Hero on the other) and three action cards: Evaluation, Reverse Brainstorming and Ethical Dialogue. The paper names only five of the twelve Anti-Heroes (Trap-Setter, Nickling-and-Diming, Empathy Manipulator, FOMO-Dealer, Puppeteer) and none of the Heroes. The table below is the working list of ten pairs this skill uses; names other than those five are not confirmed against the published deck, so if you hold the real cards, use theirs.
+
+**Working list — ten Anti-Hero ↔ Hero pairs:**
 
 | Anti-Hero | What the design does | Hero | The counter-move |
 |---|---|---|---|
@@ -44,9 +46,10 @@ Anti-Heroes gives the team that vocabulary. "This is a Trap-Setter — once you'
 | Black Hat | Uses techniques known to deceive — fake timers, disguised ads | White Hat | Persuades only toward the user's own goals, openly |
 | Two-Faced | Promises one thing in marketing, does another in defaults | Consistent Communicator | Keeps message, defaults and behavior aligned |
 | Puppeteer | Steers through hidden defaults or opaque algorithms | Liberator | Makes the steering visible and overridable |
+| FOMO-Dealer | Pushes the user to focus on what they would miss out on | Life Coach (provisional) | Says plainly what the user gets and does not get, without pressure |
 | Adversary | Adds friction exactly where the user's interest diverges from the company's | Ally | Adds friction only where it protects the user |
 
-**Four ways to use it**, all sharing the same cards:
+**Four ways to use it**, all sharing the same cards. The first, second and fourth are the deck's three action cards; Conceptualization is added by this skill and is not part of the published method:
 
 1. **Evaluation** — critique an existing design: tag each suspicious element with an Anti-Hero card, cite the exact screen or copy line, and name the Hero move that flips it
 2. **Reverse brainstorming** — design the worst possible version on purpose with 2–4 cards, then turn each worst move into a Hero move and a guardrail
@@ -61,7 +64,7 @@ Every run also marks **necessary friction** — fraud checks, legal warnings, co
 
 Every Anti-Hero comes with its fix. The method doesn't stop at "this is manipulative"; the paired Hero card says what the non-manipulative version does. That pairing is what turns critique into a design change.
 
-The shared deck matters too. A card name only works as a team vocabulary if everyone means the same card — which is why the method uses the deck's names, not new ones invented on the spot.
+The shared vocabulary matters too. A card name only works as a team vocabulary if everyone means the same card — which is why the method uses fixed card names, not new ones invented on the spot.
 
 ---
 

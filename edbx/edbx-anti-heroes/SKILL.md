@@ -13,7 +13,7 @@ Designers continuously balance user, shareholder, and business values, and the d
 
 Use this skill to put designs through a Hero / Anti-Hero check, generate worst-possible solutions on purpose, develop ethical concept alternatives, or facilitate a team conversation that names manipulative moves out loud instead of letting them slide.
 
-For the full card deck (Anti-Hero / Hero pairs and what each one does), read [references/cards.md](references/cards.md). Read it whenever the user asks for a critique, a reverse brainstorm, or wants the deck explained — most use cases need at least a few specific cards named, not just "this looks dark-pattern-y."
+The published deck has twelve double-sided role cards (an Anti-Hero on one face, its Hero on the other) and three action cards (Evaluation, Reverse Brainstorming, Ethical Dialogue). The paper names only five of the twelve Anti-Heroes and none of the Heroes, so this skill works from a working card list of ten pairs; [references/cards.md](references/cards.md) says which names the paper confirms and which it does not. Read that file whenever the user asks for a critique, a reverse brainstorm, or wants the deck explained — most use cases need at least a few specific cards named, not just "this looks dark-pattern-y."
 
 ## Use This Skill When
 
@@ -39,7 +39,7 @@ If the user has not said which mode they want, infer it from how they describe t
 
 ## The Four Modes
 
-Anti-Heroes is one method with four working modes. They share the same card vocabulary but produce different outputs.
+The published deck has three action cards, which are three play modes: Evaluation, Reverse Brainstorming and Ethical Dialogue. This skill adds a fourth, Conceptualization. All four share the same card vocabulary but produce different outputs.
 
 ### Mode 1: Evaluation
 
@@ -62,6 +62,8 @@ Deliberately design the worst possible version to surface anti-goals before they
 5. Hand back: anti-goals named, Hero flips, and watch-outs for a future review.
 
 ### Mode 3: Conceptualization
+
+> **edbx adaptation:** Conceptualization as a separate mode is not part of the published method; the paper's action cards are Evaluation, Reverse Brainstorming and Ethical Dialogue, and it names ideation and conceptualization only as a setting the deck is played in. This mode is here because designers shaping a new concept need the Hero cards as prompts, not only as fixes.
 
 Use Hero / Anti-Hero pairs as generative prompts when shaping a new concept.
 
@@ -87,7 +89,7 @@ Regardless of mode, follow this overall arc:
 
 1. **Detect the mode.** If the user has not stated it, infer and confirm in one sentence.
 2. **Anchor in user evidence.** Restate the user's task, their emotional state, and the business pressure pushing on the design. Without this, card naming becomes labelling theatre.
-3. **Pick the cards.** Select cards that match the actual moves in the design. Two to five cards is usually enough — naming every card dilutes the critique. Use only cards from the deck — never invent a card name, because the shared deck vocabulary is what lets a team use these words together. The deck, Anti-Hero ↔ Hero:
+3. **Pick the cards.** Select cards that match the actual moves in the design. Two to five cards is usually enough — naming every card dilutes the critique. Use only cards from the working list below — never invent a card name, because a shared vocabulary is what lets a team use these words together. The list is not the complete published deck (the paper names only five of its twelve Anti-Heroes and none of its Heroes; see [references/cards.md](references/cards.md)), so if the team holds the published deck, use the names printed on its cards. The working list, Anti-Hero ↔ Hero:
    - Trap-Setter ↔ Empowerer
    - Camouflager ↔ Unveiler
    - Empathy Manipulator ↔ Life Coach
@@ -97,8 +99,9 @@ Regardless of mode, follow this overall arc:
    - Two-Faced ↔ Consistent Communicator
    - Puppeteer ↔ Liberator (or Empowerer)
    - Adversary ↔ Ally
+   - FOMO-Dealer ↔ Life Coach (provisional: the paper names this Anti-Hero but not its Hero)
 
-   Full card descriptions are in [references/cards.md](references/cards.md).
+   The alternates in parentheses are suggestions for fit, not extra cards. Full card descriptions are in [references/cards.md](references/cards.md).
 4. **Cite the move.** For each card, point to the specific element, copy line, default, or step that triggers the tag. The cite is what makes the critique survive disagreement.
 5. **Pair with Hero counterparts.** Every Anti-Hero tag should have at least one concrete Hero move that addresses it.
 6. **Mark unavoidable friction.** Some Anti-Hero-shaped patterns are required (legal warnings, fraud checks, age gates). Call these out so the team does not strip them by accident.
@@ -160,7 +163,7 @@ Use or adapt prompts like these:
 - Avoid card spam. If every element gets tagged, none of the tags carry weight. Two to five cards per critique is usually right; pick the ones that matter most.
 - Pair every Anti-Hero with a concrete Hero move. A critique with no flip is rant fuel, not design feedback.
 - Hold space for genuine value tension. Some designs deprioritize user values for defensible reasons (cost, scale, regulation). Surface the trade-off honestly instead of pretending Hero moves are always free.
-- Stay grounded in the source. The full deck and intended use are documented in Mehta, Chivukula, Gray, et al. (2024), arXiv:2405.03674. When in doubt, defer to the cards in [references/cards.md](references/cards.md) rather than inventing new ones.
+- Stay grounded in the source. The deck and its intended use are described in Mehta, Chivukula, Gray, et al. (2024), arXiv:2405.03674; the full card definitions are in that paper's supplemental material, which this skill does not reproduce. When in doubt, defer to the working list in [references/cards.md](references/cards.md) rather than inventing new cards.
 - Do not name other skills or boxes in the deliverable as if the reader has them. Describe a related method in plain terms (a structured worry session, a stakeholder harm map).
 - Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
 

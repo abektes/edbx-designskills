@@ -1,6 +1,6 @@
 # Motivation Types — Reference Definitions
 
-Use these definitions when filling matrix cells. Each type describes a core human drive that design can support, nudge, or exploit.
+Use these definitions when filling matrix cells. The six types (incentive, achievement, social acceptance, fear, power, growth) follow the Design Ethically page; the lists of design examples and the supports/manipulative criteria below are this skill's own. Each type describes a core human drive that design can support, nudge, or exploit.
 
 ---
 
@@ -95,7 +95,7 @@ Use these definitions when filling matrix cells. Each type describes a core huma
 
 ## 4. Power
 
-**Core drive:** The desire for control, influence, dominance, and the ability to affect outcomes.
+**Core drive:** The need to be autonomous, or to gain and keep control over others and the ability to affect outcomes.
 
 **What it looks like in design:**
 - Leaderboards and competitive rankings
@@ -125,7 +125,7 @@ Use these definitions when filling matrix cells. Each type describes a core huma
 
 ## 5. Incentive
 
-**Core drive:** The desire for extrinsic reward — tangible gain that comes from outside the activity itself.
+**Core drive:** The desire for reward, monetary or not — gain that comes from outside the activity itself.
 
 **What it looks like in design:**
 - Discounts, coupons, and promotional pricing
@@ -150,3 +150,32 @@ Use these definitions when filling matrix cells. Each type describes a core huma
 - 🟢 A grocery app that offers genuine discounts with clear terms and no data requirement beyond what is needed for the transaction.
 - 🟡 A ride-sharing app that offers "bonus" rides to drivers only if they accept a minimum number of rides during peak hours, pushing them to work when they would rather rest.
 - 🔴 A financial app that gives new users a cash bonus for signing up and linking their bank account, but buries the auto-subscription to a paid tier in the terms.
+
+---
+
+## 6. Growth
+
+**Core drive:** The intrinsic wish to become a better version of oneself.
+
+**What it looks like in design:**
+- Personal-best tracking measured against the user's own past
+- Reflection prompts and journaling features
+- Learning paths the user can reorder or skip
+- Self-set goals and self-chosen difficulty
+- Feedback that explains how to improve, not only how the user ranks
+
+**When it supports users:**
+- The user defines what "better" means and can change it.
+- Feedback helps the user see their own progress, not their standing against others.
+- Stopping, pausing or changing direction carries no penalty.
+
+**When it becomes manipulative:**
+- The product defines the "better self" for the user (body, productivity, status) and makes the gap feel like a personal failing.
+- Self-improvement language is used to sell the product as the only route to that improvement.
+- Growth is turned into comparison: the user's own progress is displayed against peers, so intrinsic motivation becomes social pressure.
+- Personal data about the user's weaknesses is used to time upsells.
+
+**Examples:**
+- 🟢 A writing app that shows a user's own word-count history and lets them set, change or hide their goals.
+- 🟡 A meditation app whose "you're falling behind your potential" messages assume everyone wants the same trajectory.
+- 🔴 A wellness app that scores users' "life balance," implies they are failing, and offers a paid plan as the fix.

@@ -25,7 +25,7 @@
 | Tutorial | What it does in one sentence |
 |---|---|
 | [Inverted Behavior Model](inverted-behavior-model.md) | Predicts what users will actually *do* with a feature — including things you didn't intend |
-| [Motivation Matrix](motivation-matrix.md) | Maps which of five motivations — achievement, social acceptance, fear, power, incentive — your product pulls on, for which users, and whether ethically |
+| [Motivation Matrix](motivation-matrix.md) | Maps which of six motivations — incentive, achievement, social acceptance, fear, power, growth — your product pulls on, for which users, and whether ethically |
 | [Worrystorming](worrystorming.md) | A structured worry session to surface ethical risks before they become real harms |
 | [Black Mirror Brainstorming](black-mirror-brainstorming.md) | Writes the dystopian version of your product to find risks you'd never name in a normal meeting |
 | [Anti-Heroes](anti-heroes.md) | Names manipulative design moves with a card deck and pairs each with a Hero counter-move |

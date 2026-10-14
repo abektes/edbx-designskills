@@ -71,11 +71,11 @@ only).
 
 **Contradicted by the source text** (read on the page; the page says otherwise or is silent where SKILL.md asserts):
 
-1. **Wrong creator.** SKILL.md (Further Reading), `THIRD_PARTY_NOTICES.md` and `tutorials/motivation-matrix.md` credit "Annabelle Zhu", adapted by "Cordelia Nodders". The Design Ethically page is by Kat Zhou, and the survey (p. 32) credits "Kat Zhou" with the method. Replace the credit.
-2. **Five types instead of six.** SKILL.md has five motivation types and says "five core user motivations". The page has six; **growth** is missing. The 5-row grid, the template, reference files and tutorial repeat the five.
-3. **Cell template.** The "[Motivation] + [Action]" statement, in which the Action is what the design does to the user, and the formula "MOTIVATION TYPE x USE @ CONTEXT" are not on the page. The page's cells hold insight notes and notes on the actions the user could take.
-4. **Ethical-analysis machinery.** The audit and manipulation framing, the three lenses, the three flags and their criteria, the Ethical Risk Summary, Redesign Directions and Missing Contexts are not on the page. The worksheet image was not read, so a step shown only there cannot be ruled out.
-5. **Omitted source guidance.** The page recommends running the exercise after empathy mapping with sponsor users and describes pink (insight) and yellow (action) notes; SKILL.md omits both.
+1. **Wrong creator.** SKILL.md (Further Reading), `THIRD_PARTY_NOTICES.md` and `tutorials/motivation-matrix.md` credit "Annabelle Zhu", adapted by "Cordelia Nodders". The Design Ethically page is by Kat Zhou, and the survey (p. 32) credits "Kat Zhou" with the method. Replace the credit. (fixed in SKILL.md)
+2. **Five types instead of six.** SKILL.md has five motivation types and says "five core user motivations". The page has six; **growth** is missing. The 5-row grid, the template, reference files and tutorial repeat the five. (fixed in SKILL.md)
+3. **Cell template.** The "[Motivation] + [Action]" statement, in which the Action is what the design does to the user, and the formula "MOTIVATION TYPE x USE @ CONTEXT" are not on the page. The page's cells hold insight notes and notes on the actions the user could take. (fixed in SKILL.md)
+4. **Ethical-analysis machinery.** The audit and manipulation framing, the three lenses, the three flags and their criteria, the Ethical Risk Summary, Redesign Directions and Missing Contexts are not on the page. The worksheet image was not read, so a step shown only there cannot be ruled out. (fixed in SKILL.md)
+5. **Omitted source guidance.** The page recommends running the exercise after empathy mapping with sponsor users and describes pink (insight) and yellow (action) notes; SKILL.md omits both. (fixed in SKILL.md)
 
 **Not verifiable** (no readable source):
 

@@ -74,11 +74,11 @@ deck has twelve pairs.
 
 ### Contradicted by the source text (read on the page)
 
-1. **Deck size.** SKILL.md and `cards.md` list 9 Anti-Hero / Hero pairs; the paper (pp. 1 and 3) says 12 Anti-Hero and 12 Hero faces plus 3 action cards. Yet SKILL.md says "Use only cards from the deck".
-2. **FOMO-Dealer omitted.** The paper (p. 3) names FOMO-Dealer under user empathy; SKILL.md omits it.
-3. **Spelling.** The paper (p. 3) and `gray2020asshole` spell "Nickling-and-Diming"; SKILL.md has "Nickeling-and-Diming".
-4. **Fourth mode.** The paper has three action cards (Evaluation, Reverse Brainstorming, Ethical Dialogue); the abstract groups ideation and conceptualization as one play mode. SKILL.md has four modes, adding Conceptualization as a separate one. Mark it as an edbx addition.
-5. **Pairing claims.** `cards.md` says some cards (Cynic, Black Hat, Puppeteer) appear "without an explicitly named Hero pair" in the source. The paper (p. 3) says every Anti-Hero card is double-sided with a Hero counterpart. The multi-Hero pairs ("Liberator (or Life Coach)") are edbx's own.
+1. **Deck size.** SKILL.md and `cards.md` list 9 Anti-Hero / Hero pairs; the paper (pp. 1 and 3) says 12 Anti-Hero and 12 Hero faces plus 3 action cards. Yet SKILL.md says "Use only cards from the deck". (fixed in SKILL.md)
+2. **FOMO-Dealer omitted.** The paper (p. 3) names FOMO-Dealer under user empathy; SKILL.md omits it. (fixed in SKILL.md)
+3. **Spelling.** The paper (p. 3) and `gray2020asshole` spell "Nickling-and-Diming"; SKILL.md has "Nickeling-and-Diming". (fixed in SKILL.md)
+4. **Fourth mode.** The paper has three action cards (Evaluation, Reverse Brainstorming, Ethical Dialogue); the abstract groups ideation and conceptualization as one play mode. SKILL.md has four modes, adding Conceptualization as a separate one. Mark it as an edbx addition. (fixed in SKILL.md)
+5. **Pairing claims.** `cards.md` says some cards (Cynic, Black Hat, Puppeteer) appear "without an explicitly named Hero pair" in the source. The paper (p. 3) says every Anti-Hero card is double-sided with a Hero counterpart. The multi-Hero pairs ("Liberator (or Life Coach)") are edbx's own. (fixed in SKILL.md)
 6. **Black Hat, White Hat, Adversary, Ally** appear in none of the three papers read, nor in the dark-role and asshole-designer lists the paper says the cards were filtered from (p. 3).
 
 ### Not verifiable (no readable source)

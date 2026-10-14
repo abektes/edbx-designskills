@@ -1,14 +1,12 @@
 # Motivation Matrix
 
-**The short version:** A grid that maps which of five core motivations — achievement, social acceptance, fear, power, incentive — your product is activating — across different types of users and contexts — and surfaces where it's doing that ethically versus where it's crossing into manipulation.
+**The short version:** A grid that maps which of six core motivations — incentive, achievement, social acceptance, fear, power, growth — your product is activating — across different types of users and contexts — and surfaces where it's doing that ethically versus where it's crossing into manipulation.
 
 ---
 
 ## Who made it
 
-The Motivation Matrix was developed by **Annabelle Zhu** and adapted for ethical design auditing by **Cordelia Nodders**, published in *Universal Methods of Ethical Design*. It draws on established motivational psychology research — achievement theory, social comparison theory, and behavioral economics — synthesized into a design-auditable format.
-
-The matrix format was specifically designed to make motivation analysis accessible to design teams who don't have a psychology background.
+The Motivation Matrix is a method from the *Design Ethically* toolkit by **Kat Zhou** (designethically.com). The published method relates six motivation types to users in different contexts so a team can predict how a user might interact with a product; it is recommended after empathy mapping. This tutorial shows the edbx version, which adds the [Motivation] + [Action] cell format and an ethical audit (flags, risk summary, redesign directions) on top of that.
 
 ---
 
@@ -16,9 +14,9 @@ The matrix format was specifically designed to make motivation analysis accessib
 
 All products activate human motivations. That's how they get used. The question is: which motivations, for which users, in what contexts — and is that ethical?
 
-The problem is that motivation design happens constantly but is rarely examined explicitly. A designer adds a progress bar (achievement motivation), a follower count (social motivation), a countdown timer (fear of loss), a leaderboard (power/status motivation), a referral bonus (incentive motivation) — and none of these decisions are scrutinized for their ethical implications. Each seems reasonable in isolation. Together they may be creating something manipulative.
+The problem is that motivation design happens constantly but is rarely examined explicitly. A designer adds a progress bar (achievement motivation), a follower count (social motivation), a countdown timer (fear of loss), a leaderboard (power motivation), a referral bonus (incentive motivation) — and none of these decisions are scrutinized for their ethical implications. Each seems reasonable in isolation. Together they may be creating something manipulative.
 
-The Motivation Matrix makes the full picture visible. By mapping all five motivation types across multiple user contexts in a single table, it reveals patterns that would be invisible if you looked at each feature separately.
+The Motivation Matrix makes the full picture visible. By mapping all six motivation types across multiple user contexts in a single table, it reveals patterns that would be invisible if you looked at each feature separately.
 
 ---
 
@@ -34,14 +32,15 @@ The Motivation Matrix makes the full picture visible. By mapping all five motiva
 
 ## What it produces
 
-The matrix has five rows (motivation types) and multiple columns (user contexts you define). Every cell gets a **[Motivation] + [Action] statement** — a specific description of what the design is doing to that user's motivation in that situation.
+The matrix has six rows (motivation types) and multiple columns (user contexts you define). Every cell gets a **[Motivation] + [Action] statement** — a specific description of what the design is doing to that user's motivation in that situation.
 
-**The five motivation types:**
+**The six motivation types:**
+- **Incentive** — reward, monetary or not (discounts, points, cashback, referral bonuses)
 - **Achievement** — progress, mastery, completion (progress bars, badges, streaks, levels)
 - **Social Acceptance** — belonging, approval, status (likes, follower counts, social proof, FOMO)
 - **Fear** — avoiding loss, missing out, being left behind (warnings, countdowns, loss aversion framing)
 - **Power** — control, influence, dominance (leaderboards, admin roles, exclusive access)
-- **Incentive** — extrinsic reward, gain (discounts, points, cashback, referral bonuses)
+- **Growth** — wanting to become a better version of oneself (personal-best tracking, self-set goals, reflection prompts)
 
 Each cell is rated:
 - 🟢 **Ethical** — motivation aligned with user goals; user can opt out without penalty
@@ -62,7 +61,7 @@ By defining at least two or three different user contexts — "engaged user in i
 
 ## How to use it with AI
 
-Describe the product or feature and the user contexts you want to map. The AI will construct the full matrix — all five motivation types, all your defined contexts — with specific [Motivation] + [Action] statements in every cell, ethical flags, risk summary, and redesign directions. If you're not sure what contexts to use, the AI will suggest appropriate ones based on your product.
+Describe the product or feature and the user contexts you want to map. The AI will construct the full matrix — all six motivation types, all your defined contexts — with specific [Motivation] + [Action] statements in every cell, ethical flags, risk summary, and redesign directions. If you're not sure what contexts to use, the AI will suggest appropriate ones based on your product.
 
 ---
 
@@ -78,7 +77,7 @@ Describe the product or feature and the user contexts you want to map. The AI wi
 | **Fear** | 🟡 "Notification: 'Don't break your streak!' creates mild urgency" | 🟡 "Loss aversion around streak increases — missing one day feels high-stakes" | 🔴 "Streak loss framing converts rest (medically indicated) into failure" |
 | **Social Acceptance** | 🟢 "Friend activity feed shows others working out — social proof for adoption" | 🟡 "Comparison to friends with longer streaks may create inadequacy" | 🔴 "Friend activity feed during recovery makes the user feel left behind and broken" |
 
-**Key finding:** The product was designed for healthy, engaged users. For users in injury recovery — a predictable population for a fitness app — three out of five motivation types are actively harmful. The design has no mechanism to shift mode for this user group.
+**Key finding:** The product was designed for healthy, engaged users. For users in injury recovery — a predictable population for a fitness app — three of the six motivation types are actively harmful. The design has no mechanism to shift mode for this user group.
 
 **Redesign direction:** Add a "recovery mode" that pauses streak tracking, changes the friend feed to supportive content, and shifts achievement framing from consistency to healing milestones.
 

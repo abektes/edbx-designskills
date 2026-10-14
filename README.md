@@ -144,7 +144,7 @@ Read the corresponding tutorial file in [`tutorials/`](tutorials/). Each tutoria
 | [`edbx-fair-patterns`](edbx/edbx-fair-patterns/) | Dark pattern audit with jurisdiction-specific statutes and vulnerable-population matrix |
 | [`edbx-humane-design-guide`](edbx/edbx-humane-design-guide/) | Six-sensitivity audit with named mechanisms and exploitation-stack analysis |
 | [`edbx-inverted-behavior-model`](edbx/edbx-inverted-behavior-model/) | Behavior forecast with worst-possible-design, convergence check, and 5-stage cascade |
-| [`edbx-motivation-matrix`](edbx/edbx-motivation-matrix/) | Maps the five human drives a product activates and whether ethically |
+| [`edbx-motivation-matrix`](edbx/edbx-motivation-matrix/) | Maps the six human drives a product activates and whether ethically |
 | [`edbx-normative-design-scheme`](edbx/edbx-normative-design-scheme/) | Three-lens decision support with Universal Law Test and Triad Conflict Matrix |
 | [`edbx-pledge-works`](edbx/edbx-pledge-works/) | 5-part operationalized pledges with "what we refuse to build" register |
 | [`edbx-responsible-design-prism`](edbx/edbx-responsible-design-prism/) | Five-axis ethical posture rating with stakeholder map and mechanism audit |

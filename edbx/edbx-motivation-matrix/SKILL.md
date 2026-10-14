@@ -1,6 +1,6 @@
 ---
 name: edbx-motivation-matrix
-description: Use when a designer or researcher wants to audit a product for manipulative patterns, map user motivations across different contexts, generate ethical design criteria, evaluate products against motivational incentives, or identify dark patterns in behavioral design. Apply the Motivation Matrix method to analyze how different user motivations — Achievement, Social Acceptance, Fear, Power, and Incentive — interact with product or service contexts. Trigger this skill for any mention of motivation mapping, ethical auditing of a product, dark patterns analysis, designing for diverse user contexts, behavioral design ethics, or when someone asks "are we manipulating users?" Also trigger for "motivation matrix", "user motivation", "behavioral design", "manipulative patterns", or "what motivates our users".
+description: Use when a designer or researcher wants to audit a product for manipulative patterns, map user motivations across different contexts, generate ethical design criteria, evaluate products against motivational incentives, or identify dark patterns in behavioral design. Apply the Motivation Matrix method to analyze how different user motivations — Incentive, Achievement, Social Acceptance, Fear, Power, and Growth — interact with product or service contexts. Trigger this skill for any mention of motivation mapping, ethical auditing of a product, dark patterns analysis, designing for diverse user contexts, behavioral design ethics, or when someone asks "are we manipulating users?" Also trigger for "motivation matrix", "user motivation", "behavioral design", "manipulative patterns", or "what motivates our users".
 version: "1.0"
 tags: [ethical-design, forecast]
 ---
@@ -9,11 +9,13 @@ tags: [ethical-design, forecast]
 
 ## Overview
 
-The Motivation Matrix, from Kat Zhou's *Design Ethically* toolkit (designethically.com), maps how a product or service leverages five core user motivations across different users and contexts. It exposes where design choices exploit, nudge, or support those motivations — and where the line between helpful and manipulative gets blurry.
+The Motivation Matrix, from Kat Zhou's *Design Ethically* toolkit (designethically.com), relates six motivation types (incentive, achievement, social acceptance, fear, power and growth) to various users of a product in different contexts, so the team can write statements that predict how a user might interact with the product in a given context. In the published method, each cell holds insights about that motivation for that user and the actions the user could take given the motivation. It is recommended after empathy mapping, so the team already understands its sponsor users.
 
-**Formula:** MOTIVATION TYPE × USE @ CONTEXT = MOTIVATION MATRIX
+> **edbx adaptation:** the formula below and the [Motivation] + [Action] cell template are not part of the published method, which has no formula and fills cells with insights and possible user actions. The template keeps the grid of types against users in contexts and puts the design's action and the user action it invites in each cell. It is here so every cell can be read as a concrete design element.
 
-Rows are motivation types. Columns are users in specific contexts. Each cell contains a [Motivation] + [Action] statement that describes what the design is doing to that user's motivation in that situation.
+**Formula (edbx):** MOTIVATION TYPE × USE @ CONTEXT = MOTIVATION MATRIX
+
+Rows are motivation types. Columns are users in specific contexts. Each cell contains a [Motivation] + [Action] statement that describes what the design is doing to that user's motivation in that situation and what the user is likely to do in response.
 
 The matrix is deliberately provocative. It surfaces uncomfortable truths about how products tap into human drives. That discomfort is the point — it creates the conditions for better design decisions.
 
@@ -38,15 +40,18 @@ Collect these before generating the matrix:
 
 If context is ambiguous, ask clarifying questions before generating the matrix. The quality of the output depends on the specificity of the inputs.
 
-## The Five Motivation Types
+## The Six Motivation Types
 
 | Type | Core drive | What it looks like in design |
 |---|---|---|
-| Achievement | Progress, mastery, completion | Progress bars, badges, streaks, levels, completion metrics |
-| Social Acceptance | Belonging, approval, status | Likes, shares, follower counts, social proof, FOMO indicators |
-| Fear | Avoiding loss, missing out, being left behind | Warnings, countdowns, loss aversion framing, threat language |
-| Power | Control, influence, dominance | Leaderboards, admin roles, exclusive access, competitive rankings |
-| Incentive | Extrinsic reward, gain | Discounts, points, cashback, referral bonuses, free trials |
+| Incentive | Reward, monetary or not | Discounts, points, cashback, referral bonuses, free trials |
+| Achievement | Competency, progress, mastery, completion | Progress bars, badges, streaks, levels, completion metrics |
+| Social Acceptance | Belonging, not being ostracized | Likes, shares, follower counts, social proof, FOMO indicators |
+| Fear | Avoiding certain outcomes or consequences | Warnings, countdowns, loss aversion framing, threat language |
+| Power | Autonomy, or control over others | Leaderboards, admin roles, exclusive access, competitive rankings |
+| Growth | Intrinsic wish to become a better version of oneself | Personal-best tracking, reflection prompts, learning paths, self-set goals |
+
+The six types and their one-line drives follow the Design Ethically page; the "what it looks like in design" column is this skill's own.
 
 Full definitions with examples are in `references/motivation-types.md`.
 
@@ -54,7 +59,7 @@ Full definitions with examples are in `references/motivation-types.md`.
 
 ### Step 1 — Intake
 
-Gather the product description, user-context combinations, and focus question. If the user provides only one context, suggest at least one more — the matrix is most useful when contrasting different situations. Consider including:
+Gather the product description, user-context combinations, and focus question. If empathy maps or sponsor-user profiles exist, use them to choose the users; the published method recommends running the matrix after empathy mapping. If the user provides only one context, suggest at least one more — the matrix is most useful when contrasting different situations. Consider including:
 
 - A primary user in an ideal context
 - A primary user in a stressed or vulnerable context
@@ -68,13 +73,15 @@ For each combination of [Motivation Type] × [User @ Context], write a cell stat
 
 **[Motivation] + [Action]**
 
-Example: *"Social Acceptance + The design displays a public activity streak that resets if the user skips a day, making rest feel like failure."*
+The Action is what the design does to that motivation, followed by the user action it invites. Example: *"Social Acceptance + The design displays a public activity streak that resets if the user skips a day, making rest feel like failure, so the user opens the app late at night to keep the streak alive."*
 
 Be specific. Name the design element. Describe the mechanism. Avoid vague statements like "uses social pressure." Instead, write what the pressure actually looks like on screen.
 
-Fill the full matrix: 5 rows × however many columns you have. Do not skip cells. Blank cells are missed opportunities for insight.
+Fill the full matrix: 6 rows × however many columns you have. Do not skip cells. Blank cells are missed opportunities for insight.
 
 ### Step 3 — Ethical Analysis
+
+> **edbx adaptation:** the audit framing (reading the grid for where design exploits, nudges or supports a motivation), the three lenses, the flags, the Ethical Risk Summary, Redesign Directions and Missing Contexts are not part of the published method, which ends at predicted user actions. They turn the predictions into an audit a team can act on.
 
 Read across the completed matrix through three lenses:
 
@@ -140,7 +147,7 @@ Framing statement: product name, contexts chosen, focus question.
 
 ### Filled Matrix
 
-Markdown table with 5 rows (motivation types) × N columns (user @ context). Each cell contains the [Motivation] + [Action] statement and its ethical flag.
+Markdown table with 6 rows (motivation types) × N columns (user @ context). Each cell contains the [Motivation] + [Action] statement and its ethical flag.
 
 ### Ethical Risk Summary
 
@@ -178,7 +185,7 @@ Every figure, rate, incident, past failure or fact about the user's product, use
 
 A strong Motivation Matrix output:
 
-- fills all 5 × N cells with specific, design-element-level statements
+- fills all 6 × N cells with specific, design-element-level statements
 - flags at least one cell as 🔴 or 🟡 — a matrix with all greens was not honest enough
 - proposes at least one concrete redesign direction
 - mentions at least one secondary or underrepresented user group

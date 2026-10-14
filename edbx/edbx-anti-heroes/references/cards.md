@@ -1,10 +1,20 @@
-# Anti-Heroes Card Deck
+# Anti-Heroes Working Card List
 
-This is the working deck used by the Anti-Heroes method. Each row pairs an **Anti-Hero** card (a manipulative designer role) with the **Hero** card that counters it (an ethical role). When you tag a design with an Anti-Hero, propose the paired Hero as the move that flips it.
+This is the working card list this skill uses. Each entry pairs an **Anti-Hero** (a manipulative designer role) with the **Hero** that counters it (an ethical role). When you tag a design with an Anti-Hero, propose the paired Hero as the move that flips it.
 
-The deck below is drawn from Mehta, Chivukula, Gray, et al. (2024), *Anti-heroes: an ethics-focused method for responsible designer intentions*, arXiv:2405.03674, and from the *Universal Methods of Ethical Design* method profile that depicts the deck in use. Some Anti-Hero cards in the source appear without an explicitly named Hero pair; in those cases the Hero column gives the counter-move that the source's framing implies.
+The published deck (Mehta, Chivukula, Gray and Gairola, 2024, *Anti-Heroes: An Ethics-focused Method for Responsible Designer Intentions*, arXiv:2405.03674) has twelve double-sided role cards, each with an Anti-Hero on one face and its Hero on the other, plus three action cards. This list has ten pairs. It is not the published deck: the paper names only five of the twelve Anti-Heroes and none of the Heroes, and the full card definitions sit in supplemental material this skill does not have. The descriptions below are this skill's own wording, not the card text.
 
-## How to read this deck
+## What the paper confirms
+
+| Status | Names |
+|---|---|
+| Named as cards in the paper | Trap-Setter, Nickling-and-Diming, Empathy Manipulator, FOMO-Dealer, Puppeteer |
+| Roles from the earlier studies the cards were filtered from; whether they are final cards is not confirmed | Camouflager, Cynic, Two-Faced |
+| Not found in any source text read | Black Hat, Adversary, and the Hero names (Empowerer, Unveiler, Life Coach, Liberator, Transparent Pricer, Consistent Communicator, White Hat, Ally) |
+
+Seven of the twelve Anti-Heroes are not named in the sources available here (the three unconfirmed roles above may be among them). Do not guess the rest; if the team holds the published deck, use its names and Hero faces in place of this list.
+
+## How to read this list
 
 - **Anti-Hero** describes the designer's role when the move is present. It does not call the human designer a bad person — it names the value-deprioritizing move embedded in the design.
 - **What it does** is the manipulative behavior the user experiences.
@@ -17,8 +27,8 @@ When critiquing, cite the specific UI element, copy line, default, or interactio
 
 ### Trap-Setter ↔ Empowerer
 
-- **Trap-Setter:** Designs a user task flow such that the user "can't get out of it," setting a trap that enables the stakeholder's goal. Hidden cancel paths, loops back to the start, dead-end "back" buttons.
-- **Empowerer:** Designs paths that enable users to make their own decisions in a task flow. Symmetric entry and exit, clear off-ramps, decisions reversible without penalty.
+- **Trap-Setter:** Builds a flow the user cannot easily leave, so the stakeholder's goal is served by the user being stuck. Hidden cancel paths, loops back to the start, dead-end "back" buttons.
+- **Empowerer:** Builds flows where the user decides their own route. Symmetric entry and exit, clear off-ramps, decisions reversible without penalty.
 
 ### Camouflager ↔ Unveiler
 
@@ -55,14 +65,19 @@ When critiquing, cite the specific UI element, copy line, default, or interactio
 - **Puppeteer:** Steers user behavior through hidden defaults, opaque algorithms, or constrained choice architectures the user cannot see or override.
 - **Liberator:** Makes the steering visible, gives the user override controls, and explains what the system is doing on their behalf.
 
+### FOMO-Dealer ↔ Life Coach (provisional)
+
+- **FOMO-Dealer:** Steers the user to focus on what they would miss out on, such as features or functionality they have not enabled, so they give more access or commitment than they otherwise would. The paper names this card and places it with Empathy Manipulator among the user-empathy concerns.
+- **Life Coach (provisional):** The paper does not name this card's Hero. This skill borrows the counter-move from Empathy Manipulator's pair: say plainly what the user gets and does not get, without pressure, and let them decide. If the team holds the published deck, use the Hero printed on the back of the FOMO-Dealer card.
+
 ### Adversary ↔ Ally
 
 - **Adversary:** Treats the user as an obstacle to a business outcome — adds friction precisely where the user's interest diverges from the company's.
 - **Ally:** Treats the user as the customer of the design and adds friction only where it protects the user (fraud checks, irreversible actions, safety pauses).
 
-## Cards without explicit pairs in the source
+## Alternate Heroes
 
-Some cards appear in the broader deck without a clearly named Hero counterpart in every printing. Use the closest Hero from above when tagging:
+In the published deck each Anti-Hero has one Hero on its reverse face. The alternates in parentheses elsewhere in this skill (Cynic with Liberator or Life Coach; Black Hat with White Hat or Unveiler; Puppeteer with Liberator or Empowerer) are this skill's suggestions for fit, not extra cards. Liberator appears against two Anti-Heroes in this list, which a one-Hero-per-card deck would not allow; treat that as a sign the list is a working approximation.
 
 - **Cynic** → pair with Liberator or Life Coach depending on whether the move is structural or emotional.
 - **Black Hat** → pair with White Hat (above) or Unveiler if the manipulation is informational.
@@ -70,7 +85,7 @@ Some cards appear in the broader deck without a clearly named Hero counterpart i
 
 ## Practical notes
 
-- The deck is generative, not exhaustive. If a move in a real design clearly fits an Anti-Hero pattern but matches none of the named cards exactly, name the closest card and add a one-line description of the variant rather than inventing a brand-new card on the fly.
+- The list is generative, not exhaustive. If a move in a real design clearly fits an Anti-Hero pattern but matches none of the named cards exactly, name the closest card and add a one-line description of the variant rather than inventing a brand-new card on the fly.
 - A single design move can match more than one Anti-Hero card. That is OK — pick the card whose Hero counterpart most directly suggests the fix.
 - Some patterns that look manipulative are actually required (legal warnings, fraud checks, irreversible-action confirms, age gates). Mark these as **necessary friction** rather than tagging them with an Anti-Hero card; otherwise the team will strip safety in the rewrite.
 
