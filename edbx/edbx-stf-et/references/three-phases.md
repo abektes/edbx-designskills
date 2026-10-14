@@ -1,6 +1,6 @@
 # Three Phases — Explore, Evaluate, Decide
 
-The Stanford Ethics Toolkit is organized into three phases. Each phase has a distinct purpose and set of tools. Choose tools based on what phase of your project you are in and what kind of ethical support you currently need.
+This skill organizes the five Stanford Ethics Toolkit tools into three phases (the phase labels are edbx's; the Stanford page shows none). Each phase has a distinct purpose and set of tools. Choose tools based on what phase of your project you are in and what kind of ethical support you currently need.
 
 ---
 

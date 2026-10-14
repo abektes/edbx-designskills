@@ -90,7 +90,7 @@ Contradicted by the source text (read on the page):
   design practice". The survey's reference [112] (p. 30) gives the method's
   origin as a Value Sensitive Design paper (Miller, Friedman, Jancke, Gill,
   2007). Both repo files should name `miller2007value`, `friedman2017survey`,
-  `friedman2019value` and, if desired, `chivukula2025universal` entry 92.
+  `friedman2019value` and, if desired, `chivukula2025universal` entry 92. (fixed in SKILL.md)
 
 Not verifiable (no readable primary text; the SKILL.md claim and the
 contrary reading both rest on a secondary summary or on nothing):
@@ -101,27 +101,27 @@ contrary reading both rest on a secondary summary or on nothing):
   even a small percentage of stakeholders strongly object to are removed: a
   minority veto, not a majority vote. The manifest survey text does not define
   a dam (row 21), so this stays unconfirmed. The same holds for the Hard /
-  Soft / Weak dam tiers (row 10).
+  Soft / Weak dam tiers (row 10). (fixed in SKILL.md)
 - N2. Flow definition. SKILL.md says "the majority of stakeholders support";
-  the summary says a substantial share find the option appealing. Unconfirmed.
+  the summary says a substantial share find the option appealing. Unconfirmed. (fixed in SKILL.md)
 - N3. Order and the Contested Flow tier. In the summary's order, dams go
   first and flows are chosen from what remains, so a flow with minority
   opposition could not exist. Nothing in any readable text supports a
   Contested Flow tier, a Conditional/Strong flow scale, or the safeguard step
-  and guardrail built on them (row 11); treat them as edbx additions.
+  and guardrail built on them (row 11); treat them as edbx additions. (fixed in SKILL.md)
 - N4. SKILL.md's "navigation, not elimination" and "Do not eliminate dams"
   versus the summary's statement that dam options are removed from the design
-  space (rows 5, 14). Unconfirmed.
+  space (rows 5, 14). Unconfirmed. (fixed in SKILL.md)
 - N5. Conflict Intensity Score, Power Asymmetry, "What Would Have to Be True",
   minimum viable ethics, negotiation framing, Values Balance Statement,
-  facilitation agenda, Dam-Flow Map layout (rows 12–15): edbx additions.
+  facilitation agenda, Dam-Flow Map layout (rows 12–15): edbx additions. (fixed in SKILL.md)
 - N6. "Dam of Disagreement", "Flow of Consensus", the hashtags, the "See Also"
   list and the overview sentences (rows 16, 18–20): attributed in spirit to
-  the compilation, whose entry text could not be read.
+  the compilation, whose entry text could not be read. (fixed in SKILL.md)
 - N7. SKILL.md says the method "follows five steps" but lists four (Steps 1–4).
-  Internal inconsistency, not a source issue.
+  Internal inconsistency, not a source issue. (fixed in SKILL.md)
 - N8. The `tutorials/value-dams-and-flows.md` claim that the metaphor "comes
-  from hydrology" has no source.
+  from hydrology" has no source. (fixed in SKILL.md)
 
 Resolved in stage B: the author list of `miller2007value` (stage-A item
 N7). The survey's reference [112] lists four authors, including Brian Gill,

@@ -30,7 +30,7 @@ CIDER audits who is excluded by design through assumption elicitation. Worrystor
 
 ## Future Method Connections
 
-These methods are referenced in the source material and may be added to the EDB skillset:
+These two methods are named as "see also" in this skill's earlier materials for the book entry (not confirmed against the book) and may be added to the EDB skillset:
 
 - **Empathic Walkthrough** — Walk through the product as a vulnerable user after Worrystorming to test whether worries were real
 - **Moral Agent** — Assign moral responsibility to the worries surfaced in the session
@@ -64,6 +64,6 @@ These methods are referenced in the source material and may be added to the EDB 
 
 ## Worrystorming as Capstone
 
-Worrystorming is Method #100 — the final method in *Universal Methods of Ethical Design*. It can function as a capstone practice that synthesizes insights from the other methods. After running individual methods, a Worrystorming session can integrate their findings into a unified concern map with prioritized ethical objectives.
+Worrystorming is Method #100 — the final method in *Universal Methods of Ethical Design*. This skill uses it as a capstone practice that synthesizes insights from the other methods (an edbx reading; the book entry was not read). After running individual methods, a Worrystorming session can integrate their findings into a unified concern map with prioritized ethical objectives.
 
-The method is explicitly consequentialist — it asks "what happens downstream, at scale, over time?" This makes it a natural complement to the deontological (principle-based) framing of methods like Another Lens and the virtue-based framing of the Humane Design Guide.
+This skill reads the method as consequentialist (an edbx reading, not confirmed against the book) — it asks "what happens downstream, at scale, over time?" This makes it a natural complement to the deontological (principle-based) framing of methods like Another Lens and the virtue-based framing of the Humane Design Guide.

@@ -11,13 +11,19 @@ tags: [ethical-design, alignment]
 
 Value Dams and Flows help you generate features that are strongly opposed and design indicated for as a way to navigate and balance values. These trade-offs require attention to balance disciplinary, human, and business values whose trade-offs are inevitable, as there are multiple outcomes of products.
 
-**Value Dams** are technical features or organizational policies that the majority of stakeholders would like to be excluded from the overall system, even if the features are not absolutely necessary for success or appropriation. Dams are blocking forces where stakeholder values conflict — the "Dam of Disagreement."
+The method comes from the Value Sensitive Design literature: Miller, Friedman, Jancke and Gill (2007), "Value tensions in design", ACM GROUP '07, which presents Dams and Flows as a method. Friedman, Hendry and Borning's 2017 survey of Value Sensitive Design methods and Friedman and Hendry's 2019 book are cited as describing it. The 2007 paper and those two texts were not read when this skill was checked, so the definitions below are this skill's working definitions, not quotations of the method.
 
-**Value Flows** are technical features or organizational policies that the majority of stakeholders support. Flows are the moving forces where values can proceed — the "Flow of Consensus."
+**Value Dams**, in this skill, are technical features or organizational policies that the majority of stakeholders would like to be excluded from the overall system, even if the features are not absolutely necessary for success or appropriation. Dams are blocking forces where stakeholder values conflict — this skill calls this the "Dam of Disagreement."
 
-The method operates at the intersection of stakeholder management and values ethics. It is explicitly a team alignment tool — the `#alignmyteam` hashtag signals its purpose. The dam/flow metaphor makes abstract value conflicts feel concrete and navigable: a dam doesn't destroy water, it redirects or holds it until the underlying concern is addressed.
+**Value Flows**, in this skill, are technical features or organizational policies that the majority of stakeholders support. Flows are the moving forces where values can proceed — this skill calls this the "Flow of Consensus."
+
+> **edbx adaptation:** the dam and flow definitions above are unconfirmed against the primary paper. The one secondary description found reads differently: options that even a small share of stakeholders strongly object to are removed from the design space, and among the options left, those a substantial share of stakeholders find appealing are emphasised. Check the 2007 paper before quoting a definition as the method's. The names "Dam of Disagreement" and "Flow of Consensus" and the overview wording are not confirmed in any readable source.
+
+This skill uses the method as a team alignment tool. The dam/flow metaphor makes abstract value conflicts feel concrete and navigable: a dam doesn't destroy water, it redirects or holds it until the underlying concern is addressed.
 
 > **Mindset check:** Dams are not villains — they are protecting legitimate values. The goal is navigation, not elimination. Even Hard Dams represent real values that deserve respect.
+
+> **edbx adaptation:** the mindset check and the navigation-not-elimination stance are this skill's own; the secondary description above speaks of removing dam options from the design space.
 
 ## Use This Skill When
 
@@ -40,7 +46,9 @@ Provide as many of these as are available:
 
 ## Workflow
 
-Value Dams and Flows follows five steps.
+Value Dams and Flows follows four steps here.
+
+> **edbx adaptation:** the dam strength ratings (Hard / Soft / Weak), the Conflict Intensity Score, Power Asymmetry, the flow strength ratings, the Dam-Flow Map layout, the redesign alternative, negotiation framing, "minimum viable ethics" floor and "What Would Have to Be True" statement, the Values Balance Statement and the facilitation agenda are not part of the published method, as far as could be checked. The sources found describe a two-step filter: dams out first, then flows among what remains. These additions are here so that a blocked decision ends in something a team can negotiate.
 
 ---
 
@@ -67,6 +75,8 @@ For each identified flow:
 - Identify which stakeholders support it and why
 - Name the underlying value being served
 - Rate flow strength: `🟢 Strong Flow` (broad consensus) / `🟡 Conditional Flow` (consensus with caveats) / `🔴 Contested Flow` (minority opposition present)
+
+> **edbx adaptation:** the Contested Flow tier (and the Strong / Conditional scale) is not part of the published method, and no readable source supports it. Where dams are applied first, a feature with strong minority opposition would already be a dam; in this skill a Contested Flow is one that most stakeholders support but some oppose less than strongly enough to make it a dam. It is here so minority concerns are named and safeguarded, not lost.
 
 ---
 

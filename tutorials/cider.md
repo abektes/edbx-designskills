@@ -6,7 +6,7 @@
 
 ## Who made it
 
-CIDER was developed by **Alannah Oleson, Meron Solomon, Christopher Perdriau, and Amy J. Ko**, published in 2022 at the ACM ICER (International Computing Education Research) conference and subsequently in ACM Transactions on Computing Education (doi:10.1145/3540065). The method emerged from research on teaching inclusive design skills in computing education.
+CIDER was developed by **Alannah Oleson, Meron Solomon, Christopher Perdriau, and Amy J. Ko**, presented in 2022 at the ACM ICER (International Computing Education Research) conference and published in full in ACM Transactions on Computer-Human Interaction (30(1), 2023, doi:10.1145/3549074). It is a technique for teaching inclusive design skills, tested in an eleven-week undergraduate course; the paper reports no test in professional practice, and this skill applies it to a real design.
 
 The name is an acronym: **Critique → Imagine → Design → Expand → Repeat**
 
@@ -41,13 +41,13 @@ CIDER works through five stages in a loop:
 
 2. **Imagine** — for each assumption, imagine a user for whom it is false. Not a hypothetical edge case, but a real person with a real context. Someone who is blind. Someone who is managing a crisis. Someone whose first language is not the language the interface is in. Someone who cannot afford a data plan.
 
-3. **Design** — generate a design variation that works for that imagined user. This is generative, not just critical — the goal is to find what the design would need to change, not just to identify that it needs to change. Inclusive changes often help far more people than the ones they were designed for: a larger tap target helps people with motor impairments and people in a hurry.
+3. **Design** — brainstorm ways to change the design so that scenario no longer happens; the paper asks for as many as you can, ten or more, whatever their feasibility. This is generative, not just critical — the goal is to find what the design would need to change, not just to identify that it needs to change. Inclusive changes often help far more people than the ones they were designed for: a larger tap target helps people with motor impairments and people in a hurry.
 
-4. **Expand** — in a team session, pool everyone's assumptions into one shared register: merge duplicates, cluster related ones, tag each by category (Ability / Capacity / Environment / Resources), and flag the ones people found surprising. Different people notice different assumptions, so the shared list is almost always longer than anyone's own. Solo designers can skip this stage.
+4. **Expand** — in a team session, pool everyone's assumptions into one shared register and merge duplicates (that much is the published method; the skill also clusters related ones, tags each by category (Ability / Capacity / Environment / Resources), and flags the ones people found surprising). Different people notice different assumptions, so the shared list is almost always longer than anyone's own. Solo designers can skip this stage.
 
-5. **Repeat** — run a second cycle on a *different* assumption. The loop continues because assumptions are layered — fixing one often reveals the next.
+5. **Repeat** — run a second cycle on an assumption you did not surface yourself (solo, a different one from your own list). The loop continues because assumptions are layered — fixing one often reveals the next.
 
-The session ends with an **Inclusive Design Commitment**: one sentence naming which assumption the team will remove, how, by when, and who owns it — specific enough that someone can check later whether it happened.
+The session ends with an **Inclusive Design Commitment** (an edbx addition, not part of the published method): one sentence naming which assumption the team will remove, how, by when, and who owns it — specific enough that someone can check later whether it happened.
 
 The output is a **map of embedded assumptions**, a set of **design variations** that address them, a **shared assumption register** for teams, and a **commitment** someone is accountable for.
 
@@ -63,7 +63,7 @@ The method makes that structural exclusion visible and addressable. It doesn't a
 
 ## How to use it with AI
 
-Describe your product or a specific design artifact — a screen, a flow, a feature, an interface pattern. Tell the AI you want to run CIDER. It will work through the five stages, naming the assumptions in your design, imagining specific excluded users, generating design alternatives, and expanding those alternatives to show their broader benefit.
+Describe your product or a specific design artifact — a screen, a flow, a feature, an interface pattern. Tell the AI you want to run CIDER. It will work through the five stages, naming the assumptions in your design, imagining specific excluded users, generating design alternatives, pooling assumptions across the team, and repeating the cycle on a second assumption.
 
 ---
 

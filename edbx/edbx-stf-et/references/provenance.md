@@ -70,11 +70,11 @@ None confirmed. The fetched text is a landing page and says little about the met
 
 ### Not verifiable (no readable source; the full toolkit is a PDF / Mural behind an access form)
 
-1. **Licence "CC BY 4.0".** Stated as fact in SKILL.md, `references/value-cards.md` and `THIRD_PARTY_NOTICES.md`. The fetched page has no licence statement; its only rights text is "(c) Stanford University." Treat as unverified until the PDF's terms are read or Stanford confirms.
-2. **Phases and tool-to-phase grouping** (rows 4). The fetched text has no phase labels or grouping, so stage A's weak finding (3 / 1 / 1, "Make Decisions") rests on image alt text and is not in the text. Stage A's "contradicted" item is withdrawn and recorded here.
-3. **"V1.1", the year 2025 and the tagline "Put Values Into Action"** (row 2): no version or year in the page text; the words occur only in prose.
+1. **Licence "CC BY 4.0".** Stated as fact in SKILL.md, `references/value-cards.md` and `THIRD_PARTY_NOTICES.md`. The fetched page has no licence statement; its only rights text is "(c) Stanford University." Treat as unverified until the PDF's terms are read or Stanford confirms. (fixed in SKILL.md)
+2. **Phases and tool-to-phase grouping** (rows 4). The fetched text has no phase labels or grouping, so stage A's weak finding (3 / 1 / 1, "Make Decisions") rests on image alt text and is not in the text. Stage A's "contradicted" item is withdrawn and recorded here. (fixed in SKILL.md)
+3. **"V1.1", the year 2025 and the tagline "Put Values Into Action"** (row 2): no version or year in the page text; the words occur only in prose. (fixed in SKILL.md)
 4. **All nine value names, card definitions and spectra** (rows 13-15). The page names only "Values Explainer Cards".
 5. **Ethics Frame's nine sections, extent dimensions, the Gauge's four dimensions and twelve spectra, Weighing Options' sub-sections** (rows 9-12): one-line descriptions only.
-6. **Future Story's six-element spine and prompts, the Adams credit, the Futures Wheel basis, In-to-Out / Out-to-In directions and the group lens** (rows 6, 8): not on the page; Adams and Glenn are not in the manifest.
-7. **Chain framing, time budgets, do / don't lists, feed-forward blocks, quality-bar counts, the "create your own value card" template** (rows 15-18, 20): not on the page; probably edbx layers presented in SKILL.md as the method's own.
-8. **Creators and funder omitted.** Not a contradiction: SKILL.md credits only the Center; the page names Manuela Travaglianti (project lead), Thomas Both (designer) and the Project Liberty Institute.
+6. **Future Story's six-element spine and prompts, the Adams credit, the Futures Wheel basis, In-to-Out / Out-to-In directions and the group lens** (rows 6, 8): not on the page; Adams and Glenn are not in the manifest. (fixed in SKILL.md)
+7. **Chain framing, time budgets, do / don't lists, feed-forward blocks, quality-bar counts, the "create your own value card" template** (rows 15-18, 20): not on the page; probably edbx layers presented in SKILL.md as the method's own. (fixed in SKILL.md)
+8. **Creators and funder omitted.** Not a contradiction: SKILL.md credits only the Center; the page names Manuela Travaglianti (project lead), Thomas Both (designer) and the Project Liberty Institute. (fixed in SKILL.md)

@@ -9,13 +9,15 @@ tags: [ethical-design, decision]
 
 ## Overview
 
-Another Lens challenges designers to constantly check and question their own values, beliefs, and objectives — and be considerate of the various needs and challenges of others. The method is built on three half-circles that together form a whole: no single lens is sufficient on its own, and incompleteness is natural, not a failure.
+Another Lens challenges designers to constantly check and question their own values, beliefs, and objectives — and be considerate of the various needs and challenges of others. The method offers three lenses that together form a whole: no single lens is sufficient on its own, and incompleteness is natural, not a failure. This skill pictures them as three half-circles that complete one another; that picture and the colours below are this skill's own cues, not confirmed from the source.
 
 The three lenses are not steps in a checklist. They are perspectives you return to repeatedly throughout a project. That said, this skill provides a structured workflow so each lens gets genuine attention rather than a glance.
 
-> **Principle #07 — Another Lens.** Created by Airbnb Design and News Deeply (2017); profiled in *Universal Methods of Ethical Design*. Hashtags: #breakmydesign #newperspectives #designresponsibility. See also: Data Feminism · Hippocratic Oath.
+> **Principle #07 — Another Lens.** Created by Airbnb Design and News Deeply (2017). This skill's earlier materials list it as Principle #07 of *Universal Methods of Ethical Design* with the hashtags #breakmydesign #newperspectives #designresponsibility and the see-also line Data Feminism · Hippocratic Oath; stated there, not confirmed against the book.
 
-The method is deeply Socratic — it asks questions and does not lecture. The value is in the questions asked, not the answers given. There is no "correct" output. What matters is that at least one assumption surfaces, at least one unheard perspective is named, and one concrete next action is produced.
+The source describes the tool as little interventions for designers in the form of questions that challenge assumptions, like Brian Eno's oblique strategies. It asks questions and does not lecture. The value is in the questions asked, not the answers given. There is no "correct" output.
+
+> **edbx adaptation:** the Socratic framing, and the rule that a session must end with at least one assumption surfaced, one unheard perspective named and one concrete next action, are not part of the published tool. They are here so a session ends in something a designer can act on.
 
 ## Use This Skill When
 
@@ -44,9 +46,13 @@ If the user provides none of these, ask for at least the design decision and the
 
 The complete question set for all three lenses, with solo and team facilitation notes, is in `references/three-lenses.md`.
 
+The published tool is one flat list of 16 questions, with no lens headings. The wording of the questions below follows that list, except that some source questions are merged into one (the two "What are my lenses?" questions; "What do I believe?" with "Who might disagree?"; "Is my audience open to change?" with "What am I challenging?").
+
+> **edbx adaptation:** the grouping into three lenses of 4 / 4 / 5 questions (13 numbered questions after merging), the lens colours, the "Output of Lens N" deliverables, the rule that the Lens 2 "nervous" question is a required output, the description of that question as the sharpest, the per-question prompt guidance, walking every question one at a time, the quick pass and the time budgets are not part of the published tool. They are here so that every question gets attention and the session produces something a designer can act on.
+
 ### Lens 1: Balance Your Bias
 
-Color: Green. Shape: Half-circle.
+Cue (this skill's own): green half-circle.
 
 This lens turns the designer's gaze inward. Before examining the product, examine yourself. What are you bringing to this design that you haven't named?
 
@@ -72,7 +78,7 @@ See `references/bias-taxonomy.md` for common designer biases to help name what s
 
 ### Lens 2: Consider the Opposite
 
-Color: Purple. Shape: Half-circle.
+Cue (this skill's own): purple half-circle.
 
 This lens flips the perspective outward. Instead of asking "what do I think?", it asks "what would someone who disagrees with me think?" — and specifically, who that person might be.
 
@@ -87,7 +93,7 @@ This lens flips the perspective outward. Instead of asking "what do I think?", i
 
 - Q1 expands the circle of consideration beyond direct users to anyone touched by the design's existence.
 - Q2 is a thought experiment in world-building. If the core assumption is wrong, what does reality look like? This is not hypothetical — it's describing the actual experience of someone the design currently fails.
-- Q3 is the most powerful question in the entire method. The nervousness is the signal. If no one makes you nervous, you haven't looked hard enough. This question is a **required output** of every Lens 2 session.
+- Q3 is the sharpest question in this skill (edbx's emphasis). The nervousness is the signal. If no one makes you nervous, you haven't looked hard enough. This skill treats the answer as a **required output** of every Lens 2 session.
 - Q4 separates belief from design decision and finds the people at the intersection.
 
 **Output of Lens 2:** At least one named affected group and one named assumption to test. Plus the person you're nervous to talk to.
@@ -98,7 +104,7 @@ See `references/opposite-perspectives.md` for populations typically absent from 
 
 ### Lens 3: Embrace a Growth Mindset
 
-Color: Orange. Shape: Half-circle.
+Cue (this skill's own): orange half-circle.
 
 This lens looks forward. It takes whatever discomfort surfaced in Lenses 1 and 2 and treats it as material for growth, not evidence of failure. This is the lens that ends the session with forward energy.
 
@@ -133,7 +139,7 @@ Collect from the user:
 - Which lens to focus on (or all three)
 - Any context that shapes the reflection
 
-If the user wants a quick pass, offer Lens 2 alone — it contains the method's sharpest question. If they want depth, run all three in sequence.
+If the user wants a quick pass, offer Lens 2 alone — it contains this skill's sharpest question. If they want depth, run all three in sequence.
 
 If the user names specific concerns or dimensions to examine ("digital literacy, trust, sensory limits, isolation"), every one of them must get its own treatment by name somewhere in the lenses; the synthesis says where each was covered.
 
@@ -169,6 +175,8 @@ The reframe in Q4 should connect directly to whatever was discovered in Lenses 1
 
 ### Step 5 — Synthesis + Design Decision Spec
 
+> **edbx adaptation:** the synthesis, the lens statement and the Design Decision Spec are not part of the published tool, which ends with the questions. They are here because lens insight that does not become a specific change is just a feeling.
+
 Summarize the session with three elements:
 
 1. **Key bias or blind spot surfaced** — the most important thing that shifted during reflection
@@ -191,7 +199,7 @@ Each row must include all six columns. Vague entries are rejected.
 
 | Insight | Specific design change | Measurable spec (with numbers) | Owner (role) | When | Pass/fail criterion |
 |---|---|---|---|---|---|
-| e.g., "Caregiver mode missing for users supporting an elderly parent on the same plan" | Add caregiver permission scope: read-only access to selected accounts with audit log | Touch-target ≥ 44×44 pt (WCAG 2.2 SC 2.5.5); contrast ratio ≥ 7:1 on permission-toggle copy (WCAG 2.2 SC 1.4.6); zero PII shared with caregiver outside named scopes | Mobile platform lead | Next sprint | Caregiver can complete onboarding in ≤ 5 mins; primary user can revoke access in ≤ 2 taps; QA validates zero data leakage |
+| e.g., "Caregiver mode missing for users supporting an elderly parent on the same plan" | Add caregiver permission scope: read-only access to selected accounts with audit log | Touch-target ≥ 44×44 CSS px (WCAG 2.2 SC 2.5.5, Level AAA, so a target above the AA minimum); contrast ratio ≥ 7:1 on permission-toggle copy (WCAG 2.2 SC 1.4.6, Level AAA; the AA level is 4.5:1, SC 1.4.3); zero PII shared with caregiver outside named scopes | Mobile platform lead | Next sprint | Caregiver can complete onboarding in ≤ 5 mins; primary user can revoke access in ≤ 2 taps; QA validates zero data leakage |
 | e.g., "Tax-cliff scenario unaddressed: users who hit a benefit threshold lose more than they gained" | Add interstitial warning when budget plan would push user over a named federal benefit threshold (SNAP, Medicaid expansion limit, etc.) | List of 5 named thresholds; warning triggers at 90% of threshold; localized to user state | Backend + content lead | This quarter | Audit shows warning shown in 100% of relevant cases on test suite of 50 income profiles |
 | e.g., "Unbanked users excluded by ACH-only deposit" | Add cash deposit support via partner network; remove SSN as hard requirement (use ITIN as alternative) | ITIN accepted in onboarding; cash deposit fee ≤ $1.50; 1,000+ partner locations within 5mi of 80th-percentile user | Identity + payments leads | Next release | Successful onboarding rate for users without bank account ≥ 70%; no disparate impact ratio < 0.8 by census tract |
 
@@ -199,7 +207,7 @@ Each row must include all six columns. Vague entries are rejected.
 
 If a number cannot be specified yet (e.g., research is still needed), name the **research deliverable that would produce the number**, name the owner, and set a deadline. "TBD" without an owner and deadline is rejected.
 
-For accessibility-related insights, the measurable spec must reference WCAG criteria with version (e.g., WCAG 2.2 AA SC 2.5.5, contrast ratio 4.5:1 for body text per SC 1.4.3) — not generic "make it accessible."
+For accessibility-related insights, the measurable spec must reference WCAG criteria with version and conformance level (e.g., WCAG 2.2 SC 2.5.5, Level AAA, 44×44 CSS pixels; contrast ratio 4.5:1 for body text per SC 1.4.3, Level AA) — not generic "make it accessible."
 
 ---
 
@@ -262,7 +270,7 @@ Key bias or blind spot, most important unheard perspective, and one concrete nex
 
 ### Design Decision Spec
 
-(From Step 5.5 — required, even for a single-lens session.) The top 3 insights, all six columns filled. An accessibility spec names the WCAG version and success criterion ("WCAG 2.2 SC 1.4.3"), not just a ratio or size.
+(From Step 5.5 — required, even for a single-lens session.) The top 3 insights, all six columns filled. An accessibility spec names the WCAG version and success criterion ("WCAG 2.2 SC 1.4.3"), and its level (A, AA or AAA) when it states a ratio or size, not just the ratio or size.
 
 | Insight | Specific design change | Measurable spec (with numbers) | Owner (role) | When | Pass/fail criterion |
 |---|---|---|---|---|---|
@@ -284,7 +292,7 @@ Every figure, rate, incident, past failure or fact about the user's product, use
 
 - **Do not lecture.** The method is Socratic. Ask questions, hold space, resist the urge to tell the designer what their biases are. Name what surfaces; do not assign what you suspect.
 - **Do not judge.** Every designer has biases. The act of surfacing them is the work, and it requires safety. Acknowledge what emerges without evaluating the person.
-- **Do not skip Q3 of Lens 2.** "Who's someone I'm nervous to talk to about this?" is the method's sharpest tool. If the user cannot answer, mark it as an open question rather than skipping it.
+- **Do not skip Q3 of Lens 2.** "Who's someone I'm nervous to talk to about this?" is this skill's sharpest tool. If the user cannot answer, mark it as an open question rather than skipping it.
 - **Do not rush the growth mindset.** After surfacing difficult biases, the temptation is to move on quickly. The growth mindset lens exists to ensure the session ends with forward movement. Give it real attention.
 - **Do not produce a generic lens statement.** The statement must reflect what actually happened in this specific session, not a templated platitude.
 - **Incompleteness is natural.** The three half-circles form a whole, but no single session will be comprehensive. What matters is that something surfaced that was previously invisible.

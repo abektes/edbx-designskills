@@ -6,9 +6,9 @@
 
 ## Who made it
 
-Value Dams and Flows is a stakeholder values alignment method developed within ethical design practice to address a specific problem: design teams often know their stakeholders have different values, but lack a structured way to surface those differences, map them, and navigate them.
+Value Dams and Flows comes from the Value Sensitive Design literature: Miller, Friedman, Jancke and Gill (2007), "Value tensions in design", ACM GROUP '07, where it appears as a method for stakeholder value tensions. It is described in Friedman, Hendry and Borning's survey of Value Sensitive Design methods (2017) and in Friedman and Hendry's book (2019), and is listed in *Universal Methods of Ethical Design*. The 2007 paper was not read when this skill was checked, so the definitions here are the skill's working definitions. It addresses a specific problem: design teams often know their stakeholders have different values, but lack a structured way to surface those differences, map them, and navigate them.
 
-The dam/flow metaphor comes from hydrology. Value Flows move forward with broad support. Value Dams are blocking forces where stakeholder values conflict — the water isn't destroyed, it's held. The goal of the method is not to remove the dam but to understand it well enough to navigate around it, dissolve the conditions that created it, or respect the legitimate value it's protecting.
+In this skill's telling, the dam/flow metaphor works like this (the metaphor's origin is not documented in the sources found). Value Flows move forward with broad support. Value Dams are blocking forces where stakeholder values conflict — the water isn't destroyed, it's held. The goal of the method is not to remove the dam but to understand it well enough to navigate around it, dissolve the conditions that created it, or respect the legitimate value it's protecting.
 
 ---
 
@@ -34,20 +34,20 @@ Value Dams and Flows treats these conflicts as legitimate values disagreements, 
 
 ## What it produces
 
-**Value Dams** — features or policies that the majority of stakeholders want excluded:
+**Value Dams** — in this skill, features or policies that the majority of stakeholders want excluded (the skill's working definition; the primary paper was not read). The ratings, scores and analyses below are edbx additions, not part of the published method:
 - Each dam is classified by strength: **Hard Dam 🔴** (non-negotiable), **Soft Dam 🟡** (negotiable with conditions), **Weak Dam 🟢** (preference, not principle)
 - Each dam gets a **Conflict Intensity Score (1–5)**: how strongly do opposing stakeholders feel, multiplied by how structurally embedded is the conflict in the business model? A score of 4–5 signals a dam that can't be dissolved by good facilitation — it requires structural change.
 - Each dam gets a **Power Asymmetry analysis**: which stakeholder has the most power to unblock this dam, and what would it cost them (politically, financially, reputationally) to do so?
 
-**Value Flows** — features or policies that the majority of stakeholders support:
-- Each flow is classified by strength: **Strong Flow 🟢** (broad consensus), **Conditional Flow 🟡** (with caveats), **Contested Flow 🔴** (minority opposition present)
+**Value Flows** — in this skill, features or policies that the majority of stakeholders support:
+- Each flow is classified by strength: **Strong Flow 🟢** (broad consensus), **Conditional Flow 🟡** (with caveats), **Contested Flow 🔴** (minority opposition present). The Contested Flow tier is an edbx addition, not part of the published method.
 
-For every Hard Dam, the method generates:
+For every Hard Dam, the skill generates (edbx additions):
 - A **redesign alternative** that honors the blocking value while preserving the business need
 - A **negotiation framing** — how to discuss the trade-off without entrenching positions
 - A **"What Would Have to Be True"** counterfactual — what conditions would have to change in the world for the blocking stakeholder to accept the feature?
 
-The **"What Would Have to Be True"** question is the method's most powerful tool. It forces counterfactual thinking that surfaces the real root constraint — often a regulatory interpretation, a technical limitation, or an organizational incentive structure — rather than the surface-level disagreement.
+The **"What Would Have to Be True"** question is this skill's most powerful tool (an edbx addition). It forces counterfactual thinking that surfaces the real root constraint — often a regulatory interpretation, a technical limitation, or an organizational incentive structure — rather than the surface-level disagreement.
 
 ---
 

@@ -9,9 +9,12 @@ This guide covers how to facilitate a Worrystorming session with a group — fro
 **Group size:** 3–8 participants is ideal. Larger groups should split into parallel sessions and share results.
 
 **Time needed:**
-- Quick scan: 30 minutes (Steps 2–3 only)
-- Full session: 60–90 minutes
+- Quick scan: 15–20 minutes (Steps 2–3 only)
+- Full session: 45–60 minutes
+- Team workshop following the phase agenda below: 60–90 minutes
 - Deep workshop: 2 hours (includes discussion and commitment-setting)
+
+(All timings are edbx facilitation guidance, not part of the published method.)
 
 **Materials:**
 - Sticky notes (physical or digital — Miro, FigJam, or equivalent)

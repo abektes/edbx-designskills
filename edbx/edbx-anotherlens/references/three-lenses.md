@@ -2,6 +2,7 @@
 
 This document contains the complete question set for all three lenses, with facilitation notes for solo and team use.
 
+> **edbx adaptation:** the published tool (Airbnb Design and News Deeply, 2017) is one flat list of 16 questions with no lens headings. The grouping into three lenses of 4 / 4 / 5 questions (13 numbered questions after merging some), the lens colours, the facilitation notes, the "required output" rule for Lens 2 Q3 and the sequencing notes are edbx's, not part of the published tool.
 ---
 
 ## Lens 1: Balance Your Bias (Green)
@@ -64,9 +65,9 @@ This is a thought experiment in world-building. If the core assumption is wrong,
 
 ### Question 3: Who's someone I'm nervous to talk to about this?
 
-This is the most powerful question in the entire method. The nervousness is the signal. If no one makes you nervous, you haven't looked hard enough.
+This is the sharpest question in this skill (edbx's emphasis). The nervousness is the signal. If no one makes you nervous, you haven't looked hard enough.
 
-**This is a required output of every Lens 2 session.**
+**This skill treats the answer as a required output of every Lens 2 session** (an edbx rule, not part of the published tool).
 
 **Solo facilitation:** Sit with the discomfort. The person you're nervous to talk to is not your enemy — they're the person whose perspective would most challenge your assumptions. Name them specifically, not as a category. "Someone with a disability" is a category. "My neighbor who uses a screen reader and has told me she finds most apps unusable" is a person.
 

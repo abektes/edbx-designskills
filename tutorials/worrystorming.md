@@ -6,9 +6,9 @@
 
 ## Who made it
 
-Worrystorming is **Method #100** in *Universal Methods of Ethical Design* — the final and capstone method in the book. It synthesizes the core ethical design mindset into a single practical session format.
+Worrystorming is **Method #100** in *Universal Methods of Ethical Design* (Chivukula and Gray, 2025) — the last entry in the book. Only its name, number and page are confirmed; the book entry was not readable when this skill was checked, so the session format below is this skill's working version.
 
-The method is explicitly consequentialist in its orientation: it asks what happens downstream, at scale, and over time — not what the team intends, but what the design might actually do once it's out in the world. The worry-to-value reframing draws on traditions of reflective design practice and ethical pre-mortem facilitation from organizational behavior research.
+This skill reads the method as consequentialist in orientation: it asks what happens downstream, at scale, and over time — not what the team intends, but what the design might actually do once it's out in the world. The eight categories, counts, severity tags and the worry-to-value reframing steps are edbx's layer, not confirmed in any readable source; calling the session an "ethical pre-mortem" is also the skill's framing.
 
 ---
 

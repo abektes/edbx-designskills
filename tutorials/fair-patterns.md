@@ -6,9 +6,11 @@
 
 ## Who made it
 
-Fair Patterns is grounded in the systematic dark pattern research of **Colin M. Gray, Nataliia Bielova, Cristiana Santos, Thomas Mildner, and colleagues** — specifically "An Ontology of Dark Patterns: Foundations, Definitions, and a Structure for Transdisciplinary Action" (Gray et al., CHI 2024, doi:10.1145/3613904.3642436) — and **Harry Brignull's** influential dark patterns taxonomy (Brignull, 2023). Brignull coined the term "dark patterns" in 2010 and built the foundational taxonomy that most audit frameworks draw on.
+Fair Patterns comes from **Marie Potel-Saville and Mathilde Da Rocha** ("From Dark Patterns to Fair Patterns? Usable Taxonomy to Contribute Solving the Issue with Countermeasures", Annual Privacy Forum 2023, doi:10.1007/978-3-031-61089-9_7), later developed by Potel-Saville and colleagues at FairPatterns. It pairs dark patterns with fair-pattern countermeasures that restore user agency.
 
-The method adapts this research into a tool that goes beyond identification — adding organizational root cause analysis and legal compliance mapping to make the findings actionable at the organizational level, not just the design level.
+For naming dark patterns, this skill's audit list follows **Harry Brignull's** types (he coined the term "dark patterns" in 2010); the broader academic reference is the ontology of Gray, Santos, Bielova and Mildner (CHI 2024, doi:10.1145/3613904.3642436), which covers dark patterns only and does not mention fair patterns.
+
+The skill goes beyond identification — adding organizational root cause analysis, a legal compliance mapping and a vulnerable-population matrix to make the findings actionable at the organizational level. Those additions are edbx's, not part of the published method.
 
 ---
 
@@ -36,11 +38,11 @@ Fair Patterns surfaces both the dark pattern and the organizational decision tha
 
 Fair Patterns works in seven steps:
 
-1. **Dark pattern identification** — scan the product for patterns from the established taxonomy (trick questions, hidden costs, forced continuity, misdirection, social proof manipulation, urgency manufacturing, confirmshaming, roach motel, etc.)
+1. **Dark pattern identification** — scan the product for patterns from a list of common types (trick questions, hidden costs, forced continuity, misdirection, social proof manipulation, urgency manufacturing, confirmshaming, roach motel, etc.)
 
 2. **Root cause analysis** — for each dark pattern found, identify the upstream business decision or KPI that created it. "Trick questions come from a conversion KPI with no retention counterbalance."
 
-3. **Legal compliance mapping with jurisdiction + penalty specificity** — for every dark pattern, name the specific statute (article number, not just "GDPR"), the jurisdiction, and the penalty exposure. Examples: GDPR Art. 7(3) on consent withdrawal in the EU (penalty up to 4% global turnover); EU Omnibus Directive 2019/2161; FTC Act §5 on deceptive practices in the US; CCPA §1798.140 in California; DSA Art. 25 prohibiting deceptive interface design on online platforms (penalty up to 6%); UK CMA Digital Markets Act; Brazilian LGPD. Patterns flagged 🔴 in two or more jurisdictions become must-fix before next release.
+3. **Legal compliance mapping with jurisdiction + penalty specificity** — for every dark pattern, name the specific statute (article number, not just "GDPR"), the jurisdiction, and the penalty exposure. Examples: GDPR Art. 7(3) on consent withdrawal in the EU (penalty up to 4% global turnover); EU Omnibus Directive 2019/2161; FTC Act §5 on deceptive practices in the US; CCPA §1798.140 in California; DSA Art. 25 prohibiting deceptive interface design on online platforms (penalty up to 6%); UK Digital Markets, Competition and Consumers Act 2024; Brazilian LGPD. Patterns flagged 🔴 in two or more jurisdictions become must-fix before next release.
 
 4. **Vulnerable Population Harm Matrix** — dark patterns do not harm everyone equally. For each pattern, name **which populations are disproportionately affected** and the mechanism of differential harm (e.g., minors face developmental susceptibility to FOMO; people in financial precarity face stronger sunk-cost loss aversion; people with cognitive disabilities face consent-fatigue exploitation; older adults face default-bias on unfamiliar UIs; users on slow connections experience 3-second delays as friction asymmetry). A pattern that's annoying for typical users but catastrophic for a vulnerable subgroup is rated by the worst case.
 
@@ -76,7 +78,7 @@ Describe your product and the flows you want to audit. If you know specific area
 |---|---|---|---|---|
 | Hidden continuity | Trial converts to paid with one email notification | Metric: trial-to-paid conversion rate, no churn-rate counterweight | EU: GDPR Art. 7(3) — up to 4% global turnover; DSA Art. 25 (online platforms) — up to 6%; US: FTC Act §5 (Amazon Prime cancellation case 2023 set precedent) | 🔴 |
 | Misdirection | "Cancel anytime" button is harder to find than "upgrade" | UX team rewarded for upgrade clicks, not cancellation completion | EU: DSA Art. 25 prohibits deceptive interface design on online platforms, and the Commission may issue guidelines on making termination harder than sign-up; US: FTC Click-to-Cancel rule | 🟡 |
-| Confirmshaming | "No thanks, I don't want to save money" decline button | Copywriter briefed to maximize click-through, not user respect | EU: DSA Art. 25 names confirmshaming as banned dark pattern; US: reputational + state UDAP statutes | 🟢 |
+| Confirmshaming | "No thanks, I don't want to save money" decline button | Copywriter briefed to maximize click-through, not user respect | EU: DSA Art. 25 prohibits deceptive or manipulative interface design on online platforms in general (it does not name confirmshaming); US: reputational + state UDAP statutes | 🟢 |
 
 **Vulnerable Population Harm Matrix (excerpt):**
 - Hidden continuity disproportionately harms users in financial precarity (overdraft cascade from unexpected charge), older adults (default-bias on unfamiliar billing notifications), and shift workers (notifications missed at off-hours).

@@ -1,7 +1,7 @@
 # Value Explainer Cards
 
-Source: Stanford McCoy Family Center for Ethics in Society — Ethics Toolkit V1.1, 2025
-License: CC BY 4.0 — ethicstoolkit.stanford.edu
+Source: Stanford McCoy Family Center for Ethics in Society — Ethics Toolkit (Travaglianti and Both, 2025), ethicstoolkit.stanford.edu
+Licence: stated as CC BY 4.0 in earlier versions of this package; not confirmed on the source page (which shows only "© Stanford University"). The card wording below was not checked against the toolkit PDF.
 
 Value Cards are actionable guides to understand values and make them tangible. Each card provides a clear definition and three observable spectra — each spectrum shows what degradation and promotion of the value looks like in practice.
 

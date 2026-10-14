@@ -79,29 +79,29 @@ Not verifiable (no readable source):
 
 - N1. Everything that depends on the book entry (p. 208): rows 3, 5–10. Only
   the method's name, number and page are confirmed (rows 1, 2, from the
-  contents page).
+  contents page). (fixed in SKILL.md)
 - N2. The eight-category taxonomy, severity tags, counts of worries and
   clusters, time budgets and facilitation steps (rows 11–16) have no source.
   If the book entry does not contain them, they are edbx additions and
   SKILL.md should say so alongside the existing "edbx adaptation" note (which
-  currently covers only the Evidence Ledger).
+  currently covers only the Evidence Ledger). (fixed in SKILL.md)
 - N3. "Explicitly consequentialist" (row 4). The survey (p. 14) treats most
   methods as readable in a consequentialist way and singles out Black Mirror
   Brainstorming, not Worrystorming, so the claim cannot be confirmed for this
-  method.
+  method. (fixed in SKILL.md)
 - N4. SKILL.md says Worrystorming "modifies traditional brainstorming" and
   ends with a "generate refined ideas" step. Neither can be checked against
-  the book entry. A closer, uncited precedent exists in the survey (row 8).
+  the book entry. A closer, uncited precedent exists in the survey (row 8). (fixed in SKILL.md)
 - N5. SKILL.md calls it an "ethical pre-mortem". No manifest text uses the
   term, and the pre-mortem technique has a separate origin that SKILL.md does
-  not cite; the book entry may or may not use it.
+  not cite; the book entry may or may not use it. (fixed in SKILL.md)
 - N6. `THIRD_PARTY_NOTICES.md` credits "Universal Methods of Ethical Design,
   Method #100" without authors. The authors are Chivukula and Gray (Rockport,
   2025); the notice should name them. The "Method #100" number and title are
-  correct.
+  correct. (fixed in THIRD_PARTY_NOTICES.md and SKILL.md)
 - N7. `references/related-methods.md` lists Empathic Walkthrough and Moral
   Agent as "referenced in the source material"; that statement is unchecked
-  (row 6).
+  (row 6). (fixed in SKILL.md)
 - N8. Internal inconsistency, not a source issue: SKILL.md gives a quick scan
   of 15–20 minutes and a full session of 45–60 minutes;
-  `references/facilitation-guide.md` gives 30 minutes and 60–90 minutes.
+  `references/facilitation-guide.md` gives 30 minutes and 60–90 minutes. (fixed in SKILL.md)

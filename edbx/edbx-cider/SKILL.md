@@ -13,9 +13,13 @@ CIDER is an assumption elicitation technique that helps designers critically eva
 
 The name is an acronym. Each letter maps to a stage: **C**ritique, **I**magine, **D**esign, **E**xpand, **R**epeat. A full CIDER session moves through all five stages in order. The first three (C → I → D) can run as a standalone exercise. The last two (E → R) add team-level synthesis and a second cycle.
 
-CIDER was developed by Oleson, Solomon, Perdriau and Ko (ICER 2022; ACM TOCHI 2023) as a teaching tool for inclusive design skills. It works equally well in professional practice — anywhere a designer wants to stop guessing about inclusion and start finding out what their design actually assumes.
+CIDER was developed by Oleson, Solomon, Perdriau and Ko (ICER 2022; ACM TOCHI 2023) as a teaching tool for inclusive design skills. The paper tests it in an eleven-week undergraduate course and reports no test in professional practice; it suggests the technique may be useful beyond the classroom, and this skill applies it to a real design on that basis.
+
+> **edbx adaptation:** running CIDER on a design you own, rather than on a classroom artifact chosen by an educator, is not part of the published method. It is here because the point of the exercise is to find out what your own design actually assumes.
 
 > **Mindset check:** Assumption-surfacing is a skill to build, not a failure to correct. Every designer carries assumptions. The goal is to get better at finding them, not to feel bad about having them.
+
+> **edbx adaptation:** the mindset check is not part of the published method. It is here because defensiveness is the usual reason a team stops listing assumptions.
 
 ## Use This Skill When
 
@@ -46,7 +50,11 @@ CIDER runs in five stages. The first three (C → I → D) form the core cycle. 
 
 ### Stage C — Critique: Surface Assumptions
 
-Identify the embedded assumptions about users that the design carries. Probe across four categories:
+Identify the embedded assumptions about users that the design carries. The paper asks for as many assumptions as you can think of, about users' capabilities, contexts, environments and available resources, in a few minutes, favouring many different assumptions over a deep treatment of one or two.
+
+> **edbx adaptation:** the four tagged categories below, the "This design assumes the user [X]" sentence frame and the minimum of 5 assumptions across at least 3 categories are not part of the published method. The paper names the four terms (ability, capacity, environment, resources) only as what CIDER targets, and sets no count or category quota. They are here so a designer does not stop at the most obvious assumptions and so the output can be checked.
+
+Probe across four categories:
 
 **Ability** — What the user's body and mind can do. Sensory capabilities, motor skills, cognitive processing, language proficiency, emotional state.
 
@@ -70,6 +78,10 @@ See `references/assumption-categories.md` for detailed examples per category and
 
 Pick one assumption from Stage C. Envision how that assumption could lead to a specific person being excluded.
 
+In the paper this is a short scenario (one to two sentences in its classroom prompt) in which the design breaks down for a user for whom the chosen assumption is wrong.
+
+> **edbx adaptation:** naming a specific person and writing a vivid, humanizing scenario are not part of the published method, which describes an unnamed user. They are here because a named person with a concrete moment of failure is harder to dismiss than a user category. The example below is invented.
+
 Name a **specific user** — not "a user with a disability" but "Mariam, a 68-year-old retired teacher with tremor in both hands who uses a tablet on a shaky bus."
 
 Describe the **failure scenario** — what task becomes difficult, impossible, or humiliating? What does the experience actually feel like for that person?
@@ -85,7 +97,9 @@ See `references/exclusion-scenario-guide.md` for techniques on writing effective
 
 ### Stage D — Design: Generate Alternatives
 
-Brainstorm 3–5 redesign ideas that remove reliance on the assumption identified in Stage I.
+Brainstorm as many ways as you can to change the design so the scenario from Stage I no longer happens. The paper's prompt asks for ten or more different kinds of solution, whatever their feasibility.
+
+> **edbx adaptation:** sorting the ideas into the four approach types below is not part of the published method. It is here so the list does not turn into ten variations of one interface tweak.
 
 Span a range of approaches:
 - **Low-tech:** Print, signage, physical aids, alternative workflows
@@ -95,13 +109,17 @@ Span a range of approaches:
 
 No idea is too wild at this stage. Generative divergence is the goal. Polish and feasibility come later.
 
-**Minimum output:** 3 numbered redesign proposals.
+**Minimum output:** ten or more numbered redesign proposals, each tagged with its approach type. One line each is enough; the strongest two or three can be developed further.
 
 See `references/inclusive-redesign-patterns.md` for common patterns organized by assumption category.
 
 ---
 
 ### Stage E — Expand: Build Shared Register (Team Mode)
+
+In the paper, the educator collects every participant's Critique list, combines them into a single list with duplicates removed, adds their own expertise where there are obvious gaps, and shares the list back for the Repeat stage. The paper's team variant (groups of two or three working on their own prototypes) dropped this stage.
+
+> **edbx adaptation:** the five-step team procedure and the register columns below (cluster, tag by category, flag surprises, record who surfaced each) are not part of the published method. They are here so a team, rather than an educator, can build the shared list and see which assumptions surprised people.
 
 In team sessions, collect all assumptions surfaced by individual participants into a shared master list.
 
@@ -119,11 +137,13 @@ This stage is optional for solo designers. Teams benefit from it because differe
 
 ### Stage R — Repeat: Second Cycle
 
-Select a **different assumption** from the Stage E register (or from Stage C if working solo). Repeat Stages I and D with this new assumption.
+Select an assumption from the Stage E register that you did not surface yourself (the paper's wording: one you did not come up with in your own Critique, if possible). Repeat Stages I and D with this assumption.
 
-This second cycle matters because the first assumption designers pick is usually the most obvious one. The second one is often more revealing.
+This second cycle matters because choosing an assumption someone else surfaced guarantees you learn at least one new way the design can exclude people.
 
-**Output:** A complete I → D cycle with a new exclusion scenario and new redesign proposals.
+> **edbx adaptation:** when working solo there is no Stage E register, so this skill lets you pick a different assumption from your own Stage C list. The paper does not cover that case. The second cycle also asks for at least 3 redesign ideas rather than the paper's ten or more, to keep the written deliverable short.
+
+**Output:** A complete I → D cycle with a new exclusion scenario and at least 3 new redesign proposals.
 
 ---
 
@@ -155,9 +175,10 @@ A vivid narrative paragraph naming a specific person and describing their moment
 
 ### Stage D — Redesign Proposals
 
-1. [Redesign idea 1]
-2. [Redesign idea 2]
-3. [Redesign idea 3]
+1. [Redesign idea 1] — *[approach type]*
+2. [Redesign idea 2] — *[approach type]*
+3. [Redesign idea 3] — *[approach type]*
+4. ... (ten or more)
 
 ### Stage E — Shared Assumption Register (Team Mode)
 
@@ -172,12 +193,14 @@ A vivid narrative paragraph naming a specific person and describing their moment
 
 **Exclusion scenario:** [narrative]
 
-**Redesign proposals:**
+**Redesign proposals:** (at least 3)
 1. [idea]
 2. [idea]
 3. [idea]
 
 ### Inclusive Design Commitment
+
+> **edbx adaptation:** the commitment sentence is not part of the published method. It is here so the session ends in something a person can be held to.
 
 One sentence stating which assumption the designer or team commits to removing, how, by when, and who owns it — specific enough that someone can check later whether it happened.
 
@@ -212,7 +235,7 @@ A strong CIDER session output:
 - surfaces at least 5 distinct assumptions spanning at least 3 of the 4 categories
 - names a specific person (not a demographic label) in the exclusion scenario
 - describes a concrete moment of failure, not a generalized class of problem
-- generates at least 3 redesign proposals spanning different approach types (low-tech, high-tech, systemic, interaction-level)
+- generates ten or more redesign proposals spanning different approach types (low-tech, high-tech, systemic, interaction-level)
 - in team mode, produces a shared register with more assumptions than any individual surfaced alone
 - runs a second I → D cycle on a different assumption than the first
 - closes with a commitment specific enough to create accountability

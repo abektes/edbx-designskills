@@ -6,9 +6,9 @@
 
 ## Who made it
 
-Critical Interviewing in the ethical design context is grounded in **Phil Francis Carspecken's framework for critical ethnographic research** — a method developed in sociology and education research for analyzing how social power and ideology shape discourse. It was adapted for design research as a way to conduct interviews that go beyond surface responses to reveal the implicit ethical reasoning and values embedded in how people talk about technology and design.
+Critical Interviewing in the ethical design context follows the critical interview approach that Chivukula, Gray and colleagues cite to **Phil Francis Carspecken's** critical ethnography (*Critical Ethnography in Educational Research*, 1996), a framework from education research for analyzing how social power and ideology shape discourse. Their 2020 CHI study of UX practitioners used semistructured interviews with "why" questions, lead-off questions and no a-priori definition of ethics; Gray and Chivukula (2019) cite Carspecken for field-note practice.
 
-The adaptation for design contexts draws on critical theory traditions including work by Carspecken (1996) on critical ethnography, and has been developed further in HCI research on ethical design methods.
+Of the protocol described below, only the lead-off question and that "why" style are found in those papers. The back-up and emergency questions, probe types, mirrored value words, covert categories, the safety layers and the domain bank are edbx's protocol, built on top: a plain model asked for an interview guide does not produce them. "Critical Interviewing" as a named design method is this skill's packaging.
 
 ---
 
@@ -47,7 +47,7 @@ The protocol includes:
 
 Plus three layers that make the protocol safe to run in the field:
 
-- **Non-Obvious Harms Inventory** — for each population being researched, names the specific risks the research itself could create or fail to surface: **proxy-variable harms** (zip code → race; school → class; browser language → immigration status — each producing disparate impact under named statutes like the four-fifths rule, GDPR Art. 22, EU AI Act Art. 5/6); **discoverability risk** (research notes can be subpoenaed in litigation; protocol is framed accordingly); **aggregation harms** (innocuous answers combining into a re-identifiable profile); **retaliation risk** (interviews about employer practices need explicit confidentiality architecture before content questions).
+- **Non-Obvious Harms Inventory** — for each population being researched, names the specific risks the research itself could create or fail to surface: **proxy-variable harms** (zip code → race; school → class; browser language → immigration status — each able to produce disparate impact; legal hooks to check with counsel include the US four-fifths rule of thumb for employee selection, GDPR Art. 22 on automated decisions and the EU AI Act, none of which is a general proxy-variable rule); **discoverability risk** (research notes can be subpoenaed in litigation; protocol is framed accordingly); **aggregation harms** (innocuous answers combining into a re-identifiable profile); **retaliation risk** (interviews about employer practices need explicit confidentiality architecture before content questions).
 - **Pre-Interview Design Guardrails** — interviewer selection (with named power-asymmetry analysis), confidentiality architecture (where recordings live, who has access, retention/deletion schedule, redaction mechanism), informed consent specifics (publication / training data / internal-only), trauma-aware framing for harm-adjacent topics, and an explicit halt protocol.
 - **Red-Flag / Halt Checklist** — a scannable list the interviewer keeps visible during the session (signs of distress → pause; disclosure of imminent harm → safeguarding protocol; legally privileged disclosure → confirm on/off record; activated power asymmetry → re-confirm confidentiality; drift into uncovered protected-attribute territory → return to original frame).
 

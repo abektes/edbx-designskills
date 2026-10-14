@@ -9,13 +9,15 @@ tags: [ethical-design, audit]
 
 ## Overview
 
-Fair Patterns enable you to identify and correct instances of dark or deceptive patterns in digital products or services by employing fair countermeasures that positively impact users' agency. Fair Patterns were created as an ethical alternative pattern perspective, using dark patterns as areas where we encounter problematic practices.
+Fair Patterns enable you to identify and correct instances of dark or deceptive patterns in digital products or services by employing fair countermeasures that positively impact users' agency. Fair Patterns were created as an ethical alternative pattern perspective, using dark patterns as areas where we encounter problematic practices. The taxonomy of dark patterns paired with fair-pattern countermeasures is the work of Potel-Saville and Da Rocha (Annual Privacy Forum 2023), developed further by Potel-Saville and colleagues at FairPatterns.
 
 Dark patterns are deceptive interface features or flows that redirect users against their own interests. Fair Patterns are the countermeasures — designed to identify instances when dark patterns impact users and correct them within a power-sharing perspective, using clear language that users can understand.
 
-The method operates as both an **audit tool** (identifying existing dark patterns) and a **generation tool** (producing fair alternatives). It maps directly to the Gray et al. (2024) ontology of dark pattern types, providing a structured taxonomy for identification and a set of seven fair pattern types for remediation.
+The method operates as both an **audit tool** (identifying existing dark patterns) and a **generation tool** (producing fair alternatives). This skill pairs a ten-type list of common dark patterns for identification (Step 1) with seven fair pattern types for remediation (Step 2). The Gray et al. (2024) ontology of dark patterns (64 synthesized types in three levels, built from ten earlier taxonomies) is a broader reference for naming dark pattern types; it says nothing about fair patterns, and this skill's table is not that ontology.
 
 > **Mindset check:** Dark patterns don't always result from malicious intent. They often emerge from misaligned incentives, design defaults, or thoughtless iteration. The goal is to identify and fix them — not to shame designers.
+
+> **edbx adaptation:** the mindset check is not part of the published method. It is the skill's reading; the one supporting point in the sources is that, for the California legal test, a dark pattern is defined by its effect, not by intent. It is here because audits that start with blame tend to stall.
 
 ## Use This Skill When
 
@@ -43,7 +45,7 @@ Fair Patterns operates in four steps.
 
 ### Step 1 — Dark Pattern Identification
 
-Audit the product/feature against the major dark pattern taxonomy:
+Audit the product/feature against this list of ten common dark pattern types. Its names are those commonly attributed to Brignull's lists (not re-checked against his original list); his current list is longer and treats fake urgency and fake scarcity as two types, which this skill combines in one row:
 
 | Dark Pattern Type | Description | Example |
 |---|---|---|
@@ -58,13 +60,15 @@ Audit the product/feature against the major dark pattern taxonomy:
 | **Bait and Switch** | Advertising one thing, delivering another | "Free" with undisclosed conditions |
 | **Urgency/Scarcity** | False time pressure or stock claims | "Only 2 left!" (always shows 2) |
 
-For each identified dark pattern: name it, describe how it manifests, name the user agency being stolen.
+For each identified dark pattern: name it, describe how it manifests, name the user agency being stolen. A pattern outside this list may be named from a broader taxonomy such as the Gray et al. ontology.
 
 ---
 
 ### Step 2 — Apply Fair Pattern Countermeasures
 
-For each identified dark pattern, generate the fair pattern countermeasure:
+For each identified dark pattern, generate the fair pattern countermeasure. The seven types below are the Fair Patterns countermeasure categories as this skill names them.
+
+> **edbx adaptation:** the one-line applications in the table are this skill's own wording; the published definitions were not available when this skill was checked. Three names differ from the wording the creators are reported to use elsewhere ("non-intrusive information", "seamless path", "neutral default"), so check the names against the 2023 paper before quoting them as the creators' terms.
 
 | Fair Pattern Type | Application |
 |---|---|
@@ -79,6 +83,8 @@ For each identified dark pattern, generate the fair pattern countermeasure:
 ---
 
 ### Step 2.5 — Root Cause Reframe
+
+> **edbx adaptation:** the Root Cause Reframe is not part of the published method. It is here because a cosmetic fix leaves the incentive that produced the pattern in place.
 
 For each dark pattern found, identify the upstream organizational decision that created it. Dark patterns rarely emerge from malicious intent — they emerge from misaligned incentives. Naming the root cause is what enables a structural fix rather than a cosmetic one.
 
@@ -97,11 +103,13 @@ Vague references to "consent law" are not useful. For each dark pattern found, n
 
 | Dark Pattern | Statute / Article (named, not generic) | Jurisdiction | Penalty exposure | Recent enforcement (if known) | Risk |
 |---|---|---|---|---|---|
-| [pattern] | e.g., GDPR Art. 7(3) (right to withdraw consent), EU Omnibus Directive 2019/2161, FTC Act §5 (deceptive practices), CCPA §1798.140, DSA Art. 25 (online platforms must not design interfaces that deceive or manipulate users; does not apply where the UCPD or GDPR already covers the practice), UK CMA Digital Markets Act, Brazilian LGPD Art. 9 | EU/UK/US-federal/US-CA/Brazil/etc. | e.g., GDPR up to 4% global turnover; DSA up to 6%; FTC consent decrees + per-violation fines | e.g., Amazon Prime cancellation FTC case 2023 | 🔴/🟡/🟢 |
+| [pattern] | e.g., GDPR Art. 7(3) (right to withdraw consent), EU Omnibus Directive 2019/2161, FTC Act §5 (deceptive practices), CCPA §1798.140, DSA Art. 25 (online platforms must not design interfaces that deceive or manipulate users; does not apply where the UCPD or GDPR already covers the practice), UK Digital Markets, Competition and Consumers Act 2024 (CMA enforcement), Brazilian LGPD Art. 9 | EU/UK/US-federal/US-CA/Brazil/etc. | e.g., GDPR up to 4% global turnover; DSA up to 6%; FTC consent decrees + per-violation fines | e.g., Amazon Prime cancellation FTC case 2023 | 🔴/🟡/🟢 |
 
 Flag any pattern with 🔴 risk in two or more jurisdictions as **must-fix before next release**. DSA Art. 25 applies to all online platforms, not only very large ones, and names no list of banned patterns: it prohibits deceptive or manipulative interface design in general and lets the Commission issue guidelines on three practices (giving one choice more prominence, repeatedly asking for a choice already made, and making termination harder than sign-up). Do not cite it as banning a named pattern.
 
 ### Step 2.7 — Vulnerable Population Harm Matrix
+
+> **edbx adaptation:** the Vulnerable Population Harm Matrix is not part of the published method. It is here because an average-user view hides who a pattern hurts most.
 
 Dark patterns do not harm everyone equally. For each pattern identified, name **which populations are disproportionately affected** and how. Generic "users" is not enough.
 
@@ -112,6 +120,10 @@ Dark patterns do not harm everyone equally. For each pattern identified, name **
 A pattern that's annoying for typical users but catastrophic for a vulnerable subgroup is rated by the worst case, not the average.
 
 ### Step 3 — Default Assessment
+
+The Fair Patterns work names harmful and neutral defaults and a protective-default countermeasure.
+
+> **edbx adaptation:** the three-level grading below (harmful / neutral / protective, with colours) is not part of the published method. It is here so every default in the audit gets a visible verdict and a fix.
 
 For each UI element: classify the current default as:
 - `🔴 Harmful Default` — default is against user interest
@@ -125,6 +137,8 @@ Generate a protective default recommendation for every `🔴 Harmful Default`.
 ### Step 4 — Output
 
 Produce a dark pattern audit, fair countermeasure map, default assessment, and rewritten copy.
+
+> **edbx adaptation:** the Fair Design Statement and the Implementation Sequence (priority formula, success metrics, owner, sprint) in the output below are not part of the published method. They are here so the audit ends in ranked, testable fixes.
 
 ---
 

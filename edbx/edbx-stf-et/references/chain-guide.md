@@ -1,6 +1,6 @@
 # Chain Guide — How to Use the Five Tools Together
 
-The Stanford Ethics Toolkit is designed as a chainable sequence. This guide documents how outputs flow between tools, how to enter the chain at different points, and how to facilitate the chain with a team.
+The Stanford page lists five tools; this skill runs them as a chainable sequence (an edbx adaptation, see SKILL.md). This guide documents how outputs flow between tools, how to enter the chain at different points, and how to facilitate the chain with a team.
 
 ---
 

@@ -62,9 +62,9 @@ Methods that complement, extend, or connect to CIDER within the Ethical Design P
 
 **What it does:** A method for finding gender-inclusivity bugs in software. Uses faceted personas (Abi, Tim, Pat, Patrick) to evaluate whether a design supports different problem-solving styles and motivations that correlate with gender.
 
-**How it connects to CIDER:** GenderMag and CIDER share a common intellectual ancestor — both are about finding assumptions in design that exclude people. GenderMag focuses specifically on gender-related exclusion. CIDER is broader (any assumption category) but can be used to dig deeper on gender assumptions in Stage I.
+**How it connects to CIDER:** Both are about finding assumptions in design that exclude people. GenderMag focuses specifically on gender-related exclusion. CIDER is broader (any assumption category) but can be used to dig deeper on gender assumptions in Stage I.
 
-**Academic connection:** Both methods emerged from the inclusive design research community. The CIDER authors cite GenderMag as foundational work.
+**Academic connection:** The CIDER paper cites Burnett et al. (2016) when discussing assumptions about users' capabilities, resources and interaction styles, and names GenderMag-Teach as a related teaching resource. It does not describe GenderMag as foundational; the pairing here is edbx's.
 
 **For further reading:** Burnett, M., et al. (2016). GenderMag: A method for evaluating software's gender inclusiveness. *Interacting with Computers.*
 
@@ -74,7 +74,7 @@ Methods that complement, extend, or connect to CIDER within the Ethical Design P
 
 **What it does:** A card-based activity that helps designers think about who might be excluded from a design activity and how to include them.
 
-**How it connects to CIDER:** Inclusive Activity Cards are a lighter-weight, more portable version of the same underlying practice. Use them for quick exercises or as warm-ups before a full CIDER session.
+**How it connects to CIDER:** The CIDER paper does not mention the Inclusive Activity Cards. edbx suggests them as a separate, card-based activity (Microsoft Inclusive Design; licence reported as CC BY-NC-ND, unverified) that can serve as a quick exercise or a warm-up before a full CIDER session. Link to the cards; do not copy them.
 
 ---
 
@@ -82,7 +82,7 @@ Methods that complement, extend, or connect to CIDER within the Ethical Design P
 
 **What it does:** Three principles — Recognize Exclusion, Solve for One / Extend to Many, Learn from Diversity — that frame inclusive design as a design philosophy.
 
-**How it connects to CIDER:** CIDER is a method for operationalizing the first principle ("Recognize Exclusion"). The Microsoft principles provide the philosophical frame; CIDER provides the practical technique.
+**How it connects to CIDER:** edbx pairs them: CIDER can be used to put the first principle ("Recognize Exclusion") into practice, with the Microsoft principles as the frame. The CIDER paper does not make this link.
 
 **For further reading:** Microsoft Inclusive Design methodology kit. Available at microsoft.com/design/inclusive.
 
@@ -92,7 +92,7 @@ Methods that complement, extend, or connect to CIDER within the Ethical Design P
 
 **What it does:** A theoretically grounded approach to designing technology that accounts for human values in a principled manner throughout the design process.
 
-**How it connects to CIDER:** VSD is broader — it addresses all human values (privacy, autonomy, fairness, etc.). CIDER focuses specifically on the value of inclusion. CIDER can be used as a VSD investigation method when the value under investigation is inclusivity or equity.
+**How it connects to CIDER:** VSD is broader — it addresses all human values (privacy, autonomy, fairness, etc.). CIDER focuses specifically on the value of inclusion. edbx suggests CIDER can serve as an investigation method inside a VSD study when the value under investigation is inclusivity or equity; the CIDER paper does not make this link.
 
 **For further reading:** Friedman, B., Hendry, D. (2019). *Value Sensitive Design: Shaping Technology with Moral Imagination.* MIT Press.
 
@@ -102,7 +102,7 @@ Methods that complement, extend, or connect to CIDER within the Ethical Design P
 
 **What it does:** A design paradigm that asks not "what can the user do?" but "what abilities are required by the system?" — and then redesigns the system to require fewer specific abilities.
 
-**How it connects to CIDER:** Ability-Based Design is the theoretical foundation for CIDER's Ability category. CIDER extends the same logic to Capacity, Environment, and Resources.
+**How it connects to CIDER:** edbx pairs them: Ability-Based Design asks the same kind of question as CIDER's Ability category, and CIDER's categories extend it to Capacity, Environment, and Resources. The CIDER paper's reference list includes Wobbrock et al.'s 2011 Ability-Based Design paper, cited in the introduction (p. 2) for the point that assumptions about users' capabilities and resources disadvantage marginalized users, but it does not call it the foundation of CIDER.
 
 **For further reading:** Wobbrock, J., Gajos, K., Kane, S., Vanderheiden, G. (2018). Ability-based design. *Communications of the ACM.*
 

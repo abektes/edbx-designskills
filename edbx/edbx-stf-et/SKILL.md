@@ -8,15 +8,17 @@ tags: [ethical-design, forecast]
 # Stanford Ethics Toolkit (stf-et)
 PUT VALUES INTO ACTION
 
-> **Source:** Stanford McCoy Family Center for Ethics in Society — Ethics Toolkit V1.1, 2025. Licensed CC BY 4.0 — ethicstoolkit.stanford.edu
+> **Source:** Stanford McCoy Family Center for Ethics in Society — Ethics Toolkit (Travaglianti and Both, 2025; funded by the Project Liberty Institute), ethicstoolkit.stanford.edu. Earlier versions of this package labelled it "V1.1" and stated the licence as CC BY 4.0; neither is confirmed on the source page, which shows only "© Stanford University".
 
 ## Overview
 
-The Stanford Ethics Toolkit — developed by the McCoy Family Center for Ethics in Society at Stanford University — is a pragmatic, society-centered framework for making ethics an intrinsic part of work from start to finish. It consists of five tools organized into three phases: **Explore → Evaluate → Decide.**
+The Stanford Ethics Toolkit — developed by the McCoy Family Center for Ethics in Society at Stanford University — is a pragmatic, society-centered framework for making ethics an intrinsic part of work from start to finish. The Stanford page lists five tools (Future Story, Impacts Explorer, Ethics Frame, Ethics Gauge, Weighing Options) and a set of Values Explainer Cards, with a one-line description of each. This skill organizes the five tools into three phases: **Explore → Evaluate → Decide.**
 
-The tools are designed to **chain together**: each produces a structured output that feeds directly into the next. You can enter the chain at any point, run a single tool in isolation, or traverse all five in sequence. The chain is most powerful when run in full — outputs accumulate into a complete ethical picture that supports principled decision-making.
+This skill **chains the tools together**: each produces a structured output that feeds directly into the next. You can enter the chain at any point, run a single tool in isolation, or traverse all five in sequence. The chain is most powerful when run in full — outputs accumulate into a complete ethical picture that supports principled decision-making.
 
-> **Core premise:** Ethics is everyone's responsibility, a shared societal undertaking. The tools do not tell you what the right thing to do is — they create the structure and shared language for you to reason carefully about it yourself. The value lies not just in the filled-out artifact, but in the thinking and discussion it provokes.
+> **edbx adaptation:** the Stanford page read when this skill was checked is a landing page; the full toolkit (PDF or Mural) is behind an access form and was not read. The phase labels and grouping, the chain framing, the "Carries forward" hand-off blocks, the quality-bar counts, the time budgets and the do/don't lists are not on that page and are edbx's layer, not the published method. The detailed worksheet sections, prompts, spectra, value names and card wording below are likewise not checked against the toolkit: treat them as this skill's working version of it. This layer is here so a team can run the tools in order and hand each result to the next.
+
+> **Core premise:** Ethics is everyone's responsibility, a shared societal undertaking (the Stanford page's wording). In this skill the tools do not tell you what the right thing to do is — they create the structure and shared language for you to reason carefully about it yourself. The value lies not just in the filled-out artifact, but in the thinking and discussion it provokes.
 
 ## The Five Tools at a Glance
 
@@ -60,7 +62,7 @@ The five tools form a chain. Each is documented below with its full workflow and
 ### TOOL 1 — Future Story
 *Phase: Explore | Think forward by looking back*
 
-**What it does:** A storytelling structure (adapted from Kenn Adams' Story Spine) that helps you imagine the impacts of your work by narrating it from the future. The six-element spine covers problem, solution, benefits, harms, cascading consequences, and mitigating actions.
+**What it does:** A storytelling structure (this skill's six-element version, said to be adapted from Kenn Adams' Story Spine; not confirmed on the Stanford page) that helps you imagine the impacts of your work by narrating it from the future. The six-element spine covers problem, solution, benefits, harms, cascading consequences, and mitigating actions.
 
 **When to use it first:** Early-stage exploration, when the team hasn't yet structured its thinking about ethical implications. The narrative format opens honest reflection without requiring analytical precision upfront.
 
@@ -115,7 +117,7 @@ This block is not optional. Without it, the next tool in the chain lacks its inp
 ### TOOL 2 — Impacts Explorer
 *Phase: Explore | Map the ripple effects of your actions — how people are affected and how values are impacted*
 
-**What it does:** A structured brainstorming method that maps the full range of consequences your action or creation may generate — from direct effects to secondary effects to values impacted. Builds on the Futures Wheel technique with an added focus on values. Can be worked In-to-Out (from action outward) or Out-to-In (from values inward).
+**What it does:** A structured brainstorming method that maps the full range of consequences your action or creation may generate — from direct effects to secondary effects to values impacted. Said to build on the Futures Wheel technique with an added focus on values (not confirmed on the Stanford page). Can be worked In-to-Out (from action outward) or Out-to-In (from values inward).
 
 **When to use:** After Future Story (using its outputs as seeds), or independently as a standalone impact-mapping exercise.
 

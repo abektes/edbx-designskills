@@ -85,40 +85,40 @@ and back no row.
 2. **Scope.** SKILL.md says CIDER "works equally well in professional
    practice". The paper presents a teaching technique tested in one
    undergraduate course and says only that results suggest promise beyond the
-   classroom (rows 3, 15).
+   classroom (rows 3, 15). (fixed in SKILL.md)
 3. **Stage C minimum (5 assumptions, 3 of 4 categories).** The paper has no
    count or category quota (row 10). The four terms appear in the paper only as
    its statement of what the technique targets (row 9); the paper's own coding
-   found nine assumption types (Table 4).
+   found nine assumption types (Table 4). (fixed in SKILL.md)
 4. **Named person in the exclusion scenario.** The paper's scenario is 1–2
    sentences about an unnamed user for whom the assumption fails (row 12). The
    Mariam-style example in the skill is the skill's own addition and should be
-   marked invented.
+   marked invented. (fixed in SKILL.md)
 5. **Stage D quantity and types.** The paper asks for as many solutions as
    possible, "ten or more", with feasibility set aside; SKILL.md asks for 3–5
-   and four approach types (row 13).
+   and four approach types (row 13). (fixed in SKILL.md)
 6. **Stage E procedure.** In the paper the educator compiles the shared list,
    removing duplicates and adding expertise. The five-step team procedure
    (pool, deduplicate, cluster, tag, flag surprises) is not in the paper; the
-   paper's collaborative variant dropped the EXPAND stage (rows 7, 14).
+   paper's collaborative variant dropped the EXPAND stage (rows 7, 14). (fixed in SKILL.md)
 7. **Stage R.** The paper has students choose from the shared EXPAND list an
    assumption they did not surface; SKILL.md's solo variant (choose from
    Stage C) and its rationale that the first assumption is usually the most
    obvious are not in the paper, which gives a different rationale (a
-   guaranteed new instance of bias).
+   guaranteed new instance of bias). (fixed in SKILL.md)
 8. **GenderMag link.** Stage A reported no GenderMag or Burnett entry in the
    reference list. That was wrong: Burnett et al. (2016) is reference [10]
    (p. 43) and is cited on p. 5, and GenderMag-Teach is named on p. 7. The paper
-   does not call GenderMag foundational.
+   does not call GenderMag foundational. (fixed in SKILL.md)
 9. **Inclusive Activity Cards.** The paper never mentions them (it cites a
    different Microsoft Inclusive Design page). The "lighter-weight, portable
    version of the same practice" claim in `references/related-methods.md` has no
-   support in the paper.
+   support in the paper. (fixed in SKILL.md)
 
 ### Not verifiable
 
 10. **Inclusive Design Commitment sentence** and the mindset-check box are not
-    in the method as published; mark as skill additions.
+    in the method as published; mark as skill additions. (fixed in SKILL.md)
 11. **Licence of Microsoft's Inclusive Activity Cards** (reported CC BY-NC-ND)
     is unverified; page not fetched.
 12. **Integration section** names sibling edbx skills; that is not a claim about

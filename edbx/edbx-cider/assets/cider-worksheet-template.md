@@ -22,7 +22,7 @@ Use this template to run a CIDER session. Fill in each section as you move throu
 
 ## Stage C — Critique: Assumptions Surfaced
 
-Probe across all four categories. Aim for 5–10 assumptions total.
+Probe across all four categories. Aim for 5–10 assumptions total. (The paper asks for as many as you can list; the categories, the sentence frame and the count are edbx additions.)
 
 ### Ability (what the user's body and mind can do)
 
@@ -70,7 +70,7 @@ Select one assumption from Stage C. Describe a specific person being excluded.
 
 ## Stage D — Design: Redesign Proposals
 
-Brainstorm 3–5 ways to remove reliance on the assumption. Span different approach types.
+Brainstorm as many ways as you can to avoid the scenario, aiming for ten or more (the paper's target), whatever their feasibility. Tag each with an approach type (an edbx addition) so the list spans different kinds of fix.
 
 1. **[Approach type: ____________]**  
    Description:
@@ -81,11 +81,13 @@ Brainstorm 3–5 ways to remove reliance on the assumption. Span different appro
 3. **[Approach type: ____________]**  
    Description:
 
-4. **[Approach type: ____________]** *(optional)*  
+4. **[Approach type: ____________]**  
    Description:
 
-5. **[Approach type: ____________]** *(optional)*  
+5. **[Approach type: ____________]**  
    Description:
+
+6. to 10. and beyond: continue in the same form.
 
 Approach types: low-tech, high-tech, systemic, interaction-level
 
@@ -116,7 +118,7 @@ Pool assumptions from all participants. Deduplicate, cluster, and tag.
 
 ## Stage R — Repeat: Second Cycle
 
-Select a DIFFERENT assumption from Stage E (or Stage C if solo). Run I → D again.
+Select an assumption from Stage E that you did not surface yourself (or a different one from Stage C if solo). Run I → D again.
 
 **New assumption selected:** "This design assumes the user _____________________."
 
@@ -134,6 +136,8 @@ Select a DIFFERENT assumption from Stage E (or Stage C if solo). Run I → D aga
 
 ### Redesign Proposals
 
+(at least 3 in this second cycle; edbx shortens the paper's ten or more)
+
 1. **[Approach type: ____________]**  
    Description:
 
@@ -147,7 +151,7 @@ Select a DIFFERENT assumption from Stage E (or Stage C if solo). Run I → D aga
 
 ## Inclusive Design Commitment
 
-Write one sentence stating what assumption you commit to removing and how.
+Write one sentence stating what assumption you commit to removing and how. (An edbx addition; not part of the published method.)
 
 > "We commit to ____________________________________________________________  
 > because we learned that __________________________________________________  

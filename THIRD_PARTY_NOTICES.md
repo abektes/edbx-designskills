@@ -26,12 +26,12 @@ Each skill adapts a published method. The research and frameworks belong to thei
 | Bad Design Canvas | Matthew Manos (see above); *Universal Methods of Ethical Design*, Method #09 |
 | Black Mirror Brainstorming | Klassen and Fiesler, ACM SIGCSE 2022; Mauldin, *UX Collective* (2018) |
 | CIDER | Oleson, Solomon, Perdriau and Ko, ACM ICER 2022; ACM TOCHI 30(1), 2023, doi:10.1145/3549074 |
-| Critical Interviewing | Carspecken, *Critical Ethnography in Educational Research* (1996) |
+| Critical Interviewing | Carspecken, *Critical Ethnography in Educational Research* (1996), as cited for the critical interview approach by Chivukula et al., ACM CHI 2020 |
 | DAH Cards | ziqq rafit, *Design Against Humanity* card game (2020); *Universal Methods of Ethical Design*, Method #16 |
 | Digital Ethics Compass | Danish Design Center, *The Digital Ethics Compass* (2021), [ddc.dk](https://ddc.dk/tools/toolkit-the-digital-ethics-compass/) |
 | Ethical Contract | Jet Gispen, *Ethics for Designers* toolkit (2017), [ethicsfordesigners.com](https://www.ethicsfordesigners.com/ethical-contract) |
 | Ethicography | Chivukula, Gray and Brier, ACM CHI 2019; Chivukula and Gray, DRS 2024 |
-| Fair Patterns | Gray et al., "An Ontology of Dark Patterns", ACM CHI 2024, doi:10.1145/3613904.3642436; Harry Brignull, *Deceptive Patterns* (2023) |
+| Fair Patterns | Potel-Saville and Da Rocha, "From Dark Patterns to Fair Patterns?", Annual Privacy Forum 2023, doi:10.1007/978-3-031-61089-9_7 (FairPatterns); dark pattern types after Harry Brignull, *Deceptive Patterns* (2023); background: Gray et al., "An Ontology of Dark Patterns", ACM CHI 2024, doi:10.1145/3613904.3642436 |
 | Humane Design Guide | Center for Humane Technology ([humanetech.com](https://www.humanetech.com)); *Universal Methods of Ethical Design*, Method #47 |
 | Inverted Behavior Model | Kat Zhou, *Design Ethically* toolkit ([designethically.com](https://www.designethically.com/bj-fogg)), inverting BJ Fogg's Behavior Model (B = MAP) |
 | Motivation Matrix | Kat Zhou, *Design Ethically* toolkit ([designethically.com](https://www.designethically.com/motivation-matrix)); *Universal Methods of Ethical Design* |
@@ -41,6 +41,6 @@ Each skill adapts a published method. The research and frameworks belong to thei
 | STF-ET | Stanford McCoy Family Center for Ethics in Society (see above) |
 | Value Dams and Flows | Miller, Friedman, Jancke and Gill, "Value tensions in design", ACM GROUP 2007 (Value Sensitive Design) |
 | Values Levers | Katie Shilton, "Values Levers: Building Ethics into Design", *Science, Technology, & Human Values* 38(3), 2013 |
-| Worrystorming | *Universal Methods of Ethical Design*, Method #100 |
+| Worrystorming | Chivukula and Gray, *Universal Methods of Ethical Design* (2025), Method #100 |
 
 Each skill's `SKILL.md` and its tutorial in [`tutorials/`](tutorials/) give fuller credit. If you are the author of one of these methods and something here is wrong or missing, please [open an issue](https://github.com/abektes/edbx-designskills/issues).

@@ -98,42 +98,42 @@ probes and the four example covert categories appear in no text read.
 
 1. **Four example covert categories "from the source".** The only readable
    source that describes this research use (Chivukula et al. 2020) reports five
-   different dimensions (p. 9) and no covert-category list (rows 12, 13).
+   different dimensions (p. 9) and no covert-category list (rows 12, 13). (fixed in SKILL.md)
 2. **Protocol terms attributed to the method.** The back-up question,
    emergency question, covert categories and construct-building probes appear
    in no text read. The papers that cite Carspecken describe asking "why"
    questions, with no a-priori framing, and give lead-off examples (p. 3); that
-   is all. Whether the book supplies the rest is unconfirmed.
+   is all. Whether the book supplies the rest is unconfirmed. (fixed in SKILL.md)
 3. **Legal framing, four-fifths rule.** 29 C.F.R. § 1607.4(D) says a rate
    under four-fifths generally counts as evidence of adverse impact, and that
    smaller differences can too; it governs employee selection procedures and does
    not name Title VII in that section (row 22). SKILL.md's "4/5 / 80% rule under
    Title VII" applied to proxy variables in any ranking or matching system
-   overreaches the text.
+   overreaches the text. (fixed in SKILL.md)
 4. **GDPR Art. 22.** The page read (an index) shows only that Art. 22 is about
    automated individual decision-making and profiling (row 23); it gives no
-   support for treating it as proxy-variable disparate-impact law.
+   support for treating it as proxy-variable disparate-impact law. (fixed in SKILL.md)
 5. **Stage A's "no Carspecken reference" finding was wrong.** Chivukula et al.
    2020 cite Carspecken as ref. [8] (pp. 3, 11) and Gray & Chivukula 2019 as
    ref. [9] (pp. 4, 10). The earlier note that one search summary conflicted with
    Crossref is resolved in favour of the search summary. Gray & Chivukula use it
-   for field notes, not for a critical interview protocol.
+   for field notes, not for a critical interview protocol. (fixed in SKILL.md)
 
 ### Not verifiable
 
 6. **Method name and adapters.** "Critical Interviewing" as a named design
    method and who adapted it (SKILL.md names none) cannot be traced; the
    Chivukula / Gray group used a "critical interview approach" (p. 3) without
-   naming a method called that.
+   naming a method called that. (fixed in SKILL.md)
 7. **Internal inconsistency (no source involved).** "Critical Interviewing
    operates in five modes" but three modes are listed; Mode 1 lettered A to J
-   while the Output Format shows only A to E components.
+   while the Output Format shows only A to E components. (fixed in SKILL.md: the mode count; the A to J versus Output Format mismatch is left for the owner)
 8. **Sections F to J** (domain bank, sequencing, harms inventory, guardrails,
    halt checklist) and the "minimum output" list have no source (rows 19–21);
-   treat as edbx additions. The sequencing rule is stated as fact.
+   treat as edbx additions. The sequencing rule is stated as fact. (fixed in SKILL.md)
 9. **EU AI Act Arts. 5 and 6** named without text; the AI Act is not in the
-   manifest (row 24).
+   manifest (row 24). (fixed in SKILL.md)
 10. **No citation list in SKILL.md.** The only source named is "Carspecken
-    (1996)" with no title, publisher or the design-research adapters.
+    (1996)" with no title, publisher or the design-research adapters. (fixed in SKILL.md)
 11. **Related-skills line** ("values interview", "designer values research") is
     trigger wording, not a source claim.

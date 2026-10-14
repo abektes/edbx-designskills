@@ -15,9 +15,11 @@ The method normalizes ethical anxiety as a design resource, not a blocker. A des
 
 The core sequence is: **generate worries → cluster into themes → reframe as values → generate refined ideas.** The reframing step is what makes this different from a standard risk register. Raw concerns become design commitments.
 
-> **Method #100 — Worrystorming.** From *Universal Methods of Ethical Design*. Hashtags: #breakmydesign #evaluateoutcomes #identifyvalues. See also: Empathic Walkthrough · Moral Agent.
+> **Method #100 — Worrystorming.** From *Universal Methods of Ethical Design* (Chivukula and Gray, 2025), entry 100, p. 208. Hashtags and see-also line as stated in this skill's earlier materials, not confirmed against the book: #breakmydesign #evaluateoutcomes #identifyvalues; Empathic Walkthrough · Moral Agent.
 
-This is the final method in the book — a capstone practice that synthesizes the ethical design mindset. It is explicitly consequentialist: it asks what happens downstream, at scale, over time.
+Only the method's name, number and page in the book are confirmed. The book entry was not readable when this skill was checked, so the description of the method above, its core sequence and everything below are this skill's working version. This skill reads it as a final, capstone practice that asks what happens downstream, at scale, over time (a consequentialist reading; the 2021 survey of ethics-focused design methods says most methods can be read that way and does not mention Worrystorming).
+
+> **edbx adaptation:** the eight concern categories and their guiding questions, the counts (10–20 worries, 3–6 clusters of 3–5), the severity tags, the Ethical Objective / Design Constraint / Test Question triple, the mitigation step for Critical clusters, the Worrystorm Summary, the time budgets and the facilitation steps are not confirmed in any readable source and are edbx's, not part of the published method as far as could be checked. So is the "ethical pre-mortem" framing; the pre-mortem technique has a separate origin. They are here so a session ends in worries a team can act on.
 
 ## Use This Skill When
 

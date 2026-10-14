@@ -6,7 +6,7 @@
 
 ## Who made it
 
-The **Ethics Toolkit: Put Values Into Action** (referred to in this package as STF-ET) was developed by the **McCoy Family Center for Ethics in Society at Stanford University**, one of the leading centers for ethics in technology research in the United States. The toolkit is released under a **Creative Commons CC BY 4.0 license**, meaning it is freely usable and adaptable.
+The **Ethics Toolkit: Put Values Into Action** (referred to in this package as STF-ET) was developed by the **McCoy Family Center for Ethics in Society at Stanford University**, one of the leading centers for ethics in technology research in the United States. Earlier versions of this package stated the toolkit's licence as CC BY 4.0; that is not confirmed on the source page, which shows only "© Stanford University", so check the terms before reusing its text.
 
 The Stanford McCoy Center works at the intersection of philosophy, policy, and technology practice. The STF-ET toolkit reflects that intersection: it is philosophically rigorous enough to identify real ethical tensions, and practical enough to be used by product teams without a philosophy background.
 

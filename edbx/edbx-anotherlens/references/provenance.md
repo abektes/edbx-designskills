@@ -60,17 +60,17 @@ list, and a Core77 listing.
 ### Contradicted by the source text (read on the page)
 
 1. **Altered question wording.** The post asks "What details here are unfair? Unverified? Unused?". SKILL.md (Lens 1 Q2 and the reference text) says "Unjustified". Restore "Unverified" or mark the change as edbx's own.
-2. **Question count and grouping.** The post lists 16 questions as one flat list with no lens headings. SKILL.md has 13 numbered questions by merging some (lenses with assumptions; believe with disagree; audience open with challenging), and a 4 / 4 / 5 grouping the post does not show.
-3. **Socratic label.** The post describes little interventions in question form, compared to Eno's oblique strategies. It does not call the method Socratic; that is SKILL.md's own framing.
+2. **Question count and grouping.** The post lists 16 questions as one flat list with no lens headings. SKILL.md has 13 numbered questions by merging some (lenses with assumptions; believe with disagree; audience open with challenging), and a 4 / 4 / 5 grouping the post does not show. (fixed in SKILL.md)
+3. **Socratic label.** The post describes little interventions in question form, compared to Eno's oblique strategies. It does not call the method Socratic; that is SKILL.md's own framing. (fixed in SKILL.md)
 4. **Missing creator.** The post title names News Deeply and Airbnb.Design. SKILL.md credits only *Universal Methods of Ethical Design*, never Airbnb. Add Airbnb Design as the primary source.
-5. **WCAG unit and level.** SKILL.md's example says "44x44 pt (WCAG 2.2 SC 2.5.5)". The criterion says CSS pixels and is Level AAA. SC 1.4.6 (7:1) is also AAA; 4.5:1 is the AA level of 1.4.3. The example presents them as requirements without the level.
+5. **WCAG unit and level.** SKILL.md's example says "44x44 pt (WCAG 2.2 SC 2.5.5)". The criterion says CSS pixels and is Level AAA. SC 1.4.6 (7:1) is also AAA; 4.5:1 is the AA level of 1.4.3. The example presents them as requirements without the level. (fixed in SKILL.md)
 
 ### Not verifiable (no readable source)
 
-6. **Lens names and the card layout**: the Airbnb page is offline, so names, order and grouping are unconfirmed.
-7. **Colours and half-circle shapes** (green, purple, orange; three half-circles forming a whole): no source found. Treat as edbx presentation or remove the attribution.
-8. **Use guidance.** The "pick two or three at a time" advice could not be confirmed. SKILL.md prescribes a full sequential walk and 45-60 minute sessions, which is an adaptation either way.
-9. **Claims presented as the method that are edbx's own**: "Q3 is the most powerful question in the entire method", "required output of every Lens 2 session", the Design Decision Spec, the lens statement ("After applying Another Lens, I'm now questioning ..."), the time budgets and the "Output of Lens N" deliverables. None is in the post.
-10. **Book content**: "Principle #07", the hashtags and the "See also: Data Feminism / Hippocratic Oath" line cannot be confirmed without the book.
+6. **Lens names and the card layout**: the Airbnb page is offline, so names, order and grouping are unconfirmed. (fixed in SKILL.md)
+7. **Colours and half-circle shapes** (green, purple, orange; three half-circles forming a whole): no source found. Treat as edbx presentation or remove the attribution. (fixed in SKILL.md)
+8. **Use guidance.** The "pick two or three at a time" advice could not be confirmed. SKILL.md prescribes a full sequential walk and 45-60 minute sessions, which is an adaptation either way. (fixed in SKILL.md)
+9. **Claims presented as the method that are edbx's own**: "Q3 is the most powerful question in the entire method", "required output of every Lens 2 session", the Design Decision Spec, the lens statement ("After applying Another Lens, I'm now questioning ..."), the time budgets and the "Output of Lens N" deliverables. None is in the post. (fixed in SKILL.md)
+10. **Book content**: "Principle #07", the hashtags and the "See also: Data Feminism / Hippocratic Oath" line cannot be confirmed without the book. (fixed in SKILL.md)
 11. **Reference files cite no sources** for the bias taxonomy and the absent-populations guidance (row 15).
 12. **Origin story** (Shadow to Light) is only from the Core77 listing, which is not in the manifest.

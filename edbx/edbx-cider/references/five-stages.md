@@ -2,13 +2,15 @@
 
 This document provides full stage definitions, facilitation notes, and timing guidance for each stage of the CIDER method.
 
+> **edbx adaptation:** the published method (Oleson, Solomon, Perdriau & Ko) is a five-stage classroom technique: list assumptions, imagine one scenario of exclusion, brainstorm ten or more design changes, pool the lists, then repeat Imagine and Design on an assumption someone else listed. The category tags, sentence frame, named-person scenarios, approach types, word counts, timings and the solo/team procedures in this file are not part of the published method; they are edbx facilitation guidance, built on top of it.
+
 ---
 
 ## Stage C — Critique
 
 ### What Happens
 
-Designers examine a design artifact and systematically surface assumptions it makes about users. Each assumption is stated in the format "This design assumes the user [X]" and tagged with one of four categories: Ability, Capacity, Environment, Resources.
+Designers examine a design artifact and systematically surface assumptions it makes about users. In this skill, each assumption is stated in the format "This design assumes the user [X]" and tagged with one of four categories: Ability, Capacity, Environment, Resources (edbx additions; the paper asks only for as many assumptions as you can list).
 
 ### Why It Matters
 
@@ -74,7 +76,7 @@ A narrative paragraph (100–200 words) naming a specific person and describing 
 
 ### What Happens
 
-The designer brainstorms 3–5 redesign proposals that remove or reduce reliance on the assumption identified in Stage I.
+The designer brainstorms as many redesign proposals as possible, ten or more (the paper's target), that remove or reduce reliance on the assumption identified in Stage I, setting feasibility aside.
 
 ### Why It Matters
 
@@ -97,7 +99,7 @@ CIDER is not just a diagnostic — it is generative. The value of finding an exc
 
 ### Output
 
-A numbered list of 3–5 redesign proposals, each briefly described with its approach type noted.
+A numbered list of ten or more redesign proposals, each briefly described with its approach type noted.
 
 ---
 
@@ -105,7 +107,7 @@ A numbered list of 3–5 redesign proposals, each briefly described with its app
 
 ### What Happens
 
-In team sessions, all assumptions surfaced by individual participants are pooled, deduplicated, clustered, tagged, and reviewed for surprises.
+In the paper, the educator combines everyone's Critique lists into one list, removes duplicates, and fills obvious gaps from their own expertise. In team sessions, this skill extends that: all assumptions surfaced by individual participants are pooled, deduplicated, clustered, tagged, and reviewed for surprises (the last three are edbx additions).
 
 ### Why It Matters
 
@@ -138,11 +140,11 @@ A structured assumption register with columns for number, assumption text, categ
 
 ### What Happens
 
-The designer selects a different assumption from the Stage E register (or Stage C list, if solo) and runs a second full I → D cycle.
+The designer selects an assumption from the Stage E register that they did not surface themselves (the paper's rule) and runs a second full I → D cycle. Solo, with no register, this skill allows a different assumption from the Stage C list (an edbx adaptation).
 
 ### Why It Matters
 
-The first assumption a designer picks is usually the most obvious one — the one they already halfway knew about. The second assumption is often more revealing because it comes from deeper reflection or from another team member's perspective. Repeating the cycle doubles the learning and ensures the method produces more than one path to inclusion.
+Choosing an assumption you did not surface yourself guarantees you learn at least one new way the design can exclude people (the paper's rationale). Repeating the cycle also ensures the method produces more than one path to inclusion.
 
 ### Facilitation Notes
 
@@ -161,7 +163,7 @@ The first assumption a designer picks is usually the most obvious one — the on
 
 ### Output
 
-A complete I → D cycle: one exclusion scenario and 3–5 redesign proposals, on a different assumption than the first cycle.
+A complete I → D cycle: one exclusion scenario and at least 3 redesign proposals (edbx shortens the paper's ten or more here), on a different assumption than the first cycle.
 
 ---
 

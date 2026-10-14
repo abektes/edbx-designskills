@@ -215,7 +215,7 @@
         "aggregat|re.?identif",
         "retaliat"
       ],
-      "bar": "produces a Non-Obvious Harms Inventory identifying proxy-variable harms, discoverability risk, aggregation harms, and retaliation risk for the populations being researched, with named statutes (e.g., 4/5 rule, GDPR Art. 22, EU AI Act Art. 5/6) when applicable",
+      "bar": "produces a Non-Obvious Harms Inventory identifying proxy-variable harms, discoverability risk, aggregation harms, and retaliation risk for the populations being researched, with the relevant rules or statutes named (e.g., the US four-fifths rule of thumb, GDPR Art. 22 on automated decisions) when applicable",
       "desc": "the inventory names proxy-variable, discoverability, aggregation and retaliation harms"
     },
     {
@@ -231,8 +231,8 @@
       "kind": "min_count",
       "items": "statutes_named",
       "n": 1,
-      "bar": "with named statutes (e.g., 4/5 rule, GDPR Art. 22, EU AI Act Art. 5/6) when applicable",
-      "desc": "the inventory names at least one rule or statute (4/5 rule, GDPR, EU AI Act, Title VII)"
+      "bar": "with the relevant rules or statutes named (e.g., the US four-fifths rule of thumb, GDPR Art. 22 on automated decisions) when applicable",
+      "desc": "the inventory names at least one rule or statute (four-fifths rule, GDPR, EU AI Act, Title VII)"
     },
     {
       "id": "guardrails_five_named",

@@ -2,7 +2,7 @@
 *Think forward by looking back.*
 
 Stanford McCoy Family Center for Ethics in Society — Ethics Toolkit
-Source: ethicstoolkit.stanford.edu | CC BY 4.0
+Source: ethicstoolkit.stanford.edu | licence stated as CC BY 4.0 in earlier versions of this package; not confirmed on the source page
 
 ---
 

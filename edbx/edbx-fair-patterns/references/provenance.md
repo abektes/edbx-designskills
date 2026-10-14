@@ -134,26 +134,26 @@ Contradicted by the source text (read on the page):
 2. "Maps directly to the Gray et al. (2024) ontology": the ontology page
    describes 64 synthesized types across three levels from ten taxonomies; it
    says nothing of fair patterns, and the skill's ten-row table and seven
-   countermeasures are not that ontology.
+   countermeasures are not that ontology. (fixed in SKILL.md)
 
 Not verifiable (no readable source in the manifest; stage A's reading of the
 podcast and other pages is recorded in the Notes):
 
 3. "Nonobstructive Information", "Summary Path", "Protective Default": stage A
    found the creators' words to be "non-intrusive information", "seamless path"
-   and "neutral default". The taxonomy paper's Table 3 was unread.
+   and "neutral default". The taxonomy paper's Table 3 was unread. (fixed in SKILL.md)
 4. "UK CMA Digital Markets Act": the UK regime is the DMCC Act 2024; the Digital
-   Markets Act is an EU regulation. Not checked at text level.
+   Markets Act is an EU regulation. Not checked at text level. (fixed in SKILL.md)
 5. "Urgency/Scarcity" as one type: the current Deceptive Patterns taxonomy
    lists Fake urgency and Fake scarcity separately. The ten-row table as "the
    major taxonomy": Brignull's original list was not read, and it also holds
-   items the table omits.
+   items the table omits. (fixed in SKILL.md)
 6. The seven fair pattern descriptions in the skill's table: definitions not in
-   any readable page; only names and pairings from the podcast transcript.
+   any readable page; only names and pairings from the podcast transcript. (fixed in SKILL.md)
 7. Steps 2.5 (Root Cause Reframe), 2.7 (Vulnerable Population Harm Matrix), the
    three-colour Default Assessment grading, the priority formula and the Fair
    Design Statement: edbx additions; the skill labels only the Evidence Ledger
-   as an adaptation.
+   as an adaptation. (fixed in SKILL.md)
 8. "GDPR up to 4% of global turnover", Omnibus 4%, FTC consent decrees and per-
    violation fines, LGPD Art. 9: not in the manifest. The Amazon outcome
    (settled 2025) is missing from the skill. LGPD Art. 9 is a transparency

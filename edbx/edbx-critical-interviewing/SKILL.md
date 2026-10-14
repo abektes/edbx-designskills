@@ -11,9 +11,11 @@ tags: [ethical-design, decision]
 
 Critical Interviewing guides you to deeply explore the "why" behind what your participants tell you, revealing underlying norms and situated forms of reasoning. Unlike standard UX interview methods, Critical Interviewing focuses your attention on the normative and evaluative judgments that people use to justify, motivate, or make sense of their perspective on the world.
 
-Interviewing people can help designers increase empathy and aid in constructing design insights. However, an interview cannot always give you straightforward answers to complex "why" questions that underlie behaviors, beliefs, or worldviews. Critical Interviewing borrows principles from semistructured interviewing while using a different protocol format — one that highlights attention to specific "topic domains" and uses follow-up questions to probe more deeply into constructs.
+Interviewing people can help designers increase empathy and aid in constructing design insights. However, an interview cannot always give you straightforward answers to complex "why" questions that underlie behaviors, beliefs, or worldviews. Critical Interviewing borrows principles from semistructured interviewing while using a different protocol format — one that, in this skill, highlights attention to specific "topic domains" and uses follow-up questions to probe more deeply into constructs.
 
-The method was developed from Carspecken's (1996) critical ethnography framework and adapted for design research contexts. It is the values excavation tool in the ethical design toolkit.
+The approach follows the critical interview approach that Chivukula, Gray and colleagues cite to Carspecken's (1996) critical ethnography framework (*Critical Ethnography in Educational Research*, which has a chapter on dialogical data generation through interviews). In their 2020 CHI study of UX practitioners they ran semistructured interviews with "why" questions and no a-priori definition of ethics, using lead-off questions (Chivukula et al. 2020); Gray and Chivukula (2019) cite Carspecken for field-note practice. This skill treats it as the values excavation tool of the family.
+
+> **edbx adaptation:** of the protocol below, only the lead-off question, the "why" questioning and the absence of an a-priori definition of ethics are found in a text read when this skill was checked (the Carspecken book itself was not read). The back-up and emergency questions, the descriptive / normative / evaluative probe types, the construct-building probe that mirrors the participant's own words, the covert categories and their "I want to understand X without asking Y" phrasing, the live-support and post-interview modes, the domain question bank, the sequencing rule, the Non-Obvious Harms Inventory, the Pre-Interview Design Guardrails and the Red-Flag / Halt Checklist are not part of the published design-research descriptions, and "Critical Interviewing" as a named method is this skill's packaging. They are kept because a plain model asked for an interview guide does not produce a back-up lead-off, probe types, mirrored value words or covert categories, and they make a protocol usable in the field.
 
 > **Mindset check:** The goal is to understand the participant's ethical worldview on its own terms — not to judge it, not to change it, but to map it with enough precision that design decisions can be grounded in what people actually believe is right.
 
@@ -40,7 +42,7 @@ Provide as many of these as are available:
 
 ## Workflow
 
-Critical Interviewing operates in five modes: Protocol Design, Live Interview Support, and Post-Interview Analysis.
+Critical Interviewing operates in three modes: Protocol Design, Live Interview Support, and Post-Interview Analysis.
 
 ---
 
@@ -78,7 +80,7 @@ A reframe for if the participant narrates as an observer or user rather than a p
 4–6 categories the researcher wants to illuminate without asking directly. Each phrased as:
 > *"I want to understand [X] without asking '[leading question]'"*
 
-Example covert categories from the source:
+Example covert categories (illustrative, written for this skill; the 2020 study reports five different dimensions of UX practice and no covert-category list):
 - Perceived role of ethics in design (conflict/support)
 - Awareness of ethical role
 - Drivers of ethical sensitivity/awareness
@@ -96,7 +98,7 @@ When an investigation domain is specified, append technical questions that surfa
 
 **G. Interview Sequencing Rationale**
 
-State which stakeholders to interview first and why — order affects what you can ask:
+State which stakeholders to interview first and why — order affects what you can ask (this skill's rule of thumb, not from a published source):
 - Interview **impacted users before engineers**: users name their experience before engineers frame it technically.
 - Interview **engineers before executives**: engineers will surface technical decisions executives may not know about.
 - Interview **frontline workers before policy owners**: frontline workers reveal the gap between policy intent and implementation reality.
@@ -111,7 +113,7 @@ Before sending the protocol into the field, enumerate the non-obvious harms the 
 |---|---|---|---|
 
 Examples of non-obvious harms to scan for:
-- **Proxy-variable harms**: zip code → race; school name → class; browser language → immigration status; battery model → income. Each can produce disparate impact under disparate-impact law (US: 4/5 / 80% rule under Title VII; EU: GDPR Art. 22 + EU AI Act Art. 5/6) without ever naming the protected class.
+- **Proxy-variable harms**: zip code → race; school name → class; browser language → immigration status; battery model → income. Each can produce disparate impact without ever naming the protected class. Legal hooks to check with counsel, none of which is a general proxy-variable rule: in the US, the four-fifths rule of thumb in 29 CFR 1607.4(D), part of the Uniform Guidelines on Employee Selection Procedures, which treats a selection rate under four-fifths as generally regarded as evidence of adverse impact in employee selection; in the EU, GDPR Art. 22 (automated individual decision-making, including profiling) and the AI Act (Arts. 5 and 6; text not checked here).
 - **Discoverability risk**: research artifacts (notes, recordings, transcripts) can be subpoenaed in litigation. Anything documenting "we knew about disparate impact and did not act" creates legal exposure for the organization. Frame protocols accordingly — surface decisions, not after-the-fact rationalizations.
 - **Aggregation harms**: individually innocuous answers combining into a profile (e.g., 5 demographics + working hours + login location → re-identifiable population of 1)
 - **Power-asymmetric retaliation risk**: interviews with workers about employer practices can surface information that is protected speech *only if labeled as such*; protocol should make confidentiality architecture explicit before content questions.
@@ -215,6 +217,21 @@ Framing of the research context and participant type.
 ### Covert Categories
 - *"I want to understand [X] without asking '[Y]'"*
 
+### Domain-Specific Questions
+[F: questions specific to this domain]
+
+### Interview Sequencing Rationale
+[G: why the questions run in this order]
+
+### Non-Obvious Harms Inventory
+[H: when the system affects protected-class populations]
+
+### Pre-Interview Design Guardrails
+[I: for power-asymmetric or harm-adjacent topics]
+
+### Red-Flag / Halt Checklist
+[J: for live interviews]
+
 ---
 
 For live support mode:
@@ -268,7 +285,7 @@ A strong Critical Interviewing output:
 - includes at least 8 follow-up questions spanning all four probe types
 - contains at least 2 construct-building probes with explicit instructions about which value words to watch for
 - lists 4–6 covert categories phrased as research intentions, not direct questions
-- **produces a Non-Obvious Harms Inventory** identifying proxy-variable harms, discoverability risk, aggregation harms, and retaliation risk for the populations being researched, with named statutes (e.g., 4/5 rule, GDPR Art. 22, EU AI Act Art. 5/6) when applicable
+- **produces a Non-Obvious Harms Inventory** identifying proxy-variable harms, discoverability risk, aggregation harms, and retaliation risk for the populations being researched, with the relevant rules or statutes named (e.g., the US four-fifths rule of thumb, GDPR Art. 22 on automated decisions) when applicable
 - **specifies Pre-Interview Design Guardrails**: interviewer selection (with power-asymmetry analysis), confidentiality architecture (storage / access / retention / redaction), informed consent specifics, trauma-aware framing, and halt protocol — all named, not implied
 - **includes the Red-Flag/Halt Checklist** for live interviews
 - when a domain is specified, includes named technical questions specific to that domain (proxy variables, named fairness metrics, appeal mechanisms, etc.)
