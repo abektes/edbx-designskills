@@ -1,0 +1,107 @@
+{
+ "skill": "edbx-critical-interviewing",
+ "outputs": {
+  "ai-content-stakeholders": {
+   "D1": {
+    "v": "yes",
+    "q": "Walk me through the last time you opened a news app."
+   },
+   "D2": {
+    "v": "no",
+    "q": "no back-up lead-off; each group has one opening question only"
+   },
+   "D3": {
+    "v": "partial",
+    "q": "And why is that important?"
+   },
+   "D4": {
+    "v": "no",
+    "q": "questions organised by stakeholder and theme, not by descriptive/normative/evaluative probe type"
+   },
+   "D5": {
+    "v": "partial",
+    "q": "What about them bothers you on a deeper level?"
+   },
+   "D6": {
+    "v": "no",
+    "q": "no covert-category list; hidden incentives are asked directly (Shadow values question)"
+   },
+   "M1": {
+    "v": "partial",
+    "q": "The phrase ‘editorial voice’ came up in our earlier conversations."
+   },
+   "M2": {
+    "v": "partial",
+    "q": "using **reflection, projective prompts, laddering, and careful juxtaposition**"
+   }
+  },
+  "algorithmic-hiring-bias": {
+   "D1": {
+    "v": "yes",
+    "q": "In your own words, what was your journey with our hiring process?"
+   },
+   "D2": {
+    "v": "no",
+    "q": "no back-up lead-off"
+   },
+   "D3": {
+    "v": "partial",
+    "q": "What made that choice seem reasonable at the time?"
+   },
+   "D4": {
+    "v": "partial",
+    "q": "name what should have happened and what they need to do it differently"
+   },
+   "D5": {
+    "v": "no",
+    "q": "no mirroring of the participant's own value word"
+   },
+   "D6": {
+    "v": "no",
+    "q": "no covert-category list"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "Zip code was included as feature without D&I review"
+   },
+   "M2": {
+    "v": "partial",
+    "q": "trauma-informed, systems-focused method that uncovers how bias entered the hiring pipeline"
+   }
+  },
+  "workplace-surveillance": {
+   "D1": {
+    "v": "yes",
+    "q": "what led you to request a productivity tracking tool"
+   },
+   "D2": {
+    "v": "no",
+    "q": "no back-up lead-off"
+   },
+   "D3": {
+    "v": "no",
+    "q": "presupposes each group's hidden agenda and challenges with leading questions before listening"
+   },
+   "D4": {
+    "v": "no",
+    "q": "stages (Surface, Probing, Projective, Contradiction) are not descriptive/normative/evaluative probe types"
+   },
+   "D5": {
+    "v": "partial",
+    "q": "can you describe a situation where you felt fairness was lacking"
+   },
+   "D6": {
+    "v": "partial",
+    "q": "Displace personal threat by asking about"
+   },
+   "M1": {
+    "v": "partial",
+    "q": "Yet some research shows monitoring often reduces trust."
+   },
+   "M2": {
+    "v": "partial",
+    "q": "It uses reflection, hypothetical scenarios, projective questions"
+   }
+  }
+ }
+}

@@ -1,0 +1,95 @@
+{
+ "skill": "edbx-anotherlens",
+ "outputs": {
+  "budgeting-app-blind-spots": {
+   "D1": {
+    "v": "yes",
+    "q": "Assumptions your salaried tech mindset might carry"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "You are designing a “money map,” but your users are navigating by landmarks."
+   },
+   "D3": {
+    "v": "partial",
+    "q": "If a feature only makes sense for someone with a stable salary"
+   },
+   "D4": {
+    "v": "partial",
+    "q": "Find gig workers who are unbanked, or who work 5+ platforms"
+   },
+   "D5": {
+    "v": "partial",
+    "q": "acknowledging that your team’s default perspective is a liability"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "26% of US households are unbanked or underbanked"
+   },
+   "M2": {
+    "v": "yes",
+    "q": "We’ll rotate through five lenses, each digging into a different layer of assumption."
+   }
+  },
+  "elderly-telemedicine": {
+   "D1": {
+    "v": "yes",
+    "q": "Are we confusing “owns a tablet” with “knows how to install an app"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "Is our “Add a Caregiver” feature built for a tech-savvy adult child"
+   },
+   "D3": {
+    "v": "partial",
+    "q": "Are we using a font size slider as a lazy “accessibility fix,”"
+   },
+   "D4": {
+    "v": "partial",
+    "q": "What if the home environment is emotionally unsafe or neglectful?"
+   },
+   "D5": {
+    "v": "no",
+    "q": "ends on a design refocus; no mistake-reframe or learning prompt"
+   },
+   "M1": {
+    "v": "no",
+    "q": "no figures or facts about the platform or its users are stated as real"
+   },
+   "M2": {
+    "v": "yes",
+    "q": "## 1. Lens: Digital Literacy ... ## 2. Lens: Trust in Remote Healthcare"
+   }
+  },
+  "school-monitoring-software": {
+   "D1": {
+    "v": "partial",
+    "q": "Before we can shift perspectives, we must name the lens that is already in place."
+   },
+   "D2": {
+    "v": "partial",
+    "q": "The design, as described, centers"
+   },
+   "D3": {
+    "v": "partial",
+    "q": "The “alert” mechanism assumes that more information shared with authority figures is always better"
+   },
+   "D4": {
+    "v": "partial",
+    "q": "Whose Voices Are We Not Hearing at All?"
+   },
+   "D5": {
+    "v": "no",
+    "q": "no growth-mindset or mistake-reframe step; ends on refusing to build"
+   },
+   "M1": {
+    "v": "partial",
+    "q": "Research shows that the same behavior is perceived as more threatening"
+   },
+   "M2": {
+    "v": "partial",
+    "q": "a deliberate, structured practice of surfacing whose perspectives are centered by default"
+   }
+  }
+ }
+}

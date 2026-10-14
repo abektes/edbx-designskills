@@ -1,0 +1,95 @@
+{
+ "skill": "edbx-anti-heroes",
+ "outputs": {
+  "ethical-dialogue-default-data-sharing": {
+   "D1": {
+    "v": "no",
+    "q": "invents one persona, “Growth Amplifier”; no deck role cards named"
+   },
+   "D2": {
+    "v": "no",
+    "q": "no Hero counterpart role; only a “trust lens” and countermeasures"
+   },
+   "D3": {
+    "v": "yes",
+    "q": "This isn’t about anyone here—it’s a voice we all carry."
+   },
+   "D4": {
+    "v": "yes",
+    "q": "Maximise visible traction for partner ecosystem."
+   },
+   "D5": {
+    "v": "partial",
+    "q": "Let’s call him the **Growth Amplifier**."
+   },
+   "M1": {
+    "v": "no",
+    "q": "Alex tweet is labelled “Imagine”; no facts about the product asserted"
+   },
+   "M2": {
+    "v": "yes",
+    "q": "we create a small, imaginary character that represents the pull many products feel toward growth"
+   }
+  },
+  "evaluation-trial-cancel-flow": {
+   "D1": {
+    "v": "no",
+    "q": "uses generic labels (“Burying the exit”, “Emotional manipulation”), not deck roles"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "Heroic Alternative** – What would a respectful, user‑first design look like?"
+   },
+   "D3": {
+    "v": "partial",
+    "q": "Rationalization** – What stories do we tell ourselves to justify it?"
+   },
+   "D4": {
+    "v": "partial",
+    "q": "We need to hit retention KPIs."
+   },
+   "D5": {
+    "v": "no",
+    "q": "no call-out language or card-raising for the team meeting"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "Many companies have already been fined (Adobe, Amazon, Teespring) for similar cancellation mazes."
+   },
+   "M2": {
+    "v": "yes",
+    "q": "It asks five questions:"
+   }
+  },
+  "reverse-brainstorm-finance-notifications": {
+   "D1": {
+    "v": "no",
+    "q": "eight invented villains (Engagement Vampire, Shame Gremlin), not deck roles"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "Flipped Commitment"
+   },
+   "D3": {
+    "v": "yes",
+    "q": "These are the internal villains we are trying not to become."
+   },
+   "D4": {
+    "v": "yes",
+    "q": "Opens, taps, daily active users — regardless of user wellbeing"
+   },
+   "D5": {
+    "v": "partial",
+    "q": "gives the team a shared language and a red-line list"
+   },
+   "M1": {
+    "v": "no",
+    "q": "examples are labelled villain/proud-to-ship copy; no facts about the app asserted"
+   },
+   "M2": {
+    "v": "yes",
+    "q": "## 2. The Anti-Hero Team"
+   }
+  }
+ }
+}

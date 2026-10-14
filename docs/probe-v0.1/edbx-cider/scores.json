@@ -1,0 +1,107 @@
+{
+ "skill": "edbx-cider",
+ "outputs": {
+  "banking-onboarding": {
+   "D1": {
+    "v": "no",
+    "q": "Stages never named; headings are Context, Barriers, Duties of Care, Alternatives, Trade-offs, Reflection"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "Assumed User Environment: Smartphone with a camera, stable internet, possession of a physical photo ID"
+   },
+   "D3": {
+    "v": "partial",
+    "q": "An elderly widower with Parkinson’s, expired driver’s license, no smartphone, and a joint account"
+   },
+   "D4": {
+    "v": "yes",
+    "q": "Accept a broader range of identity documents (consular IDs, birth certificate + utility bill"
+   },
+   "D5": {
+    "v": "no",
+    "q": "single-author analysis; no pooling of participants' assumption lists"
+   },
+   "D6": {
+    "v": "no",
+    "q": "no second Imagine/Design cycle on a different assumption"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "~2% of US adults still lack a cellphone ... 4.5% of US households (FDIC 2021)"
+   },
+   "M2": {
+    "v": "no",
+    "q": "no creator, acronym or stage claims made; presented as a generic ethics review"
+   }
+  },
+  "telehealth-booking": {
+   "D1": {
+    "v": "no",
+    "q": "invents a different expansion; the five CIDER stage names never appear"
+   },
+   "D2": {
+    "v": "yes",
+    "q": "The user has a smartphone or computer with reliable broadband."
+   },
+   "D3": {
+    "v": "partial",
+    "q": "a Spanish-speaking older adult with low digital literacy and prepaid mobile data may face all four barriers"
+   },
+   "D4": {
+    "v": "yes",
+    "q": "Allow guest checkout: no required account or email; phone number alone can be used"
+   },
+   "D5": {
+    "v": "no",
+    "q": "no pooling of participants' assumptions into a shared list"
+   },
+   "D6": {
+    "v": "no",
+    "q": "no second cycle on a different assumption"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "8–12 page form, medical jargon, insurance fields, photo ID upload, auto-timeout"
+   },
+   "M2": {
+    "v": "yes",
+    "q": "**C**ontext, **I**nclusion & Impact, **D**esign audit, **E**thical evaluation, **R**ecommendations"
+   }
+  },
+  "voting-registration": {
+   "D1": {
+    "v": "no",
+    "q": "invents a different expansion; the five CIDER stage names never appear"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "Some users may not have personal devices, private internet access, or stable mailing addresses"
+   },
+   "D3": {
+    "v": "no",
+    "q": "no scenario of a specific user failing on one chosen assumption; only impact tables"
+   },
+   "D4": {
+    "v": "yes",
+    "q": "Make physical street address **optional**"
+   },
+   "D5": {
+    "v": "no",
+    "q": "no pooling of participants' assumptions into a shared list"
+   },
+   "D6": {
+    "v": "no",
+    "q": "no second cycle on a different assumption"
+   },
+   "M1": {
+    "v": "partial",
+    "q": "CAPTCHA is image-based or visual-spatial with no accessible alternative"
+   },
+   "M2": {
+    "v": "yes",
+    "q": "CIDER is applied here as **Context, Impact, Design, Ethics, Recommendations**"
+   }
+  }
+ }
+}
