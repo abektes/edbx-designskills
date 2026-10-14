@@ -13,7 +13,7 @@ CIDER is an assumption elicitation technique that helps designers critically eva
 
 The name is an acronym. Each letter maps to a stage: **C**ritique, **I**magine, **D**esign, **E**xpand, **R**epeat. A full CIDER session moves through all five stages in order. The first three (C → I → D) can run as a standalone exercise. The last two (E → R) add team-level synthesis and a second cycle.
 
-CIDER was developed by Oleson, Solomon, Horowitz et al. (2022) as a teaching tool for inclusive design skills. It works equally well in professional practice — anywhere a designer wants to stop guessing about inclusion and start finding out what their design actually assumes.
+CIDER was developed by Oleson, Solomon, Perdriau and Ko (ICER 2022; ACM TOCHI 2023) as a teaching tool for inclusive design skills. It works equally well in professional practice — anywhere a designer wants to stop guessing about inclusion and start finding out what their design actually assumes.
 
 > **Mindset check:** Assumption-surfacing is a skill to build, not a failure to correct. Every designer carries assumptions. The goal is to get better at finding them, not to feel bad about having them.
 

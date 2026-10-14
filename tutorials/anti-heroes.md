@@ -40,7 +40,7 @@ Anti-Heroes gives the team that vocabulary. "This is a Trap-Setter — once you'
 | Camouflager | Hides costs or terms in visual or copy noise | Unveiler | Puts costs and terms upfront, as visible as the call to action |
 | Empathy Manipulator | Uses guilt, fear or shame to push a choice | Life Coach | Honest information that helps the user act on their own intent |
 | Cynic | Treats the user as something to extract from | Liberator | Optimizes for the user's long-term interest |
-| Nickeling-and-Diming | Splits the real cost into small fees that appear late | Transparent Pricer | States the all-in price upfront |
+| Nickling-and-Diming | Splits the real cost into small fees that appear late | Transparent Pricer | States the all-in price upfront |
 | Black Hat | Uses techniques known to deceive — fake timers, disguised ads | White Hat | Persuades only toward the user's own goals, openly |
 | Two-Faced | Promises one thing in marketing, does another in defaults | Consistent Communicator | Keeps message, defaults and behavior aligned |
 | Puppeteer | Steers through hidden defaults or opaque algorithms | Liberator | Makes the steering visible and overridable |

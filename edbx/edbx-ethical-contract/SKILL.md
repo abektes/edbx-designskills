@@ -117,7 +117,7 @@ Include at minimum: primary users, vulnerable subgroups (e.g., minors, neurodive
 
 **B. Bias audit thresholds.** For any product using ranking, scoring, recommendation, or automated decisioning, define:
 
-- **Disparate impact threshold**: the ratio at which the team agrees to halt deployment (industry standard floor: 0.8 / "four-fifths rule")
+- **Disparate impact threshold**: the ratio at which the team agrees to halt deployment (e.g. 0.8, the "four-fifths rule": a rule of thumb from US employment-selection guidelines, 29 CFR 1607.4(D), not a general industry standard)
 - **Subgroup minimum sample size**: the smallest n the team will accept for a fairness claim (e.g., n ≥ 30 per subgroup before claiming "no disparate impact")
 - **Proxy variables identified and named**: zip code, school name, browser language, device type — anything that could carry protected-class information without naming it
 - **Model confidence floor**: below which a decision must escalate to human review

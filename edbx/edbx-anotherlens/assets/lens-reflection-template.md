@@ -28,7 +28,7 @@ Use this template for solo or team reflection sessions. Write your answers direc
 
 [Lens 1, Q1 answer]
 
-### Q2: What details here are unfair? Unjustified? Unused?
+### Q2: What details here are unfair? Unverified? Unused?
 
 [Lens 1, Q2 answer]
 

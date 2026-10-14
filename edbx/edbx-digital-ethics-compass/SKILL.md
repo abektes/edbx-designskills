@@ -9,13 +9,13 @@ tags: [ethical-design, audit]
 
 ## Overview
 
-Digital Ethics Compass guides you to reflect on your product and business development goals through heuristics relating to data, automation, and behavioral design. It acts as an ethical navigator for companies and design teams, providing heuristic questions across four categories.
+Digital Ethics Compass, a tool by the Danish Design Center (2021), guides you to reflect on your product and business development goals through heuristics relating to data, automation, and behavioral design. It acts as an ethical navigator for companies and design teams, providing heuristic questions across four categories.
 
-The compass is a printable, rotatable wheel with "Put the Human in the Cosmos" at the center. The inner ring has four main categories: **Data**, **Avoid Manipulation**, **Make Intentions Transparent**, and **Automation**. The middle and outer rings provide increasingly specific heuristic questions for reflection.
+The compass is a printable, rotatable wheel with "Put the Human at the Center" in the middle. The inner ring has four main categories: **Data**, **Avoid Manipulation**, **Make Intentions Transparent**, and **Automation**. The middle and outer rings provide increasingly specific heuristic questions for reflection.
 
 The compass can be used to evaluate ethical decisions at every level — from individual features to entire business models. It provides a structured heuristic framework that is practical and actionable, not theoretical.
 
-> **Mindset check:** "Put the Human in the Cosmos" is not just a slogan — it is the orienting principle for every heuristic question. If the human is not at the center, the compass reading is off.
+> **Mindset check:** "Put the Human at the Center" is not just a slogan — it is the orienting principle for every heuristic question. If the human is not at the center, the compass reading is off.
 
 ## Use This Skill When
 
@@ -37,7 +37,7 @@ Provide as many of these as are available:
 
 ## Workflow
 
-The compass evaluates four categories with "Put the Human in the Cosmos" as the orienting principle throughout. Before any category is scored, the team must complete an **explicit Stakeholder Map** — without it, "Put the Human in the Cosmos" remains an abstraction.
+The compass evaluates four categories with "Put the Human at the Center" as the orienting principle throughout. Before any category is scored, the team must complete an **explicit Stakeholder Map** — without it, "Put the Human at the Center" remains an abstraction.
 
 ---
 
@@ -178,7 +178,7 @@ Open with a short **Answer**: two to four sentences that answer the question the
 
 ### Digital Ethics Compass: [Product Name]
 
-Center principle: **"Put the Human in the Cosmos"**
+Center principle: **"Put the Human at the Center"**
 
 ### Answer
 
@@ -271,7 +271,7 @@ Every figure, rate, incident, past failure or fact about the user's product, use
 - Do not skip any category. All four must be evaluated every session.
 - Do not mark everything as passing. Few products are ethically flawless.
 - Do not treat heuristics as pass/fail checkboxes. Each requires substantive reflection.
-- Do not forget the center principle. "Put the Human in the Cosmos" frames every assessment.
+- Do not forget the center principle. "Put the Human at the Center" frames every assessment.
 - Do not ignore low-risk products. The compass should affirm ethical practice too.
 - Do not limit the compass to negative findings. Identify what the product does well ethically.
 - Do not name other skills or boxes in the deliverable as if the reader has them. Describe a related method in plain terms (a structured worry session, a stakeholder harm map).
@@ -292,7 +292,7 @@ A strong Digital Ethics Compass output:
 - names the specific business pressure (metric, KPI, incentive) behind every 🔴 finding
 - classifies every improvement as Quick Win / Strategic Fix / Requires Leadership
 - produces a Compass Reading every session that includes the business pressure driver
-- maintains "Put the Human in the Cosmos" framing throughout — grounded in the named humans of Step 0, not abstract humanity
+- maintains "Put the Human at the Center" framing throughout — grounded in the named humans of Step 0, not abstract humanity
 - works for both data-intensive and simpler products
 - opens with a direct answer to the decision or question the user asked, which the rest of the output supports
 - lists the figures and facts about the user's situation it relies on in an Evidence Ledger, typed user-supplied / sourced / assumption / unknown, and invents none

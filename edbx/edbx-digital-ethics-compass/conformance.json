@@ -478,11 +478,11 @@
       "checks": [
         {
           "kind": "section_present",
-          "pattern": "Put the Human in the Cosmos"
+          "pattern": "Put the Human at the Center"
         }
       ],
-      "bar": "maintains \"Put the Human in the Cosmos\" framing throughout",
-      "desc": "the output states the 'Put the Human in the Cosmos' center principle"
+      "bar": "maintains \"Put the Human at the Center\" framing throughout",
+      "desc": "the output states the 'Put the Human at the Center' center principle"
     }
   ],
   "semantic": [

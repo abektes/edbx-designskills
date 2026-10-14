@@ -40,7 +40,7 @@ Fair Patterns works in seven steps:
 
 2. **Root cause analysis** — for each dark pattern found, identify the upstream business decision or KPI that created it. "Trick questions come from a conversion KPI with no retention counterbalance."
 
-3. **Legal compliance mapping with jurisdiction + penalty specificity** — for every dark pattern, name the specific statute (article number, not just "GDPR"), the jurisdiction, and the penalty exposure. Examples: GDPR Art. 7(3) on consent withdrawal in the EU (penalty up to 4% global turnover); EU Omnibus Directive 2019/2161; FTC Act §5 on deceptive practices in the US; CCPA §1798.140 in California; DSA Art. 25 banning dark patterns for VLOPs (penalty up to 6%); UK CMA Digital Markets Act; Brazilian LGPD. Patterns flagged 🔴 in two or more jurisdictions become must-fix before next release.
+3. **Legal compliance mapping with jurisdiction + penalty specificity** — for every dark pattern, name the specific statute (article number, not just "GDPR"), the jurisdiction, and the penalty exposure. Examples: GDPR Art. 7(3) on consent withdrawal in the EU (penalty up to 4% global turnover); EU Omnibus Directive 2019/2161; FTC Act §5 on deceptive practices in the US; CCPA §1798.140 in California; DSA Art. 25 prohibiting deceptive interface design on online platforms (penalty up to 6%); UK CMA Digital Markets Act; Brazilian LGPD. Patterns flagged 🔴 in two or more jurisdictions become must-fix before next release.
 
 4. **Vulnerable Population Harm Matrix** — dark patterns do not harm everyone equally. For each pattern, name **which populations are disproportionately affected** and the mechanism of differential harm (e.g., minors face developmental susceptibility to FOMO; people in financial precarity face stronger sunk-cost loss aversion; people with cognitive disabilities face consent-fatigue exploitation; older adults face default-bias on unfamiliar UIs; users on slow connections experience 3-second delays as friction asymmetry). A pattern that's annoying for typical users but catastrophic for a vulnerable subgroup is rated by the worst case.
 
@@ -74,8 +74,8 @@ Describe your product and the flows you want to audit. If you know specific area
 
 | Dark Pattern | Where | Root Cause | Statute (jurisdiction + penalty) | Risk |
 |---|---|---|---|---|
-| Hidden continuity | Trial converts to paid with one email notification | Metric: trial-to-paid conversion rate, no churn-rate counterweight | EU: GDPR Art. 7(3) — up to 4% global turnover; DSA Art. 25 (if VLOP) — up to 6%; US: FTC Act §5 (Amazon Prime cancellation case 2023 set precedent) | 🔴 |
-| Misdirection | "Cancel anytime" button is harder to find than "upgrade" | UX team rewarded for upgrade clicks, not cancellation completion | EU: DSA Art. 25 explicitly bans hiding cancel option for VLOPs; US: FTC Click-to-Cancel rule | 🟡 |
+| Hidden continuity | Trial converts to paid with one email notification | Metric: trial-to-paid conversion rate, no churn-rate counterweight | EU: GDPR Art. 7(3) — up to 4% global turnover; DSA Art. 25 (online platforms) — up to 6%; US: FTC Act §5 (Amazon Prime cancellation case 2023 set precedent) | 🔴 |
+| Misdirection | "Cancel anytime" button is harder to find than "upgrade" | UX team rewarded for upgrade clicks, not cancellation completion | EU: DSA Art. 25 prohibits deceptive interface design on online platforms, and the Commission may issue guidelines on making termination harder than sign-up; US: FTC Click-to-Cancel rule | 🟡 |
 | Confirmshaming | "No thanks, I don't want to save money" decline button | Copywriter briefed to maximize click-through, not user respect | EU: DSA Art. 25 names confirmshaming as banned dark pattern; US: reputational + state UDAP statutes | 🟢 |
 
 **Vulnerable Population Harm Matrix (excerpt):**

@@ -13,7 +13,7 @@ Another Lens challenges designers to constantly check and question their own val
 
 The three lenses are not steps in a checklist. They are perspectives you return to repeatedly throughout a project. That said, this skill provides a structured workflow so each lens gets genuine attention rather than a glance.
 
-> **Principle #07 — Another Lens.** From *Universal Methods of Ethical Design*. Hashtags: #breakmydesign #newperspectives #designresponsibility. See also: Data Feminism · Hippocratic Oath.
+> **Principle #07 — Another Lens.** Created by Airbnb Design and News Deeply (2017); profiled in *Universal Methods of Ethical Design*. Hashtags: #breakmydesign #newperspectives #designresponsibility. See also: Data Feminism · Hippocratic Oath.
 
 The method is deeply Socratic — it asks questions and does not lecture. The value is in the questions asked, not the answers given. There is no "correct" output. What matters is that at least one assumption surfaces, at least one unheard perspective is named, and one concrete next action is produced.
 
@@ -53,7 +53,7 @@ This lens turns the designer's gaze inward. Before examining the product, examin
 **Reflection questions:**
 
 1. What are my lenses? Am I just confirming my assumptions or am I challenging them?
-2. What details here are unfair? Unjustified? Unused?
+2. What details here are unfair? Unverified? Unused?
 3. Am I holding on to something that I need to let go of?
 4. What's here that I designed for me? What's here that I designed for other people?
 

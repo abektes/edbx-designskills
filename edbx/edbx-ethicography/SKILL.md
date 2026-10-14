@@ -11,9 +11,9 @@ tags: [ethical-design, audit]
 
 Ethicography enables design researchers to describe the ethical nuances of collaborative design decisions by illuminating value-centered and manipulative attentions. Every moment designers make decisions, they act according to their own ethical and moral codes — whether they realize it or not.
 
-Ethicography uses the designer as an ethical lens. It treats design decisions and speech acts as data, analyzing them for the explicit or implicit values they serve or undermine. The method maps each decision on a 2×2 matrix of Explicit/Implicit × Persuasion/Coercion, revealing the ethical quality of a design process over time.
+Ethicography uses the designer as an ethical lens. It treats design decisions and speech acts as data, analyzing them for the explicit or implicit values they serve or undermine. The method maps each decision on a 2×2 matrix of Explicit/Implicit × Persuasion/Coercion, revealing the ethical quality of a design process over time. (The 2×2 is an edbx adaptation: the published method colour-codes each speech act as more value-centred or more manipulative.)
 
-Developed by Chuvaala, Gray et al. (2019, 2024) as an analytical framework for design ethics research, Ethicography is the most analytically rigorous method in the ethical design toolkit. It operates in two modes: **Team Reflection** (accessible, facilitated) and **Research Documentation** (formal, citable).
+Developed by Chivukula, Gray and Brier (CHI 2019) as an analytical framework for design ethics research, Ethicography is the most analytically rigorous method in the ethical design toolkit. It operates in two modes: **Team Reflection** (accessible, facilitated) and **Research Documentation** (formal, citable).
 
 > **Mindset check:** Ethicography analyzes what people *say* in design meetings as data, not just what decisions were made. Meeting notes, design crits, and Slack discussions are all valid input. The goal is to reveal the ethical trajectory of decisions — not to assign blame.
 

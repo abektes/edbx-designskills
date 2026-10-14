@@ -46,7 +46,7 @@ Anti-Heroes is one method with four working modes. They share the same card voca
 Critique an existing design and identify which Anti-Hero patterns are present, then propose the matching Hero moves.
 
 1. Restate the design's required user task and the user's likely emotional state.
-2. Walk the design and tag each suspicious element with a candidate Anti-Hero card (Trap-Setter, Empathy Manipulator, Nickeling-and-Diming, etc.). Cite the specific UI moment, copy, or interaction — not vibes.
+2. Walk the design and tag each suspicious element with a candidate Anti-Hero card (Trap-Setter, Empathy Manipulator, Nickling-and-Diming, etc.). Cite the specific UI moment, copy, or interaction — not vibes.
 3. For each tag, name the Hero counterpart and describe one concrete change that flips the move.
 4. Note where Anti-Hero patterns are unavoidable (e.g., a regulator-required friction step) so the team does not over-correct.
 5. Hand back: list of Anti-Hero hits, Hero counter-moves, and a short risk note.
@@ -92,7 +92,7 @@ Regardless of mode, follow this overall arc:
    - Camouflager ↔ Unveiler
    - Empathy Manipulator ↔ Life Coach
    - Cynic ↔ Liberator (or Life Coach)
-   - Nickeling-and-Diming ↔ Transparent Pricer
+   - Nickling-and-Diming ↔ Transparent Pricer
    - Black Hat ↔ White Hat (or Unveiler)
    - Two-Faced ↔ Consistent Communicator
    - Puppeteer ↔ Liberator (or Empowerer)
@@ -194,7 +194,7 @@ Scale guidance: for a single screen or flow, expect 2–5 Anti-Hero hits, 2–5 
 > |---|---|---|---|
 > | Trap-Setter | Cancel button is buried under three nested menus | Settings → Subscription → Manage → "More options" | User has to discover the path; entry was one tap |
 > | Empathy Manipulator | "Are you sure? You'll lose your 14-day streak" with a sad-mascot illustration | Step 2 of cancel | Weaponizes loss aversion against a user who already decided |
-> | Nickeling-and-Diming | Offers a 50% discount only if user clicks "Stay" twice | Step 3 | Makes the cheaper price contingent on staying, not on asking |
+> | Nickling-and-Diming | Offers a 50% discount only if user clicks "Stay" twice | Step 3 | Makes the cheaper price contingent on staying, not on asking |
 >
 > **Hero counter-moves**
 >

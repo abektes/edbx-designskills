@@ -35,9 +35,9 @@ When critiquing, cite the specific UI element, copy line, default, or interactio
 - **Cynic:** Treats the user as a target to be extracted from. Optimizes for short-term stakeholder metrics at the expense of trust.
 - **Liberator:** Treats the user as the principal. Optimizes for the user's long-term interest even when it conflicts with short-term funnel metrics.
 
-### Nickeling-and-Diming ↔ Transparent Pricer
+### Nickling-and-Diming ↔ Transparent Pricer
 
-- **Nickeling-and-Diming:** Splits the real cost across many small fees, surcharges, "optional" defaults, or upsell gates that appear after commitment. Users feel surprised at checkout.
+- **Nickling-and-Diming:** Splits the real cost across many small fees, surcharges, "optional" defaults, or upsell gates that appear after commitment. Users feel surprised at checkout.
 - **Transparent Pricer:** States the all-in price the user will actually pay, upfront, in the same place as the offer.
 
 ### Black Hat ↔ White Hat

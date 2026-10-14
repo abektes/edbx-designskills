@@ -16,13 +16,13 @@ Name your lenses specifically. "I studied at a university" is a lens. "I've neve
 
 **Team facilitation:** Give each person 2 minutes of silent writing. Then share around. Do not let anyone skip — even "I don't think I have strong lenses" is a lens worth naming. Look for patterns: does the team share the same lenses? That's a signal, not a coincidence.
 
-### Question 2: What details here are unfair? Unjustified? Unused?
+### Question 2: What details here are unfair? Unverified? Unused?
 
 Scan the design for decisions that can't be defended when examined closely. "Just the way we do it" is not a defense. Neither is "users expect it" without evidence.
 
 **Solo facilitation:** Walk through the design element by element. For each, ask: "Why is this here?" If the answer is circular ("because we designed it that way") or appeals to convention without justification, flag it.
 
-**Team facilitation:** Have each person flag one element they find unjustified. Disagreement here is healthy — it means different lenses are active.
+**Team facilitation:** Have each person flag one element they find unverified. Disagreement here is healthy — it means different lenses are active.
 
 ### Question 3: Am I holding on to something that I need to let go of?
 

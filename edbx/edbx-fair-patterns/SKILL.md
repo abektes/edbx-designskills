@@ -97,9 +97,9 @@ Vague references to "consent law" are not useful. For each dark pattern found, n
 
 | Dark Pattern | Statute / Article (named, not generic) | Jurisdiction | Penalty exposure | Recent enforcement (if known) | Risk |
 |---|---|---|---|---|---|
-| [pattern] | e.g., GDPR Art. 7(3) (right to withdraw consent), EU Omnibus Directive 2019/2161, FTC Act §5 (deceptive practices), CCPA §1798.140, DSA Art. 25 (dark patterns ban for VLOPs), UK CMA Digital Markets Act, Brazilian LGPD Art. 9 | EU/UK/US-federal/US-CA/Brazil/etc. | e.g., GDPR up to 4% global turnover; DSA up to 6%; FTC consent decrees + per-violation fines | e.g., Amazon Prime cancellation FTC case 2023 | 🔴/🟡/🟢 |
+| [pattern] | e.g., GDPR Art. 7(3) (right to withdraw consent), EU Omnibus Directive 2019/2161, FTC Act §5 (deceptive practices), CCPA §1798.140, DSA Art. 25 (online platforms must not design interfaces that deceive or manipulate users; does not apply where the UCPD or GDPR already covers the practice), UK CMA Digital Markets Act, Brazilian LGPD Art. 9 | EU/UK/US-federal/US-CA/Brazil/etc. | e.g., GDPR up to 4% global turnover; DSA up to 6%; FTC consent decrees + per-violation fines | e.g., Amazon Prime cancellation FTC case 2023 | 🔴/🟡/🟢 |
 
-Flag any pattern with 🔴 risk in two or more jurisdictions as **must-fix before next release**. List of named patterns explicitly banned by the EU DSA (for VLOPs): pre-checked boxes, repeated nagging after declined consent, hiding the cancel option, false urgency, and confirmshaming.
+Flag any pattern with 🔴 risk in two or more jurisdictions as **must-fix before next release**. DSA Art. 25 applies to all online platforms, not only very large ones, and names no list of banned patterns: it prohibits deceptive or manipulative interface design in general and lets the Commission issue guidelines on three practices (giving one choice more prominence, repeatedly asking for a choice already made, and making termination harder than sign-up). Do not cite it as banning a named pattern.
 
 ### Step 2.7 — Vulnerable Population Harm Matrix
 
