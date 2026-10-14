@@ -1,0 +1,95 @@
+{
+ "skill": "edbx-worrystorming",
+ "outputs": {
+  "ai-therapy-bot": {
+   "D1": {
+    "v": "yes",
+    "q": "Systematically surface everything that could go wrong"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "Clinical Safety · Data Privacy · Replacement of Human Connection · Liability"
+   },
+   "D3": {
+    "v": "no",
+    "q": "Worries are never reframed as values; they go straight to prioritisation and mitigations"
+   },
+   "D4": {
+    "v": "no",
+    "q": "Next steps map worries to mitigations; no refined ideas generated from reframed values"
+   },
+   "D5": {
+    "v": "partial",
+    "q": "Systematically surface everything that could go wrong"
+   },
+   "M1": {
+    "v": "no",
+    "q": "Risks are framed as possibilities; no figures or facts asserted about the user's chatbot"
+   },
+   "M2": {
+    "v": "partial",
+    "q": "Imagine the project has already failed, caused harm, or attracted severe criticism. Working backwards"
+   }
+  },
+  "neighborhood-safety-app": {
+   "D1": {
+    "v": "yes",
+    "q": "Worst Fears / “What Could Possibly Go Wrong?”"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "WORRY CLUSTER 1: Racial Profiling & Algorithmic Bias"
+   },
+   "D3": {
+    "v": "no",
+    "q": "Clusters end in a worst-case consequence, never reframed as values the team cares about"
+   },
+   "D4": {
+    "v": "no",
+    "q": "Boil-down ranks top risks; no refined ideas or alternatives generated"
+   },
+   "D5": {
+    "v": "partial",
+    "q": "This is not a feature brainstorm. We are designing the worst-case scenarios."
+   },
+   "M1": {
+    "v": "yes",
+    "q": "**Date:** October 26, 2023"
+   },
+   "M2": {
+    "v": "no",
+    "q": "Session ground rules are generic; no creator or other method named"
+   }
+  },
+  "school-facial-recognition": {
+   "D1": {
+    "v": "yes",
+    "q": "Detailed Worries by Category"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "Privacy Harms ... Bias and Discrimination ... Normalization of Surveillance for Children"
+   },
+   "D3": {
+    "v": "no",
+    "q": "Worries are prioritised by severity x likelihood; none reframed as values"
+   },
+   "D4": {
+    "v": "partial",
+    "q": "Mitigations and Alternatives (If Decision-Makers Still Consider Proceeding)"
+   },
+   "D5": {
+    "v": "partial",
+    "q": "surfacing fears, worst-case scenarios, and hidden risks before a technology is adopted"
+   },
+   "M1": {
+    "v": "partial",
+    "q": "NIST and other studies consistently show facial recognition is less accurate for women"
+   },
+   "M2": {
+    "v": "no",
+    "q": "Method described generically as surfacing fears and risks; no creator or other method named"
+   }
+  }
+ }
+}

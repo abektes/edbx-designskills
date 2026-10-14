@@ -1,0 +1,95 @@
+{
+ "skill": "edbx-values-levers",
+ "outputs": {
+  "accessibility-advocacy": {
+   "D1": {
+    "v": "no",
+    "q": "Levers are per-stakeholder persuasion moves; no lever defined as a practice that opens values conversations"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "Find one product manager or engineer who already has a personal connection to disability"
+   },
+   "D3": {
+    "v": "no",
+    "q": "No institutional-mandate lever; list not flagged as open"
+   },
+   "D4": {
+    "v": "no",
+    "q": "No mention of communication modes or face-to-face versus mediated settings"
+   },
+   "D5": {
+    "v": "partial",
+    "q": "Add them to the Definition of Done"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "Casually mention that ADA‑related lawsuits increased by 14% last year"
+   },
+   "M2": {
+    "v": "yes",
+    "q": "Soft Leverage Points — Interventions That Slide Into Their Existing Values"
+   }
+  },
+  "design-ethics-onboarding": {
+   "D1": {
+    "v": "partial",
+    "q": "A lever is anything we can adjust in how we work"
+   },
+   "D2": {
+    "v": "no",
+    "q": "Invents four lever categories (design, process, metric, team) rather than Shilton's observed levers"
+   },
+   "D3": {
+    "v": "no",
+    "q": "No institutional-mandate lever; list not flagged as open"
+   },
+   "D4": {
+    "v": "no",
+    "q": "No mention of communication modes or face-to-face versus mediated settings"
+   },
+   "D5": {
+    "v": "partial",
+    "q": "your biggest lever is **modelling** ethical curiosity without judgment"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "used by design teams at places like the BBC and Google"
+   },
+   "M2": {
+    "v": "yes",
+    "q": "**Four categories of levers**"
+   }
+  },
+  "privacy-culture-shift": {
+   "D1": {
+    "v": "no",
+    "q": "Levers named as Empathy, Systems, Imagination, Discourse, Discernment; none defined as a practice opening values conversations"
+   },
+   "D2": {
+    "v": "no",
+    "q": "None of Shilton's levers named; invents a different lever set"
+   },
+   "D3": {
+    "v": "no",
+    "q": "No institutional-mandate lever; list not flagged as open"
+   },
+   "D4": {
+    "v": "no",
+    "q": "No mention of communication modes"
+   },
+   "D5": {
+    "v": "no",
+    "q": "No account of leaders strengthening levers so reflection becomes routine"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "I want to read three verbatim quotes from our last user research session"
+   },
+   "M2": {
+    "v": "yes",
+    "q": "| **Empathy** | The \"user\" is an abstract data-generating organism."
+   }
+  }
+ }
+}

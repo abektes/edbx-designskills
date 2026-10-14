@@ -1,0 +1,71 @@
+{
+ "skill": "edbx-responsible-design-prism",
+ "outputs": {
+  "freemium-mobile-game": {
+   "D1": {
+    "v": "partial",
+    "q": "violating every lens of the Prism simultaneously"
+   },
+   "D2": {
+    "v": "no",
+    "q": "No reflection on the team's state of mind or organisational pressures; external review of mechanics"
+   },
+   "D3": {
+    "v": "yes",
+    "q": "It prioritises revenue extraction over all other considerations"
+   },
+   "M1": {
+    "v": "no",
+    "q": "Mechanics are taken from the prompt; other claims are generic ('often', 'typically')"
+   },
+   "M2": {
+    "v": "partial",
+    "q": "a multi-perspective ethical evaluation tool that “splits” a product’s design into distinct but interconnected dimensions"
+   }
+  },
+  "ride-sharing-surge": {
+   "D1": {
+    "v": "yes",
+    "q": "Each element is mapped on a five-point spectrum"
+   },
+   "D2": {
+    "v": "no",
+    "q": "No self-reflection or organisational-pressure prompts; element-by-element UX analysis only"
+   },
+   "D3": {
+    "v": "yes",
+    "q": "toward using transparency to support genuine consent and fair exchange"
+   },
+   "M1": {
+    "v": "no",
+    "q": "Examples are framed as 'what it often looks like' or redesign illustrations"
+   },
+   "M2": {
+    "v": "no",
+    "q": "Facets and scale are framed as 'for this assessment', not as the method's own"
+   }
+  },
+  "spotify-wrapped": {
+   "D1": {
+    "v": "yes",
+    "q": "Spotify Wrapped 2025:  ⬤ (6.5/10 — leaning irresponsible)"
+   },
+   "D2": {
+    "v": "no",
+    "q": "No reflection on designer or organisational pressures; external critique with a 'Facilitator' label only"
+   },
+   "D3": {
+    "v": "yes",
+    "q": "a sophisticated corporate growth lever that externalises social and psychological costs onto users"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "Users with Premium accounts get a richer Wrapped experience"
+   },
+   "M2": {
+    "v": "yes",
+    "q": "The Prism deconstructs a product along **six ethical lenses**"
+   }
+  }
+ }
+}

@@ -1,0 +1,107 @@
+{
+ "skill": "edbx-stf-et",
+ "outputs": {
+  "ai-benefits-eligibility-system": {
+   "D1": {
+    "v": "partial",
+    "q": "The following ethical principles form the evaluative frame for this toolkit session"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "Stakeholder Impact Matrix"
+   },
+   "D3": {
+    "v": "partial",
+    "q": "Short-term cost savings; long-term social costs from increased poverty, homelessness, health crises, and litigation"
+   },
+   "D4": {
+    "v": "partial",
+    "q": "Co-design with affected communities, legal advocates, and frontline workers"
+   },
+   "D5": {
+    "v": "yes",
+    "q": "Rating scale:** 1 = severe ethical deficit; 5 = strong ethical alignment"
+   },
+   "D6": {
+    "v": "yes",
+    "q": "In 2028, the Agency’s “EligibilityBot” processes 85% of applications within 24 hours"
+   },
+   "M1": {
+    "v": "partial",
+    "q": "Case workers, reduced by 70%, now handle only appeals and report burnout"
+   },
+   "M2": {
+    "v": "no",
+    "q": "Tool names and roles match the page; no wrong creator or tool count"
+   }
+  },
+  "clinical-ai-triage-tool": {
+   "D1": {
+    "v": "yes",
+    "q": "Weighing Options: AI Triage Deployment"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "Does the option distribute benefits and burdens fairly, especially for historically under‑triaged groups?"
+   },
+   "D3": {
+    "v": "no",
+    "q": "Options weighed on patient values and hotspots only; no separate organizational-impact lens"
+   },
+   "D4": {
+    "v": "partial",
+    "q": "Opportunity to co‑design with affected communities could further embed justice"
+   },
+   "D5": {
+    "v": "yes",
+    "q": "Synthesis Matrix"
+   },
+   "D6": {
+    "v": "no",
+    "q": "Future Story not run in this scenario; no look-back narrative"
+   },
+   "M1": {
+    "v": "partial",
+    "q": "The correction is an internal “patch” with no external validation"
+   },
+   "M2": {
+    "v": "no",
+    "q": "Weighing Options used to compare options; no wrong creator or tool count"
+   }
+  },
+  "social-media-mental-health-feature": {
+   "D1": {
+    "v": "partial",
+    "q": "A risk‑prioritisation tool that maps likelihood and severity of each harm"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "Human values**: well‑being, autonomy, self‑esteem, fairness, privacy, creative expression"
+   },
+   "D3": {
+    "v": "partial",
+    "q": "Organizational values**: growth, engagement, user retention, data‑driven design"
+   },
+   "D4": {
+    "v": "partial",
+    "q": "Establish a **live ethics review board** that meets quarterly"
+   },
+   "D5": {
+    "v": "yes",
+    "q": "Likelihood (1‑5) | Severity (1‑5)"
+   },
+   "D6": {
+    "v": "no",
+    "q": "Future Story not run in this scenario; no look-back narrative"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "Survey of 800 creators** (ages 14–35)"
+   },
+   "M2": {
+    "v": "partial",
+    "q": "should inform the next Materialize iteration"
+   }
+  }
+ }
+}

@@ -1,0 +1,83 @@
+{
+ "skill": "edbx-value-dams-and-flows",
+ "outputs": {
+  "open-source-monetization": {
+   "D1": {
+    "v": "no",
+    "q": "Dams defined as 'blocking negative value flows'; no option removed for strong objection by even a small share"
+   },
+   "D2": {
+    "v": "no",
+    "q": "Flows defined as enabling positive value transmission per stakeholder; not options a substantial share find appealing"
+   },
+   "D3": {
+    "v": "no",
+    "q": "Dams and flows tabulated side by side per option; no dams-first-then-flows sequence"
+   },
+   "D4": {
+    "v": "partial",
+    "q": "We evaluate five common open-source monetization models"
+   },
+   "M1": {
+    "v": "no",
+    "q": "Options and stakeholder values come from the prompt or are generic; no invented figures about the project"
+   },
+   "M2": {
+    "v": "yes",
+    "q": "dams** (blocking negative value flows) or **flows** (enabling positive value transmission)"
+   }
+  },
+  "patient-records-portal": {
+   "D1": {
+    "v": "no",
+    "q": "Dams defined as features that block or reduce a value; not options struck out for strong objection"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "Enables transparency, safety, autonomy, compliance, and engineering manageability"
+   },
+   "D3": {
+    "v": "no",
+    "q": "No two-step filter; dams and flows listed together per value and per option"
+   },
+   "D4": {
+    "v": "yes",
+    "q": "Tiered release: routine results immediate ... Adopt as the core release model"
+   },
+   "M1": {
+    "v": "no",
+    "q": "Stakeholders from the prompt; time windows are framed as 'for example' recommendations"
+   },
+   "M2": {
+    "v": "yes",
+    "q": "**Dams**: features, policies, or design choices that block or reduce a value"
+   }
+  },
+  "social-media-child-safety": {
+   "D1": {
+    "v": "no",
+    "q": "Dams are value conflicts between stakeholder pairs, not options removed after strong objection"
+   },
+   "D2": {
+    "v": "no",
+    "q": "Flows are alignments between stakeholder values, not options many stakeholders find appealing"
+   },
+   "D3": {
+    "v": "no",
+    "q": "No sequence; dams and flows mapped in parallel in a pairwise matrix"
+   },
+   "D4": {
+    "v": "no",
+    "q": "Maps stakeholder values against each other; no list of candidate design options sorted into dammed or flowing"
+   },
+   "M1": {
+    "v": "no",
+    "q": "Stakeholders and values come from the prompt; dashboard text is a labelled example"
+   },
+   "M2": {
+    "v": "yes",
+    "q": "Value dams are the points where two or more core values conflict directly"
+   }
+  }
+ }
+}
