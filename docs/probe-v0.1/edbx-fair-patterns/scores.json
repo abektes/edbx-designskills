@@ -1,0 +1,107 @@
+{
+ "skill": "edbx-fair-patterns",
+ "outputs": {
+  "cookie-consent-redesign": {
+   "D1": {
+    "v": "yes",
+    "q": "Three equal buttons: Accept All / Reject Non-Essential / Customise"
+   },
+   "D2": {
+    "v": "yes",
+    "q": "The user’s choice is not free; it is steered toward the option"
+   },
+   "D3": {
+    "v": "yes",
+    "q": "should require the same or less effort than accepting all."
+   },
+   "D4": {
+    "v": "partial",
+    "q": "Users must be able to change preferences with a persistent, easy-to-find interface element."
+   },
+   "D5": {
+    "v": "no",
+    "q": "calls the 4-step wizard an 'intentional barrier'; never says effect rather than intent decides"
+   },
+   "D6": {
+    "v": "yes",
+    "q": "it is steered toward the option that benefits the data controller"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "30–70% is typical when people are given a genuine choice"
+   },
+   "M2": {
+    "v": "partial",
+    "q": "Using the Fair Patterns taxonomy, this banner employs multiple manipulative mechanisms"
+   }
+  },
+  "fast-fashion-checkout": {
+   "D1": {
+    "v": "yes",
+    "q": "Unchecked, transparent opt‑in with benefits described"
+   },
+   "D2": {
+    "v": "yes",
+    "q": "Are truthful information and genuine choice provided?"
+   },
+   "D3": {
+    "v": "no",
+    "q": "no accept versus decline parity; fixes are unchecked boxes and a non-blocking carousel"
+   },
+   "D4": {
+    "v": "yes",
+    "q": "Provide a one‑click unsubscribe link at the top of every marketing email"
+   },
+   "D5": {
+    "v": "no",
+    "q": "no effect-versus-intent reasoning"
+   },
+   "D6": {
+    "v": "yes",
+    "q": "the app prioritises its own sales over the user’s intent"
+   },
+   "M1": {
+    "v": "partial",
+    "q": "During checkout, the user’s email is automatically added to the marketing list."
+   },
+   "M2": {
+    "v": "partial",
+    "q": "Each element is evaluated against the Fair Patterns framework, which asks:"
+   }
+  },
+  "subscription-management": {
+   "D1": {
+    "v": "yes",
+    "q": "Here's how we transform each deceptive element into an ethical one"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "Autonomy and Transparency"
+   },
+   "D3": {
+    "v": "yes",
+    "q": "with equal visual weight to \"Upgrade Plan.\""
+   },
+   "D4": {
+    "v": "yes",
+    "q": "The effort to leave a service should be no greater than the effort to join"
+   },
+   "D5": {
+    "v": "no",
+    "q": "no effect-versus-intent reasoning; flow is called 'engineered' friction"
+   },
+   "D6": {
+    "v": "yes",
+    "q": "transform it from a manipulative retention tactic"
+   },
+   "M1": {
+    "v": "no",
+    "q": "stays with the flow the prompt describes; later claims about churn are forecasts, not facts"
+   },
+   "M2": {
+    "v": "partial",
+    "q": "Confirmation Fog"
+   }
+  }
+ }
+}

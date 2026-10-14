@@ -1,0 +1,107 @@
+{
+ "skill": "edbx-ethical-contract",
+ "outputs": {
+  "ai-hiring-team-contract": {
+   "D1": {
+    "v": "no",
+    "q": "no Ethical Disclaimer or gathered stakeholder concerns; opens with a preamble and six principles"
+   },
+   "D2": {
+    "v": "no",
+    "q": "no recurring-theme step; principles are asserted, not derived from stakeholder concerns"
+   },
+   "D3": {
+    "v": "partial",
+    "q": "Role‑Specific Commitments ... Product Managers (2) ... Designers (3) ... Engineers (4)"
+   },
+   "D4": {
+    "v": "no",
+    "q": "six shared principles (Fairness, Transparency, Accountability, Privacy, Human-Centeredness, Vigilance), not three objectives"
+   },
+   "D5": {
+    "v": "no",
+    "q": "no single agreed design goal"
+   },
+   "D6": {
+    "v": "yes",
+    "q": "We, the cross‑functional team, voluntarily commit to this ethical contract"
+   },
+   "M1": {
+    "v": "no",
+    "q": "figures such as 5% sampling and 5 business days are proposed commitments, not facts about the team"
+   },
+   "M2": {
+    "v": "no",
+    "q": "no creator, step-count or method claims; presented as a generic contract"
+   }
+  },
+  "content-moderation-team": {
+   "D1": {
+    "v": "no",
+    "q": "no disclaimer or stakeholder concern-gathering step; goes straight to a preamble"
+   },
+   "D2": {
+    "v": "no",
+    "q": "no recurring-theme step"
+   },
+   "D3": {
+    "v": "partial",
+    "q": "Organizational Commitments to Moderators ... Moderators’ Responsibilities"
+   },
+   "D4": {
+    "v": "no",
+    "q": "five core principles, not three objectives"
+   },
+   "D5": {
+    "v": "no",
+    "q": "no single agreed design goal"
+   },
+   "D6": {
+    "v": "partial",
+    "q": "For the Organization: ... For the Moderation Team (Representative)"
+   },
+   "M1": {
+    "v": "no",
+    "q": "figures (3 hours, 40%, 20%) are proposed clauses, not claims about the team"
+   },
+   "M2": {
+    "v": "no",
+    "q": "no creator, step-count or method claims"
+   }
+  },
+  "health-data-startup": {
+   "D1": {
+    "v": "no",
+    "q": "no disclaimer or stakeholder concern-gathering step"
+   },
+   "D2": {
+    "v": "no",
+    "q": "no recurring-theme step"
+   },
+   "D3": {
+    "v": "no",
+    "q": "commitments grouped by topic (data, bias, dignity); no division of situations or responsibilities among roles"
+   },
+   "D4": {
+    "v": "no",
+    "q": "five core principles, not three objectives"
+   },
+   "D5": {
+    "v": "no",
+    "q": "no single agreed design goal"
+   },
+   "D6": {
+    "v": "yes",
+    "q": "Every team member, regardless of role, is a co‑signatory and guardian of these principles"
+   },
+   "M1": {
+    "v": "no",
+    "q": "12 people comes from the prompt; other figures are proposed clauses"
+   },
+   "M2": {
+    "v": "no",
+    "q": "no creator, step-count or method claims; says it is not a legal instrument"
+   }
+  }
+ }
+}

@@ -1,0 +1,107 @@
+{
+ "skill": "edbx-ethicography",
+ "outputs": {
+  "accessibility-debt": {
+   "D1": {
+    "v": "partial",
+    "q": "Key Ethical Decision Points and Counterfactuals"
+   },
+   "D2": {
+    "v": "yes",
+    "q": "Actual Decision | Ethical Principle Violated"
+   },
+   "D3": {
+    "v": "partial",
+    "q": "Epistemic injustice — disabled users were not treated as legitimate sources"
+   },
+   "D4": {
+    "v": "no",
+    "q": "no links between units; only a role power map and the remark that it is a closed loop"
+   },
+   "D5": {
+    "v": "no",
+    "q": "no problem / solution / rationale tagging; stages are described as what likely happened"
+   },
+   "D6": {
+    "v": "yes",
+    "q": "cumulative ethical drift"
+   },
+   "M1": {
+    "v": "no",
+    "q": "process is framed as reconstruction from common patterns, with 'What likely happened' hedges; no outside figures or incidents"
+   },
+   "M2": {
+    "v": "no",
+    "q": "no creator, step or matrix claims about the method"
+   }
+  },
+  "social-media-growth-hacks": {
+   "D1": {
+    "v": "no",
+    "q": "units are three practices (contacts, onboarding, notifications), not statements in a design dialogue"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "Users never gave meaningful permission for their contact lists to be ingested"
+   },
+   "D3": {
+    "v": "no",
+    "q": "no value-centered versus manipulative marking of units; everything is treated as wrong"
+   },
+   "D4": {
+    "v": "no",
+    "q": "no links between units or map of value interplay"
+   },
+   "D5": {
+    "v": "no",
+    "q": "no problem / solution / rationale tagging"
+   },
+   "D6": {
+    "v": "yes",
+    "q": "We told ourselves that users received a better experience"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "We had 18 months of cash."
+   },
+   "M2": {
+    "v": "no",
+    "q": "no creator, step or matrix claims about the method"
+   }
+  },
+  "wellness-score-postmortem": {
+   "D1": {
+    "v": "partial",
+    "q": "Decision Trace: Where Engagement Was Prioritized Over Wellbeing"
+   },
+   "D2": {
+    "v": "yes",
+    "q": "Decision point | What was chosen | Value that won"
+   },
+   "D3": {
+    "v": "partial",
+    "q": "the easier, more engaging, more visible, or more data-available option won"
+   },
+   "D4": {
+    "v": "no",
+    "q": "no links between units; patterns are listed in tables, not mapped"
+   },
+   "D5": {
+    "v": "no",
+    "q": "no problem / solution / rationale tagging"
+   },
+   "D6": {
+    "v": "yes",
+    "q": "Stated Intent vs. Actual Incentive Structure"
+   },
+   "M1": {
+    "v": "partial",
+    "q": "Employees were not co-designers, and there is no ongoing employee governance mechanism."
+   },
+   "M2": {
+    "v": "yes",
+    "q": "Ethicography treats a product feature as a moral artifact"
+   }
+  }
+ }
+}

@@ -1,0 +1,107 @@
+{
+ "skill": "edbx-humane-design-guide",
+ "outputs": {
+  "dating-app-mechanics": {
+   "D1": {
+    "v": "no",
+    "q": "goes straight to a mechanics overview; no value proposition or measure of success is captured"
+   },
+   "D2": {
+    "v": "no",
+    "q": "evaluates against agency, transparency, time well spent, cognitive liberty; the six sensitivities never appear"
+   },
+   "D3": {
+    "v": "partial",
+    "q": "Humane Characteristics ... Exploitative Characteristics"
+   },
+   "D4": {
+    "v": "no",
+    "q": "no ranking of sensitivities; each mechanic gets a verdict instead"
+   },
+   "D5": {
+    "v": "no",
+    "q": "the app's success measure is not examined; only the business model is criticised in general terms"
+   },
+   "D6": {
+    "v": "partial",
+    "q": "Recommendations for a More Humane Design"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "(commonly 25–50)"
+   },
+   "M2": {
+    "v": "yes",
+    "q": "The app falls short on virtually all Humane Design principles"
+   }
+  },
+  "news-feed-engagement": {
+   "D1": {
+    "v": "partial",
+    "q": "Primary metric under audit"
+   },
+   "D2": {
+    "v": "no",
+    "q": "uses six 'lenses' (Attention, Agency, Emotional Well-being, Cognitive Autonomy, Social Impact, Time Well Spent); only two overlap the six sensitivities"
+   },
+   "D3": {
+    "v": "partial",
+    "q": "Vulnerability Exploited"
+   },
+   "D4": {
+    "v": "partial",
+    "q": "Humane Design Verdict:"
+   },
+   "D5": {
+    "v": "yes",
+    "q": "This metric is the root cause of most exploitative design patterns."
+   },
+   "D6": {
+    "v": "partial",
+    "q": "Retire “time spent reading” as the primary KPI."
+   },
+   "M1": {
+    "v": "partial",
+    "q": "Sends real-time interruptions labeled as “breaking news,” often for non-urgent stories"
+   },
+   "M2": {
+    "v": "yes",
+    "q": "We applied the Humane Design Guide’s core lenses:"
+   }
+  },
+  "teen-social-media": {
+   "D1": {
+    "v": "partial",
+    "q": "The app’s presumed purpose is social connection and creative expression for 13–17-year-olds."
+   },
+   "D2": {
+    "v": "no",
+    "q": "lens is adolescent brain development, autonomy, social comparison, body image, time well spent; the six sensitivities are not named"
+   },
+   "D3": {
+    "v": "partial",
+    "q": "Where it exploits vulnerability ... Humane alternatives"
+   },
+   "D4": {
+    "v": "partial",
+    "q": "Primary vulnerability exploited | Risk level"
+   },
+   "D5": {
+    "v": "partial",
+    "q": "Current metric | Humane alternative"
+   },
+   "D6": {
+    "v": "partial",
+    "q": "Humane alternatives look like:"
+   },
+   "M1": {
+    "v": "no",
+    "q": "illustrative values sit under 'Example UX pattern' labels; no unlabelled facts about the app"
+   },
+   "M2": {
+    "v": "partial",
+    "q": "Humane Design Red Lines"
+   }
+  }
+ }
+}
