@@ -1,0 +1,32 @@
+{
+ "skill": "edbx-normative-design-scheme",
+ "outputs": {
+  "attention-economy-redesign": {
+   "D1": {"v": "no", "q": "no short design-goal statement; opens with stakeholder identification and value elicitation"},
+   "D2": {"v": "no", "q": "no virtue ethics, consequentialism or deontology; uses stakeholders, values, norms and design requirements"},
+   "D3": {"v": "no", "q": "redesign comes from derived norms (N1-N8), not from the ethical theories as ideation questions"},
+   "D4": {"v": "no", "q": "gives trade-off principles, not a statement that the questions have no absolute answer"},
+   "D5": {"v": "no", "q": "long written report; no template, short workshop or four steps"},
+   "M1": {"v": "partial", "q": "Violated. Extensive tracking is the default; consent is often bundled and obscured."},
+   "M2": {"v": "yes", "q": "systematically identifies stakeholders, values, norms, and design requirements, then evaluates a design against these"}
+  },
+  "dating-app-algorithm": {
+   "D1": {"v": "no", "q": "restates the prompt as a Design Context paragraph, not a fixed-format design goal"},
+   "D2": {"v": "yes", "q": "examines design decisions through three classical moral lenses: virtue ethics ... consequentialism ... and deontology"},
+   "D3": {"v": "partial", "q": "Implement a “veil of ignorance” mode"},
+   "D4": {"v": "partial", "q": "However, removing socioeconomic data entirely may discard genuinely useful signals about shared cultural context."},
+   "D5": {"v": "no", "q": "long written report; no template, short workshop or four steps"},
+   "M1": {"v": "yes", "q": "Extensive social science research shows that cross-class relationships are a vital channel for economic mobility"},
+   "M2": {"v": "no", "q": "names the three theories correctly; no creator, step-count or extra-artifact claims about the method"}
+  },
+  "predictive-policing": {
+   "D1": {"v": "no", "q": "opens with a Design Scenario & Context section and a stakeholder map, not a fixed-format design goal"},
+   "D2": {"v": "yes", "q": "three core ethical lenses—consequentialist, deontological, and virtue ethics"},
+   "D3": {"v": "partial", "q": "whether a radically re‑imagined tool could satisfy a “minimally harmful” or “rights‑respecting” version"},
+   "D4": {"v": "partial", "q": "Synthesis & Tensions"},
+   "D5": {"v": "no", "q": "long written report; no template, short workshop or four steps"},
+   "M1": {"v": "yes", "q": "The stated goal is to “optimize resource allocation, deter crime, and improve public safety.”"},
+   "M2": {"v": "partial", "q": "applies the full Normative Design Scheme (NDS)"}
+  }
+ }
+}

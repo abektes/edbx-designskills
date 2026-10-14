@@ -1,0 +1,32 @@
+{
+ "skill": "edbx-inverted-behavior-model",
+ "outputs": {
+  "productivity-gamification": {
+   "D1": {"v": "partial", "q": "“what behaviors does this system actually make rational?”"},
+   "D2": {"v": "yes", "q": "Points for tasks completed ... Team leaderboards ... Badges for “deep focus” sessions"},
+   "D3": {"v": "partial", "q": "Inverted Question ... Actually Motivated Behaviors Beyond Productivity"},
+   "D4": {"v": "yes", "q": "Examine the **second-order effects** on culture, trust, equity, and long-term performance."},
+   "D5": {"v": "no", "q": "no ability-level estimate and no ranking of behaviours by likelihood or severity"},
+   "M1": {"v": "no", "q": "no figures or facts beyond the prompt; effects are framed as likely"},
+   "M2": {"v": "partial", "q": "The Inverted Behavior Model is an ethical design audit method. For each design lever, we:"}
+  },
+  "smart-fridge-reorder": {
+   "D1": {"v": "no", "q": "inverts each intended behaviour into a pathological opposite; Fogg's Motivation, Ability, Prompt never appear"},
+   "D2": {"v": "partial", "q": "tracks food consumption via weight sensors, barcode scans, or computer vision"},
+   "D3": {"v": "partial", "q": "How the Feature Could Trigger It"},
+   "D4": {"v": "yes", "q": "Infer health conditions (diabetes, pregnancy, eating disorders)."},
+   "D5": {"v": "no", "q": "no ability-level estimate and no ranking of behaviours by likelihood or severity"},
+   "M1": {"v": "partial", "q": "tracks food consumption via weight sensors, barcode scans, or computer vision"},
+   "M2": {"v": "yes", "q": "we identify its “inverted” counterpart—behaviors a user *would* exhibit if the system were perfectly optimized"}
+  },
+  "social-savings-feature": {
+   "D1": {"v": "no", "q": "describes the method as flipping intended behaviour to its harmful opposite; no Fogg Behavior Model"},
+   "D2": {"v": "partial", "q": "All participants can see individual contribution amounts by default."},
+   "D3": {"v": "partial", "q": "Intended behavior | Inverted behavior | Possible abuse scenario | Main harms | Safeguards"},
+   "D4": {"v": "yes", "q": "Main harms ... Anxiety, humiliation, exclusion, conflict"},
+   "D5": {"v": "partial", "q": "Risk | Likelihood | Impact | Priority"},
+   "M1": {"v": "no", "q": "assumed feature details are labelled: \"I assume the riskiest default version of the feature\""},
+   "M2": {"v": "yes", "q": "takes each intended user behavior, flips it to its harmful opposite"}
+  }
+ }
+}

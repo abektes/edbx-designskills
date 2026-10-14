@@ -1,0 +1,32 @@
+{
+ "skill": "edbx-motivation-matrix",
+ "outputs": {
+  "corporate-wellness-app": {
+   "D1": {"v": "no", "q": "uses the five types the prompt names (Achievement, Social Acceptance, Fear, Power, Incentive); no growth type"},
+   "D2": {"v": "partial", "q": "maps each core motivation against the three main product features"},
+   "D3": {"v": "no", "q": "cells describe what the feature does to the user, not actions the user could take"},
+   "D4": {"v": "no", "q": "framed as ethical evaluation and exposing pressures, not predicting user interaction by context"},
+   "D5": {"v": "no", "q": "no mention of empathy mapping or sponsor users"},
+   "M1": {"v": "no", "q": "assumptions are hedged (\"likely\", \"If the program is mandatory\"); no invented figures or incidents"},
+   "M2": {"v": "yes", "q": "a framework for ethically evaluating how a product’s mechanics engage core human drives"}
+  },
+  "employee-review-platform": {
+   "D1": {"v": "no", "q": "no six types; analyses intrinsic versus extrinsic motivations by stakeholder instead"},
+   "D2": {"v": "partial", "q": "Stakeholder | Primary motivations | Key fears / concerns"},
+   "D3": {"v": "no", "q": "cells give user motivation, business motivation, alignment and risk; no predicted user actions"},
+   "D4": {"v": "no", "q": "presented as an audit of alignment and ethical risk, not a prediction of user interaction"},
+   "D5": {"v": "no", "q": "no mention of empathy mapping or sponsor users"},
+   "M1": {"v": "no", "q": "no invented figures or incidents; risks are rated as likelihood judgements"},
+   "M2": {"v": "yes", "q": "I’ll run the Motivation Matrix as an ethical design audit."}
+  },
+  "language-learning-streaks": {
+   "D1": {"v": "no", "q": "types are intrinsic, extrinsic, competence, relatedness, anxiety; none of the six method types as such"},
+   "D2": {"v": "no", "q": "rows are mechanics; no users or contexts as columns"},
+   "D3": {"v": "no", "q": "lists drives activated by each mechanic and an ethics verdict; no user actions"},
+   "D4": {"v": "no", "q": "evaluates motivation versus manipulation rather than predicting interaction by context"},
+   "D5": {"v": "no", "q": "no mention of empathy mapping or sponsor users"},
+   "M1": {"v": "partial", "q": "Users begin with 5 hearts that are lost for each mistake."},
+   "M2": {"v": "yes", "q": "such as those from Self-Determination Theory: autonomy, competence, relatedness"}
+  }
+ }
+}

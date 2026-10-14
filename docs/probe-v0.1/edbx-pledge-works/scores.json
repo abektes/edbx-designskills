@@ -1,0 +1,35 @@
+{
+ "skill": "edbx-pledge-works",
+ "outputs": {
+  "accessibility-pledge": {
+   "D1": {"v": "partial", "q": "Accessibility acceptance criteria written alongside functional specs."},
+   "D2": {"v": "no", "q": "one team pledge with signature lines for leads; no pledge written from a professional role or code"},
+   "D3": {"v": "no", "q": "single pledge in a charter format; no WHO / PLEDGE / REASON story form"},
+   "D4": {"v": "no", "q": "no pledges addressed to named audiences such as non-users or the planet"},
+   "D5": {"v": "partial", "q": "Findings are presented to the full product team and leadership"},
+   "D6": {"v": "yes", "q": "A checklist that must be 100% complete before any release."},
+   "M1": {"v": "partial", "q": "This has led to shipped products that block users with disabilities, invite legal risk"},
+   "M2": {"v": "no", "q": "labelled a Pledge Works session but makes no claims about the method's creator, steps or formats"}
+  },
+  "edtech-data-pledges": {
+   "D1": {"v": "partial", "q": "embedded in our development lifecycle, employee onboarding, and partner contracts"},
+   "D2": {"v": "no", "q": "pledges are company-wide; no role-based pledges and no professional code cited"},
+   "D3": {"v": "no", "q": "uses a We will / We will not / To verify layout; no WHO / PLEDGE / REASON story form"},
+   "D4": {"v": "partial", "q": "Marginalized student groups (by race, income, disability, language status)"},
+   "D5": {"v": "partial", "q": "Annual Pledge Works session to update commitments"},
+   "D6": {"v": "partial", "q": "must be tested against these commitments before launch"},
+   "M1": {"v": "no", "q": "bracketed placeholders for company and date; no invented findings about the user's product"},
+   "M2": {"v": "yes", "q": "concrete, verifiable “We will / We will not / To verify, we will” commitments"}
+  },
+  "food-delivery-pledges": {
+   "D1": {"v": "partial", "q": "turn each audit finding into a concrete, accountable design pledge"},
+   "D2": {"v": "no", "q": "owners are named roles, but no pledge is written from a professional role"},
+   "D3": {"v": "no", "q": "Problem / Value / Core Pledge template; no WHO / PLEDGE / REASON story form"},
+   "D4": {"v": "no", "q": "pledges are organised by audit finding, not by audience"},
+   "D5": {"v": "partial", "q": "reviews the feature every 6 months"},
+   "D6": {"v": "partial", "q": "final price <= standard non-surge price (target: 100%)"},
+   "M1": {"v": "yes", "q": "dominated by chains in 80% of cities"},
+   "M2": {"v": "yes", "q": "Each pledge follows the standard structure: Problem Statement → Value Statement → Core Pledge"}
+  }
+ }
+}
