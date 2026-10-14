@@ -83,28 +83,36 @@ the four-part objective, the Commitment Risk Register or the renewal triggers.
 1. **Step count (row 8).** SKILL.md says "five steps"; the Gispen page says
    "6 steps" (explain the disclaimer, define themes, divide responsibilities,
    three objectives, design goal, sign). The skill merges steps 2-3 and
-   re-purposes step 1.
+   re-purposes step 1. (fixed in SKILL.md)
+
 2. **Inputs (row 2).** The source requires a completed Ethical Disclaimer
    (materials list; the surveying paper agrees). The skill's Inputs omit it and
    name Worrystorming, Value Dams and Pledge Works instead; neither Gispen
-   page mentions these.
+   page mentions these. (fixed in SKILL.md)
+
 3. **Four-part objectives, thresholds, owners, cadence (row 5).** The source
-   says only "three main ethical objectives".
+   says only "three main ethical objectives". (fixed in SKILL.md)
+
 4. **Skill additions (rows 11-13, 16).** Step 1.5, Red Lines, Step 3.5 Bias &
    Harm Audit, Commitment Risk Register and Renewal Triggers are not in the
-   source text.
+   source text. (fixed in SKILL.md)
+
 5. **"Industry standard floor: 0.8 / four-fifths rule" (row 14).** The rule is
    real, but 29 CFR 1607.4(D) frames it as an enforcement-agency rule of thumb
    for employee selection rates, with caveats for small numbers and for smaller
-   differences. It is not an industry standard for product features.
+   differences. It is not an industry standard for product features. (fixed in SKILL.md)
+
 6. **n >= 30, 0.7 confidence and 3-click figures (row 15)** are not in the
-   regulation or the Gispen pages.
+   regulation or the Gispen pages. (fixed in SKILL.md)
+
 7. **Design goal (row 6).** The source updates an existing design goal that
-   stakeholders agree; the skill generates a new statement from a template.
+   stakeholders agree; the skill generates a new statement from a template. (fixed in SKILL.md)
+
 8. **Informal pledges (row 21).** The source does not contrast signing with
-   informal pledges.
+   informal pledges. (fixed in SKILL.md)
+
 9. **Attribution.** SKILL.md names no author or year. Jet Gispen (2017) is not
-   credited.
+   credited. (fixed in SKILL.md)
 
 ### Not verifiable
 

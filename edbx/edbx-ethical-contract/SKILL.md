@@ -1,6 +1,6 @@
 ---
 name: edbx-ethical-contract
-description: Use when a team wants to formalize shared ethical commitments across disciplines, assign individual ethical responsibilities to specific roles, create a living ethics manifesto for a project, bring new team members into ethical alignment, hold all stakeholders accountable to design ethics, or escalate from informal pledges to a signed collective agreement. Facilitate the creation of an Ethical Contract — a signed, shared document that negotiates ethical objectives and responsibilities across all stakeholders in a product team. Trigger this skill for any mention of team ethics agreement, shared ethical responsibility, ethics sign-off, stakeholder ethical alignment, design manifesto, or when someone says "we need everyone on the same page about ethics, not just the design team." Also trigger for "Ethical Contract", "ethics sign-off", "ethical manifesto", "stakeholder ethics", or "team ethics agreement".
+description: Use when a team wants to formalize shared ethical commitments across disciplines, assign individual ethical responsibilities to specific roles, create a living ethics manifesto for a project, bring new team members into ethical alignment, hold all stakeholders accountable to design ethics, or move from an informal pledge to a signed collective agreement. Facilitate the creation of an Ethical Contract — a signed, shared document that negotiates ethical objectives and responsibilities across all stakeholders in a product team. Trigger this skill for any mention of team ethics agreement, shared ethical responsibility, ethics sign-off, stakeholder ethical alignment, design manifesto, or when someone says "we need everyone on the same page about ethics, not just the design team." Also trigger for "Ethical Contract", "ethics sign-off", "ethical manifesto", "stakeholder ethics", or "team ethics agreement".
 version: "1.0"
 tags: [ethical-design, alignment]
 ---
@@ -13,7 +13,7 @@ Ethical Contract enables your team to negotiate, share, and sign ethical objecti
 
 Every stakeholder has a role in ethical design — business executives, developers, UX/designers, software businesses, and other relevant roles. Ethical Contract enables a shared responsibility to discuss ethical considerations and find a shared ethical foundation. It covers all design responsibilities for each set of contract themes and clearly states ethical responsibilities as part of the alignment cycles of all stakeholders.
 
-The contract follows a five-step process: **Explain the ethical challenge → Define responsibilities → State shared ethical objectives → Name the design goal → Collect signatures**. The signature requirement is what makes this distinct from informal pledges — signatures create social accountability and signal that everyone has been heard.
+The method is Jet Gispen's Ethical Contract (2017), from her *Ethics for Designers* toolkit (ethicsfordesigners.com/ethical-contract). It has **six steps**: **explain the disclaimer to the stakeholders → identify the recurring themes and define each → allocate the unethical situations and responsibilities among the stakeholders → distil three ethical objectives → align everyone on the design goal → sign**. Its input is an **Ethical Disclaimer**, a list of the unethical situations the design could cause, written before the contract (Gispen's separate Ethical Disclaimer tool). The page suggests 30–45 minutes for the session and a team of designers and stakeholders. Gispen's page carries "© Jet Gispen 2017" and states no licence terms, so the steps here are paraphrased. Signing is the last step: signatures create social accountability and signal that everyone has been heard.
 
 > **Mindset check:** The contract is both binding and inspiring. It codifies ethical commitments into shared responsibility — but the design goal statement is the aspirational core that makes people *want* to sign.
 
@@ -24,38 +24,43 @@ The contract follows a five-step process: **Explain the ethical challenge → De
 - You are creating a living ethics manifesto for a project.
 - You are onboarding new team members into ethical alignment.
 - You want to hold all stakeholders accountable to design ethics.
-- You are escalating from informal pledges (Pledge Works) to a signed collective agreement.
+- You are moving from an informal pledge to a signed collective agreement.
 
 ## Inputs
 
 Provide as many of these as are available:
 
+- An **Ethical Disclaimer**: the team's list of unethical situations its design could cause, ideally per stakeholder. This is the method's input.
 - A product or project context with an ethical challenge to address
 - A list of stakeholders and their roles (designer, engineer, PM, legal, executive, etc.)
-- Optionally: ethical concerns surfaced from prior methods (Worrystorming, Value Dams, Pledge Works)
-- Optionally: existing team values or commitments to formalize
+- Optionally: ethical concerns surfaced earlier in any worry, values or pledge session
+- Optionally: an existing design goal to update, and existing team values or commitments to formalize
 - Optionally: a specific event triggering the contract (new team member, product pivot, ethics incident)
 
 ## Workflow
 
-Ethical Contract follows five steps.
+Ethical Contract follows Gispen's six steps. Two further steps (1.5 and 4.5) are edbx additions.
 
 ---
 
-### Step 1 — Explain the Ethical Challenge
+### Step 1 — Explain the Ethical Disclaimer
+
+Walk the stakeholders through the Ethical Disclaimer: the unethical situations the design could cause. If the user supplies one, use it. If not, draft the list of situations from the brief, mark it "draft: confirm with the stakeholders", and carry on.
+
+> **edbx adaptation:** the 2–3 sentence ethical challenge statement below is not part of the published method; it condenses the disclaimer into one shared sentence everyone can agree to, and it is what the rest of the contract refers back to.
 
 Generate a clear, shared articulation of the ethical challenge:
 - What is the specific ethical tension or risk in this product?
 - Why does it require a formal shared commitment?
 - What happens if the team doesn't address it?
 
-**Output:** A 2–3 sentence ethical challenge statement that all stakeholders can agree on.
+**Output:** The disclaimer's unethical situations (supplied or drafted), plus a 2–3 sentence ethical challenge statement that all stakeholders can agree on.
 
 ---
 
 ### Step 1.5 — Stakeholder Tension Map
 
-Before assigning responsibilities, surface where stakeholders' interests structurally conflict. A contract that ignores real tensions becomes performative.
+> **edbx adaptation:** the Tension Map is not part of the published method. A contract that ignores real tensions becomes performative, so this step surfaces where stakeholders' interests structurally conflict before responsibilities are divided.
 
 For each pair of stakeholders with opposing incentives, name the tension explicitly:
 > *"[Stakeholder A] needs [X] → [Stakeholder B] needs [Y] → These goals are structurally opposed because [Z]."*
@@ -65,13 +70,21 @@ At minimum, surface:
 - Short-term vs. long-term tension (e.g., "Q3 growth targets → Long-term trust erosion")
 - Role vs. ethics tension (e.g., "Engineer's job is to build what's specified → Ethics requires pushing back on specifications")
 
-**Output:** A Tension Map (2–4 named tensions). Responsibilities and objectives in Steps 2–3 should address these tensions directly — not pretend they don't exist.
+**Output:** A Tension Map (2–4 named tensions). Responsibilities and objectives in Steps 3–4 should address these tensions directly — not pretend they don't exist.
 
 ---
 
-### Step 2 — Define Responsibilities
+### Step 2 — Find Recurring Themes and Define Them
 
-For each stakeholder role, define their specific ethical responsibility:
+Go through the unethical situations, collect the recurring ethical themes (for example fairness, privacy, manipulation, safety), and agree a short definition of each theme for this project, so that everyone means the same thing by it.
+
+**Output:** A short list of themes, each with an agreed one-sentence definition.
+
+---
+
+### Step 3 — Divide Responsibilities
+
+Divide the unethical situations among the stakeholders and add any responsibilities that were missed. For each stakeholder role, define their specific ethical responsibility:
 
 | Stakeholder | Role | Ethical Responsibility |
 |---|---|---|
@@ -84,29 +97,33 @@ For each stakeholder role, define their specific ethical responsibility:
 
 Generate role-specific responsibility statements for the actual stakeholders provided.
 
-**Red Line Commitments (required):** For each stakeholder, name one thing they will NOT do regardless of business pressure. Red Lines are stronger than responsibilities — a responsibility can be deprioritized, a Red Line cannot be crossed.
+> **edbx adaptation:** Red Line Commitments are not part of the published method. They are here because a responsibility can be deprioritized under pressure and a Red Line cannot be crossed.
+
+**Red Line Commitments (required):** For each stakeholder, name one thing they will NOT do regardless of business pressure.
 
 Example: *"Executive/Leadership Red Line: We will not approve a feature that has been flagged harmful by the ethics review, even if the business case is strong."*
 
 ---
 
-### Step 3 — Shared Ethical Objectives
+### Step 4 — Three Shared Ethical Objectives
 
-Generate 3 shared ethical objectives — specific, measurable, and agreed-upon. Vague aspirations are not contracts.
+Summarise the responsibilities in exactly 3 shared ethical objectives that everyone agrees on and understands. Vague aspirations are not contracts.
+
+> **edbx adaptation:** the four-part form below (action, threshold, owner, cadence) is not part of the published method, which asks only for three agreed objectives. It makes each objective checkable. The numbers in the examples are illustrative only: no source sets them, so the team chooses its own.
 
 **Each objective must include all four parts:**
 1. **Action** — *"We commit to [specific ethical action] in order to [protected value/outcome]."*
-2. **Quantitative threshold** — a number, percentage, or named standard that would be a breach (e.g., "if disparate-impact ratio drops below 0.8 across any protected subgroup of n≥30," "if cancellation flow exceeds 3 clicks," "if model confidence drops below 0.7 on production samples")
+2. **Quantitative threshold** — a number, percentage, or named standard that would be a breach (illustrative examples: "if the disparate-impact ratio drops below 0.8 across any protected subgroup of n≥30," "if cancellation flow exceeds 3 clicks," "if model confidence drops below 0.7 on production samples")
 3. **Named owner** — the role or person accountable for this commitment (not "the team")
 4. **Review cadence** — when this is checked (e.g., "every sprint demo," "pre-launch + 30/90/180 days post-launch")
 
-Aspirational verbs without thresholds and owners get rejected. "We will be fair" is not a commitment. "Engineering lead reviews fairness scorecard before every release; release blocks if disparate-impact ratio < 0.8 on any subgroup with n ≥ 30" is.
+Aspirational verbs without thresholds and owners get rejected. "We will be fair" is not a commitment. "Engineering lead reviews fairness scorecard before every release; release blocks if the agreed disparate-impact ratio is breached on any subgroup above the agreed minimum size" is.
 
 ---
 
-### Step 3.5 — Bias & Harm Audit (required before signing)
+### Step 4.5 — Bias & Harm Audit (required before signing)
 
-Before any contract is signed, the team must complete a structured bias and harm audit. Without this step, the contract is a values statement, not an accountability document.
+> **edbx adaptation:** the Bias & Harm Audit is not part of the published method. Without it the contract is a values statement, not an accountability document, so the team completes it before signing.
 
 **A. Harm enumeration (named, not categorized).** List concrete, specific harms this product could cause to specific populations. Do not stop at "users" — name the populations and the specific harm:
 
@@ -115,32 +132,34 @@ Before any contract is signed, the team must complete a structured bias and harm
 
 Include at minimum: primary users, vulnerable subgroups (e.g., minors, neurodivergent, low-income, undocumented, abuse survivors, people in crisis), non-users affected, workers in the supply chain.
 
-**B. Bias audit thresholds.** For any product using ranking, scoring, recommendation, or automated decisioning, define:
+**B. Bias audit thresholds.** For any product using ranking, scoring, recommendation, or automated decisioning, define the following. All figures are illustrative examples chosen by the team; none comes from Gispen's method or from a standard for products.
 
-- **Disparate impact threshold**: the ratio at which the team agrees to halt deployment (e.g. 0.8, the "four-fifths rule": a rule of thumb from US employment-selection guidelines, 29 CFR 1607.4(D), not a general industry standard)
-- **Subgroup minimum sample size**: the smallest n the team will accept for a fairness claim (e.g., n ≥ 30 per subgroup before claiming "no disparate impact")
+- **Disparate impact threshold**: the ratio at which the team agrees to halt deployment (example: 0.8, the "four-fifths rule", a rule of thumb from US employment-selection guidelines, 29 CFR 1607.4(D), not a general industry standard)
+- **Subgroup minimum sample size**: the smallest n the team will accept for a fairness claim (example: n ≥ 30 per subgroup before claiming "no disparate impact")
 - **Proxy variables identified and named**: zip code, school name, browser language, device type — anything that could carry protected-class information without naming it
-- **Model confidence floor**: below which a decision must escalate to human review
+- **Model confidence floor**: below which a decision must escalate to human review (example: 0.7)
 
 **C. Gray-zone register.** Use cases that are not explicitly prohibited but the team has not consented to. List 2–4 such cases and what would have to change before they become acceptable. Example: "Selling aggregated behavior data to third parties — currently not done, would require legal review + user re-consent + ethics review board approval."
 
 **D. Red lines (what we refuse to build, regardless of business pressure).** 3–5 concrete refusals named at feature level, not values level. Example refusals: "We will not build a feature that requires biometric data from users under 16," "We will not implement engagement-driven recommendation in mental-health-related feeds." Each red line includes the **named owner** with veto authority.
 
-This audit becomes Section 4 of the signed contract.
+This audit becomes a section of the signed contract.
 
 ---
 
-### Step 4 — Ultimate Design Goal
+### Step 5 — Design Goal
 
-Generate a single unifying design goal statement:
+Update the design goal so that all stakeholders agree to it. If the user supplies an existing goal, revise it to reflect the objectives. If there is none, draft one with the template below and mark it as a proposal.
+
+> **edbx adaptation:** the sentence template is not part of the published method; it keeps the goal to one statement that carries its ethical commitment.
 
 *"Our ultimate design goal for [product] is to [outcome] for [users], while [ethical commitment]."*
 
 ---
 
-### Step 5 — Produce Signable Contract
+### Step 6 — Sign
 
-Generate the complete Ethical Contract document ready for team review and signature.
+Generate the complete Ethical Contract document ready for team review and for everyone to sign, committing to the design goal and the ethical objectives.
 
 ---
 
@@ -159,17 +178,25 @@ Open with a short **Answer**: two to four sentences that answer the question the
 
 [Two to four sentences: the answer to the question asked (decision, verdict or recommendation) and the main reason.]
 
-#### 1. Ethical Challenge
+#### 1. Ethical Disclaimer and Ethical Challenge
 
-[2–3 sentence statement]
+**Unethical situations (the disclaimer):** [supplied by the team, or drafted from the brief and marked "draft: confirm with the stakeholders"]
 
-#### 2. Stakeholder Responsibilities
+[2–3 sentence ethical challenge statement]
+
+#### 2. Recurring Themes and Definitions
+
+| Theme | Agreed definition for this project |
+|---|---|
+| [Theme] | [One-sentence definition] |
+
+#### 3. Stakeholder Responsibilities
 
 | Stakeholder | Role | Ethical Responsibility |
 |---|---|---|
 | [Name] | [Role] | [Specific responsibility] |
 
-#### 3. Our Main Ethical Objectives
+#### 4. Our Main Ethical Objectives
 
 Each objective is a four-part commitment. No part is optional.
 
@@ -179,39 +206,41 @@ Each objective is a four-part commitment. No part is optional.
 | 2 | ... | ... | ... | ... |
 | 3 | ... | ... | ... | ... |
 
-#### 4. Bias & Harm Audit
+#### 5. Bias & Harm Audit
 
-**Harm enumeration table** (from Step 3.5A):
+**Harm enumeration table** (from Step 4.5A):
 
 | Population | Specific harm | Severity | Reversibility |
 |---|---|---|---|
 
-**Bias audit thresholds** (from Step 3.5B):
+**Bias audit thresholds** (from Step 4.5B; the figures are illustrative examples):
 - Disparate impact threshold: [e.g., halt deployment if ratio < 0.8]
 - Subgroup minimum sample size: [e.g., n ≥ 30]
 - Named proxy variables to monitor: [list]
 - Model confidence floor for auto-decisions: [e.g., 0.7]
 
-**Gray-zone register** (from Step 3.5C):
+**Gray-zone register** (from Step 4.5C):
 | Contested use case | What would have to change to allow it |
 |---|---|
 
-**Red lines — what we refuse to build** (from Step 3.5D):
+**Red lines — what we refuse to build** (from Step 4.5D):
 1. [Refusal 1] — Owner with veto: [role]
 2. [Refusal 2] — Owner with veto: [role]
 3. [Refusal 3] — Owner with veto: [role]
 
-#### 5. Our Design Goal
+#### 6. Our Design Goal
 
 "Our ultimate design goal for [product] is to [outcome] for [users], while [ethical commitment]."
 
-#### 6. Signatures
+#### 7. Signatures
 
 | Name | Role | Date | Signature |
 |---|---|---|---|
 | [Name] | [Role] | [Date] | ____________ |
 
 ---
+
+> **edbx adaptation:** the Contract Renewal Triggers and the Commitment Risk Register below are not part of the published method. They keep the signed contract from becoming a dead document.
 
 ### Contract Renewal Triggers
 
@@ -232,12 +261,13 @@ For each shared ethical objective, identify the most likely moment it breaks and
 
 ### Facilitation Guide
 
-Brief session outline for the contract signing:
-1. Read the ethical challenge statement together
-2. Review and discuss stakeholder responsibilities
-3. Refine ethical objectives as a group
-4. Align on the design goal
-5. Sign
+Brief session outline for the contract signing (Gispen's page suggests 30–45 minutes for her six steps; the edbx additions take longer):
+1. Explain the ethical disclaimer and the challenge statement together
+2. Agree the recurring themes and their definitions
+3. Divide the situations and discuss stakeholder responsibilities
+4. Agree the three ethical objectives
+5. Align on the design goal
+6. Sign
 
 #### Evidence Ledger
 | Claim used as input | Type | Basis |
@@ -263,11 +293,12 @@ Every figure, rate, incident, past failure or fact about the user's product, use
 
 A strong Ethical Contract output:
 
-- completes all contract steps including the Stakeholder Tension Map
+- builds on the team's Ethical Disclaimer: the unethical situations it lists, supplied or drafted from the brief and marked as a draft to confirm
+- completes all six contract steps (disclaimer, themes, responsibilities, objectives, design goal, signatures), including the Stakeholder Tension Map
 - names at least 2 structural stakeholder tensions before assigning responsibilities
 - assigns a specific responsibility AND a Red Line to every named stakeholder
 - produces exactly 3 shared ethical objectives — each with **all four parts**: action, quantitative threshold (breach trigger), named owner, review cadence. Aspirational verbs without thresholds and owners are rejected.
-- completes the Bias & Harm Audit (Step 3.5): a harm enumeration table with named populations and severity, named bias-audit thresholds (disparate impact ratio, subgroup minimum n, proxy variables), a gray-zone register, and 3–5 red lines with named veto owners
+- completes the Bias & Harm Audit (Step 4.5): a harm enumeration table with named populations and severity, named bias-audit thresholds (disparate impact ratio, subgroup minimum n, proxy variables), a gray-zone register, and 3–5 red lines with named veto owners
 - generates a single design goal statement
 - includes a Commitment Risk Register with failure moments, early warning signals, and protection mechanisms for every objective
 - produces a print/sign-ready document with no placeholders left unfilled

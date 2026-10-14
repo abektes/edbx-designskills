@@ -1,6 +1,6 @@
 ---
 name: edbx-digital-ethics-compass
-description: Use when a designer, product manager, or AI practitioner wants to reflect on the ethical dimensions of data collection and use, evaluate automation and AI features for manipulation or unfairness, assess whether intentions and processes are transparent to users, apply a structured heuristic framework to data-intensive or AI-powered products, or run a broad ethical health check on a product. Apply the Digital Ethics Compass heuristics to evaluate a product or business across four ethical dimensions — Data, Avoid Manipulation, Make Intentions Transparent, and Automation — putting the human at the center of every decision. Trigger this skill for any mention of data ethics, AI ethics, automation ethics, behavioral manipulation, transparency obligations, responsible AI, or when someone asks "is our data practice ethical?" Also trigger for "Digital Ethics Compass", "data ethics audit", "AI ethics", "automation fairness", "responsible AI", or "ethical health check".
+description: Use when a designer, product manager, or AI practitioner wants to reflect on the ethical dimensions of data collection and use, evaluate automation and AI features for manipulation or unfairness, assess whether intentions and processes are transparent to users, apply a structured heuristic framework to data-intensive or AI-powered products, or run a broad ethical health check on a product. Apply the Digital Ethics Compass heuristics to evaluate a product against the Danish Design Center's five principles and its 22 questions in three categories — Data, Automation, and Behavioral Design — putting the human at the center of every decision. Trigger this skill for any mention of data ethics, AI ethics, automation ethics, behavioral manipulation, transparency obligations, responsible AI, or when someone asks "is our data practice ethical?" Also trigger for "Digital Ethics Compass", "data ethics audit", "AI ethics", "automation fairness", "responsible AI", or "ethical health check".
 version: "1.0"
 tags: [ethical-design, audit]
 ---
@@ -9,21 +9,21 @@ tags: [ethical-design, audit]
 
 ## Overview
 
-Digital Ethics Compass, a tool by the Danish Design Center (2021), guides you to reflect on your product and business development goals through heuristics relating to data, automation, and behavioral design. It acts as an ethical navigator for companies and design teams, providing heuristic questions across four categories.
+Digital Ethics Compass, a tool by the Danish Design Center (DDC, 2021), guides you to reflect on your product and business development goals through heuristics relating to data, automation, and behavioral design. It helps companies and design teams make everyday design decisions from an ethical standpoint.
 
-The compass is a printable, rotatable wheel with "Put the Human at the Center" in the middle. The inner ring has four main categories: **Data**, **Avoid Manipulation**, **Make Intentions Transparent**, and **Automation**. The middle and outer rings provide increasingly specific heuristic questions for reflection.
+DDC publishes the compass as a checklist called the Ethics Navigator. In the middle are **five principles** of responsible digital design: **Put the Human at the Center**, **Avoid manipulating**, **Make your technology understandable**, **Avoid creating inequality**, and **Give users control**. The outer ring holds **22 questions** in three categories: **Data** (6), **Automation** (10), and **Behavioral Design** (6). This skill follows that structure. DDC also offers a facilitated ethics workshop; this skill covers the heuristic checklist only, and the workshop is not reproduced here.
 
-The compass can be used to evaluate ethical decisions at every level — from individual features to entire business models. It provides a structured heuristic framework that is practical and actionable, not theoretical.
+Source: Dansk Design Center, *The Digital Ethics Compass* (ddc.dk/tools/toolkit-the-digital-ethics-compass/). DDC's site footer states its content is under a Creative Commons Attribution License (version not given); the question wording below is paraphrased. This skill can be applied to a single feature or to a whole product.
 
 > **Mindset check:** "Put the Human at the Center" is not just a slogan — it is the orienting principle for every heuristic question. If the human is not at the center, the compass reading is off.
 
 ## Use This Skill When
 
-- You want to evaluate a product's ethical dimensions across data, manipulation, transparency, and automation.
+- You want to evaluate a product's ethical dimensions across data, automation, and behavioral design.
 - You are working on data-intensive or AI-powered products.
 - You need to assess whether your data practices are ethical.
 - You want to evaluate automation and AI features for fairness and manipulation.
-- You need to check whether your intentions and processes are transparent to users.
+- You need to check whether your technology is understandable to users and leaves them in control.
 - You want a broad ethical health check on a product.
 
 ## Inputs
@@ -31,19 +31,21 @@ The compass can be used to evaluate ethical decisions at every level — from in
 Provide as many of these as are available:
 
 - A product, service, or feature with data, automation, or behavioral design components
-- Optionally: a specific category to focus on (Data / Manipulation / Transparency / Automation)
+- Optionally: a specific category to focus on (Data / Automation / Behavioral Design)
 - Optionally: a business model or data practice to evaluate
 - Optionally: a specific user population or context
 
 ## Workflow
 
-The compass evaluates four categories with "Put the Human at the Center" as the orienting principle throughout. Before any category is scored, the team must complete an **explicit Stakeholder Map** — without it, "Put the Human at the Center" remains an abstraction.
+The compass reads the product against five principles, then asks 22 questions in three categories, with "Put the Human at the Center" as the orienting principle throughout. DDC's own page says the human at the center is everyone your solution may affect, not only users and customers.
+
+> **edbx adaptation:** Steps 0, 0.5 and 0.6 (Stakeholder & Power Map, Objective Function Risk Table, Non-Obvious Harms Inventory) are not part of the published compass; they are required here before any question is scored. The Stakeholder Map makes the "everyone affected" point explicit; without it, "Put the Human at the Center" remains an abstraction.
 
 ---
 
 ### Step 0 (required): Stakeholder & Power Map
 
-Before walking through the four categories, enumerate every population the design touches. The judges' most consistent complaint about Compass output is that stakeholder mapping stays implicit. Make it explicit. This is mandatory output, not optional.
+Before walking through the principles and categories, enumerate every population the design touches. The judges' most consistent complaint about Compass output is that stakeholder mapping stays implicit. Make it explicit. This is mandatory output, not optional.
 
 **A. Named stakeholder enumeration (minimum 5 distinct rows; "users" alone is not a stakeholder).**
 
@@ -66,7 +68,7 @@ This map feeds every category below. Each category's findings must reference whi
 
 ### Step 0.5 — Objective Function Risk Table (required for any product with optimization, ranking, scoring, or recommendation)
 
-Before walking through the four categories, name **what the product is actually optimized for** and where that objective conflicts with stakeholder values. Stated mission ≠ optimized objective. The optimized objective is what the metrics, KPIs, model losses, and incentive structures actually maximize.
+Before walking through the principles and categories, name **what the product is actually optimized for** and where that objective conflicts with stakeholder values. Stated mission ≠ optimized objective. The optimized objective is what the metrics, KPIs, model losses, and incentive structures actually maximize.
 
 | Stated objective | Optimized objective (what the system actually maximizes) | Stakeholder value this conflicts with | Drift mechanism (how the system worsens over time on this conflict) | Mitigation owner |
 |---|---|---|---|---|
@@ -78,7 +80,7 @@ For products without explicit optimization (e.g., simple form-based tools), stat
 
 ### Step 0.6 — Non-Obvious Harms Inventory (required, minimum 5 named)
 
-Beyond the heuristic categories below, name at least **5 non-obvious harms** specific to this product. The category questions catch known harm patterns; this inventory catches the harms that don't fit pre-built categories.
+Beyond the heuristic questions below, name at least **5 non-obvious harms** specific to this product. The compass questions catch known harm patterns; this inventory catches the harms that don't fit pre-built categories.
 
 For each, name: the harm, the population most affected, the mechanism by which it occurs, and whether the team had previously considered it.
 
@@ -104,66 +106,72 @@ Examples of non-obvious harms to scan for (use as prompts, not a checklist):
 
 This inventory feeds into every category below — each non-obvious harm should be referenced where the relevant heuristic applies.
 
-### Category 1: DATA
+### Step 1: Read the product against the five principles
 
-Heuristic questions:
-- Do you store/use data? What data, and why?
-- How do you share data? With whom, under what conditions?
-- Is data collection proportionate to the service provided?
-- Are users informed about how their data is used?
-- Can users access, correct, or delete their data?
-- Is data anonymized where personal identification is not required?
-- What happens to user data if the product shuts down?
+DDC's five principles sit in the middle of the Ethics Navigator and frame every question. For each, say in a sentence or two how the product honours or breaks it, and which named stakeholders it affects most. Keep it short: the 22 questions below carry the detail.
+
+- **Put the Human at the Center:** does the design account for everyone it may affect, including people with disabilities, future consequences (such as overuse or harm) and control over their own data?
+- **Avoid manipulating:** does the product help people decide, or does it undermine their basic urge to decide over their own lives (targeting, retargeting, behavioral design, algorithms used to steer buying)?
+- **Make your technology understandable:** can ordinary people comprehend how the product works and affects their lives, with consequences explained in the interaction itself rather than in a document nobody reads?
+- **Avoid creating inequality:** could the product reinforce or widen existing imbalances, for example by penalising people an algorithm misjudges?
+- **Give users control:** does the product leave people with more control, not less, or a sense of losing it?
+
+> **edbx adaptation:** extra prompts under *Make your technology understandable*: are business incentives visible to users, and is it disclosed when content is personalized or algorithmically curated? They are not among DDC's questions; they keep the transparency checks of earlier versions of this skill.
+
+### Category 1: DATA (6 questions)
+
+- Are you collecting more data points than you need, or keeping them longer than needed?
+- Do you anonymise the data?
+- How is the data stored?
+- Can people access their own data?
+- Have you obtained real permission to collect and process the data, with users understanding what they agree to?
+- Do you tell users how they are profiled?
+
+> **edbx adaptation:** two extra prompts, not among DDC's six Data questions: how is data shared, with whom and under what conditions; and what happens to user data if the product shuts down. Add them as extra rows if they apply.
 
 **Output:** Data ethics assessment (what is ethical, what is at risk, what needs remediation).
 
 ---
 
-### Category 2: AVOID MANIPULATION
+### Category 2: AUTOMATION (10 questions)
 
-Heuristic questions:
-- Do you use people's values against them?
-- Do you exploit people's habits or cognitive biases?
-- Are behavioral nudges designed to help or to exploit?
-- Does the product use fear, urgency, or social pressure to drive behavior?
-- Are deceptive design techniques (dark patterns) present?
-- Does the product validate users or challenge/manipulate them?
+- Do users know they are interacting with an automated solution?
+- Does the automation comply with legislation and human rights?
+- Does automation make people lose the abilities needed to do a job?
+- Is the system transparent enough that the user can see how it works inside (the "engine room")?
+- Can the system explain itself?
+- Are the algorithms prejudiced?
+- Is there an unnecessarily high risk in the automated system?
+- Is someone in the company ready to step in when automation fails?
+- Can the system adapt to changes?
+- Can the system be hacked?
+
+> **edbx adaptation:** two extra prompts, not among DDC's ten Automation questions: is it responsible to automate this decision at all, and can affected people challenge an automated decision? Add them as extra rows if they apply.
+
+**Output:** Automation ethics assessment (fairness, accountability, human oversight, security).
+
+---
+
+### Category 3: BEHAVIORAL DESIGN (6 questions)
+
+- Does the design play on negative emotions (fear, urgency)?
+- Do you deliberately make it hard for users to find or understand information or functionality?
+- Do you exploit users' inability to concentrate to your own advantage?
+- Do you manipulate actions by exploiting people's need to be social?
+- Are you trying to create addiction with cheap tricks?
+- Do you validate your users or challenge them?
+
+Deceptive design techniques (dark patterns) are covered by the second question.
 
 **Output:** Manipulation audit (which techniques are present, which cross the line).
 
 ---
 
-### Category 3: MAKE INTENTIONS TRANSPARENT
-
-Heuristic questions:
-- Is it transparent to people how the product works?
-- Do users understand what they're agreeing to?
-- Are business incentives visible to users?
-- Is the product honest about its automation and AI use?
-- Can users understand why they see what they see?
-- Does the product disclose when content is personalized or algorithmically curated?
-
-**Output:** Transparency gap assessment (what users don't know that they should).
-
----
-
-### Category 4: AUTOMATION
-
-Heuristic questions:
-- Is your automation fair? Who does it disadvantage?
-- Can the automation be applied consistently and without bias?
-- Is it responsible to automate this decision?
-- Can affected people challenge automated decisions?
-- Does automation remove human agency in ways that matter?
-- Is the automation accountable and explainable?
-
-**Output:** Automation ethics assessment (fairness, accountability, human oversight).
-
----
-
 ### Synthesis
 
-After all four categories:
+> **edbx adaptation:** the synthesis below (business-pressure attribution, the Quick Win / Strategic Fix / Requires Leadership classification, the 🔴/🟡/🟢 status, and the Compass Reading) is not part of the published compass. It turns the findings into decisions and names why each failure persists.
+
+After the principles and all three categories:
 - Identify the highest-risk category (most heuristics flagged)
 - **For each 🔴 finding, name the exact business pressure causing it** — the metric, KPI, or incentive structure that makes this ethical failure persist. Example: "Notification flooding persists because DAU is measured by opens, not value delivered." This attribution distinguishes a compass reading from a mechanical checklist.
 - Classify each finding by implementation type: `Quick Win` (fix without changing business model) / `Strategic Fix` (requires process or priority change) / `Requires Leadership` (requires changing success metrics or business model)
@@ -213,27 +221,39 @@ Center principle: **"Put the Human at the Center"**
 
 Avoid restating Step 0 stakeholder analysis inside each category below — reference it. Each category should add new findings, not repeat upstream framing.
 
+### Principles Reading
+
+(From Step 1.) One row per principle, referencing the named stakeholders most affected.
+
+| Principle | Status | Notes |
+|---|---|---|
+| Put the Human at the Center | 🔴/🟡/🟢 | [assessment] |
+| Avoid manipulating | 🔴/🟡/🟢 | [assessment] |
+| Make your technology understandable | 🔴/🟡/🟢 | [assessment] |
+| Avoid creating inequality | 🔴/🟡/🟢 | [assessment] |
+| Give users control | 🔴/🟡/🟢 | [assessment] |
+
 ### Category 1: Data
 
+One row for each of the six Data questions.
+
 | Heuristic | Status | Notes |
 |---|---|---|
-| Do you store/use data? | 🔴/🟡/🟢 | [assessment] |
-| How do you share data? | 🔴/🟡/🟢 | [assessment] |
-| Is data collection proportionate? | 🔴/🟡/🟢 | [assessment] |
+| Collecting more data than needed, or keeping it too long? | 🔴/🟡/🟢 | [assessment] |
+| Is the data anonymised? | 🔴/🟡/🟢 | [assessment] |
+| ... | 🔴/🟡/🟢 | [assessment] |
 
-### Category 2: Avoid Manipulation
+### Category 2: Automation
+
+One row for each of the ten Automation questions.
 
 | Heuristic | Status | Notes |
 |---|---|---|
 | [question] | 🔴/🟡/🟢 | [assessment] |
 
-### Category 3: Make Intentions Transparent
+### Category 3: Behavioral Design
 
-| Heuristic | Status | Notes |
-|---|---|---|
-| [question] | 🔴/🟡/🟢 | [assessment] |
-
-### Category 4: Automation
+One row for each of the six Behavioral Design questions.
 
 | Heuristic | Status | Notes |
 |---|---|---|
@@ -268,7 +288,7 @@ Every figure, rate, incident, past failure or fact about the user's product, use
 
 ## Guardrails
 
-- Do not skip any category. All four must be evaluated every session.
+- Do not skip any category or principle. All five principles and all three categories must be evaluated every session.
 - Do not mark everything as passing. Few products are ethically flawless.
 - Do not treat heuristics as pass/fail checkboxes. Each requires substantive reflection.
 - Do not forget the center principle. "Put the Human at the Center" frames every assessment.
@@ -286,7 +306,7 @@ A strong Digital Ethics Compass output:
 - **completes the Stakeholder & Power Map** (Step 0) with at least 5 distinct named stakeholders, including specifically-named vulnerable subgroups (not generic "users"), at least one future-affected population, and a historical-justice prior. Without this map, the compass output is abstract.
 - **produces an Objective Function Risk Table** (Step 0.5) for any product with optimization/ranking/scoring/recommendation, naming the gap between stated and optimized objectives, the conflicting stakeholder values, and the drift mechanism
 - **produces a Non-Obvious Harms Inventory** (Step 0.6) with at least 5 named harms beyond the heuristic categories, each with named population, mechanism, and "previously considered" honesty
-- evaluates all four compass categories every session, with each finding referencing which named stakeholders are most affected, **without restating Step 0 analysis** in every category
+- reads the product against the five principles and evaluates all three compass categories (Data, Automation, Behavioral Design) every session, with each finding referencing which named stakeholders are most affected, **without restating Step 0 analysis** in every category
 - answers every heuristic question with a substantive assessment
 - provides a remediation suggestion for every 🔴 finding
 - names the specific business pressure (metric, KPI, incentive) behind every 🔴 finding
@@ -300,7 +320,7 @@ A strong Digital Ethics Compass output:
 ## Integration with Other EDBX Skills
 
 - **edbx-humane-design-guide** maps human sensitivities. Digital Ethics Compass maps data, automation, and manipulation practices.
-- **edbx-responsible-design-prism** gives a spectrum diagnosis. Compass gives a four-category detailed audit.
+- **edbx-responsible-design-prism** gives a spectrum diagnosis. Compass gives a detailed audit against five principles and 22 questions in three categories.
 - **edbx-worrystorming** generates free-form concerns. Compass provides structured heuristic categories to organize them.
 
 ## Hashtags

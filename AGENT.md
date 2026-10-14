@@ -43,7 +43,7 @@ If the user's request doesn't fit any of these, ask one clarifying question. Don
 | **Bad Design Canvas** ([SKILL](edbx/edbx-bad-design-canvas/SKILL.md) · [tutorial](tutorials/bad-design-canvas.md)) | 12-category systematic stress-test of a product's potential failure modes |
 | **Fair Patterns** ([SKILL](edbx/edbx-fair-patterns/SKILL.md) · [tutorial](tutorials/fair-patterns.md)) | Dark-pattern audit with jurisdiction-specific statutes, vulnerable population matrix, success metrics |
 | **Humane Design Guide** ([SKILL](edbx/edbx-humane-design-guide/SKILL.md) · [tutorial](tutorials/humane-design-guide.md)) | Six-sensitivity audit with named psychological mechanisms and exploitation-stack analysis |
-| **Digital Ethics Compass** ([SKILL](edbx/edbx-digital-ethics-compass/SKILL.md) · [tutorial](tutorials/digital-ethics-compass.md)) | Four-category (data / manipulation / transparency / automation) audit with Stakeholder & Power Map and Objective Function Risk Table |
+| **Digital Ethics Compass** ([SKILL](edbx/edbx-digital-ethics-compass/SKILL.md) · [tutorial](tutorials/digital-ethics-compass.md)) | Danish Design Center's five principles and 22 questions (data / automation / behavioral design), with Stakeholder & Power Map and Objective Function Risk Table |
 | **Responsible Design Prism** ([SKILL](edbx/edbx-responsible-design-prism/SKILL.md) · [tutorial](tutorials/responsible-design-prism.md)) | Five-axis ethical-posture rating with stakeholder mapping and psychological mechanism audit |
 | **CIDER** ([SKILL](edbx/edbx-cider/SKILL.md) · [tutorial](tutorials/cider.md)) | Surfaces who the design excludes and how |
 | **Ethicography** ([SKILL](edbx/edbx-ethicography/SKILL.md) · [tutorial](tutorials/ethicography.md)) | Post-hoc analysis of *team decisions* (not just the product) — traces ethical trajectory |
@@ -65,7 +65,7 @@ If the user's request doesn't fit any of these, ask one clarifying question. Don
 |---|---|
 | **Value Dams and Flows** ([SKILL](edbx/edbx-value-dams-and-flows/SKILL.md) · [tutorial](tutorials/value-dams-and-flows.md)) | Mapping where stakeholders agree, disagree, and why |
 | **Values Levers** ([SKILL](edbx/edbx-values-levers/SKILL.md) · [tutorial](tutorials/values-levers.md)) | Surfacing whose values are visible vs. absent, plus tactical levers given the user's role |
-| **Ethical Contract** ([SKILL](edbx/edbx-ethical-contract/SKILL.md) · [tutorial](tutorials/ethical-contract.md)) | Cross-disciplinary signed commitment with bias audit, thresholds, red lines, and named veto owners |
+| **Ethical Contract** ([SKILL](edbx/edbx-ethical-contract/SKILL.md) · [tutorial](tutorials/ethical-contract.md)) | Gispen's six-step signed commitment, from an Ethical Disclaimer, with bias audit, thresholds, red lines, and named veto owners |
 | **Pledge Works** ([SKILL](edbx/edbx-pledge-works/SKILL.md) · [tutorial](tutorials/pledge-works.md)) | Operationalizing intentions into 5-part pledges + "what we refuse to build" register |
 
 ### Go deeper on a specific decision or research question

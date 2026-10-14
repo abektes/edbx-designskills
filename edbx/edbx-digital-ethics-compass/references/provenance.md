@@ -75,7 +75,8 @@ and Industriens Fond. Each of these was searched in all five DDC page files.
 1. **Centre wording (row 3).** SKILL.md says "Put the Human in the Cosmos",
    repeated through the skill including the output template. DDC's title and
    principle read "Put the Human at the Center". No "cosmos" on any DDC page.
-   The output template asks every report to carry the wrong phrase.
+   The output template asks every report to carry the wrong phrase. (fixed in SKILL.md)
+
 2. **Structure (rows 4, 5).** SKILL.md has an inner ring of four categories
    (Data, Avoid Manipulation, Make Intentions Transparent, Automation) with
    middle and outer rings, as a "printable, rotatable wheel". DDC's Ethics
@@ -83,22 +84,28 @@ and Industriens Fond. Each of these was searched in all five DDC page files.
    ring, in three categories: Automation (10), Behavioral Design (6), Data (6).
    No inner ring, wheel or rotatable form in the text. "Behavioral Design" has
    no counterpart category in the skill; "Make Intentions Transparent" has none
-   in DDC (closest: the principle "Make your technology understandable").
+   in DDC (closest: the principle "Make your technology understandable"). (fixed in SKILL.md)
+
 3. **Data questions (row 7).** Shutdown handling and "how do you share data,
-   with whom" are not among DDC's six Data questions.
+   with whom" are not among DDC's six Data questions. (fixed in SKILL.md)
+
 4. **Manipulation items (row 9).** "Use people's values against them" and
    "cognitive biases" are not in the text. Fear, urgency, social pressure and
-   dark patterns are (stage A wrongly reported dark patterns as absent).
+   dark patterns are (stage A wrongly reported dark patterns as absent). (fixed in SKILL.md)
+
 5. **Skipped DDC content.** DDC's principles "Give users control" and "Avoid
    creating inequality", and automation items on law and human rights, job-skill
    loss, risk, readiness to step in, adaptability and security (question 10:
-   hacking) are not in the skill.
+   hacking) are not in the skill. (fixed in SKILL.md)
+
 6. **Scale claim (row 12).** The text does not say the compass spans single
-   features to business models.
+   features to business models. (fixed in SKILL.md)
+
 7. **Steps 0, 0.5, 0.6 (row 13)** are not in the source; they are skill
-   additions, as are the status colours and implementation types (row 14).
+   additions, as are the status colours and implementation types (row 14). (fixed in SKILL.md)
+
 8. **Attribution.** SKILL.md names no creator, year or licence. DDC is not
-   credited, and CC BY requires attribution if DDC text is reproduced.
+   credited, and CC BY requires attribution if DDC text is reproduced. (fixed in SKILL.md)
 
 ### Not verifiable
 

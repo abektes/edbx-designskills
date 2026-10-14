@@ -1,6 +1,6 @@
 {
   "skill": "edbx-ethical-contract",
-  "_note": "Machine-checkable form of the Deliverable Quality Bar. (1) 'works for teams from 2 to 20+ stakeholders' is left unchecked: the three scenarios have a 10-person team, a 12-person startup and an unstated moderation team, so no scenario exercises either end of the range, and a check on the stakeholder count would only teach padding or trimming. (2) The Red Line per stakeholder appears as an extra column of the responsibilities table, as a second table, or as a numbered list under the responsibilities heading; all three layouts are unioned. (3) 'No placeholders left unfilled' is checked as the absence of the template's own bracket slots and fill-in markers; the Name and Date cells of the signature table, and the contract's own Date line, are meant to be filled on signing and are not counted: a brief gives no date, and requiring one would force an invented date (rubric conventions, rule 6). (4) The signature line itself (underscores) is stripped by the harness's markdown cleaner, so it cannot be counted; the signature table is checked for one row per stakeholder role only. (5) The skill has no Sources list, so a row typed sourced must carry a URL in its Basis; a bare paper, regulation or industry-practice name is model knowledge and belongs under assumption. (6) The 'invents none' half of the ledger bar needs the prompt to tell which figures the brief gave, so it is checked only through the typing rules. (7) Harm table: at least 3 named populations, below the four categories the skill lists 'at minimum', because a brief may have no supply-chain workers or no non-users.",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar. (1) 'works for teams from 2 to 20+ stakeholders' is left unchecked: the three scenarios have a 10-person team, a 12-person startup and an unstated moderation team, so no scenario exercises either end of the range, and a check on the stakeholder count would only teach padding or trimming. (2) The Red Line per stakeholder appears as an extra column of the responsibilities table, as a second table, or as a numbered list under the responsibilities heading; all three layouts are unioned. (3) 'No placeholders left unfilled' is checked as the absence of the template's own bracket slots and fill-in markers; the Name and Date cells of the signature table, and the contract's own Date line, are meant to be filled on signing and are not counted: a brief gives no date, and requiring one would force an invented date (rubric conventions, rule 6). (4) The signature line itself (underscores) is stripped by the harness's markdown cleaner, so it cannot be counted; the signature table is checked for one row per stakeholder role only. (5) The skill has no Sources list, so a row typed sourced must carry a URL in its Basis; a bare paper, regulation or industry-practice name is model knowledge and belongs under assumption. (6) The 'invents none' half of the ledger bar needs the prompt to tell which figures the brief gave, so it is checked only through the typing rules. (7) Harm table: at least 3 named populations, below the four categories the skill lists 'at minimum', because a brief may have no supply-chain workers or no non-users. (8) The Ethical Disclaimer bar is checked for the presence of a section that shows the disclaimer; whether a drafted one is marked as a draft is not machine-checked, since a scenario that supplies a disclaimer would not need the marker.",
   "enumerators": {
     "ledger_type_cells": {
       "type": "table_cells",
@@ -271,53 +271,67 @@
       "desc": "every row typed sourced names a URL in its Basis (the skill has no Sources list, so a bare paper or regulation name is model knowledge and must be typed assumption)"
     },
     {
+      "id": "disclaimer_present",
+      "kind": "section_present",
+      "pattern": "ethical disclaimer",
+      "bar": "builds on the team's Ethical Disclaimer",
+      "desc": "the contract shows the Ethical Disclaimer it builds on (Step 1)"
+    },
+    {
       "id": "challenge_present",
       "kind": "section_present",
       "pattern": "ethical challenge",
-      "bar": "completes all contract steps including the Stakeholder Tension Map",
-      "desc": "an Ethical Challenge section exists (Step 1)"
+      "bar": "completes all six contract steps",
+      "desc": "an Ethical Disclaimer and Ethical Challenge section exists (Step 1)"
     },
     {
       "id": "tension_map_present",
       "kind": "section_present",
       "pattern": "tension map",
-      "bar": "completes all contract steps including the Stakeholder Tension Map",
+      "bar": "completes all six contract steps",
       "desc": "a Stakeholder Tension Map section exists (Step 1.5)"
+    },
+    {
+      "id": "themes_present",
+      "kind": "section_present",
+      "pattern": "recurring themes",
+      "bar": "completes all six contract steps",
+      "desc": "a Recurring Themes section exists (Step 2)"
     },
     {
       "id": "responsibilities_present",
       "kind": "section_present",
       "pattern": "stakeholder responsibilities",
-      "bar": "completes all contract steps including the Stakeholder Tension Map",
-      "desc": "a Stakeholder Responsibilities section exists (Step 2)"
+      "bar": "completes all six contract steps",
+      "desc": "a Stakeholder Responsibilities section exists (Step 3)"
     },
     {
       "id": "objectives_present",
       "kind": "section_present",
       "pattern": "ethical objectives",
-      "bar": "completes all contract steps including the Stakeholder Tension Map",
-      "desc": "a shared Ethical Objectives section exists (Step 3)"
+      "bar": "completes all six contract steps",
+      "desc": "a shared Ethical Objectives section exists (Step 4)"
     },
     {
       "id": "audit_present",
       "kind": "section_present",
       "pattern": "bias.{0,5}harm audit",
-      "bar": "completes all contract steps including the Stakeholder Tension Map",
-      "desc": "a Bias & Harm Audit section exists (Step 3.5)"
+      "bar": "completes the Bias & Harm Audit (Step 4.5)",
+      "desc": "a Bias & Harm Audit section exists (Step 4.5)"
     },
     {
       "id": "design_goal_present",
       "kind": "section_present",
       "pattern": "design goal",
-      "bar": "completes all contract steps including the Stakeholder Tension Map",
-      "desc": "a Design Goal section exists (Step 4)"
+      "bar": "completes all six contract steps",
+      "desc": "a Design Goal section exists (Step 5)"
     },
     {
       "id": "signatures_present",
       "kind": "section_present",
       "pattern": "signatures",
-      "bar": "completes all contract steps including the Stakeholder Tension Map",
-      "desc": "a Signatures section exists (Step 5)"
+      "bar": "completes all six contract steps",
+      "desc": "a Signatures section exists (Step 6)"
     },
     {
       "id": "tensions_named",
