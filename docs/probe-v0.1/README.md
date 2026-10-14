@@ -55,7 +55,7 @@ swaps). Table: `python3 scripts/probe_tally.py`.
 **No skill is handled by the plain model.** 17 are weak, 4 partial (anti-heroes,
 digital-ethics-compass, fair-patterns, responsible-design-prism); none reaches
 "handles it". The edbx methods are less known than cdbx's (mean coverage 37%
-vs 58% for cdbx); the common failure is not skipping a step but **replacing
+vs 59% for cdbx); the common failure is not skipping a step but **replacing
 the method with an invented one presented as the real thing**: own card decks
 (dah-cards, anti-heroes), own lever sets (values-levers), own lenses
 (humane-design-guide), redefined terms (value-dams-and-flows, motivation
