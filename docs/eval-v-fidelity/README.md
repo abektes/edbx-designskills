@@ -21,13 +21,15 @@ Claude Sonnet subagents, seven dimensions, quote check.
 
 black-mirror-brainstorming / ai-hiring-screening and motivation-matrix /
 employee-review-platform stopped to ask for details (2/63 this round vs 2/630
-before). Proposed fix (not applied): the family guardrail "Do not stop to
+before). Fix: the family guardrail "Do not stop to
 ask for more: draft the full output with unknowns marked and the questions
-to ask" in all 21 skills.
+to ask" in all 21 skills. Applied in 4813132 (not yet re-measured).
 
 ## Other defect found
 
 values-levers' Output Format never listed the Lever Resistance Map or the
 30-Day Action Plan that its workflow and Quality Bar require; this round all
-three outputs omitted the map (structural 80% vs 94%). Fix: add both to the
-template (not applied).
+three outputs omitted the map (structural 80% vs 94%). Fixed in 4813132, with the same
+defect in pledge-works (red-line register, traceability) and ethical-contract
+(Tension Map), found by checking every rubric section pattern against each
+template (not yet re-measured).
