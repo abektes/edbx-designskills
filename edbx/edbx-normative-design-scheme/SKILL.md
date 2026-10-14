@@ -9,7 +9,7 @@ tags: [ethical-design, decision]
 
 ## Overview
 
-Normative Design Scheme allows you to assess your design goals and brainstorm ideas based on normative ethical theories. Every design carries intentions, produces effects, and follows or breaks rules. The Normative Design Scheme makes each of those dimensions visible by applying three philosophical traditions as lenses.
+Normative Design Scheme, from Jet Gispen's *Ethics for Designers* toolkit (2017), allows you to assess your design goals and brainstorm ideas based on normative ethical theories. Every design carries intentions, produces effects, and follows or breaks rules. The Normative Design Scheme makes each of those dimensions visible by applying three philosophical traditions as lenses.
 
 The method uses a three-part normative ethical framework applied to any design decision or product. Each lens asks a different question:
 

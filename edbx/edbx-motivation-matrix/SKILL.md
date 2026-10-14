@@ -9,7 +9,7 @@ tags: [ethical-design, forecast]
 
 ## Overview
 
-The Motivation Matrix maps how a product or service leverages five core user motivations across different users and contexts. It exposes where design choices exploit, nudge, or support those motivations — and where the line between helpful and manipulative gets blurry.
+The Motivation Matrix, from Kat Zhou's *Design Ethically* toolkit (designethically.com), maps how a product or service leverages five core user motivations across different users and contexts. It exposes where design choices exploit, nudge, or support those motivations — and where the line between helpful and manipulative gets blurry.
 
 **Formula:** MOTIVATION TYPE × USE @ CONTEXT = MOTIVATION MATRIX
 
@@ -202,5 +202,5 @@ See `references/related-methods.md` for detailed connections and sequencing guid
 
 ## Further Reading
 
-- Zhu, A. (2020). *Design Driven by Motivation.* design4good.com/book
-- Nodders, C. (2020). "Motivation Matrix." In *Universal Methods of Ethical Design.*
+- Zhou, K. *Design Ethically* toolkit: Motivation Matrix. designethically.com/motivation-matrix
+- Chivukula, S. S. & Gray, C. M. (2025). *Universal Methods of Ethical Design.* Rockport.

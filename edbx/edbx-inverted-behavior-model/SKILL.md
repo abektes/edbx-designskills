@@ -11,7 +11,7 @@ tags: [ethical-design, forecast]
 
 Inverted Behavior Model supports you in identifying potential behavior based on a forecast of what a feature or product motivates the user to do. Designers generate products and features based on expectations of how users will behave. The Inverted Behavior Model inverts this: rather than designing *toward* a behavior, the method works backward from features to reveal what behaviors they actually incentivize.
 
-The method is grounded in BJ Fogg's Behavior Model (B = Motivation + Ability + Prompt), which states that behavior occurs when these three elements converge. The "inversion" is methodological: instead of using the model to *design* behavior, this method uses it to *audit* what behaviors are being designed — intentionally or not.
+The method comes from Kat Zhou's *Design Ethically* toolkit (designethically.com) and is grounded in BJ Fogg's Behavior Model (B = Motivation + Ability + Prompt), which states that behavior occurs when these three elements converge. The "inversion" is methodological: instead of using the model to *design* behavior, this method uses it to *audit* what behaviors are being designed — intentionally or not.
 
 By working through Inverted Behavior Models, designers can identify the motivating factors behind each feature, list intended and unintended behaviors, and identify a range of consequences that could positively or negatively impact users or society at large.
 
