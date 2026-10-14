@@ -6,9 +6,9 @@
 
 ## Who made it
 
-The Humane Design Guide is based on the framework developed by the **Center for Humane Technology** — a nonprofit founded by Tristan Harris (former design ethicist at Google), Aza Raskin, and colleagues who work on reforming the technology industry's incentive structures around human wellbeing.
+The Humane Design Guide is a worksheet from the **Center for Humane Technology** (humanetech.com) — a nonprofit founded by Tristan Harris (former design ethicist at Google), Aza Raskin, and colleagues who work on reforming the technology industry's incentive structures around human wellbeing.
 
-The Center's research identified six specific "human sensitivities" — aspects of human psychology and social life that technology consistently exploits in ways that harm users. The Humane Design Guide translates that research framework into a design audit tool.
+The worksheet names six "human sensitivities" — instincts that are often vulnerable to new technologies. This skill paraphrases that framework (it does not reproduce the worksheet's text) and turns it into a design audit.
 
 ---
 
@@ -16,7 +16,7 @@ The Center's research identified six specific "human sensitivities" — aspects 
 
 Technology companies often claim to be making products "for users." The Center for Humane Technology's research documented the gap between that claim and what products are actually optimized for — which is typically engagement, retention, and revenue, using design mechanisms that exploit human psychological vulnerabilities.
 
-The six sensitivities are not abstract ethical principles. They are human capacities — how we focus, feel, make sense of things, decide, relate to each other, and live in groups — that a product can either support or exploit. Infinite scroll, like counts, streaks and outrage-ranked feeds are the documented mechanisms by which products exploit them.
+The six sensitivities are not abstract ethical principles. They are human capacities — how we focus, feel, make sense of things, decide, relate to each other, and live in groups — that a product can either support or exploit. Infinite scroll (which the worksheet lists), like counts, streaks and outrage-ranked feeds (edbx examples) are mechanisms by which products can exploit them.
 
 The Humane Design Guide makes these mechanisms auditable. For each sensitivity, it asks: is your product exploiting this mechanism? How? For whom? What would need to change to stop?
 
@@ -34,19 +34,20 @@ The Humane Design Guide makes these mechanisms auditable. For each sensitivity, 
 
 ## What it produces
 
-The audit covers six sensitivities:
+The audit covers six sensitivities, in the worksheet's order. The wording is paraphrased from the worksheet; the "Exploited through" examples are edbx's own, apart from infinite scroll, which the worksheet also lists:
 
-| Sensitivity | What it is | Exploited through… | The goal: users are *enabled to…* |
+| Sensitivity | What it is | Exploited through… (edbx examples) | The goal: users are *enabled to…* |
 |---|---|---|---|
-| **Attention** | How and where we focus | Infinite scroll, autoplay, notification flooding | Find focus and peace |
-| **Emotional** | What we feel in our body and health | Like counts as currency, fear framing, shame mechanics | Process and adapt |
-| **Sensemaking** | How we connect what we see with what we know | Filter bubbles, misleading labels, algorithmic amplification | Find truth and clarity |
-| **Decision-making** | How we align actions with intentions | Dark patterns, hidden defaults, forced choices | Act with agency and control |
-| **Social Reasoning** | How we navigate relationships | Status games, social comparison, FOMO | Connect meaningfully |
-| **Group Dynamics** | How we navigate groups and shared understanding | Polarizing algorithms, exclusion, us-vs-them framing | Build strong communities |
+| **Emotional** | What we feel in the body, and physical health | Like counts as currency, fear framing, shame mechanics | Rest and feel secure (edbx wording; the worksheet has no "Enabled to" line for this one) |
+| **Attention** | Where and how our focus goes | Infinite scroll, autoplay, notification flooding | Settle into focus and be present |
+| **Sensemaking** | How what we perceive fits with what we know | Filter bubbles, misleading labels, algorithmic amplification | Reflect, learn, voice a view and stay grounded |
+| **Decision-making** | Whether our actions match our intentions | Dark patterns, hidden defaults, forced choices | Act on their own purposes with real agency |
+| **Social Reasoning** | How we handle personal relationships | Status games, social comparison, FOMO | Relate to others safely and authentically |
+| **Group Dynamics** | How we handle larger groups and shared understanding | Polarizing algorithms, exclusion, us-vs-them framing | Belong and cooperate |
 
 For each sensitivity, the audit produces:
-- A rating: 🔴 High (the product actively exploits it) / 🟡 Medium (touches it with some risk) / 🟢 Low (respects it well)
+- A rating on the worksheet's High-to-Low opportunity scale, in three bands (an edbx adaptation): 🔴 High (the product actively exploits it) / 🟡 Medium (touches it with some risk) / 🟢 Low (respects it well)
+- A rank from 1 to 6 by size of opportunity, as the worksheet asks
 - A specific description of how the sensitivity is being engaged, and what human harm is at risk
 - An improvement opportunity framed as what users should be **enabled to** do
 - The **named psychological mechanism** for every 🔴 and 🟡 row — using precise terms (variable reward schedule, streak-loss aversion, near-miss design, friction asymmetry, FOMO, identity entanglement, beauty-filter colorism, engagement-amplification of anxiety). Generic "manipulation" is rejected; the mechanism must be named specifically.
@@ -54,7 +55,7 @@ For each sensitivity, the audit produces:
 - **At least 3 alternatives per 🔴 sensitivity** — minimal change (smallest intervention), structural change (modifies underlying mechanic), radical reframe (challenges whether the feature should exist in this form). Each alternative is paired with a memorable principle the team can carry forward.
 - A **Business Tension Statement** — the specific metric or OKR that would need to change
 
-The method also includes:
+The method also includes these edbx additions, which are not part of the published guide:
 
 - **Engagement-Value Paradox Check** — does the product's core success metric structurally conflict with user welfare? If so, name the paradox explicitly rather than treating it as resolvable through incremental design improvements.
 - **Compound Harm / Exploitation Stack Analysis** — single-feature audits miss the most damaging pattern: features that exploit on their own become catastrophic when stacked. A streak system + push notifications + public follower count + late-night autoplay don't add up — they multiply, because each one removes a different exit ramp. The analysis identifies 2–3 multi-feature stacks where the combination is worse than the sum, and proposes at least one redesign that breaks the stack rather than fixing one feature within it.
@@ -81,7 +82,7 @@ Describe your product — what it does, how it makes money, what the key engagem
 
 **Product:** A social photo-sharing app with algorithmic feed, public follower counts, and engagement notifications.
 
-**Social Reasoning — 🔴 High** (*enabled to connect meaningfully*):
+**Social Reasoning — 🔴 High** (*enabled to relate to others safely and authentically*):
 The product shows public follower counts, public like counts, and prominent engagement metrics on every post. The algorithmic feed prioritizes posts that get more engagement, which means social validation metrics directly influence content visibility.
 
 **Named mechanism:** social comparison plus a variable reward schedule — each post is a lottery for likes, and every result is ranked against everyone else's.

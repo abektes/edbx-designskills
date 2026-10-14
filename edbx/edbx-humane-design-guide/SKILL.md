@@ -1,6 +1,6 @@
 ---
 name: edbx-humane-design-guide
-description: Use when a designer, researcher, or product manager wants to audit how a product exploits human vulnerabilities, identify where design harms attention or emotional wellbeing, surface dark patterns around addiction or deception, generate opportunity areas for more humane product design, or evaluate against Center for Humane Technology principles. Apply the Humane Design Guide framework to evaluate a product or feature against six human sensitivities — Attention, Emotional, Sensemaking, Decision-making, Social Reasoning, and Group Dynamics — and generate humane design alternatives. Trigger this skill for any mention of humane technology, attention exploitation, addictive design, emotional harm in UX, filter bubbles, dark patterns in social products, or when someone asks "is this product respecting its users?" Also trigger for "humane design", "human sensitivities", "attention design", "digital wellbeing", "center for humane technology", or "humane design guide".
+description: Use when a designer, researcher, or product manager wants to audit how a product exploits human vulnerabilities, identify where design harms attention or emotional wellbeing, surface dark patterns around addiction or deception, generate opportunity areas for more humane product design, or evaluate against Center for Humane Technology principles. Apply the Humane Design Guide framework to evaluate a product or feature against six human sensitivities — Emotional, Attention, Sensemaking, Decision-making, Social Reasoning, and Group Dynamics — and generate humane design alternatives. Trigger this skill for any mention of humane technology, attention exploitation, addictive design, emotional harm in UX, filter bubbles, dark patterns in social products, or when someone asks "is this product respecting its users?" Also trigger for "humane design", "human sensitivities", "attention design", "digital wellbeing", "center for humane technology", or "humane design guide".
 version: "1.0"
 tags: [ethical-design, audit]
 ---
@@ -9,13 +9,15 @@ tags: [ethical-design, audit]
 
 ## Overview
 
-The Humane Design Guide evaluates products against six human sensitivities that digital technology can exploit: attention, emotional state, sensemaking, decision-making, social reasoning, and group dynamics. It was developed by the Center for Humane Technology as a practical worksheet for design teams.
+The Humane Design Guide evaluates a product against six human sensitivities that new technology can strain: emotional state, attention, sensemaking, decision-making, social reasoning, and group dynamics. It is a two-sheet worksheet for design teams from the Center for Humane Technology (humanetech.com), which is the source of the method; this skill paraphrases it and does not reproduce its text.
 
-The method is structured around a simple idea: technology can take advantage of how humans think and feel, making people act in ways they would not otherwise choose. The guide makes those exploitation patterns visible and replaces them with humane alternatives framed as what users are *enabled to* do.
+The guide starts from the idea that human sensitivities are instincts that new technology can easily exploit. The first sheet lists the six, what inhibits each and what supports it, scores each for opportunity to improve from High to Low, and ranks them 1-6 by size of opportunity. The second sheet turns the result into an action statement. This skill keeps that shape and asks where a product takes advantage of those instincts, then replaces the pattern with a humane alternative framed as what users are *enabled to* do.
 
-> **Method #47 — Humane Design Guide.** From *Universal Methods of Ethical Design*. Source: Center for Humane Technology — humanetech.com. Hashtags: #breakmydesign #evaluateoutcomes. See also: Maslow Mirrored · Well-Being Design Cards.
+> **Method #47 — Humane Design Guide.** Listed in this skill's notes as Method #47 of *Universal Methods of Ethical Design* (hashtags #breakmydesign #evaluateoutcomes); the book was not checked. Source: Center for Humane Technology, Humane Design Guide worksheet, humanetech.com. See also: Maslow Mirrored · Well-Being Design Cards.
 
-The worksheet is the primary output artifact. This skill produces a filled worksheet equivalent — six rows (one per sensitivity), four columns per row — every time it runs.
+The filled worksheet is the primary output artifact. This skill produces a filled-worksheet equivalent every time it runs: six rows, one per sensitivity, in the worksheet's order, each with an opportunity level and a 1-6 rank.
+
+> **edbx adaptation:** the printed worksheet has columns for the sensitivity, when it is inhibited, what inhibits it and when it is supported. The audit table in Step 2 (current state, what's at risk, level, mechanism, populations, enabled to) is edbx's own layout; not part of the published method. It turns the worksheet's prompts into a table a team can fill in without paper.
 
 ## Use This Skill When
 
@@ -38,18 +40,20 @@ Provide as many of these as are available:
 
 ## The Six Human Sensitivities
 
-Each sensitivity describes a human capacity that can be inhibited or supported by design.
+Each sensitivity names a human capacity that design can strain or support. They are listed in the worksheet's order, Emotional first. The wording here is paraphrased from the worksheet.
 
-| Sensitivity | Definition | Inhibited When... | Supported When... → Enabled to... |
+| Sensitivity | What it covers | Inhibited when... | Supported when... → Enabled to... |
 |---|---|---|---|
-| **Attention** | How and where we focus | Fragmented, driven, overwhelmed | Find focus and peace |
-| **Emotional** | What we feel in our body and health | Overwhelmed, afraid, stressed | Process and adapt |
-| **Sensemaking** | How we integrate sense with knowledge | Fear-based, out of context, misleading | Find truth and clarity |
-| **Decision-making** | How we align actions with intentions | Agency not supported or requested | Act with agency and control |
-| **Social Reasoning** | How we navigate relationships | Status, self-image manipulated | Connect meaningfully |
-| **Group Dynamics** | How we navigate groups and shared understanding | Excluded, divided, managed through fear | Build strong communities |
+| **Emotional** | What we feel in the body, and physical health | Stressed, short of sleep, afraid or emotionally worn out | Calm, balance, safety, room to pause, respect for body rhythms → rest and feel secure |
+| **Attention** | Where and how focus goes | Pulled by reflex, swamped or fragmented | Settle into focus and be present |
+| **Sensemaking** | How what we perceive fits what we know | Information is fearful, stripped of context, confusing or manipulative | Reflect, learn, voice a view and stay grounded |
+| **Decision-making** | Whether our actions match our intentions | Intent and agency are neither asked for nor backed | Act on their own purposes with real agency |
+| **Social Reasoning** | How we read and handle personal relationships | Someone else steers standing, relationships or self-image | Relate to others safely and authentically |
+| **Group Dynamics** | How we handle larger groups, standing and shared understanding | Shut out, split apart or rallied by fear | Belong and cooperate |
 
-Full definitions, inhibition states, and support states are in `references/six-sensitivities.md`.
+The worksheet gives Emotional no "Enabled to" line; its supported-when cell describes calm, balance, safety, pauses and body rhythms. The Emotional line above ("rest and feel secure") is edbx's own wording of that cell.
+
+Full definitions, inhibition states, support states and the worksheet's example inhibitors (paraphrased) are in `references/six-sensitivities.md`.
 
 ## Workflow
 
@@ -74,35 +78,41 @@ If the value proposition or measures of success are missing, infer the most like
 
 ### Step 2 — Sensitivity Audit
 
-For each of the six sensitivities, assess four dimensions:
+For each of the six sensitivities, work through the dimensions below:
 
-**1. Current State:** How does the product currently engage or exploit this sensitivity? Map against known exploitation patterns:
+**1. Current State:** How does the product currently engage or exploit this sensitivity? Map it against known exploitation patterns. The worksheet gives example inhibitors for each sensitivity (paraphrased):
 
-- **Attention:** infinite scroll, nudging, notification flooding, sensory overload, autoplay
-- **Emotional:** currency of likes, aspirational filters, fear-based framing, shame mechanics
-- **Sensemaking:** filter bubbles, misleading labels, information as noise, out-of-context framing, algorithmic amplification
-- **Decision-making:** dark patterns, removing agency, forced choices, hidden defaults, confirmshaming
-- **Social Reasoning:** status manipulation, self-image exploitation, social comparison, FOMO mechanics
-- **Group Dynamics:** polarizing algorithms, exclusion mechanics, fear-based division, us-vs-them framing
+- **Emotional:** artificial scarcity, urgency signals, constant monitoring, optimizing for screen time
+- **Attention:** endless task switching, piles of near-identical options, fear-laden information, no stopping cues (such as infinite scroll), movement for its own sake
+- **Sensemaking:** facts shown without context, over-tailored feeds, treating viral spread as credibility, paid content that passes as ordinary content
+- **Decision-making:** avatars that project authority, ads and messages that follow people around, content pushed at people, giving them what they click rather than what they meant to do
+- **Social Reasoning:** quantified social status, viral sharing, implied obligation, enabling impersonation
+- **Group Dynamics:** suppressing views and nuance, room for personal attacks or hate speech, outrage that spreads fast, no agreed norms
 
-The full exploitation pattern library is in `references/exploitation-pattern-library.md`.
+edbx examples (not on the worksheet) to look for as well: notification flooding, autoplay, nudging, sensory overload; currency of likes, aspirational filters, shame mechanics; filter bubbles, misleading labels, algorithmic amplification; dark patterns, hidden defaults, confirmshaming; social comparison, FOMO mechanics; polarizing algorithms, exclusion mechanics, us-vs-them framing.
+
+> **edbx adaptation:** the extra example patterns above and in `references/exploitation-pattern-library.md` are edbx's catalogue, not the guide's; not part of the published method. They widen the search beyond the worksheet's short lists, which are only examples.
 
 **2. What's at Risk:** Name the human harm. Be specific — not "users might feel bad" but "users lose capacity to self-regulate attention during evening hours, leading to sleep disruption."
 
-**3. Opportunity Level:** Score as:
+**3. Opportunity Level:** The worksheet scores each sensitivity for opportunity to improve on a scale from High to Low. Score as:
 - `🔴 High` — the product actively exploits this sensitivity
 - `🟡 Medium` — the product touches this sensitivity with some risk
 - `🟢 Low` — the product respects this sensitivity well
 
-**4. Improvement Opportunity:** Frame using the "Enabled to..." format:
-- Attention → *Enabled to find focus and peace*
-- Emotional → *Enabled to process and adapt*
-- Sensemaking → *Enabled to find truth and clarity*
-- Decision-making → *Enabled to act with agency and control*
-- Social Reasoning → *Enabled to connect meaningfully*
-- Group Dynamics → *Enabled to build strong communities*
+> **edbx adaptation:** the three named bands and their colours are edbx's reading of the worksheet's High-to-Low scale; not part of the published method. Named bands make the later "which rows get alternatives" rule easy to apply.
 
-**5. Named Psychological Mechanism (required for every 🔴 and 🟡 row):** Naming "manipulation" is not enough. Name the **specific psychological mechanism** the design exploits, using precise terminology. If you cannot name a mechanism, the diagnosis is too shallow.
+**4. Rank (1-6):** After scoring, rank the six sensitivities from 1 (largest opportunity for humane design) to 6, as the worksheet asks. Use each number once; the level shows how bad a row is, the rank orders the work.
+
+**5. Improvement Opportunity:** Frame using the "Enabled to..." format (paraphrased from the worksheet; Emotional is edbx's wording, see above):
+- Emotional → *Enabled to rest and feel secure*
+- Attention → *Enabled to settle into focus and be present*
+- Sensemaking → *Enabled to reflect, learn, voice a view and stay grounded*
+- Decision-making → *Enabled to act on their own purposes with real agency*
+- Social Reasoning → *Enabled to relate to others safely and authentically*
+- Group Dynamics → *Enabled to belong and cooperate*
+
+**6. Named Psychological Mechanism (required for every 🔴 and 🟡 row):** Naming "manipulation" is not enough. Name the **specific psychological mechanism** the design exploits, using precise terminology. If you cannot name a mechanism, the diagnosis is too shallow.
 
 Use these named-mechanism categories:
 
@@ -114,24 +124,28 @@ Use these named-mechanism categories:
 
 Generic "feels manipulative" is not a mechanism. "Variable reward schedule on the like counter producing checking compulsion" is.
 
-**6. Differential Impact (required, multi-population):** For each sensitivity, name **at least 2 specifically-vulnerable populations** that experience this harm most acutely — not "all users." For each, name the mechanism of differential vulnerability.
+**7. Differential Impact (required, multi-population):** For each sensitivity, name **at least 2 specifically-vulnerable populations** that experience this harm most acutely — not "all users." For each, name the mechanism of differential vulnerability.
 
 Examples: adolescents (developmental peer-comparison sensitivity); shift workers (cognitive depletion at off-hours); people with eating disorders (Emotional sensitivity on fitness/wellness/beauty apps); women and racial minorities re: beauty filters (colorism / narrow aesthetic norms baked into training data); gig workers (Decision-making under forced continuity, no negotiating power); elderly users with low digital literacy (Sensemaking under algorithmic curation); users with anxiety disorders (engagement-amplified anxiety content); low-income users (default-bias on opt-out paid features).
 
-Present the audit as a filled worksheet table. A blank version is in `assets/worksheet-template.md`.
+Present the audit as a filled worksheet table, rows in the worksheet's order. A blank version is in `assets/worksheet-template.md`.
 
-| Sensitivity | Current State | What's at Risk | Level | Named Mechanism (specific) | Most Affected Populations (≥2 named, with mechanism of differential harm) | Enabled to... |
-|---|---|---|---|---|---|---|
-| Attention | ... | ... | 🔴/🟡/🟢 | e.g., "infinite scroll exploits attentional residue + variable-reward checking compulsion" | e.g., "shift workers (cognitive depletion at hour 22+); adolescents (developmental impulse-control gap)" | ... |
-| Emotional | ... | ... | 🔴/🟡/🟢 | ... | ... | ... |
-| Sensemaking | ... | ... | 🔴/🟡/🟢 | ... | ... | ... |
-| Decision-making | ... | ... | 🔴/🟡/🟢 | ... | ... | ... |
-| Social Reasoning | ... | ... | 🔴/🟡/🟢 | ... | ... | ... |
-| Group Dynamics | ... | ... | 🔴/🟡/🟢 | ... | ... | ... |
+> **edbx adaptation:** the Named Mechanism and Differential Impact dimensions (items 6 and 7) are edbx additions; not part of the published method. Plain models name "manipulation" and stop; these two force a specific mechanism and a named group, which makes each finding checkable.
+
+| Sensitivity | Current State | What's at Risk | Level | Rank (1-6) | Named Mechanism (specific) | Most Affected Populations (≥2 named, with mechanism of differential harm) | Enabled to... |
+|---|---|---|---|---|---|---|---|
+| Emotional | ... | ... | 🔴/🟡/🟢 | ... | e.g., "currency of likes tied to self-worth through a variable reward schedule" | e.g., "adolescents (developmental peer-comparison sensitivity); people with eating disorders (appearance-comparison triggers)" | ... |
+| Attention | ... | ... | 🔴/🟡/🟢 | ... | e.g., "infinite scroll exploits attentional residue + variable-reward checking compulsion" | e.g., "shift workers (cognitive depletion at hour 22+); adolescents (developmental impulse-control gap)" | ... |
+| Sensemaking | ... | ... | 🔴/🟡/🟢 | ... | ... | ... | ... |
+| Decision-making | ... | ... | 🔴/🟡/🟢 | ... | ... | ... | ... |
+| Social Reasoning | ... | ... | 🔴/🟡/🟢 | ... | ... | ... | ... |
+| Group Dynamics | ... | ... | 🔴/🟡/🟢 | ... | ... | ... | ... |
 
 ---
 
 ### Step 3 — Generate Design Alternatives
+
+> **edbx adaptation:** the three-alternative menu, business tension statements, algorithm audit, engagement-value paradox check, exploitation-stack analysis and memorable heuristics below are edbx additions; not part of the published method. The worksheet's second sheet stops at an action statement. These steps are here because a team needs concrete options and the cost of choosing them before it can act.
 
 For each sensitivity scored `🔴 High`:
 
@@ -156,7 +170,7 @@ If the product uses any algorithmic system to score, rank, filter, or recommend:
 - Flag any dimension where algorithmic amplification intersects with existing social inequality (race, gender, income, disability).
 
 **Engagement-Value Paradox Check:**
-Ask explicitly: *"Does this product's core success metric (retention, session time, engagement, streaks) structurally conflict with user wellbeing?"* If yes, name the paradox: "A product that succeeds when users are not using it cannot be measured by DAU." This is the most common root cause of humane design violations — the metric itself is the problem, not just the feature.
+Ask explicitly: *"Does this product's core success metric (retention, session time, engagement, streaks) structurally conflict with user wellbeing?"* If yes, name the paradox: "A product that succeeds when users are not using it cannot be measured by DAU." When the answer is yes, the metric itself is the problem, not just the feature, and the worksheet's own second sheet asks the same thing: are the success criteria in tension with any sensitivities?
 
 For each 🔴 sensitivity, add a **Business Tension Statement**: name the specific KPI or OKR that would need to change for a humane fix to be implemented. Raw analysis identifies harms; this step names what organizational change is required to address them.
 
@@ -186,14 +200,14 @@ Write every heuristic fresh from this audit's findings — do not reuse or rewor
 Compile the full audit into a stakeholder-ready deliverable. Open it with a short **Answer**: two to four sentences that answer the question the user actually asked (the decision, verdict or recommendation) and the main reason for it. The method's sections follow and back it up; they never replace it. Write it once, as the first section under the title. Then:
 
 1. **Header:** Product name, value proposition, measures of success (mark any you inferred)
-2. **Filled Worksheet:** The six-row sensitivity table from Step 2
+2. **Filled Worksheet:** The six-row sensitivity table from Step 2, with each sensitivity's level and its 1-6 rank
 3. **Sensitivity Risk Summary:** A brief overview of which sensitivities are most at risk and why
 4. **Design Alternatives:** Three alternatives (minimal / structural / radical) for every 🔴 sensitivity, each with its metric change, and a Business Tension Statement naming the KPI or OKR that must change
 5. **Algorithm Audit:** Required whenever the product scores, ranks, filters, personalizes, or recommends — a personalized feed counts
 6. **Engagement-Value Paradox:** Whether the core success metric structurally conflicts with wellbeing, stated explicitly
 7. **Exploitation Stacks:** The 2–3 stack table, plus at least one redesign that breaks a whole stack
 8. **Memorable Heuristics:** 3–5, written fresh for this product
-9. **Humane Design Statement:** A single paragraph the team can use to anchor design decisions going forward
+9. **Humane Design Statement:** A single paragraph the team can use to anchor design decisions going forward. It is this skill's version of the worksheet's action statement, whose prompts ask what to learn, what to discuss with the team, what to design or prototype and which design principles to try
 10. **Evidence Ledger** — every figure or fact about the user's situation the output relies on, typed as below
 
 Every figure, rate, incident, past failure or fact about the user's product, users or situation that the output relies on gets a row in the Evidence Ledger. **Type** is exactly one of four words: `user-supplied` (stated in the brief), `sourced` (the Basis holds a URL from the user or from a search run in this session; these skills carry no source list, so a book, paper, report or regulation named without such a URL is `assumption`), `assumption` (anything else, including model knowledge) or `unknown` (a figure the output needs but the brief does not give; write "unknown" in the body too). Illustrative numbers are allowed only when labelled illustrative in the body and typed `assumption` here. Invented characters, scenes, stories and worked examples that the method itself asks for are not claims: give them no ledger row (the Type column holds only the four words above), and keep them visibly marked as invented in the body. The Basis names the brief, a paper, a URL or "model knowledge"; never this skill, its rules or its box.
@@ -223,7 +237,7 @@ Run the Humane Design Guide after Worrystorming to give raw concerns a structure
 - **Do not skip the "Enabled to..." framing.** This is not just a format preference — it forces the output toward enabling users, not just protecting them. Humane design is affirmative, not merely defensive.
 - **Do not treat the audit as a box to check.** If all six sensitivities score 🟢, the audit was too gentle. Real products have real trade-offs.
 - **Pay attention to the measures of success.** They often reveal exploitation intent more honestly than the product description. Flag this when it happens.
-- **Acknowledge the Center for Humane Technology lineage.** Point users to humanetech.com for deeper resources and the full framework.
+- **Credit the source.** The method is the Center for Humane Technology's Humane Design Guide. Name it in the deliverable and point users to humanetech.com for the original worksheet and the full framework; do not reproduce the worksheet's text.
 - Do not name other skills or boxes in the deliverable as if the reader has them. Describe a related method in plain terms (a structured worry session, a stakeholder harm map).
 - Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
 
@@ -234,6 +248,7 @@ Run the Humane Design Guide after Worrystorming to give raw concerns a structure
 A strong Humane Design Guide audit:
 
 - correctly evaluates all six sensitivities for every product
+- ranks the six sensitivities 1-6 by the size of the opportunity for humane design, as the worksheet asks
 - produces a filled worksheet equivalent without needing physical paper
 - uses "Enabled to..." framing for every opportunity area
 - **names a specific psychological mechanism for every 🔴 and 🟡 row** (e.g., "variable reward schedule," not "manipulation"); generic descriptions are rejected
@@ -258,17 +273,17 @@ A strong Humane Design Guide audit:
 > **Value proposition:** Discover entertaining content tailored to your interests
 > **Measures of success:** Daily active users, average session time, videos viewed per session
 >
-> | Sensitivity | Current State | What's at Risk | Level | Enabled to... |
-> |---|---|---|---|---|
-> | Attention | Infinite scroll with autoplay; no natural stopping points; notifications pull users back | Users lose ability to self-regulate viewing time; sleep disruption from late-night use | 🔴 | Find focus and peace |
-> | Emotional | Like counts as currency; aspirational creator content; comparison-driven feed | Self-image distortion; anxiety from social comparison; validation-seeking loops | 🔴 | Process and adapt |
-> | Sensemaking | Algorithm amplifies engagement-driving content regardless of accuracy; no framing cues | Users develop distorted understanding of what content is popular vs. amplified | 🔴 | Find truth and clarity |
-> | Decision-making | Default is passive consumption; no prompts to reflect or disengage | Users consume content they did not choose to see; attention is captured, not directed | 🟡 | Act with agency and control |
-> | Social Reasoning | Follower counts create status hierarchy; duet/ remix features encourage comparison | Relationships framed as competitive; genuine connection replaced by performance | 🟡 | Connect meaningfully |
-> | Group Dynamics | Algorithm optimizes for engagement, which amplifies polarizing content | Users see increasingly divisive content; echo chambers deepen | 🔴 | Build strong communities |
+> | Sensitivity | Current State | What's at Risk | Level | Rank | Enabled to... |
+> |---|---|---|---|---|---|
+> | Emotional | Like counts as currency; aspirational creator content; comparison-driven feed | Self-image distortion; anxiety from social comparison; validation-seeking loops | 🔴 | 2 | Rest and feel secure |
+> | Attention | Infinite scroll with autoplay; no natural stopping points; notifications pull users back | Users lose ability to self-regulate viewing time; sleep disruption from late-night use | 🔴 | 1 | Settle into focus and be present |
+> | Sensemaking | Algorithm amplifies engagement-driving content regardless of accuracy; no framing cues | Users develop distorted understanding of what content is popular vs. amplified | 🔴 | 3 | Reflect, learn, voice a view and stay grounded |
+> | Decision-making | Default is passive consumption; no prompts to reflect or disengage | Users consume content they did not choose to see; attention is captured, not directed | 🟡 | 6 | Act on their own purposes with real agency |
+> | Social Reasoning | Follower counts create status hierarchy; duet/ remix features encourage comparison | Relationships framed as competitive; genuine connection replaced by performance | 🟡 | 5 | Relate to others safely and authentically |
+> | Group Dynamics | Algorithm optimizes for engagement, which amplifies polarizing content | Users see increasingly divisive content; echo chambers deepen | 🔴 | 4 | Belong and cooperate |
 >
 > **Design Alternative for Attention (🔴):**
 > Replace infinite scroll with a "continue watching?" prompt every 20 minutes. Metric change: session time decreases ~15% but 30-day retention increases. Business tension: DAU targets will dip in the short term.
 >
 > **Humane Design Statement:**
-> "We commit to building a platform where users find focus and peace, not fragmentation. Our content recommendations will optimize for truth and clarity, not engagement at any cost. We will measure success not just by time spent, but by whether users leave feeling enabled to act with agency and control."
+> "We commit to building a platform where users can settle into focus, not fragmentation. Our content recommendations will help people reflect, learn and stay grounded, not serve engagement at any cost. We will measure success not just by time spent, but by whether users leave feeling able to act on their own purposes."

@@ -1,10 +1,26 @@
 # Humane Design Alternatives — Positive Design Patterns
 
-For each human sensitivity, concrete design alternatives that support rather than exploit. Use these when generating redesign proposals in Step 3.
+For each human sensitivity, concrete design alternatives that support rather than exploit, in the Humane Design Guide's order. Use these when generating redesign proposals in Step 3.
+
+> **edbx adaptation:** the alternatives below are edbx's own examples; not part of the Center for Humane Technology's guide. The worksheet itself gives only the "supported when" statements (what users are enabled to do) and prompts on its second sheet; it does not list design fixes. The "Enabled to" headings are paraphrased from the worksheet, and the Emotional one is edbx's wording.
 
 ---
 
-## Attention — Enabled to Find Focus and Peace
+## Emotional — Enabled to Rest and Feel Secure
+
+**Remove public like/reaction counts.** Keep the ability to react, but make counts visible only to the creator, not the audience. This decouples self-worth from quantified approval.
+
+**Replace shame with encouragement.** Instead of "You've broken your 30-day streak," try "Great to see you back! Every session counts." Frame absence as normal, not failure.
+
+**Offer emotional check-ins.** Before showing content, ask "How are you feeling?" Use the response to adjust content selection — not to exploit mood, but to avoid worsening it.
+
+**Remove aspirational defaults.** If filters or editing tools are offered, default to natural/minimal. Make enhanced versions opt-in, not opt-out.
+
+**Design for emotional resilience.** Provide resources, not just content. If a user is engaging with difficult content, offer context, support resources, or the option to step away.
+
+---
+
+## Attention — Enabled to Settle into Focus and Be Present
 
 **Replace infinite scroll with batched loading.** Show 10–20 items, then present a "Load more" or "Continue?" prompt. This restores the user's ability to choose to stop.
 
@@ -20,21 +36,7 @@ For each human sensitivity, concrete design alternatives that support rather tha
 
 ---
 
-## Emotional — Enabled to Process and Adapt
-
-**Remove public like/reaction counts.** Keep the ability to react, but make counts visible only to the creator, not the audience. This decouples self-worth from quantified approval.
-
-**Replace shame with encouragement.** Instead of "You've broken your 30-day streak," try "Great to see you back! Every session counts." Frame absence as normal, not failure.
-
-**Offer emotional check-ins.** Before showing content, ask "How are you feeling?" Use the response to adjust content selection — not to exploit mood, but to avoid worsening it.
-
-**Remove aspirational defaults.** If filters or editing tools are offered, default to natural/minimal. Make enhanced versions opt-in, not opt-out.
-
-**Design for emotional resilience.** Provide resources, not just content. If a user is engaging with difficult content, offer context, support resources, or the option to step away.
-
----
-
-## Sensemaking — Enabled to Find Truth and Clarity
+## Sensemaking — Enabled to Reflect, Learn, Voice a View and Stay Grounded
 
 **Label content types clearly.** Distinguish news, opinion, advertisement, user-generated content, and algorithmic recommendation with clear, consistent labels. Use words, not just icons.
 
@@ -50,7 +52,7 @@ For each human sensitivity, concrete design alternatives that support rather tha
 
 ---
 
-## Decision-making — Enabled to Act with Agency and Control
+## Decision-making — Enabled to Act on Their Own Purposes with Real Agency
 
 **Equal-weight choices.** When presenting options (accept/decline, subscribe/cancel), make buttons the same size, color, and prominence. No visual hierarchy manipulation.
 
@@ -66,7 +68,7 @@ For each human sensitivity, concrete design alternatives that support rather tha
 
 ---
 
-## Social Reasoning — Enabled to Connect Meaningfully
+## Social Reasoning — Enabled to Relate to Others Safely and Authentically
 
 **Private by default.** Make social activity visible only when the user explicitly chooses to share. Default to privacy; make publicity opt-in.
 
@@ -80,7 +82,7 @@ For each human sensitivity, concrete design alternatives that support rather tha
 
 ---
 
-## Group Dynamics — Enabled to Build Strong Communities
+## Group Dynamics — Enabled to Belong and Cooperate
 
 **Amplify bridge content.** In recommendation systems, identify and promote content that builds understanding across groups rather than content that deepens division.
 

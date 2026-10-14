@@ -1,168 +1,170 @@
-# Six Human Sensitivities — Full Reference
+# Six Human Sensitivities — Reference
 
-This document provides full definitions, inhibition states, support states, and "Enabled to..." framing for each of the six human sensitivities in the Humane Design Guide framework.
+This document describes the six human sensitivities of the Humane Design Guide, what strains each one, what supports it, and what users are "enabled to" do when it is supported.
 
-Source: Center for Humane Technology — humanetech.com
+Source: the Humane Design Guide worksheet from the Center for Humane Technology (humanetech.com). Everything below is paraphrased in this skill's own words and keeps the worksheet's meaning; it is not the worksheet's text. For the original wording, get the worksheet from humanetech.com.
 
----
+The worksheet treats human sensitivities as instincts that new technology can easily exploit. It lists six, in this order: Emotional, Attention, Sensemaking, Decision-making, Social Reasoning, Group Dynamics. For each it gives a short description, a line on when people are inhibited, four or five example inhibitors, and a line on when people are supported. Its High-to-Low scale marks the opportunity to improve, and a 1-6 ranking orders the six.
 
-## 1. Attention
-
-**Definition:** How and where we focus our attention — the capacity to direct and sustain mental focus on what matters to us.
-
-**Inhibited when:**
-- Attention is fragmented across multiple stimuli
-- Users feel driven to check, scroll, or tap compulsively
-- The experience is overwhelming — too much happening, no quiet moments
-- There are no natural stopping points or boundaries
-- Notifications interrupt focus without user-initiated context
-
-**Supported when:**
-- Design respects attentional boundaries
-- The experience provides breaks, calm moments, and focused interaction
-- Users can control when they engage and disengage
-- Stopping points are built into the flow
-
-**→ Enabled to find focus and peace**
-
-**Common exploitation patterns:**
-- Infinite scroll (removes natural stopping cue)
-- Autoplay (captures attention before conscious choice)
-- Notification flooding (creates constant interruption)
-- Variable reward schedules (slot machine mechanics)
-- Sensory overload (animations, sounds, haptics competing for attention)
+Parts marked "edbx" are this skill's own additions, not the worksheet's.
 
 ---
 
-## 2. Emotional
+## 1. Emotional
 
-**Definition:** What we feel in our body and our physical health — the capacity to experience, process, and regulate emotional states.
+**What it covers:** how we feel in the body, and our physical health.
 
-**Inhibited when:**
-- Users feel overwhelmed, afraid, or stressed by the product
-- Emotional states are exploited to drive engagement
-- The product creates anxiety about missing out, falling behind, or being judged
-- Negative emotional states are amplified rather than soothed
+**Inhibited when:** people are under strain: tense, short of sleep, frightened, or emotionally worn out.
 
-**Supported when:**
-- Design validates feelings and reduces harm
-- The experience fosters emotional resilience
-- Users can process and adapt to emotional content at their own pace
-- Emotional manipulation is absent or explicitly opt-in
+**Supported when:** the design brings calm, balance and a sense of safety, leaves room for pauses, and respects the body's daily rhythms.
 
-**→ Enabled to process and adapt**
+**→ Enabled to rest and feel secure** (edbx wording: the worksheet has no "Enabled to" line for Emotional, only the supported-when description above)
 
-**Common exploitation patterns:**
-- Currency of likes (external validation tied to self-worth)
-- Aspirational filters (create unrealistic appearance standards)
-- Fear-based framing (use anxiety to drive clicks and engagement)
-- Shame mechanics (streaks, public failure states, guilt-trip notifications)
-- Emotional contagion (amplifying anger, outrage, or fear because it generates engagement)
+**Example inhibitors on the worksheet (paraphrased):**
+- artificial scarcity
+- signals of urgency
+- constant monitoring of the user
+- optimizing for time on screen
+
+**edbx examples (not on the worksheet):**
+- currency of likes (outside approval tied to self-worth)
+- aspirational filters (unrealistic appearance standards)
+- fear-based framing (anxiety used to drive clicks)
+- shame mechanics (streak-break messages, guilt-trip notifications)
+- emotional contagion (anger or fear amplified because it produces engagement)
+
+**What supporting looks like (edbx):** feelings are acknowledged rather than mined, hard content can be met at the user's own pace, and emotional pressure is absent or clearly opt-in.
+
+---
+
+## 2. Attention
+
+**What it covers:** where our focus goes and how it is held.
+
+**Inhibited when:** attention is yanked around by reflex, swamped by too much at once, or broken into fragments.
+
+**Supported when:** people are enabled to settle into focus and be present.
+
+**→ Enabled to settle into focus and be present**
+
+**Example inhibitors on the worksheet (paraphrased):**
+- constant switching between contexts
+- many similar choices with nothing to tell them apart
+- fear-laden information
+- nothing signalling where to stop, such as infinite scroll
+- movement that serves no purpose
+
+**edbx examples (not on the worksheet):**
+- autoplay (starts before the user has chosen)
+- notification flooding (constant interruptions that pull people back)
+- variable reward schedules (slot-machine mechanics)
+- sensory overload (animation, sound and haptics competing for focus)
+- streak mechanics and red-dot badges
+
+**What supporting looks like (edbx):** natural breaks and stopping points, quiet moments, and users who decide when they come and go.
 
 ---
 
 ## 3. Sensemaking
 
-**Definition:** How we integrate what we sense with what we know — the capacity to understand complexity, form accurate beliefs, and distinguish signal from noise.
+**What it covers:** how what we perceive fits with what we already know.
 
-**Inhibited when:**
-- Information is fear-based, out of context, or uses misleading framing
-- The information environment makes it difficult to form accurate mental models
-- Users cannot distinguish between content types (news, opinion, ad, algorithm)
-- Complexity is weaponized rather than made understandable
+**Inhibited when:** information is driven by fear, cut off from its context, confusing, or built to manipulate.
 
-**Supported when:**
-- Design makes complexity understandable
-- Balanced views are provided
-- Context and provenance are visible
-- Users can trace information to its source
+**Supported when:** people are enabled to reflect, learn, voice a view and feel grounded.
 
-**→ Enabled to find truth and clarity**
+**→ Enabled to reflect, learn, voice a view and stay grounded**
 
-**Common exploitation patterns:**
-- Filter bubbles (personalization that narrows worldview)
-- Misleading labels (native advertising, disguised sponsored content)
-- Information as noise (volume over signal, overwhelming with content)
-- Out-of-context framing (stripping context to increase engagement)
-- Algorithmic amplification (promoting content that provokes rather than informs)
+**Example inhibitors on the worksheet (paraphrased):**
+- facts shown without their context
+- feeds personalized too far
+- treating viral spread as proof of credibility
+- paid content that passes as ordinary content, borrowing authority
+
+**edbx examples (not on the worksheet):**
+- filter bubbles (personalization that narrows the view of the world)
+- misleading labels (native ads, undisclosed sponsorship)
+- information as noise (volume drowning signal)
+- algorithmic amplification (promoting what provokes over what informs)
+- false balance and source obfuscation
+
+**What supporting looks like (edbx):** context and provenance are visible, content types are labelled, and complexity is made understandable rather than exploited.
 
 ---
 
 ## 4. Decision-making
 
-**Definition:** How we align our actions with our intentions — the capacity to make choices that reflect what we actually want.
+**What it covers:** whether what we do matches what we meant to do.
 
-**Inhibited when:**
-- Agency and sense of control are not supported or requested
-- Choices are removed, hidden, or made deliberately difficult
-- The path of least resistance leads to outcomes the user did not intend
-- Defaults are set in the organization's interest, not the user's
+**Inhibited when:** the product neither asks what people intend nor helps them act on it.
 
-**Supported when:**
-- Design respects user intent
-- Clear options are provided with transparent consequences
-- Users can reflect before acting
-- The easiest path aligns with the user's best interest
+**Supported when:** people are enabled to act on their own purposes with real agency.
 
-**→ Enabled to act with agency and control**
+**→ Enabled to act on their own purposes with real agency**
 
-**Common exploitation patterns:**
-- Dark patterns (confirmshaming, roach motel, sneak into basket)
-- Removing agency (auto-enrollment, forced continuity, hidden opt-out)
-- Forced choices (false dichotomies, urgency fakery)
-- Hidden defaults (subscription auto-renewal, data sharing opt-out buried in settings)
-- Asymmetric friction (1-click subscribe, 12-click cancel)
+**Example inhibitors on the worksheet (paraphrased):**
+- avatars or characters used to project authority
+- ads and messages that trail people across contexts
+- products that push content rather than wait for a request
+- giving people what they prefer in the moment instead of what they intend
+
+**edbx examples (not on the worksheet):**
+- dark patterns (confirmshaming, roach motel, sneak into basket)
+- hidden defaults (auto-renewal, opt-outs buried in settings)
+- forced choices and false urgency
+- asymmetric friction (one click to join, many to leave)
+
+**What supporting looks like (edbx):** clear options with plain-language consequences, defaults that serve the user, a moment to reflect before high-stakes steps, and the ability to undo.
 
 ---
 
 ## 5. Social Reasoning
 
-**Definition:** How we understand and navigate our personal relationships — the capacity to maintain healthy connections and interpret social signals accurately.
+**What it covers:** how we make sense of, and handle, our personal relationships.
 
-**Inhibited when:**
-- Status, relationships, and self-image are manipulated
-- Social comparison is weaponized for engagement
-- The product creates artificial social pressure
-- Connection is performative rather than genuine
+**Inhibited when:** someone else steers our standing, our relationships or how we see ourselves.
 
-**Supported when:**
-- Design promotes mutual trust
-- Safe spaces for expression exist
-- Relationships are supported rather than exploited
-- Social features encourage genuine interaction
+**Supported when:** people are enabled to relate to others in ways that feel safe and genuine.
 
-**→ Enabled to connect meaningfully**
+**→ Enabled to relate to others safely and authentically**
 
-**Common exploitation patterns:**
-- Status manipulation (follower counts, badges, verification marks as hierarchy)
-- Self-image exploitation (appearance filters, social comparison tools)
-- Social pressure (public activity visibility, read receipts, online status)
-- FOMO mechanics (showing what friends are doing without you)
-- Gamification of relationships (streaks, best friends, ranked connections)
+**Example inhibitors on the worksheet (paraphrased):**
+- social status reduced to numbers
+- viral sharing
+- a felt duty to reciprocate or respond
+- letting people pose as someone else
+
+**edbx examples (not on the worksheet):**
+- social comparison tools and appearance filters
+- public activity visibility, read receipts, online status
+- FOMO mechanics (showing what friends do without you)
+- gamified relationships (streaks, best-friend rankings)
+
+**What supporting looks like (edbx):** private by default, consent before tagging or adding, and room for people to take the goal offline and meet in person where that fits.
 
 ---
 
 ## 6. Group Dynamics
 
-**Definition:** How we navigate larger groups, status, and shared understanding — the capacity to participate in healthy communities and collective decision-making.
+**What it covers:** how we handle larger groups, standing within them, and what the group understands together.
 
-**Inhibited when:**
-- Users are excluded, divided, or managed through fear
-- Group interactions amplify conflict rather than understanding
-- The platform rewards polarization and punish moderation
-- Communities form around opposition rather than shared purpose
+**Inhibited when:** people are shut out, split apart, or rallied through fear.
 
-**Supported when:**
-- Design provides shared understanding
-- Healthy, non-divisive communication is encouraged
-- Diverse perspectives are visible and respected
-- Community norms support belonging without conformity
+**Supported when:** people are enabled to belong and cooperate.
 
-**→ Enabled to build strong communities**
+**→ Enabled to belong and cooperate**
 
-**Common exploitation patterns:**
-- Polarizing algorithms (amplifying divisive content because it generates engagement)
-- Exclusion mechanics (in-groups, gatekeeping, algorithmic invisibility)
-- Fear-based division (us-vs-them framing, outrage loops)
-- Echo chamber reinforcement (showing only agreement, hiding dissent)
-- Dehumanization mechanics (anonymity without accountability, reduced context)
+**Example inhibitors on the worksheet (paraphrased):**
+- squeezing out views and nuance
+- making personal attacks or hate speech easy
+- making viral outrage easy
+- no shared norms for how to behave
+
+**edbx examples (not on the worksheet):**
+- polarizing algorithms (divisive content promoted because it engages)
+- exclusion mechanics (gatekeeping, algorithmic invisibility)
+- us-vs-them framing and outrage loops
+- echo chambers (agreement shown, dissent hidden)
+- dehumanization mechanics (anonymity without accountability)
+
+**What supporting looks like (edbx):** visible diverse perspectives, community-set norms, content that bridges groups, and an easy way to leave or mute.

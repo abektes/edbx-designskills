@@ -1,6 +1,6 @@
 {
   "skill": "edbx-humane-design-guide",
-  "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. Worksheet coverage, per-row fields and per-red counts are code; heuristics are checked against the skill's own examples, since a copied example is by construction not product-specific. All 18 bars are checked. Notes: red_rows_x3 repeats the red-row list three times so one metric-change line per alternative (A, B, C) can be counted against every 🔴 row; patterns_named is only a floor (a baseline also names infinite scroll or read receipts), the per-row semantic current_state_specific carries the real judgment; the per-red Business Tension and radical-alternative counts read the labelled lines the skill's Step 3 template produces.",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar in SKILL.md. Worksheet coverage, per-row fields and per-red counts are code; heuristics are checked against the skill's own examples, since a copied example is by construction not product-specific. All 19 bars are checked. Notes: red_rows_x3 repeats the red-row list three times so one metric-change line per alternative (A, B, C) can be counted against every 🔴 row; patterns_named is only a floor (a baseline also names infinite scroll or read receipts), the per-row semantic current_state_specific carries the real judgment; the per-red Business Tension and radical-alternative counts read the labelled lines the skill's Step 3 template produces.",
   "enumerators": {
     "ledger_type_cells": {
       "type": "table_cells",
@@ -46,6 +46,16 @@
       "where": {
         "column": "Level",
         "matches": "🔴|\\bhigh\\b"
+      }
+    },
+    "rank_cells": {
+      "type": "table_cells",
+      "in_section": "Sensitivity|Worksheet|Audit",
+      "column": "Rank",
+      "strict": true,
+      "where": {
+        "column": "Level",
+        "matches": "."
       }
     },
     "enabled_cells": {
@@ -176,6 +186,14 @@
       "n": 6,
       "bar": "correctly evaluates all six sensitivities for every product",
       "desc": "the worksheet covers all six sensitivities"
+    },
+    {
+      "id": "rank_per_sensitivity",
+      "kind": "count_covers",
+      "items": "rank_cells",
+      "covers": "sensitivities",
+      "bar": "ranks the six sensitivities 1-6 by the size of the opportunity for humane design, as the worksheet asks",
+      "desc": "every worksheet row carries a 1-6 rank"
     },
     {
       "id": "enabled_framing",

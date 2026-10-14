@@ -110,27 +110,27 @@ Contradicted by the source text (the official worksheet PDF, `cht2020designguide
    no "Enabled to" line (its cell is "Design engenders calm, balance, safety,
    pauses..."), so the skill's "process and adapt" is not in the worksheet. The
    same wordings are repeated in `references/humane-alternatives.md`,
-   `references/six-sensitivities.md` and `assets/worksheet-template.md`.
+   `references/six-sensitivities.md` and `assets/worksheet-template.md`. (fixed in SKILL.md)
 2. "Inhibited when" wording differs in places: Attention (drawn, not driven),
    Emotional (adds low on sleep and emotionally exhausted), Sensemaking
    (confusing or manipulative, not misleading), Group Dynamics (mobilized
-   through fear, not managed through fear).
+   through fear, not managed through fear). (fixed in SKILL.md)
 3. Worksheet shape. The sheet has columns sensitivity, inhibited when, what
    inhibits, supported when, an opportunity-to-improve scale (High to Low) and
    a 1-6 ranking; sheet 2 asks three open questions and an action statement. The
    skill's four columns (current state, what's at risk, level, improvement),
    its three-colour level and its "six rows, four columns" claim are not the
-   original structure.
-4. Order: the sheet lists Emotional first; the skill lists Attention first.
+   original structure. (fixed in SKILL.md)
+4. Order: the sheet lists Emotional first; the skill lists Attention first. (fixed in SKILL.md)
 5. Exploitation patterns. The worksheet gives four to five example inhibitors
    per sensitivity (e.g. artificial scarcity, urgency signalling, no stopping
    cues such as infinite scroll, over-personalized filters, quantified social
    status, enabling viral outrage). Autoplay, notification flooding, nudging,
    currency of likes, aspirational filters, shame mechanics, confirmshaming,
-   FOMO and polarizing algorithms are not on it.
+   FOMO and polarizing algorithms are not on it. (fixed in SKILL.md)
 6. "Making people act in ways they would not otherwise choose": the worksheet
    says only that sensitivities are instincts often vulnerable to new
-   technologies.
+   technologies. (fixed in SKILL.md)
 7. Stage A overturned: stage A reported that infinite scroll and autoplay were
    not on the slide. Infinite scroll is on the worksheet (Attention, "No
    stopping cues (e.g. infinite scroll)"); autoplay is not. Stage A also found
@@ -149,4 +149,4 @@ Not verifiable (no readable source in the manifest):
     principles, Business Tension, Algorithm Audit, Engagement-Value Paradox and
     its aphorism, Exploitation Stacks, Memorable Heuristics and the Evidence
     Ledger: edbx additions. Only the Evidence Ledger is labelled as an
-    adaptation in SKILL.md.
+    adaptation in SKILL.md. (fixed in SKILL.md)
