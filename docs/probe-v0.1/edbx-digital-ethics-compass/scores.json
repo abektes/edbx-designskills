@@ -1,0 +1,107 @@
+{
+ "skill": "edbx-digital-ethics-compass",
+ "outputs": {
+  "childrens-education-ai": {
+   "D1": {
+    "v": "no",
+    "q": "organised as five invented phases (Define, Understand, Ideate, Evaluate, Decide); Data / Automation / Behavioral Design categories not used"
+   },
+   "D2": {
+    "v": "yes",
+    "q": "Set clear retention limits ... a simple dashboard of their own data"
+   },
+   "D3": {
+    "v": "yes",
+    "q": "Bias amplification ... Add an “AI info” button on every recommendation card"
+   },
+   "D4": {
+    "v": "partial",
+    "q": "Manipulation of motivation: Streaks, leaderboards, “personalised nudges” can become coercive"
+   },
+   "D5": {
+    "v": "yes",
+    "q": "Use age‑appropriate language to explain “why am I seeing this?”"
+   },
+   "D6": {
+    "v": "yes",
+    "q": "Indirect stakeholders: School administrators, content partners, platform business."
+   },
+   "M1": {
+    "v": "yes",
+    "q": "Collects interaction data (clicks, time spent, mistakes, help requests, completion rates, device usage patterns)."
+   },
+   "M2": {
+    "v": "yes",
+    "q": "Applied systematically through the five phases – Define, Understand, Ideate, Evaluate, Decide."
+   }
+  },
+  "mental-health-chatbot": {
+   "D1": {
+    "v": "no",
+    "q": "organised as stakeholder mapping, value tensions and a Human / AI / Oversight framework; not Data / Automation / Behavioral Design"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "auto-delete conversational data after a pre-defined period"
+   },
+   "D3": {
+    "v": "partial",
+    "q": "Perpetuation of societal biases present in training data at scale."
+   },
+   "D4": {
+    "v": "partial",
+    "q": "Over-reliance on the bot, delaying human help."
+   },
+   "D5": {
+    "v": "yes",
+    "q": "Users have a right to know they are talking to an AI"
+   },
+   "D6": {
+    "v": "yes",
+    "q": "all actors and entities that can affect or be affected by the chatbot"
+   },
+   "M1": {
+    "v": "no",
+    "q": "system details come from the prompt; added items are labelled as risks or recommendations"
+   },
+   "M2": {
+    "v": "yes",
+    "q": "These recommendations are structured using the “Human, AI, and Oversight” framework."
+   }
+  },
+  "smart-city-sensors": {
+   "D1": {
+    "v": "no",
+    "q": "organised as Consent, Benefit, Power, Data Lifecycle (the prompt's own four questions) plus red/yellow/green; not Data / Automation / Behavioral Design"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "How long is data stored, where, and who can access it?"
+   },
+   "D3": {
+    "v": "yes",
+    "q": "A “public safety” algorithm trained on biased historical data will inevitably flag"
+   },
+   "D4": {
+    "v": "no",
+    "q": "behavioural-design questions (validate or challenge, fear, urgency, addiction) are not raised"
+   },
+   "D5": {
+    "v": "yes",
+    "q": "Mandate Transparent, Real-Time Visual Indicators ... show its active sensor modalities"
+   },
+   "D6": {
+    "v": "yes",
+    "q": "Future Generations ... Passive Stakeholders"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "Environmental data low risk (stored for 5 years)."
+   },
+   "M2": {
+    "v": "no",
+    "q": "no creator, centre phrase, structure or question-count claims about the Compass"
+   }
+  }
+ }
+}

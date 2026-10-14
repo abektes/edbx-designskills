@@ -1,0 +1,95 @@
+{
+ "skill": "edbx-dah-cards",
+ "outputs": {
+  "eval-0": {
+   "D1": {
+    "v": "no",
+    "q": "cards are generic question prompts (“What is the darkest pattern ...”) answered per feature; no black-side feature / white-side consequence pairs"
+   },
+   "D2": {
+    "v": "no",
+    "q": "no sorting into Ethical / Unsure / Unethical; ends with insights and mitigations"
+   },
+   "D3": {
+    "v": "no",
+    "q": "no What changed? reflection on surprises or shifted assumptions"
+   },
+   "D4": {
+    "v": "partial",
+    "q": "identify and scrutinise the potential negative societal, psychological, and ethical consequences"
+   },
+   "D5": {
+    "v": "no",
+    "q": "no question about the purpose or role of design"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "users report genuine anxiety when considering a break"
+   },
+   "M2": {
+    "v": "yes",
+    "q": "Four cards were drawn from the DAH deck and applied to Duolingo’s gamification system."
+   }
+  },
+  "eval-1": {
+   "D1": {
+    "v": "no",
+    "q": "‘cards’ are principles (Privacy, Transparency, Autonomy, Well-being, Inclusivity), not feature/consequence pairs"
+   },
+   "D2": {
+    "v": "no",
+    "q": "no three-pile sort; outcome is Ship with mandatory modifications"
+   },
+   "D3": {
+    "v": "no",
+    "q": "no What changed? reflection; closes with next steps"
+   },
+   "D4": {
+    "v": "no",
+    "q": "an external risk audit of the feature; no reflection on the designer's own responsibility"
+   },
+   "D5": {
+    "v": "no",
+    "q": "no question about the purpose or role of design"
+   },
+   "M1": {
+    "v": "no",
+    "q": "describes the feature from the prompt; added details are hedged (“might include”)"
+   },
+   "M2": {
+    "v": "yes",
+    "q": "we chose five DAH Cards that are most relevant"
+   }
+  },
+  "eval-2": {
+   "D1": {
+    "v": "no",
+    "q": "provocation cards with a prompt and a finding (“Quantified Self Obsession”); no feature/consequence pairs"
+   },
+   "D2": {
+    "v": "no",
+    "q": "no sorting into Ethical / Unsure / Unethical"
+   },
+   "D3": {
+    "v": "no",
+    "q": "no What changed? reflection; moves to manifesto and vision"
+   },
+   "D4": {
+    "v": "yes",
+    "q": "We are accidentally building a machine that converts normal human fluctuation"
+   },
+   "D5": {
+    "v": "no",
+    "q": "no question about the purpose or role of design"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "We sell anonymised activity‑pattern data to insurance partners"
+   },
+   "M2": {
+    "v": "yes",
+    "q": "DAH Cards (Design Against Harm)"
+   }
+  }
+ }
+}

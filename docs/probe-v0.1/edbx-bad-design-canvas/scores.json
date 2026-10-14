@@ -1,0 +1,107 @@
+{
+ "skill": "edbx-bad-design-canvas",
+ "outputs": {
+  "ai-content-moderation": {
+   "D1": {
+    "v": "no",
+    "q": "headings are Surface Flaws, Representational/Allocative harms, Feedback Loops; not twelve cells"
+   },
+   "D2": {
+    "v": "no",
+    "q": "no question whether auto-removal is a band-aid for the root cause of toxicity"
+   },
+   "D3": {
+    "v": "no",
+    "q": "no cell on what the idea borrows from a culture the team is not part of; dialect harms are about misclassification"
+   },
+   "D4": {
+    "v": "partial",
+    "q": "Workload shifts from triaging reports to untangling algorithmic mistakes"
+   },
+   "D5": {
+    "v": "no",
+    "q": "no creative-quality or boring check"
+   },
+   "D6": {
+    "v": "partial",
+    "q": "Mistimed intervention ... beneficial comments are erased before the author sees responses, breaking conversational flow"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "A public “community health score” assigned to each user ... millions of posts per hour"
+   },
+   "M2": {
+    "v": "no",
+    "q": "no creator, category count or step claims about the canvas"
+   }
+  },
+  "habit-tracker-app": {
+   "D1": {
+    "v": "no",
+    "q": "twelve numbered sections, but they are ad hoc (Power Dynamics, Sensemaking, Habituation), not twelve consequence categories"
+   },
+   "D2": {
+    "v": "no",
+    "q": "no question whether streaks and partners treat a root cause or are a temporary fix"
+   },
+   "D3": {
+    "v": "no",
+    "q": "no cultural appropriation cell"
+   },
+   "D4": {
+    "v": "no",
+    "q": "no substitution or replacement analysis"
+   },
+   "D5": {
+    "v": "no",
+    "q": "no creative-quality or boring check"
+   },
+   "D6": {
+    "v": "no",
+    "q": "no cell on new inefficiency, complexity or delay; glitches are treated as distress triggers"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "midnight cut‑off, no grace period ... The user can’t set a “grace day”"
+   },
+   "M2": {
+    "v": "no",
+    "q": "no creator, category count or step claims about the canvas"
+   }
+  },
+  "smart-energy-monitor": {
+   "D1": {
+    "v": "no",
+    "q": "sections A-D harms, Power Imbalances, Misuse; not twelve cells"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "personal habits (not industrial pollution or policy failures) are the root cause"
+   },
+   "D3": {
+    "v": "no",
+    "q": "no cultural appropriation cell"
+   },
+   "D4": {
+    "v": "no",
+    "q": "no substitution or replacement analysis"
+   },
+   "D5": {
+    "v": "no",
+    "q": "no creative-quality or boring check"
+   },
+   "D6": {
+    "v": "no",
+    "q": "no cell on new inefficiency, complexity or delay"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "A primary user can see exactly when and where another housemate uses energy"
+   },
+   "M2": {
+    "v": "no",
+    "q": "no creator, category count or step claims about the canvas"
+   }
+  }
+ }
+}

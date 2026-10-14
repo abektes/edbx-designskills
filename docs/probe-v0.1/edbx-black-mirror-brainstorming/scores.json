@@ -1,0 +1,107 @@
+{
+ "skill": "edbx-black-mirror-brainstorming",
+ "outputs": {
+  "ai-hiring-screening": {
+   "D1": {
+    "v": "partial",
+    "q": "imagine the product succeeding beyond all metrics, completely ungoverned, to identify the failure modes"
+   },
+   "D2": {
+    "v": "yes",
+    "q": "The Glitch in the Smile ... Elena, a brilliant but soft-spoken astrophysics PhD"
+   },
+   "D3": {
+    "v": "partial",
+    "q": "Innocent Rationale: ... It creates a cleaner, more actionable UI for recruiters"
+   },
+   "D4": {
+    "v": "no",
+    "q": "only a headline (“Ghost Ban: ...”) and a mock rejection letter; no pitch blurb or quote per scenario"
+   },
+   "D5": {
+    "v": "yes",
+    "q": "Anti-Goal 1: A system must never silently discard a human being."
+   },
+   "D6": {
+    "v": "yes",
+    "q": "Implementing the Brakes (The Key Feature Proposals)"
+   },
+   "M1": {
+    "v": "yes",
+    "q": "The video analysis model is a proprietary, un-auditable black box"
+   },
+   "M2": {
+    "v": "no",
+    "q": "no creator, origin or lens claims about the method"
+   }
+  },
+  "medication-adherence-tracker": {
+   "D1": {
+    "v": "no",
+    "q": "user asked for anti-goals only; no what-could-go-wrong brainstorm shown"
+   },
+   "D2": {
+    "v": "partial",
+    "q": "Care Circle → Shame Circle ... “Sarah didn’t take her antidepressants"
+   },
+   "D3": {
+    "v": "partial",
+    "q": "The care circle, initially meant for support, turns into a 24/7 parole board"
+   },
+   "D4": {
+    "v": "no",
+    "q": "no pitch quote or blurb"
+   },
+   "D5": {
+    "v": "yes",
+    "q": "Here are the anti-goals, extracted from a Black Mirror Brainstorming session on the medication tracker."
+   },
+   "D6": {
+    "v": "no",
+    "q": "anti-goals are written only as dystopian failure scenarios; no prevention or design-change step"
+   },
+   "M1": {
+    "v": "partial",
+    "q": "The “care circle” sends a real-time alert to all members when a dose is missed"
+   },
+   "M2": {
+    "v": "no",
+    "q": "no creator, origin or lens claims about the method"
+   }
+  },
+  "social-fitness-leaderboard": {
+   "D1": {
+    "v": "yes",
+    "q": "Insurers buy anonymized activity data, then raise premiums for users whose step counts drop"
+   },
+   "D2": {
+    "v": "yes",
+    "q": "“Streak of Shame” ... After a messy divorce, Tasha’s custody arrangement requires a 90‑day unbroken streak"
+   },
+   "D3": {
+    "v": "partial",
+    "q": "the fitness app she joined to support her best friend now controls"
+   },
+   "D4": {
+    "v": "yes",
+    "q": "Logline: A woman discovers that the fitness app she joined to support her best friend"
+   },
+   "D5": {
+    "v": "yes",
+    "q": "These are things the product must actively prevent"
+   },
+   "D6": {
+    "v": "partial",
+    "q": "Default all sharing to private."
+   },
+   "M1": {
+    "v": "no",
+    "q": "risks are framed as what-ifs and episodes are fiction; no unlabelled facts about the product"
+   },
+   "M2": {
+    "v": "no",
+    "q": "no creator, origin or claims about the method beyond lenses the user requested"
+   }
+  }
+ }
+}
