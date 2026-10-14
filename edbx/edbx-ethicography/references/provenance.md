@@ -96,24 +96,24 @@ the survey is also share-alike.
 Contradicted by the source text (read on the page):
 
 1. Author name "Chuvaala" is wrong; the CHI 2019 paper (p. 1) gives Chivukula.
-   "Chuvaala, Gray et al." also omits the third author, Brier.
+   "Chuvaala, Gray et al." also omits the third author, Brier. (fixed in SKILL.md; tutorial name corrected in this pass)
 2. The coding scheme. The paper's steps (p. 4) are: unitize speech acts, apply
    a value code (colour-coded as more value-centered or manipulative), apply an
    idea code, link the acts. It has no 2x2 matrix, no explicit/implicit x
    persuasion/coercion quadrants, and the word coercion does not occur. The
    skill's Step 2 and its summary "persuasion-to-coercion axis" are not the
-   method as published.
+   method as published. (fixed in SKILL.md)
 3. "Design Move number (chronological)" as the unit: the unit is the speech act
-   (p. 4); the paper never uses the label Design Move or Ethical Move.
+   (p. 4); the paper never uses the label Design Move or Ethical Move. (fixed in SKILL.md)
 4. Input: the paper analyses transcribed audio and video of recorded lab
    sessions with 24 students (pp. 3-4). Meeting notes, design crits and Slack
-   are not in the source.
+   are not in the source. (fixed in SKILL.md)
 5. Two modes, Team Reflection and Research Documentation: the paper describes
    one research method on lab data; practice use is future work. No facilitated
-   team mode is described.
+   team mode is described. (fixed in SKILL.md)
 6. Step 3 value families and the affected-populations table: the paper's value
    list is Friedman's (p. 4); the skill's user, designer, business, non-user
-   and worker families are not there.
+   and worker families are not there. (fixed in SKILL.md)
 
 Not verifiable (no readable source in the manifest):
 

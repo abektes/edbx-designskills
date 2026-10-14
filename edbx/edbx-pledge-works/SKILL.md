@@ -11,11 +11,13 @@ tags: [ethical-design, alignment]
 
 Pledge Works invites you to support responsible design by writing pledges that link your design work to specific goals. Many practitioners have codes or other tools to guide ethical behavior, but these can be difficult to put into practice in the context of everyday design activity.
 
-Pledge Works bridges the gap between good intentions and everyday product decisions. Pledges can be made at every stage of the design process. They are mechanisms to articulate goals for yourself and your design team — resulting in specific pledges for specific types of work, context-based pledges, or role-based pledges written with a specific employee's professional role in mind. Each pledge includes indications of a specific value and context.
+Pledge Works bridges the gap between good intentions and everyday product decisions. The published tool describes itself as still under development and seeking wider validation. Pledges can be made at every stage of the design process. They are mechanisms to articulate goals for yourself and your design team — resulting in specific pledges for specific types of work, context-based pledges, or role-based pledges written with a specific employee's professional role in mind. Each pledge written with this skill names a value and a context.
 
-The method operates on a three-stage cycle: **Review outcomes together → Write pledges in context → Seek better outcomes**. This cycle is ongoing, not one-and-done. Pledges grow over time like a tree — visible outcomes above, deep structural roots below.
+The published implementation cycle has three elements, in this order: **Write pledges in context → Seek better outcomes → Review outcomes together**. It is ongoing, not one-and-done: pledges adapt to the scope of work and change with new learnings. A separate responsible project kickoff, where the team discusses desired outcomes, purpose and values, comes before the first round. This skill's Stage 1 does the kickoff's grounding work; Stages 2 and 3 are the first two elements; the review element is the cadence each pledge carries and the Pledge Register the team brings to it.
 
-> **Mindset check:** A pledge you can never break is not a pledge. Pledges should be specific enough to be falsifiable. The "because" clause in Responsible Stories names the value and makes the pledge accountable, not just aspirational.
+> **edbx adaptation:** starting the session with an outcome review, the stage numbering and the tree image (visible outcomes above, structural roots below) are edbx's own; the page orders the cycle write, seek, review and puts the kickoff outside it. They are here to give a one-sitting session a clear order.
+
+> **Mindset check:** A pledge you can never break is not a pledge. Pledges should be specific enough to be falsifiable. In a Responsible Story, the "because" clause names the value and makes the pledge accountable, not just aspirational.
 
 ## Use This Skill When
 
@@ -33,16 +35,16 @@ Provide as many of these as are available:
 - A design context, project, or product to write pledges for
 - A role or team type (individual designer, cross-functional team, company-wide)
 - Optionally: values or ethical concerns surfaced from other methods (Worrystorming, Value Dams, CIDER, etc.)
-- Optionally: a specific stakeholder group to pledge toward (users, community, planet, future generations)
+- Optionally: a specific stakeholder group to pledge toward (people using the product, people not using it, the planet, clients, or another group the pledge should reach)
 - Optionally: a pledge type preference (Simple Pledge, Responsible Story, or To Whom format)
 
 ## Workflow
 
-Pledge Works operates in three stages with a structured output phase.
+This skill runs in three stages with a structured output phase.
 
 ---
 
-### Stage 1 — Review Outcomes Together
+### Stage 1 — Outcome Review (project kickoff)
 
 Surface the product's intended and unintended consequences to ground the pledge:
 
@@ -59,6 +61,8 @@ If outputs from other skills are available (Worrystorming worry clusters, CIDER 
 
 Generate pledges using three formats:
 
+> **edbx adaptation:** the fill-in sentence templates and the per-session minimums below are edbx's; the page gives example pledges and says to use wording natural to the team. They are here so a session produces a usable set quickly.
+
 **Format A: Simple Pledge**
 - Company-wide: *"We will [action] to ensure [outcome] for [stakeholder]."*
 - Project-level: *"We will [specific technical or design action] to protect [value]."*
@@ -68,11 +72,11 @@ Generate pledges using three formats:
 Structure:
 > *"As a [role], we/I pledge to [action] to [outcome/stakeholder] because [reason/value]."*
 
-- The "because" clause is required — it names the value or reason, making the pledge accountable
+- The page treats the reason as optional; this skill requires the "because" clause because it names the value or reason, making the pledge accountable and testable against that value
 - **Minimum:** 2 responsible stories per session
 
 **Format C: To Whom Pledge**
-> *"As a [role], I pledge to [the planet / users / future generations / community]: [pledge text]."*
+> *"As a [role], I pledge to [people using the product / people not using it / the planet / clients / another named group]: [pledge text]."*
 
 - Used when the pledge needs to explicitly name a non-obvious stakeholder
 - **Minimum:** 1 to-whom pledge per session
@@ -81,7 +85,9 @@ Structure:
 
 ### Stage 3 — Seek Better Outcomes (operationalize every pledge)
 
-For each pledge generated, the following five fields are **required**, not optional. A pledge without them is aspiration, not commitment.
+> **edbx adaptation:** the five fields, the early-warning indicator and the stress test below are not part of the published method; the page asks for a pledge checklist that makes clear what upholding each pledge means (usable as acceptance criteria, not set in stone) and for challenging default outcomes with pledges. They are here to make each pledge falsifiable and to show which will bend under pressure. Write the checklist too when the team will track pledges in a backlog.
+
+For each pledge generated, this skill requires the following five fields. A pledge without them is aspiration, not commitment.
 
 - **Quantitative success indicator** ✅ — a number, percentage, or named standard (not "we'll be more careful"). Example: "Cancellation flow ≤ 3 clicks; cancellation completion rate ≥ 90%."
 - **Quantitative failure signal** ⚠️ — the threshold at which the pledge is considered broken. Example: "Disparate-impact ratio < 0.8 on any subgroup with n ≥ 30."
@@ -100,9 +106,11 @@ Present each default-challenging pledge against a realistic business pressure sc
 
 ### Stage 3.5 — "What We Refuse to Build" Red-Line Register (required)
 
+> **edbx adaptation:** the red-line register is not part of the published method, which has no register of refusals or veto owners. It is here because pledges say what a team will do and a register fixes what it will not, whatever the pressure.
+
 Pledges describe what we will do. A red-line register describes **what we refuse to do, regardless of business pressure**. This is the document with teeth.
 
-Produce 3–5 named refusals, each at the **feature or behavior level**, not the values level. Aspirational refusals ("we will never harm users") are rejected. Concrete refusals (examples below) are required:
+Produce 3–5 named refusals, each at the **feature or behavior level**, not the values level. Aspirational refusals ("we will never harm users") are rejected. Concrete refusals are required; the rows below are illustrative, not sourced claims:
 
 | Refusal (named at feature level) | Why it crosses the line | Owner with veto authority | Consequence if attempted |
 |---|---|---|---|
@@ -115,6 +123,8 @@ Each red line includes a **named owner with veto authority** (a specific role wi
 ---
 
 ### Stage 3.6 — Pledge-to-Product Traceability (required)
+
+> **edbx adaptation:** the traceability table is not part of the published method, which suggests only keeping pledges visible in the team's backlog or roadmap (for example a "Pledge" label or column). It is here so every pledge can be tested against a real product decision.
 
 Pledges must map to specific product decisions. Produce a traceability table linking each pledge to the **concrete product change** it would or wouldn't trigger:
 
@@ -182,7 +192,7 @@ Every figure, rate, incident, past failure or fact about the user's product, use
 
 - Do not skip the "because" clause in Responsible Stories. It names the value and makes the pledge accountable.
 - Do not write pledges so vague they can never be broken. A pledge you can never break is not a pledge.
-- Do not treat the three-stage cycle as one-and-done. The Pledge Register is a living document.
+- Do not treat the write, seek, review cycle as one-and-done. The Pledge Register is a living document.
 - Do not only write affirming pledges. Default-challenging pledges push against business-as-usual — they are where ethical commitment lives.
 - Do not limit pledges to the immediate team. The To Whom format reaches beyond primary users to non-obvious stakeholders.
 - Do not forget the review cadence. Pledges without review moments are aspirations, not commitments.

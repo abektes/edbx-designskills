@@ -1,14 +1,14 @@
 # Pledge Works
 
-**The short version:** Translates good ethical intentions into written pledges — then stress-tests each pledge against realistic business pressure to find out which ones will actually hold.
+**The short version:** Translates good ethical intentions into written pledges, then (an edbx addition) stress-tests each pledge against realistic business pressure to find out which ones will actually hold.
 
 ---
 
 ## Who made it
 
-Pledge Works draws on the tradition of professional ethics codes — the kind that appear in medicine (Hippocratic Oath), law (bar association codes), and engineering (professional engineering ethics standards) — and adapts that tradition into a format usable by product design teams working in commercial sprint environments.
+Pledge Works is a tool from ResponsibleTech.Work, published as a practical way to write pledges for better outcomes inside the processes a product team already runs (kickoffs, sprint planning, retrospectives). Its page says the tool is still under development and is seeking wider validation. Role-based pledges can draw on professional codes such as the ACM Code of Ethics.
 
-The method responds to a specific problem observed in the tech industry: teams write ethical principles that sound good, agree to them in a kickoff meeting, and then abandon them under the first significant business pressure. Pledge Works is designed to prevent that pattern.
+The tool responds to a gap between good intentions and everyday product decisions: teams write ethical principles that sound good, agree to them in a kickoff meeting, and then lose them in the day-to-day. Pledge Works aims to close that gap.
 
 ---
 
@@ -28,7 +28,7 @@ Pledge Works converts abstract values into specific behavioral commitments — a
 - **Before a product launch** — to make sure the team's ethical commitments will survive the launch process
 - **When you want commitments the team will actually keep** — not aspirational principles, but specific behavioral promises
 - **When business pressure is predictable** — when you know the growth targets, the investor expectations, or the competitive dynamics that will test your commitments
-- **When you want accountability** — pledges are written and signed, creating a record that survives team turnover and individual memory
+- **When you want accountability** — pledges are written down and kept visible in the team's tools, creating a record that survives team turnover and individual memory
 
 ---
 
@@ -38,11 +38,11 @@ Pledge Works generates pledges in three formats:
 
 **Simple Pledge:** A direct behavioral commitment. "We will not use location data for advertising without explicit opt-in consent." Clear, specific, testable.
 
-**Responsible Story Pledge:** A pledge structured as a narrative with a "because" clause that names the specific stakeholder being protected. "We will tell users clearly when their data is shared with third parties, because users who trusted us with their data deserve to understand how it's being used." The "because" clause is mandatory — it prevents pledges from becoming formulaic.
+**Responsible Story Pledge:** A pledge that says who is pledging, what they pledge, and why. The published tool treats the reason as optional; this skill asks for it. "We will tell users clearly when their data is shared with third parties, because users who trusted us with their data deserve to understand how it's being used." The skill requires the "because" clause because it keeps a pledge tied to a value.
 
 **To Whom Pledge:** A pledge explicitly directed at a named group of people. "To our users who are managing debt: we will never use financial vulnerability signals to drive upsell behavior." This format makes the human stakes of the commitment concrete.
 
-For each pledge, the method generates **all five operationalization fields** (a pledge missing any field is aspiration, not commitment):
+The skill adds a set of edbx operationalization fields to each pledge; they are not part of the published method, which asks for a pledge checklist of acceptance criteria. A pledge missing any field is aspiration, not commitment:
 
 - **Quantitative success indicator** ✅ — a number, percentage, or named standard (not "we'll be more careful"). Example: "Cancellation flow ≤ 3 clicks; cancellation completion rate ≥ 90%."
 - **Quantitative failure signal** ⚠️ — the threshold at which the pledge is considered broken. Example: "Disparate-impact ratio < 0.8 on any subgroup with n ≥ 30."
@@ -50,12 +50,12 @@ For each pledge, the method generates **all five operationalization fields** (a 
 - **Consequence for breach** — what concretely happens if the pledge is broken: "release blocks; CTO notified," "feature is rolled back within one sprint," "incident is publicly logged in our quarterly responsibility report." Without consequence, the pledge has no teeth.
 - **Review cadence** — when this is checked (every sprint demo, monthly ethics review, pre-launch + 30/90/180 days post-launch).
 
-Plus:
+Also added by edbx:
 
 - **Early Warning Signal** — the leading indicator that appears *before* the pledge breaks. Not "we violated our privacy pledge" but "leadership is asking for user location data without having raised the consent design question." If the team recognizes the signal early, the pledge has a chance of surviving.
 - **Pledge Stress Test** — a realistic business pressure scenario presented to each pledge. Reveals which pledges are real vs. aspirational, and produces a protective mechanism for the ones that might break.
 
-Pledge Works also produces two additional artifacts the original method didn't include:
+The skill also produces two further artifacts the published method doesn't include:
 
 - **"What We Refuse to Build" Red-Line Register** — pledges describe what we *will* do; the red-line register describes **what we refuse to do, regardless of business pressure**. 3–5 named refusals at the **feature level** (not values level), each with a **named owner with veto authority** and a consequence if the line is crossed. Example: *"We will not target behavioral ads to users under 16. Veto: Head of Trust & Safety. Consequence: PM responsible for proposal is removed; incident logged; board notified."*
 - **Pledge-to-Product Traceability** — every pledge maps to a specific product decision it would or wouldn't trigger. Pledges that don't map to a feature decision are sharpened or dropped.
@@ -64,9 +64,9 @@ Pledge Works also produces two additional artifacts the original method didn't i
 
 ## The key insight
 
-Most ethics frameworks tell you what to commit to. Pledge Works tells you when that commitment is about to be broken — and what to do about it before it happens.
+Most ethics frameworks tell you what to commit to. This skill's edbx additions tell you when that commitment is about to be broken, and what to do about it before it happens.
 
-The Early Warning Signal is the method's most valuable output. It shifts the ethics conversation from "we agreed to this in principle" to "here is the specific moment when that agreement will be tested, and here is what we agreed to do when it arrives."
+The Early Warning Signal (an edbx addition) is the skill's most useful output. It shifts the ethics conversation from "we agreed to this in principle" to "here is the specific moment when that agreement will be tested, and here is what we agreed to do when it arrives."
 
 ---
 

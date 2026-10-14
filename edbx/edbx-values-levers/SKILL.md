@@ -11,10 +11,12 @@ tags: [ethical-design, alignment]
 
 Values Levers enable you to leverage practices that help you and your team discuss and build consensus around values during the design process. Values are embedded in the work environment, and there is a connection between those values and the design process. Values Levers are tools that help people open discussions about values at a design level, team level, or organizational level.
 
-The framework operates on a bidirectional ENABLE model:
-*Communication Modes → enable → Values Levers → enable → Values-Based Design Decisions*
+Shilton and Koepfler describe the link this way: modes of communication can enable or constrain values levers, and values levers in turn enable or constrain values-based design:
+*Communication Modes → enable or constrain → Values Levers → enable or constrain → Values-Based Design Decisions*
 
-Communication modes shape what values conversations are possible; values levers shape what decisions get made; decisions shape what communication modes get used next. It is a feedback loop, not a linear pipeline.
+Communication modes shape what values conversations are possible; values levers shape what decisions get made.
+
+> **edbx adaptation:** reading this chain as a feedback loop, where decisions also shape which communication modes the team uses next, is edbx's; the papers give the chain, not a return link, and do not call it "ENABLE". The loop is here because a team's habits of communication change after what it decides.
 
 Values Levers is the **team culture** tool in the ethical design toolkit. It operates at the team and organizational layer — not the individual designer or artifact layer. It addresses culture change, not just individual audit.
 
@@ -51,7 +53,7 @@ Values Levers operates in four steps.
 
 ### Step 1 — Values Lever Identification
 
-Assess which of the five levers are available and applicable:
+Assess which of the six levers are available and applicable:
 
 | Lever | When to Apply | How to Activate |
 |---|---|---|
@@ -60,6 +62,9 @@ Assess which of the five levers are available and applicable:
 | **Leader/Team Member Advocacy** | When ethical concerns aren't being raised in meetings | Identify who can champion values internally; equip them with language and framing |
 | **Self-Testing** | When the team lacks empathy for affected users | Have technologists experience their own system as a non-expert or vulnerable user |
 | **Gaining/Funding** | When ethics work is deprioritized due to resource constraints | Frame ethics investment as risk reduction; identify budget or headcount opportunities |
+| **Navigating Institutional Mandates** | When an outside body (an ethics review board, a regulator, a funder, a platform) imposes requirements on the work | Approach the body early and treat its review as an external check that keeps values on the agenda |
+
+> **edbx adaptation:** the "When to Apply" and "How to Activate" columns are edbx's. Shilton's 2013 article describes levers as practices observed in one research lab, to look for in other settings, not as activation recipes. The article lists six levers (the five above that Shilton and Koepfler list, plus navigating institutional mandates) and calls its list probably incomplete, so treat the list as open. In the article, Gaining/Funding worked by paying for larger, more interdisciplinary teams, regular meetings and a long-term values advocate; the risk-reduction framing is edbx's. Interdisciplinary Teams worked there by bringing in statisticians and social scientists whose questions put the data in the spotlight; adding ethicists, legal or community representatives is edbx's. Self-Testing there meant technologists seeing their own and colleagues' data in internal testing; experiencing the system as a non-expert or vulnerable user is edbx's. Imposing a constraint such as "design as if you can't use this data" is edbx's; in the article the constraint was an existing privacy commitment that leaders framed as a creative challenge.
 
 Match lever recommendations to the user's actual role and authority.
 
@@ -86,14 +91,16 @@ For the team's existing communication channels, assess:
 - Which channels suppress values discussion (e.g., metrics-only standups)?
 - What new communication mode or ritual could enable values conversations?
 
-Use the ENABLE bidirectional model:
-*Communication Modes → enable → Values Levers → enable → Values-Based Design Decisions*
+Use the chain from the overview, and check whether decisions are in turn changing how the team communicates:
+*Communication Modes → enable or constrain → Values Levers → enable or constrain → Values-Based Design Decisions*
 
 ---
 
 ### Step 2.5 — Surface Whose Values Are Visible (and Whose Aren't)
 
-Values Levers is fundamentally a **values-surfacing** methodology — not a tactical influence toolkit. Before facilitating consensus, name **whose values the current process is serving** and **whose values are absent from the room**. The biggest gap in Values Levers work is when the team converges on internal values while non-user, vulnerable, and downstream-affected populations stay invisible.
+> **edbx adaptation:** the three tables below are not in either Shilton paper, which define a lever as a practice that opens conversations about values; they resemble stakeholder analysis in value sensitive design. They are here because a team that converges on its own values can leave non-users, vulnerable groups and downstream parties out of the room.
+
+Before facilitating consensus, name **whose values the current process is serving** and **whose values are absent from the room**. The biggest gap in Values Levers work is when the team converges on internal values while non-user, vulnerable, and downstream-affected populations stay invisible.
 
 Produce three tables:
 
@@ -118,7 +125,7 @@ Produce three tables:
 - **Future discriminatory use** — what protected-class inferences become possible once this data exists
 - **Non-user externalities** — who is affected without ever opting in (people in the user's environment, people scraped into training data, etc.)
 
-This step transforms Values Levers from "how to win an internal argument" into "how to make all relevant values visible." Skip it and the audit stays at organizational risk level — strong on team alignment, weak on ethical depth.
+This step widens the conversation from the team's own values to the values of everyone the design touches. Skip it and the audit stays at organizational risk level — strong on team alignment, weak on ethical depth.
 
 ---
 
@@ -140,7 +147,7 @@ For the top 2 recommended levers, generate a concrete week-by-week action sequen
 - **Week 3:** [Specific action, stakeholder, deliverable]
 - **Week 4:** [Review + decision checkpoint — what success or failure looks like]
 
-This step is the primary differentiator from raw analysis: the lever-specific strategic logic (why these actions in this sequence for this lever) cannot be generated without the Values Levers framework.
+Tie each action to the lever it activates, so the sequence shows why these actions come in this order for this lever.
 
 ---
 
@@ -163,10 +170,11 @@ Open with a short **Answer**: two to four sentences that answer the question the
 | Leader/Team Member Advocacy | Yes/No | [activation guidance] | [name] |
 | Self-Testing | Yes/No | [activation guidance] | [name] |
 | Gaining/Funding | Yes/No | [activation guidance] | [name] |
+| Navigating Institutional Mandates | Yes/No | [activation guidance] | [name] |
 
 ### Whose Values Are Visible — and Whose Aren't
 
-(From Step 2.5 — required output, not optional. This is the values-surfacing core of the method.)
+(From Step 2.5 — required output, not optional. It widens the values conversation to absent stakeholders.)
 
 **A. Stated vs unstated values currently driving decisions:**
 
@@ -230,7 +238,7 @@ A strong Values Levers output:
 - matches lever recommendations to the user's actual role and authority
 - activates Individual Mode when the user is an individual contributor without organizational authority
 - includes a Lever Resistance Map with a named counter-move for each recommended lever
-- **completes the "Whose Values Are Visible" mapping** (Step 2.5): stated/unstated values for present stakeholders, at least 3 named absent stakeholders, and a systemic-harm map covering aggregation effects, power dynamics, future discriminatory use, and non-user externalities. Without this section, the output is a tactical influence toolkit, not a values-surfacing methodology.
+- **completes the "Whose Values Are Visible" mapping** (Step 2.5): stated/unstated values for present stakeholders, at least 3 named absent stakeholders, and a systemic-harm map covering aggregation effects, power dynamics, future discriminatory use, and non-user externalities. Without this section, the conversation stays inside the team.
 - includes a communication audit with at least one existing channel and one new ritual suggestion
 - produces a facilitation guide that is session-ready and runnable in under 60 minutes
 - produces a 30-day action plan with week-by-week named actions, stakeholders, and deliverables for the top 2 levers

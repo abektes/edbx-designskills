@@ -6,11 +6,11 @@
 
 ## Who made it
 
-The Inverted Behavior Model is built on **BJ Fogg's Behavior Model** — a framework developed by behavioral design researcher BJ Fogg at Stanford University. Fogg's model states that behavior occurs when three elements converge: Motivation + Ability + Prompt (B = MAP).
+The Inverted Behavior Model comes from the *Design Ethically* toolkit by **Kat Zhou** (designethically.com), which turns **BJ Fogg's Behavior Model** upside down. Fogg's model says behavior happens when Motivation, Ability and a Prompt come together at the same moment (B = MAP).
 
-The "inversion" is a methodological addition for ethical auditing: instead of using Fogg's model to *design* behavior (its original purpose), this method uses it to *audit* what behaviors a feature is already designed to produce — intentionally or not.
+The "inversion" is Zhou's: instead of using Fogg's formula to *design for* an intended behavior (its original purpose), you use it to *predict* unknown or unintended behaviors and then forecast what consequences they might trigger. The published method is short: list the prompts (features or whole products), write the motivating factors, predict behaviors, analyze consequences, and optionally estimate ability and rank behaviors by likelihood or severity.
 
-The inversion technique has been developed within ethical design research as a way to apply persuasive technology theory to retrospective analysis rather than forward design.
+This skill builds more steps around that core (stakeholder map, worst possible design, convergence check, cascade model, rationalizations check, redesign directions). Those are edbx additions, not part of Zhou's method.
 
 ---
 
@@ -36,25 +36,27 @@ The Inverted Behavior Model is a systematic method for finding those unintended 
 
 ## What it produces
 
-The method works in seven phases:
+The skill works in seven phases on top of the published flow (steps marked edbx are additions):
 
-**Step 0 — Stakeholder Map:** Before any analysis, name every population the feature touches — primary users, vulnerable subgroups (with named demographics, not "users"), non-consenting bystanders in the user's environment (people scanned, photographed, profiled-by-association, household members on shared accounts), workers in the supply chain (moderators, gig workers, annotators), absent regulators, and future-affected populations. Behavior models that don't name *whose* behavior they're modeling collapse to "the average user."
+**Step 0 — Stakeholder Map (edbx):** Before any analysis, name every population the feature touches — primary users, vulnerable subgroups (with named demographics, not "users"), non-consenting bystanders in the user's environment (people scanned, photographed, profiled-by-association, household members on shared accounts), workers in the supply chain (moderators, gig workers, annotators), absent regulators, and future-affected populations. Behavior models that don't name *whose* behavior they're modeling collapse to "the average user."
 
-**Step 1 — Prompt Inventory:** Break the feature down into every individual prompt — any element that triggers a user action (notification, button, score, streak, countdown, progress bar, social comparison element, etc.). Name each prompt, describe how it triggers, and state its intended behavior.
+**Step 1 — Prompt Inventory:** The published method lets a prompt be a feature or a whole product; this skill breaks the feature down into every individual prompt — any element that triggers a user action (notification, button, score, streak, countdown, progress bar, social comparison element, etc.). Name each prompt, describe how it triggers, and state its intended behavior.
 
-**Step 2 — Motivating Factors Map:** For each prompt, identify what motivates a user to respond to it — across five categories: intrinsic motivation, social motivation, extrinsic motivation, emotional motivation, and habitual motivation. Note whether each is healthy or potentially exploitative.
+**Step 2 — Motivating Factors Map:** For each prompt, identify what motivates a user to respond to it — using edbx's five categories as a checklist: intrinsic, social, extrinsic, emotional and habitual motivation. Note whether each is healthy or potentially exploitative.
 
-**Step 2.5 — Worst Possible Design (the Inversion Artifact):** Construct a description of what this feature would look like if every prompt were designed to maximize manipulation. Written as a concrete design description — "if this feature were designed to maximize anxiety and compulsive return visits, it would: [specific design decisions]" — it makes non-obvious manipulative patterns visible by contrast.
+**Step 2.5 — Worst Possible Design (the Inversion Artifact, edbx):** Construct a description of what this feature would look like if every prompt were designed to maximize manipulation. Written as a concrete design description — "if this feature were designed to maximize anxiety and compulsive return visits, it would: [specific design decisions]" — it makes non-obvious manipulative patterns visible by contrast.
 
-**Step 2.6 — Convergence Check:** Compare the actual design against the Worst Possible Design, prompt by prompt. For every prompt, score: 🟢 Diverged (designed to avoid the dark version), 🟡 Adjacent (one product decision away from drift), 🔴 Converged (already implements the dark version). This comparison is what makes the method "Inverted" — without it, the worst-design artifact is decoration.
+**Step 2.6 — Convergence Check (edbx):** Compare the actual design against the Worst Possible Design, prompt by prompt. For every prompt, score: 🟢 Diverged (designed to avoid the dark version), 🟡 Adjacent (one product decision away from drift), 🔴 Converged (already implements the dark version). Without this comparison, the worst-design artifact goes unused.
 
-**Step 3 — Behavior Forecast:** For each prompt, forecast intended behaviors (✅), unintended neutral (⚠️), unintended harmful (🔴), and social/amplified behaviors that emerge at scale (🟣).
+**Step 3 — Behavior Forecast:** For each prompt, forecast intended behaviors (✅), unintended neutral (⚠️), unintended harmful (🔴), and social/amplified behaviors that emerge at scale (🟣). The four tags are edbx's.
 
-**Step 4 — Consequence Map + Behavioral Cascade Model:** For each 🔴 finding, map consequences across the full stakeholder set (primary users, vulnerable subgroups, non-consenting bystanders, supply-chain workers, scale effects, society). Then map the **behavioral cascade** in five stages: initial behavior (week 1) → adaptation behavior (weeks 2–6) → social/relational behavior (months 1–3) → identity-level behavior (months 3–12) → generational/cultural normalization (years).
+**Step 3.5 — Ability and Ranking (optional, from the published method):** Estimate how easy each behavior is to do, rank behaviors from most to least likely, and optionally by severity.
 
-**Step 4.5 — Rationalizations Check:** For every harmful finding, name the story the team uses (or will use) to defend the design — *"users want it," "the alternatives are worse," "we're just giving people what they want," "if we don't, our competitors will"* — and rebut each one in plain language. A team that names its own rationalizations in advance has a much harder time deploying them later.
+**Step 4 — Consequence Map + Behavioral Cascade Model:** The published method analyzes the consequences of each predicted behavior. This skill adds a per-stakeholder map and an edbx cascade model. For each 🔴 finding, map consequences across the full stakeholder set (primary users, vulnerable subgroups, non-consenting bystanders, supply-chain workers, scale effects, society). Then map the **behavioral cascade** in five stages: initial behavior (week 1) → adaptation behavior (weeks 2–6) → social/relational behavior (months 1–3) → identity-level behavior (months 3–12) → generational/cultural normalization (years).
 
-The output ends with **Redesign Directions** — at least two per 🔴 finding: a minimal change and a structural change, each named with the metric it shifts and the organizational resistance it will face.
+**Step 4.5 — Rationalizations Check (edbx):** For every harmful finding, name the story the team uses (or will use) to defend the design — *"users want it," "the alternatives are worse," "we're just giving people what they want," "if we don't, our competitors will"* — and rebut each one in plain language. A team that names its own rationalizations in advance has a much harder time deploying them later.
+
+The output ends with edbx's **Redesign Directions** — at least two per 🔴 finding: a minimal change and a structural change, each named with the metric it shifts and the organizational resistance it will face.
 
 ---
 

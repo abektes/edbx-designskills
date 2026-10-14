@@ -61,15 +61,15 @@ ResponsibleTech.Work page.
 
 ### Contradicted by the source text (read on the page `responsibletech2022pledge`)
 
-1. **"Because" clause is required.** SKILL.md (Format B, Guardrails, Quality Bar) requires it. The page defines a responsible story as WHO, PLEDGE and an optional REASON (row 6).
-2. **Cycle order and shape.** SKILL.md starts the cycle at "Review outcomes together". The page lists write pledges in context, seek better outcomes, review outcomes together, and treats the project kickoff as a separate section (row 8).
-3. **Repo attribution.** `THIRD_PARTY_NOTICES.md` credits Pledge Works to professional ethics codes (medicine, law, engineering). The page presents Pledge Works as ResponsibleTech.Work's own tool and mentions professional codes only as a source for role-based pledges, naming the ACM Code of Ethics. This sits in the notices file, not SKILL.md, which should be corrected.
-4. **Tree metaphor** (row 10): absent from the page.
-5. **Session minimums and Format A/B/C sentence templates** (row 13): absent. The page gives example pledges only.
-6. **Five operationalisation fields, early-warning indicator, stress test, red-line register with veto owners, traceability table** (rows 14-17): absent from the page, yet SKILL.md presents them as method stages (Stage 3, 3.5, 3.6, Quality Bar). Only the Evidence Ledger is labelled an edbx adaptation.
-7. **To Whom audiences** (row 7): "community" is not on the page; "future generations" appears only in an example reason.
-8. **Values + context formula** (row 2): not in the extracted page text.
-9. **Year and status.** The page is undated. It calls itself "still under development" and "seeking broader validation in different contexts"; SKILL.md mentions neither.
+1. **"Because" clause is required.** SKILL.md (Format B, Guardrails, Quality Bar) requires it. The page defines a responsible story as WHO, PLEDGE and an optional REASON (row 6). (fixed in SKILL.md)
+2. **Cycle order and shape.** SKILL.md starts the cycle at "Review outcomes together". The page lists write pledges in context, seek better outcomes, review outcomes together, and treats the project kickoff as a separate section (row 8). (fixed in SKILL.md)
+3. **Repo attribution.** `THIRD_PARTY_NOTICES.md` credits Pledge Works to professional ethics codes (medicine, law, engineering). The page presents Pledge Works as ResponsibleTech.Work's own tool and mentions professional codes only as a source for role-based pledges, naming the ACM Code of Ethics. This sits in the notices file, not SKILL.md, which should be corrected. (fixed in tutorials/pledge-works.md; notices row already credits ResponsibleTech.Work)
+4. **Tree metaphor** (row 10): absent from the page. (fixed in SKILL.md)
+5. **Session minimums and Format A/B/C sentence templates** (row 13): absent. The page gives example pledges only. (fixed in SKILL.md)
+6. **Five operationalisation fields, early-warning indicator, stress test, red-line register with veto owners, traceability table** (rows 14-17): absent from the page, yet SKILL.md presents them as method stages (Stage 3, 3.5, 3.6, Quality Bar). Only the Evidence Ledger is labelled an edbx adaptation. (fixed in SKILL.md)
+7. **To Whom audiences** (row 7): "community" is not on the page; "future generations" appears only in an example reason. (fixed in SKILL.md)
+8. **Values + context formula** (row 2): not in the extracted page text. (fixed in SKILL.md)
+9. **Year and status.** The page is undated. It calls itself "still under development" and "seeking broader validation in different contexts"; SKILL.md mentions neither. (fixed in SKILL.md)
 
 ### Not verifiable (no readable source)
 

@@ -362,7 +362,7 @@
       "id": "triad_present",
       "kind": "section_present",
       "pattern": "Triad Conflict Matrix",
-      "bar": "**produces the Triad Conflict Matrix** — the methodology's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
+      "bar": "**produces the Triad Conflict Matrix** — the skill's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
       "desc": "a Triad Conflict Matrix section exists"
     },
     {
@@ -370,7 +370,7 @@
       "kind": "min_count",
       "items": "triad_decisions",
       "n": 1,
-      "bar": "**produces the Triad Conflict Matrix** — the methodology's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
+      "bar": "**produces the Triad Conflict Matrix** — the skill's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
       "desc": "the Triad Conflict Matrix has at least one decision row"
     },
     {
@@ -378,7 +378,7 @@
       "kind": "count_covers",
       "items": "triad_deontology",
       "covers": "triad_decisions",
-      "bar": "**produces the Triad Conflict Matrix** — the methodology's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
+      "bar": "**produces the Triad Conflict Matrix** — the skill's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
       "desc": "every matrix row has a verdict from each of the three lenses"
     },
     {
@@ -386,7 +386,7 @@
       "kind": "count_covers",
       "items": "triad_virtue",
       "covers": "triad_decisions",
-      "bar": "**produces the Triad Conflict Matrix** — the methodology's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
+      "bar": "**produces the Triad Conflict Matrix** — the skill's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
       "desc": "every matrix row has a Virtue verdict"
     },
     {
@@ -394,7 +394,7 @@
       "kind": "count_covers",
       "items": "triad_consequence",
       "covers": "triad_decisions",
-      "bar": "**produces the Triad Conflict Matrix** — the methodology's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
+      "bar": "**produces the Triad Conflict Matrix** — the skill's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
       "desc": "every matrix row has a Consequence verdict"
     },
     {
@@ -402,7 +402,7 @@
       "kind": "cells_match",
       "items": "triad_alignment",
       "pattern": "🟢|🟡|🔴",
-      "bar": "**produces the Triad Conflict Matrix** — the methodology's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
+      "bar": "**produces the Triad Conflict Matrix** — the skill's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
       "desc": "every Alignment cell carries a green / yellow / red marker"
     },
     {
@@ -410,7 +410,7 @@
       "kind": "implied_section",
       "items": "triad_non_green",
       "pattern": "dilemma|unresolved|tension|trade-?off",
-      "bar": "**produces the Triad Conflict Matrix** — the methodology's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
+      "bar": "**produces the Triad Conflict Matrix** — the skill's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
       "desc": "if any row is rated yellow or red, the dilemma is named in the text"
     },
     {
@@ -625,7 +625,7 @@
     {
       "id": "triad_dilemmas_honest",
       "section": "Triad Conflict Matrix",
-      "bar": "**produces the Triad Conflict Matrix** — the methodology's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
+      "bar": "**produces the Triad Conflict Matrix** — the skill's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.",
       "instructions": "Read the Triad Conflict Matrix section in `items[{i}]`. For every row rated yellow or red, does the text name the dilemma honestly (which lens disagrees and why) without resolving it artificially? If no row is yellow or red, answer true.",
       "criteria": {
         "true": "Each yellow row says which lens is in the minority and states the real good on both sides; each red row is named as an unresolved decision for the team.",

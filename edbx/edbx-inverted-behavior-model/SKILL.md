@@ -11,7 +11,7 @@ tags: [ethical-design, forecast]
 
 Inverted Behavior Model supports you in identifying potential behavior based on a forecast of what a feature or product motivates the user to do. Designers generate products and features based on expectations of how users will behave. The Inverted Behavior Model inverts this: rather than designing *toward* a behavior, the method works backward from features to reveal what behaviors they actually incentivize.
 
-The method comes from Kat Zhou's *Design Ethically* toolkit (designethically.com) and is grounded in BJ Fogg's Behavior Model (B = Motivation + Ability + Prompt), which states that behavior occurs when these three elements converge. The "inversion" is methodological: instead of using the model to *design* behavior, this method uses it to *audit* what behaviors are being designed — intentionally or not.
+The method comes from Kat Zhou's *Design Ethically* toolkit (designethically.com) and is grounded in BJ Fogg's Behavior Model (B = Motivation + Ability + Prompt), which states that behavior occurs when these three elements converge. The "inversion" is methodological: instead of using the model to *design* for an intended behavior, the method uses it to *predict* any unknown or unintended behaviors and then forecast what consequences they might trigger — intentionally designed or not.
 
 By working through Inverted Behavior Models, designers can identify the motivating factors behind each feature, list intended and unintended behaviors, and identify a range of consequences that could positively or negatively impact users or society at large.
 
@@ -37,7 +37,9 @@ Provide as many of these as are available:
 
 ## Workflow
 
-The Inverted Behavior Model follows four steps, plus a stakeholder map (Step 0) and a rationalizations check (Step 4.5).
+The published method is a short flow: list the prompts you want to forecast (features or whole products), write the motivating factors in play for each, predict the behaviors that might result, and analyze the consequences. It adds an optional pass: estimate the ability level for each behavior and rank behaviors from most to least likely, and optionally by severity. Steps 1 to 4 below follow that flow; Step 3.5 is the optional pass.
+
+> **edbx adaptation:** Step 0 (stakeholder map), the element-level prompt definition in Step 1, the five motivating-factor categories in Step 2, Steps 2.5 and 2.6 (worst possible design and convergence check), the behavior taxonomy and cascade model, Step 4.5 (rationalizations check), the redesign directions and the forecast statement are not part of the published method; they are edbx's. They are here to turn a prediction into findings a team can act on and to stop the analysis from collapsing to an average user.
 
 ---
 
@@ -61,7 +63,7 @@ This map is referenced by Step 4 (Consequence Map) — every consequence must na
 ### Step 1 — Deconstruct into Prompts
 
 Break the product or feature down into its individual behavioral prompts:
-- A prompt is any element that triggers a user action (notification, button, feed, score, streak, countdown, etc.)
+- The page lets a prompt be a feature or a whole product; this skill goes finer and treats a prompt as any element that triggers a user action (notification, button, feed, score, streak, countdown, etc.)
 - List every prompt in the feature
 - For each prompt: name it, describe its trigger mechanism, and state its intended behavioral outcome
 
@@ -71,7 +73,7 @@ Break the product or feature down into its individual behavioral prompts:
 
 ### Step 2 — Map Motivating Factors
 
-For each prompt, identify the motivating factors that make a user respond to it. Use the Fogg Behavior Model framework — behavior occurs when Motivation + Ability + Prompt converge:
+For each prompt, identify the motivating factors that make a user respond to it. Fogg's model says behavior happens when Motivation, Ability and a Prompt come together at the same moment. The published method says only to write out the motivating factors; the categories below are edbx's checklist for finding them:
 
 | Motivating Factor Category | Examples |
 |---|---|
@@ -89,7 +91,7 @@ For each prompt: list 2–4 motivating factors it activates, noting whether they
 
 Before forecasting behaviors, produce the inversion artifact: a description of the worst possible version of this feature if every prompt were designed to maximize manipulation rather than user value.
 
-This is the methodological core of the Inverted Behavior Model. The inversion must be written as a concrete design description — not a list of risks, but an actual feature description as a malicious designer might have written it.
+This artifact makes the inversion concrete and gives the later comparison something to measure against. It must be written as a concrete design description — not a list of risks, but an actual feature description as a malicious designer might have written it.
 
 Format: *"If this feature were designed to maximize [harm], it would: [specific design decisions, named mechanics, copy choices]."*
 
@@ -114,7 +116,7 @@ Output as a table:
 
 Every 🔴 Converged row is a finding that must appear in Step 4's Consequence Map and in the Redesign Directions section. Every 🟡 Adjacent row should be flagged as a drift risk in the Behavior Forecast Statement.
 
-This step is what makes the method "Inverted." Skipping it reduces the skill to a generic behavior-forecast exercise.
+Skipping this step leaves the worst-design artifact unused.
 
 ### Step 3 — Forecast Behaviors (Inverted)
 
@@ -137,6 +139,12 @@ Use a behavior taxonomy:
 - `⚠️ Unintended / Neutral` — not designed for, but not harmful
 - `🔴 Unintended / Harmful` — not designed for, potentially harmful to user or society
 - `🟣 Social / Amplified` — behavior that emerges when many users do it simultaneously (network effects)
+
+---
+
+### Step 3.5 — Ability and Ranking (optional)
+
+For each predicted behavior, estimate the ability level: how easy or hard it is for the people involved to do it, given the design. Then rank the behaviors from most likely to least likely to occur. You may also rank them by severity. Use this ranking to choose which behaviors get the fullest consequence mapping and to order the Behavioral Risk Summary. Skip it when the brief gives too little to estimate ability, and say so rather than guess.
 
 ---
 
@@ -215,7 +223,7 @@ Open with a short **Answer**: two to four sentences that answer the question the
 
 ### Worst Possible Design (Inversion Artifact)
 
-A concrete feature description as a malicious designer might have written it — naming specific mechanics, copy choices, and dark-pattern moves the worst version would include. Format: *"If this feature were designed to maximize [harm], it would: [specific design decisions]."* This is the methodological centerpiece — never omit it.
+A concrete feature description as a malicious designer might have written it — naming specific mechanics, copy choices, and dark-pattern moves the worst version would include. Format: *"If this feature were designed to maximize [harm], it would: [specific design decisions]."* This is the centerpiece of the skill's workflow — do not omit it.
 
 ### Convergence Check
 
@@ -229,6 +237,11 @@ Every 🔴 row anchors a 🔴 Harmful behavior in the forecast below. Every 🟡
 | Prompt | Motivations | ✅ Intended | ⚠️ Unintended Neutral | 🔴 Unintended Harmful | 🟣 Social Amplified |
 |---|---|---|---|---|---|
 | [Prompt 1] | [factors] | [behavior] | [behavior] | [behavior] | [behavior] |
+
+### Ability and Ranking (optional)
+
+| Behavior | Ability level (how easy to do) | Likelihood rank | Severity rank (optional) |
+|---|---|---|---|
 
 ### Consequence Map (per-stakeholder, all from Step 0)
 
@@ -290,7 +303,7 @@ A strong Inverted Behavior Model output:
 - **completes the Stakeholder Map** (Step 0) with at least 5 named populations including non-consenting bystanders, workers in the supply chain, and absent regulators — not just "users"
 - fully deconstructs any feature into behavioral prompts
 - produces a "Worst Possible Design" inversion artifact before forecasting behaviors
-- produces a Convergence Check table comparing every actual prompt to the worst-version equivalent — without it, the method is just a behavior forecast and has not done the inversion
+- produces a Convergence Check table comparing every actual prompt to the worst-version equivalent — without it, the worst design is not used
 - maps motivating factors for every prompt (minimum 2 per prompt)
 - correctly tags behaviors across all four categories (✅ ⚠️ 🔴 🟣)
 - **produces a Behavioral Cascade Model** with at least 3 named stages per 🔴 finding (initial → adaptation → social/relational → identity-level → generational/cultural). Single-session harm analysis without cascade reasoning is incomplete.

@@ -92,24 +92,24 @@ Contradicted by the source text (read on the page):
   Shilton and Koepfler paper (p. 3) does list these five, but the 2013 article
   (p. 25) lists six, including navigating institutional mandates, and says its
   list is probably incomplete (p. 24). The skill omits the sixth lever and does
-  not say the list is open.
+  not say the list is open. (fixed in SKILL.md)
 - C2. The ENABLE feedback loop. The text gives modes enabling or constraining
   levers, and levers enabling or constraining values-based design (p. 3). It
   does not say decisions determine which communication modes are used next, and
   the name "ENABLE" does not appear. The loop may be drawn in Figure 1, whose
-  image was not read.
+  image was not read. (fixed in SKILL.md)
 - C3. Step 2.5 as the method's "core". The article defines levers as practices
   that open conversations (p. 2); the stakeholder and harm tables are not in
   either paper. SKILL.md also says the Gaining/Funding lever is about framing
   ethics as risk reduction and the Self-Testing lever about experiencing the
   system as a vulnerable user; the text says otherwise (funding paid for larger
   teams and a long-term ethics advocate, pp. 19, 22; self-testing meant seeing
-  one's own and colleagues' data, p. 10).
+  one's own and colleagues' data, p. 10). (fixed in SKILL.md)
 - C4. Meaning of "Interdisciplinary Teams" activation. The skill says to bring
   in engineers, ethicists, legal and community reps. In the source the lever
   worked by adding statisticians, social scientists and designers whose
   questions pulled attention to the data (p. 11), not by adding legal or
-  community members.
+  community members. (fixed in SKILL.md)
 - C5. `THIRD_PARTY_NOTICES.md` credits "Organisational behaviour and
   participatory design research" for Values Levers. The method's source is
   `shilton2013values` (with `shilton2013making` for the communication-mode

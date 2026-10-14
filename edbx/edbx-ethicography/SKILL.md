@@ -1,6 +1,6 @@
 ---
 name: edbx-ethicography
-description: Use when a researcher, senior designer, or team lead wants to conduct a deep post-hoc ethical analysis of a design process, identify moments where value-centered vs. manipulative thinking shaped decisions, map the ethical trajectory of a design project over time, code design decisions by ethical intent and impact, or build an evidence base for ethical design research. Apply Ethicography to analyze design decisions and team speech acts for their explicit or implicit ethical dimensions, mapping the value-centered vs. manipulative nature of each decision on a persuasion-to-coercion axis. Trigger this skill for any mention of ethical design analysis, design decision audit, value-centered design research, mapping ethics in design process, analyzing design team ethics, or when someone says "I want to understand the ethical quality of our design decisions, not just the outcomes." Also trigger for "Ethicography", "ethical moves", "design decision ethics", "speech act analysis", or "ethical trajectory".
+description: Use when a researcher, senior designer, or team lead wants to conduct a deep post-hoc ethical analysis of a design process, identify moments where value-centered vs. manipulative thinking shaped decisions, map the ethical trajectory of a design project over time, code design decisions by ethical intent and impact, or build an evidence base for ethical design research. Apply Ethicography to analyze design decisions and team speech acts for their explicit or implicit ethical dimensions, mapping the value-centered vs. manipulative nature of each decision. Trigger this skill for any mention of ethical design analysis, design decision audit, value-centered design research, mapping ethics in design process, analyzing design team ethics, or when someone says "I want to understand the ethical quality of our design decisions, not just the outcomes." Also trigger for "Ethicography", "ethical moves", "design decision ethics", "speech act analysis", or "ethical trajectory".
 version: "1.0"
 tags: [ethical-design, audit]
 ---
@@ -11,11 +11,13 @@ tags: [ethical-design, audit]
 
 Ethicography enables design researchers to describe the ethical nuances of collaborative design decisions by illuminating value-centered and manipulative attentions. Every moment designers make decisions, they act according to their own ethical and moral codes — whether they realize it or not.
 
-Ethicography uses the designer as an ethical lens. It treats design decisions and speech acts as data, analyzing them for the explicit or implicit values they serve or undermine. The method maps each decision on a 2×2 matrix of Explicit/Implicit × Persuasion/Coercion, revealing the ethical quality of a design process over time. (The 2×2 is an edbx adaptation: the published method colour-codes each speech act as more value-centred or more manipulative.)
+Ethicography uses the designer as an ethical lens. It treats design decisions and speech acts as data, analyzing them for the explicit or implicit values they serve or undermine. The published method takes a transcript of a design session, splits it into speech acts, gives each a value code (the likely intent of the act, read as an attitude toward one or more values, colour-coded as more value-centred or more manipulative), gives each an idea code (how the act relates to a problem, a solution or a decision rationale), and links the acts into a visual map called an ethicograph, which shows how values and design activity interact over a session. This skill maps each decision on a 2×2 matrix of Explicit/Implicit × Persuasion/Coercion, revealing the ethical quality of a design process over time. (The 2×2 is an edbx adaptation: the published method colour-codes each speech act as more value-centred or more manipulative.)
 
-Developed by Chivukula, Gray and Brier (CHI 2019) as an analytical framework for design ethics research, Ethicography is the most analytically rigorous method in the ethical design toolkit. It operates in two modes: **Team Reflection** (accessible, facilitated) and **Research Documentation** (formal, citable).
+Developed by Chivukula, Gray and Brier (CHI 2019) as an analytical framework for design ethics research, the paper applies it to transcribed lab sessions with design students. This skill offers two modes: **Team Reflection** (accessible, facilitated) and **Research Documentation** (formal, citable).
 
-> **Mindset check:** Ethicography analyzes what people *say* in design meetings as data, not just what decisions were made. Meeting notes, design crits, and Slack discussions are all valid input. The goal is to reveal the ethical trajectory of decisions — not to assign blame.
+> **edbx adaptation:** the two modes, the numbered "Design Move" unit, the value families and affected-populations table (Step 3), Performative Ethics Moves (Step 3.5) and the Trajectory Forward projection (Step 4) are not part of the published method, which is one research method run on recorded sessions; the paper shows value relationships over time but makes no forecast. They are here to make the method usable on a team's own written records and to turn a trace into something a team can act on. The Step 0 record check is also edbx's; it is here because a trace without a record invites invented history.
+
+> **Mindset check:** Ethicography analyzes what people *say* in design sessions as data, not just what decisions were made. The paper's input is transcribed recordings of design sessions; this skill also accepts written records such as meeting notes, design crit notes and Slack discussions, and treats them as weaker evidence than a transcript. The goal is to reveal the ethical trajectory of decisions — not to assign blame.
 
 ## Use This Skill When
 
@@ -34,7 +36,7 @@ Provide as many of these as are available:
 - Optionally: meeting transcripts, design crit notes, or documented decisions
 - Optionally: a specific design decision or moment to analyze in depth
 - Optionally: a research question about the ethical quality of the design process
-- Specify mode: **Team Reflection** (accessible) or **Research Documentation** (formal/academic)
+- Specify mode: **Team Reflection** (accessible) or **Research Documentation** (formal/academic); both are edbx modes
 
 ## Workflow
 
@@ -59,7 +61,7 @@ With **outcome only**, do not build a move-by-move history. Code only the moves 
 
 For the design decisions or speech acts provided, identify each as an "Ethical Move":
 - Name the decision or speech act (e.g., "Team decided to add urgency countdown to checkout")
-- Assign it a **Design Move number** (chronological)
+- Assign it a **Design Move number** (chronological; edbx's label for numbering the speech acts or decisions in order)
 - Identify the **participant** who made or advocated for it
 - Note the **stated reason** (explicit framing) and any **implicit motivation** (what it actually achieves)
 - Mark its **source**: `brief` when the brief records the move, `reconstructed` when you infer it
@@ -88,6 +90,9 @@ For each move: assign quadrant, explain why, name the value or harm at stake.
 For each Ethical Move, identify (a) which values it serves or undermines and (b) **which specific populations the move privileged or harmed**.
 
 **A. Values served / undermined**
+
+The paper draws its value vocabulary from Friedman's list of human values, for example ownership, privacy, accountability, freedom from bias, trust, autonomy, usability, informed consent and human welfare, and names the value most salient in each speech act. Use these first. The five families below group values by whose they are; they are edbx's grouping, for sorting moves that touch more than one party.
+
 - **User values:** autonomy, privacy, dignity, safety, transparency
 - **Designer values:** craft, honesty, advocacy, integrity
 - **Business values:** revenue, growth, engagement, retention
@@ -110,7 +115,7 @@ Populations to scan for (use the ones genuinely relevant; do not list all):
 - Workers: content moderators, gig workers, annotators, support staff (with reference to their exposure to harmful content if applicable)
 - Future-affected populations: users in 5 years using accumulated data, jurisdictions where data may be subpoenaed, users who later lose protected-class status (e.g., aging out of minor-protections)
 
-This step is what separates ethnography from accountability — naming the people the decisions touched.
+This step names the people the decisions touched.
 
 **C. Concrete-harm examples (when relevant)**
 
@@ -143,7 +148,7 @@ Produce a longitudinal analysis:
 - Were manipulative moves explicit (visible, debatable) or implicit (invisible, unquestioned)?
 - Were any **Performative Ethics Moves** detected — decisions using ethical language to conceal manipulation?
 
-**Trajectory Forward (required):** Based on the ethical coding of past decisions, project where the product's ethical posture is heading over the next 12 months if current decision patterns continue. This is a forecast, not a description — name which quadrant the team will drift toward and what specific pattern of decisions is driving the drift. This is what distinguishes Ethicography from a retrospective audit: it makes the trajectory legible before it compounds.
+**Trajectory Forward (required):** Based on the ethical coding of past decisions, project where the product's ethical posture is heading over the next 12 months if current decision patterns continue. This is a forecast, not a description — name which quadrant the team will drift toward and what specific pattern of decisions is driving the drift. It makes the trajectory legible before it compounds.
 
 ---
 

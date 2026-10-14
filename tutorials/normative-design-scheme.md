@@ -6,9 +6,9 @@
 
 ## Who made it
 
-The Normative Design Scheme draws on classical ethical philosophy — specifically the three major normative theories in Western moral philosophy — and applies them to design decisions as an analytical framework. This adaptation for design practice synthesizes work in philosophy of technology, design ethics, and HCI research on how ethical theories translate into design evaluation.
+The Normative Design Scheme is a worksheet from Jet Gispen's *Ethics for Designers* toolkit (2017). A design team formulates a design goal, assesses it with the three main domains of normative ethics, then uses the theories as ideation questions to improve the design. Gispen suggests 30 to 60 minutes with post-its. The worksheet itself says there is no absolute answer to its questions.
 
-The three theories used are:
+The three theories are:
 - **Virtue Ethics** (Aristotle, MacIntyre) — ethics of character and intention
 - **Consequentialism** (Bentham, Mill) — ethics of outcomes and welfare
 - **Deontology** (Kant) — ethics of duty and universal principles
@@ -37,7 +37,7 @@ Using only one lens means missing what the other two see. A decision that looks 
 
 ## What it produces
 
-Crucially, the method is *not* "apply virtue ethics, then consequentialism, then deontology in sequence." That collapses it into generic ethical analysis. Five distinctive moves keep it a methodology:
+The skill goes well beyond the worksheet. Applying the three theories one after another gives generic ethical analysis, so edbx wraps them in five moves of its own (none of them is on Gispen's page, and neither is the pairing of the theories with Intention, Effect and Design):
 
 **Step 0 — Stakeholder & Power Map (shared input for all three lenses):** Before any lens is applied, enumerate every population the design touches. The three lenses must operate on the same stakeholder reality — otherwise each lens evaluates a different reality and the synthesis becomes incoherent. The map names primary users, vulnerable subgroups (specifically, e.g., adolescents / abuse survivors / undocumented users / older adults), non-consenting bystanders, workers in the supply chain, **the designers/creators themselves** (the design shapes what kind of professionals they become), and future-affected populations. Plus a power-asymmetry summary and a **Non-Obvious Harms Inventory** of at least 5 named harms beyond the heuristic categories (proxy-variable harms, aggregation, competence foreclosure, intrinsic-motivation crowd-out, attentional-architecture formation, etc.).
 
@@ -49,7 +49,7 @@ Crucially, the method is *not* "apply virtue ethics, then consequentialism, then
 
 **Universal Law Test (named output table):** The Kantian thought experiment formalized as a structured artifact. For every named design decision: if every product did this, what world results — and is it livable?
 
-**Triad Conflict Matrix (the methodology's signature artifact):** For every design decision, a row showing where each lens lands (Virtue / Consequence / Deontology) plus alignment status — 🟢 all-aligned (highest-confidence recommendation), 🟡 two-against-one (genuine dilemma — name it honestly), 🔴 all-conflict (unresolved — requires team-level commitment, not analysis).
+**Triad Conflict Matrix (the skill's signature artifact):** For every design decision, a row showing where each lens lands (Virtue / Consequence / Deontology) plus alignment status — 🟢 all-aligned (highest-confidence recommendation), 🟡 two-against-one (genuine dilemma — name it honestly), 🔴 all-conflict (unresolved — requires team-level commitment, not analysis).
 
 The output ends with a **Normative Design Statement** in prescribed form — not just "this is ethically grounded" but a closing two-part commitment: *"We commit to [specific course of action] to honor what the lenses agreed on, and to [specific course of action] to acknowledge what they did not."* A statement without that commitment closure is incomplete.
 

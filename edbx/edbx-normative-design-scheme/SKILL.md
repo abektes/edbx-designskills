@@ -11,13 +11,15 @@ tags: [ethical-design, decision]
 
 Normative Design Scheme, from Jet Gispen's *Ethics for Designers* toolkit (2017), allows you to assess your design goals and brainstorm ideas based on normative ethical theories. Every design carries intentions, produces effects, and follows or breaks rules. The Normative Design Scheme makes each of those dimensions visible by applying three philosophical traditions as lenses.
 
-The method uses a three-part normative ethical framework applied to any design decision or product. Each lens asks a different question:
+The published worksheet has the team formulate a design goal, assess it with the three main domains of normative ethics (virtue ethics, consequentialism, deontology), and then use those theories as ideation questions to improve the design. It is suggested as a 30 to 60 minute exercise for a design team with post-its. This skill applies the same three theories to any design decision or product. Each lens asks a different question:
 
 - **Intention — Virtue Ethics**: What virtues does the design promote in its creators and users?
 - **Effect — Consequentialism**: What outcomes does the design produce for all stakeholders?
 - **Design — Deontology**: What duties and moral rules does the design follow or break?
 
-Using the same three-part structure, you can also brainstorm ideas to build ethical design outcomes rooted in normative ethical theory. The method works in both **Assess** mode (evaluating an existing design) and **Generate** mode (brainstorming ethical alternatives from scratch).
+Using the same three-part structure, you can also brainstorm ideas to build ethical design outcomes rooted in normative ethical theory. The skill works in both **Assess** mode (evaluating an existing design) and **Generate** mode (brainstorming ethical alternatives from scratch).
+
+> **edbx adaptation:** pairing the theories with the labels Intention, Effect and Design, the wording of the lens questions below, and the split into Assess and Generate modes are edbx's; the worksheet's own questions sit on its downloadable template, and its steps run as one sequence. They are here to give each lens a plain-language question and to let the skill serve both a review and a brainstorm.
 
 > **Mindset check:** The three lenses are not a hierarchy. Deontology doesn't trump Consequentialism. They are three different ways of asking "is this right?" When they agree, you have a strong ethical signal. When they conflict, you have a genuine ethical dilemma that deserves acknowledgment, not artificial resolution.
 
@@ -41,7 +43,9 @@ Provide as many of these as are available:
 
 ## Workflow
 
-Normative Design Scheme applies three lenses sequentially, then synthesizes across them. Crucially, the method is **not** "apply virtue ethics, then consequentialism, then deontology in sequence." That collapses the method into generic ethical analysis. The distinctive moves are:
+This skill applies three lenses, then synthesizes across them. Applying virtue ethics, then consequentialism, then deontology one after the other gives generic ethical analysis, so the skill adds five moves around the lenses:
+
+> **edbx adaptation:** these five moves, the Non-Obvious Harms Inventory, the Priority Recommendation and the two-ideas-per-lens count are not part of the published worksheet, which has no stakeholder step, matrix, test or statement. They are here to keep the three lenses on one shared picture of who is affected and to turn the result into a commitment.
 
 1. A **shared stakeholder & power map** that all three lenses operate on (so the lenses are evaluating the same reality, not three different realities).
 2. A **Triad Conflict Matrix** that explicitly surfaces where the lenses *disagree* — not a synthesis paragraph but a structured artifact.
@@ -49,7 +53,7 @@ Normative Design Scheme applies three lenses sequentially, then synthesizes acro
 4. **Creator Impact** as an explicit dimension of the Virtue lens, not a passing aside — what kind of designers does this design make us into?
 5. A **Normative Design Statement** that names alignment, names dilemma, and commits to a course of action — the signature artifact.
 
-These five moves are what distinguishes the Normative Design Scheme from "applying three ethical theories." Without them, the output is generic ethical analysis and the method is doing no work.
+Without them, the output tends to be generic ethical analysis.
 
 ---
 
@@ -167,7 +171,7 @@ If a design decision fails the Universal Law Test, it cannot be ethically defend
 
 ---
 
-### Triad Conflict Matrix (the methodology's signature artifact)
+### Triad Conflict Matrix (the skill's signature artifact)
 
 Cross-lens synthesis is not a paragraph — it is a structured matrix. For every named design decision, fill out where each lens lands:
 
@@ -299,7 +303,7 @@ Every figure, rate, incident, past failure or fact about the user's product, use
 - Do not treat the three lenses as a hierarchy — they are co-equal perspectives, not ranked alternatives.
 - Do not resolve genuine ethical dilemmas artificially. When lenses conflict, name the dilemma honestly.
 - Do not use philosophical jargon without explanation. Every theoretical term must be explained in plain language.
-- Do not skip the cross-lens synthesis. The synthesis is where the method's real power lies.
+- Do not skip the cross-lens synthesis. The synthesis is where the three views meet.
 - Do not limit yourself to assessment mode — the generative prompts produce design ideas, not just critique.
 - Do not assume one lens will always dominate. Different designs raise different ethical dimensions.
 - Do not name other skills or boxes in the deliverable as if the reader has them. Describe a related method in plain terms (a structured worry session, a stakeholder harm map).
@@ -318,7 +322,7 @@ A strong Normative Design Scheme output:
 - produces 2 design ideas per lens (6 total minimum)
 - explains each philosophical term in accessible language
 - **produces a Universal Law Test table** for every named design decision, naming the world that results from universalization and whether it is livable
-- **produces the Triad Conflict Matrix** — the methodology's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.
+- **produces the Triad Conflict Matrix** — the skill's signature artifact — explicitly naming where the three lenses align (🟢), conflict two-against-one (🟡), or all-disagree (🔴). For every 🟡 and 🔴 row, the dilemma is named honestly without artificial resolution.
 - produces a Normative Design Statement in the prescribed form, including the closing two-part commitment ("we commit to X… and to Y…")
 - works in both Assess and Generate modes
 - opens with a direct answer to the decision or question the user asked, which the rest of the output supports

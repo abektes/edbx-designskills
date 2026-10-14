@@ -1,14 +1,14 @@
 # Values Levers
 
-**The short version:** Identifies what you can actually do — given your specific role and authority — to move your team or organization toward ethical design. Five levers. Realistic about power. Concrete about action.
+**The short version:** Identifies what you can actually do — given your specific role and authority — to move your team or organization toward ethical design. Six levers. Realistic about power. Concrete about action.
 
 ---
 
 ## Who made it
 
-Values Levers is an organizational change framework developed within ethical design practice to address a specific gap: most ethical design methods help individuals or teams think about ethics, but don't address the organizational conditions that determine whether ethical thinking leads to actual change.
+Values Levers comes from **Katie Shilton's** ethnography of a university lab that built mobile-phone sensing software ("Values Levers: Building Ethics into Design", *Science, Technology, & Human Values*, 2013). A values lever is a work practice that opens conversations about social values and builds consensus around them as design criteria. Shilton and Koepfler's later paper adds the link to communication: modes of communication can enable or constrain levers, and levers in turn enable or constrain values-based design decisions. Shilton calls her list of levers probably incomplete and warns that one lab's findings will not hold for every setting.
 
-The method is grounded in organizational behavior research and participatory design traditions, adapted for the specific power dynamics and constraints that designers and product managers face inside technology organizations.
+This skill adapts those findings into a role-sensitive planning method for designers and product managers inside technology organizations. The activation guidance, resistance map, whose-values mapping and 30-day plan are edbx's, not Shilton's.
 
 ---
 
@@ -35,7 +35,7 @@ The method is honest about power. It doesn't ask an individual contributor to do
 
 ## What it produces
 
-Values Levers identifies which of five levers are available and applicable given your role and context:
+Values Levers identifies which of six levers are available and applicable given your role and context. The first five match those Shilton and Koepfler list; Shilton's article adds the sixth. The "how to" guidance under each is edbx's:
 
 **Lever 1 — Interdisciplinary Teams:** Bringing ethics, legal, community representatives, or engineers into design conversations that would otherwise stay siloed in design. Most valuable when values discussions are happening in echo chambers.
 
@@ -45,14 +45,16 @@ Values Levers identifies which of five levers are available and applicable given
 
 **Lever 4 — Self-Testing:** Having team members experience their own system as a non-expert, a vulnerable user, or someone from a marginalized context. "Use your app for a week as if you have a motor disability" or "try to delete your account."
 
-**Lever 5 — Gaining/Funding:** Framing ethics investment as risk reduction to access budget, headcount, or roadmap space. "One hour with legal prevents six months of compliance work" is a different conversation than "we should be more ethical."
+**Lever 5 — Gaining/Funding:** Framing ethics investment as risk reduction to access budget, headcount, or roadmap space. "One hour with legal prevents six months of compliance work" is a different conversation than "we should be more ethical." (In Shilton's lab, funding mattered because it paid for larger, more interdisciplinary teams and a long-term values advocate.)
+
+**Lever 6 — Navigating Institutional Mandates:** Working with an outside body that imposes requirements, such as an ethics review board, so that its review keeps values on the agenda. In Shilton's lab, leaders approached the university review board early and valued it as an external check.
 
 For each applicable lever, the method produces:
 - **How to activate it** in your specific context
 - **The most common organizational resistance** you'll face
 - **A specific counter-move** for that resistance
 
-Before the lever activation plan, Values Levers requires the **"Whose Values Are Visible — and Whose Aren't" mapping** — the values-surfacing core of the method, distinguishing it from a tactical-influence toolkit:
+Before the lever activation plan, the skill requires an edbx addition, the **"Whose Values Are Visible — and Whose Aren't" mapping**, which widens the conversation beyond the team's own values (it is not in Shilton's papers):
 
 - **Stated vs. unstated values driving current decisions** — for every stakeholder in the room, both what they say drives them and what actually drives them (risk avoidance, career safety, optionality, plausible deniability, fear of being blamed).
 - **Absent stakeholders, named specifically** — at least 3 populations whose values aren't in the conversation: e.g., users with disabilities (would want accessible-by-default), people in 5 years using accumulated user data (would want meaningful data minimization), users in regimes where data could be subpoenaed, etc. For each: what they would want, and how their absence shapes the design.
