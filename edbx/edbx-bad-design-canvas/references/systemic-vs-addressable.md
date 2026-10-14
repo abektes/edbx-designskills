@@ -2,6 +2,8 @@
 
 How to distinguish between consequences that require fundamental redesign and those that can be mitigated through specific design changes.
 
+> **edbx adaptation:** the systemic/addressable split is not part of the published canvas. It turns a list of findings into a decision about how far to redesign.
+
 ---
 
 ## Definitions

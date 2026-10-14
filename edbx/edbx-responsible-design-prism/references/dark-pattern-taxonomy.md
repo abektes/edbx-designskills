@@ -2,7 +2,7 @@
 
 Reference for the Responsible Design Prism. Use precise pattern names when scoring axes.
 
-Source: adapted from darkpatterns.org / deceptive.design taxonomy and academic literature.
+> **edbx adaptation:** the five groups below (Deception, Coercion, Exploitation, Manipulation, Obstruction) and their one-line definitions are this skill's own grouping, written in its own words. They are not the deceptive.design ontology, which describes 64 synthesized dark pattern types in three levels (high, meso and low) harmonised from ten earlier taxonomies. Individual pattern names follow common usage from Brignull's list and later literature; some have since been renamed on deceptive.design (for example, fake urgency, fake social proof, fake scarcity). The groups are here so an auditor can name a pattern and see which axis it bears on.
 
 ---
 

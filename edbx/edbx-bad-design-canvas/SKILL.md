@@ -9,11 +9,11 @@ tags: [ethical-design, audit]
 
 ## Overview
 
-Bad Design Canvas enables you to evaluate your product or service based on potential or unintended "bad" consequences. It is about uncovering the new problems our "solutions" might generate, questioning our own perception of the problems we seek to solve in the first place.
+This skill evaluates a product or service for potential or unintended "bad" consequences. It is about uncovering the new problems our "solutions" might generate, questioning our own perception of the problems we seek to solve in the first place.
 
-Products and services have a range of impacts when released into real-use contexts and society. However, it is difficult to identify potentially "bad" impacts or unintended consequences. The Bad Design Canvas provides a structured 12-category taxonomy that forces a team to look at their idea from every angle of potential harm.
+Products and services have a range of impacts when released into real-use contexts and society. However, it is difficult to identify potentially "bad" impacts or unintended consequences. This skill works through a structured 12-category taxonomy so that a team looks at its idea from many angles of potential harm.
 
-The method is explicitly adversarial — it asks designers to argue against their own work. This is not pessimism; it is responsible design practice.
+This skill is adversarial by design: it asks designers to argue against their own work. This is not pessimism; it is responsible design practice.
 
 > **Method #09 — Bad Design Canvas.** From *Universal Methods of Ethical Design*. Hashtags: #breakmydesign #evaluateoutcomes. See also: Ethics Canvas · Judgment Call.
 >
@@ -41,14 +41,14 @@ Provide as many of these as are available:
 - **The product, service, or design concept** to evaluate (name + brief description)
 - **The target community or user population** — who is this for?
 - **The problem the product claims to solve** — what is it trying to fix?
-- **A specific consequence category to focus on** (optional — the method covers all 12 regardless)
+- **A specific consequence category to focus on** (optional — all 12 are covered regardless)
 - **Launch stage** (optional) — pre-launch ideation, live product review, or post-incident retrospective
 
-If the user provides only the product name, proceed — the method is designed to work from minimal input.
+If the user provides only the product name, proceed — the skill works from minimal input.
 
 ## The Twelve Consequence Categories
 
-The Bad Design Canvas covers 12 categories of potential negative consequence. Covering all 12 ensures nothing escapes. Most teams naturally focus on 2–3 and miss the rest.
+This skill uses 12 categories of potential negative consequence. Covering all 12 reduces the chance that a kind of harm is missed; it is easy to focus on two or three and overlook the rest.
 
 | # | Category | Guiding Question |
 |---|---|---|
@@ -83,7 +83,7 @@ Collect from the user:
 - Are there any known concerns already?
 - What stage is it at? (pre-launch ideation / live product review / post-incident retrospective)
 
-If the user provides only the product name and description, proceed. The canvas works from minimal input.
+If the user provides only the product name and description, proceed. The skill works from minimal input.
 
 ---
 
@@ -97,6 +97,8 @@ For each of the 12 consequence categories, generate a specific response to the g
   - `🔴 Significant` — likely, severe, and unaddressed
   - `🟡 Possible` — possible, moderate, or partially addressed
   - `🟢 Low/None` — unlikely, minor, or well-mitigated
+
+  > **edbx adaptation:** the three-level severity scale (and `references/severity-assessment-guide.md`) is not part of the published canvas. It is here so the designer can rank findings and decide which ones need a redesign.
 
 For each cell, provide:
 
@@ -125,11 +127,15 @@ After all 12 cells are complete:
    - **Addressable** — can be mitigated through specific design changes without rethinking the core concept
 4. **Consequence clusters:** Identify categories that reinforce each other (e.g., Exploitation + Unfair Control + Inequity often appear together)
 
+> **edbx adaptation:** the systemic/addressable split and the consequence clusters are not part of the published canvas. They turn a list of findings into a decision about how far to redesign.
+
 See `references/systemic-vs-addressable.md` for detailed classification guidance.
 
 ---
 
 ### Step 4 — Redesign Recommendations
+
+> **edbx adaptation:** this redesign step is not part of the published canvas. It makes sure every serious finding ends in an action.
 
 For each `🔴 Significant` consequence:
 
@@ -152,6 +158,8 @@ Compile the full session into a structured deliverable. Open it with a short **A
 
 > *"The most significant unintended consequence of [product] is [X], which harms [stakeholder Y] by [mechanism Z]. This requires [redesign action]."*
 
+   > **edbx adaptation:** the Bad Design Statement template and the build verdict below are not part of the published canvas. They give the session a decision to hand to the team.
+
 5. **"Should we build this?" Verdict** (optional but recommended):
    - **Ship with changes** — 🔴 findings are addressable and redesign is feasible
    - **Rethink fundamentally** — 🔴 findings are systemic and the core concept needs revision
@@ -167,6 +175,8 @@ Every figure, rate, incident, past failure or fact about the user's product, use
 **Solo use:** Work through all 12 cells systematically. Do not skip categories. The categories you want to skip are often the ones with the most important findings. Use `assets/bad-design-canvas-template.md` as a blank worksheet.
 
 **Team use:** Give each participant 5 minutes to silently fill the canvas individually before sharing. Then compare canvases — the differences between individual responses are where the richest discussion happens. Group clustering works best on a shared surface (whiteboard, Miro).
+
+> **edbx adaptation:** the silent individual fill and the time budgets below are not part of the published canvas. They are rules of thumb for planning a session.
 
 **Time budget:**
 - Quick scan: 20–30 minutes (Steps 2–3 only, reduced responses)

@@ -10,7 +10,7 @@ The Bad Design Canvas was created by **Matthew Manos**, a designer and educator,
 
 The canvas content is not covered by this repository's MIT License. See [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md).
 
-The canvas was designed to be used by teams as a structured adversarial exercise — a way of deliberately looking for problems with your own work before they find you.
+This skill uses the canvas as a structured adversarial exercise — a way of deliberately looking for problems with your own work before they find you.
 
 ---
 
@@ -20,7 +20,7 @@ Most design teams think about what could go wrong when something breaks. The Bad
 
 Products are released into complex social, cultural, and environmental systems. A food delivery app that delivers food perfectly might also exploit gig workers perfectly, create environmental waste perfectly, and erode food culture perfectly. None of those are bugs. They're features the team never considered.
 
-The Bad Design Canvas exists because most teams don't have a framework for finding these consequences. They focus on the problem they're solving and forget to ask what new problems their solution creates.
+The skill is here for teams that don't have a framework for finding these consequences. It is easy to focus on the problem you're solving and forget to ask what new problems their solution creates.
 
 ---
 
@@ -36,7 +36,7 @@ The Bad Design Canvas exists because most teams don't have a framework for findi
 
 ## What it produces
 
-The canvas covers 12 consequence categories. Every product gets rated on all 12 — there is no "N/A" without explanation. The categories are:
+The skill works through 12 consequence categories. Every product gets rated on all 12 — there is no "N/A" without explanation. The categories are:
 
 1. **Cultural Appropriation** — is the idea borrowed from a culture you don't represent?
 2. **Band-Aid** — is this a temporary fix that ignores the root cause?
@@ -51,7 +51,7 @@ The canvas covers 12 consequence categories. Every product gets rated on all 12 
 11. **Displacement** — does this replace something valuable that existed before?
 12. **Inequity** — does this make existing inequalities worse?
 
-Each category gets rated: **Significant 🔴 / Possible 🟡 / Low 🟢**
+Each category gets rated: **Significant 🔴 / Possible 🟡 / Low 🟢** (the rating scale, the systemic/addressable split, the Bad Design Statement and the verdict are edbx adaptations, not part of the published canvas)
 
 The output includes: a completed 12-cell canvas, a top-3 consequences summary, redesign recommendations for every Significant finding, a Bad Design Statement (one paragraph naming the harm, who it affects, and what to do), and a "Should we build this?" verdict.
 
@@ -65,7 +65,7 @@ At the end of a Bad Design Canvas session, the team arrives at one of three posi
 - **Rethink fundamentally** — the significant findings are systemic; the core concept needs to change, not just the details
 - **Do not build** — the harm is inherent to what the product is, and it cannot be designed around
 
-Most teams never arrive at "do not build" explicitly. The canvas makes it possible to say it out loud.
+It is easy never to arrive at "do not build" explicitly. Naming it as a possible verdict makes it possible to say it out loud.
 
 ---
 

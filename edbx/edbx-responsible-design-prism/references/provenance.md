@@ -66,15 +66,15 @@ contains the Prism.
 
 ### Contradicted by the source text (read on the fetched page)
 
-1. **Taxonomy grouping.** references/dark-pattern-taxonomy.md says its five groups (Deception, Coercion, Exploitation, Manipulation, Obstruction) are adapted from the deceptive.design taxonomy and academic literature. The deceptive.design page on Gray et al.'s ontology describes a three-level ontology of 64 synthesized types harmonised from ten taxonomies, with no five-group scheme (`gray2024ontology`, row 6).
-2. **The Prism is absent from the manifest sources.** Neither manifest source bearing on the skill contains it, and no fetched page, including `mildner2024hell`, contains the word "prism" (row 1).
+1. **Taxonomy grouping.** references/dark-pattern-taxonomy.md says its five groups (Deception, Coercion, Exploitation, Manipulation, Obstruction) are adapted from the deceptive.design taxonomy and academic literature. The deceptive.design page on Gray et al.'s ontology describes a three-level ontology of 64 synthesized types harmonised from ten taxonomies, with no five-group scheme (`gray2024ontology`, row 6). (fixed in SKILL.md)
+2. **The Prism is absent from the manifest sources.** Neither manifest source bearing on the skill contains it, and no fetched page, including `mildner2024hell`, contains the word "prism" (row 1). (fixed in SKILL.md)
 
 ### Not verifiable (no readable source)
 
-3. The whole structure of the Prism: two overlapping triangles, the vertices User / Incentives / Dark Pattern, the five axes and their poles, the transition zone, and the four reflection prompts (rows 2-5). SKILL.md presents these as the framework's own. The candidate thesis (`mildner2024mitigating`) is not in the manifest.
-4. Red / Yellow / Green scoring (row 4); probably an edbx layer that SKILL.md does not mark.
+3. The whole structure of the Prism: two overlapping triangles, the vertices User / Incentives / Dark Pattern, the five axes and their poles, the transition zone, and the four reflection prompts (rows 2-5). SKILL.md presents these as the framework's own. The candidate thesis (`mildner2024mitigating`) is not in the manifest. (fixed in SKILL.md)
+4. Red / Yellow / Green scoring (row 4); probably an edbx layer that SKILL.md does not mark. (fixed in SKILL.md)
 5. Pattern names in rows 8-12 and the Brignull site: not fetched. Stage A reported name drift (e.g. Fake urgency, Currency Confusion, Trick wording), which Stage B cannot re-check. The 18-type flat list claim is likewise stage A only.
 6. **Further Reading.** "Gray, C.M. & McDowell (2019). Dark Patterns: Past, Present, and Future" appears mis-attributed (stage A: the paper is Narayanan et al., ACM Queue 2020); Nielsen (2020) "Responsible Design" and Web Foundation (2021) "Ethical Design Framework" were not found; the Brignull title is unconfirmed (rows 17-20).
-7. The mechanism list beyond the framing, default and decoy effects (row 14), and the business-framing claims (row 16) have no source. "Most real-world designs land in the transitional zone" (Overview) is stated as fact with no source.
+7. The mechanism list beyond the framing, default and decoy effects (row 14), and the business-framing claims (row 16) have no source. "Most real-world designs land in the transitional zone" (Overview) is stated as fact with no source. (fixed in SKILL.md)
 8. Repo attribution: `THIRD_PARTY_NOTICES.md` credits the Prism to "HCI and responsible technology research" with no named source, while it is method 79 in `chivukula2025universal`. The notice needs a real citation once the primary source is found.
 9. Licence of `mildner2024hell`: the PDF text contains no licence statement; "CC BY 4.0" rests on the stage A read of the arXiv abstract page.

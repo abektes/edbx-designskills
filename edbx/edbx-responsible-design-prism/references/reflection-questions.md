@@ -2,7 +2,7 @@
 
 Expanded guidance for facilitating the four reflection prompts in the Responsible Design Prism.
 
-The reflection prompts are the heart of the method. Scoring the axes is diagnostic; reflecting on the scores is transformative. Do not rush these. Allow silence. Let discomfort sit.
+The reflection prompts are the heart of this skill's method (the four prompts are this skill's own framing; no published source for them has been found). Scoring the axes is diagnostic; reflecting on the scores is transformative. Do not rush these. Allow silence. Let discomfort sit.
 
 ---
 

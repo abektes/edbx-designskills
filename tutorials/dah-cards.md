@@ -6,9 +6,9 @@
 
 ## Who made it
 
-DAH Cards — **Design Against Humanity** — is a design ethics facilitation method whose name is a deliberate echo of the card game *Cards Against Humanity*. The method takes the provocative, uncomfortable energy of that game and applies it to ethical design work: the goal is to surface things a team might not otherwise say out loud.
+DAH Cards — **Design Against Humanity** (not "Design Against Harm") — is an educational design-provocation card game by **ziqq rafit (2020)**, whose name echoes the card game *Cards Against Humanity*. It is also listed in *Universal Methods of Ethical Design*. This skill borrows the provocative, uncomfortable energy of the game and applies it to ethical design work: the goal is to surface things a team might not otherwise say out loud.
 
-The method draws on participatory design traditions and values-centered design research, adapted into a card-facilitated workshop format for cross-functional product teams.
+The game's own rules could not be checked here. The black/white card pairs, the sorting piles, the "What changed?" reflection, the six harm categories, the microcopy rewrite and the manifesto and vision modes are edbx's way of running the exercise, not the published game's rules.
 
 ---
 
@@ -16,7 +16,7 @@ The method draws on participatory design traditions and values-centered design r
 
 Most ethical design conversations happen in the abstract. "We should consider privacy." "Let's think about vulnerable users." "We need to be responsible." These conversations feel productive in the moment and produce very little.
 
-DAH Cards forces the conversation to get specific. The cards are designed to be uncomfortable. They name actual harms — manipulation, exploitation, exclusion, surveillance — in direct language. When a team sits with a card that says "Your product makes users feel stupid," the conversation changes from abstract values alignment to concrete design reckoning.
+DAH Cards forces the conversation to get specific. In this skill, the cards are written to be uncomfortable. They name actual harms — manipulation, exploitation, exclusion, surveillance — in direct language. When a team sits with a card that says "Your product makes users feel stupid," the conversation changes from abstract values alignment to concrete design reckoning.
 
 When the team asks for one, the method also produces an artifact: a written, signed manifesto that captures what the team agreed to and what they committed against. That artifact can be revisited when business pressure pushes toward the harms the team named.
 
@@ -37,7 +37,7 @@ When the team asks for one, the method also produces an artifact: a written, sig
 
 A DAH Cards session produces three core artifacts (with two optional ones depending on what was asked):
 
-**1. DAH Card Pairs (the signature artifact).** Black side / white side cards for every mechanic evaluated. Black side = the design as it ships ("Streak system that resets if you miss a day"); white side = the harm in plain language, in the voice of someone who's been harmed by it ("App that punishes you with shame copy on a bad mental-health day"). Each card pair is **categorized by harm type** using six DAH harm categories: **Deception / Coercion / Addiction / Surveillance / Exclusion / Systemic**. A single mechanic can fall into multiple categories — tag every category that applies. Coverage must span at least 4 of the 6 categories (systemic harms are the most commonly missed and must be considered explicitly).
+**1. DAH Card Pairs (the skill's signature artifact).** Black side / white side cards for every mechanic evaluated. Black side = the design as it ships ("Streak system that resets if you miss a day"); white side = the harm in plain language, in the voice of someone who's been harmed by it ("App that punishes you with shame copy on a bad mental-health day"). Each card pair is **categorized by harm type** using six harm categories (edbx's own, not the game's): **Deception / Coercion / Addiction / Surveillance / Exclusion / Systemic**. A single mechanic can fall into multiple categories — tag every category that applies. Coverage must span at least 4 of the 6 categories (systemic harms are the most commonly missed and must be considered explicitly).
 
 **2. Consequence Map** — depth behind the white side. Harms across individual / social / environmental / systemic dimensions, with likelihood, severity, who bears the harm, and whether the design knows about it.
 
@@ -55,7 +55,7 @@ When only an audit was requested, the AI runs Modes 1 + 2 and the Ship-Ready Rec
 
 ## The key insight
 
-The cards work because they bypass the politeness that typically suppresses hard conversations in design reviews. When someone plays a card, they're not accusing their colleague — they're engaging with the prompt the card presents. That structure gives permission to name things that would otherwise stay unspoken.
+The card format works because it bypasses the politeness that typically suppresses hard conversations in design reviews. When someone plays a card, they're not accusing their colleague — they're engaging with the prompt the card presents. That structure gives permission to name things that would otherwise stay unspoken.
 
 The manifesto works because it's a commitment device. Writing something down and signing it is meaningfully different from agreeing to it verbally in a meeting. When business pressure arrives — and it will — the manifesto is something you can point to.
 

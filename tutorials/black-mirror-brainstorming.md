@@ -6,7 +6,7 @@
 
 ## Who made it
 
-Black Mirror Brainstorming was developed by **Klassen & Fiesler (2022)** and draws on earlier speculative design work by **Mauldin (2018)** — a practitioner exercise first published in *UX Collective*. The academic study of the method is Klassen & Fiesler's "Run Wild a Little With Your Imagination: Ethical Speculation in Computing Education with Black Mirror" (ACM SIGCSE 2022). It appears in *Universal Methods of Ethical Design* as a method for using narrative imagination as an ethical risk tool.
+The product-team exercise, including anti-goals, comes from **Mauldin (2018)**, a practitioner article in *UX Collective*. A classroom precedent, the Black Mirror Writers Room, is studied in Klassen & Fiesler's "Run Wild a Little With Your Imagination: Ethical Speculation in Computing Education with Black Mirror" (ACM SIGCSE 2022); that paper covers the classroom exercise, not the product-team method. The method is listed in *Universal Methods of Ethical Design* as a way of using narrative imagination as an ethical risk tool.
 
 The name references Charlie Brooker's *Black Mirror* TV series — anthology episodes that take a current technology and show what it looks like when something about it goes wrong at scale. The method borrows that structure as a facilitation technique.
 
@@ -34,7 +34,7 @@ Black Mirror Brainstorming turns that creative distance into an ethical tool.
 
 ## What it produces
 
-The method runs in four steps:
+The skill runs in four steps (the lenses, counts, three-episode form and Trace/Test fields below are edbx adaptations, not part of the published method):
 
 1. **What-if brainstorm** — 8–12 one-sentence prompts of the form *"How could [actor] use [feature] to [harm]?"*, grouped under three lenses so the team doesn't stop at the most obvious harm: **Economic** (scams, predatory pricing, value flowing the wrong way), **Political** (surveillance, manipulation, regulatory capture), and **Social** (divides, isolation, pressure on minors and vulnerable groups).
 

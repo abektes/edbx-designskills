@@ -7,7 +7,7 @@ Bad Design Canvas is part of the Ethical Design Box (EDBX) skillset. It connects
 ## Companion Skill Relationships
 
 ### edbx-worrystorming
-Worrystorming generates free-form worries across eight thematic clusters. Bad Design Canvas provides a structured 12-category taxonomy that forces systematic coverage. Worrystorming is generative and exploratory; Bad Design Canvas is comprehensive and taxonomic.
+Worrystorming generates free-form worries across eight thematic clusters. Bad Design Canvas provides a structured 12-category taxonomy that supports systematic coverage. Worrystorming is generative and exploratory; Bad Design Canvas is comprehensive and taxonomic.
 **Sequence:** Run Worrystorming to generate raw concerns, then Bad Design Canvas to ensure no category of harm is missed.
 
 ### edbx-inverted-behavior-model
@@ -81,4 +81,4 @@ Bad Design Canvas is Method #09 — one of the earliest methods in *Universal Me
 
 It answers the question: *"What are all the ways this product could be bad — before we find out the hard way?"*
 
-The method is designed to be approachable and fast, not exhaustive. It should feel like a structured conversation, not a compliance exercise. The adversarial framing (`#breakmydesign`) is a feature — it asks designers to argue against their own work, which is where the most valuable insights emerge.
+This skill aims to be approachable and fast, not exhaustive. It should feel like a structured conversation, not a compliance exercise. The adversarial framing (`#breakmydesign`) is deliberate — it asks designers to argue against their own work, which is where the most valuable insights tend to emerge.

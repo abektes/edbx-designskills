@@ -2,6 +2,8 @@
 
 Reference for the five spectrum axes used in the Responsible Design Prism.
 
+> **edbx adaptation:** the axes, their poles and the transitional zones are this skill's own framing; no published source for them has been found.
+
 ---
 
 ## Axis 1: User Relationship

@@ -167,6 +167,8 @@ Canvas credit: Matthew Manos, licensed under Creative Commons CC BY-ND license. 
 
 ---
 
+> **edbx adaptation:** the severity ratings, the systemic/addressable split, the Bad Design Statement and the verdict below are not part of the published canvas.
+
 ## Severity Summary
 
 | Category | Severity | Systemic / Addressable |

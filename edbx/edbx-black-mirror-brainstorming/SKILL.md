@@ -9,7 +9,9 @@ tags: [ethical-design, forecast]
 
 ## Overview
 
-Black Mirror Brainstorming is a speculative-design method (Klassen & Fiesler, 2022; Mauldin, 2018; published in *Universal Methods of Ethical Design*) that asks the team to put on a science-fiction filmmaker's hat and imagine how a product could be twisted, abused, or quietly corroded by the world it lands in.
+Black Mirror Brainstorming is a speculative-design method for product teams (Mauldin, 2018, who introduced the product-design exercise and its anti-goals; listed in *Universal Methods of Ethical Design*) that asks the team to put on a science-fiction filmmaker's hat and imagine how a product could be twisted, abused, or quietly corroded by the world it lands in.
+
+Its classroom precedent is the Black Mirror Writers Room exercise, which Klassen & Fiesler (2022) studied: small groups pick a technology, speculate about future harms, and write an episode blurb on a Netflix-style slide. That paper describes the classroom exercise, not the product-team method or anti-goals.
 
 The point is not entertainment. The point is to convert vivid, character-driven worst cases into **anti-goals** — specific things the team commits to *not* let happen — so they can be designed against the same way real goals are.
 
@@ -50,7 +52,7 @@ Default to running all four steps. If the user only wants part of it (e.g. "just
 
 ### 1. Brainstorm what could go wrong
 
-Generate 8–12 short "what if" prompts grouped under three lenses. The lenses come from the source method and exist to stop the team from reaching only for the most obvious harm:
+Generate 8–12 short "what if" prompts grouped under three lenses. The lenses exist to stop the team from reaching only for the most obvious harm:
 
 - **Economic** — bad-faith actors, scams, predatory pricing, attention extraction, value capture flowing the wrong way.
 - **Political** — surveillance, identification of dissidents, voter manipulation, regulatory capture, geopolitical use.
@@ -58,11 +60,15 @@ Generate 8–12 short "what if" prompts grouped under three lenses. The lenses c
 
 Each item is one sentence in the form *"How could [actor] use [feature] to [harm]?"* — phrased as a question, because the team will ideate against it next. Tag each with its lens.
 
+> **edbx adaptation:** the economic, political and social lenses, the question form and the 8–12 count are not part of the published method (the Klassen & Fiesler paper has no lens set). They are here to spread the brainstorm across kinds of harm.
+
 This is a generative pass, not a triage pass. Do not self-censor for "would this really happen" — the unrealistic ones still pull the realistic ones into view.
 
 ### 2. Generate three Black Mirror episode variants
 
 Pick three of the strongest "what ifs" — ideally one from each lens — and develop each into a short episode. Different plots, different protagonists, different harms. Three is the right number: one episode reads as an opinion, three reads as a pattern.
+
+> **edbx adaptation:** three episodes, one per lens, and the three-act arc are not part of the published method (the Writers Room produces one episode blurb per group). They are here so the team sees a pattern of harms and a path from working design to harm.
 
 For each episode produce:
 
@@ -70,14 +76,14 @@ For each episode produce:
 - **Characters** — Protagonist, Antagonist, and one or two Supporting Characters. Give names, brief context. The antagonist can be a person, an institution, or the system itself.
 - **Context / Scene** — the specific setting where the design concept lives. Be concrete: a city, a workplace, a year.
 - **Three-act arc** — Beginning (early conflict; the design works as intended), Middle (rising action; the design starts to bend), End (climax; the harm crystallises and lands on someone).
-- **Pitch quote** — a Netflix-style 2–4 sentence blurb in the second person or close third, the kind that would appear under the episode tile. The example from the book reads:
-  > "When your phone unlocks your life, it more than sucks when you lose it. No one knows this better than Thomas. He cannot open his car, get into his home, or enter his job. Stranded in his own city and isolated from his own life, Thomas turns to the digital outcasts of society in order to find his way back to it."
+- **Pitch quote** — a Netflix-style episode blurb (the Writers Room uses a slide designed like Netflix episode listings) in the second person or close third, the kind that would appear under the episode tile. The 2–4 sentence length is this skill's choice. An invented example for a smart-lock concept:
+  > "When your door, your car and your office badge all answer to one app, a dead battery is more than an inconvenience. Maya finds out at 6 a.m. on a cold street, locked out of every room she needs. With no human to call and no way to prove who she is, she starts to wonder who the system was built to serve."
 
 Keep episodes plausible enough that a designer reading them recognises real mechanisms. Fully fantastical sci-fi loses its bite.
 
 ### 3. Build a pitch poster for the strongest episode
 
-Pick whichever episode lands hardest — the one a reader would forward to a teammate. Render it as a single self-contained HTML file (a "poster") that mocks up a Netflix-style title card:
+Pick whichever episode lands hardest — the one a reader would forward to a teammate. Render it as a single self-contained HTML file (a "poster") that mocks up a Netflix-style title card. The single-file HTML format is an edbx choice (the published exercise uses a hand-made team poster):
 
 - Episode title prominent.
 - Pitch quote prominent below the title.
@@ -90,7 +96,7 @@ The poster's job is to make the episode shareable inside the team. People rememb
 
 ### 4. Derive anti-goals as design constraints
 
-Read back across all three episodes and the brainstorm. Pull out **6–10 anti-goals**. Each one should look like:
+Read back across all three episodes and the brainstorm. Pull out **6–10 anti-goals**. Anti-goals come from Mauldin's exercise (something the team does not want to happen, counter to its intentions); the count, the Trace and Test fields and the load-bearing selection are this skill's additions. Each one should look like:
 
 - **Anti-goal:** A short statement of the thing the team commits not to allow. Phrased actively (e.g. "Account recovery never requires re-entering the physical world the user is locked out of").
 - **Trace:** Which episode(s) and which moment in the arc surfaced it.
@@ -208,8 +214,9 @@ A good run:
 
 ## See also
 
-In the broader *Universal Methods of Ethical Design* family, this method is adjacent to **Critical Design**, **Speculative Design**, and **Timelines**. The book classifies it as: *Value Posture: Defamiliarising · Action Orientation: Evaluating, Framing · Ethical Framework: Consequentialist · Method Input: Stakeholder Info, Constraints/Goals, Use Context · Method Mechanic: Storytelling, Mapping · Method Output: Constraints/Goals.*
+In the broader *Universal Methods of Ethical Design* family, this method is adjacent to **Critical Design**, **Speculative Design**, and **Timelines**. The book's classification, as recorded here (not confirmed against the printed book): *Value Posture: Defamiliarising · Action Orientation: Evaluating, Framing · Ethical Framework: Consequentialist · Method Input: Stakeholder Info, Constraints/Goals, Use Context · Method Mechanic: Storytelling, Mapping · Method Output: Constraints/Goals.*
 
 References:
 - Klassen, S. & Fiesler, C. (2022). "Run wild a little with your imagination": ethical speculation in computing education with black mirror. *Proceedings of the 53rd ACM Technical Symposium on Computer Science Education*, 836–842.
-- Mauldin, J. (2018). Black mirror brainstorms: a product design exercise.
+- Mauldin, J. (2018). Black Mirror brainstorms: a product design exercise. *UX Collective*. https://uxdesign.cc/black-mirror-brainstorms-f919ccf5938c
+- Chivukula, S. S. & Gray, C. M. (2025). *Universal Methods of Ethical Design*. Rockport Publishers.

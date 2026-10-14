@@ -9,11 +9,13 @@ tags: [ethical-design, audit]
 
 ## Overview
 
-The Responsible Design Prism is a reflective evaluation framework that positions any design artifact on a spectrum from dark patterns to responsible design. It uses a visual metaphor — two overlapping triangles forming a prism — where the left triangle represents exploitative design (dark pattern space), the right triangle represents ethical design (responsible design space), and the overlapping center is the transition and redesign zone.
+The Responsible Design Prism is a reflective evaluation framework that positions any design artifact on a spectrum from dark patterns to responsible design. It is listed as Method 79 in *Universal Methods of Ethical Design*; the primary source of the framework has not been identified. The structure below is this skill's framing. It uses a visual metaphor — two overlapping triangles forming a prism — where the left triangle represents exploitative design (dark pattern space), the right triangle represents ethical design (responsible design space), and the overlapping center is the transition and redesign zone.
 
-The prism's three vertices are **User**, **Incentives**, and **Dark Pattern**. These vertices create tension: every design decision sits somewhere between treating users as means to an end and treating users as themselves. The framework makes that position explicit.
+The prism's three vertices, in this framing, are **User**, **Incentives**, and **Dark Pattern**. These vertices create tension: every design decision sits somewhere between treating users as means to an end and treating users as themselves. The framework makes that position explicit.
 
-The prism is deliberately a spectrum, not a binary. Most real-world designs land in the transitional zone — not outright malicious, but not fully aligned with user wellbeing either. The value of the prism is making that position visible and navigable.
+The prism is deliberately a spectrum, not a binary. Many real-world designs are likely to land in the transitional zone — not outright malicious, but not fully aligned with user wellbeing either. The value of the prism is making that position visible and navigable.
+
+> **edbx adaptation:** the prism visual, the three vertices, the five axes and their poles, the transition zone, the four reflection prompts and the Red/Yellow/Green scoring are this skill's own framing; no source for them has been found, and they are not claimed to be a published method. They give the audit a repeatable structure. The stakeholder map (Step 1.5) and mechanism audit (Step 2.5) are also edbx additions.
 
 > **Intent check:** This skill is diagnostic and constructive, not accusatory. Most dark patterns exist because of organizational pressure, not individual malice. The prism helps teams see where they are and find a path forward — it does not exist to shame designers.
 
@@ -40,7 +42,7 @@ Provide as many of these as are available:
 
 ## The Prism — Five Spectrum Axes
 
-The prism evaluates every design artifact across five axes. Each axis runs from a dark pattern pole to a responsible design pole. Score each axis as **Red** (dark), **Yellow** (transitional), or **Green** (responsible).
+In this skill, the prism evaluates every design artifact across five axes. Each axis runs from a dark pattern pole to a responsible design pole. Score each axis as **Red** (dark), **Yellow** (transitional), or **Green** (responsible).
 
 | Axis | Dark Pattern Pole | Responsible Design Pole |
 |------|-------------------|------------------------|
@@ -135,7 +137,7 @@ This audit grounds the redesign pathways in Step 4: every redesign must explain 
 
 ### Step 3 — Four Reflection Prompts
 
-These four prompts are the heart of the method. Do not reduce them to a checklist — facilitate genuine reflection on each one.
+These four prompts are the heart of this skill's method. Do not reduce them to a checklist — facilitate genuine reflection on each one.
 
 **Prompt 1 — Self-reflection: Where do you stand when you build?**
 What state of mind, pressure, or assumption led to the current design? What did you optimize for? What would you have designed if user wellbeing were the only constraint?
@@ -190,13 +192,13 @@ A blank template is in `assets/prism-audit-template.md`.
 
 ## Dark Pattern Taxonomy Reference
 
-When scoring axes, draw on the dark pattern taxonomy in `references/dark-pattern-taxonomy.md`. Key categories:
+When scoring axes, draw on the dark pattern taxonomy in `references/dark-pattern-taxonomy.md`. Its five groups are this skill's own grouping, not the deceptive.design ontology (which has 64 synthesized types in three levels). Groups:
 
-- **Deception:** hiding information, false expectations, bait-and-switch
-- **Coercion:** forced continuity, roach motel, hard-to-cancel
-- **Exploitation:**Confirmshaming, sneak into basket, hidden costs
-- **Manipulation:** urgency fakery, social proof fakery, scarcity fakery
-- **Obstruction:** interference, difficult navigation, visual interference
+- **Deception:** hiding information, false expectations, bait-and-switch, hidden costs
+- **Coercion:** forced continuity, roach motel, confirmshaming, trick questions, preselection
+- **Exploitation:** sneak into basket, urgency, social proof and scarcity fakery, exploiting error
+- **Manipulation:** hard-to-compare options, visual interference, attention capture, emotional manipulation
+- **Obstruction:** hard-to-cancel, hard-to-delete, intermediate currency, information overload
 
 Use precise pattern names rather than vague accusations. "This confirmation dialog uses confirmshaming language" is more useful than "this feels manipulative."
 
@@ -220,7 +222,7 @@ Use the Prism as a follow-up to any of these skills to move from diagnosis to re
 
 ## Guardrails
 
-- Do not collapse the spectrum into a binary pass/fail. The Yellow/transitional zone is where most real products live — it deserves honest attention, not dismissal.
+- Do not collapse the spectrum into a binary pass/fail. The Yellow/transitional zone is where many real products sit — it deserves honest attention, not dismissal.
 - Do not skip the reflection prompts. The scoring is only useful if the team reflects on why they scored the way they did. The prompts are the method.
 - Maintain a non-accusatory tone. Designers often build dark patterns under organizational pressure, not from malice. The goal is awareness and redesign, not guilt.
 - Always pair a dark pattern flag with a responsible alternative. Criticism without a path forward is not constructive.

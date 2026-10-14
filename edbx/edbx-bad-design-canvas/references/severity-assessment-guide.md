@@ -2,6 +2,8 @@
 
 How to rate each consequence category as Significant, Possible, or Low/None during the Bad Design Canvas session.
 
+> **edbx adaptation:** the severity scale and this guide are not part of the published canvas. They are here to help rank findings and decide which need a redesign.
+
 ---
 
 ## Severity Levels
@@ -75,7 +77,7 @@ A product designed with good intentions can still cause significant harm. Rate t
 | Mistake | Correction |
 |---|---|
 | Rating everything 🟡 to avoid commitment | If you are unsure, default to 🟡 but flag for investigation. If the evidence points to harm, use 🔴. |
-| Rating everything 🟢 for "well-designed" products | Even well-designed products can have unintended consequences. The canvas exists to find what the team missed. |
+| Rating everything 🟢 for "well-designed" products | Even well-designed products can have unintended consequences. The session exists to find what the team missed. |
 | Rating based on how fixable the problem is | Severity is about the harm, not the solution. A fixable `🔴` is still `🔴`. |
 | Downgrading because "users consented" | Consent under power asymmetry or information asymmetry is not meaningful consent. Rate the harm. |
 | Treating 🟢 as "skip" | Every cell must have a specific, product-grounded response. 🟢 means "unlikely or well-mitigated," not "ignored." |

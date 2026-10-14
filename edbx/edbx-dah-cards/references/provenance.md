@@ -78,19 +78,19 @@ claim could be contradicted by a page.
 
 1. Sorting into Ethical, Unsure and Unethical, and the "What changed?"
    reflection (rows 6, 7): SKILL.md presents these as "the original method".
-   No source text found. The only primary page shows a manual as images.
+   No source text found. The only primary page shows a manual as images. (fixed in SKILL.md)
 2. The black-side / white-side, one-card-two-sides structure (row 5). Cards
-   Against Humanity uses separate black and white cards; unconfirmed.
+   Against Humanity uses separate black and white cards; unconfirmed. (fixed in SKILL.md)
 3. The aim and the "do for / do to people" question (rows 3, 4): no readable
-   source.
+   source. (fixed in SKILL.md)
 4. The six harm categories, consequence-map fields, microcopy rewrite, and
    Manifesto and Future Vision modes (rows 8-11) appear in no source. They are
    edbx additions, but SKILL.md's "edbx adaptation" note covers only the
-   Evidence Ledger. Consider labelling them as such.
+   Evidence Ledger. Consider labelling them as such. (fixed in SKILL.md)
 5. SKILL.md names no creator, year or source. The primary page credits ziqq
-   rafit, 2020. A creator credit is missing.
+   rafit, 2020. A creator credit is missing. (fixed in SKILL.md)
 6. SKILL.md calls DAH "a reflective method"; the creator's page calls it an
-   "educational card game for horrible designers". Tone and framing differ.
+   "educational card game for horrible designers". Tone and framing differ. (fixed in SKILL.md)
 7. Author name order varies: book listings use "Sai Shruthi Chivukula", the
    arXiv paper uses "Shruthi Sai Chivukula".
 

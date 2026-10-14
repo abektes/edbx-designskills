@@ -6,9 +6,9 @@
 
 ## Who made it
 
-The Responsible Design Prism is a framework for diagnosing a product's ethical posture across five distinct dimensions. It draws on ethical design research and principles developed in the HCI and responsible technology communities, synthesizing multiple evaluative traditions into a single spectrum-based diagnostic format.
+The Responsible Design Prism is listed as Method 79 in *Universal Methods of Ethical Design*. The primary source of the framework has not been identified, so the structure here (the five axes, the transition zone, the four reflection prompts and the Red/Yellow/Green scoring) is this skill's own framing, not a published method.
 
-The "prism" metaphor is intentional: just as a prism splits white light into its component colors, this method splits a product's ethical posture into its component dimensions — making visible the distinctions that a single overall rating would obscure.
+The skill uses a "prism" metaphor: just as a prism splits white light into its component colors, this method splits a product's ethical posture into its component dimensions — making visible the distinctions that a single overall rating would obscure.
 
 ---
 
@@ -44,7 +44,7 @@ The prism evaluates five axes, each rated on a spectrum from dark (manipulative/
 
 **Axis 5 — Usability:** Is the product accessible and comprehensible to the full range of people it affects — including those with disabilities, limited digital literacy, or non-primary language contexts? Or does design complexity obscure the product's actual behavior from the users most likely to be harmed by it?
 
-Before scoring, the prism requires two structural artifacts:
+Before scoring, this skill requires two structural artifacts:
 
 **Stakeholder & Vulnerable Population Map** — at least 3 distinct populations named (primary users, named vulnerable subgroups like minors / neurodivergent / low-income / undocumented / abuse survivors / people in crisis, secondary users / non-users affected, workers in supply chain). For each: relationship to product, specific harms likely, power asymmetry vs. operator. Without this map the scoring is abstract.
 

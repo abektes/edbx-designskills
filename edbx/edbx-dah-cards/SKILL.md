@@ -9,11 +9,13 @@ tags: [ethical-design, audit]
 
 ## Overview
 
-DAH — Design Against Humanity — is a reflective method that exposes designers to the real-world harms that products, features, and services can cause. Named as a provocation (a design version of Cards Against Humanity), it flips the usual design question from "what does this do for people?" to "what does this do *to* people — and to the world?"
+DAH — Design Against Humanity (the full name; not "Design Against Harm") — is an educational design-provocation card game by ziqq rafit (2020), named as a provocation after Cards Against Humanity. This skill uses it as a reflective method that exposes designers to the real-world harms that products, features, and services can cause. It flips the usual design question from "what does this do for people?" to "what does this do *to* people — and to the world?"
 
-The original method uses physical cards: the black side names a product or feature, the white side describes its problematic consequences. Designers sort cards into **Ethical**, **Unsure**, and **Unethical**, then step back and ask: *"What changed?"* — meaning: what assumptions shifted, what discomfort surfaced, what felt different than expected?
+In this skill's card format, the black side names a product or feature and the white side describes its problematic consequences. Designers sort cards into **Ethical**, **Unsure**, and **Unethical**, then step back and ask: *"What changed?"* — meaning: what assumptions shifted, what discomfort surfaced, what felt different than expected?
 
-This AI-assisted version preserves that reflective spirit. It works with anything: a product concept, an existing feature, a full service, or a list of items the team is wrestling with.
+> **edbx adaptation:** the two-sided black/white card, the three sorting piles and the "What changed?" reflection are this skill's way of running the exercise; they could not be checked against the game's own rules, and are not claimed to be the game's rules. They give the session a clear sequence of produce, sort and reflect.
+
+This AI-assisted version aims to keep a reflective spirit. It works with anything: a product concept, an existing feature, a full service, or a list of items the team is wrestling with.
 
 > **Intent check:** This skill is explicitly critical by design — it surfaces problems and harms. Use it alongside (not instead of) conventional benefits analysis. The goal is self-aware, responsible design, not paralysis.
 
@@ -56,9 +58,9 @@ Including Modes 3–4 when the user only asked for an audit dilutes actionabilit
 
 **Step 1a — Generate the DAH Card Pairs (the method's signature artifact).**
 
-Before any analysis, write out the cards. The DAH method is named for the card-pair format — every audit must produce them.
+Before any analysis, write out the cards. The card pair is this skill's signature artifact — every audit must produce them.
 
-For each feature/mechanic being evaluated, write a black-side / white-side pair, **categorized by harm type**. Each card pair is tagged with one or more of the six DAH harm categories:
+For each feature/mechanic being evaluated, write a black-side / white-side pair, **categorized by harm type**. Each card pair is tagged with one or more of six harm categories:
 
 - **Deception** — the design hides, misrepresents, or misleads (dark patterns, false expectations, opaque defaults)
 - **Coercion** — the design removes meaningful choice (forced continuity, roach motel, lock-in, hard-to-cancel)
@@ -68,6 +70,8 @@ For each feature/mechanic being evaluated, write a black-side / white-side pair,
 - **Systemic** — the design contributes to harms beyond the individual user (normalization of manipulation, market homogenization, environmental load, erosion of public discourse, civilizational-scale effects)
 
 A single mechanic can fall into multiple categories — tag every category that applies.
+
+> **edbx adaptation:** the six harm categories, the consequence mapping fields below, the microcopy rewrite (Mode 2) and the Manifesto and Future Vision modes are not part of the published game; no source lists them. They turn the card exercise into an audit a team can act on.
 
 | Card # | Category | Black side (the design) | White side (its harm, named bluntly) |
 |---|---|---|---|
@@ -203,7 +207,7 @@ Brief framing of what was evaluated and the team's starting assumptions.
 
 ### DAH Card Pairs
 
-Black-side / white-side table for every mechanic evaluated (from Mode 1, Step 1a), with each card tagged by its DAH harm categories: **Deception / Coercion / Addiction / Surveillance / Exclusion / Systemic**. This is the signature artifact — never omit it. If everything is on one row of consequence-map text, the cards weren't actually written. Coverage must span at least 4 of the 6 categories; systemic harms must be considered explicitly.
+Black-side / white-side table for every mechanic evaluated (from Mode 1, Step 1a), with each card tagged by its harm categories: **Deception / Coercion / Addiction / Surveillance / Exclusion / Systemic**. This is the signature artifact — never omit it. If everything is on one row of consequence-map text, the cards weren't actually written. Coverage must span at least 4 of the 6 categories; systemic harms must be considered explicitly.
 
 ### Consequence Map
 

@@ -88,17 +88,17 @@ returned 403, so every Mauldin row is metadata only.
    text (p. 1) describes a classroom Writers Room exercise created by Fiesler
    and studied through interviews with 12 instructors. It never mentions
    Mauldin, brainstorming for products or anti-goals, so it is not a source for
-   the product-team method.
+   the product-team method. (fixed in SKILL.md)
 2. **Economic / political / social lenses.** SKILL.md says the lenses "come
    from the source method". The Klassen & Fiesler text has no such lens set
-   (row 12).
+   (row 12). (fixed in SKILL.md)
 3. **Anti-goals.** The method in SKILL.md is credited in part to Klassen &
-   Fiesler, whose text never uses the term (the term is Mauldin's, unreadable).
+   Fiesler, whose text never uses the term (the term is Mauldin's, unreadable). (fixed in SKILL.md)
 4. **Pitch quote vs blurb.** Mauldin's step (secondary summary) is a line a
    character might say. The Writers Room as Klassen & Fiesler describe it ends
    in an episode blurb on a Netflix-style slide (p. 2). So the Netflix-style
    blurb and title-card styling have a source in the Writers Room; only the
-   2–4 sentence length is unsourced.
+   2–4 sentence length is unsourced. (fixed in SKILL.md)
 
 ### Not verifiable
 
@@ -108,19 +108,19 @@ returned 403, so every Mauldin row is metadata only.
    of sketching and 5 minutes to define anti-goals. From secondary summaries
    only (Mauldin returned 403).
 6. **Single self-contained HTML poster** is an edbx format choice; Mauldin's
-   poster is a hand-made team artefact (summary only).
+   poster is a hand-made team artefact (summary only). (fixed in SKILL.md)
 7. **Three episodes, three-act arc, 8–12 prompts, 6–10 anti-goals with Trace
    and Test, and "load-bearing" anti-goals** have no readable source (rows
    18–21). They look like edbx design choices; SKILL.md should mark them as
-   skill additions.
+   skill additions. (fixed in SKILL.md)
 8. **Incomplete citation.** "Mauldin, J. (2018). Black mirror brainstorms: a
    product design exercise." omits the venue (UX Collective) and URL, and the
    title wording differs from the article title. The book is named without
-   authors, year or publisher (Chivukula & Gray, 2025, Rockport).
+   authors, year or publisher (Chivukula & Gray, 2025, Rockport). (fixed in SKILL.md)
 9. **Long verbatim quote.** The "Thomas" pitch quote is attributed to the
    book. It could not be found online; verify it is the book's text and
-   consider replacing it with an original example (copyright).
+   consider replacing it with an original example (copyright). (fixed in SKILL.md)
 10. **Book classification line** (Value Posture, Ethical Framework, etc.) and
     the lens claim as attributed to the book cannot be confirmed without the
-    book.
+    book. (fixed in SKILL.md)
 11. **Licence of the Mauldin article** is unknown (page unreadable).
