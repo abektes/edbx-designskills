@@ -181,6 +181,18 @@ Brief framing of the project context and what values/concerns anchor the pledges
 
 Per pledge: what tells you it's being kept vs. broken.
 
+### What We Refuse to Build
+
+| Refusal (named at feature level) | Why it crosses the line | Owner with veto authority | Consequence if attempted |
+|---|---|---|---|
+| [3–5 refusals] | [reason] | [named role] | [consequence] |
+
+### Pledge-to-Product Traceability
+
+| Pledge | Specific feature / decision affected | Decision the pledge produces | Decision the pledge prevents |
+|---|---|---|---|
+| [each pledge] | [feature] | [decision] | [decision] |
+
 ### Evidence Ledger
 | Claim used as input | Type | Basis |
 |---|---|---|
@@ -198,6 +210,7 @@ Every figure, rate, incident, past failure or fact about the user's product, use
 - Do not forget the review cadence. Pledges without review moments are aspirations, not commitments.
 - Do not name other skills or boxes in the deliverable as if the reader has them. Describe a related method in plain terms (a structured worry session, a stakeholder harm map).
 - Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
+- Do not stop to ask for more details before answering: draft the full deliverable with unknowns marked, and list the questions worth asking the user at the end.
 
 > **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.
 

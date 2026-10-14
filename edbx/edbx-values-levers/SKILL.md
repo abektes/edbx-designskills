@@ -172,6 +172,14 @@ Open with a short **Answer**: two to four sentences that answer the question the
 | Gaining/Funding | Yes/No | [activation guidance] | [name] |
 | Navigating Institutional Mandates | Yes/No | [activation guidance] | [name] |
 
+Recommend the 2–3 most applicable levers, ranked.
+
+### Lever Resistance Map
+
+| Lever | Most Common Resistance | Counter-Move |
+|---|---|---|
+| [each recommended lever] | [named resistance point] | [specific counter-move] |
+
 ### Whose Values Are Visible — and Whose Aren't
 
 (From Step 2.5 — required output, not optional. It widens the values conversation to absent stakeholders.)
@@ -201,14 +209,23 @@ Open with a short **Answer**: two to four sentences that answer the question the
 
 ### Facilitation Guide: Values Conversation Session
 
-1. **Opening question:** [question to surface embedded values]
-2. **Constraint exercise:** [exercise to reveal conflicts]
-3. **Discussion:** [facilitation approach]
-4. **Decision:** [decision criteria]
+1. **Opening question (5 min):** [question to surface embedded values]
+2. **Constraint exercise (15 min):** [exercise to reveal conflicts]
+3. **Discussion (25 min):** [facilitation approach]
+4. **Decision (10 min):** [decision criteria]
 
 ### Values-Based Design Decision Statement
 
 *"In this project, we are choosing to prioritize [value X] over [value Y] because [reason], and this will manifest in [specific design decision]."*
+
+### 30-Day Action Plan
+
+For the top two levers:
+
+- **Week 1:** [specific action, named stakeholder, deliverable]
+- **Week 2:** [specific action, named stakeholder, deliverable]
+- **Week 3:** [specific action, named stakeholder, deliverable]
+- **Week 4:** [review and decision checkpoint: what success or failure looks like]
 
 ### Evidence Ledger
 | Claim used as input | Type | Basis |
@@ -227,6 +244,7 @@ Every figure, rate, incident, past failure or fact about the user's product, use
 - Do not treat the Values-Based Design Decision statement as optional. It is the concrete output that makes the conversation matter.
 - Do not name other skills or boxes in the deliverable as if the reader has them. Describe a related method in plain terms (a structured worry session, a stakeholder harm map).
 - Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
+- Do not stop to ask for more details before answering: draft the full deliverable with unknowns marked, and list the questions worth asking the user at the end.
 
 > **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.
 

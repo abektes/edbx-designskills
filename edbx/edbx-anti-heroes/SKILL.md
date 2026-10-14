@@ -166,6 +166,7 @@ Use or adapt prompts like these:
 - Stay grounded in the source. The deck and its intended use are described in Mehta, Chivukula, Gray, et al. (2024), arXiv:2405.03674; the full card definitions are in that paper's supplemental material, which this skill does not reproduce. When in doubt, defer to the working list in [references/cards.md](references/cards.md) rather than inventing new cards.
 - Do not name other skills or boxes in the deliverable as if the reader has them. Describe a related method in plain terms (a structured worry session, a stakeholder harm map).
 - Do not invent facts about the user's product, users or situation: figures, rates, incidents, past failures, research findings or sources. Where the brief is silent, write "unknown", list it in the Evidence Ledger, and carry on.
+- Do not stop to ask for more details before answering: draft the full deliverable with unknowns marked, and list the questions worth asking the user at the end.
 
 > **edbx adaptation:** the Evidence Ledger is a family convention from fdbx, not part of the source method. Plain models state invented figures about the user's situation as fact; the ledger makes the basis of each claim visible.
 
