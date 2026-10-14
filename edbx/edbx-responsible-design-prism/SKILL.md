@@ -250,6 +250,6 @@ A strong Responsible Design Prism audit:
 ## Further Reading
 
 - Nielsen, J. (2020). "Responsible Design." Nielsen Norman Group.
-- Gray, C.M. & McDowell (2019). "Dark Patterns: Past, Present, and Future." darkpatterns.org/types-of-dark-pattern
+- Narayanan, A., Mathur, A., Chetty, M. & Kshirsagar, M. (2020). "Dark Patterns: Past, Present, and Future." *ACM Queue* 18(2).
 - Brignull, H. (2023). "Deceptive Design Patterns." deceptive.design
 - Worldwide Web Foundation (2021). "Ethical Design Framework."
