@@ -394,10 +394,39 @@ def lookup_prompt(skill: str, scenario: str) -> str:
 YES, NO = 0.70, 0.30
 
 
-def score_document(doc: str, spec: dict, api_key: str | None, prompt: str = "") -> dict:
+def normalize_doc(doc: str) -> str:
     # Generators write non-breaking hyphens ("Counter\u2011Measures"); rubric
     # patterns use ASCII. Without this a heading match fails on all outputs.
-    doc = re.sub(r"[\u2010\u2011]", "-", doc).replace("\u00a0", " ")
+    return re.sub(r"[\u2010\u2011]", "-", doc).replace("\u00a0", " ")
+
+
+def semantic_values(doc: str, check: dict, items: dict[str, list[str]]) -> list[str]:
+    """The texts one semantic check sends to Jev (one question per text)."""
+    if check.get("scope") == "tail":
+        # For bars about how a document *closes*: the final quarter, at least
+        # 15 lines. Independent of what the closing section happens to be
+        # called, so an edit that renames it cannot move the score by itself.
+        lines = doc.splitlines()
+        return ["\n".join(lines[-max(15, len(lines) // 4):])]
+    if check.get("scope") == "document":
+        # Bars about the whole chain ("at least 5 values across the chain")
+        # need the whole document, not whichever heading matched first.
+        return [doc]
+    if "section" in check:
+        # A whole-document judgment rather than a per-item one. Scope the state
+        # to the relevant section: accuracy falls as state grows with detail
+        # unrelated to the question.
+        body = section_text(doc, check["section"], check.get("pick", "first"))
+        return [body] if body.strip() else []
+    values = items[check["each"]]
+    if check.get("scope_section"):
+        # For heading-based items, send the section body, not the title.
+        values = [section_text(doc, re.escape(v)) or v for v in values]
+    return values
+
+
+def score_document(doc: str, spec: dict, api_key: str | None, prompt: str = "") -> dict:
+    doc = normalize_doc(doc)
     items = {name: enumerate_items(doc, e) for name, e in spec["enumerators"].items()}
     result = {"enumerated": {k: len(v) for k, v in items.items()},
               "structural": [], "semantic": []}
@@ -619,28 +648,7 @@ def score_document(doc: str, spec: dict, api_key: str | None, prompt: str = "") 
     # Build one Jev request per criterion: state is the array of enumerated items,
     # one question per item. Jev ingests state once and answers in parallel.
     for check in spec["semantic"]:
-        if check.get("scope") == "tail":
-            # For bars about how a document *closes*: the final quarter, at least
-            # 15 lines. Independent of what the closing section happens to be
-            # called, so an edit that renames it cannot move the score by itself.
-            lines = doc.splitlines()
-            values = ["\n".join(lines[-max(15, len(lines) // 4):])]
-        elif check.get("scope") == "document":
-            # Bars about the whole chain ("at least 5 values across the chain")
-            # need the whole document, not whichever heading matched first.
-            values = [doc]
-        elif "section" in check:
-            # A whole-document judgment rather than a per-item one. Scope the state
-            # to the relevant section: accuracy falls as state grows with detail
-            # unrelated to the question.
-            body = section_text(doc, check["section"], check.get("pick", "first"))
-            values = [body] if body.strip() else []
-        else:
-            values = items[check["each"]]
-            if check.get("scope_section"):
-                # For heading-based items, send the section body, not the title.
-                values = [section_text(doc, re.escape(v)) or v for v in values]
-
+        values = semantic_values(doc, check, items)
         entry = {"id": check["id"], "bar": check["bar"], "n": len(values)}
         if not values:
             entry |= {"skipped": "no items enumerated", "results": []}
