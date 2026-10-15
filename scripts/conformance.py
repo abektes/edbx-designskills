@@ -202,7 +202,7 @@ def enumerate_items(text: str, spec: dict) -> list[str]:
             if col is None:
                 if spec.get("strict"):
                     # Without this, a missing column fell back to column 0, and any
-                    # table under the heading counted: cdbx's disaggregation check
+                    # table under the heading counted: another box's disaggregation check
                     # passed on datasheet "Section | Answer" tables.
                     continue
                 col = 0
@@ -220,7 +220,7 @@ def enumerate_items(text: str, spec: dict) -> list[str]:
                 if spec.get("full"):
                     # Semantic checks that read several columns (a level's
                     # reliability, error cost and rationale) need the whole row.
-                    # cdbx's first rubrics sent only the key cell ("Receipt
+                    # Another box's first rubrics sent only the key cell ("Receipt
                     # extraction"), which no judge could ever pass.
                     rows.append(" | ".join(f"{h}: {c}" for h, c in zip(table.header, row) if c))
                 else:

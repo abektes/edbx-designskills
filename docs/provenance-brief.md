@@ -2,8 +2,8 @@
 
 For each assigned skill in `edbx/edbx-<name>/`, find where the method and the
 specific elements the skill attributes to it actually come from, and what the
-licence of each source allows. This is the family's provenance rule (cdbx,
-adbx, mdbx, rdbx, fdbx, sdbx): every element a skill attributes to a source
+licence of each source allows. This is the family's provenance rule (as in
+fdbx): every element a skill attributes to a source
 must be traceable to a page a reader can open. Stage A drafts the table;
 stage B (later, after the owner approves downloads) checks each anchor on the
 page.
@@ -25,8 +25,8 @@ page.
    repository, open-access publisher, the toolkit's own download page),
    and its **licence** in plain words (e.g. "CC BY-ND 4.0", "CC BY-NC-SA",
    "all rights reserved, free to download", "paywalled", "unknown").
-4. Write `edbx/edbx-<name>/references/provenance.md` in cdbx's format (see
-   `../cdbx/cdbx/cdbx-heuristic-eval/references/provenance.md`): one row per
+4. Write `edbx/edbx-<name>/references/provenance.md` in the family format (see
+   `../fdbx/fdbx/fdbx-four-futures/references/provenance.md`): one row per
    attributed element, columns `# | Skill element | Source | Locator |
    Anchor phrase | Note`. Locator and anchor are what you could confirm from
    pages you read (abstract, toolkit page, publisher page); otherwise write

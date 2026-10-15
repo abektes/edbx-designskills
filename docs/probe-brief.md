@@ -1,6 +1,6 @@
 # Baseline probe v0.1: what does the plain model already do?
 
-The family rule (fdbx, then cdbx `docs/probe-v0.1/`): check what a capable
+The family rule (fdbx's baseline probe): check what a capable
 model does when told only the method's name, and keep a skill only where the
 plain model skips the method's distinctive moves, misstates the method, or
 invents facts about the user's situation.

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fetch every source in papers/manifest.json and extract per-page text.
 
-Ported from fdbx via cdbx. Adds `"kind": "html"` entries: one or more web pages
+Ported from fdbx. Adds `"kind": "html"` entries: one or more web pages
 (`"urls"`), saved under papers/local/<key>/ and extracted as plain text, one page
 per URL, so a provenance row can cite a toolkit or regulation page. Vendored PDFs live in papers/; anchors that may not be
 redistributed are downloaded to papers/local/ (gitignored), so the repo tracks

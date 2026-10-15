@@ -5,7 +5,7 @@ Run after commit 80d5e07 "Answer first and an Evidence Ledger in every skill"
 Pro via OpenRouter, $1.24); the baseline arm, told the published method by
 name, came from cache. Pairs were judged blind by Claude Sonnet subagents (in
 session, no API cost) with the seven-dimension rubric and the quote check
-against label swaps (`scripts/judge_pairs.py`, ported from cdbx). This is the
+against label swaps (`scripts/judge_pairs.py`, ported from the family harness). This is the
 first edbx eval whose harness, scenarios and verdicts are all in version
 control; RESULTS.md describes an earlier one whose harness was lost.
 

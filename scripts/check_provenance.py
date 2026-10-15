@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Check that every claim a skill attributes to a source can be found there.
 
-Ported from fdbx via cdbx. Each skill keeps references/provenance.md: a table whose rows
+Ported from fdbx. Each skill keeps references/provenance.md: a table whose rows
 name a source, a locator, and a short anchor phrase from the source. For a
 source key in papers/manifest.json, this script confirms the anchor appears in
 the extracted text -- on the cited page when the locator is `p. N` -- so a

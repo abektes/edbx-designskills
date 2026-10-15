@@ -1,6 +1,6 @@
 # edbx baseline probe v0.1 (2026-10-14)
 
-The family rule (fdbx, cdbx `docs/probe-v0.1/`): check what the plain model
+The family rule (fdbx's baseline probe): check what the plain model
 does when told only the method's name, and keep a skill where the plain model
 skips the method's distinctive moves, misstates the method, or invents facts
 about the user's situation.
@@ -54,8 +54,8 @@ swaps). Table: `python3 scripts/probe_tally.py`.
 
 **No skill is handled by the plain model.** 17 are weak, 4 partial (anti-heroes,
 digital-ethics-compass, fair-patterns, responsible-design-prism); none reaches
-"handles it". The edbx methods are less known than cdbx's (mean coverage 37%
-vs 59% for cdbx); the common failure is not skipping a step but **replacing
+"handles it". Mean coverage is 37%: the edbx methods are not well known to the
+plain model, and the common failure is not skipping a step but **replacing
 the method with an invented one presented as the real thing**: own card decks
 (dah-cards, anti-heroes), own lever sets (values-levers), own lenses
 (humane-design-guide), redefined terms (value-dams-and-flows, motivation

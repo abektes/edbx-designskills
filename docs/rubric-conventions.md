@@ -1,7 +1,7 @@
 # Rubric conventions (conformance.json)
 
 How the family writes a skill's `conformance.json`, collected from what the
-eval rounds in adbx, cdbx, mdbx, rdbx, fdbx and sdbx taught. A rubric turns the
+eval rounds across the dbx family taught. A rubric turns the
 skill's **Deliverable Quality Bar** into checks that run on every generated
 output, so an A/B win can be read against "did the output do what the skill
 promises".
@@ -21,8 +21,7 @@ promises".
 Check kinds and enumerator types are the ones `scripts/conformance.py`
 implements (`grep -n 'kind ==' scripts/conformance.py`); do not invent new ones.
 Good examples: `edbx/edbx-value-dams-and-flows/conformance.json` (complete),
-`edbx/edbx-anti-heroes/conformance.json`, and cdbx's
-`cdbx/cdbx-heuristic-eval/conformance.json` (uses the newer harness options).
+and `edbx/edbx-anti-heroes/conformance.json` (uses the newer harness options).
 
 ## Rules
 
@@ -39,7 +38,7 @@ Good examples: `edbx/edbx-value-dams-and-flows/conformance.json` (complete),
    or "does this name a specific mechanism": semantic (Jev). Jev cannot count.
 4. **A semantic check must be answerable from what it is sent.** If the
    judgment needs several columns, set `"full": true` on a `table_rows`
-   enumerator so the whole row is sent, not only the key cell (cdbx's first
+   enumerator so the whole row is sent, not only the key cell (another box's first
    rubrics sent only "Receipt extraction", which no judge could pass).
 5. **Table columns are strict.** Every `table_cells` / `table_rows`
    enumerator that names a column sets `"strict": true`; otherwise a missing
