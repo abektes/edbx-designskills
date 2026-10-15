@@ -29,3 +29,13 @@ claimed it held seven decisions and typed the four invented ones
 `user-supplied`. Fix (not yet re-measured, ~$0.06 for the skill's three
 scenarios): a list of practices is outcome only; count only the moves the
 brief states; never type an inferred move `user-supplied`.
+
+## Re-check after the ethicography fix (2026-10-15)
+
+ethicography's three scenarios regenerated on fd32691's skill text (run
+20261015T154442Z, about $0.06) and judged blind: **3/3** skill wins,
+0 label swaps. social-media-growth-hacks flipped (31 vs 20; evidence_honesty
+1 -> 3): its brief is now classified outcome only and no decisions are
+invented. accessibility-debt is still evidence_honesty 2 (it was in every
+round). With this, the round stands at 63/63 on the latest skill text.
+Structural: ethicography 48/48.
