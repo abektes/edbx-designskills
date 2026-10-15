@@ -1,6 +1,6 @@
 {
   "skill": "edbx-values-levers",
-  "_note": "Machine-checkable form of the Deliverable Quality Bar. All 12 bars have at least one check. Limits: (1) 'Individual Mode' is only proxied: no scenario states that the user is an individual contributor with no authority (scenario 0 'senior designer' is ambiguous), and a check that is conditional on the role cannot see the prompt, so individual_action_alone asks every output for at least one action the user can take without anyone's approval, which is the substance of the fast path. (2) 'Runnable in under 60 minutes' is checked as stated per-step timings plus a judge reading the guide for a session length of an hour or less; adding the minutes up is arithmetic Jev cannot do and no structural kind sums numbers. (3) 'Named' stakeholders in the 30-day plan accepts a role or group, because the brief cannot supply personal names (rule 6); no check asks for a person's name. (4) 'invents none' in the Evidence Ledger bar is covered by valid Type words, a URL for any 'sourced' row (this skill lists no Sources, so a paper name alone is not a sourced basis), and a judge that the Basis fits the Type; whether a user-supplied row is really in the brief needs the prompt and is not checked. (5) 2-3 applicable levers counts rows whose Applicable cell starts with Yes, Primary or Secondary; 'Conditional', 'Limited' and 'No' rows do not count as recommended. (6) The Lever Resistance Map must cover every recommended lever; the skill lists a resistance for all five, so more rows than levers is fine. (7) The four-part facilitation, Step 3 'advocacy framing' and the Guardrails other than those named in the bar are not Quality Bar items and are not checked.",
+  "_note": "Machine-checkable form of the Deliverable Quality Bar. All 12 bars have at least one check. Limits: (1) 'Individual Mode' is only proxied: no scenario states that the user is an individual contributor with no authority (scenario 0 'senior designer' is ambiguous), and a check that is conditional on the role cannot see the prompt, so individual_action_alone asks every output for at least one action the user can take without anyone's approval, which is the substance of the fast path. (2) 'Runnable in under 60 minutes' is checked as stated per-step timings plus a judge reading the guide for a session length of an hour or less; adding the minutes up is arithmetic Jev cannot do and no structural kind sums numbers. (3) 'Named' stakeholders in the 30-day plan accepts a role or group, because the brief cannot supply personal names (rule 6); no check asks for a person's name. (4) 'invents none' in the Evidence Ledger bar is covered by valid Type words, a URL for any 'sourced' row (this skill lists no Sources, so a paper name alone is not a sourced basis), and a judge that the Basis fits the Type; whether a user-supplied row is really in the brief needs the prompt and is not checked. (5) 2-3 applicable levers counts rows whose Applicable cell starts with Yes, Primary or Secondary; 'Conditional', 'Limited' and 'No' rows do not count as recommended. (6) The Lever Resistance Map must cover every recommended lever; the skill lists a resistance for all five, so more rows than levers is fine. (7) The four-part facilitation, Step 3 'advocacy framing' and the Guardrails other than those named in the bar are not Quality Bar items and are not checked. 2026-10-15: facilitation_timed counts times anywhere in the Facilitation section (outputs put them in bold step headings, which list_items did not see).",
   "enumerators": {
     "ledger_type_cells": {
       "type": "table_cells",
@@ -77,6 +77,11 @@
     "facilitation_steps": {
       "type": "list_items",
       "in_section": "Facilitation"
+    },
+    "facilitation_times": {
+      "type": "phrase_matches",
+      "in_section": "Facilitation",
+      "pattern": "\\d+\\s*(?:-|–|to)?\\s*(?:\\d+\\s*)?min"
     }
   },
   "structural": [
@@ -208,12 +213,11 @@
     },
     {
       "id": "facilitation_timed",
-      "kind": "min_count_matching",
-      "items": "facilitation_steps",
-      "pattern": "\\d+\\s*(?:-|to)?\\s*(?:\\d+\\s*)?min",
+      "kind": "min_count",
+      "items": "facilitation_times",
       "n": 3,
       "bar": "produces a facilitation guide that is session-ready and runnable in under 60 minutes",
-      "desc": "at least 3 facilitation steps carry a time in minutes, so the session can be run to a clock"
+      "desc": "the facilitation guide gives at least 3 times in minutes (in step headings or items), so the session can be run to a clock"
     },
     {
       "id": "plan_four_weeks",
