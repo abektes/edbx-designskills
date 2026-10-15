@@ -49,7 +49,7 @@ Ethicography operates in four steps, after one check.
 Ethicography traces decisions, so it needs a record of them. Classify the brief before anything else:
 
 - **Record**: the brief describes decisions — who decided or argued what, and why — for at least the main moves (meeting notes, a decision log, a design history, the user's own account of how choices were made).
-- **Outcome only**: the brief gives what shipped and what happened, but not the decisions behind it (most postmortem summaries).
+- **Outcome only**: the brief gives what shipped and what happened, but not the decisions behind it (most postmortem summaries). A list of practices ("we imported contacts, used dark-pattern onboarding") is outcome only, however damning: it names what was done, not who argued for it or why. Count only the moves the brief states; never raise the count with moves you infer, and never type an inferred move `user-supplied` in the Evidence Ledger.
 
 With a **record**, run Steps 1–4 on the recorded moves.
 

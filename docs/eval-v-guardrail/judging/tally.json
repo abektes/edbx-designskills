@@ -1,0 +1,188 @@
+{
+  "run_id": "20261015T065929Z",
+  "judges": [
+    "judging-guardrail"
+  ],
+  "pairs_per_judge": 63,
+  "label_swaps": [],
+  "skills": {
+    "anotherlens": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.57
+      }
+    },
+    "anti-heroes": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 0.52
+      }
+    },
+    "bad-design-canvas": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.33
+      }
+    },
+    "black-mirror-brainstorming": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.62
+      }
+    },
+    "cider": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 0.67
+      }
+    },
+    "critical-interviewing": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.9
+      }
+    },
+    "dah-cards": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.57
+      }
+    },
+    "digital-ethics-compass": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.48
+      }
+    },
+    "ethical-contract": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.48
+      }
+    },
+    "ethicography": {
+      "judging-guardrail": {
+        "skill_wins": 2,
+        "raw_wins": 1,
+        "ties": 0,
+        "mean_delta": 0.57
+      }
+    },
+    "fair-patterns": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.81
+      }
+    },
+    "humane-design-guide": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.52
+      }
+    },
+    "inverted-behavior-model": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.1
+      }
+    },
+    "motivation-matrix": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.19
+      }
+    },
+    "normative-design-scheme": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.52
+      }
+    },
+    "pledge-works": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.43
+      }
+    },
+    "responsible-design-prism": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.14
+      }
+    },
+    "stf-et": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.33
+      }
+    },
+    "value-dams-and-flows": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.38
+      }
+    },
+    "values-levers": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 2.0
+      }
+    },
+    "worrystorming": {
+      "judging-guardrail": {
+        "skill_wins": 3,
+        "raw_wins": 0,
+        "ties": 0,
+        "mean_delta": 1.62
+      }
+    }
+  },
+  "pair_agreement": "63/63",
+  "mean_dimension_delta": {
+    "structure_format": 0.6,
+    "depth_specificity": 1.11,
+    "actionability": 1,
+    "methodology_fidelity": 2.9,
+    "coverage_completeness": 1.48,
+    "ethical_nuance": 1.05,
+    "evidence_honesty": 1.44
+  }
+}
