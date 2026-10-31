@@ -4,6 +4,13 @@ This guide covers how to facilitate a Worrystorming session with a group — fro
 
 ---
 
+## Contents
+
+- Setup
+- Step-by-Step Facilitation
+- Facilitation Tips
+- Adapting for Different Stages
+
 ## Setup
 
 **Group size:** 3–8 participants is ideal. Larger groups should split into parallel sessions and share results.

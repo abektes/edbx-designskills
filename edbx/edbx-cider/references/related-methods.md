@@ -4,6 +4,12 @@ Methods that complement, extend, or connect to CIDER within the Ethical Design P
 
 ---
 
+## Contents
+
+- Methods Within the EDB Toolkit
+- External Methods
+- Recommended Sequences
+
 ## Methods Within the EDB Toolkit
 
 ### edbx-anotherlens

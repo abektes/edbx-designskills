@@ -5,6 +5,13 @@ This document contains the complete question set for all three lenses, with faci
 > **edbx adaptation:** the published tool (Airbnb Design and News Deeply, 2017) is one flat list of 16 questions with no lens headings. The grouping into three lenses of 4 / 4 / 5 questions (13 numbered questions after merging some), the lens colours, the facilitation notes, the "required output" rule for Lens 2 Q3 and the sequencing notes are edbx's, not part of the published tool.
 ---
 
+## Contents
+
+- Lens 1: Balance Your Bias (Green)
+- Lens 2: Consider the Opposite (Purple)
+- Lens 3: Embrace a Growth Mindset (Orange)
+- Sequencing Notes
+
 ## Lens 1: Balance Your Bias (Green)
 
 Turn your gaze inward. Before examining the product, examine yourself.

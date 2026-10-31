@@ -4,9 +4,24 @@ Full definitions, probing questions, and example responses for all twelve catego
 
 Canvas credit: Matthew Manos, licensed under Creative Commons CC BY-ND license. Source: gum.co/baddesign
 
-**Licence:** the canvas, its twelve categories and their guiding questions are Matthew Manos's work under CC BY-ND. They are not covered by this repository's MIT License, and modified versions may not be redistributed. See [THIRD_PARTY_NOTICES.md](../../../THIRD_PARTY_NOTICES.md).
+**Licence:** the canvas, its twelve categories and their guiding questions are Matthew Manos's work under CC BY-ND. They are not covered by this repository's MIT License, and modified versions may not be redistributed. See [THIRD_PARTY_NOTICES.md](https://github.com/abektes/edbx-designskills/blob/main/THIRD_PARTY_NOTICES.md).
 
 ---
+
+## Contents
+
+- Cell 1: Cultural Appropriation 🌍
+- Cell 2: Band-Aid 🩹
+- Cell 3: Unfair Control 🔒
+- Cell 4: Exploitation ⚠️
+- Cell 5: Inefficiency 🔄
+- Cell 6: Environmental & Social Impact 🌱
+- Cell 7: Stakeholder Abandonment 👥
+- Cell 8: Decreased Safety 🛡️
+- Cell 9: Inappropriate 🚫
+- Cell 10: Boring 😐
+- Cell 11: Displacement 🏠
+- Cell 12: Inequity ⚖️
 
 ## Cell 1: Cultural Appropriation 🌍
 

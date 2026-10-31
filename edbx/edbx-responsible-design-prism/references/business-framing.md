@@ -4,6 +4,14 @@ How to present responsible design findings to non-design stakeholders.
 
 ---
 
+## Contents
+
+- Why This Matters
+- Framing Principles
+- Framing Templates
+- Common Stakeholder Objections and Responses
+- Measuring the Impact of Ethical Redesign
+
 ## Why This Matters
 
 The most common reason ethical redesigns fail is not that the team disagrees — it is that they cannot speak the language of the people who approve the work. Product managers, executives, and business stakeholders evaluate proposals against business outcomes: revenue, retention, risk, and cost.

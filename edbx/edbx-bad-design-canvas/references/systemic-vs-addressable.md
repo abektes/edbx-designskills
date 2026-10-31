@@ -6,6 +6,14 @@ How to distinguish between consequences that require fundamental redesign and th
 
 ---
 
+## Contents
+
+- Definitions
+- Classification Framework
+- Common Classification Patterns
+- When Systemic Findings Mean "Do Not Build"
+- Documenting the Classification
+
 ## Definitions
 
 ### Systemic Findings

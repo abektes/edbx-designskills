@@ -4,6 +4,17 @@ Full definitions of all eight concern categories with example worries for each. 
 
 ---
 
+## Contents
+
+- 🗃️ Data & Privacy
+- 🌍 Environmental Impact
+- 👥 Community & Social
+- 💸 Economic
+- 🔒 Safety & Harm
+- 🧠 Psychological
+- ⚖️ Power & Fairness
+- 🔮 Future Consequences
+
 ## 🗃️ Data & Privacy
 
 How is user data collected, stored, shared, and used? Who has access? Is consent meaningful?

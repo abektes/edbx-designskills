@@ -13,6 +13,13 @@ The extracted text lists the sensitivities in the order Emotional, Attention,
 Sensemaking, Decisionmaking, Social Reasoning, Group Dynamics; the page layout
 is a table, so the column pairing below is read from that order.
 
+## Contents
+
+- Sources
+- Rows
+- Licence
+- Discrepancies
+
 ## Sources
 
 | Key | Citation | DOI / URL | Legal free copy |

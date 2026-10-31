@@ -6,6 +6,14 @@ The reflection prompts are the heart of this skill's method (the four prompts ar
 
 ---
 
+## Contents
+
+- Prompt 1: Self-Reflection
+- Prompt 2: Organization Ecology
+- Prompt 3: Transition
+- Prompt 4: Recovery
+- General Facilitation Notes
+
 ## Prompt 1: Self-Reflection
 
 **"Where do you stand when you build? What state do you seek?"**

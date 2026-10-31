@@ -8,6 +8,13 @@ attributes to a source. None of the DAH-specific sources (`rafit2020design`,
 manifest source named below, `chivukula2021surveying`, was searched in full
 (all 32 page files) and does not mention DAH.
 
+## Contents
+
+- Sources
+- Provenance table
+- Licence
+- Discrepancies
+
 ## Sources
 
 | Key | Citation | Stable URL | Free legal copy? | Licence |

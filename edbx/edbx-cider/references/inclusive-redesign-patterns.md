@@ -4,6 +4,15 @@ Common redesign patterns organized by assumption category. Use these as prompts 
 
 ---
 
+## Contents
+
+- Ability Redesign Patterns
+- Capacity Redesign Patterns
+- Environment Redesign Patterns
+- Resources Redesign Patterns
+- Cross-Category Patterns
+- How to Use These Patterns in Stage D
+
 ## Ability Redesign Patterns
 
 ### Multi-Modal Output

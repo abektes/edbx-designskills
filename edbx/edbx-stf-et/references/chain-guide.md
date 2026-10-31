@@ -4,6 +4,14 @@ The Stanford page lists five tools; this skill runs them as a chainable sequence
 
 ---
 
+## Contents
+
+- The Chain at a Glance
+- What Carries Forward at Each Handoff
+- Entering the Chain at Different Points
+- Running the Chain With a Team
+- Chaining with Other EDBX Skills
+
 ## The Chain at a Glance
 
 ```

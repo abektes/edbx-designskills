@@ -268,41 +268,7 @@ This block is not optional. It is the explicit handoff to the Ethics Gauge.
 
 Work through each of the four dimensions. For each spectrum, mark your assessment, note what you would expect to observe, and identify what you still need to investigate.
 
-**Dimension 1 — HOW IS IT BENEFICIAL?**
-
-Three spectra (mark each −/neutral/+):
-- Limited benefit to individuals ←→ Great benefit to individuals (more benefit than what already exists)
-- Benefit limited to few select people ←→ Large numbers and multiple groups benefit
-- Action unlikely to succeed / low likelihood of benefit ←→ Very likely the benefit will be achieved
-
-Reflection: How do we measure the effects? How might we move toward the positive end? What else do we need to investigate?
-
-**Dimension 2 — HOW IS IT HARMFUL?**
-
-Three spectra (mark each −/neutral/+):
-- Great harm to individuals; more harm than alternatives ←→ Limited harm; less than what already exists
-- Large numbers / multiple groups are harmed ←→ Harm limited to few people
-- Harm is certain to occur or impossible to prevent ←→ Harm unlikely; potential harm preventable
-
-Reflection: What would we expect to observe if harm occurs? What indicators help track it? Consider endurance (how lasting), remediability (can it be fixed), and preventability. What additional research is needed?
-
-**Dimension 3 — HOW FAIR IS IT?**
-
-Three spectra (note: the first spectrum is neutral — neither equal nor unequal distribution is inherently better):
-- Certain people or groups are affected more than others ←→ All people and groups are affected equally (neutral spectrum)
-- Those who are harmed are also less advantaged in society; those who benefit have privilege ←→ No more harm to the less advantaged; those who benefit have greater need
-- The burden faced by those most harmed is not acceptable or justifiable ←→ The burden is acceptable or justifiable given the broader context
-
-Reflection: Are impacts experienced equally or unequally? Is the nature of the distribution fair? What values should limit what is considered acceptable? Refer to Value Cards for Justice and Dignity.
-
-**Dimension 4 — HOW EMPOWERING IS IT?**
-
-Three spectra (mark each −/neutral/+):
-- People's ability to make informed choices for themselves is reduced ←→ Ability to make informed choices is unimpaired or increased
-- People's control over aspects of their lives is removed ←→ Control is retained or enhanced
-- There are activities our creation removes the freedom to do ←→ Creation does not coerce, manipulate, or pressure people; limits others' ability to do so
-
-Reflection: Does this work undermine or enhance autonomy? Is freedom reduced through coercion, manipulation, exploitation, or psychological pressure? Could autonomy limits be justified by preventing greater harm?
+Read `references/ethics-gauge-dimensions.md` before scoring: it lists the three spectra and the reflection prompts for each dimension (beneficial, harmful, fair, empowering).
 
 **Synthesis:** After completing all four dimensions, look at the overall picture. No single row or spectrum determines ethical soundness. A creation may score well on benefits but raise serious fairness or empowerment concerns. The final assessment must hold all four dimensions together and consider their tensions.
 
@@ -510,5 +476,5 @@ A strong full-chain STF-ET output:
 
 ## See Also
 
-- Guides: `references/chain-guide.md`, `references/three-phases.md`, `references/value-cards.md`
+- Guides: `references/chain-guide.md`, `references/three-phases.md`, `references/value-cards.md`, `references/ethics-gauge-dimensions.md`
 - Worksheets: `assets/future-story-template.md`, `assets/ethics-frame-template.md`, `assets/ethics-gauge-template.md`, `assets/weighing-options-template.md`

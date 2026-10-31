@@ -6,6 +6,15 @@ This document provides full stage definitions, facilitation notes, and timing gu
 
 ---
 
+## Contents
+
+- Stage C — Critique
+- Stage I — Imagine
+- Stage D — Design
+- Stage E — Expand
+- Stage R — Repeat
+- Total Session Timing
+
 ## Stage C — Critique
 
 ### What Happens

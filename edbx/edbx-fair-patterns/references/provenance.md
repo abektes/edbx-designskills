@@ -14,6 +14,13 @@ Act, LGPD and the FTC v. Amazon case are not in the manifest, so they are
 the cited source; the anchor quotes the closest passage and the Note says what
 the source says.
 
+## Contents
+
+- Sources
+- Rows
+- Licence
+- Discrepancies
+
 ## Sources
 
 | Key | Citation | DOI / URL | Legal free copy |

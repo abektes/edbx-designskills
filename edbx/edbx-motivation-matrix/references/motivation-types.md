@@ -4,6 +4,15 @@ Use these definitions when filling matrix cells. The six types (incentive, achie
 
 ---
 
+## Contents
+
+- 1. Achievement
+- 2. Social Acceptance
+- 3. Fear
+- 4. Power
+- 5. Incentive
+- 6. Growth
+
 ## 1. Achievement
 
 **Core drive:** The desire to make progress, master a skill, complete a task, or reach a defined goal.

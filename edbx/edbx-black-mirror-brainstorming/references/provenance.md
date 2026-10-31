@@ -7,6 +7,13 @@ element the skill attributes to a source. Rows whose source is in
 anything else are `metadata only`, with the reason. `mauldin2018black`
 returned 403, so every Mauldin row is metadata only.
 
+## Contents
+
+- Sources
+- Table
+- Licence
+- Discrepancies
+
 ## Sources
 
 | Key | Citation | Stable link | Legal free copy | Licence |

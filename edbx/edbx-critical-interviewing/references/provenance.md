@@ -16,6 +16,13 @@ only "lead-off questions" appears in the papers (p. 3 of Chivukula et al.). The
 back-up question, emergency question, covert categories, construct-building
 probes and the four example covert categories appear in no text read.
 
+## Contents
+
+- Sources
+- Table
+- Licence
+- Discrepancies
+
 ## Sources
 
 | Key | Citation | Stable link | Legal free copy | Licence |
