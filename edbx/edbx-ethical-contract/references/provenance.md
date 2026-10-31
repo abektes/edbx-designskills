@@ -7,6 +7,13 @@ pages), and `ecfr2024adverse` (the eCFR page for 29 CFR 1607.4, which replaces
 the stage-A key `eeoc1978ugesp`). Not in the manifest: `carlock2022contract`
 and the book. Locator `web` means a web page, not a PDF page.
 
+## Contents
+
+- Sources
+- Provenance table
+- Licence
+- Discrepancies
+
 ## Sources
 
 | Key | Citation | Stable URL | Free legal copy? | Licence |

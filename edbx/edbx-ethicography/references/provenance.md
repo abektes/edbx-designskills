@@ -12,6 +12,13 @@ not checked against text here. Locator `not in source` means the skill's
 element is not in the cited source; the anchor then quotes the closest passage
 and the Note says what the source actually says.
 
+## Contents
+
+- Sources
+- Rows
+- Licence
+- Discrepancies
+
 ## Sources
 
 | Key | Citation | DOI / URL | Legal free copy |

@@ -11,6 +11,13 @@ that depends on it is `metadata only`. No manifest source mentions
 Worrystorming; the 2021 survey in the manifest was read for related
 statements.
 
+## Contents
+
+- Sources
+- Provenance table
+- Licence
+- Discrepancies
+
 ## Sources
 
 | Key | Citation | DOI / URL | Legal free copy |

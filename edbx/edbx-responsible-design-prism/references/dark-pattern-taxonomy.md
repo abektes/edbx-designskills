@@ -6,6 +6,15 @@ Reference for the Responsible Design Prism. Use precise pattern names when scori
 
 ---
 
+## Contents
+
+- Deception Patterns
+- Coercion Patterns
+- Exploitation Patterns
+- Manipulation Patterns
+- Obstruction Patterns
+- How to Use This Taxonomy in the Prism
+
 ## Deception Patterns
 
 Patterns that hide, obscure, or falsify information.

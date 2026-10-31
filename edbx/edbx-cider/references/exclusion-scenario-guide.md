@@ -4,6 +4,15 @@ This reference helps designers write vivid, specific exclusion scenarios for Sta
 
 ---
 
+## Contents
+
+- What Makes a Good Exclusion Scenario
+- The Difference Between Generic and Specific
+- Building a Scenario: Step by Step
+- Common Pitfalls
+- Scenario Length
+- Using Scenarios in Team Sessions
+
 ## What Makes a Good Exclusion Scenario
 
 An exclusion scenario is a short narrative that shows a specific person failing, struggling, or being humiliated because of an assumption the design makes. It is not a generalization, a statistic, or a category label. It is a story about one person in one moment.

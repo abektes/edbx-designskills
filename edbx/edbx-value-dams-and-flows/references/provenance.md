@@ -10,6 +10,13 @@ The primary texts for this method (`miller2007value`, `friedman2017survey`,
 `chivukula2021surveying`, a survey that lists it and cites the 2007 paper but
 does not describe how dams or flows are defined.
 
+## Contents
+
+- Sources
+- Provenance table
+- Licence
+- Discrepancies
+
 ## Sources
 
 | Key | Citation | DOI / URL | Legal free copy |

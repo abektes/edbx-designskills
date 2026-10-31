@@ -10,6 +10,15 @@ Parts marked "edbx" are this skill's own additions, not the worksheet's.
 
 ---
 
+## Contents
+
+- 1. Emotional
+- 2. Attention
+- 3. Sensemaking
+- 4. Decision-making
+- 5. Social Reasoning
+- 6. Group Dynamics
+
 ## 1. Emotional
 
 **What it covers:** how we feel in the body, and our physical health.

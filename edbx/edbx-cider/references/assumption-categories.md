@@ -4,6 +4,14 @@ The four assumption categories are the analytical backbone of CIDER. Every assum
 
 ---
 
+## Contents
+
+- Ability
+- Capacity
+- Environment
+- Resources
+- Using the Categories in Practice
+
 ## Ability
 
 What the user's body and mind can do right now, in the moment of use.

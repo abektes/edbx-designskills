@@ -4,6 +4,13 @@ Another Lens is one principle in a larger ethical design practice. This referenc
 
 ---
 
+## Contents
+
+- Direct Companions
+- Broader Methodological Connections
+- Sequencing Guide
+- Using This Reference
+
 ## Direct Companions
 
 ### edbx-worrystorming

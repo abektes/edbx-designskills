@@ -8,6 +8,13 @@ have text and every row that cites them is checked against it. `ddc2021case`
 and the book are not in the manifest, so they cannot be checked. The compass
 PDFs were not fetched. Locator `web` means a web page, not a PDF page.
 
+## Contents
+
+- Sources
+- Provenance table
+- Licence
+- Discrepancies
+
 ## Sources
 
 | Key | Citation | Stable URL | Free legal copy? | Licence |

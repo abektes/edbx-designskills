@@ -9,6 +9,13 @@ verbatim 3–12-word pointer. Both Shilton papers are now in the manifest, so th
 lever rows are checked against the text. Sources not in the manifest are
 `metadata only`.
 
+## Contents
+
+- Sources
+- Provenance table
+- Licence
+- Discrepancies
+
 ## Sources
 
 | Key | Citation | DOI / URL | Legal free copy |

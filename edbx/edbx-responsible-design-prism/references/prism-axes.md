@@ -6,6 +6,14 @@ Reference for the five spectrum axes used in the Responsible Design Prism.
 
 ---
 
+## Contents
+
+- Axis 1: User Relationship
+- Axis 2: Information
+- Axis 3: Error Handling
+- Axis 4: Business Alignment
+- Axis 5: Usability
+
 ## Axis 1: User Relationship
 
 **Dark pole: User as Means**

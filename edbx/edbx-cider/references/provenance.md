@@ -11,6 +11,13 @@ anchors look misspelled; they are copied as extracted. Other rows are
 `burnett2016gendermag` and `microsoft2016inclusive` are not in the manifest
 and back no row.
 
+## Contents
+
+- Sources
+- Table
+- Licence
+- Discrepancies
+
 ## Sources
 
 | Key | Citation | Stable link | Legal free copy | Licence |
